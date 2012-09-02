@@ -1,0 +1,253 @@
+/* CSS Document */
+* { margin:0; padding:0;}
+html, body { height:100%; }
+body {font-size:100%; line-height:1.125em; min-width:979px}
+html, input, textarea	{	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; 
+		color:#959595;	}	
+
+object { vertical-align:top; outline:none}
+.alignMiddle{ vertical-align:middle}
+.alignCenter{ text-align: center}
+.container1{ width:100%}
+.clear { clear:both;}
+.fleft{ float:left}
+.fright{ float:right}
+div.container {	overflow:hidden; width: 100%;}
+a img{ border:0}
+img{ vertical-align:top;  }
+
+a{color:#959595; text-decoration:underline; outline:none} 
+a:hover{text-decoration:none}
+
+.position_relative{ position:relative; }
+.link{ color:#525252}
+.link1{ color:#03b2d1}
+
+.button{color:#fff; background:url(../imagenes/button.gif) top left no-repeat; width:114px; text-align:center; line-height:32px; display:block; text-decoration:none;  }
+.button:hover{text-decoration:underline }
+
+#content ul{margin:0; padding:0; list-style:none;}
+#content ul li{background:url(../imagenes/tail.gif) bottom left repeat-x; padding-left:7px; }
+#content ul .last{background:none}
+#content ul li a{color:#797979; text-decoration:none; line-height:2.307em; background:url(../imagenes/marker.gif) top left no-repeat; background-position:0 1px; margin:0; padding-left:26px; } 
+#content ul li a:hover { text-decoration:none; color:#03b2d1 }
+
+#content .ul li a{color:#03b2d1; } 
+#content .ul li a:hover {color:#797979 }
+
+
+
+/*header*/
+#header {font-size:0.875em; color:#FFFFFF }
+#header .logo{ margin:15px 0 17px 19px }
+#header .indent{}
+#header .indent1{padding:0 0 0 0}
+
+#header .block{ width:100%; }
+#header .indent-block{padding:22px 0px 27px 12px}
+#header .block h1{color:#a9a9a9; font-size:1.92em; line-height:1.2em; font-style:italic  }
+
+#header #barra_ministerio{
+	width:979px;
+	height:63px;
+	z-index:1;
+}
+
+#header #bmin_tel{
+	width:200px;
+	height:30px;
+	position:absolute;
+	left: 775px;
+	top: 29px;
+	background-color:#fff;
+	z-index:2;
+}
+
+#header #bmin_tel ul{
+	margin:0 !important;
+	padding:0 !important;
+	color:#000;
+}
+
+/* The Nivo Slider styles */
+#slider{ position:relative; width:100%; height:318px; z-index:88; overflow:hidden}
+/* If an image is wrapped in a link */
+.nivoSlider a.nivo-imageLink {position:absolute;top:0px;left:0px;width:100%;height:100%;border:0;padding:0;	margin:0;z-index:60;display:none;}
+/* The slices in the Slider */
+.nivo-slice {display:block;	position:absolute;z-index:50;height:100%;}
+
+/* Control nav styles (e.g. 1,2,3...) */
+.nivo-controlNav{ position: absolute;z-index:99; left:42px; bottom:60px;}
+.nivo-controlNav a {position:relative;z-index:99;cursor:pointer; text-indent:-5000px; width:15px; height:15px; float:left; margin-right:6px; background:url(../imagenes/buttons.gif) right 0 no-repeat}
+.nivo-controlNav a.active, .nivo-controlNav a:hover { background-position:left}
+
+/* Caption styles */
+.nivo-caption {position:absolute; top:0px; left:0;  z-index:99; }
+.nivo-html-caption {}
+
+
+#header .img1{ background:url(../imagenes/img1.jpg) top left no-repeat; }
+#header .img2{ background:url(../imagenes/img2.jpg) top left no-repeat; }
+#header .img3{ background:url(../imagenes/img3.jpg) top left no-repeat; }
+#header .block1{height:318px; width:100%; color:#6c6c6c; font-size:1.28em; line-height:1.2em; letter-spacing:-1px}
+#header .block1 .indent-block{padding:72px 0 0 41px}
+#header .block1 h1{color:#454747; font-size:1.83em; line-height:1.2em; margin-bottom:3px;  letter-spacing:-2px}
+#header .block1 h1 strong{color:#03b2d1; font-size:1.42em; letter-spacing:-2px; display:block; margin-bottom:-7px}
+
+#header ul{ margin:0; padding:40px 0 0 0; list-style:none; float:right;}
+#header ul li{ 
+	margin:0; 
+	display:inline; 
+	background:url(../imagenes/bg_menu.gif) center right no-repeat; 
+	float:left; 
+	padding:2px 23px 2px 23px; 
+	position:relative;}
+#header ul .last{background:none; padding-right:0}
+#header ul li a{color:#242424; text-decoration:none; display:block; float:left;} 
+#header ul li a:hover { text-decoration:underline; cursor:pointer; }
+#header ul li a.current{ text-decoration: underline; }
+.submenu{
+display: none;
+position: absolute;
+left: -1px;
+border:none;
+height: auto;
+background: none;
+z-index:100;
+margin:20px 0 0 0 !important;
+padding:0 !important;
+background:#FFFFFF;
+}
+#header ul li ul.submenu li{
+float: none;
+position: static;
+margin: 0;
+font-size: 12px;
+border-bottom: 1px dashed #CCC;
+z-index:110;
+background:#FFFFFF;
+}
+ 
+#header ul li ul.submenu li a{
+color: #000;
+width: 150px;
+padding:7px 10px 7px 23px;
+background:#fff url(../imagenes/marker.gif) no-repeat;
+background-position:5px 8px;
+}
+
+
+/*content*/
+#content{ font-size:0.8125em; width:100%; text-align:left;}
+#content .indent-main{padding:0 0 10px 15px}
+#content .indent-col2{padding:0 15px 28px 10px}
+#content .indent-col3{padding:0 0 0 10px}
+#content .title{  margin-bottom:16px}
+#content .img-left{ float:left; margin:0 20px 16px 0}
+#content .img-indent{ margin:0 0 16px 0}
+#content p{ margin:0 0 15px 0}
+#content .p{ margin:0}
+#content .p1{ margin:0 0 15px 0}
+#content .p2{ margin:0 0 28px 0}
+#content h2{color:#535353; font-size:1.76em; margin-bottom:13px; line-height:1.2em; letter-spacing:-1px}
+#content h4{color:#8b870e; font-size:1em; margin-bottom:7px;  }
+#content h5{color:#525252; font-size:1em; margin-bottom:7px;  }
+#content .tail{ margin-bottom:15px}
+#content .tail-1{ background:url(../imagenes/tail1.gif) top repeat-x; padding-top:28px; margin-top:22px}
+#content .tail1{ background:url(../imagenes/tail2.gif) bottom repeat-x; padding-bottom:15px; margin-bottom:15px}
+#content .tail2{ background:url(../imagenes/tail.gif) bottom repeat-x; padding-bottom:1px; margin-bottom:23px; padding-left:3px}
+
+iframe#mapa_hospital{ border:2px solid #06C; }
+
+.txt a{ font-weight:bold; display:block; margin-bottom:15px; float:right}
+.txt1{ text-align:justify; padding-right:15px}
+
+#content .indent{padding:0 0 0 9px}
+#content .indent1{padding:7px 0 0 9px; font-family:Georgia, "Times New Roman", Times, serif; font-size:.923em; color:#777777}
+#content .indent2{padding:0 0 0 8px;}
+
+
+/*--- tabs begin ---*/
+.tabs { width:50%; overflow:hidden;}
+.tabs ul.nav { position:relative;}
+#content .tabs ul.nav li{ background:none; padding-left:0; float:left; margin-right:5px;}
+#content .tabs ul.nav li a{ padding-left:0; display:block; float:left; background:url(../imagenes/link_bg.gif) repeat-x left top; color:#3c3b3b; text-decoration:none; }
+#content .tabs ul.nav li a em { display:block; background:url(../imagenes/link_left.gif) no-repeat left top;}
+#content .tabs ul.nav li a  b { display:block; background:url(../imagenes/link_right.gif) no-repeat right top; padding:0 15px 0 13px; line-height:31px; font-weight:normal; font-style:normal;}
+#content .tabs ul.nav li a:hover,#content .tabs ul.nav li.selected a { background:url(../imagenes/link_bg1.gif) repeat-x left top;  color:#3c3b3b;}
+#content .tabs ul.nav li a:hover em,#content .tabs ul.nav li.selected a em{ background:url(../imagenes/link_left1.gif) no-repeat left top;}
+#content .tabs ul.nav li a:hover b,#content .tabs ul.nav li.selected a b{background:url(../imagenes/link_right1.gif) no-repeat right top; }
+.tabs .tab-content { position: relative; }
+/*--- tabs end ---*/
+.link-1 { display:block; float:left; background:url(../imagenes/link_bg.gif) repeat-x left top; color:#3c3b3b; text-decoration:none; }
+.link-1 em { display:block; background:url(../imagenes/link_left.gif) no-repeat left top;}
+.link-1  b { display:block; background:url(../imagenes/link_right.gif) no-repeat right top; padding:0 15px 0 13px; line-height:31px; font-weight:normal; font-style:normal;}
+.link-1:hover{ text-decoration:none; color:#03b2d1}
+
+.link-2 { display:block; float:left; background:url(../imagenes/link_bg1.gif) repeat-x left top; color:#3c3b3b; text-decoration:none; }
+.link-2 em { display:block; background:url(../imagenes/link_left1.gif) no-repeat left top;}
+.link-2  b { display:block; background:url(../imagenes/link_right1.gif) no-repeat right top; padding:0 15px 0 13px; line-height:31px; font-weight:normal; font-style:normal;}
+.link-2:hover{ text-decoration:none; color:#03b2d1}
+
+
+/*box*/
+.box{ background:#e4e8ea; width:100%;}
+.box .corner-top-left {background:url(../imagenes/corner_top_left.gif) left top no-repeat;}
+.box .corner-top-right {background:url(../imagenes/corner_top_right.gif) right top no-repeat;}
+.box .corner-bottom-left {background:url(../imagenes/corner_bottom_left.gif) left bottom no-repeat;}
+.box .corner-bottom-right {background:url(../imagenes/corner_bottom_right.gif) right bottom no-repeat; width:100%; }
+.box .indent-box{ padding:16px 16px 18px 20px; }
+.box .indent-box1{ padding:6px 6px 8px 5px; }
+
+
+/*footer*/
+#footer { color:#9c9c9c; font-size:0.8125em; background:url(../imagenes/bot.gif) top repeat-x    ; }
+#footer .indent-footer{ padding:15px 50px 0 15px;}
+#footer .indent-footer1{ margin:57px 0 0 481px; position:absolute; width:110px; }
+#footer .indent-footer1 img{ margin-right:7px}
+#footer a {color:#9c9c9c; text-decoration:underline}  
+#footer a:hover {  text-decoration:none}
+#footer p{ margin:0 0 7px 0}
+#footer span { color:#119af6}
+
+#footer ul{margin:0; padding:0; list-style:none;}
+#footer ul li{ margin:0; display:inline;}
+#footer ul li a{color:#737374; text-decoration:none; display:block; float:left; padding-right:27px} 
+#footer ul li a:hover { text-decoration:none; color:#119af6 }
+
+.jamp{ width:40px; margin-left:6px}
+select{font-size:.84em; color:#2d3331; height:20px}
+	
+.indent-2{ position:relative; padding-left:5px; float:left}
+.h{ height:33px}
+.h1{ height:31px; background:url(../imagenes/bg_input.gif) top left no-repeat}
+.block-contact span{ float:right;}
+.input{
+	font-size:1em;
+	color:#000;
+	padding-left:4px;
+	padding-top:2px;
+	padding-bottom:2px;
+}
+label{
+	float:left;
+	width:100%;
+}
+fieldset{
+	border:none;
+}
+input{
+	font-size:1em;
+	padding-left:5px;
+	padding-top:2px;
+	padding-bottom:2px;
+	background-color:#fff;
+}
+textarea{
+	font-size:1em;
+	padding-left:5px;
+	margin-bottom:11px;
+	padding-top:2px;
+	padding-bottom:2px;
+	overflow:auto;
+}

@@ -1,0 +1,61 @@
+.col-1, .col-2, .col-3, .col-4{ float:left}
+/*======= width =======*/
+.main{margin:0 auto; text-align:left; width:979px; }
+
+/*======= header =======*/
+#header { padding-bottom:20px; }
+
+/*======= index.html =======*/
+#page1 #content .col-1{ width:370px; margin-right:20px; }
+#page1 #content .col-2{ width:192px;}
+#page1 #content .col-3{ width:353px; margin-right:35px; }
+#page1 #content .col-4{ width:352px; margin-top:40px; margin-right:25px; }
+#page1 #content .col-3 .col-1{ width:110px; margin-right:10px}
+#page1 #content .col-3 .col-2{ width:110px}
+#page1 #content .col-4 .col-1{ width:147px; margin-right:54px}
+#page1 #content .col-4 .col-2{ width:147px}
+/*======= index-1.html =======*/
+#page2 #content .col-1{ width:740px; margin-right:35px}
+#page2 #content .col-2{ width:175px}
+#page2 #content .col-3{ width:353px; margin-right:35px}
+#page2 #content .col-4{ width:352px}
+#page2 #content .col-3 .col-1{ width:147px; margin-right:54px}
+#page2 #content .col-3 .col-2{ width:147px}
+/*======= index-2.html =======*/
+#page3 #content .col-1{ width:740px; margin-right:35px}
+#page3 #content .col-2{ width:175px}
+#page3 #content .col-3{ width:353px; margin-right:35px}
+#page3 #content .col-4{ width:352px}
+/*======= index-3.html =======*/
+#page4 #content .col-1{ width:740px; margin-right:35px}
+#page4 #content .col-2{ width:175px}
+#page4 #content .col-3{ width:353px; margin-right:35px}
+#page4 #content .col-4{ width:352px}
+#page4 #content .col-4 .col-1{ width:110px; margin-right:10px}
+#page4 #content .col-4 .col-2{ width:110px}
+/*======= index-4.html =======*/
+#page5 #content .col-1{ width:740px; margin-right:35px}
+#page5 #content .col-2{ width:175px}
+#page5 #content .col-3{ width:353px; margin-right:35px}
+#page5 #content .col-4{ width:352px}
+#page5 #content .col-1 .col-1{ width:347px; margin-right:40px}
+#page5 #content .col-1 .col-2{ width:347px}
+/*======= index-5.html =======*/
+#page6 #content .col-1{ width:740px; margin-right:35px}
+#page6 #content .col-2{ width:175px}
+#page6 #content .col-3{ width:353px; margin-right:35px}
+#page6 #content .col-4{ width:352px}
+
+/*======= footer =======*/
+#footer { padding:15px 0; }
+
+/*======= CLASES =======*/
+.padding_t10{ padding-top:10px !important; }
+.float_left{ float:left !important; }
+.an100{ width:100% !important; }
+.borde_t1p{ background:url(/imagenes/tail2.gif) top repeat-x !important; }
+
+
+
+
+
