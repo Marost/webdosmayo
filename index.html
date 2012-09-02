@@ -1,276 +1,78 @@
-<!DOCTYPE HTML>
-<html lang="en">
-<head>
-<title>Hospital Nacional Dos de Mayo</title>
-<meta charset="utf-8">
-<meta http-equiv="Content-Style-Type" content="text/css">
-<link href="css/style.css" rel="stylesheet" type="text/css">
-<link href="css/layout.css" rel="stylesheet" type="text/css">
-<script src="js/jquery-1.4.2.min.js"></script>
-<script src="js/cufon-yui.js"></script>
-<script src="js/cufon-replace.js"></script>
-<script src="js/DIN.js"></script> 
-<script src="js/DIN_400-DIN_200.font.js"></script>
-<script src="js/jquery.nivo.slider.pack.js"></script>
-<script src="js/script.js"></script>
-<script src="js/tabs.js"></script>
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
 
-<!-- MENU -->
-<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script>
-var jMenu=jQuery.noConflict();
-jMenu(document).ready(function(){
-	jMenu('#nav>li').hover(
-		function(){
-		jMenu('.submenu',this).stop(true,true).slideDown('fast');
-		},
-		function(){
-		jMenu('.submenu',this).slideUp('fast');
-		}
-	);		
-});
-</script>
+        <!-- ESTILOS -->
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
 
-<!-- MARQUEE -->
-<link href="/libs/marquee/jquery.marquee.css" rel="stylesheet" type="text/css">
-<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script src="/libs/marquee/jquery.marquee.js"></script>
-<script>
-var jMarq = jQuery.noConflict();
-jMarq(document).ready(function(){
-	jMarq("#marquee").marquee();
-});
-</script>
+        <script src="/js/vendor/modernizr-2.6.1.min.js"></script>
+        <script src="/js/plugins.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+        <![endif]-->
 
-</head>
-
-<body id="page1">
-<div class="main">
-    <div id="header">
-    
-    	<div id="barra_ministerio" class="block position_relative">
-        	<div id="bmin_tel">
-            	<ul id="marquee" class="marquee">
-                	<li>328-0175</li>
-                    <li>328-0068</li>
-                    <li>328-0035</li>
-                    <li>328-0131</li>
-                </ul>
-            </div>
-   	    	<img src="imagenes/barra-ministerio.png" width="979" height="63" align="Ministerio de Salud">
+        <div class="header-container">
+            <header class="wrapper clearfix">
+                <h1 class="title">h1.title</h1>
+                <nav>
+                    <ul>
+                        <li><a href="#">nav ul li a</a></li>
+                        <li><a href="#">nav ul li a</a></li>
+                        <li><a href="#">nav ul li a</a></li>
+                    </ul>
+                </nav>
+            </header>
         </div>
-        
-        <ul id="nav">
-            <li><a href="index.html" class="current">Inicio</a></li>
-            <li><a href="javascript:;">Atención al Paciente</a>
-            	<ul class="submenu">
-                	<li><a>Directorio Institucional</a></li>
-                    <li><a>Pacientes</a></li>
-                    <li><a>Proyección a la Comunidad</a></li>
-                </ul>
-            </li>
-            <li><a href="javascript:;">Institucional</a>
-            	<ul class="submenu">
-                	<li><a>Historia</a></li>
-                    <li><a>Publicaciones</a></li>
-                    <li><a>Información Institucional</a></li>
-                    <li><a>Directorio Institucional</a></li>
-                    <li><a>Intranet</a></li>
-                </ul>
-            </li>
-            <li><a href="javascript:;">Transparencia</a>
-            	<ul class="submenu">
-                	<li><a>Normas y dispositvos</a></li>
-                    <li><a>Solicitudes de información</a></li>
-                    <li><a>Concurso CAS</a></li>
-                    <li><a>Concurso de Directores</a></li>
-                    <li><a>Ecoeficiencia</a></li>
-                </ul>
-            </li>
-            <li class="last"><a href="javascript:;">Prensa</a>
-            	<ul class="submenu">
-                	<li><a>Sala de Prensa</a></li>
-                </ul>
-            </li>
-        </ul>
-        <a href="index.html"><img src="imagenes/logo.png" alt="" width="300" height="82" class="logo"></a><br>
-        
-		<div id="slider">
-			<img src="imagenes/img1.jpg" alt="" title="<div class='block1'><div class='indent-block'><h1><strong>Xx xxxxx</strong>xxxxx xxxxx xxxxxxx</h1>xxxx xxxx xxxxxx xxxx xxxxx <br />xxx xxx xxxxxxx xxxx</div></div>">
-			<img src="imagenes/img2.jpg" alt="" title="<div class='block1'><div class='indent-block'><h1><strong>Xx xxxxx</strong>xxxxx xxxxx xxxxxxx</h1>xxxx xxxx xxxxxx xxxx xxxxx <br />xxx xxx xxxxxxx xxxx</div></div>">
-			<img src="imagenes/img3.jpg" alt="" title="<div class='block1'><div class='indent-block'><h1><strong>Xx xxxxx</strong>xxxxx xxxxx xxxxxxx</h1>xxxx xxxx xxxxxx xxxx xxxxx <br />xxx xxx xxxxxxx xxxx</div></div>">
-		</div>
-        
-    </div>
-    <div id="content">		
-        <div class="indent-main">
-        
-          <div class="container">
-                <div class="col-1 tabs">
-                
-                	<div class="tail2">
-                    	<div class="container">
-							<ul class="nav">
-								<li class="selected"><a href="#Technology"><em><b>Equipos de Última Tecnología</b></em></a></li>
-								<li class="indent-2"><a href="#Dental"><em><b>Proezas Médicas</b></em></a></li>
-							</ul>
-                        </div>
-                    </div><!-- FIN TABS -->
-                    
-                	<div class="container tab-content" id="Technology">
-                    	<div class="col-3">
-                        	<div class="tail">
-                            
-                            	<h2>MAMOGRAFIA DIGITAL: EL DESAFIO DEL PRESENTE</h2>
-                                <div class="tail1">
-                                    <p>Una mamografía selectiva de detección es una radiografía del seno que se utiliza para detectar cambios en el seno en mujeres que no presentan signos.</p>
-                                    <a href="#" class="link">LEER MÁS</a>
-                                </div>
-                                
-                                <h2>ANGIOGRAFÍA DIGITAL: ARTERIOGRAFÍAS EN INTERNET</h2>
-                                <div class="tail1">
-                                    <p>La angiografía digital es un método de generar imágenes de estructuras vasculares basado en la técnica de sustracción, la cual trata de "sustraer".</p>
-                                    <a href="#" class="link">LEER MÁS</a>
-                                </div>
 
-                            </div>
+        <div class="main-container">
+            <div class="main wrapper clearfix">
 
-                        </div>
-                    	
-                    </div><!-- FIN CONTAINER TAB 1 -->
-                    
-                	<div class="container tab-content" id="Dental">
-                    	<div class="col-3">
-                        	
-                            <div class="tail">
-                            
-                            	<h2>LOS TRASPLANTES DE ROSTRO QUE IMPACTARON AL MUNDO</h2>
-                                <div class="tail1">
-                                    <p>Isabelle Dinoire fue la primera persona a quien se le practicó esta intervención. A continuación, un recuento de estos asombrosos casos.</p>
-                                    <a href="#" class="link">LEER MÁS</a>
-                                </div>
-                                
-                                <h2>ONCÓLOGOS DEL INEN REALIZAN PROEZAS MÉDICAS UTILIZANDO MICROCIRUGÍA</h2>
-                                <div class="tail1">
-                                    <p>Los oncólogos del Instituto Nacional de Enfermedades Neoplásicas (INEN) realizan diversas proezas médicas para salvar la vida de sus pacientes.</p>
-                                    <a href="#" class="link">LEER MÁS</a>
-                                </div>
+                <article>
+                    <header>
+                        <h1>article header h1</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec.</p>
+                    </header>
+                    <section>
+                        <h2>article section h2</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices. Proin in est sed erat facilisis pharetra.</p>
+                    </section>
+                    <section>
+                        <h2>article section h2</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices. Proin in est sed erat facilisis pharetra.</p>
+                    </section>
+                    <footer>
+                        <h3>article footer h3</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor.</p>
+                    </footer>
+                </article>
 
-                            </div>
-                            
-                        </div>
-                    </div><!-- FIN CONTAINER TAB 2 -->
-                    
-                    <div class="tail">
-                            
-                        <h2>Reconocimientos Institucionales</h2>
-                        <div class="tail1">
-                            <p>Augue egestas arcu ut ut platea nisi odio ac dignissim tristique turpis, augue tincidunt dolor! Sociis, odio sit pellentesque porta elit, porttitor penatibus facilisis, placerat amet porta, sed? Lectus sed mauris tristique, massa mid tortor. </p>
-                      	</div>
-                        
-                        <h2>Tour Virtual</h2>
-                        <iframe width="370" height="240" src="http://www.youtube.com/embed/B4_QQQCInFg?rel=0" frameborder="0" allowfullscreen></iframe>
-                       
-                    </div><!-- FIN TAIL -->
-                    
-                </div>
-                
-                <div class="col-4">
-                	<article>
-                    <img src="imagenes/1page_img1.jpg" alt="" width="351" height="192" class="img-indent"><br>
-                    <div class="tail">
-                        <h2>Un microchip que se ingiere abre el camino de la medicina digital</h2>
-                        <p>Está incrustado en las pastillas y se usará para verificar si un paciente está cumpliendo o no con la toma de sus medicinas</p>
-                        <a href="#" class="link">VER MÁS</a>
-                    </div>
-                    </article>
-                    
-                    <article>
-                    <div class="tail">
-                        <h2>¿Las células madre provocan regeneración del cáncer? Científicos debaten</h2>
-                        <a href="#" class="link">VER MÁS</a>
-                    </div>
-                    </article>
-                    
-                    <article class="borde_t1p float_left padding_t10 an100">
-                    	<div class="tail">
-                        	<h2>Ubícanos</h2>
-                            <iframe id="mapa_hospital" width="346" height="285" frameborder="1" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com.pe/maps?hl=es&amp;ie=UTF8&amp;q=hospital+dos+de+mayo&amp;fb=1&amp;gl=pe&amp;hq=hospital+dos+de+mayo&amp;hnear=0x9105c842e97d1b27:0x32a2c5cc041d2ebb,Distrito+de+San+Isidro&amp;cid=0,0,13761947855557028558&amp;t=m&amp;ll=-12.055437,-77.015941&amp;spn=0.006295,0.007489&amp;z=16&amp;output=embed"></iframe>
-                        </div>
-                    </article>
-                    
-                </div><!-- FIN ARTICULOS -->
-                
-                
-            	<div class="col-2">
-                	<div class="indent-col2">
-                    	<h2>Especialidades</h2>
-                        <ul class="p1">
-                            <li><a href="#">Alergología</a></li>
-                            <li><a href="#">Cardiología</a></li>
-                            <li><a href="#">Cirugía oncológica</a></li>
-                            <li><a href="#">Cirugía pediátrica</a></li>
-                            <li><a href="#">Cirugía plástica</a></li>
-                            <li><a href="#">Columna</a></li>
-                            <li><a href="#">Dermatología</a></li>
-                            <li><a href="#">Endocrinología</a></li>
-                            <li><a href="#">Gastroenterología</a></li>
-                            <li><a href="#">Geriatría</a></li>
-                            <li><a href="#">Hematología</a></li>
-                            <li class="last"><a href="#">Psicología</a></li>
-                        </ul>
-                        
-              </div>
-                    
-              <div class="box">
-                        <div class="corner-top-right">
-                            <div class="corner-top-left">
-                                <div class="corner-bottom-left">
-                                    <div class="corner-bottom-right"> 
-                                        <div class="indent-box">
-                                            <h2>Escríbanos</h2>
-                                            <form action="" id="form1"><div class="container">
-                                            	
-                                              <fieldset>
-                                                    <label for="esc_nombre">Nombres:</label>
-                                                  <input name="esc_nombre" type="text" class="input" size="22">
-                                                </fieldset>
-                                                
-                                              <fieldset>
-                                                <label for="esc_email">Email:</label>
-                                                <input name="esc_email" type="text" class="input" size="22">
-                                                </fieldset>
-                                                
-                                              <fieldset>
-                                                <label for="esc_mensaje">Mensaje:</label>
-                                                <textarea name="esc_mensaje" cols="22" rows="8"></textarea>
-                                                </fieldset>
-                                                
-                                              <a href="#" class="fright alignMiddle" onClick="document.getElementById('form1').submit()">
-                                           	  <img alt="" src="imagenes/button.gif"></a>
-                                            </div></form>                                                    
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
+                <aside>
+                    <h3>aside</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices.</p>
+                </aside>
+
+            </div> <!-- #main -->
+        </div> <!-- #main-container -->
+
+        <div class="footer-container">
+            <footer class="wrapper">
+                <h3>footer</h3>
+            </footer>
         </div>
-    </div>	 
-    <div id="footer">
-    	
-        <div class="indent-footer">
-        	<p><span>Hospital Nacional Dos de Mayo</span> &copy; 2012 &nbsp;</p>
-        </div>
-    </div>
-</div>
 
-<script type="text/javascript"> Cufon.now(); </script>
-</body>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.0.min.js"><\/script>')</script>
+
+        
+    </body>
 </html>
-
-
-
