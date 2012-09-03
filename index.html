@@ -11,10 +11,72 @@
 
         <!-- ESTILOS -->
         <link rel="stylesheet" href="css/normalize.min.css">
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/estilos.css">
 
-        <script src="/js/vendor/modernizr-2.6.1.min.js"></script>
-        <script src="/js/plugins.js"></script>
+        <script src="js/vendor/modernizr-2.6.1.min.js"></script>
+        <script src="js/plugins.js"></script>
+
+        <!-- MENU -->
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script>
+            var jMenu=jQuery.noConflict();
+            jMenu(document).ready(function(){
+                jMenu('#nav>li').hover(
+                    function(){
+                    jMenu('.submenu',this).stop(true,true).slideDown('fast');
+                    },
+                    function(){
+                    jMenu('.submenu',this).slideUp('fast');
+                    }
+                );      
+            });
+        </script>
+
+        <!-- MARQUEE -->
+        <link href="libs/marquee/jquery.marquee.css" rel="stylesheet" type="text/css">
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="libs/marquee/jquery.marquee.js"></script>
+        <script>
+            var jMarq = jQuery.noConflict();
+            jMarq(document).ready(function(){
+                jMarq("#marquee").marquee();
+            });
+        </script>
+
+        <!-- SLIDER -->
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="libs/nivo/jquery.nivo.slider.pack.js"></script>
+        <script>
+            var jSlid = jQuery.noConflict();
+           jSlid(document).ready(function() {
+               jSlid('#slider').nivoSlider({
+                    effect:'sliceUpDown',
+                    slices:17,
+                    animSpeed:500,
+                    pauseTime:6000,
+                    startSlide:0,
+                    directionNav:false,
+                    directionNavHide:false,
+                    controlNav:true,
+                    controlNavThumbs:false,
+                    controlNavThumbsFromRel:false,
+                    controlNavThumbsSearch: '.jpg',
+                    controlNavThumbsReplace: '_thumb.jpg',
+                    keyboardNav:true,
+                    pauseOnHover:true,
+                    manualAdvance:false,
+                    captionOpacity:1,
+                    beforeChange: function(){},
+                    afterChange: function(){},
+                    slideshowEnd: function(){}
+                });
+            });
+        </script>
+
+        <!-- tabs -->
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="js/tabs.js"></script>
+
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -23,42 +85,76 @@
 
         <div class="header-container">
             <header class="wrapper clearfix">
-                <h1 class="title">h1.title</h1>
+
+                <div id="barra_ministerio" class="position_relative">
+                    <div id="bmin_tel">
+                        <ul id="marquee" class="marquee">
+                            <li>328-0175</li>
+                            <li>328-0068</li>
+                            <li>328-0035</li>
+                            <li>328-0131</li>
+                        </ul>
+                    </div>
+                    <img src="imagenes/barra-ministerio.png" width="979" height="63" align="Ministerio de Salud">
+                </div><!-- BARRA MINISTERIO -->
+
                 <nav>
-                    <ul>
-                        <li><a href="#">nav ul li a</a></li>
-                        <li><a href="#">nav ul li a</a></li>
-                        <li><a href="#">nav ul li a</a></li>
+                    <ul id="nav">
+                        <li><a href="index.html" class="current">Inicio</a></li>
+                        <li><a href="javascript:;">Atención al Paciente</a>
+                            <ul class="submenu">
+                                <li><a>Directorio Institucional</a></li>
+                                <li><a>Pacientes</a></li>
+                                <li><a>Proyección a la Comunidad</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:;">Institucional</a>
+                            <ul class="submenu">
+                                <li><a>Historia</a></li>
+                                <li><a>Publicaciones</a></li>
+                                <li><a>Información Institucional</a></li>
+                                <li><a>Directorio Institucional</a></li>
+                                <li><a>Intranet</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:;">Transparencia</a>
+                            <ul class="submenu">
+                                <li><a>Normas y dispositvos</a></li>
+                                <li><a>Solicitudes de información</a></li>
+                                <li><a>Concurso CAS</a></li>
+                                <li><a>Concurso de Directores</a></li>
+                                <li><a>Ecoeficiencia</a></li>
+                            </ul>
+                        </li>
+                        <li class="last"><a href="javascript:;">Prensa</a>
+                            <ul class="submenu">
+                                <li><a>Sala de Prensa</a></li>
+                            </ul>
+                        </li>
                     </ul>
-                </nav>
+                </nav><!-- MENU PRINCIPAL -->
+
+                <a href="index.html"><img src="imagenes/logo.png" alt="" width="300" height="82" class="logo"></a>
+                
+                <div id="slider">
+                    <img src="imagenes/img1.jpg" alt="" title="<div class='block1'><div class='indent-block'><h1><strong>Xx xxxxx</strong>xxxxx xxxxx xxxxxxx</h1>xxxx xxxx xxxxxx xxxx xxxxx <br />xxx xxx xxxxxxx xxxx</div></div>">
+                    <img src="imagenes/img2.jpg" alt="" title="<div class='block1'><div class='indent-block'><h1><strong>Xx xxxxx</strong>xxxxx xxxxx xxxxxxx</h1>xxxx xxxx xxxxxx xxxx xxxxx <br />xxx xxx xxxxxxx xxxx</div></div>">
+                    <img src="imagenes/img3.jpg" alt="" title="<div class='block1'><div class='indent-block'><h1><strong>Xx xxxxx</strong>xxxxx xxxxx xxxxxxx</h1>xxxx xxxx xxxxxx xxxx xxxxx <br />xxx xxx xxxxxxx xxxx</div></div>">
+                </div>
+
             </header>
+
         </div>
 
         <div class="main-container">
             <div class="main wrapper clearfix">
 
                 <article>
-                    <header>
-                        <h1>article header h1</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec.</p>
-                    </header>
-                    <section>
-                        <h2>article section h2</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices. Proin in est sed erat facilisis pharetra.</p>
-                    </section>
-                    <section>
-                        <h2>article section h2</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices. Proin in est sed erat facilisis pharetra.</p>
-                    </section>
-                    <footer>
-                        <h3>article footer h3</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor.</p>
-                    </footer>
+                    
                 </article>
 
                 <aside>
-                    <h3>aside</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices.</p>
+                    
                 </aside>
 
             </div> <!-- #main -->
@@ -70,7 +166,7 @@
             </footer>
         </div>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.0.min.js"><\/script>')</script>
 
         
