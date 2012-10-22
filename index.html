@@ -23,62 +23,288 @@
         <!-- MENU -->
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
         <script>
-            var jMenu=jQuery.noConflict();
-            jMenu(document).ready(function(){
-                jMenu('#nav>li').hover(
-                    function(){
-                    jMenu('.submenu',this).stop(true,true).slideDown('fast');
+        var jMenu=jQuery.noConflict();
+        jMenu(document).ready(function(){
+            jMenu('#nav>li').hover(
+                function(){
+                jMenu('.submenu',this).stop(true,true).slideDown('fast');
+                jMenu('.submenu-prensa',this).stop(true,true).slideDown('fast');
+                },
+                function(){
+                jMenu('.submenu',this).slideUp('fast');
+                jMenu('.submenu-prensa',this).slideUp('fast');
+                }
+            );
+        });
+        </script>
+
+        <!-- TELEFONO -->
+        <link href="/libs/marquee/jquery.marquee.css" rel="stylesheet" type="text/css">
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="/libs/marquee/jquery.marquee.js"></script>
+        <script>
+        var jMarq = jQuery.noConflict();
+        jMarq(document).ready(function(){
+            jMarq("#marquee").marquee();
+        });
+        </script>
+
+        <!-- ESPECIALIDADES -->
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script>
+        var jListEspec = jQuery.noConflict();
+        //<![CDATA[ 
+        jListEspec(window).load(function(){
+            (function($) {
+            
+                var methods = {
+                    init: function(options) {
+                        this.children(':first').stop();
+                        this.marquee('play');
                     },
-                    function(){
-                    jMenu('.submenu',this).slideUp('fast');
+                    play: function() {
+                        var marquee = this,
+                            pixelsPerSecond = 10,
+                            firstChild = this.children(':first'),
+                            totalHeight = 0,
+                            difference,
+                            duration;
+                        
+                        // Find the total height of the children by adding each child's height:
+                        this.children().each(function(index, element) {
+                            totalHeight += $(element).innerHeight();
+                        });
+                        
+                        // The distance the divs have to travel to reach -1 * totalHeight:
+                        difference = totalHeight + parseInt(firstChild.css('margin-top'), 10);
+                        
+                        // The duration of the animation needed to get the correct speed:
+                        duration = (difference/pixelsPerSecond) * 1000;
+                        
+                        // Animate the first child's margin-top to -1 * totalHeight:
+                        firstChild.animate(
+                            { 'margin-top': -1 * totalHeight },
+                            duration,
+                            'linear',
+                            function() {
+                                // Move the first child back down (below the container):
+                                firstChild.css('margin-top', marquee.innerHeight());
+                                // Restart whole process... :)
+                                marquee.marquee('play');
+                            }
+                        );
+                    },
+                    pause: function() {
+                        this.children(':first').stop();
                     }
-                );      
+                };
+            
+                jListEspec.fn.marquee = function(method) {
+            
+                    // Method calling logic
+                    if (methods[method]) {
+                        return methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
+                    } else if (typeof method === 'object' || !method) {
+                        return methods.init.apply(this, arguments);
+                    } else {
+                        jListEspec.error('Method ' + method + ' does not exist on jQuery.marquee');
+                    }
+            
+                };
+            
+            })(jQuery);
+            
+            var marquee = jListEspec('#lista_especialidades');
+            
+            marquee.marquee();
+            
+            marquee.hover(function() {
+                marquee.marquee('pause');
+            }, function() {
+                marquee.marquee('play');    
             });
+        });//]]>
         </script>
 
-        <!-- MARQUEE -->
-        <link href="libs/marquee/jquery.marquee.css" rel="stylesheet" type="text/css">
+        <!-- ANALISIS CLINICOS -->
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-        <script src="libs/marquee/jquery.marquee.js"></script>
         <script>
-            var jMarq = jQuery.noConflict();
-            jMarq(document).ready(function(){
-                jMarq("#marquee").marquee();
+        var jAnClic = jQuery.noConflict();
+        //<![CDATA[ 
+        jAnClic(window).load(function(){
+            (function($) {
+            
+                var methods = {
+                    init: function(options) {
+                        this.children(':first').stop();
+                        this.marquee('play');
+                    },
+                    play: function() {
+                        var marquee = this,
+                            pixelsPerSecond = 10,
+                            firstChild = this.children(':first'),
+                            totalHeight = 0,
+                            difference,
+                            duration;
+                        
+                        // Find the total height of the children by adding each child's height:
+                        this.children().each(function(index, element) {
+                            totalHeight += $(element).innerHeight();
+                        });
+                        
+                        // The distance the divs have to travel to reach -1 * totalHeight:
+                        difference = totalHeight + parseInt(firstChild.css('margin-top'), 10);
+                        
+                        // The duration of the animation needed to get the correct speed:
+                        duration = (difference/pixelsPerSecond) * 1000;
+                        
+                        // Animate the first child's margin-top to -1 * totalHeight:
+                        firstChild.animate(
+                            { 'margin-top': -1 * totalHeight },
+                            duration,
+                            'linear',
+                            function() {
+                                // Move the first child back down (below the container):
+                                firstChild.css('margin-top', marquee.innerHeight());
+                                // Restart whole process... :)
+                                marquee.marquee('play');
+                            }
+                        );
+                    },
+                    pause: function() {
+                        this.children(':first').stop();
+                    }
+                };
+            
+                jAnClic.fn.marquee = function(method) {
+            
+                    // Method calling logic
+                    if (methods[method]) {
+                        return methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
+                    } else if (typeof method === 'object' || !method) {
+                        return methods.init.apply(this, arguments);
+                    } else {
+                        jAnClic.error('Method ' + method + ' does not exist on jQuery.marquee');
+                    }
+            
+                };
+            
+            })(jQuery);
+            
+            var marquee = jAnClic('#lista_analisis_clinicos');
+            
+            marquee.marquee();
+            
+            marquee.hover(function() {
+                marquee.marquee('pause');
+            }, function() {
+                marquee.marquee('play');    
             });
+        });//]]>
         </script>
 
-        <!-- SLIDER -->
+        <!-- SLIDE SUPERIOR -->
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-        <script src="libs/nivo/jquery.nivo.slider.pack.js"></script>
+        <script src="js/jquery.nivo.slider.pack.js"></script>
         <script>
-            var jSlid = jQuery.noConflict();
-           jSlid(document).ready(function() {
-               jSlid('#slider').nivoSlider({
-                    effect:'sliceUpDown',
-                    slices:17,
-                    animSpeed:500,
-                    pauseTime:6000,
-                    startSlide:0,
-                    directionNav:false,
-                    directionNavHide:false,
-                    controlNav:true,
-                    controlNavThumbs:false,
-                    controlNavThumbsFromRel:false,
-                    controlNavThumbsSearch: '.jpg',
-                    controlNavThumbsReplace: '_thumb.jpg',
-                    keyboardNav:true,
-                    pauseOnHover:true,
-                    manualAdvance:false,
-                    captionOpacity:1,
-                    beforeChange: function(){},
-                    afterChange: function(){},
-                    slideshowEnd: function(){}
-                });
+        var jSlider=jQuery.noConflict();
+        jSlider(document).ready(function() {
+            jSlider('#slider').nivoSlider({
+                effect:'sliceUpDown',
+                slices:17,
+                animSpeed:500,
+                pauseTime:8000,
+                startSlide:0,
+                directionNav:false,
+                directionNavHide:false,
+                controlNav:true,
+                controlNavThumbs:false,
+                controlNavThumbsFromRel:false,
+                controlNavThumbsSearch: '.jpg',
+                controlNavThumbsReplace: '_thumb.jpg',
+                keyboardNav:true,
+                pauseOnHover:true,
+                manualAdvance:false,
+                captionOpacity:1,
+                beforeChange: function(){},
+                afterChange: function(){},
+                slideshowEnd: function(){}
             });
+        });
         </script>
 
-        <!-- tabs -->
+        <!-- SLIDE HISTORICO PATRIMONIO -->
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="js/jquery.nivo.slider.pack.js"></script>
+        <script>
+        var jHisPat=jQuery.noConflict();
+        jHisPat(document).ready(function() {
+            jHisPat('#pub_histpat').nivoSlider({
+                effect:'fade', 
+                slices:17,
+                animSpeed:500,
+                pauseTime:4000,
+                startSlide:0, 
+                directionNav:false,
+                directionNavHide:false,
+                pauseOnHover:true,
+                controlNav:false,
+                pauseOnHover:false,
+            });
+        });
+        </script>
+
+        <!-- FORMULARIO -->
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script type="text/javascript" src="/libs/blockui/jquery.blockUI.js"></script>
+        <script type="text/javascript">
+        var jcladd = jQuery.noConflict();
+        jcladd(document).ready(function() { 
+            jcladd('.icon-escribanos').click(function() { 
+                jcladd.blockUI({ message: jcladd('#form_escribanos'), css: {top: '20%'} }); 
+            });
+            
+            jcladd('#cerrar').click(function() { 
+                jcladd.unblockUI(); 
+                return false; 
+            });
+             
+        });
+        </script>
+
+        <!-- MAPA -->
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script type="text/javascript" src="/libs/blockui/jquery.blockUI.js"></script>
+        <script type="text/javascript">
+        var jMapUbi = jQuery.noConflict();
+        jMapUbi(document).ready(function() { 
+            jMapUbi('.icon-ubicanos').click(function() { 
+                jMapUbi.blockUI({ message: jMapUbi('#mapa_ubicanos'), css: {top: '20%'} }); 
+            });
+            
+            jMapUbi('#cerrar_mapa').click(function() { 
+                jMapUbi.unblockUI(); 
+                return false; 
+            });
+             
+        });
+        </script>
+
+        <!-- ENLACES DE INTERES -->
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="/libs/caroufredsel/jquery.carouFredSel-5.6.4.js"></script>
+        <script>
+        var jEnlInt = jQuery.noConflict();
+        jEnlInt(document).ready(function(){
+            jEnlInt("#publucidad_lista_item").carouFredSel({
+                items: 5,
+                duration: 1500
+            });
+        });
+        </script>
+
+        <!-- TABS -->
+        <script src="js/jquery-1.4.2.min.js"></script>
         <script src="js/tabs.js"></script>
 
     </head>
@@ -92,36 +318,45 @@
             <div class="header-container">
                 <header class="wrapper clearfix">
 
+                    <div id="icons-sup">
+            
+                        <ul>
+                            <li><img src="imagenes/icon-home.png" height="20"></li>
+                            <li><img src="imagenes/icon-correo.png" height="20"></li>
+                            <li><img src="imagenes/icon-mapa-sitio.png" height="20"></li>
+                        </ul>
+                        
+                    </div>
+
                     <nav>
                         <ul id="nav">
                             <li class="first"><a href="index.html" class="current">Inicio</a></li>
-                            <li><a href="javascript:;">Atención al Paciente</a>
-                                <ul class="submenu">
-                                    <li><a>Directorio Institucional</a></li>
-                                    <li><a>Pacientes</a></li>
-                                    <li><a>Proyección a la Comunidad</a></li>
-                                </ul>
-                            </li>
                             <li><a href="javascript:;">Institucional</a>
                                 <ul class="submenu">
-                                    <li><a>Historia</a></li>
-                                    <li><a>Publicaciones</a></li>
+                                    <li><a href="directorio-institucional.html">Directorio</a></li>
+                                    <li><a href="#">Historia</a></li>
                                     <li><a>Información Institucional</a></li>
-                                    <li><a>Directorio Institucional</a></li>
                                     <li><a>Intranet</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="javascript:;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                                <ul class="submenu">
+                                    <li><a>Publicaciones</a></li>
+                                    <li><a>Directorio Institucional</a></li>                    
                                 </ul>
                             </li>
                             <li><a href="javascript:;">Transparencia</a>
                                 <ul class="submenu">
-                                    <li><a>Normas y dispositvos</a></li>
+                                    <li><a href="transparencia-normas.html">Normas y dispositvos</a></li>
                                     <li><a>Solicitudes de información</a></li>
-                                    <li><a>Concurso CAS</a></li>
-                                    <li><a>Concurso de Directores</a></li>
+                                    <li><a href="transparencia-concurso.html">Concurso CAS</a></li>
+                                    <li><a href="transparencia-directores.html">Concurso de Directores</a></li>
                                     <li><a>Ecoeficiencia</a></li>
+                                    <li><a href="http://www.essalud.gob.pe/transparencia/">Portal del Estado Peruano</a></li>
                                 </ul>
                             </li>
                             <li class="last"><a href="javascript:;">Prensa</a>
-                                <ul class="submenu">
+                                <ul class="submenu-prensa">
                                     <li><a>Sala de Prensa</a></li>
                                 </ul>
                             </li>
@@ -131,9 +366,9 @@
                     <a href="index.html"><img src="imagenes/logo.png" alt="" width="300" height="82" class="logo"></a>
 
                     <div id="slider">
-                        <img src="imagenes/img1.jpg" alt="" title="<div class='block1'><div class='indent-block'><h1><strong>137 años</strong>de Historia y Tradición</h1>al Servicio de la Medicina Peruana</div></div>">
-                        <img src="imagenes/img2.jpg" alt="" title="<div class='block1'><div class='indent-block'><h1><strong>Tecnología</strong>Equipos de última generación</h1>al servicio de todos los peruanos</div></div>">
-                        <img src="imagenes/img3.jpg" alt="" title="<div class='block1'><div class='indent-block'><h1><strong>Docencia</strong>Capacitación e</h1>investigación académica</div></div>">
+                        <img src="imagenes/slide/img1.jpg" alt="" title="<div class='block1'><div class='indent-block'><h1><strong>137 años</strong>de Historia y Tradición</h1>al Servicio de la Medicina Peruana</div></div>">
+                        <img src="imagenes/slide/img2.jpg" alt="" title="<div class='block1'><div class='indent-block'><h1><strong>Tecnología</strong>Equipos de última generación</h1>al servicio de todos los peruanos</div></div>">
+                        <img src="imagenes/slide/img3.jpg" alt="" title="<div class='block1'><div class='indent-block'><h1><strong>Docencia</strong>Capacitación e</h1>investigación académica</div></div>">
                     </div>
 
                 </header>
