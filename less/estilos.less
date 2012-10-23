@@ -27,7 +27,6 @@ textarea {
 body {
 	background:#2D65AE;
     font-size: 14px;
-    line-height: 1.4;
     font-family: Verdana, Geneva, sans-serif;
 }
 
@@ -80,8 +79,9 @@ textarea {
 }
 
 .wrapper {
-    width: 980px;
     margin: 0 auto;
+    position: relative;
+    width: 980px;
 }
 
 /* ==============
@@ -119,8 +119,207 @@ header{
 		width:100%;
 	}
 
-	.logo{ 
-		margin:15px 0 17px 19px;
+	h1{ 
+
+		a{
+			background-image: url("../imagenes/logo.png");
+			display: block;
+			height: 84px;
+			margin:15px 0 17px 19px;
+			text-indent: -10000em;
+			width: 300px;
+		}
+	}
+
+	#icons-sup{
+		height: 25px;
+		left: 880px;
+		position: absolute;
+		top: 10px;
+		width: 97px;
+
+		ul{
+			list-style: none;
+			margin: 0;
+			padding: 0;
+
+			li{
+
+				a{
+					background-image: url("../imagenes/iconos.png");
+					display: block;
+					float: left;
+					height: 20px;
+					margin: 0 5px;
+					text-indent: -10000em;				
+					width: 20px;
+				}
+
+				.icon-home{
+					background-position: -304px -58px;
+				}
+
+				.icon-correo{
+					background-position: -334px -58px;
+				}
+
+				.icon-mapa-sitio{
+					background-position: -364px -58px;
+				}
+
+			}
+
+		}
+
+	}
+}
+
+/* ==============
+    ESPECIALIDADES
+   ============== */
+
+#mrq_especialidades{
+	background: #2D65AE;
+	border:1px solid #CCC;
+	float:left;
+	height:235px;
+	font-size:12px;
+	padding:5px 15px 0 10px;
+	margin-bottom: 10px;
+	position:relative;
+	width:192px;
+
+	#mrqe-vm{
+		display:block;
+		position:absolute;
+		width:75px;
+		left: 129px;
+		top: 217px;
+		text-align:right;
+		color:#fff;
+		font-weight:bold;
+	}
+
+	h2{
+		color:#fff; 
+		font-size:18px; 		
+		font-weight:normal;
+		line-height:1.2em;
+		margin-bottom:8px;
+		margin-top: 0;
+	}
+
+	#mrq_especialidades_lista{
+		height: 175px;
+		overflow: hidden;
+		width: 192px;
+
+		ul{ 
+			margin:0 !important; 
+			padding:0 !important; 
+			list-style:none !important;
+
+			li{
+				background:url(../imagenes/marker.png) top left no-repeat;
+				background-position:0 7px;
+				float:none;
+				font-weight:600;
+				letter-spacing:1px;
+				margin:0;
+				padding-left:26px;
+				padding-bottom: 9px;
+				
+				a{
+					color:#fff; 
+					line-height:18px; 
+					margin:0;
+					text-decoration:none; 
+				}
+
+				a:hover{
+					color:#1A4483;
+					text-decoration:none; 
+					
+				}
+			}
+		}
+	}
+}
+
+/* ==============
+    CENTRAL TELEFONICA
+   ============== */
+
+#central_telefonica{
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	border:1px solid #999;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#fefdf9', endColorstr = '#f2efe8');
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr = '#fefdf9', endColorstr = '#f2efe8')";
+	background-image: -moz-linear-gradient(top, #fefdf9, #f2efe8);
+	background-image: -ms-linear-gradient(top, #fefdf9, #f2efe8);
+	background-image: -o-linear-gradient(top, #fefdf9, #f2efe8);
+	background-image: -webkit-gradient(linear, center top, center bottom, from(#fefdf9), to(#f2efe8));
+	background-image: -webkit-linear-gradient(top, #fefdf9, #f2efe8);
+	background-image: linear-gradient(top, #fefdf9, #f2efe8);
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	float:left;
+	margin:0;
+	padding:5px 10px 10px 10px;
+	position:relative;
+	width:195px;
+
+	h2{
+		color:#2185C7; 
+		font-size:16px;		
+		margin:0 0 5px 0; 
+		text-align:center;
+	}
+
+	#ver_telf{
+		color:#000;
+		display:block;
+		font-weight:bold;
+		font-size:12px;
+		left: 106px;
+		top: 51px;
+		text-align:right;		
+		position:absolute;
+		width:99px;	
+	}
+
+	img{
+		float: left;
+	}
+
+	ul.marquee {
+		color: #000;
+		display: block;
+		height: 30px;
+		left: 50px;
+		list-style: none;
+		line-height: 1;
+		padding: 0;
+		margin: 0;
+		overflow: hidden;
+		position: absolute;	
+		width: 135px;
+
+		li {
+			background:none;
+			display: block !important;
+			font-weight:bold;
+			font-size:22px !important;
+			padding: 3px 5px !important;
+			position: absolute  !important;
+			top: -999em;
+			text-align:center !important;
+			white-space: nowrap !important;
+			width:135px !important;
+		}
 	}
 }
 
@@ -273,11 +472,13 @@ header nav{
    ============== */
 
 #slider{
+	margin:0 10px 15px 0;
+	float:left;
 	height:318px; 
 	overflow:hidden;
 	position:relative; 
-	width:100%; 
-	z-index:88; 
+	width:750px; 
+	z-index:88;
 
 	.nivoSlider a.nivo-imageLink {
 		border:0;

@@ -16,7 +16,7 @@
         <!-- FONT -->
         <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700' rel='stylesheet' type='text/css'>
 
-
+        <!-- MODERNIZR -->
         <script src="js/vendor/modernizr-2.6.1.min.js"></script>
         <script src="js/plugins.js"></script>
 
@@ -38,10 +38,10 @@
         });
         </script>
 
-        <!-- TELEFONO -->
-        <link href="/libs/marquee/jquery.marquee.css" rel="stylesheet" type="text/css">
+        <!-- TELEFONO --
+        <link href="libs/marquee/jquery.marquee.css" rel="stylesheet" type="text/css">-->
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-        <script src="/libs/marquee/jquery.marquee.js"></script>
+        <script src="libs/marquee/jquery.marquee.js"></script>
         <script>
         var jMarq = jQuery.noConflict();
         jMarq(document).ready(function(){
@@ -70,26 +70,20 @@
                             difference,
                             duration;
                         
-                        // Find the total height of the children by adding each child's height:
                         this.children().each(function(index, element) {
                             totalHeight += $(element).innerHeight();
                         });
                         
-                        // The distance the divs have to travel to reach -1 * totalHeight:
                         difference = totalHeight + parseInt(firstChild.css('margin-top'), 10);
                         
-                        // The duration of the animation needed to get the correct speed:
                         duration = (difference/pixelsPerSecond) * 1000;
                         
-                        // Animate the first child's margin-top to -1 * totalHeight:
                         firstChild.animate(
                             { 'margin-top': -1 * totalHeight },
                             duration,
                             'linear',
                             function() {
-                                // Move the first child back down (below the container):
                                 firstChild.css('margin-top', marquee.innerHeight());
-                                // Restart whole process... :)
                                 marquee.marquee('play');
                             }
                         );
@@ -101,7 +95,6 @@
             
                 jListEspec.fn.marquee = function(method) {
             
-                    // Method calling logic
                     if (methods[method]) {
                         return methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
                     } else if (typeof method === 'object' || !method) {
@@ -114,7 +107,7 @@
             
             })(jQuery);
             
-            var marquee = jListEspec('#lista_especialidades');
+            var marquee = jListEspec('#mrq_especialidades_lista');
             
             marquee.marquee();
             
@@ -256,7 +249,7 @@
 
         <!-- FORMULARIO -->
         <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-        <script type="text/javascript" src="/libs/blockui/jquery.blockUI.js"></script>
+        <script type="text/javascript" src="libs/blockui/jquery.blockUI.js"></script>
         <script type="text/javascript">
         var jcladd = jQuery.noConflict();
         jcladd(document).ready(function() { 
@@ -274,7 +267,7 @@
 
         <!-- MAPA -->
         <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-        <script type="text/javascript" src="/libs/blockui/jquery.blockUI.js"></script>
+        <script type="text/javascript" src="libs/blockui/jquery.blockUI.js"></script>
         <script type="text/javascript">
         var jMapUbi = jQuery.noConflict();
         jMapUbi(document).ready(function() { 
@@ -292,7 +285,7 @@
 
         <!-- ENLACES DE INTERES -->
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-        <script src="/libs/caroufredsel/jquery.carouFredSel-5.6.4.js"></script>
+        <script src="libs/caroufredsel/jquery.carouFredSel-5.6.4.js"></script>
         <script>
         var jEnlInt = jQuery.noConflict();
         jEnlInt(document).ready(function(){
@@ -321,9 +314,9 @@
                     <div id="icons-sup">
             
                         <ul>
-                            <li><img src="imagenes/icon-home.png" height="20"></li>
-                            <li><img src="imagenes/icon-correo.png" height="20"></li>
-                            <li><img src="imagenes/icon-mapa-sitio.png" height="20"></li>
+                            <li><a class="icon-home" href="">Home</a></li>
+                            <li><a class="icon-correo" href="">Correo</a></li>
+                            <li><a class="icon-mapa-sitio" href="">Mapa de Stio</a></li>
                         </ul>
                         
                     </div>
@@ -363,12 +356,156 @@
                         </ul>
                     </nav><!-- MENU PRINCIPAL -->
 
-                    <a href="index.html"><img src="imagenes/logo.png" alt="" width="300" height="82" class="logo"></a>
+                    <h1><a class="logo-principal" href="/">Hospital Nacional Dos de Mayo</a></h1>
 
                     <div id="slider">
                         <img src="imagenes/slide/img1.jpg" alt="" title="<div class='block1'><div class='indent-block'><h1><strong>137 años</strong>de Historia y Tradición</h1>al Servicio de la Medicina Peruana</div></div>">
                         <img src="imagenes/slide/img2.jpg" alt="" title="<div class='block1'><div class='indent-block'><h1><strong>Tecnología</strong>Equipos de última generación</h1>al servicio de todos los peruanos</div></div>">
                         <img src="imagenes/slide/img3.jpg" alt="" title="<div class='block1'><div class='indent-block'><h1><strong>Docencia</strong>Capacitación e</h1>investigación académica</div></div>">
+                    </div>
+
+                    <div id="mrq_especialidades">
+
+                        <h2>Especialidades</h2>
+                        <a id="mrqe-vm" href="">Ver más...</a>
+
+                        <div id="mrq_especialidades_lista">
+                            <div>
+                                <ul>
+                                    <li><a href="#">Medicina</a></li>
+                                    <li><a href="#">Cirugía</a></li>
+                                    <li><a href="#">Odontoestomatología</a></li>
+                                    <li><a href="#">Cirugía de Torax y Cardiovascular</a></li>
+                                    <li><a href="#">Pediatria y Neonatología</a></li>
+                                    <li><a href="#">Gineco-Obstetricia</a></li>
+                                    <li><a href="#">Emergencia</a></li>                
+                                    <li><a href="#">Medicina Interna</a></li>
+                                    <li><a href="#">Cardiología</a></li>
+                                    <li><a href="#">Reumatología</a></li>
+                                    <li><a href="#">Nefrología</a></li>
+                                    <li><a href="#">Endocrinología</a></li>
+                                    <li><a href="#">Dermatología</a></li>
+                                    <li><a href="#">Neumología</a></li>
+                                    <li><a href="#">Gastroenterología</a></li>
+                                    <li><a href="#">Neurología</a></li>
+                                    <li><a href="#">Medicina Física y Rehabilitación</a></li>
+                                    <li><a href="#">Psiquiatría</a></li>
+                                    <li><a href="#">Psicología</a></li>
+                                    <li><a href="#">Oncología Médica</a></li>
+                                    <li><a href="#">Hematología Clínica</a></li>
+                                    <li><a href="#">Enfermedades infecciosas y tropicales</a></li>
+                                    <li><a href="#">Otorrinolaringología</a></li>
+                                    <li><a href="#">Urología</a></li>
+                                    <li><a href="#">Cirugía Plástica y Reconstructiva</a></li>
+                                    <li><a href="#">Neurocirugía</a></li>
+                                    <li><a href="#">Cirugía Pediátrica General y Especializada</a></li>
+                                    <li><a href="#">Oftalmología</a></li>
+                                    <li><a href="#">Cirugía de Cabeza y Cuello</a></li>
+                                    <li><a href="#">Carielogia y Endodoncia</a></li>
+                                    <li><a href="#">Odonto-pediatría</a></li>
+                                    <li><a href="#">Cardiovascular</a></li>
+                                    <li><a href="#">Pediatría y Neonatología</a></li>
+                                    <li><a href="#">Obstetricia</a></li>
+                                    <li><a href="#">Ginecología</a></li>
+                                    <li><a href="#">Reproducción Humana</a></li>
+                                    <li><a href="#">Oncología Ginecológica</a></li>
+                                    <li><a href="#">Despistaje de Cáncer</a></li>
+                                    <li><a href="#">Planificación Familiar</a></li>
+                                    
+                                    <li><a href="#">Medicina</a></li>
+                                    <li><a href="#">Cirugía</a></li>
+                                    <li><a href="#">Odontoestomatología</a></li>
+                                    <li><a href="#">Cirugía de Torax y Cardiovascular</a></li>
+                                    <li><a href="#">Pediatria y Neonatología</a></li>
+                                    <li><a href="#">Gineco-Obstetricia</a></li>
+                                    <li><a href="#">Emergencia</a></li>                
+                                    <li><a href="#">Medicina Interna</a></li>
+                                    <li><a href="#">Cardiología</a></li>
+                                    <li><a href="#">Reumatología</a></li>
+                                    <li><a href="#">Nefrología</a></li>
+                                    <li><a href="#">Endocrinología</a></li>
+                                    <li><a href="#">Dermatología</a></li>
+                                    <li><a href="#">Neumología</a></li>
+                                    <li><a href="#">Gastroenterología</a></li>
+                                    <li><a href="#">Neurología</a></li>
+                                    <li><a href="#">Medicina Física y Rehabilitación</a></li>
+                                    <li><a href="#">Psiquiatría</a></li>
+                                    <li><a href="#">Psicología</a></li>
+                                    <li><a href="#">Oncología Médica</a></li>
+                                    <li><a href="#">Hematología Clínica</a></li>
+                                    <li><a href="#">Enfermedades infecciosas y tropicales</a></li>
+                                    <li><a href="#">Otorrinolaringología</a></li>
+                                    <li><a href="#">Urología</a></li>
+                                    <li><a href="#">Cirugía Plástica y Reconstructiva</a></li>
+                                    <li><a href="#">Neurocirugía</a></li>
+                                    <li><a href="#">Cirugía Pediátrica General y Especializada</a></li>
+                                    <li><a href="#">Oftalmología</a></li>
+                                    <li><a href="#">Cirugía de Cabeza y Cuello</a></li>
+                                    <li><a href="#">Carielogia y Endodoncia</a></li>
+                                    <li><a href="#">Odonto-pediatría</a></li>
+                                    <li><a href="#">Cardiovascular</a></li>
+                                    <li><a href="#">Pediatría y Neonatología</a></li>
+                                    <li><a href="#">Obstetricia</a></li>
+                                    <li><a href="#">Ginecología</a></li>
+                                    <li><a href="#">Reproducción Humana</a></li>
+                                    <li><a href="#">Oncología Ginecológica</a></li>
+                                    <li><a href="#">Despistaje de Cáncer</a></li>
+                                    <li><a href="#">Planificación Familiar</a></li>
+                                    
+                                    <li><a href="#">Medicina</a></li>
+                                    <li><a href="#">Cirugía</a></li>
+                                    <li><a href="#">Odontoestomatología</a></li>
+                                    <li><a href="#">Cirugía de Torax y Cardiovascular</a></li>
+                                    <li><a href="#">Pediatria y Neonatología</a></li>
+                                    <li><a href="#">Gineco-Obstetricia</a></li>
+                                    <li><a href="#">Emergencia</a></li>                
+                                    <li><a href="#">Medicina Interna</a></li>
+                                    <li><a href="#">Cardiología</a></li>
+                                    <li><a href="#">Reumatología</a></li>
+                                    <li><a href="#">Nefrología</a></li>
+                                    <li><a href="#">Endocrinología</a></li>
+                                    <li><a href="#">Dermatología</a></li>
+                                    <li><a href="#">Neumología</a></li>
+                                    <li><a href="#">Gastroenterología</a></li>
+                                    <li><a href="#">Neurología</a></li>
+                                    <li><a href="#">Medicina Física y Rehabilitación</a></li>
+                                    <li><a href="#">Psiquiatría</a></li>
+                                    <li><a href="#">Psicología</a></li>
+                                    <li><a href="#">Oncología Médica</a></li>
+                                    <li><a href="#">Hematología Clínica</a></li>
+                                    <li><a href="#">Enfermedades infecciosas y tropicales</a></li>
+                                    <li><a href="#">Otorrinolaringología</a></li>
+                                    <li><a href="#">Urología</a></li>
+                                    <li><a href="#">Cirugía Plástica y Reconstructiva</a></li>
+                                    <li><a href="#">Neurocirugía</a></li>
+                                    <li><a href="#">Cirugía Pediátrica General y Especializada</a></li>
+                                    <li><a href="#">Oftalmología</a></li>
+                                    <li><a href="#">Cirugía de Cabeza y Cuello</a></li>
+                                    <li><a href="#">Carielogia y Endodoncia</a></li>
+                                    <li><a href="#">Odonto-pediatría</a></li>
+                                    <li><a href="#">Cardiovascular</a></li>
+                                    <li><a href="#">Pediatría y Neonatología</a></li>
+                                    <li><a href="#">Obstetricia</a></li>
+                                    <li><a href="#">Ginecología</a></li>
+                                    <li><a href="#">Reproducción Humana</a></li>
+                                    <li><a href="#">Oncología Ginecológica</a></li>
+                                    <li><a href="#">Despistaje de Cáncer</a></li>
+                                    <li><a href="#">Planificación Familiar</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="central_telefonica">
+                        <h2>Central Telefónica</h2>
+                        <a id="ver_telf" href="javascript:;">Ver más...</a>
+                        <ul id="marquee" class="marquee">
+                          <li>328-0175</li>
+                          <li>328-0068</li>
+                          <li>328-0035</li>
+                          <li>328-0131</li>
+                        </ul>
+                        <img src="imagenes/icon-telefono.png" width="32" height="32"  alt="">
                     </div>
 
                 </header>
