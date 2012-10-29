@@ -24,7 +24,19 @@
         <script src="http://code.jquery.com/jquery-latest.js"></script>
         <script src="js/tabs.js"></script>        
 
-        <!-- SLIDE -->
+        <!-- PATRIMONIO HISTORICO -->
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script src="libs/caroufredsel/jquery.carouFredSel-5.5.0-packed.js"></script>
+        <script>
+        var jHisPat=jQuery.noConflict();
+        jHisPat(document).ready(function(){
+            jHisPat("#patrimonio-historico").carouFredSel({
+                items: 1
+            });
+        });        
+        </script>
+
+        <!-- SLIDE SUPERIOR -->
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
         <script src="js/jquery.nivo.slider.pack.js"></script>
         <script>
@@ -113,14 +125,14 @@
         });
         </script>
 
-        <!-- ESCRIBANOS -->
+        <!-- FORMULARIO -->
         <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
         <script type="text/javascript" src="libs/blockui/jquery.blockUI.js"></script>
         <script type="text/javascript">
         var jcladd = jQuery.noConflict();
         jcladd(document).ready(function() { 
             jcladd('.icon-escribanos').click(function() { 
-                jcladd.blockUI({ message: jcladd('#popup-escribanos'), css: {top: '20%'} }); 
+                jcladd.blockUI({ message: jcladd('#form_escribanos'), css: {top: '20%'} }); 
             });
             
             jcladd('#cerrar').click(function() { 
@@ -368,183 +380,8 @@
 
                     <section id="news">
 
-                        <section id="news-izq">
-
-                            <div id="nwi-pest">
-
-                                <div id="nwip-select">
-                                    <ul class="nav">
-                                        <li class="selected"><a href="#pest-select-1">Equipos de Última Tecnología</a></li>
-                                        <li><a href="#pest-select-2">Proezas Médicas</a></li>
-                                    </ul>
-                                </div>
-
-                                <div class="nwips-container pest-content" id="pest-select-1">
-
-                                    <article class="borde-bottom news-noticia">
-
-                                        <h2><a href="">Angiografía digital: Arteriografías en internet</a></h2>
-                                        <div class="slider-bxslider">
-                                            <img width="370" height="220" alt="" title=" " src="imagenes/upload/proezas-2.jpg">
-                                            <img width="370" height="220" alt="" title=" " src="imagenes/upload/angiografia-digital.jpg">
-                                            <img width="370" height="220" alt="" title=" " src="imagenes/upload/proezas-3.jpg">
-                                        </div>
-                                        <p>La angiografía digital es un método de generar imágenes de estructuras vasculares basado en la técnica de sustracción, la cual trata de "sustraer".</p>
-                                        <a class="art-mas" href="">Leer más...</a>
-
-                                    </article>
-
-                                    <article class="news-noticia">
-
-                                        <h2><a href="">Mamografía digital: El desafío del presente</a></h2>
-                                        <p>Una mamografía selectiva de detección es una radiografía del seno que se utiliza para detectar cambios en el seno en mujeres que no presentan signos.</p>
-                                        <a class="art-mas" href="">Leer más...</a>
-
-                                    </article>
-                                </div>
-
-                                <div class="nwips-container pest-content" id="pest-select-2">
-
-                                    <article class="borde-bottom news-noticia">
-
-                                        <h2><a href="">Cirujanos del Hospital Dos de Mayo reconstruirán rostro...</a></h2>
-                                        <div class="slider-bxslider">
-                                            <img width="370" height="220" alt="" src="imagenes/upload/proezas-3.jpg" title=" ">
-                                            <img width="370" height="220" alt="" src="imagenes/upload/proezas-1.jpg" title=" ">
-                                            <img width="370" height="220" alt="" src="imagenes/upload/proezas-2.jpg" title=" ">                                            
-                                        </div>
-                                        <p>Verónica Liz Llanos (25), una humilde madre arequipeña fue víctima de un accidente de tránsito el pasado 13 de junio, cuando el vehículo en que viajaba hacia su centro de labores se precipitó...</p>
-                                        <a class="art-mas" href="">Leer más...</a>
-
-                                    </article>
-
-                                    <article class="news-noticia">
-
-                                        <h2><a href="">Especialistas realizan proezas médicas utilizando microcirugía</a></h2>
-                                        <p>Los oncólogos del Hospital Nacional "Dos de Mayo" realizan diversas proezas médicas para salvar la vida de sus pacientes...</p>
-                                        <a class="art-mas" href="">Leer más...</a>
-
-                                    </article>
-                                </div>
-                            </div>
-
-                            <div class="nw-seccion">
-
-                                <div class="nws-select">
-                                    <h3>Sección 1</h3>
-                                </div>
-
-                                <article class="nws-contenido">
-
-                                    <img width="120" height="135" src="">
-                                    <div>
-                                        <h2>Trabajadores del HNDM son capacitados....</h2>
-                                        <p>El Comité Institucional de Lactancia Materna del HNDM capacita, promueve y difunde los beneficios de la leche materna...</p>
-                                    </div>
-
-                                </article>
-                            </div>
-
-                            <div id="nw-campania-esp">
-                                <div class="nws-select">
-                                    <h3>Campañas Especiales</h3>
-                                </div>
-
-                                <div class="nws-contenido">
-
-                                    <ul>
-                                        <li><a href=""><img src="imagenes/campanias-especiales/icon-campana-especial-01.png"></a></li>
-                                        <li><a href=""><img src="imagenes/campanias-especiales/icon-campana-especial-02.png"></a></li>
-                                        <li><a href=""><img src="imagenes/campanias-especiales/icon-campana-especial-03.png"></a></li>
-                                    </ul>
-                                    
-
-                                </div>
-
-                            </div>
-
-                        </section>
-
-                        <section id="news-der">
-
-                            <div class="nw-seccion">
-
-                                <div class="nws-select">
-                                    <h3>Reconocimientos Institucionales</h3>
-                                </div>
-
-                                <article class="news-noticia">
-
-                                    <h2 class="nwnot-18"><a href="">Reconocen al laboratorio del HNDM en Control de Calidad y altos...</a></h2>
-                                    <p>Por su participación en el Programa de Control de Calidad Interlaboratorial INSIGHT que fue organizado por instituciones internacionales, el laboratorio del Hospital Nacional Dos de Mayo fue reconocido...</p>
-                                    <div class="slider-bxslider">
-                                        <img width="370" height="130" alt="" title=" " src="imagenes/upload/noti1.jpg">
-                                        <img width="370" height="130" alt="" title=" " src="imagenes/upload/noti2.jpg">
-                                        <img width="370" height="130" alt="" title=" " src="imagenes/upload/noti3.jpg">
-                                    </div>
-                                    <a class="art-mas" href="">Más...</a>
-
-                                </article>
-                            </div>
-
-                            <div class="nw-seccion">
-
-                                <div class="nws-select">
-                                    <h3>Noticias</h3>
-                                </div>
-
-                                <article class="news-noticia borde-bottom">
-
-                                    <h2 class="nwnot-18"><a href="">Adultos y niños podrán beneficiarse con curaciones y extracciones...</a></h2>
-                                    <p>Con el fin de revertir la alta incidencia de caries y otros males dentales en la población de bajos recursos económicos, el Ministerio de Salud a través del Hospital Nacional “Dos de Mayo” realizará este sábado 8...</p>
-                                    <div class="slider-bxslider">
-                                        <img width="370" height="130" alt="" title=" " src="imagenes/upload/premiacion1.jpg">
-                                        <img width="370" height="130" alt="" title=" " src="imagenes/upload/premiacion2.jpg">
-                                        <img width="370" height="130" alt="" title=" " src="imagenes/upload/premiacion3.jpg">
-                                    </div>
-                                    <a class="art-mas" href="">Más...</a>
-
-                                </article>
-
-                                <article class="news-noticia">
-
-                                    <h2 class="nwnot-18"><a href="">¿Las células madre provocan regeneración del cáncer?...</a></h2>
-                                    <a class="art-mas" href="">Más...</a>
-
-                                </article>
-                            </div>
-
-                            <div class="nw-seccion">
-
-                                <div class="nws-select">
-                                    <h3>Sección 1</h3>
-                                </div>
-
-                                <article class="nws-contenido">
-
-                                    <div>
-                                        <h2>Trabajadores del HNDM son capacitados....</h2>
-                                        <p>El Comité Institucional de Lactancia Materna del HNDM capacita, promueve y difunde los beneficios de la leche materna...</p>
-                                    </div>
-                                    <img width="120" height="135" src="">
-
-                                </article>
-                            </div>
-
-                            <div class="nw-seccion">
-
-                                <div class="nws-select">
-                                    <h3>Tour Virtual</h3>
-                                </div>
-
-                                <article class="nws-contenido">
-
-                                    <iframe width="370" height="150" src="http://www.youtube.com/embed/B4_QQQCInFg?wmode=transparent&autohide=1&egm=0&hd=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=0&showsearch=0&theme=light" frameborder="0" allowfullscreen></iframe>
-                                    
-                                </article>
-                            </div>
-
-                        </section>
+                        
+                        
                     </section>
 
                     <aside id="sidebar">
@@ -642,9 +479,9 @@
                         </div>
 
                         <div id="patrimonio-historico" class="slider-bxslider">
-                            <img src="imagenes/slide/patrimonio-historico-1.jpg" width="220" height="120" title=" ">
-                            <img src="imagenes/slide/patrimonio-historico-2.jpg" width="220" height="120" title=" ">
-                            <img src="imagenes/slide/patrimonio-historico-3.jpg" width="220" height="120" title=" ">
+                            <img src="imagenes/slide/patrimonio-historico-1.jpg" width="220" height="120">
+                            <img src="imagenes/slide/patrimonio-historico-2.jpg" width="220" height="120">
+                            <img src="imagenes/slide/patrimonio-historico-3.jpg" width="220" height="120">
                         </div>
 
                         <div id="opciones-lista">
@@ -764,38 +601,6 @@
             </div>
 
         </div>
-
-<div id="popup-escribanos" class="popup">
-    
-    <a id="cerrar" href="javascript:;">Cerrar</a>
-    
-    <div class="popup-box">
-      <h2 class="texto-18">Escríbanos</h2>
-        <form action="" method="post" id="form1">
-            <div class="container">
-            
-                <fieldset>
-                    <label for="esc_nombre">Nombres:</label>
-                    <input id="esc_nombre" name="esc_nombre" type="text" class="input" size="20">
-                </fieldset>
-                
-                <fieldset>
-                    <label for="esc_email">Email:</label>
-                    <input id="esc_email" name="esc_email" type="text" class="input" size="20">
-                </fieldset>
-                
-                <fieldset>
-                    <label for="esc_mensaje">Mensaje:</label>
-                    <textarea id="esc_mensaje" name="esc_mensaje" cols="20" rows="2"></textarea>
-                </fieldset>
-            
-                  <button id="btn-escribanos" class="btn-custom btn_large">Enviar &raquo;</button>
-                  
-            </div>
-        </form>                                                    
-    </div>
-                
-</div>
         
     </body>
 </html>
