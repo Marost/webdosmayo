@@ -1,17 +1,18 @@
-$(function(){
+var jTab=jQuery.noConflict();
+jTab(document).ready(function(){
 	tabs.init();
 });
 
 tabs = {
 	init : function(){
-		$('#nwi-pest').each(function(){
-			$(this).find('.pest-content:gt(0)').hide();
+		jTab('#nwi-pest').each(function(){
+			jTab(this).find('.pest-content:gt(0)').hide();
 
-			$(this).find('ul.nav a').click(function(){
-				$(this).parents('#nwi-pest').find('.pest-content').hide();
-				$($(this).attr('href')).show();
+			jTab(this).find('ul.nav a').click(function(){
+				jTab(this).parents('#nwi-pest').find('.pest-content').hide();
+				jTab(jTab(this).attr('href')).show();
 
-				$(this).parent().addClass('selected').siblings().removeClass('selected');
+				jTab(this).parent().addClass('selected').siblings().removeClass('selected');
 
 				return false;
 			});

@@ -21,7 +21,43 @@
         <script src="js/plugins.js"></script>
 
         <!-- TABS -->
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
         <script src="js/tabs.js"></script>        
+
+        <!-- PATRIMONIO HISTORICO -->
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script src="libs/caroufredsel/jquery.carouFredSel-5.5.0-packed.js"></script>
+        <script>
+        var jHisPat=jQuery.noConflict();
+        jHisPat(document).ready(function(){
+            jHisPat("#patrimonio-historico").carouFredSel({
+                items: 1
+            });
+        });        
+        </script>
+
+        <!-- SLIDE SUPERIOR -->
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="js/jquery.nivo.slider.pack.js"></script>
+        <script>
+        var jSlideNI=jQuery.noConflict();
+        jSlideNI(document).ready(function() {
+            jSlideNI('.slider-bxslider').nivoSlider({
+                effect:'sliceUpDown',
+                slices:5,
+                animSpeed:500,
+                pauseTime:8000,
+                startSlide:0,
+                directionNav:false,
+                directionNavHide:false,
+                controlNav:true,
+                controlNavThumbs:false,
+                controlNavThumbsFromRel:false,
+                controlNavThumbsSearch: '.jpg',
+                controlNavThumbsReplace: '_thumb.jpg'
+            });
+        });
+        </script>
 
         <!-- MENU -->
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
@@ -53,150 +89,11 @@
 
         <!-- ESPECIALIDADES -->
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-        <script>
-        var jListEspec = jQuery.noConflict();
-        //<![CDATA[ 
-        jListEspec(window).load(function(){
-            (function($) {
-            
-                var methods = {
-                    init: function(options) {
-                        this.children(':first').stop();
-                        this.marquee('play');
-                    },
-                    play: function() {
-                        var marquee = this,
-                            pixelsPerSecond = 10,
-                            firstChild = this.children(':first'),
-                            totalHeight = 0,
-                            difference,
-                            duration;
-                        
-                        this.children().each(function(index, element) {
-                            totalHeight += $(element).innerHeight();
-                        });
-                        
-                        difference = totalHeight + parseInt(firstChild.css('margin-top'), 10);
-                        
-                        duration = (difference/pixelsPerSecond) * 1000;
-                        
-                        firstChild.animate(
-                            { 'margin-top': -1 * totalHeight },
-                            duration,
-                            'linear',
-                            function() {
-                                firstChild.css('margin-top', marquee.innerHeight());
-                                marquee.marquee('play');
-                            }
-                        );
-                    },
-                    pause: function() {
-                        this.children(':first').stop();
-                    }
-                };
-            
-                jListEspec.fn.marquee = function(method) {
-            
-                    if (methods[method]) {
-                        return methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
-                    } else if (typeof method === 'object' || !method) {
-                        return methods.init.apply(this, arguments);
-                    } else {
-                        jListEspec.error('Method ' + method + ' does not exist on jQuery.marquee');
-                    }
-            
-                };
-            
-            })(jQuery);
-            
-            var marquee = jListEspec('#mrq_especialidades_lista');
-            
-            marquee.marquee();
-            
-            marquee.hover(function() {
-                marquee.marquee('pause');
-            }, function() {
-                marquee.marquee('play');    
-            });
-        });//]]>
-        </script>
+        <script src="js/marquee-especialidades.js"></script>
 
         <!-- ANALISIS CLINICOS -->
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-        <script>
-        var jAnClic = jQuery.noConflict();
-        //<![CDATA[ 
-        jAnClic(window).load(function(){
-            (function($) {
-            
-                var methods = {
-                    init: function(options) {
-                        this.children(':first').stop();
-                        this.marquee('play');
-                    },
-                    play: function() {
-                        var marquee = this,
-                            pixelsPerSecond = 10,
-                            firstChild = this.children(':first'),
-                            totalHeight = 0,
-                            difference,
-                            duration;
-                        
-                        // Find the total height of the children by adding each child's height:
-                        this.children().each(function(index, element) {
-                            totalHeight += $(element).innerHeight();
-                        });
-                        
-                        // The distance the divs have to travel to reach -1 * totalHeight:
-                        difference = totalHeight + parseInt(firstChild.css('margin-top'), 10);
-                        
-                        // The duration of the animation needed to get the correct speed:
-                        duration = (difference/pixelsPerSecond) * 1000;
-                        
-                        // Animate the first child's margin-top to -1 * totalHeight:
-                        firstChild.animate(
-                            { 'margin-top': -1 * totalHeight },
-                            duration,
-                            'linear',
-                            function() {
-                                // Move the first child back down (below the container):
-                                firstChild.css('margin-top', marquee.innerHeight());
-                                // Restart whole process... :)
-                                marquee.marquee('play');
-                            }
-                        );
-                    },
-                    pause: function() {
-                        this.children(':first').stop();
-                    }
-                };
-            
-                jAnClic.fn.marquee = function(method) {
-            
-                    // Method calling logic
-                    if (methods[method]) {
-                        return methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
-                    } else if (typeof method === 'object' || !method) {
-                        return methods.init.apply(this, arguments);
-                    } else {
-                        jAnClic.error('Method ' + method + ' does not exist on jQuery.marquee');
-                    }
-            
-                };
-            
-            })(jQuery);
-            
-            var marquee = jAnClic('#lista_analisis_clinicos');
-            
-            marquee.marquee();
-            
-            marquee.hover(function() {
-                marquee.marquee('pause');
-            }, function() {
-                marquee.marquee('play');    
-            });
-        });//]]>
-        </script>
+        <script src="js/marquee-apoyo-diagnostico.js"></script>
 
         <!-- SLIDE SUPERIOR -->
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
@@ -224,27 +121,6 @@
                 beforeChange: function(){},
                 afterChange: function(){},
                 slideshowEnd: function(){}
-            });
-        });
-        </script>
-
-        <!-- SLIDE HISTORICO PATRIMONIO -->
-        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-        <script src="js/jquery.nivo.slider.pack.js"></script>
-        <script>
-        var jHisPat=jQuery.noConflict();
-        jHisPat(document).ready(function() {
-            jHisPat('#pub_histpat').nivoSlider({
-                effect:'fade', 
-                slices:17,
-                animSpeed:500,
-                pauseTime:4000,
-                startSlide:0, 
-                directionNav:false,
-                directionNavHide:false,
-                pauseOnHover:true,
-                controlNav:false,
-                pauseOnHover:false,
             });
         });
         </script>
@@ -285,23 +161,6 @@
         });
         </script>
 
-        <!-- ENLACES DE INTERES -->
-        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-        <script src="libs/caroufredsel/jquery.carouFredSel-5.6.4.js"></script>
-        <script>
-        var jEnlInt = jQuery.noConflict();
-        jEnlInt(document).ready(function(){
-            jEnlInt("#publucidad_lista_item").carouFredSel({
-                items: 5,
-                duration: 1500
-            });
-        });
-        </script>
-
-        <!-- TABS -->
-        <script src="js/jquery-1.4.2.min.js"></script>
-        <script src="js/tabs.js"></script>
-
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -320,7 +179,6 @@
                             <li><a class="icon-correo" href="">Correo</a></li>
                             <li><a class="icon-mapa-sitio" href="">Mapa de Stio</a></li>
                         </ul>
-                        
                     </div>
 
                     <nav>
@@ -358,7 +216,10 @@
                         </ul>
                     </nav><!-- MENU PRINCIPAL -->
 
-                    <h1><a class="logo-principal" href="/">Hospital Nacional Dos de Mayo</a></h1>
+                    <h1>
+                        <a class="logo-principal" href="/">
+                            Hospital Nacional Dos de Mayo</a>
+                    </h1>
 
                     <div id="slider">
                         <img src="imagenes/slide/img1.jpg" alt="" title="<div class='block1'><div class='indent-block'><h1><strong>137 años</strong>de Historia y Tradición</h1>al Servicio de la Medicina Peruana</div></div>">
@@ -366,12 +227,12 @@
                         <img src="imagenes/slide/img3.jpg" alt="" title="<div class='block1'><div class='indent-block'><h1><strong>Docencia</strong>Capacitación e</h1>investigación académica</div></div>">
                     </div>
 
-                    <div id="mrq_especialidades">
+                    <div id="mrq_especialidades" class="mrq_lista">
 
                         <h2>Especialidades</h2>
-                        <a id="mrqe-vm" href="">Ver más...</a>
+                        <a class="mrq-vm" href="">Ver más...</a>
 
-                        <div id="mrq_especialidades_lista">
+                        <div id="mrq_especialidades_lista" class="mrq_lista_item">
                             <div>
                                 <ul>
                                     <li><a href="#">Medicina</a></li>
@@ -532,16 +393,20 @@
 
                                 <div class="nwips-container pest-content" id="pest-select-1">
 
-                                    <article class="borde-bottom">
+                                    <article class="borde-bottom news-noticia">
 
                                         <h2><a href="">Angiografía digital: Arteriografías en internet</a></h2>
-                                        <img width="370" height="220" src="">
+                                        <div class="slider-bxslider">
+                                            <img width="370" height="220" alt="" title=" " src="imagenes/upload/proezas-2.jpg">
+                                            <img width="370" height="220" alt="" title=" " src="imagenes/upload/angiografia-digital.jpg">
+                                            <img width="370" height="220" alt="" title=" " src="imagenes/upload/proezas-3.jpg">
+                                        </div>
                                         <p>La angiografía digital es un método de generar imágenes de estructuras vasculares basado en la técnica de sustracción, la cual trata de "sustraer".</p>
                                         <a class="art-mas" href="">Leer más...</a>
 
                                     </article>
 
-                                    <article>
+                                    <article class="news-noticia">
 
                                         <h2><a href="">Mamografía digital: El desafío del presente</a></h2>
                                         <p>Una mamografía selectiva de detección es una radiografía del seno que se utiliza para detectar cambios en el seno en mujeres que no presentan signos.</p>
@@ -552,16 +417,20 @@
 
                                 <div class="nwips-container pest-content" id="pest-select-2">
 
-                                    <article class="borde-bottom">
+                                    <article class="borde-bottom news-noticia">
 
                                         <h2><a href="">Cirujanos del Hospital Dos de Mayo reconstruirán rostro...</a></h2>
-                                        <img width="370" height="220" src="">
+                                        <div class="slider-bxslider">
+                                            <img width="370" height="220" alt="" src="imagenes/upload/proezas-3.jpg" title=" ">
+                                            <img width="370" height="220" alt="" src="imagenes/upload/proezas-1.jpg" title=" ">
+                                            <img width="370" height="220" alt="" src="imagenes/upload/proezas-2.jpg" title=" ">                                            
+                                        </div>
                                         <p>Verónica Liz Llanos (25), una humilde madre arequipeña fue víctima de un accidente de tránsito el pasado 13 de junio, cuando el vehículo en que viajaba hacia su centro de labores se precipitó...</p>
                                         <a class="art-mas" href="">Leer más...</a>
 
                                     </article>
 
-                                    <article>
+                                    <article class="news-noticia">
 
                                         <h2><a href="">Especialistas realizan proezas médicas utilizando microcirugía</a></h2>
                                         <p>Los oncólogos del Hospital Nacional "Dos de Mayo" realizan diversas proezas médicas para salvar la vida de sus pacientes...</p>
@@ -577,7 +446,7 @@
                                     <h3>Sección 1</h3>
                                 </div>
 
-                                <div class="nws-contenido">
+                                <article class="nws-contenido">
 
                                     <img width="120" height="135" src="">
                                     <div>
@@ -585,18 +454,218 @@
                                         <p>El Comité Institucional de Lactancia Materna del HNDM capacita, promueve y difunde los beneficios de la leche materna...</p>
                                     </div>
 
+                                </article>
+                            </div>
+
+                            <div id="nw-campania-esp">
+                                <div class="nws-select">
+                                    <h3>Campañas Especiales</h3>
+                                </div>
+
+                                <div class="nws-contenido">
+
+                                    <ul>
+                                        <li><a href=""><img src="imagenes/campanias-especiales/icon-campana-especial-01.png"></a></li>
+                                        <li><a href=""><img src="imagenes/campanias-especiales/icon-campana-especial-02.png"></a></li>
+                                        <li><a href=""><img src="imagenes/campanias-especiales/icon-campana-especial-03.png"></a></li>
+                                    </ul>
+                                    
+
                                 </div>
 
                             </div>
 
                         </section>
 
-                        <section id="news-der"></section>
+                        <section id="news-der">
 
+                            <div class="nw-seccion">
+
+                                <div class="nws-select">
+                                    <h3>Reconocimientos Institucionales</h3>
+                                </div>
+
+                                <article class="news-noticia">
+
+                                    <h2 class="nwnot-18"><a href="">Reconocen al laboratorio del HNDM en Control de Calidad y altos...</a></h2>
+                                    <p>Por su participación en el Programa de Control de Calidad Interlaboratorial INSIGHT que fue organizado por instituciones internacionales, el laboratorio del Hospital Nacional Dos de Mayo fue reconocido...</p>
+                                    <div class="slider-bxslider">
+                                        <img width="370" height="130" alt="" title=" " src="imagenes/upload/noti1.jpg">
+                                        <img width="370" height="130" alt="" title=" " src="imagenes/upload/noti2.jpg">
+                                        <img width="370" height="130" alt="" title=" " src="imagenes/upload/noti3.jpg">
+                                    </div>
+                                    <a class="art-mas" href="">Más...</a>
+
+                                </article>
+                            </div>
+
+                            <div class="nw-seccion">
+
+                                <div class="nws-select">
+                                    <h3>Noticias</h3>
+                                </div>
+
+                                <article class="news-noticia borde-bottom">
+
+                                    <h2 class="nwnot-18"><a href="">Adultos y niños podrán beneficiarse con curaciones y extracciones...</a></h2>
+                                    <p>Con el fin de revertir la alta incidencia de caries y otros males dentales en la población de bajos recursos económicos, el Ministerio de Salud a través del Hospital Nacional “Dos de Mayo” realizará este sábado 8...</p>
+                                    <div class="slider-bxslider">
+                                        <img width="370" height="130" alt="" title=" " src="imagenes/upload/premiacion1.jpg">
+                                        <img width="370" height="130" alt="" title=" " src="imagenes/upload/premiacion2.jpg">
+                                        <img width="370" height="130" alt="" title=" " src="imagenes/upload/premiacion3.jpg">
+                                    </div>
+                                    <a class="art-mas" href="">Más...</a>
+
+                                </article>
+
+                                <article class="news-noticia">
+
+                                    <h2 class="nwnot-18"><a href="">¿Las células madre provocan regeneración del cáncer?...</a></h2>
+                                    <a class="art-mas" href="">Más...</a>
+
+                                </article>
+                            </div>
+
+                            <div class="nw-seccion">
+
+                                <div class="nws-select">
+                                    <h3>Sección 1</h3>
+                                </div>
+
+                                <article class="nws-contenido">
+
+                                    <div>
+                                        <h2>Trabajadores del HNDM son capacitados....</h2>
+                                        <p>El Comité Institucional de Lactancia Materna del HNDM capacita, promueve y difunde los beneficios de la leche materna...</p>
+                                    </div>
+                                    <img width="120" height="135" src="">
+
+                                </article>
+                            </div>
+
+                            <div class="nw-seccion">
+
+                                <div class="nws-select">
+                                    <h3>Tour Virtual</h3>
+                                </div>
+
+                                <article class="nws-contenido">
+
+                                    <iframe width="370" height="150" src="http://www.youtube.com/embed/B4_QQQCInFg?wmode=transparent&autohide=1&egm=0&hd=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=0&showsearch=0&theme=light" frameborder="0" allowfullscreen></iframe>
+                                    
+                                </article>
+                            </div>
+
+                        </section>
                     </section>
 
                     <aside id="sidebar">
+
+                        <div id="mrq_ap_diagnostico" class="mrq_lista">
+
+                            <h2>Apoyo al Diagnóstico</h2>
+                            <a class="mrq-vm" href="">Ver más...</a>
+
+                            <div id="mrq_ap_diagnostico_lista" class="mrq_lista_item">
+                                <div>
+                                    <ul>
+                                        <li><a href="#">Laboratorio Clinico</a></li>
+                                        <li><a href="#">Patologiía Clínica y Anatomía Patologica</a></li>
+                                        <li><a href="#">Departamento de Diagnostico por Imágenes</a></li>
+                                        <li><a href="#">Dosaje de medicamentos, gases y electrolitos</a></li>
+                                        <li><a href="#">Hemocultivos</a></li>
+                                        <li><a href="#">Tamizaje de sangre</a></li>
+                                        <li><a href="#">Cultivos microbiológicos&nbsp;</a></li>
+                                        <li><a href="#">Pruebas bioquímicas</a></li>
+                                        <li><a href="#">Hemograma</a></li>
+                                        <li><a href="#">Microbiología e Inmunología</a></li>
+                                        <li><a href="#">Bioquímica y Laboratorio</a></li>
+                                        <li><a href="#">Anatomía Patológica&nbsp;</a></li>
+                                        <li><a href="#">Banco de Sangre</a></li>
+                                        <li><a href="#">Tomografía&nbsp; Multicorte</a></li>
+                                        <li><a href="#">Mamografía</a></li>
+                                        <li><a href="#">Ecografía</a></li>
+                                        <li><a href="#">Ecografía Doppler Tridimensional</a></li>
+                                        <li><a href="#">Rayos X</a></li>
+                                        
+                                        <li><a href="#">Laboratorio Clinico</a></li>
+                                        <li><a href="#">Patologiía Clínica y Anatomía Patologica</a></li>
+                                        <li><a href="#">Departamento de Diagnostico por Imágenes</a></li>
+                                        <li><a href="#">Dosaje de medicamentos, gases y electrolitos</a></li>
+                                        <li><a href="#">Hemocultivos</a></li>
+                                        <li><a href="#">Tamizaje de sangre</a></li>
+                                        <li><a href="#">Cultivos microbiológicos&nbsp;</a></li>
+                                        <li><a href="#">Pruebas bioquímicas</a></li>
+                                        <li><a href="#">Hemograma</a></li>
+                                        <li><a href="#">Microbiología e Inmunología</a></li>
+                                        <li><a href="#">Bioquímica y Laboratorio</a></li>
+                                        <li><a href="#">Anatomía Patológica&nbsp;</a></li>
+                                        <li><a href="#">Banco de Sangre</a></li>
+                                        <li><a href="#">Tomografía&nbsp; Multicorte</a></li>
+                                        <li><a href="#">Mamografía</a></li>
+                                        <li><a href="#">Ecografía</a></li>
+                                        <li><a href="#">Ecografía Doppler Tridimensional</a></li>
+                                        <li><a href="#">Rayos X</a></li>
+                                        
+                                        <li><a href="#">Laboratorio Clinico</a></li>
+                                        <li><a href="#">Patologiía Clínica y Anatomía Patologica</a></li>
+                                        <li><a href="#">Departamento de Diagnostico por Imágenes</a></li>
+                                        <li><a href="#">Dosaje de medicamentos, gases y electrolitos</a></li>
+                                        <li><a href="#">Hemocultivos</a></li>
+                                        <li><a href="#">Tamizaje de sangre</a></li>
+                                        <li><a href="#">Cultivos microbiológicos&nbsp;</a></li>
+                                        <li><a href="#">Pruebas bioquímicas</a></li>
+                                        <li><a href="#">Hemograma</a></li>
+                                        <li><a href="#">Microbiología e Inmunología</a></li>
+                                        <li><a href="#">Bioquímica y Laboratorio</a></li>
+                                        <li><a href="#">Anatomía Patológica&nbsp;</a></li>
+                                        <li><a href="#">Banco de Sangre</a></li>
+                                        <li><a href="#">Tomografía&nbsp; Multicorte</a></li>
+                                        <li><a href="#">Mamografía</a></li>
+                                        <li><a href="#">Ecografía</a></li>
+                                        <li><a href="#">Ecografía Doppler Tridimensional</a></li>
+                                        <li><a href="#">Rayos X</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="secciones-lista">
                         
+                            <ul>
+                                <li><a href="javascript:;"><span class="img icon-online"></span>Resultados <br>Online</a></li>
+                                <li><a href="javascript:;"><span class="img icon-atencion"></span>Atención al Asegurado</a></li>
+                                <li><a href="javascript:;"><span class="img icon-libro"></span>Libro de Reclamaciones</a></li>
+                                <li><a href="javascript:;"><span class="img icon-tarifario"></span>Tarifario <br>Virtual</a></li>
+                                <li><a href="javascript:;"><span class="img icon-boletin"></span>Boletín Epidemiológico</a></li>
+                                <li><a href="javascript:;"><span class="img icon-observatorio"></span>Observatorio de Medicamentos</a></li>
+                                <li><a href="javascript:;"><span class="img icon-online"></span>Citas <br>Online</a><div>PRONTO</div></li>
+                                <li><a href="javascript:;"><span class="img icon-cas"></span>Contrato Administrativo de Socios</a></li>
+                            </ul>
+                        </div>
+
+                        <div id="busqueda_doctor">
+                            <span class="icon-medico"></span>
+                            <p>Busca a tu Médico</p>
+                            <form class="searchform" action="busqueda.html">
+                                <input class="searchfield" type="text" value="Buscar..." onfocus="if (this.value == 'Buscar...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Buscar...';}" />
+                                <input class="searchbutton" type="button" value="Ir" />
+                            </form>
+                        </div>
+
+                        <div id="patrimonio-historico" class="slider-bxslider">
+                            <img src="imagenes/slide/patrimonio-historico-1.jpg" width="220" height="120">
+                            <img src="imagenes/slide/patrimonio-historico-2.jpg" width="220" height="120">
+                            <img src="imagenes/slide/patrimonio-historico-3.jpg" width="220" height="120">
+                        </div>
+
+                        <div id="opciones-lista">
+                            <ul>
+                                <li><a href="javascript:;"><span class="img icon-escribanos"></span>Escribanos</a></li>
+                                <li><a href="javascript:;"><span class="img icon-ubicanos"></span>Ubícanos</a></li>
+                                <li><a href="javascript:;"><span class="img icon-laboral"></span>Oportunidad Laboral</a></li>
+                            </ul>
+                        </div>
                     </aside>
 
                 </div> <!-- #main -->
@@ -605,6 +674,104 @@
             <div class="footer-container">
                 <footer class="wrapper">
                     
+                    <section id="enlaces-interes">
+
+                        <marquee>
+                        
+                            <div class="items">
+                                <img alt="" src="imagenes/empresas/gobierno.jpg" width="132" height="37">
+                            </div>
+                                
+                            <div class="items">
+                                <img alt="" src="imagenes/empresas/minsa.jpg" width="152" height="37">
+                            </div>
+                            
+                            <div class="items">
+                                <img alt="" src="imagenes/empresas/ministerio-salud.jpg" width="80" height="37">
+                            </div>
+                            
+                            <div class="items">
+                                <img alt="" src="imagenes/empresas/bann_mac.jpg" width="108" height="37">
+                            </div>
+                            
+                            <div class="items">
+                                <img alt="" src="imagenes/empresas/sis.jpg" height="37">
+                            </div>
+                            
+                            <div class="items">
+                                <img alt="" src="imagenes/empresas/presidencia-republica.jpg" width="168" height="37">
+                            </div>
+                            
+                            <div class="items">
+                                <img alt="" src="imagenes/empresas/samu.png" width="211" height="37">
+                            </div>
+                            
+                            
+                            <div class="items">
+                                <img alt="" src="imagenes/empresas/gobierno.jpg" width="132" height="37">
+                            </div>
+                                
+                            <div class="items">
+                                <img alt="" src="imagenes/empresas/minsa.jpg" width="152" height="37">
+                            </div>
+                            
+                            <div class="items">
+                                <img alt="" src="imagenes/empresas/ministerio-salud.jpg" width="80" height="37">
+                            </div>
+                            
+                            <div class="items">
+                                <img alt="" src="imagenes/empresas/bann_mac.jpg" width="108" height="37">
+                            </div>
+                            
+                            <div class="items">
+                                <img alt="" src="imagenes/empresas/sis.jpg" height="37">
+                            </div>
+                            
+                            <div class="items">
+                                <img alt="" src="imagenes/empresas/presidencia-republica.jpg" width="168" height="37">
+                            </div>
+                            
+                            <div class="items">
+                                <img alt="" src="imagenes/empresas/samu.png" width="211" height="37">
+                            </div>
+                            
+                            
+                            <div class="items">
+                                <img alt="" src="imagenes/empresas/gobierno.jpg" width="132" height="37">
+                            </div>
+                                
+                            <div class="items">
+                                <img alt="" src="imagenes/empresas/minsa.jpg" width="152" height="37">
+                            </div>
+                            
+                            <div class="items">
+                                <img alt="" src="imagenes/empresas/ministerio-salud.jpg" width="80" height="37">
+                            </div>
+                            
+                            <div class="items">
+                                <img alt="" src="imagenes/empresas/bann_mac.jpg" width="108" height="37">
+                            </div>
+                            
+                            <div class="items">
+                                <img alt="" src="imagenes/empresas/sis.jpg" height="37">
+                            </div>
+                            
+                            <div class="items">
+                                <img alt="" src="imagenes/empresas/presidencia-republica.jpg" width="168" height="37">
+                            </div>
+                            
+                            <div class="items">
+                                <img alt="" src="imagenes/empresas/samu.png" width="211" height="37">
+                            </div>
+                            
+                        </marquee>
+                    </section>
+
+                    <section id="copy-datos">
+                        <p>© 2012 - Hospital Nacional Dos de Mayo</p>
+                        <p>Dirección: Parque "Historia de la Medicina Peruana" s/n Alt. Cdra. 13 Av. Grau - Cercado de Lima - Lima, Perú</p>
+                    </section>
+
                 </footer>
             </div>
 
