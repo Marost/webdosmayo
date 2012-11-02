@@ -24,19 +24,37 @@
         <script src="http://code.jquery.com/jquery-latest.js"></script>
         <script src="js/tabs.js"></script>        
 
-        <!-- PATRIMONIO HISTORICO -->
-        <script src="http://code.jquery.com/jquery-latest.js"></script>
-        <script src="libs/caroufredsel/jquery.carouFredSel-5.5.0-packed.js"></script>
+        <!-- SLIDE SUPERIOR -->
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="js/jquery.nivo.slider.pack.js"></script>
         <script>
-        var jHisPat=jQuery.noConflict();
-        jHisPat(document).ready(function(){
-            jHisPat("#patrimonio-historico").carouFredSel({
-                items: 1
+        var jSlider=jQuery.noConflict();
+        jSlider(document).ready(function() {
+            jSlider('#slider').nivoSlider({
+                effect:'sliceUpDown',
+                slices:17,
+                animSpeed:500,
+                pauseTime:8000,
+                startSlide:0,
+                directionNav:false,
+                directionNavHide:false,
+                controlNav:true,
+                controlNavThumbs:false,
+                controlNavThumbsFromRel:false,
+                controlNavThumbsSearch: '.jpg',
+                controlNavThumbsReplace: '_thumb.jpg',
+                keyboardNav:true,
+                pauseOnHover:true,
+                manualAdvance:false,
+                captionOpacity:1,
+                beforeChange: function(){},
+                afterChange: function(){},
+                slideshowEnd: function(){}
             });
-        });        
+        });
         </script>
 
-        <!-- SLIDE SUPERIOR -->
+        <!-- SLIDE NOTAS -->
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
         <script src="js/jquery.nivo.slider.pack.js"></script>
         <script>
@@ -95,47 +113,17 @@
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
         <script src="js/marquee-apoyo-diagnostico.js"></script>
 
-        <!-- SLIDE SUPERIOR -->
-        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-        <script src="js/jquery.nivo.slider.pack.js"></script>
-        <script>
-        var jSlider=jQuery.noConflict();
-        jSlider(document).ready(function() {
-            jSlider('#slider').nivoSlider({
-                effect:'sliceUpDown',
-                slices:17,
-                animSpeed:500,
-                pauseTime:8000,
-                startSlide:0,
-                directionNav:false,
-                directionNavHide:false,
-                controlNav:true,
-                controlNavThumbs:false,
-                controlNavThumbsFromRel:false,
-                controlNavThumbsSearch: '.jpg',
-                controlNavThumbsReplace: '_thumb.jpg',
-                keyboardNav:true,
-                pauseOnHover:true,
-                manualAdvance:false,
-                captionOpacity:1,
-                beforeChange: function(){},
-                afterChange: function(){},
-                slideshowEnd: function(){}
-            });
-        });
-        </script>
-
-        <!-- FORMULARIO -->
+        <!-- ESCRIBANOS -->
         <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
         <script type="text/javascript" src="libs/blockui/jquery.blockUI.js"></script>
         <script type="text/javascript">
         var jcladd = jQuery.noConflict();
         jcladd(document).ready(function() { 
-            jcladd('.icon-escribanos').click(function() { 
-                jcladd.blockUI({ message: jcladd('#form_escribanos'), css: {top: '20%'} }); 
+            jcladd('#popupen-escribanos').click(function() { 
+                jcladd.blockUI({ message: jcladd('#popup-escribanos'), css: {top: '20%'} }); 
             });
             
-            jcladd('#cerrar').click(function() { 
+            jcladd('#popup-esc-cerrar').click(function() { 
                 jcladd.unblockUI(); 
                 return false; 
             });
@@ -149,16 +137,57 @@
         <script type="text/javascript">
         var jMapUbi = jQuery.noConflict();
         jMapUbi(document).ready(function() { 
-            jMapUbi('.icon-ubicanos').click(function() { 
-                jMapUbi.blockUI({ message: jMapUbi('#mapa_ubicanos'), css: {top: '20%'} }); 
+            jMapUbi('#popupen-ubicanos').click(function() { 
+                jMapUbi.blockUI({ message: jMapUbi('#popup-ubicanos'), css: {top: '20%'} }); 
             });
             
-            jMapUbi('#cerrar_mapa').click(function() { 
+            jMapUbi('#popup-ubi-cerrar').click(function() { 
                 jMapUbi.unblockUI(); 
                 return false; 
             });
              
         });
+        </script>
+
+        <!-- TELEFONO -->
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script type="text/javascript" src="libs/blockui/jquery.blockUI.js"></script>
+        <script type="text/javascript">
+        var jMapUbi = jQuery.noConflict();
+        jMapUbi(document).ready(function() { 
+            jMapUbi('#ver_telf').click(function() { 
+                jMapUbi.blockUI({ message: jMapUbi('#popup-telefono'), css: {top: '20%'} }); 
+            });
+            
+            jMapUbi('#popup-tel-cerrar').click(function() { 
+                jMapUbi.unblockUI(); 
+                return false; 
+            });
+             
+        });
+        </script>
+
+        <!-- ALTO DE DIV -->
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script type="text/javascript">
+        var jald = jQuery.noConflict();
+
+        function equalHeight(group) {
+           tallest = 0;
+           group.each(function() {
+              thisHeight = jald(this).height();
+              if(thisHeight > tallest) {
+                 tallest = thisHeight;
+              }
+           });
+           group.height(tallest);
+        }
+
+        jald(document).ready(function() {
+           equalHeight(jald(".contenido"));
+           //equalHeight(jald(".slider-datos-columnas"));
+        });
+
         </script>
 
     </head>
@@ -186,7 +215,7 @@
                             <li class="first"><a href="index.html" class="current">Inicio</a></li>
                             <li><a href="javascript:;">Institucional</a>
                                 <ul class="submenu">
-                                    <li><a href="directorio-institucional.html">Directorio</a></li>
+                                    <li><a href="directorio.html">Directorio</a></li>
                                     <li><a href="#">Historia</a></li>
                                     <li><a>Información Institucional</a></li>
                                     <li><a>Intranet</a></li>
@@ -380,7 +409,56 @@
 
                     <section id="news">
 
-                        
+                        <h3>Directorio Institucional</h3>
+
+                        <article class="directorio-doctor">
+                            <div class="datos">
+                                <img src="" width="120" height="120">
+                                <div>
+                                    <h2>José Roca Mendoza</h2>
+                                    <p>Director General</p>
+                                </div>
+                            </div>
+
+                            <div class="contenido">
+                                <p>Médico Gineco Obstetra egresado de la Facultad de Medicina de San Fernando de la Universidad Nacional Mayor de San Marcos, de la Promoción 1974. Realizó su Residentado de Ginecobstetricia en el Instituto Nacional Materno Perinantal (Ex Maternidad de Lima) del 77 al 79. Doctor en Medicina, con Maestría en Salud Pública. Ocupó el cargo de Jefe del Servicio de Ginecología y Ginecología Oncológica en el Hospital Nacional "Dos de Mayo".</p>
+                            </div>
+
+                        </article>
+
+                        <article class="directorio-doctor">
+                            <div class="datos">
+                                <img src="" width="120" height="120">
+                                <div>
+                                    <h2>Manuel Silva Zumaran</h2>
+                                    <p>Director Adjunto</p>
+                                </div>
+                            </div>
+
+                            <div class="contenido">
+                                <p>Lundium nisi in lorem dignissim eu. Nisi ac? Sed? Et mauris, mauris. Elementum urna? Amet pid, ac, adipiscing lacus sociis! Dolor in urna urna, sed proin porta? Arcu? Nec mid enim enim enim sed scelerisque cras integer eros aliquam facilisis enim urna sed mid magnis, sit vut tempor. Montes ultricies.</p>
+                            </div>
+
+                        </article>
+
+                        <article class="directorio-doctor">
+                            <div class="datos">
+                                <img src="" width="120" height="120">
+                                <div>
+                                    <h2>Silvia Rodriguez Lichtenheldt</h2>
+                                    <p>Directora Ejecutiva de Administración</p>
+                                </div>
+                            </div>
+
+                            <div class="contenido">
+                                <p>Doctora egresada de la Facultad de Medicina de la Universidad Nacional Federico Villareal en el año 1983 con la especialidad de Cirugía Ortopédica y Traumatología. Entre otros estudios, realizó la Maestría en Salud Pública con mención en Gestión Hospitalaria. Teniendo 25 años de labor en el Hospital Nacional Dos de Mayo, ha ocupado la jefatura del Departamento de Cirugía Especializada, asesora de la Dirección General Adjunta y directora de la Oficina de Seguros. Actualmente, es la jefa de la Dirección Ejecutiva de Administración de nuestra institución.</p>
+                            </div>
+
+                        </article>
+
+                        <div id="medicos-lista">
+                            <h3>Otros Funcionarios</h3>
+                        </div>
                         
                     </section>
 
@@ -465,7 +543,7 @@
                                 <li><a href="javascript:;"><span class="img icon-boletin"></span>Boletín Epidemiológico</a></li>
                                 <li><a href="javascript:;"><span class="img icon-observatorio"></span>Observatorio de Medicamentos</a></li>
                                 <li><a href="javascript:;"><span class="img icon-online"></span>Citas <br>Online</a><div>PRONTO</div></li>
-                                <li><a href="javascript:;"><span class="img icon-cas"></span>Contrato Administrativo de Socios</a></li>
+                                <li><a href="javascript:;"><span class="img icon-cas"></span>Contrato Administrativo de Servicios</a></li>
                             </ul>
                         </div>
 
@@ -479,15 +557,15 @@
                         </div>
 
                         <div id="patrimonio-historico" class="slider-bxslider">
-                            <img src="imagenes/slide/patrimonio-historico-1.jpg" width="220" height="120">
-                            <img src="imagenes/slide/patrimonio-historico-2.jpg" width="220" height="120">
-                            <img src="imagenes/slide/patrimonio-historico-3.jpg" width="220" height="120">
+                            <img src="imagenes/slide/patrimonio-historico-1.jpg" width="220" height="120" title=" ">
+                            <img src="imagenes/slide/patrimonio-historico-2.jpg" width="220" height="120" title=" ">
+                            <img src="imagenes/slide/patrimonio-historico-3.jpg" width="220" height="120" title=" ">
                         </div>
 
                         <div id="opciones-lista">
                             <ul>
-                                <li><a href="javascript:;"><span class="img icon-escribanos"></span>Escribanos</a></li>
-                                <li><a href="javascript:;"><span class="img icon-ubicanos"></span>Ubícanos</a></li>
+                                <li><a href="javascript:;" id="popupen-escribanos"><span class="img icon-escribanos"></span>Escribanos</a></li>
+                                <li><a href="javascript:;" id="popupen-ubicanos"><span class="img icon-ubicanos"></span>Ubícanos</a></li>
                                 <li><a href="javascript:;"><span class="img icon-laboral"></span>Oportunidad Laboral</a></li>
                             </ul>
                         </div>
@@ -601,6 +679,67 @@
             </div>
 
         </div>
-        
+
+<div id="popup-escribanos" class="popup">
+    
+    <a id="popup-esc-cerrar" href="javascript:;">Cerrar</a>
+    
+    <div class="popup-box">
+      <h2>Escríbanos</h2>
+        <form action="" method="post" id="form1">
+            <div class="container">
+            
+                <fieldset>
+                    <label for="esc_nombre">Nombres:</label>
+                    <input id="esc_nombre" name="esc_nombre" type="text" class="input" size="20">
+                </fieldset>
+                
+                <fieldset>
+                    <label for="esc_email">Email:</label>
+                    <input id="esc_email" name="esc_email" type="text" class="input" size="20">
+                </fieldset>
+                
+                <fieldset>
+                    <label for="esc_mensaje">Mensaje:</label>
+                    <textarea id="esc_mensaje" name="esc_mensaje" cols="20" rows="2"></textarea>
+                </fieldset>
+            
+                  <button id="btn-escribanos" class="btn-custom btn_large">Enviar &raquo;</button>
+                  
+            </div>
+        </form>                                                    
+    </div>
+                
+</div>
+
+<div id="popup-ubicanos" class="popup">
+    
+    <a id="popup-ubi-cerrar" href="javascript:;">Cerrar</a>
+    
+    <div class="popup-box">
+      <h2>Ubícanos</h2>
+        <iframe id="mapa_hospital" width="346" height="285" frameborder="1" scrolling="no" marginheight="0" marginwidth="0" 
+        src="https://maps.google.com.pe/maps?hl=es&amp;ie=UTF8&amp;q=hospital+dos+de+mayo&amp;fb=1&amp;gl=pe&amp;hq=hospital+dos+de+mayo&amp;hnear=0x9105c842e97d1b27:0x32a2c5cc041d2ebb,Distrito+de+San+Isidro&amp;cid=0,0,13761947855557028558&amp;t=m&amp;ll=-12.055437,-77.015941&amp;spn=0.006295,0.007489&amp;z=16&amp;output=embed"></iframe>                                            
+    </div>
+                
+</div>
+
+<div id="popup-telefono" class="popup">
+    
+    <a id="popup-tel-cerrar" href="javascript:;">Cerrar</a>
+    
+    <div class="popup-box">
+        <h2>Central Telefónica</h2>
+        <p>Cualquier consulta, comunicarse con nosotros a los siguientes teléfonos:</p>
+        <ul>
+            <li>328-0175</li>
+            <li>328-0068</li>
+            <li>328-0035</li>
+            <li>328-0131</li>
+        </ul>
+    </div>
+                
+</div>
+
     </body>
 </html>
