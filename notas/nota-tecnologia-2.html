@@ -10,22 +10,22 @@
         <meta name="description" content="">
 
         <!-- ESTILOS -->
-        <link rel="stylesheet" href="css/normalize.min.css">
-        <link rel="stylesheet" href="css/estilos.css">
+        <link rel="stylesheet" href="/css/normalize.min.css">
+        <link rel="stylesheet" href="/css/estilos.css">
 
         <!-- FONT -->
         <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700' rel='stylesheet' type='text/css'>
 
         <!-- MODERNIZR -->
-        <script src="js/vendor/modernizr-2.6.1.min.js"></script>
+        <script src="/js/vendor/modernizr-2.6.1.min.js"></script>
 
         <!-- TABS -->
         <script src="http://code.jquery.com/jquery-latest.js"></script>
-        <script src="js/tabs.js"></script>        
+        <script src="/js/tabs.js"></script>        
 
         <!-- SLIDE SUPERIOR -->
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-        <script src="js/jquery.nivo.slider.pack.js"></script>
+        <script src="/js/jquery.nivo.slider.pack.js"></script>
         <script>
         var jSlider=jQuery.noConflict();
         jSlider(document).ready(function() {
@@ -55,7 +55,7 @@
 
         <!-- SLIDE NOTAS -->
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-        <script src="js/jquery.nivo.slider.pack.js"></script>
+        <script src="/js/jquery.nivo.slider.pack.js"></script>
         <script>
         var jSlideNI=jQuery.noConflict();
         jSlideNI(document).ready(function() {
@@ -96,7 +96,7 @@
 
         <!-- TELEFONO -->
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-        <script src="libs/marquee/jquery.marquee.js"></script>
+        <script src="/libs/marquee/jquery.marquee.js"></script>
         <script>
         var jMarq = jQuery.noConflict();
         jMarq(document).ready(function(){
@@ -106,16 +106,16 @@
 
         <!-- ESPECIALIDADES -->
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-        <script src="js/marquee-especialidades.js"></script>
+        <script src="/js/marquee-especialidades.js"></script>
 
         <!-- ANALISIS CLINICOS -->
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-        <script src="js/marquee-apoyo-diagnostico.js"></script>
+        <script src="/js/marquee-apoyo-diagnostico.js"></script>
 
         <!-- ESCRIBANOS -->
-        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-        <script type="text/javascript" src="libs/blockui/jquery.blockUI.js"></script>
-        <script type="text/javascript">
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="/libs/blockui/jquery.blockUI.js"></script>
+        <script>
         var jcladd = jQuery.noConflict();
         jcladd(document).ready(function() { 
             jcladd('#popupen-escribanos').click(function() { 
@@ -131,9 +131,9 @@
         </script>
 
         <!-- MAPA -->
-        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-        <script type="text/javascript" src="libs/blockui/jquery.blockUI.js"></script>
-        <script type="text/javascript">
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="/libs/blockui/jquery.blockUI.js"></script>
+        <script>
         var jMapUbi = jQuery.noConflict();
         jMapUbi(document).ready(function() { 
             jMapUbi('#popupen-ubicanos').click(function() { 
@@ -149,9 +149,9 @@
         </script>
 
         <!-- TELEFONO -->
-        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-        <script type="text/javascript" src="libs/blockui/jquery.blockUI.js"></script>
-        <script type="text/javascript">
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="/libs/blockui/jquery.blockUI.js"></script>
+        <script>
         var jMapUbi = jQuery.noConflict();
         jMapUbi(document).ready(function() { 
             jMapUbi('#ver_telf').click(function() { 
@@ -164,29 +164,6 @@
             });
              
         });
-        </script>
-
-        <!-- ALTO DE DIV -->
-        <script src="http://code.jquery.com/jquery-latest.js"></script>
-        <script type="text/javascript">
-        var jald = jQuery.noConflict();
-
-        function equalHeight(group) {
-           tallest = 0;
-           group.each(function() {
-              thisHeight = jald(this).height();
-              if(thisHeight > tallest) {
-                 tallest = thisHeight;
-              }
-           });
-           group.height(tallest);
-        }
-
-        jald(document).ready(function() {
-           equalHeight(jald(".contenido"));
-           //equalHeight(jald(".slider-datos-columnas"));
-        });
-
         </script>
 
     </head>
@@ -250,9 +227,9 @@
                     </h1>
 
                     <div id="slider">
-                        <img src="imagenes/slide/img1.jpg" alt="" title="<div class='block1'><div class='indent-block'><h1><strong>137 años</strong>de Historia y Tradición</h1>al Servicio de la Medicina Peruana</div></div>">
-                        <img src="imagenes/slide/img2.jpg" alt="" title="<div class='block1'><div class='indent-block'><h1><strong>Tecnología</strong>Equipos de última generación</h1>al servicio de todos los peruanos</div></div>">
-                        <img src="imagenes/slide/img3.jpg" alt="" title="<div class='block1'><div class='indent-block'><h1><strong>Docencia</strong>Capacitación e</h1>investigación académica</div></div>">
+                        <img src="/imagenes/slide/img1.jpg" alt="" title="<div class='block1'><div class='indent-block'><h1><strong>137 años</strong>de Historia y Tradición</h1>al Servicio de la Medicina Peruana</div></div>">
+                        <img src="/imagenes/slide/img2.jpg" alt="" title="<div class='block1'><div class='indent-block'><h1><strong>Tecnología</strong>Equipos de última generación</h1>al servicio de todos los peruanos</div></div>">
+                        <img src="/imagenes/slide/img3.jpg" alt="" title="<div class='block1'><div class='indent-block'><h1><strong>Docencia</strong>Capacitación e</h1>investigación académica</div></div>">
                     </div>
 
                     <div id="mrq_especialidades" class="mrq_lista">
@@ -408,57 +385,34 @@
 
                     <section id="news">
 
-                        <h3>Directorio Institucional</h3>
+                        <div class="nw-nota">
 
-                        <article class="directorio-doctor">
-                            <div class="datos">
-                                <img src="" width="120" height="120">
-                                <div>
-                                    <h2>José Roca Mendoza</h2>
-                                    <p>Director General</p>
-                                </div>
+                            <div class="titulo">
+                                <h2>EL ÚNICO Y MÁS MODERNO ANGIOGRAFO DEL PAÍS ESTÁ EN EL HNDM</h2>
                             </div>
 
                             <div class="contenido">
-                                <p>Médico Gineco Obstetra egresado de la Facultad de Medicina de San Fernando de la Universidad Nacional Mayor de San Marcos, de la Promoción 1974. Realizó su Residentado de Ginecobstetricia en el Instituto Nacional Materno Perinantal (Ex Maternidad de Lima) del 77 al 79. Doctor en Medicina, con Maestría en Salud Pública. Ocupó el cargo de Jefe del Servicio de Ginecología y Ginecología Oncológica en el Hospital Nacional "Dos de Mayo".</p>
+<p>Demostrando que el Hospital Nacional “Dos de Mayo” cuenta con equipamiento de última generación, posee el angiografo digital biplanar más moderno del Perú, el cual es único en el país y tercero en Sudamérica.</p>
+
+<p>Permite efectuar evaluaciones diagnósticas y terapéuticas así como la reconstrucción tridimensional (3D) de las arterias y cavidades del corazón y miembros superiores e inferiores, en niños y adultos.</p>
+
+<p>Mediante este equipo de última tecnología, valorizado en más de 4 millones de dólares, se efectúa una vista radiográfica, detectando dolencias como estenosis coronarias, trombosis periféricas, aneurismas cerebrales, comunicaciones interauriculares e interventriculares, defectos cardíacos congénitos, malformaciones vasculares y angioplastias.</p>
+
+<p>Entre otros beneficios, facilita la medición de funciones cardíacas y puede desempeñarse como sala hibrida para lo cual en caso de necesitarse una intervención quirúrgica cuenta con el equipamiento necesario.</p>
+
+<p>Los procedimientos terapéuticos que se desarrollan con el angiografo se realizan por punción percutánea radial, que permite la rápida recuperación del paciente y evita que los especialistas recurran a una intervención convencional que podría demorar hasta 4 horas de labor quirúrgica y 10 días en observación en la Unidad de Cuidados Intensivos.</p>
+
+<p>Hasta la fecha, un total de 392 pacientes, que se tratan en el nosocomio y otros establecimientos, han utilizado este equipo de última tecnología.</p>
+
+<p>El angiografo, de marca PHILIPS y modelo Allura FD 1020, está compuesto por un angiografo biplanar (de dos arcos en C con sus respectivos Rayos X), seis monitores para la visualización de imágenes, una bomba inyectora de medio de contraste, un polígrafo de registro de presiones, una maquina de anestesia y una máquina de electrocauterio.</p>
+
+<p>Asimismo, consta de un cardio defibrilador, un monitor de presión, una banda térmica y una estación de trabajo con cinco monitores.</p>
+
+<p>Bajo el manejo y responsabilidad de este equipo se encuentra un equipo multidisciplinario altamente calificado. Se ubica en el sótano del Centro de Tratamiento Intensivo y Diagnóstico Especializado (CETIDE).</p>
                             </div>
 
-                        </article>
-
-                        <article class="directorio-doctor">
-                            <div class="datos">
-                                <img src="" width="120" height="120">
-                                <div>
-                                    <h2>Manuel Silva Zumaran</h2>
-                                    <p>Director Adjunto</p>
-                                </div>
-                            </div>
-
-                            <div class="contenido">
-                                <p>Lundium nisi in lorem dignissim eu. Nisi ac? Sed? Et mauris, mauris. Elementum urna? Amet pid, ac, adipiscing lacus sociis! Dolor in urna urna, sed proin porta? Arcu? Nec mid enim enim enim sed scelerisque cras integer eros aliquam facilisis enim urna sed mid magnis, sit vut tempor. Montes ultricies.</p>
-                            </div>
-
-                        </article>
-
-                        <article class="directorio-doctor">
-                            <div class="datos">
-                                <img src="" width="120" height="120">
-                                <div>
-                                    <h2>Silvia Rodriguez Lichtenheldt</h2>
-                                    <p>Directora Ejecutiva de Administración</p>
-                                </div>
-                            </div>
-
-                            <div class="contenido">
-                                <p>Doctora egresada de la Facultad de Medicina de la Universidad Nacional Federico Villareal en el año 1983 con la especialidad de Cirugía Ortopédica y Traumatología. Entre otros estudios, realizó la Maestría en Salud Pública con mención en Gestión Hospitalaria. Teniendo 25 años de labor en el Hospital Nacional Dos de Mayo, ha ocupado la jefatura del Departamento de Cirugía Especializada, asesora de la Dirección General Adjunta y directora de la Oficina de Seguros. Actualmente, es la jefa de la Dirección Ejecutiva de Administración de nuestra institución.</p>
-                            </div>
-
-                        </article>
-
-                        <div id="medicos-lista">
-                            <h3>Otros Funcionarios</h3>
                         </div>
-                        
+
                     </section>
 
                     <aside id="sidebar">
@@ -556,9 +510,9 @@
                         </div>
 
                         <div id="patrimonio-historico" class="slider-bxslider">
-                            <img src="imagenes/slide/patrimonio-historico-1.jpg" width="220" height="120" title=" ">
-                            <img src="imagenes/slide/patrimonio-historico-2.jpg" width="220" height="120" title=" ">
-                            <img src="imagenes/slide/patrimonio-historico-3.jpg" width="220" height="120" title=" ">
+                            <img src="/imagenes/slide/patrimonio-historico-1.jpg" width="220" height="120" title=" ">
+                            <img src="/imagenes/slide/patrimonio-historico-2.jpg" width="220" height="120" title=" ">
+                            <img src="/imagenes/slide/patrimonio-historico-3.jpg" width="220" height="120" title=" ">
                         </div>
 
                         <div id="opciones-lista">
@@ -581,89 +535,89 @@
                         <marquee>
                         
                             <div class="items">
-                                <img alt="" src="imagenes/empresas/gobierno.jpg" width="132" height="37">
+                                <img alt="" src="/imagenes/empresas/gobierno.jpg" width="132" height="37">
                             </div>
                                 
                             <div class="items">
-                                <img alt="" src="imagenes/empresas/minsa.jpg" width="152" height="37">
+                                <img alt="" src="/imagenes/empresas/minsa.jpg" width="152" height="37">
                             </div>
                             
                             <div class="items">
-                                <img alt="" src="imagenes/empresas/ministerio-salud.jpg" width="80" height="37">
+                                <img alt="" src="/imagenes/empresas/ministerio-salud.jpg" width="80" height="37">
                             </div>
                             
                             <div class="items">
-                                <img alt="" src="imagenes/empresas/bann_mac.jpg" width="108" height="37">
+                                <img alt="" src="/imagenes/empresas/bann_mac.jpg" width="108" height="37">
                             </div>
                             
                             <div class="items">
-                                <img alt="" src="imagenes/empresas/sis.jpg" height="37">
+                                <img alt="" src="/imagenes/empresas/sis.jpg" height="37">
                             </div>
                             
                             <div class="items">
-                                <img alt="" src="imagenes/empresas/presidencia-republica.jpg" width="168" height="37">
+                                <img alt="" src="/imagenes/empresas/presidencia-republica.jpg" width="168" height="37">
                             </div>
                             
                             <div class="items">
-                                <img alt="" src="imagenes/empresas/samu.png" width="211" height="37">
-                            </div>
-                            
-                            
-                            <div class="items">
-                                <img alt="" src="imagenes/empresas/gobierno.jpg" width="132" height="37">
-                            </div>
-                                
-                            <div class="items">
-                                <img alt="" src="imagenes/empresas/minsa.jpg" width="152" height="37">
-                            </div>
-                            
-                            <div class="items">
-                                <img alt="" src="imagenes/empresas/ministerio-salud.jpg" width="80" height="37">
-                            </div>
-                            
-                            <div class="items">
-                                <img alt="" src="imagenes/empresas/bann_mac.jpg" width="108" height="37">
-                            </div>
-                            
-                            <div class="items">
-                                <img alt="" src="imagenes/empresas/sis.jpg" height="37">
-                            </div>
-                            
-                            <div class="items">
-                                <img alt="" src="imagenes/empresas/presidencia-republica.jpg" width="168" height="37">
-                            </div>
-                            
-                            <div class="items">
-                                <img alt="" src="imagenes/empresas/samu.png" width="211" height="37">
+                                <img alt="" src="/imagenes/empresas/samu.png" width="211" height="37">
                             </div>
                             
                             
                             <div class="items">
-                                <img alt="" src="imagenes/empresas/gobierno.jpg" width="132" height="37">
+                                <img alt="" src="/imagenes/empresas/gobierno.jpg" width="132" height="37">
                             </div>
                                 
                             <div class="items">
-                                <img alt="" src="imagenes/empresas/minsa.jpg" width="152" height="37">
+                                <img alt="" src="/imagenes/empresas/minsa.jpg" width="152" height="37">
                             </div>
                             
                             <div class="items">
-                                <img alt="" src="imagenes/empresas/ministerio-salud.jpg" width="80" height="37">
+                                <img alt="" src="/imagenes/empresas/ministerio-salud.jpg" width="80" height="37">
                             </div>
                             
                             <div class="items">
-                                <img alt="" src="imagenes/empresas/bann_mac.jpg" width="108" height="37">
+                                <img alt="" src="/imagenes/empresas/bann_mac.jpg" width="108" height="37">
                             </div>
                             
                             <div class="items">
-                                <img alt="" src="imagenes/empresas/sis.jpg" height="37">
+                                <img alt="" src="/imagenes/empresas/sis.jpg" height="37">
                             </div>
                             
                             <div class="items">
-                                <img alt="" src="imagenes/empresas/presidencia-republica.jpg" width="168" height="37">
+                                <img alt="" src="/imagenes/empresas/presidencia-republica.jpg" width="168" height="37">
                             </div>
                             
                             <div class="items">
-                                <img alt="" src="imagenes/empresas/samu.png" width="211" height="37">
+                                <img alt="" src="/imagenes/empresas/samu.png" width="211" height="37">
+                            </div>
+                            
+                            
+                            <div class="items">
+                                <img alt="" src="/imagenes/empresas/gobierno.jpg" width="132" height="37">
+                            </div>
+                                
+                            <div class="items">
+                                <img alt="" src="/imagenes/empresas/minsa.jpg" width="152" height="37">
+                            </div>
+                            
+                            <div class="items">
+                                <img alt="" src="/imagenes/empresas/ministerio-salud.jpg" width="80" height="37">
+                            </div>
+                            
+                            <div class="items">
+                                <img alt="" src="/imagenes/empresas/bann_mac.jpg" width="108" height="37">
+                            </div>
+                            
+                            <div class="items">
+                                <img alt="" src="/imagenes/empresas/sis.jpg" height="37">
+                            </div>
+                            
+                            <div class="items">
+                                <img alt="" src="/imagenes/empresas/presidencia-republica.jpg" width="168" height="37">
+                            </div>
+                            
+                            <div class="items">
+                                <img alt="" src="/imagenes/empresas/samu.png" width="211" height="37">
                             </div>
                             
                         </marquee>
@@ -739,6 +693,6 @@
     </div>
                 
 </div>
-
+        
     </body>
 </html>
