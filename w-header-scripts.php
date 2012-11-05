@@ -126,7 +126,7 @@ jcladd(document).ready(function() {
 var jMapUbi = jQuery.noConflict();
 jMapUbi(document).ready(function() { 
     jMapUbi('#popupen-ubicanos').click(function() { 
-        jMapUbi.blockUI({ message: jMapUbi('#popup-ubicanos'), css: {top: '20%'} }); 
+        jMapUbi.blockUI({ message: jMapUbi('#popup-ubicanos'), css: {top: '5%', left: '22%'} }); 
     });
     
     jMapUbi('#popup-ubi-cerrar').click(function() { 

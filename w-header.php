@@ -15,8 +15,8 @@
                 <li class="first"><a href="/" class="current">Inicio</a></li>
                 <li><a href="javascript:;">Institucional</a>
                     <ul class="submenu">
-                        <li><a href="directorio.html">Directorio</a></li>
-                        <li><a href="/notas/historia.html">Historia</a></li>
+                        <li><a href="directorio.php">Directorio</a></li>
+                        <li><a href="/notas/historia.php">Historia</a></li>
                         <li><a>Información Institucional</a></li>
                         <li><a>Intranet</a></li>
                     </ul>
@@ -29,10 +29,10 @@
                 </li>
                 <li><a href="javascript:;">Transparencia</a>
                     <ul class="submenu">
-                        <li><a href="transparencia-normas.html">Normas y dispositvos</a></li>
+                        <li><a href="transparencia-normas.php">Normas y dispositvos</a></li>
                         <li><a>Solicitudes de información</a></li>
-                        <li><a href="transparencia-concurso.html">Concurso CAS</a></li>
-                        <li><a href="transparencia-directores.html">Concurso de Directores</a></li>
+                        <li><a href="transparencia-concurso.php">Concurso CAS</a></li>
+                        <li><a href="transparencia-directores.php">Concurso de Directores</a></li>
                         <li><a>Ecoeficiencia</a></li>
                         <li><a href="http://www.essalud.gob.pe/transparencia/">Portal del Estado Peruano</a></li>
                     </ul>
@@ -59,7 +59,7 @@
         <div id="mrq_especialidades" class="mrq_lista">
 
             <h2>Especialidades</h2>
-            <a class="mrq-vm" href="/notas/especialidades.html">Ver más...</a>
+            <a class="mrq-vm" href="/notas/especialidades.php">Ver más...</a>
 
             <div id="mrq_especialidades_lista" class="mrq_lista_item">
                 <div>

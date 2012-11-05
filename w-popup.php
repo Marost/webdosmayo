@@ -37,9 +37,16 @@
     <div class="popup-box">
       <h2>Ubícanos</h2>
         <iframe id="mapa_hospital" width="600" height="400" frameborder="1" scrolling="no" marginheight="0" marginwidth="0" 
-        src="https://maps.google.com.pe/maps?hl=es&amp;ie=UTF8&amp;q=hospital+dos+de+mayo&amp;fb=1&amp;gl=pe&amp;hq=hospital+dos+de+mayo&amp;hnear=0x9105c842e97d1b27:0x32a2c5cc041d2ebb,Distrito+de+San+Isidro&amp;cid=0,0,13761947855557028558&amp;t=m&amp;ll=-12.055437,-77.015941&amp;spn=0.006295,0.007489&amp;z=16&amp;output=embed"></iframe>                                            
+        src="https://maps.google.com.pe/maps?hl=es&amp;ie=UTF8&amp;q=hospital+dos+de+mayo&amp;fb=1&amp;gl=pe&amp;hq=hospital+dos+de+mayo&amp;hnear=0x9105c842e97d1b27:0x32a2c5cc041d2ebb,Distrito+de+San+Isidro&amp;cid=0,0,13761947855557028558&amp;t=m&amp;ll=-12.055437,-77.015941&amp;spn=0.006295,0.007489&amp;z=16&amp;output=embed"></iframe>
+
+        <p><strong>Ruta desde el Norte</strong></p>
+        <p>El Metropolitano</p>
+
+        <p><strong>Ruta desde el Sur</strong></p>
+        <p>El Tren Electrico</p>
+
     </div>
-                
+
 </div>
 
 <div id="popup-telefono" class="popup">

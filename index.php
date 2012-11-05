@@ -41,22 +41,22 @@
 
                                     <article class="borde-bottom news-noticia">
 
-                                        <h2><a href="/notas/nota-tecnologia-1.html">Un resonador magnético de última tecnología posee...</a></h2>
+                                        <h2><a href="/notas/nota-tecnologia-1.php">Un resonador magnético de última tecnología posee...</a></h2>
                                         <div class="slider-bxslider">
                                             <img width="370" height="220" alt="" title=" " src="/imagenes/upload/proezas-2.jpg">
                                             <img width="370" height="220" alt="" title=" " src="/imagenes/upload/angiografia-digital.jpg">
                                             <img width="370" height="220" alt="" title=" " src="/imagenes/upload/proezas-3.jpg">
                                         </div>
                                         <p>Al servicio de la población se encuentra el resonador magnético que posee el Hospital Nacional “Dos de Mayo”, a través del cual se pueden realizar estudios...</p>
-                                        <a class="art-mas" href="/notas/nota-tecnologia-1.html">Leer más...</a>
+                                        <a class="art-mas" href="/notas/nota-tecnologia-1.php">Leer más...</a>
 
                                     </article>
 
                                     <article class="news-noticia">
 
-                                        <h2><a href="/notas/nota-tecnologia-2.html">El único y más moderno angiografo del país está en el HNDM</a></h2>
+                                        <h2><a href="/notas/nota-tecnologia-2.php">El único y más moderno angiografo del país está en el HNDM</a></h2>
                                         <p>Demostrando que el Hospital Nacional “Dos de Mayo” cuenta con equipamiento de última generación, posee el angiografo digital biplanar más moderno...</p>
-                                        <a class="art-mas" href="/notas/nota-tecnologia-2.html">Leer más...</a>
+                                        <a class="art-mas" href="/notas/nota-tecnologia-2.php">Leer más...</a>
 
                                     </article>
                                 </div>
@@ -65,7 +65,7 @@
 
                                     <article class="borde-bottom news-noticia">
 
-                                        <h2><a href="/notas/nota-proeza-medica-1.html">Cirujanos del Hospital Dos de Mayo reconstruirán rostro...</a></h2>
+                                        <h2><a href="/notas/nota-proeza-medica-1.php">Cirujanos del Hospital Dos de Mayo reconstruirán rostro...</a></h2>
                                         <div class="slider-bxslider">
                                             <img width="370" height="220" alt="" src="/imagenes/upload/proezas-3.jpg" title=" ">
                                             <img width="370" height="220" alt="" src="/imagenes/upload/proezas-1.jpg" title=" ">
@@ -80,7 +80,7 @@
 
                                         <h2><a href="">Especialistas realizan proezas médicas utilizando microcirugía</a></h2>
                                         <p>Los oncólogos del Hospital Nacional "Dos de Mayo" realizan diversas proezas médicas para salvar la vida de sus pacientes...</p>
-                                        <a class="art-mas" href="/notas/nota-proeza-medica-1.html">Leer más...</a>
+                                        <a class="art-mas" href="/notas/nota-proeza-medica-1.php">Leer más...</a>
 
                                     </article>
                                 </div>
@@ -133,14 +133,14 @@
 
                                 <article class="news-noticia">
 
-                                    <h2 class="nwnot-18"><a href="/notas/nota-reconocimientos-institucionales.html">Reconocen al laboratorio del HNDM en Control de Calidad y altos...</a></h2>
+                                    <h2 class="nwnot-18"><a href="/notas/nota-reconocimientos-institucionales.php">Reconocen al laboratorio del HNDM en Control de Calidad y altos...</a></h2>
                                     <p>Por su participación en el Programa de Control de Calidad Interlaboratorial INSIGHT que fue organizado por instituciones internacionales, el laboratorio del Hospital Nacional Dos de Mayo fue reconocido...</p>
                                     <div class="slider-bxslider">
                                         <img width="370" height="130" alt="" title=" " src="imagenes/upload/noti1.jpg">
                                         <img width="370" height="130" alt="" title=" " src="imagenes/upload/noti2.jpg">
                                         <img width="370" height="130" alt="" title=" " src="imagenes/upload/noti3.jpg">
                                     </div>
-                                    <a class="art-mas" href="/notas/nota-reconocimientos-institucionales.html">Más...</a>
+                                    <a class="art-mas" href="/notas/nota-reconocimientos-institucionales.php">Más...</a>
 
                                 </article>
                             </div>
@@ -153,7 +153,7 @@
 
                                 <article class="news-noticia borde-bottom">
 
-                                    <h2 class="nwnot-18"><a href="/notas/nota-1.html">Emergencia de Pediatría celebró sus 14 años de aniversario...</a></h2>
+                                    <h2 class="nwnot-18"><a href="/notas/nota-1.php">Emergencia de Pediatría celebró sus 14 años de aniversario...</a></h2>
                                     <p>El Hospital Nacional “Dos de Mayo” celebró los 14 años de Aniversario de Emergencia de Pediatría, con una misa y Ceremonia Protocolar, esta última fue encabezada por el Director General del nosocomio, Dr. José Roca Mendoza...</p>
                                     <div class="slider-bxslider">
                                         <img width="370" height="130" alt="" title=" " src="imagenes/upload/premiacion1.jpg">
@@ -166,8 +166,8 @@
 
                                 <article class="news-noticia">
 
-                                    <h2 class="nwnot-18"><a href="/notas/nota-2.html">Viceministro de Salud visitó a los heridos de los enfrentamientos...</a></h2>
-                                    <a class="art-mas" href="/notas/nota-2.html">Más...</a>
+                                    <h2 class="nwnot-18"><a href="/notas/nota-2.php">Viceministro de Salud visitó a los heridos de los enfrentamientos...</a></h2>
+                                    <a class="art-mas" href="/notas/nota-2.php">Más...</a>
 
                                 </article>
                             </div>

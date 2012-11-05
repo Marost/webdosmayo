@@ -3,7 +3,7 @@
     <div id="mrq_ap_diagnostico" class="mrq_lista">
 
         <h2>Apoyo al Diagnóstico</h2>
-        <a class="mrq-vm" href="/notas/apoyo-diagnostico.html">Ver más...</a>
+        <a class="mrq-vm" href="/notas/apoyo-diagnostico.php">Ver más...</a>
 
         <div id="mrq_ap_diagnostico_lista" class="mrq_lista_item">
             <div>
@@ -86,7 +86,7 @@
     <div id="busqueda_doctor">
         <span class="icon-medico"></span>
         <p>Busca a tu Médico</p>
-        <form class="searchform" action="busqueda.html">
+        <form class="searchform" action="busqueda.php">
             <input class="searchfield" type="text" value="Buscar..." onfocus="if (this.value == 'Buscar...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Buscar...';}" />
             <input class="searchbutton" type="button" value="Ir" />
         </form>
