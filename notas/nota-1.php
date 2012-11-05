@@ -36,6 +36,10 @@
                                 <h2>EMERGENCIA DE PEDIATRÍA CELEBRÓ SUS 14 AÑOS DE ANIVERSARIO</h2>
                             </div>
 
+                            <div class="imagen">
+                                <img src="/imagenes/upload/premiacion-4.jpg">
+                            </div>
+
                             <div class="contenido">
 <p>El Hospital Nacional “Dos de Mayo” celebró los 14 años de Aniversario de Emergencia de Pediatría, con una misa y Ceremonia Protocolar, esta última fue encabezada por el Director General del nosocomio, Dr. José Roca Mendoza; y la Jefa del respectivo servicio, Lic.  Violeta Aguilar Pariona. Estuvieron presenten también personal médico y asistencial que integran dicho equipo de trabajo.</p>
 
