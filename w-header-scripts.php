@@ -170,6 +170,8 @@ jAcod(document).ready(function(){
 });
 </script>
 
+<?php if($script_popup==true){ ?>
 <!-- POPUP -->
 <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script  src="/js/popup.js"></script>
+<?php } ?>
