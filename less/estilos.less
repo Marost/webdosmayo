@@ -30,6 +30,15 @@
 	letter-spacing:normal;
 }
 
+.popup-cerra(){
+	display: block;
+	position: absolute;
+	top: 7px;
+	font-size: 12px;
+	right: 10px;
+	font-weight: bold;
+}
+
 html,
 button,
 input,
@@ -1250,12 +1259,7 @@ POPUP
 #popup-escribanos{ 
 	
 	#popup-esc-cerrar{
-		display: block;
-		position: absolute;
-		top: 7px;
-		font-size: 12px;
-		right: 10px;
-		font-weight: bold;
+		.popup-cerrar();
 	}
 
 	#btn-escribanos{
@@ -1308,12 +1312,7 @@ POPUP
 	width: auto;
 
 	#popup-ubi-cerrar{
-		display: block;
-		position: absolute;
-		top: 7px;
-		font-size: 12px;
-		right: 10px;
-		font-weight: bold;
+		.popup-cerrar();
 	}
 
 	h2{
@@ -1325,16 +1324,23 @@ POPUP
 	width: 390px;
 
 	#popup-tel-cerrar{
-		display: block;
-		position: absolute;
-		top: 7px;
-		font-size: 12px;
-		right: 10px;
-		font-weight: bold;
+		.popup-cerrar();
 	}
 
 	h2{
 		left: 80px;
+	}
+}
+
+#popup-correo{
+	width: 390px;
+
+	#popup-correo-cerrar{
+		.popup-cerrar();
+	}
+
+	h2{
+		left: 25px;
 	}
 }
 

@@ -66,6 +66,21 @@
                 
 </div>
 
+<div id="popup-correo" class="popup">
+    
+    <a id="popup-correo-cerrar" href="javascript:;">Cerrar</a>
+    
+    <div class="popup-box">
+        <h2>Correo Institucional</h2>
+        <p>Da clic en los siguientes enlaces:</p>
+        <ul>
+            <li><a href="">Enlace 1</a></li>
+            <li><a href="">Enlace 2</a></li>
+        </ul>
+    </div>
+                
+</div>
+
 <div id="capaPopUp"></div>
 <div id="popUpDiv">
     <div id="capaPng">

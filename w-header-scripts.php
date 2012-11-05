@@ -157,6 +157,24 @@ jMapUbi(document).ready(function() {
 });
 </script>
 
+<!-- TELEFONO -->
+<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script  src="libs/blockui/jquery.blockUI.js"></script>
+<script >
+var jMapUbi = jQuery.noConflict();
+jMapUbi(document).ready(function() { 
+    jMapUbi('.icon-correo').click(function() { 
+        jMapUbi.blockUI({ message: jMapUbi('#popup-correo'), css: {top: '20%'} }); 
+    });
+    
+    jMapUbi('#popup-correo-cerrar').click(function() { 
+        jMapUbi.unblockUI(); 
+        return false; 
+    });
+     
+});
+</script>
+
 <!-- ACORDEON -->
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css" />
 <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
