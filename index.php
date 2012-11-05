@@ -97,7 +97,7 @@ $script_popup=true;
 
                                 <article class="nws-contenido">
 
-                                    <img width="120" height="135" src="">
+                                    <img width="120" height="135" src="/imagenes/upload/4.jpg">
                                     <div>
                                         <h2>Trabajadores del HNDM son capacitados....</h2>
                                         <p>El Comité Institucional de Lactancia Materna del HNDM capacita, promueve y difunde los beneficios de la leche materna...</p>
@@ -138,11 +138,7 @@ $script_popup=true;
 
                                     <h2 class="nwnot-18"><a href="/notas/nota-reconocimientos-institucionales.php">Reconocen al laboratorio del HNDM en Control de Calidad y altos...</a></h2>
                                     <p>Por su participación en el Programa de Control de Calidad Interlaboratorial INSIGHT que fue organizado por instituciones internacionales, el laboratorio del Hospital Nacional Dos de Mayo fue reconocido...</p>
-                                    <div class="slider-bxslider">
-                                        <img width="370" height="130" alt="" title=" " src="imagenes/upload/noti1.jpg">
-                                        <img width="370" height="130" alt="" title=" " src="imagenes/upload/noti2.jpg">
-                                        <img width="370" height="130" alt="" title=" " src="imagenes/upload/noti3.jpg">
-                                    </div>
+                                    <img width="370" height="130" alt="" title=" " src="imagenes/upload/reconocimiento-slide.jpg">
                                     <a class="art-mas" href="/notas/nota-reconocimientos-institucionales.php">Más...</a>
 
                                 </article>
@@ -184,10 +180,10 @@ $script_popup=true;
                                 <article class="nws-contenido">
 
                                     <div>
-                                        <h2>Trabajadores del HNDM son capacitados....</h2>
-                                        <p>El Comité Institucional de Lactancia Materna del HNDM capacita, promueve y difunde los beneficios de la leche materna...</p>
+                                        <h2>Entregan donaciones en el día del neumólogo....</h2>
+                                        <p>En el marco de las celebraciones por el "Día del Neumólogo", que se celebra cada 30 de agosto, el Comité de Damas Voluntarias...</p>
                                     </div>
-                                    <img width="120" height="135" src="">
+                                    <img width="120" height="135" src="/imagenes/upload/5.jpg">
 
                                 </article>
                             </div>

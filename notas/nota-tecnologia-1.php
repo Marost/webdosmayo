@@ -36,6 +36,10 @@
                                 <h2>UN RESONADOR MAGNÉTICO DE ÚLTIMA TECNOLOGÍA POSEE EL HOSPITAL NACIONAL “DOS DE MAYO”</h2>
                             </div>
 
+                            <div class="imagen">
+                                <img src="/imagenes/upload/angiografia-digital-1.jpg">
+                            </div>
+
                             <div class="contenido">
 <p>Al servicio de la población se encuentra el resonador magnético que posee el Hospital Nacional “Dos de Mayo”, a través del cual se pueden realizar estudios de alta complejidad a nivel del cerebro (encéfalo), corazón, abdomen, pelvis, articulaciones y demás órganos.</p>
 

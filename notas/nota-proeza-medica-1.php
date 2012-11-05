@@ -37,7 +37,7 @@
                             </div>
 
                             <div class="imagen">
-                                <img src="">
+                                <img src="/imagenes/upload/proezas-d.jpg">
                             </div>
 
                             <div class="contenido">

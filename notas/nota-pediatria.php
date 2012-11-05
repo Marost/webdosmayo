@@ -36,6 +36,10 @@
                                 <h2>DEPARTAMENTO DE PEDIATRÍA</h2>
                             </div>
 
+                            <div class="imagen">
+                                <img src="/imagenes/upload/premiacion-4.jpg">
+                            </div>
+
                             <div class="contenido">
 <p>El Departamento de Pediatría  forma parte de la estructura orgánica del Hospital Nacional Dos de Mayo en el segundo nivel de organización, dependiendo directamente de la Dirección General. </p>
 
