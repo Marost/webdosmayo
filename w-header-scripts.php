@@ -1,3 +1,5 @@
+<base href ="http://dosdemayofinal.marostsac.com">
+
 <!-- ESTILOS -->
 <link rel="stylesheet" href="css/normalize.min.css">
 <link rel="stylesheet" href="css/estilos.css">
