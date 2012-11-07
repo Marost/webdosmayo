@@ -598,7 +598,7 @@ header nav ul .submenu-prensa li a {
 #news #nw-campania-esp .nws-contenido {
   background-color: #BFD3F2;
   float: left;
-  padding: 5px 0 0 0;
+  padding: 15px 0 10px 0;
   width: 100%;
 }
 #news #nw-campania-esp .nws-contenido ul {
@@ -609,7 +609,7 @@ header nav ul .submenu-prensa li a {
 }
 #news #nw-campania-esp .nws-contenido ul li {
   list-style: none;
-  margin: 0;
+  margin: 4px;
   padding: 0;
   display: inline-block;
 }
