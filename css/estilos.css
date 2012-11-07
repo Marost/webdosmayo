@@ -1202,6 +1202,9 @@ POPUP
   left: 78px;
   font-size: 18px;
 }
+.popup .popup-box img {
+  padding-bottom: 10px;
+}
 .popup .popup-box form fieldset {
   padding: 0 0 10px 0;
   margin: 0;

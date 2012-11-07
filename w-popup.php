@@ -94,7 +94,7 @@
     <div class="popup-box">
         <h2>Intanet</h2>
         <img src="/imagenes/popup/correo-institucional.png">
-        <img src="/imagenes/popup/correo-institucional.png">
+        <img src="/imagenes/popup/popup.png">
     </div>
                 
 </div>
