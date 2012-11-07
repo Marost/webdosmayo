@@ -115,7 +115,7 @@ $script_popup=true;
 
                                     <ul>
                                         <li><a href=""><img src="/imagenes/campanias-especiales/campania1.jpg"></a></li>
-                                        <li><a href=""><img src="/imagenes/campanias-especiales/campania2.jpg"></a></li>
+                                        <li><a href=""><img src="/imagenes/campanias-especiales/campania-2.jpg"></a></li>
                                         <li><a href=""><img src="/imagenes/campanias-especiales/icon-campana-especial-01.png"></a></li>
                                         <li><a href=""><img src="/imagenes/campanias-especiales/icon-campana-especial-02.png"></a></li>
                                         <li><a href=""><img src="/imagenes/campanias-especiales/icon-campana-especial-03.png"></a></li>
