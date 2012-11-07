@@ -92,7 +92,7 @@
 			css: {
 				padding:	0,
 				margin:		0,
-				width:		'300px',
+				width:		'',
 				top:		'40%',
 				left:		'40%',
 				textAlign:	'',

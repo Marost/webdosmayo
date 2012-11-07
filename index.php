@@ -138,7 +138,7 @@ $script_popup=true;
 
                                 <article class="news-noticia">
 
-                                    <h2 class="nwnot-18"><a href="/notas/nota-reconocimientos-institucionales.php">Reconocen al laboratorio del HNDM en Control de Calidad y altos...</a></h2>
+                                    <h2><a href="/notas/nota-reconocimientos-institucionales.php">Reconocen al laboratorio del HNDM en Control de Calidad y altos...</a></h2>
                                     <p>Por su participación en el Programa de Control de Calidad Interlaboratorial INSIGHT que fue organizado por instituciones internacionales, el laboratorio del Hospital Nacional Dos de Mayo fue reconocido...</p>
                                     <img width="370" height="130" alt="" title=" " src="imagenes/upload/reconocimiento-slide.jpg">
                                     <a class="art-mas" href="/notas/nota-reconocimientos-institucionales.php">Más...</a>
@@ -154,7 +154,7 @@ $script_popup=true;
 
                                 <article class="news-noticia borde-bottom">
 
-                                    <h2 class="nwnot-18"><a href="/notas/nota-1.php">Emergencia de Pediatría celebró sus 14 años de aniversario...</a></h2>
+                                    <h2><a href="/notas/nota-1.php">Emergencia de Pediatría celebró sus 14 años de aniversario...</a></h2>
                                     <p>El Hospital Nacional “Dos de Mayo” celebró los 14 años de Aniversario de Emergencia de Pediatría, con una misa y Ceremonia Protocolar, esta última fue encabezada por el Director General del nosocomio, Dr. José Roca Mendoza...</p>
                                     <div class="slider-bxslider">
                                         <img width="370" height="130" alt="" title=" " src="imagenes/upload/premiacion1.jpg">
@@ -167,7 +167,7 @@ $script_popup=true;
 
                                 <article class="news-noticia">
 
-                                    <h2 class="nwnot-18"><a href="/notas/nota-2.php">Viceministro de Salud visitó a los heridos de los enfrentamientos...</a></h2>
+                                    <h2><a href="/notas/nota-2.php">Viceministro de Salud visitó a los heridos de los enfrentamientos...</a></h2>
                                     <a class="art-mas" href="/notas/nota-2.php">Más...</a>
 
                                 </article>

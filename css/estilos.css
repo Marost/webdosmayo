@@ -355,6 +355,7 @@ header nav ul .submenu-prensa li a {
 }
 .mrq_lista .mrq_lista_item {
   border-bottom: 1px solid #fff;
+  border-top: 1px solid #fff;
   height: 175px;
   overflow: hidden;
   width: 192px;
@@ -1150,6 +1151,20 @@ POPUP
 }
 #popup-correo h2 {
   left: 78px;
+}
+#popup-intranet {
+  width: 250px;
+}
+#popup-intranet #popup-intranet-cerrar {
+  display: block;
+  position: absolute;
+  top: 7px;
+  font-size: 12px;
+  right: 10px;
+  font-weight: bold;
+}
+#popup-intranet h2 {
+  left: 62px;
 }
 .popup {
   border-radius: 10px 10px 10px 10px;
