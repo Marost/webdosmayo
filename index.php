@@ -51,7 +51,7 @@ $script_popup=true;
                                             <img width="370" height="220" alt="" title=" " src="/imagenes/upload/proezas-3.jpg">
                                         </div>
                                         <p>Al servicio de la población se encuentra el resonador magnético que posee el Hospital Nacional “Dos de Mayo”, a través del cual se pueden realizar estudios...</p>
-                                        <a class="art-mas" href="/notas/nota-tecnologia-1.php">Leer más...</a>
+                                        <a class="art-mas" href="/notas/nota-tecnologia-1.php">Más...</a>
 
                                     </article>
 
@@ -59,7 +59,7 @@ $script_popup=true;
 
                                         <h2><a href="/notas/nota-tecnologia-2.php">El único y más moderno angiografo del país está en el HNDM</a></h2>
                                         <p>Demostrando que el Hospital Nacional “Dos de Mayo” cuenta con equipamiento de última generación, posee el angiografo digital biplanar más moderno...</p>
-                                        <a class="art-mas" href="/notas/nota-tecnologia-2.php">Leer más...</a>
+                                        <a class="art-mas" href="/notas/nota-tecnologia-2.php">Más...</a>
 
                                     </article>
                                 </div>
@@ -75,7 +75,7 @@ $script_popup=true;
                                             <img width="370" height="220" alt="" src="/imagenes/upload/proezas-2.jpg" title=" ">                                            
                                         </div>
                                         <p>Verónica Liz Llanos (25), una humilde madre arequipeña fue víctima de un accidente de tránsito el pasado 13 de junio, cuando el vehículo en que viajaba hacia su centro de labores se precipitó...</p>
-                                        <a class="art-mas" href="">Leer más...</a>
+                                        <a class="art-mas" href="">Más...</a>
 
                                     </article>
 
@@ -83,7 +83,7 @@ $script_popup=true;
 
                                         <h2><a href="">Especialistas realizan proezas médicas utilizando microcirugía</a></h2>
                                         <p>Los oncólogos del Hospital Nacional "Dos de Mayo" realizan diversas proezas médicas para salvar la vida de sus pacientes...</p>
-                                        <a class="art-mas" href="/notas/nota-proeza-medica-1.php">Leer más...</a>
+                                        <a class="art-mas" href="/notas/nota-proeza-medica-1.php">Más...</a>
 
                                     </article>
                                 </div>
@@ -114,6 +114,8 @@ $script_popup=true;
                                 <div class="nws-contenido">
 
                                     <ul>
+                                        <li><a href=""><img src="/imagenes/campanias-especiales/campania1.jpg"></a></li>
+                                        <li><a href=""><img src="/imagenes/campanias-especiales/campania2.jpg"></a></li>
                                         <li><a href=""><img src="/imagenes/campanias-especiales/icon-campana-especial-01.png"></a></li>
                                         <li><a href=""><img src="/imagenes/campanias-especiales/icon-campana-especial-02.png"></a></li>
                                         <li><a href=""><img src="/imagenes/campanias-especiales/icon-campana-especial-03.png"></a></li>

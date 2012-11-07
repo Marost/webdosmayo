@@ -3,7 +3,7 @@
     <div id="mrq_ap_diagnostico" class="mrq_lista">
 
         <h2>Apoyo al Diagnóstico</h2>
-        <a class="mrq-vm" href="/notas/apoyo-diagnostico.php">Ver más...</a>
+        <a class="mrq-vm" href="/notas/apoyo-diagnostico.php">Más...</a>
 
         <div id="mrq_ap_diagnostico_lista" class="mrq_lista_item">
             <div>
