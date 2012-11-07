@@ -33,7 +33,7 @@
                         <div class="nw-nota">
 
                             <div class="titulo">
-                                <h2>EL ÚNICO Y MÁS MODERNO ANGIOGRAFO DEL PAÍS ESTÁ EN EL HNDM</h2>
+                                <h2>El único y más moderno angiografo del país está en el Hospital Nacional Dos de Mayo</h2>
                             </div>
 
                             <div class="contenido">

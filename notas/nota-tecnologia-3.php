@@ -33,7 +33,7 @@
                         <div class="nw-nota">
 
                             <div class="titulo">
-                                <h2>DENSITOMETRO PERMITE DETECTAR OSTEOPOROSIS Y OSTOPENIA A PACIENTES DEL HOSPITAL NACIONAL “DOS DE MAYO”</h2>
+                                <h2>Densitómetro permite detectar osteoporosis y osteopenia a pacientes del Hospital Nacional Dos de Mayo</h2>
                             </div>
 
                             <div class="contenido">

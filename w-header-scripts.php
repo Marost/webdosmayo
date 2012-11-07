@@ -1,22 +1,22 @@
 <base href ="http://dosdemayofinal.marostsac.com">
 
 <!-- ESTILOS -->
-<link rel="stylesheet" href="css/normalize.min.css">
-<link rel="stylesheet" href="css/estilos.css">
+<link rel="stylesheet" href="/css/normalize.min.css">
+<link rel="stylesheet" href="/css/estilos.css">
 
 <!-- FONT -->
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700' rel='stylesheet' type='text/css'>
 
 <!-- MODERNIZR -->
-<script src="js/vendor/modernizr-2.6.1.min.js"></script>
+<script src="/js/vendor/modernizr-2.6.1.min.js"></script>
 
 <!-- TABS -->
 <script src="http://code.jquery.com/jquery-latest.js"></script>
-<script src="js/tabs.js"></script>        
+<script src="/js/tabs.js"></script>        
 
 <!-- SLIDE SUPERIOR -->
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script src="js/jquery.nivo.slider.pack.js"></script>
+<script src="/js/jquery.nivo.slider.pack.js"></script>
 <script>
 var jSlider=jQuery.noConflict();
 jSlider(document).ready(function() {
@@ -46,7 +46,7 @@ jSlider(document).ready(function() {
 
 <!-- SLIDE NOTAS -->
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script src="js/jquery.nivo.slider.pack.js"></script>
+<script src="/js/jquery.nivo.slider.pack.js"></script>
 <script>
 var jSlideNI=jQuery.noConflict();
 jSlideNI(document).ready(function() {
@@ -87,7 +87,7 @@ jMenu(document).ready(function(){
 
 <!-- TELEFONO -->
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script src="libs/marquee/jquery.marquee.js"></script>
+<script src="/libs/marquee/jquery.marquee.js"></script>
 <script>
 var jMarq = jQuery.noConflict();
 jMarq(document).ready(function(){
@@ -97,15 +97,15 @@ jMarq(document).ready(function(){
 
 <!-- ESPECIALIDADES -->
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script src="js/marquee-especialidades.js"></script>
+<script src="/js/marquee-especialidades.js"></script>
 
 <!-- ANALISIS CLINICOS -->
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script src="js/marquee-apoyo-diagnostico.js"></script>
+<script src="/js/marquee-apoyo-diagnostico.js"></script>
 
 <!-- ESCRIBANOS -->
 <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script  src="libs/blockui/jquery.blockUI.js"></script>
+<script  src="/libs/blockui/jquery.blockUI.js"></script>
 <script >
 var jcladd = jQuery.noConflict();
 jcladd(document).ready(function() { 
@@ -123,7 +123,7 @@ jcladd(document).ready(function() {
 
 <!-- MAPA -->
 <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script  src="libs/blockui/jquery.blockUI.js"></script>
+<script  src="/libs/blockui/jquery.blockUI.js"></script>
 <script >
 var jMapUbi = jQuery.noConflict();
 jMapUbi(document).ready(function() { 
@@ -141,7 +141,7 @@ jMapUbi(document).ready(function() {
 
 <!-- TELEFONO -->
 <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script  src="libs/blockui/jquery.blockUI.js"></script>
+<script  src="/libs/blockui/jquery.blockUI.js"></script>
 <script >
 var jMapUbi = jQuery.noConflict();
 jMapUbi(document).ready(function() { 
@@ -159,7 +159,7 @@ jMapUbi(document).ready(function() {
 
 <!-- TELEFONO -->
 <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script  src="libs/blockui/jquery.blockUI.js"></script>
+<script  src="/libs/blockui/jquery.blockUI.js"></script>
 <script >
 var jMapUbi = jQuery.noConflict();
 jMapUbi(document).ready(function() { 
@@ -169,6 +169,24 @@ jMapUbi(document).ready(function() {
     
     jMapUbi('#popup-correo-cerrar').click(function() { 
         jMapUbi.unblockUI(); 
+        return false; 
+    });
+     
+});
+</script>
+
+<!-- TELEFONO -->
+<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script  src="/libs/blockui/jquery.blockUI.js"></script>
+<script >
+var jIntran = jQuery.noConflict();
+jIntran(document).ready(function() { 
+    jIntran('#enl-intranet').click(function() { 
+        jIntran.blockUI({ message: jIntran('#popup-intranet'), css: {top: '20%'} }); 
+    });
+    
+    jIntran('#popup-intranet-cerrar').click(function() { 
+        jIntran.unblockUI(); 
         return false; 
     });
      

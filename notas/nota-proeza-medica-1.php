@@ -33,7 +33,7 @@
                         <div class="nw-nota">
 
                             <div class="titulo">
-                                <h2>CIRUJANOS DEL HOSPITAL DOS DE MAYO RECONSTRUIRÁN ROSTRO DE MADRE AREQUIPEÑA HERIDA EN ACCIDENTE DE TRÁNSITO</h2>
+                                <h2>Cirujanos del Hospital Dos de Mayo reconstruirán rostro de madre arequipeña herida en accidente de tránsito</h2>
                             </div>
 
                             <div class="imagen">

@@ -34,7 +34,7 @@
                         <div class="nw-nota">
 
                             <div class="titulo">
-                                <h2>RECONOCEN A LABORATORIO EN CONTROL DE CALIDAD Y ALTOS ESTANDARES DE EVALUACIÓN INTERLABORATORIAL INTERNACIONAL</h2>
+                                <h2>Reconocen a laboratorio en control de calidad y altos estándares de evaluación interlaboratorial internacional</h2>
                             </div>
 
                             <div class="imagen">

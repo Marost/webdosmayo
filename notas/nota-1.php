@@ -33,7 +33,7 @@
                         <div class="nw-nota">
 
                             <div class="titulo">
-                                <h2>EMERGENCIA DE PEDIATRÍA CELEBRÓ SUS 14 AÑOS DE ANIVERSARIO</h2>
+                                <h2>Emergencia de Pediatría celebró sus 14 años de aniversario</h2>
                             </div>
 
                             <div class="imagen">

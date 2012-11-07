@@ -33,7 +33,7 @@
                         <div class="nw-nota">
 
                             <div class="titulo">
-                                <h2>UN RESONADOR MAGNÉTICO DE ÚLTIMA TECNOLOGÍA POSEE EL HOSPITAL NACIONAL “DOS DE MAYO”</h2>
+                                <h2>Un resonador magnético de última tecnología posee el Hospital Nacional Dos de Mayo</h2>
                             </div>
 
                             <div class="imagen">

@@ -33,7 +33,7 @@
                         <div class="nw-nota">
 
                             <div class="titulo">
-                                <h2>VICEMINISTRO DE SALUD VISITÓ A LOS HERIDOS DE LOS ENFRENTAMIENTOS DEL MERCADO LA PARADA</h2>
+                                <h2>Viceministro de Salud visitó a los heridos de los enfrentamientos del mercado La Parada</h2>
                             </div>
 
                             <div class="imagen">

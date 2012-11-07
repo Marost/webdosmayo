@@ -18,7 +18,7 @@
                         <li><a href="directorio.php">Directorio</a></li>
                         <li><a href="/notas/historia.php">Historia</a></li>
                         <li><a>Información Institucional</a></li>
-                        <li><a>Intranet</a></li>
+                        <li><a href="javscript:;" id="enl-intranet">Intranet</a></li>
                     </ul>
                 </li>
                 <li><a href="javascript:;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
@@ -181,7 +181,7 @@
 
         <div id="central_telefonica">
             <h2>Central Telefónica</h2>
-            <a id="ver_telf" href="javascript:;">Ver más...</a>
+            <a id="ver_telf" href="javascript:;">Más...</a>
             <ul id="marquee" class="marquee">
               <li>328-0175</li>
               <li>328-0068</li>

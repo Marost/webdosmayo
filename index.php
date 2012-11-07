@@ -92,7 +92,7 @@ $script_popup=true;
                             <div class="nw-seccion">
 
                                 <div class="nws-select">
-                                    <h3>Sección 1</h3>
+                                    <h3>Capacitación</h3>
                                 </div>
 
                                 <article class="nws-contenido">
@@ -176,7 +176,7 @@ $script_popup=true;
                             <div class="nw-seccion">
 
                                 <div class="nws-select">
-                                    <h3>Sección 1</h3>
+                                    <h3>Alianzas</h3>
                                 </div>
 
                                 <article class="nws-contenido">
