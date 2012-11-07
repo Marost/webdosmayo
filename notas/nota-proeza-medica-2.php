@@ -37,7 +37,7 @@
                             </div>
 
                             <div class="imagen">
-                                <img src="/imagenes/upload/proezas-medica-2.jpg">
+                                <img src="/imagenes/upload/proeza-medica-2.jpg">
                             </div>
 
                             <div class="contenido">

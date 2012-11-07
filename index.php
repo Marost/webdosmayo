@@ -82,7 +82,7 @@ $script_popup=true;
                                     <article class="news-noticia">
 
                                         <h2><a href="/notas/nota-proeza-medica-2.php">Joven madre huancavelicana será operada en Hospital Nacional...</a></h2>
-                                        <p>adeleine Licas García (22) permanece internada en el Hospital Dos de Mayo con un tumor en la zona temporal parietal...</p>
+                                        <p>adeleine Licas García (22) permanece internada en el Hospital Dos de Mayo con un tumor en la zona temporal parietal derecha del cráneo. La mujer, madre de dos niños, pidió ayuda para afrontar la...</p>
                                         <a class="art-mas" href="/notas/nota-proeza-medica-2.php">Más...</a>
 
                                     </article>
