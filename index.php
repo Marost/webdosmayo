@@ -50,7 +50,7 @@ $script_popup=true;
                                             <img width="370" height="220" alt="" title=" " src="/imagenes/upload/angiografia-digital.jpg">
                                             <img width="370" height="220" alt="" title=" " src="/imagenes/upload/proezas-3.jpg">
                                         </div>
-                                        <p>Al servicio de la población se encuentra el resonador magnético que posee el Hospital Nacional “Dos de Mayo”, a través del cual se pueden realizar estudios...</p>
+                                        <p>Al servicio de la población se encuentra el resonador magnético que posee el Hospital Nacional “Dos de Mayo”, a través del cual se pueden realizar estudios de alta complejidad a nivel del cerebro...</p>
                                         <a class="art-mas" href="/notas/nota-tecnologia-1.php">Más...</a>
 
                                     </article>
@@ -58,7 +58,7 @@ $script_popup=true;
                                     <article class="news-noticia">
 
                                         <h2><a href="/notas/nota-tecnologia-2.php">El único y más moderno angiografo del país está en el HNDM</a></h2>
-                                        <p>Demostrando que el Hospital Nacional “Dos de Mayo” cuenta con equipamiento de última generación, posee el angiografo digital biplanar más moderno...</p>
+                                        <p>Demostrando que el Hospital Nacional “Dos de Mayo” cuenta con equipamiento de última generación, posee el angiografo digital biplanar más moderno  del Perú, el cual es único en el país...</p>
                                         <a class="art-mas" href="/notas/nota-tecnologia-2.php">Más...</a>
 
                                     </article>
@@ -81,9 +81,9 @@ $script_popup=true;
 
                                     <article class="news-noticia">
 
-                                        <h2><a href="">Especialistas realizan proezas médicas utilizando microcirugía</a></h2>
-                                        <p>Los oncólogos del Hospital Nacional "Dos de Mayo" realizan diversas proezas médicas para salvar la vida de sus pacientes...</p>
-                                        <a class="art-mas" href="/notas/nota-proeza-medica-1.php">Más...</a>
+                                        <h2><a href="/notas/nota-proeza-medica-2.php">Joven madre huancavelicana será operada en Hospital Nacional...</a></h2>
+                                        <p>adeleine Licas García (22) permanece internada en el Hospital Dos de Mayo con un tumor en la zona temporal parietal...</p>
+                                        <a class="art-mas" href="/notas/nota-proeza-medica-2.php">Más...</a>
 
                                     </article>
                                 </div>

@@ -1153,7 +1153,7 @@ POPUP
   left: 78px;
 }
 #popup-intranet {
-  width: 250px;
+  width: 300px;
 }
 #popup-intranet #popup-intranet-cerrar {
   display: block;
@@ -1164,7 +1164,7 @@ POPUP
   font-weight: bold;
 }
 #popup-intranet h2 {
-  left: 62px;
+  left: 95px;
 }
 .popup {
   border-radius: 10px 10px 10px 10px;
