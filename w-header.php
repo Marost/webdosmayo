@@ -17,7 +17,7 @@
                     <ul class="submenu">
                         <li><a href="directorio.php">Directorio</a></li>
                         <li><a href="/notas/historia.php">Historia</a></li>
-                        <li><a>Información Institucional</a></li>
+                        <li><a href="informacion-institucional.php">Información Institucional</a></li>
                         <li><a href="javscript:;" id="enl-intranet">Intranet</a></li>
                     </ul>
                 </li>

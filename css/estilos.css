@@ -1286,7 +1286,7 @@ POPUP
   display: none;
   /* Por defecto estará desactiva */
 
-  top: 65%;
+  top: 50%;
   /* Para posicionar verticalmente la capa al centro de la página */
 
 }
