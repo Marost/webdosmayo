@@ -67,6 +67,11 @@
             <li>328-0068</li>
             <li>328-0035</li>
             <li>328-0131</li>
+            <li>328-0028</li>
+            <li>328-0144</li>
+            <li>328-0066</li>
+            <li>328-1418</li>
+            <li>328-1920</li>
         </ul>
     </div>
                 
@@ -103,7 +108,7 @@
 <div id="popUpDiv">
     <div id="capaPng">
         <div>
-            <img src="/imagenes/upload/popup.jpg" width="502" height="800">
+            <img src="/imagenes/upload/popup.jpg" width="800" height="599">
         </div>
         <a href="javascript:void(0);" title="Cerrar" id="cerrar">
             <img src="/imagenes/icon-cerrar-popup.png" alt="Cerrar" width="77" height="25" title="Cerrar" /></a>

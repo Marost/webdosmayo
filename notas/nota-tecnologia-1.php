@@ -37,7 +37,7 @@
                             </div>
 
                             <div class="imagen">
-                                <img src="/imagenes/upload/angiografia-digital-1.jpg">
+                                <img src="/imagenes/upload/resonador.jpg">
                             </div>
 
                             <div class="contenido">

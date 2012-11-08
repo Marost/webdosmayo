@@ -27,7 +27,7 @@
                         <li><a>Directorio Institucional</a></li>                    
                     </ul>
                 </li>
-                <li><a href="javascript:;">Transparencia</a></li>
+                <li><a href="http://www.peru.gob.pe/transparencia/pep_transparencia_lista_planes.asp?id_entidad=13628&id_tema=1">Transparencia</a></li>
                 <li class="last"><a href="javascript:;">Prensa</a>
                     <ul class="submenu-prensa">
                         <li><a>Sala de Prensa</a></li>
@@ -183,10 +183,15 @@
             <h2>Central Telefónica</h2>
             <a id="ver_telf" href="javascript:;">Más...</a>
             <ul id="marquee" class="marquee">
-              <li>328-0175</li>
-              <li>328-0068</li>
-              <li>328-0035</li>
-              <li>328-0131</li>
+                <li>328-0175</li>
+                <li>328-0068</li>
+                <li>328-0035</li>
+                <li>328-0131</li>
+                <li>328-0028</li>
+                <li>328-0144</li>
+                <li>328-0066</li>
+                <li>328-1418</li>
+                <li>328-1920</li>
             </ul>
             <span id="img-telefono"></span>
         </div>

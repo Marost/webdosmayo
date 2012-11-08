@@ -82,7 +82,7 @@ $script_popup=true;
                                     <article class="news-noticia">
 
                                         <h2><a href="/notas/nota-proeza-medica-2.php">Joven madre huancavelicana será operada en Hospital Nacional...</a></h2>
-                                        <p>adeleine Licas García (22) permanece internada en el Hospital Dos de Mayo con un tumor en la zona temporal parietal derecha del cráneo. La mujer, madre de dos niños, pidió ayuda para afrontar la...</p>
+                                        <p>Madeleine Licas García (22) permanece internada en el Hospital Dos de Mayo con un tumor en la zona temporal parietal derecha del cráneo. La mujer, madre de dos niños, pidió ayuda para afrontar la...</p>
                                         <a class="art-mas" href="/notas/nota-proeza-medica-2.php">Más...</a>
 
                                     </article>
@@ -157,9 +157,9 @@ $script_popup=true;
                                     <h2><a href="/notas/nota-1.php">Emergencia de Pediatría celebró sus 14 años de aniversario...</a></h2>
                                     <p>El Hospital Nacional “Dos de Mayo” celebró los 14 años de Aniversario de Emergencia de Pediatría, con una misa y Ceremonia Protocolar, esta última fue encabezada por el Director General del nosocomio, Dr. José Roca Mendoza...</p>
                                     <div class="slider-bxslider">
-                                        <img width="370" height="130" alt="" title=" " src="imagenes/upload/premiacion1.jpg">
-                                        <img width="370" height="130" alt="" title=" " src="imagenes/upload/premiacion2.jpg">
-                                        <img width="370" height="130" alt="" title=" " src="imagenes/upload/premiacion3.jpg">
+                                        <img width="370" height="130" alt="" title=" " src="imagenes/upload/noticia-1.jpg">
+                                        <img width="370" height="130" alt="" title=" " src="imagenes/upload/noticia-2.jpg">
+                                        <img width="370" height="130" alt="" title=" " src="imagenes/upload/noticia-3.jpg">
                                     </div>
                                     <a class="art-mas" href="">Más...</a>
 

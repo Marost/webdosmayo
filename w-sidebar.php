@@ -77,7 +77,7 @@
             <li><a href="javascript:;"><span class="img icon-libro"></span>Libro de Reclamaciones</a></li>
             <li><a href="javascript:;"><span class="img icon-tarifario"></span>Tarifario <br>Virtual</a></li>
             <li><a href="javascript:;"><span class="img icon-boletin"></span>Boletín Epidemiológico</a></li>
-            <li><a href="javascript:;"><span class="img icon-observatorio"></span>Observatorio de Medicamentos</a></li>
+            <li><a href="http://observatorio.digemid.minsa.gob.pe/"><span class="img icon-observatorio"></span>Observatorio de Medicamentos</a></li>
             <li><a href="javascript:;"><span class="img icon-online"></span>Citas <br>Online</a><div>PRONTO</div></li>
             <li><a href="javascript:;"><span class="img icon-cas"></span>Contrato Administrativo de Servicios</a></li>
         </ul>

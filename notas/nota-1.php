@@ -37,7 +37,7 @@
                             </div>
 
                             <div class="imagen">
-                                <img src="/imagenes/upload/premiacion-4.jpg">
+                                <img src="/imagenes/upload/noticia-emergencia-1.jpg">
                             </div>
 
                             <div class="contenido">
