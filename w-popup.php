@@ -110,7 +110,6 @@
         <div>
             <img src="/imagenes/upload/popup.jpg" width="800" height="599">
         </div>
-        <a href="javascript:void(0);" title="Cerrar" id="cerrar">
-            <img src="/imagenes/icon-cerrar-popup.png" alt="Cerrar" width="77" height="25" title="Cerrar" /></a>
+        <a href="javascript:void(0);" title="Cerrar" id="cerrar">Cerrar</a>
     </div>
 </div>

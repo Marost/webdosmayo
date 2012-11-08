@@ -1289,6 +1289,17 @@ POPUP
   top: 50%;
   /* Para posicionar verticalmente la capa al centro de la página */
 
+  border: 10px solid #fff;
+}
+#popUpDiv a {
+  background-color: #fff;
+  color: #000;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 5px;
+  position: absolute;
+  right: -10px;
+  top: -10px;
 }
 /**************************************************************************
 ESTILOS PROPIOS DEL POPUP 20090323@JCP
