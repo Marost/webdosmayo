@@ -1,3 +1,17 @@
+<?php
+//CONEXION
+require_once("panel@hndm/conexion/conexion.php");
+require_once("panel@hndm/conexion/funciones.php");
+require_once("panel@hndm/conexion/funcion-paginacion.php");
+
+//VARIABLES
+$buscar=$_REQUEST["buscar"];
+
+if ($buscar!=""){
+    $rst_medico=mysql_query("SELECT * FROM DM_medicos WHERE nombre LIKE '%$buscar%' ORDER BY nombre ASC;", $conexion);
+}
+
+?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -33,9 +47,12 @@
                         <h2>Busca a tu Médico</h2>
                     
                         <ul>
-                            <li>José Roca Mendoza</li>
-                            <li>Manuel Silva Zumaran</li>
-                            <li>Silvia Rodriguez Lichtenheldt</li>
+                            <?php while($fila_medico=mysql_fetch_array($rst_medico)){} ?>
+                            <li>
+                                <p><strong><?php echo $fila_medico["nombre"]; ?></strong></p>
+                                <p><?php echo $fila_medico["oficina"]; ?></p>
+                            </li>
+                            <?php } ?>
                         </ul>
 
                     </section>
