@@ -37,469 +37,361 @@
                             </div>
 
                             <div class="contenido">
-                                <table width="650" border="1">
+                                <table width="650" border="0" align="center" cellpadding="3" cellspacing="3">
                                   <tr>
-                                    <td width="56">&nbsp;</td>
-                                    <td width="382">DIRECCIÓN GENERAL</td>
-                                    <td width="190">&nbsp;</td>
+                                    <td width="54" bgcolor="#2D65AE">&nbsp;</td>
+                                    <td colspan="2" bgcolor="#2D65AE"><strong>DIRECCIÓN GENERAL</strong></td>
                                   </tr>
                                   <tr>
-                                    <td>&nbsp;</td>
-                                    <td>Dr. José Roca Mendoza</td>
-                                    <td>&nbsp;</td>
+                                    <td bgcolor="#DADADA">&nbsp;</td>
+                                    <td width="381" bgcolor="#DADADA">Dr. José Roca Mendoza</td>
+                                    <td width="185" bgcolor="#DADADA">&nbsp;</td>
                                   </tr>
                                   <tr>
-                                    <td>209       </td>
-                                    <td>Secretaria de la Dirección General</td>
-                                    <td>Srta. Elvira López   Flores</td>
+                                    <td bgcolor="#DADADA">209       </td>
+                                    <td bgcolor="#DADADA">Secretaria de la Dirección General</td>
+                                    <td bgcolor="#DADADA">Srta. Elvira López   Flores</td>
                                   </tr>
                                   <tr>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
+                                    <td bgcolor="#2D65AE">&nbsp;</td>
+                                    <td colspan="2" bgcolor="#2D65AE"><strong>DIRECCIÓN GENERAL ADJUNTA</strong></td>
                                   </tr>
                                   <tr>
-                                    <td>&nbsp;</td>
-                                    <td>DIRECCIÓN GENERAL ADJUNTA</td>
-                                    <td>&nbsp;</td>
+                                    <td bgcolor="#DADADA">&nbsp;</td>
+                                    <td bgcolor="#DADADA">Dr. Manuel Silva Zumarán</td>
+                                    <td bgcolor="#DADADA">&nbsp;</td>
                                   </tr>
                                   <tr>
-                                    <td>&nbsp;</td>
-                                    <td>Dr. Manuel Silva Zumarán</td>
-                                    <td>&nbsp;</td>
+                                    <td bgcolor="#DADADA">210</td>
+                                    <td bgcolor="#DADADA">Secretaria de la Dirección General Adjunta</td>
+                                    <td bgcolor="#DADADA">Sra. Fidela Ramos</td>
                                   </tr>
                                   <tr>
-                                    <td>210</td>
-                                    <td>Secretaria de la Dirección General Adjunta</td>
-                                    <td>Sra. Fidela Ramos</td>
+                                    <td bgcolor="#2D65AE">&nbsp;</td>
+                                    <td colspan="2" bgcolor="#2D65AE"><strong>DIRECCIÓN EJECUTIVA DE ADMINISTRACIÓN</strong></td>
                                   </tr>
-                                  <tr>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                  </tr>
-                                  <tr>
-                                    <td>&nbsp;</td>
-                                    <td>DIRECCIÓN EJECUTIVA DE ADMINISTRACIÓN</td>
-                                    <td>&nbsp;</td>
-                                  </tr>
-                                  <tr>
+                                  <tr bgcolor="#DADADA">
                                     <td>&nbsp;</td>
                                     <td>Dr. Silvia Rodríguez Lichtenheldt</td>
                                     <td>&nbsp;</td>
                                   </tr>
-                                  <tr>
+                                  <tr bgcolor="#DADADA">
                                     <td>211</td>
                                     <td>Secretaría de la DEA     </td>
                                     <td>Sra. Amparo Almendro A</td>
                                   </tr>
                                   <tr>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
+                                    <td bgcolor="#2D65AE">&nbsp;</td>
+                                    <td colspan="2" bgcolor="#2D65AE"><strong>ASESORÍA DE LA DIRECCIÓN GENERAL</strong></td>
                                   </tr>
-                                  <tr>
+                                  <tr bgcolor="#DADADA">
                                     <td>209</td>
-                                    <td>ASESORÍA DE LA DIRECCIÓN GENERAL</td>
-                                    <td>&nbsp;</td>
-                                  </tr>
-                                  <tr>
-                                    <td>&nbsp;</td>
                                     <td>Dr. Percy Balabarca Cristobal</td>
                                     <td>&nbsp;</td>
                                   </tr>
                                   <tr>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
+                                    <td bgcolor="#2D65AE">&nbsp;</td>
+                                    <td colspan="2" bgcolor="#2D65AE"><strong>TRÁMITE DOCUMENTARIO</strong></td>
                                   </tr>
-                                  <tr>
-                                    <td>212</td>
-                                    <td>TRÁMITE DOCUMENTARIO</td>
+                                  <tr bgcolor="#DADADA">
+                                    <td>&nbsp;</td>
                                     <td>Sr. Pablo Camones  V.</td>
-                                  </tr>
-                                  <tr>
                                     <td>&nbsp;</td>
+                                  </tr>
+                                  <tr bgcolor="#DADADA">
+                                    <td>212</td>
                                     <td>Archivo Central</td>
                                     <td>Srta. Annita Rojas L.</td>
                                   </tr>
                                   <tr>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
+                                    <td bgcolor="#2D65AE">&nbsp;</td>
+                                    <td colspan="2" bgcolor="#2D65AE"><strong>ORGANO DE CONTROL INSTITUCIONAL</strong></td>
                                   </tr>
-                                  <tr>
+                                  <tr bgcolor="#DADADA">
                                     <td>215</td>
-                                    <td>ORGANO DE CONTROL INSTITUCIONAL</td>
-                                    <td>&nbsp;</td>
-                                  </tr>
-                                  <tr>
-                                    <td>&nbsp;</td>
                                     <td>Abog. Irene Vásquez Perdomo  </td>
                                     <td>&nbsp;</td>
                                   </tr>
                                   <tr>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
+                                    <td bgcolor="#2D65AE">&nbsp;</td>
+                                    <td colspan="2" bgcolor="#2D65AE"><strong>OFICINA EJECUTIVA DE PLANEAMIENTO  ESTRATEGICO</strong></td>
                                   </tr>
-                                  <tr>
+                                  <tr bgcolor="#DADADA">
                                     <td>294</td>
-                                    <td>OFICINA EJECUTIVA DE PLANEAMIENTO  ESTRATEGICO</td>
-                                    <td>&nbsp;</td>
-                                  </tr>
-                                  <tr>
-                                    <td>&nbsp;</td>
                                     <td>Econ.   Carmen Ramos Ochoa </td>
                                     <td>&nbsp;</td>
                                   </tr>
                                   <tr>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
+                                    <td bgcolor="#2D65AE">&nbsp;</td>
+                                    <td colspan="2" bgcolor="#2D65AE"><strong>OFICINA DE ASESORIA  JURIDICA</strong></td>
                                   </tr>
-                                  <tr>
+                                  <tr bgcolor="#DADADA">
                                     <td>232</td>
-                                    <td>OFICINA DE ASESORIA  JURIDICA</td>
-                                    <td>&nbsp;</td>
-                                  </tr>
-                                  <tr>
-                                    <td>&nbsp;</td>
                                     <td>Abog. Jorge  Emiliano&nbsp;Vargas  Torrejón&nbsp;&nbsp; </td>
                                     <td>&nbsp;</td>
                                   </tr>
                                   <tr>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
+                                    <td bgcolor="#2D65AE">&nbsp;</td>
+                                    <td colspan="2" bgcolor="#2D65AE"><strong>OFICICINA DE EPIDEMIOLOGÍA  Y    SALUD AMBIENTAL    </strong></td>
                                   </tr>
-                                  <tr>
+                                  <tr bgcolor="#DADADA">
                                     <td>234</td>
-                                    <td>OFICICINA DE EPIDEMIOLOGÍA  Y    SALUD AMBIENTAL    </td>
-                                    <td>&nbsp;</td>
-                                  </tr>
-                                  <tr>
-                                    <td>&nbsp;</td>
                                     <td>Dr. Raul Montalvo Otivo </td>
                                     <td>&nbsp;</td>
                                   </tr>
-                                  <tr>
+                                  <tr bgcolor="#2D65AE">
                                     <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
+                                    <td colspan="2"><strong>OFICINA  DE COMUNICACIONES</strong></td>
                                   </tr>
                                   <tr>
-                                    <td>213</td>
-                                    <td>OFICINA  DE COMUNICACIONES</td>
-                                    <td>&nbsp;</td>
+                                    <td bgcolor="#DADADA">213</td>
+                                    <td bgcolor="#DADADA">Lic. Denisse Torres Benitez  </td>
+                                    <td bgcolor="#DADADA">&nbsp;</td>
                                   </tr>
                                   <tr>
-                                    <td>&nbsp;</td>
-                                    <td>Lic. Denisse Torres Benitez  </td>
-                                    <td>&nbsp;</td>
+                                    <td bgcolor="#DADADA">201</td>
+                                    <td bgcolor="#DADADA">Central Telefónica  </td>
+                                    <td bgcolor="#DADADA">&nbsp;</td>
                                   </tr>
                                   <tr>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
+                                    <td bgcolor="#DADADA">291</td>
+                                    <td bgcolor="#DADADA">Capellanía                </td>
+                                    <td bgcolor="#DADADA">Rvdo. Nolberto Aguilar </td>
                                   </tr>
                                   <tr>
-                                    <td>201</td>
-                                    <td>Central Telefónica  </td>
-                                    <td>&nbsp;</td>
+                                    <td bgcolor="#DADADA">291</td>
+                                    <td bgcolor="#DADADA">Auditorio de Comunicaciones</td>
+                                    <td bgcolor="#DADADA">&nbsp;</td>
                                   </tr>
                                   <tr>
-                                    <td>291</td>
-                                    <td>Capellanía                </td>
-                                    <td>Rvdo. Nolberto Aguilar </td>
+                                    <td bgcolor="#2D65AE">&nbsp;</td>
+                                    <td colspan="2" bgcolor="#2D65AE"><strong>OFICINA DE GESTION DE  CALIDAD           </strong></td>
                                   </tr>
                                   <tr>
-                                    <td>291</td>
-                                    <td>Auditorio de Comunicaciones</td>
-                                    <td>&nbsp;</td>
+                                    <td bgcolor="#DADADA">8278</td>
+                                    <td bgcolor="#DADADA">Dr. Marco Antonio Sánchez Ramírez&nbsp;</td>
+                                    <td bgcolor="#DADADA">&nbsp;</td>
                                   </tr>
                                   <tr>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
+                                    <td bgcolor="#2D65AE">&nbsp;</td>
+                                    <td colspan="2" bgcolor="#2D65AE"><strong>OFIC. DE APOYO A LA CAPACITACIÓN,  DOCENCIA E INVESTIGACIÓN</strong></td>
                                   </tr>
                                   <tr>
-                                    <td>8278</td>
-                                    <td>OFICINA DE GESTION DE  CALIDAD           </td>
-                                    <td>&nbsp;</td>
+                                    <td bgcolor="#DADADA">231</td>
+                                    <td bgcolor="#DADADA">Dra. Nora de las Mercedes Espíritu Salazar</td>
+                                    <td bgcolor="#DADADA">&nbsp;</td>
                                   </tr>
                                   <tr>
-                                    <td>&nbsp;</td>
-                                    <td>Dr. Marco Antonio Sánchez Ramírez&nbsp;</td>
-                                    <td>&nbsp;</td>
+                                    <td bgcolor="#DADADA">8234</td>
+                                    <td bgcolor="#DADADA">Unidad de   Investigación</td>
+                                    <td bgcolor="#DADADA">&nbsp;</td>
                                   </tr>
                                   <tr>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
+                                    <td bgcolor="#DADADA">290</td>
+                                    <td bgcolor="#DADADA">Residentado Médico</td>
+                                    <td bgcolor="#DADADA">&nbsp;</td>
                                   </tr>
                                   <tr>
-                                    <td>231</td>
-                                    <td>OFIC. DE APOYO A LA CAPACITACIÓN,  DOCENCIA E INVESTIGACIÓN</td>
-                                    <td>&nbsp;</td>
+                                    <td bgcolor="#2D65AE">&nbsp;</td>
+                                    <td colspan="2" bgcolor="#2D65AE"><strong>OFICINA  DE SEGUROS</strong></td>
                                   </tr>
                                   <tr>
-                                    <td>&nbsp;</td>
-                                    <td>Dra. Nora de las Mercedes Espíritu Salazar</td>
-                                    <td>&nbsp;</td>
+                                    <td bgcolor="#DADADA">8241</td>
+                                    <td bgcolor="#DADADA">Dra.  Aurora de la Libertad Coello Pineda&nbsp; </td>
+                                    <td bgcolor="#DADADA">&nbsp;</td>
                                   </tr>
                                   <tr>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
+                                    <td bgcolor="#DADADA">295</td>
+                                    <td bgcolor="#DADADA">Oficina de Seguros </td>
+                                    <td bgcolor="#DADADA">Lic Margarita Rivero L. </td>
                                   </tr>
                                   <tr>
-                                    <td>8234</td>
-                                    <td>Unidad de   Investigación</td>
-                                    <td>&nbsp;</td>
+                                    <td bgcolor="#DADADA">8224</td>
+                                    <td bgcolor="#DADADA">SOAT</td>
+                                    <td bgcolor="#DADADA">&nbsp;</td>
                                   </tr>
                                   <tr>
-                                    <td>290</td>
-                                    <td>Residentado Médico</td>
-                                    <td>&nbsp;</td>
+                                    <td bgcolor="#2D65AE">&nbsp;</td>
+                                    <td colspan="2" bgcolor="#2D65AE"><strong>OFICINA DE PERSONAL</strong></td>
                                   </tr>
                                   <tr>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
+                                    <td bgcolor="#DADADA">216</td>
+                                    <td bgcolor="#DADADA">Abog.   Ana Maria Fernández Tirado</td>
+                                    <td bgcolor="#DADADA">&nbsp;</td>
                                   </tr>
                                   <tr>
-                                    <td>8241</td>
-                                    <td>OFICINA  DE SEGUROS</td>
-                                    <td>&nbsp;</td>
+                                    <td bgcolor="#DADADA">217</td>
+                                    <td bgcolor="#DADADA">Control    de   Asistencia          </td>
+                                    <td bgcolor="#DADADA">Sr. Guillermo Baldeón C.</td>
                                   </tr>
                                   <tr>
-                                    <td>&nbsp;</td>
-                                    <td>Dra.  Aurora de la Libertad Coello Pineda&nbsp; </td>
-                                    <td>&nbsp;</td>
+                                    <td bgcolor="#DADADA">217</td>
+                                    <td bgcolor="#DADADA">Selec. y Clasifi. y Regis</td>
+                                    <td bgcolor="#DADADA">Sr. Javier Núñez</td>
                                   </tr>
                                   <tr>
-                                    <td>295</td>
-                                    <td>Oficina de Seguros </td>
-                                    <td>Lic Margarita Rivero L. </td>
+                                    <td bgcolor="#DADADA">218</td>
+                                    <td bgcolor="#DADADA">Medico de Personal</td>
+                                    <td bgcolor="#DADADA">Dr. Alberto Cortez C.</td>
                                   </tr>
                                   <tr>
-                                    <td>8224</td>
-                                    <td>SOAT</td>
-                                    <td>&nbsp;</td>
+                                    <td bgcolor="#DADADA">8281</td>
+                                    <td bgcolor="#DADADA">Bienestar de Personal     </td>
+                                    <td bgcolor="#DADADA">Lic. Violeta Llique   L</td>
                                   </tr>
                                   <tr>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
+                                    <td bgcolor="#DADADA">219</td>
+                                    <td bgcolor="#DADADA">Remuneraciones              </td>
+                                    <td bgcolor="#DADADA">Srta.María Luisa Garrido</td>
                                   </tr>
                                   <tr>
-                                    <td>216</td>
-                                    <td>OFICINA DE PERSONAL</td>
-                                    <td>&nbsp;</td>
+                                    <td bgcolor="#DADADA">219</td>
+                                    <td bgcolor="#DADADA">Beneficios y Pensiones    </td>
+                                    <td bgcolor="#DADADA">Sra. Fabiola Torres Mori</td>
                                   </tr>
                                   <tr>
-                                    <td>&nbsp;</td>
-                                    <td>Abog.   Ana Maria Fernández Tirado</td>
-                                    <td>&nbsp;</td>
+                                    <td bgcolor="#DADADA">8271</td>
+                                    <td bgcolor="#DADADA">Control de Asistencia (Marcador)</td>
+                                    <td bgcolor="#DADADA">&nbsp;</td>
                                   </tr>
                                   <tr>
-                                    <td>217</td>
-                                    <td>Control    de   Asistencia          </td>
-                                    <td>Sr. Guillermo Baldeón C.</td>
+                                    <td bgcolor="#DADADA">8236</td>
+                                    <td bgcolor="#DADADA">Cuna Jardín</td>
+                                    <td bgcolor="#DADADA">&nbsp;</td>
                                   </tr>
                                   <tr>
-                                    <td>217</td>
-                                    <td>Selec. y Clasifi. y Regis</td>
-                                    <td>Sr. Javier Núñez</td>
+                                    <td bgcolor="#2D65AE">&nbsp;</td>
+                                    <td colspan="2" bgcolor="#2D65AE"><strong>OFICINA DE ECONOMIA</strong></td>
                                   </tr>
                                   <tr>
-                                    <td>218</td>
-                                    <td>Medico de Personal</td>
-                                    <td>Dr. Alberto Cortez C.</td>
+                                    <td bgcolor="#DADADA">220</td>
+                                    <td bgcolor="#DADADA">CPC.  Eric Fermín   Cruzalegui   Arellano</td>
+                                    <td bgcolor="#DADADA">&nbsp;</td>
                                   </tr>
                                   <tr>
-                                    <td>8281</td>
-                                    <td>Bienestar de Personal     </td>
-                                    <td>Lic. Violeta Llique   L</td>
+                                    <td bgcolor="#DADADA">296</td>
+                                    <td bgcolor="#DADADA">Facturación y Altas </td>
+                                    <td bgcolor="#DADADA">Sra. Lídia Gallegos P.</td>
                                   </tr>
                                   <tr>
-                                    <td>219</td>
-                                    <td>Remuneraciones              </td>
-                                    <td>Srta.María Luisa Garrido</td>
+                                    <td bgcolor="#DADADA">8253&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                    <td bgcolor="#DADADA">Tesorería</td>
+                                    <td bgcolor="#DADADA">Sra. Mary Cóndor Mori</td>
                                   </tr>
                                   <tr>
-                                    <td>219</td>
-                                    <td>Beneficios y Pensiones    </td>
-                                    <td>Sra. Fabiola Torres Mori</td>
+                                    <td bgcolor="#DADADA">8284</td>
+                                    <td bgcolor="#DADADA">Control Previo</td>
+                                    <td bgcolor="#DADADA">Sr. Lorenzo Aduvire O.</td>
                                   </tr>
                                   <tr>
-                                    <td>8271</td>
-                                    <td>Control de Asistencia (Marcador)</td>
-                                    <td>&nbsp;</td>
+                                    <td bgcolor="#DADADA">8254</td>
+                                    <td bgcolor="#DADADA">Pagaduría</td>
+                                    <td bgcolor="#DADADA">Sra. Nina Rivas C.</td>
                                   </tr>
                                   <tr>
-                                    <td>8236</td>
-                                    <td>Cuna Jardín</td>
-                                    <td>&nbsp;</td>
+                                    <td bgcolor="#DADADA">296&nbsp;</td>
+                                    <td bgcolor="#DADADA">Caja Centra -8267-    Caja Grau  </td>
+                                    <td bgcolor="#DADADA">&nbsp;</td>
                                   </tr>
                                   <tr>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
+                                    <td bgcolor="#DADADA">8279     </td>
+                                    <td bgcolor="#DADADA">Caja de Emergencia</td>
+                                    <td bgcolor="#DADADA">&nbsp;</td>
                                   </tr>
                                   <tr>
-                                    <td>220</td>
-                                    <td>OFICINA DE ECONOMIA</td>
-                                    <td>&nbsp;</td>
+                                    <td bgcolor="#DADADA">8280</td>
+                                    <td bgcolor="#DADADA">Caja de consultorios de Cirugía                </td>
+                                    <td bgcolor="#DADADA">&nbsp;</td>
                                   </tr>
                                   <tr>
-                                    <td>&nbsp;</td>
-                                    <td>CPC.  Eric Fermín   Cruzalegui   Arellano</td>
-                                    <td>&nbsp;</td>
+                                    <td bgcolor="#DADADA">8299     </td>
+                                    <td bgcolor="#DADADA">Caja de consultorios de Medicina </td>
+                                    <td bgcolor="#DADADA">&nbsp;</td>
                                   </tr>
                                   <tr>
-                                    <td>296</td>
-                                    <td>Facturación y Altas </td>
-                                    <td>Sra. Lídia Gallegos P.</td>
+                                    <td bgcolor="#2D65AE">&nbsp;</td>
+                                    <td colspan="2" bgcolor="#2D65AE"><strong>OFICINA DE LOGISTICA</strong></td>
                                   </tr>
                                   <tr>
-                                    <td>8253&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                                    <td>Tesorería</td>
-                                    <td>Sra. Mary Cóndor Mori</td>
+                                    <td bgcolor="#DADADA">221</td>
+                                    <td bgcolor="#DADADA">Lic.   Magaly  Roció  Flores   Sáenz</td>
+                                    <td bgcolor="#DADADA">&nbsp;</td>
                                   </tr>
                                   <tr>
-                                    <td>8284</td>
-                                    <td>Control Previo</td>
-                                    <td>Sr. Lorenzo Aduvire O.</td>
+                                    <td bgcolor="#DADADA">298</td>
+                                    <td bgcolor="#DADADA">Adquisiciones</td>
+                                    <td bgcolor="#DADADA">&nbsp;</td>
                                   </tr>
                                   <tr>
-                                    <td>8254</td>
-                                    <td>Pagaduría</td>
-                                    <td>Sra. Nina Rivas C.</td>
+                                    <td bgcolor="#DADADA">8294</td>
+                                    <td bgcolor="#DADADA">Programación</td>
+                                    <td bgcolor="#DADADA">Srta. Fabiola Ramos</td>
                                   </tr>
                                   <tr>
-                                    <td>296&nbsp;</td>
-                                    <td>Caja Centra -8267-    Caja Grau  </td>
-                                    <td>&nbsp;</td>
+                                    <td bgcolor="#DADADA">224</td>
+                                    <td bgcolor="#DADADA">Almacén  Central </td>
+                                    <td bgcolor="#DADADA">Sr. Oscar Quintana</td>
                                   </tr>
                                   <tr>
-                                    <td>8279     </td>
-                                    <td>Caja de Emergencia</td>
-                                    <td>&nbsp;</td>
+                                    <td bgcolor="#DADADA">8274</td>
+                                    <td bgcolor="#DADADA">Control  Patrimonial</td>
+                                    <td bgcolor="#DADADA">Sra. Dina Meléndez</td>
                                   </tr>
                                   <tr>
-                                    <td>8280</td>
-                                    <td>Caja de consultorios de Cirugía                </td>
-                                    <td>&nbsp;</td>
+                                    <td bgcolor="#DADADA">8233</td>
+                                    <td bgcolor="#DADADA">Imprenta</td>
+                                    <td bgcolor="#DADADA">Sr. Jorge Farfán</td>
                                   </tr>
                                   <tr>
-                                    <td>8299     </td>
-                                    <td>Caja de consultorios de Medicina </td>
-                                    <td>&nbsp;</td>
+                                    <td bgcolor="#DADADA">8237</td>
+                                    <td bgcolor="#DADADA">Kardex</td>
+                                    <td bgcolor="#DADADA">Sr. Vicente Huamán</td>
                                   </tr>
                                   <tr>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
+                                    <td bgcolor="#DADADA">223</td>
+                                    <td bgcolor="#DADADA">Almacén  de Medicinas</td>
+                                    <td bgcolor="#DADADA">&nbsp;</td>
                                   </tr>
                                   <tr>
-                                    <td>221</td>
-                                    <td>OFICINA DE LOGISTICA</td>
-                                    <td>&nbsp;</td>
+                                    <td bgcolor="#DADADA">8260</td>
+                                    <td bgcolor="#DADADA">Almacén  de  Víveres</td>
+                                    <td bgcolor="#DADADA">&nbsp;</td>
                                   </tr>
                                   <tr>
-                                    <td>&nbsp;</td>
-                                    <td>Lic.   Magaly  Roció  Flores   Sáenz</td>
-                                    <td>&nbsp;</td>
+                                    <td bgcolor="#DADADA">8266</td>
+                                    <td bgcolor="#DADADA">Donación</td>
+                                    <td bgcolor="#DADADA">&nbsp;</td>
                                   </tr>
                                   <tr>
-                                    <td>298</td>
-                                    <td>Adquisiciones</td>
-                                    <td>&nbsp;</td>
+                                    <td bgcolor="#2D65AE">&nbsp;</td>
+                                    <td colspan="2" bgcolor="#2D65AE"><strong>OFICINA DE ESTADÍSCA E INFORMÁTICA</strong></td>
                                   </tr>
-                                  <tr>
-                                    <td>8294</td>
-                                    <td>Programación</td>
-                                    <td>Srta. Fabiola Ramos</td>
-                                  </tr>
-                                  <tr>
-                                    <td>224</td>
-                                    <td>Almacén  Central </td>
-                                    <td>Sr. Oscar Quintana</td>
-                                  </tr>
-                                  <tr>
-                                    <td>8274</td>
-                                    <td>Control  Patrimonial</td>
-                                    <td>Sra. Dina Meléndez</td>
-                                  </tr>
-                                  <tr>
-                                    <td>8233</td>
-                                    <td>Imprenta</td>
-                                    <td>Sr. Jorge Farfán</td>
-                                  </tr>
-                                  <tr>
-                                    <td>8237</td>
-                                    <td>Kardex</td>
-                                    <td>Sr. Vicente Huamán</td>
-                                  </tr>
-                                  <tr>
-                                    <td>223</td>
-                                    <td>Almacén  de Medicinas</td>
-                                    <td>&nbsp;</td>
-                                  </tr>
-                                  <tr>
-                                    <td>8260</td>
-                                    <td>Almacén  de  Víveres</td>
-                                    <td>&nbsp;</td>
-                                  </tr>
-                                  <tr>
-                                    <td>8266</td>
-                                    <td>Donación</td>
-                                    <td>&nbsp;</td>
-                                  </tr>
-                                  <tr>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                  </tr>
-                                  <tr>
+                                  <tr bgcolor="#DADADA">
                                     <td>227</td>
-                                    <td>OFICINA DE ESTADÍSCA E INFORMÁTICA</td>
-                                    <td>&nbsp;</td>
-                                  </tr>
-                                  <tr>
-                                    <td>&nbsp;</td>
                                     <td>Ing. Marcos Antonio Horna  Roque </td>
                                     <td>&nbsp;</td>
                                   </tr>
-                                  <tr>
+                                  <tr bgcolor="#DADADA">
                                     <td>226</td>
                                     <td>Registros  Médicos  y Archivo</td>
                                     <td>Sr. Carlos Viera G.</td>
                                   </tr>
-                                  <tr>
+                                  <tr bgcolor="#DADADA">
                                     <td>225</td>
                                     <td>Recepción  y   Hospitaliza.</td>
                                     <td>Sra. América Nestares</td>
                                   </tr>
-                                  <tr>
+                                  <tr bgcolor="#DADADA">
                                     <td>228</td>
-                                    <td>Informática</td>
+                                    <td bgcolor="#DADADA">Informática</td>
                                     <td>Sr. Juan Ruiz Alván</td>
                                   </tr>
                                   <tr>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
+                                    <td bgcolor="#2D65AE">&nbsp;</td>
+                                    <td colspan="2" bgcolor="#2D65AE"><strong>OFICINA  DE SERVICIOS GENERALES</strong></td>
                                   </tr>
-                                  <tr>
+                                  <tr bgcolor="#DADADA">
                                     <td>229</td>
-                                    <td>OFICINA  DE SERVICIOS GENERALES</td>
-                                    <td>&nbsp;</td>
-                                  </tr>
-                                  <tr>
-                                    <td>&nbsp;</td>
                                     <td>Arq. Jhonny Sanchez Taboada </td>
                                     <td>&nbsp;</td>
                                   </tr>
@@ -515,7 +407,7 @@
                 </div> <!-- #main -->
             </div> <!-- #main-container -->
 
-            <?php require_once("../w-fotoer.php") ?>
+            <?php require_once("../w-footer.php") ?>
 
         </div>
 

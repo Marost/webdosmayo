@@ -59,7 +59,7 @@
                 </div> <!-- #main -->
             </div> <!-- #main-container -->
 
-            <?php require_once("../w-fotoer.php") ?>
+            <?php require_once("../w-footer.php") ?>
 
         </div>
 
