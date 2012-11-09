@@ -30,7 +30,7 @@
 
                         <article class="directorio-doctor">
                             <div class="datos">
-                                <img src="" width="120" height="120">
+                                <img src="/imagenes/doctores/dr_roca.jpg" width="120" height="120">
                                 <div>
                                     <h2>José Roca Mendoza</h2>
                                     <p>Director General</p>
@@ -45,7 +45,7 @@
 
                         <article class="directorio-doctor">
                             <div class="datos">
-                                <img src="" width="120" height="120">
+                                <img src="/imagenes/doctores/dr_silva.jpg" width="120" height="120">
                                 <div>
                                     <h2>Manuel Silva Zumaran</h2>
                                     <p>Director Adjunto</p>
@@ -53,14 +53,14 @@
                             </div>
 
                             <div class="contenido">
-                                <p>Lundium nisi in lorem dignissim eu. Nisi ac? Sed? Et mauris, mauris. Elementum urna? Amet pid, ac, adipiscing lacus sociis! Dolor in urna urna, sed proin porta? Arcu? Nec mid enim enim enim sed scelerisque cras integer eros aliquam facilisis enim urna sed mid magnis, sit vut tempor. Montes ultricies.</p>
+                                <p>Médico cirujano egresado de la Universidad Nacional Mayor de San Marcos, promoción 70A –1980, con especialidad de Medicina Interna en la Universidad Peruana Cayetano Heredia. Realizó su internado en el Hospital Nacional “Dos de Mayo” (HNDM). Asimismo, efectuó una Maestría en Administración con mención en Gestión Hospitalaria. Más de 25 años de labor como médico internista en el HNDM, respectivamente en la Sala San Andrés.</p>
                             </div>
 
                         </article>
 
                         <article class="directorio-doctor">
                             <div class="datos">
-                                <img src="" width="120" height="120">
+                                <img src="/imagenes/doctores/dr_rodriguez.jpg" width="120" height="120">
                                 <div>
                                     <h2>Silvia Rodriguez Lichtenheldt</h2>
                                     <p>Directora Ejecutiva de Administración</p>
