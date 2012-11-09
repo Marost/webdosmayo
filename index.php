@@ -100,7 +100,8 @@ $script_popup=true;
                                     <img width="120" height="135" src="/imagenes/upload/img4.jpg">
                                     <div>
                                         <h2>Trabajadores del HNDM son capacitados....</h2>
-                                        <p>El Comité Institucional de Lactancia Materna del HNDM capacita, promueve y difunde los beneficios de la leche materna...</p>
+                                        <p>El Comité Institucional de Lactancia Materna del HNDM capacita, promueve y difunde los beneficios...</p>
+                                        <a class="art-mas" href="">Más...</a>
                                     </div>
 
                                 </article>
@@ -183,7 +184,8 @@ $script_popup=true;
 
                                     <div>
                                         <h2>Entregan donaciones en el día del neumólogo....</h2>
-                                        <p>En el marco de las celebraciones por el "Día del Neumólogo", que se celebra cada 30 de agosto, el Comité de Damas Voluntarias...</p>
+                                        <p>En el marco de las celebraciones por el "Día del Neumólogo", que se celebra cada 30 de agosto...</p>
+                                        <a class="art-mas" href="">Más...</a>
                                     </div>
                                     <img width="120" height="135" src="/imagenes/upload/img5.jpg">
 

@@ -37,10 +37,7 @@
                             </div>
 
                             <div class="imagen">
-                                <div class="slider-bxslider">
-                                    <img width="550" height="350" alt="" title=" " src="/imagenes/upload/angiografia-digital-1.jpg">
-                                    <img width="550" height="350" alt="" title=" " src="/imagenes/upload/resonador.jpg">
-                                </div>
+                                <img width="550" height="350" alt="" title=" " src="/imagenes/upload/angiografia-digital-1.jpg">
                             </div>
 
                             <div class="contenido">
@@ -53,6 +50,10 @@
 <p>Cada análisis puede demorar un máximo de 30 minutos, por ello diariamente se realizan en promedio 10 pruebas. Para acceder a este equipo, las personas interesadas tan sólo deben acercarse con la orden médica a la recepción del servicio, ubicado en el sótano del Centro de Tratamiento Intensivo y Diagnóstico Especializado (CETIDE) de nuestra institución.</p>
 
 <p>A cargo de este equipo están siete especialistas altamente calificados del Departamento de Diagnóstico por Imágenes.</p>
+                            </div>
+
+                            <div class="imagen">
+                                <img width="330" alt="" title=" " src="/imagenes/upload/resonador.jpg">
                             </div>
 
                         </div>

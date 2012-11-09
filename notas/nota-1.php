@@ -37,21 +37,23 @@
                             </div>
 
                             <div class="imagen">
-                                <div class="slider-bxslider">
-                                    <img width="550" height="350" alt="" title=" " src="/imagenes/upload/noticia-emergencia-1.jpg">
-                                    <img width="550" height="350" alt="" title=" " src="/imagenes/upload/noticia-emergencia-2.jpg">
-                                    <img width="550" height="350" alt="" title=" " src="/imagenes/upload/noticia-emergencia-3.jpg">
-                                </div>
+                                <img width="550" height="350" alt="" title=" " src="/imagenes/upload/noticia-emergencia-1.jpg">
                             </div>
 
                             <div class="contenido">
-<p>El Hospital Nacional “Dos de Mayo” celebró los 14 años de Aniversario de Emergencia de Pediatría, con una misa y Ceremonia Protocolar, esta última fue encabezada por el Director General del nosocomio, Dr. José Roca Mendoza; y la Jefa del respectivo servicio, Lic.  Violeta Aguilar Pariona. Estuvieron presenten también personal médico y asistencial que integran dicho equipo de trabajo.</p>
+                                <p>El Hospital Nacional “Dos de Mayo” celebró los 14 años de Aniversario de Emergencia de Pediatría, con una misa y Ceremonia Protocolar, esta última fue encabezada por el Director General del nosocomio, Dr. José Roca Mendoza; y la Jefa del respectivo servicio, Lic.  Violeta Aguilar Pariona. Estuvieron presenten también personal médico y asistencial que integran dicho equipo de trabajo.</p>
 
-<p>Durante su discurso el Director General del HNDM, Dr. Roca Mendoza, expresó su felicitación al personal que labora día a día para velar por la salud de los bebés y niños que ingresan por emergencia al Hospital, y los conminó a seguir desempeñándose con la misma vocación de servicio a favor de los pequeños pacientes.</p>
+                                <p>Durante su discurso el Director General del HNDM, Dr. Roca Mendoza, expresó su felicitación al personal que labora día a día para velar por la salud de los bebés y niños que ingresan por emergencia al Hospital, y los conminó a seguir desempeñándose con la misma vocación de servicio a favor de los pequeños pacientes.</p>
 
-<p>Por su parte, la Lic. Violeta Aguilar, destacó que mínimamente, al mes se atienden 400 pacientes, desde recién nacidos hasta niños con 14 años de edad.</p>
+                                <p>Por su parte, la Lic. Violeta Aguilar, destacó que mínimamente, al mes se atienden 400 pacientes, desde recién nacidos hasta niños con 14 años de edad.</p>
 
-<p>"Los 30 especialistas que se desempeñan en esta área, frecuentemente asisten casos de neumonías, enfermedades diarreicas agudas y traumatismos por caídas, entre otras, y la entrega laboral es constante”, expresó.</p>
+                                <p>"Los 30 especialistas que se desempeñan en esta área, frecuentemente asisten casos de neumonías, enfermedades diarreicas agudas y traumatismos por caídas, entre otras, y la entrega laboral es constante”, expresó.</p>
+                            </div>
+
+                            <div class="imagen">
+                                <img width="330" alt="" title=" " src="/imagenes/upload/noticia-emergencia-2.jpg">
+                                
+                                <img width="330" alt="" title=" " src="/imagenes/upload/noticia-emergencia-3.jpg">
                             </div>
 
                         </div>
