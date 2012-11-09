@@ -24,7 +24,7 @@
                 <li><a href="javascript:;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
                     <ul class="submenu">
                         <li><a>Publicaciones</a></li>
-                        <li><a>Directorio Institucional</a></li>                    
+                        <li><a href="/notas/directorio-telefonico.php">Directorio Telefónico</a></li>                    
                     </ul>
                 </li>
                 <li><a href="http://www.peru.gob.pe/transparencia/pep_transparencia_lista_planes.asp?id_entidad=13628&id_tema=1">Transparencia</a></li>

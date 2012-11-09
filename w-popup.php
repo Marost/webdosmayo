@@ -97,7 +97,7 @@
     <a id="popup-intranet-cerrar" href="javascript:;">Cerrar</a>
     
     <div class="popup-box">
-        <h2>Intanet</h2>
+        <h2>Intranet</h2>
         <img src="/imagenes/popup/correo-institucional.png">
         <img src="/imagenes/popup/popup.png">
     </div>
