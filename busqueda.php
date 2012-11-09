@@ -45,12 +45,15 @@ if ($buscar!=""){
                     <section id="news">
 
                         <h2>Busca a tu Médico</h2>
+                        <form action="busqueda.php" method="GET">
+                            <input type="text" value="Buscar..." onfocus="if (this.value == 'Buscar...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Buscar...';}" name="buscar" />
+                            <input class="searchbutton" type="submit" value="Buscar" />
+                        </form>
                     
                         <ul>
                             <?php while($fila_medico=mysql_fetch_array($rst_medico)){ ?>
                             <li>
-                                <p><strong><?php echo $fila_medico["nombre"]; ?></strong></p>
-                                <p><?php echo $fila_medico["oficina"]; ?></p>
+                                <p><strong><?php echo $fila_medico["nombre"]; ?></strong>: <?php echo $fila_medico["oficina"]; ?></p>
                             </li>
                             <?php } ?>
                         </ul>
