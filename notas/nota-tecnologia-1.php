@@ -37,7 +37,10 @@
                             </div>
 
                             <div class="imagen">
-                                <img src="/imagenes/upload/resonador.jpg">
+                                <div class="slider-bxslider">
+                                    <img width="550" height="350" alt="" title=" " src="/imagenes/upload/angiografia-digital-1.jpg">
+                                    <img width="550" height="350" alt="" title=" " src="/imagenes/upload/resonador.jpg">
+                                </div>
                             </div>
 
                             <div class="contenido">

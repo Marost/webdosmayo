@@ -752,6 +752,22 @@ header nav ul .submenu-prensa li a {
 #news .nw-nota .imagen img {
   border: 3px solid #666;
 }
+#news .nw-nota .imagen .slider-bxslider {
+  float: left;
+  height: 350px;
+  overflow: hidden;
+  width: 550px;
+  z-index: 88;
+}
+#news .nw-nota .imagen .slider-bxslider .nivo-slice {
+  width: 550px !important;
+}
+#news .nw-nota .imagen .slider-bxslider .nivo-caption {
+  display: none;
+}
+#news .nw-nota .imagen .slider-bxslider .nivo-controlNav {
+  display: none;
+}
 #news .nw-nota .contenido {
   float: left;
   font-size: 12px;

@@ -46,10 +46,10 @@ $script_popup=true;
 
                                         <h2><a href="/notas/nota-tecnologia-1.php">Un resonador magnético de última tecnología posee...</a></h2>
                                         <div class="slider-bxslider">
-                                            <img width="370" height="220" alt="" title=" " src="/imagenes/upload/proezas-2.jpg">
                                             <img width="370" height="220" alt="" title=" " src="/imagenes/upload/angiografia-digital.jpg">
-                                            <img width="370" height="220" alt="" title=" " src="/imagenes/upload/proezas-3.jpg">
+                                            <img width="370" height="220" alt="" title=" " src="/imagenes/upload/slider-tecnologia-1.jpg">
                                         </div>
+                                        
                                         <p>Al servicio de la población se encuentra el resonador magnético que posee el Hospital Nacional “Dos de Mayo”, a través del cual se pueden realizar estudios de alta complejidad a nivel del cerebro...</p>
                                         <a class="art-mas" href="/notas/nota-tecnologia-1.php">Más...</a>
 
