@@ -758,6 +758,12 @@ header nav ul .submenu-prensa li a {
   text-align: justify;
   width: 100%;
 }
+#news .nw-nota .contenido table tr td {
+  padding: 6px 0 6px 0;
+}
+#news .nw-nota .contenido table tr td strong {
+  color: #fff;
+}
 #news .nw-nota .contenido ul {
   margin: 0 !important;
   padding: 0 !important;
