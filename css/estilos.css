@@ -753,8 +753,10 @@ header nav ul .submenu-prensa li a {
   border: 3px solid #666;
 }
 #news .nw-nota .imagen .slider-bxslider {
+  border: 10px solid #666;
   float: left;
   height: 350px;
+  margin-left: 85px;
   overflow: hidden;
   width: 550px;
   z-index: 88;
