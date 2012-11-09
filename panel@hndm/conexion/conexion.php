@@ -25,16 +25,16 @@ global $web;
 global $fechaActual;
 
 //VARIABLES
-$carpeta_admin="panel@impacto";
-$tabla_suf="iev";
-$sesion_pre="ievs";
+$carpeta_admin="panel@hndm";
+$tabla_suf="DM";
+$sesion_pre="DMs";
 $fechaActual=date("Y-m-d H:i:s");
 
 //EMPRESA
-$rst_empresa=mysql_query("SELECT * FROM ".$tabla_suf."_empresa WHERE id=1;", $conexion);
-$fila_empresa=mysql_fetch_array($rst_empresa);
-$web=$fila_empresa["web"];
-
+//$rst_empresa=mysql_query("SELECT * FROM ".$tabla_suf."_empresa WHERE id=1;", $conexion);
+//$fila_empresa=mysql_fetch_array($rst_empresa);
+//$web=$fila_empresa["web"];
+/*
 if ($_SESSION["user-".$sesion_pre.""]<>""){
 	$usuario_user=$_SESSION["user-".$sesion_pre.""];
 	$usuario_nombre=$_SESSION["user_nombre-".$sesion_pre.""];
@@ -44,5 +44,5 @@ if ($_SESSION["user-".$sesion_pre.""]<>""){
 	//PRIVILEGIOS
 	$rst_prv_user=mysql_query("SELECT * FROM ".$tabla_suf."_usuario_privilegios WHERE usuario='".$usuario_user."'", $conexion);
 	$fila_prv_user=mysql_fetch_array($rst_prv_user);	
-}
+}*/
 ?>
