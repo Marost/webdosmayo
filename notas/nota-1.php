@@ -37,7 +37,11 @@
                             </div>
 
                             <div class="imagen">
-                                <img src="/imagenes/upload/noticia-emergencia-1.jpg">
+                                <div class="slider-bxslider">
+                                    <img width="550" height="350" alt="" title=" " src="/imagenes/upload/noticia-emergencia-1.jpg">
+                                    <img width="550" height="350" alt="" title=" " src="/imagenes/upload/noticia-emergencia-2.jpg">
+                                    <img width="550" height="350" alt="" title=" " src="/imagenes/upload/noticia-emergencia-3.jpg">
+                                </div>
                             </div>
 
                             <div class="contenido">
