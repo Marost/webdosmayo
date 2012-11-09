@@ -47,7 +47,7 @@ if ($buscar!=""){
                         <h2>Busca a tu Médico</h2>
                     
                         <ul>
-                            <?php while($fila_medico=mysql_fetch_array($rst_medico)){} ?>
+                            <?php while($fila_medico=mysql_fetch_array($rst_medico)){ ?>
                             <li>
                                 <p><strong><?php echo $fila_medico["nombre"]; ?></strong></p>
                                 <p><?php echo $fila_medico["oficina"]; ?></p>

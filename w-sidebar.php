@@ -88,7 +88,7 @@
         <p>Busca a tu Médico</p>
         <form class="searchform" action="busqueda.php" method="GET">
             <input class="searchfield" type="text" value="Buscar..." onfocus="if (this.value == 'Buscar...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Buscar...';}" name="buscar" />
-            <input class="searchbutton" type="button" value="Ir" />
+            <input class="searchbutton" type="submit" value="Ir" />
         </form>
     </div>
 
