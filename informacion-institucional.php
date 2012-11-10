@@ -33,10 +33,10 @@
 
                         <h2>Información Institucional</h2>
 
-                        <h3>Misión</h3>
+                        <h4>Misión</h4>
                         <p>Brindar servicios de salud de alta complejidad, desarrollando actividades de prevención de riesgos, promoción, recuperación y rehabilitación en salud, a la población en todas las etapas de su vida con equidad y calidad.</p>
 
-                        <h3>Visión</h3>
+                        <h4>Visión</h4>
                         <p>Ser al 2013, un hospital acreditado, de alta capacidad resolutiva con tecnología de punta, que brinde servicios integrales de salud, de calidad, en forma humanística que incentive la investigación, docencia y desarrollo tecnológico, con personas comprometidas, solidarias, competentes que trabajen en equipo y con ética, garantizando a la población atención oportuna, equitativa, respetando sus derechos.</p>
 
                     </section>
