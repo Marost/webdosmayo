@@ -1070,6 +1070,7 @@ header nav ul .submenu-prensa li a {
 }
 #opciones-lista li a#popupen-ubicanos {
   height: 160px;
+  font-size: 25px;
   padding: 10px 0;
   text-align: center;
 }
