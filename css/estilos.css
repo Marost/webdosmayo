@@ -738,7 +738,8 @@ header nav ul .submenu-prensa li a {
   float: left;
   width: 242px;
 }
-#news .nw-seccion .nws-contenido div h2 {
+#news .nw-seccion .nws-contenido div h2,
+#news .nw-seccion .nws-contenido div h2 a {
   color: #2185C7;
   font-size: 18px;
   font-weight: normal;
