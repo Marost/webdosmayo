@@ -99,7 +99,7 @@
     <div class="popup-box">
         <h2>Intranet</h2>
         <img src="/imagenes/popup/correo-institucional.png">
-        <img src="/imagenes/popup/popup.png">
+        <a href="/notas/directorio-telefonico.php"><img src="/imagenes/popup/popup.png"></a>
     </div>
                 
 </div>

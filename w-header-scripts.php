@@ -211,3 +211,8 @@ jAcod(document).ready(function(){
 <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script  src="/js/popup.js"></script>
 <?php } ?>
+
+<!-- LISTA -->
+<link rel="stylesheet" href="/libs/progressbar/ui.progress-bar.css">
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="/libs/progressbar/progress.js"></script>
