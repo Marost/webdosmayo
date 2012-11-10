@@ -68,21 +68,21 @@ $script_popup=true;
 
                                     <article class="borde-bottom news-noticia">
 
-                                        <h2><a href="/notas/nota-proeza-medica-1.php">Cirujanos del Hospital Dos de Mayo reconstruirán rostro...</a></h2>
+                                        <h2><a href="/notas/nota-proeza-medica-1.php">Cirujanos del Hospital Dos de Mayo reconstruyen rostro...</a></h2>
                                         <div class="slider-bxslider">
                                             <img width="370" height="220" alt="" src="/imagenes/upload/proezas-3.jpg" title=" ">
                                             <img width="370" height="220" alt="" src="/imagenes/upload/proezas-1.jpg" title=" ">
                                             <img width="370" height="220" alt="" src="/imagenes/upload/proezas-2.jpg" title=" ">                                            
                                         </div>
-                                        <p>Verónica Liz Llanos (25), una humilde madre arequipeña fue víctima de un accidente de tránsito el pasado 13 de junio, cuando el vehículo en que viajaba hacia su centro de labores se precipitó...</p>
+                                        <p>Verónica Liz Llano (25), una humilde madre arequipeña perdió parte de la cara, del lado izquierdo, en un accidente de tránsito y se encuentra internada en el Hospital Nacional “Dos de Mayo”...</p>
                                         <a class="art-mas" href="">Más...</a>
 
                                     </article>
 
                                     <article class="news-noticia">
 
-                                        <h2><a href="/notas/nota-proeza-medica-2.php">Joven madre huancavelicana será operada en Hospital Nacional...</a></h2>
-                                        <p>Madeleine Licas García (22) permanece internada en el Hospital Dos de Mayo con un tumor en la zona temporal parietal derecha del cráneo. La mujer, madre de dos niños, pidió ayuda para afrontar la...</p>
+                                        <h2><a href="/notas/nota-proeza-medica-2.php">Joven madre huancavelicana fue operada en Hospital Nacional...</a></h2>
+                                        <p>Madeleine Licas García (22) estuvo internada en el Hospital Nacional “Dos de Mayo” con un tumor en la zona temporal parietal derecha del cráneo. La mujer, madre de dos niños, pidió ayuda para afrontar...</p>
                                         <a class="art-mas" href="/notas/nota-proeza-medica-2.php">Más...</a>
 
                                     </article>
@@ -97,12 +97,12 @@ $script_popup=true;
 
                                 <article class="nws-contenido">
 
-                                    <img width="120" height="135" src="/imagenes/upload/img4.jpg">
+                                    <img width="120" height="135" src="/imagenes/upload/nota-capacitacion-slide.jpg">
                                     <div>
-                                        <h2>Trabajadores del HNDM son capacitados....</h2>
+                                        <h2><a href="/notas/nota-capacitacion.php">Trabajadores del HNDM son capacitados...</a></h2>
                                         <p>El Comité Institucional de Lactancia Materna del HNDM capacita, promueve y difunde los beneficios de la leche materna...</p>
                                     </div>
-                                    <a class="art-mas" href="">Más...</a>
+                                    <a class="art-mas" href="/notas/nota-capacitacion.php">Más...</a>
 
                                 </article>
                             </div>
@@ -186,11 +186,11 @@ $script_popup=true;
                                 <article class="nws-contenido">
 
                                     <div>
-                                        <h2>Entregan donaciones en el día del neumólogo....</h2>
+                                        <h2><a href="/notas/nota-alianza.php">Sociedad Peruana de Neumología y HNDM entregan...</a></h2>
                                         <p>En el marco de las celebraciones por el "Día del Neumólogo", que se celebra cada 30 de agosto, el Comité de Damas Voluntarias...</p>
-                                        <a class="art-mas" href="">Más...</a>
+                                        <a class="art-mas" href="/notas/nota-alianza.php">Más...</a>
                                     </div>
-                                    <img width="120" height="135" src="/imagenes/upload/img5.jpg">
+                                    <img width="120" height="135" src="/imagenes/upload/nota-alianza-slide.jpg">
 
                                 </article>
                             </div>
