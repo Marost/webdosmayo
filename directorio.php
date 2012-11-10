@@ -143,8 +143,8 @@
                                 </div><!-- .ui-progress -->
                             </div>
                             
-                            <div id="lista-contenido">
-                                <div id="lista_datos" class="float_left an100"></div>
+                            <div id="contenido">
+                                <div id="datos"></div>
                             </div>
 
                         </div>

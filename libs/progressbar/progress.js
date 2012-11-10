@@ -43,7 +43,7 @@ var jProgBar=jQuery.noConflict();
 jProgBar(document).ready(function() {
 	
 	jProgBar("#progress_bar").hide();
-	jProgBar("#lista-contenido").hide();
+	jProgBar("#contenido").hide();
 		
 	jProgBar("#lista").change(function(){
 		var lista=jProgBar(this).val();
@@ -58,8 +58,8 @@ jProgBar(document).ready(function() {
 				jProgBar(this).animateProgress(79, function() {
 					setTimeout(function() {
 						jProgBar('#progress_bar .ui-progress').animateProgress(100, function(){
-							jProgBar("#lista-contenido").show();
-							jProgBar("#lista_datos").html(data);
+							jProgBar("#contenido").show();
+							jProgBar("#datos").html(data);
 							jProgBar("#progress_bar").hide();
 						});
 					}, 2000);
