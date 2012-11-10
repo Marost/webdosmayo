@@ -101,8 +101,8 @@
     <div id="opciones-lista">
         <ul>
             <li><a href="javascript:;" id="popupen-escribanos"><span class="img icon-escribanos"></span>Escribanos</a></li>
-            <li><a href="javascript:;" id="popupen-ubicanos"><span class="img icon-ubicanos"></span>Ubícanos</a></li>
             <li><a href="javascript:;" class="last"><span class="img icon-laboral"></span>Oportunidad Laboral</a></li>
+            <li><a href="javascript:;" id="popupen-ubicanos"><img src="/imagenes/mapa.png">Ubícanos</a></li>
         </ul>
     </div>
 </aside>
