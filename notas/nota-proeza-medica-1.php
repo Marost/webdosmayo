@@ -33,7 +33,7 @@
                         <div class="nw-nota">
 
                             <div class="titulo">
-                                <h2>Cirujanos del Hospital Dos de Mayo reconstruirán rostro de madre arequipeña herida en accidente de tránsito</h2>
+                                <h2>Cirujanos del Hospital Dos de Mayo reconstruyen rostro de madre arequipeña herida en accidente de transito</h2>
                             </div>
 
                             <div class="imagen">
@@ -41,25 +41,27 @@
                             </div>
 
                             <div class="contenido">
-<p>Verónica Liz Llanos (25), una humilde madre arequipeña fue víctima de un accidente de tránsito el pasado 13 de junio, cuando el vehículo en que viajaba hacia su centro de labores se precipitó a un abismo a la altura del  kilómetro 68 de la carretera Challhuamacho, sector de Ayusbamba, distrito de Pacaritambo (Cuzco), falleciendo en el lugar dos pasajeros.</p>
+<p>Verónica Liz Llano (25), una humilde madre arequipeña perdió parte de la cara, del lado izquierdo, en un accidente de tránsito y se encuentra internada en el Hospital Nacional “Dos de Mayo”. Con el fin de devolverle la esperanza de llevar una vida normal, especialistas del mencionado hospital realizaron la primera operación, que después se complementará con una serie de intervenciones quirúrgicas de alta complejidad.</p>
  
-<p>Tras el accidente y labores de rescate, la paciente fue trasladada al Hospital Regional del Cuzco, donde los médicos le brindaron los primeros auxilios y por la gravedad de sus heridas determinaron su transferencia para su atención en un centro hospitalario de Lima, ingresando al departamento de emergencia del Hospital Nacional Dos de Mayo el 19 de junio último, presentando un trauma facial con pérdida de piel del rostro de lado izquierdo de la cara, con pérdidas de labios inferior y superior, mentón y barbilla ,sin presentar fractura alguna y perdida de dientes.</p>
+<p>“La paciente ingresó con el diagnóstico de trauma facial sin presencia de labios superior e inferior, barbilla, mentón, piel y mejilla del lado izquierdo del rostro, por lo que para el proceso de  reconstrucción del rostro se le están realizando injertos y colgajos con piel del tórax, antebrazo y del cuello”, explicaron los expertos.</p>
  
-<p>En el Servicio de Emergencia de la mencionada entidad hospitalaria, los médicos del Servicio de Cirugía de Cabeza y Cuello, evaluaron el caso en junta médica y determinaron la factibilidad de ser intervenida quirúrgicamente para reemplazar la piel y tejidos perdidos mediante una reconstrucción de rostro y devolverle la esperanza de vida a la paciente.</p>
+<p>Informaron que si bien su rostro no será el mismo que tuvo antes del accidente, se espera una mejoría en su aspecto que redundará en su calidad de vida.</p>
+
+<p>Agregaron que el servicio de Cirugía de Cabeza y Cuello del hospital evaluó el caso en una Junta Médica y determinaron la factibilidad de que se realicen las intervenciones quirúrgicas en la paciente –con su consentimiento- para remplazar la piel y tejidos perdidos.</p>
+
+<p>“Verónica primero está siendo asistida con un tratamiento médico para recuperar las proteínas y hemoglobina por la pérdida de sangre ocasionada con el accidente, para luego continuar con sus análisis pre-operatorios, los que serán evaluados por el personal médico quienes determinarán si ella está lista para la primera intervención quirúrgica”, dijeron.</p>
+
+<p>Explicaron que Verónica requiere de varias intervenciones, tres o cuatro, depende a su evolución. “Esperamos que en los próximos días la paciente esté en condiciones de ser intervenida”, aseveraron los especialistas.</p>
+
+<p>A pesar de que la paciente cuenta con una cobertura de gastos contra accidentes de tránsito (SOAT) para su recuperación, el hospital ha tramitado para que Verónica –una vez que se culmine con el seguro del SOAT- tenga su cobertura (SIS), por lo que ya se encuentra afiliada.</p>
+
+<p>Su esposo, Fray Robert Tueros Mantarí de Ica (30) expresó al hospital su agradecimiento por la atención médica y pronta gestión para prever la tramitación de la afiliación al SIS de su esposa.</p>
  
-<p><strong>Tendrá un nuevo rostro</strong></p>
+<p><strong>Antecedentes</strong></p>
  
-<p>Según manifestaron los especialistas en Cirugía de Cabeza y Cuello, la reconstrucción de rostro no será tarea fácil, para lo cual deberá ser sometida a 3 ó 4 intervenciones.</p>
- 
-<p>“Médicos del Servicio de Cirugía de Cabeza y Cuello del hospital -donde está hospitalizada la paciente desde el 19 de junio- tienen toda la disposición para practicarle este procedimiento, no será tarea fácil, pues se requieren de varias intervenciones, tres o cuatro, depende a su evolución”, anunciaron los especialistas del hospital Dos de Mayo.</p>
- 
-<p>Los expertos comentaron que Verónica primero está siendo asistida con un tratamiento médico para recuperar las proteínas y hemoglobina por la pérdida de sangre ocasionado con el accidente, para luego ser sometida a los análisis pre-operatorios y quedar en espera de la primera intervención quirúrgica.</p>
- 
-<p>La paciente fue derivada del Hospital Regional del Cuzco a nuestra entidad hospitalaria con el diagnóstico por presentar trauma facial sin presencia de labios superior e inferior, barbilla, mentón  piel y mejilla del lado izquierdo del rostro. Tras ser evaluada por el equipo médico de guardia.</p>
- 
-<p>El experto del hospital manifestó que a la paciente Verónica Llanos se le debe realizar injertos y colgajos con piel del tórax, antebrazo y del cuello, luego de señalar “La cirugía reconstructiva le permitirá recuperar la piel perdida durante el accidente, pero el rostro no será el mismo que tuvo antes del percance, sin embargo será una mejora en su calidad de vida”.</p>
- 
-<p>Si bien Verónicas Llanos cuenta con el seguro contra accidentes de tránsito (SOAT) para su recuperación, su esposo, Fray Robert Tueros Mantarí de Ica comentó que este monto no cubriría las demás intervenciones quirúrgicas, por lo que hizo un llamado a la solidaridad de la comunidad para que lo apoyen económicamente o donando unidades de sangre O+.</p>
+<p>La paciente se trasladaba hacia su centro de trabajo el pasado 13 de junio, cuando el vehículo en que viajaba hacia su centro de labores se precipitó a un abismo a la altura del kilometro 68 de la carretera Challhuamacho, sector de Ayusbamba, distrito de Pacaritambo, Cuzco. En el lamentable suceso fallecieron dos personas.</p>
+
+<p>Tras el accidente y labores de rescate, la paciente fue trasladada al Hospital Regional del Cuzco, donde los médicos le brindaron los primeros auxilios y por la gravedad de sus heridas determinaron su transferencia a un centro hospitalario de Lima, ingresando por emergencia al Hospital Nacional Dos de Mayo el pasado 19 de junio último.</p>
                             </div>
 
                         </div>

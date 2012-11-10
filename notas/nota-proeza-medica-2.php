@@ -33,7 +33,7 @@
                         <div class="nw-nota">
 
                             <div class="titulo">
-                                <h2>Joven madre huancavelicana será operada en Hospital Nacional Dos de Mayo por un tumor cerebral</h2>
+                                <h2>Joven madre huancavelicana fue operada en Hospital Nacional Dos de Mayo por un tumor cerebral</h2>
                             </div>
 
                             <div class="imagen">
@@ -41,8 +41,8 @@
                             </div>
 
                             <div class="contenido">
-<p>Madeleine Licas García (22) estuvo internada en el Hospital Nacional “Dos de Mayo” con un tumor en la zona temporal parietal derecha del cráneo. La mujer, madre de dos niños, pidió ayuda para afrontar la operación, a fin de extirparle la tumoración. "Estoy mal, quisiera que me ayuden, porque no tengo dinero. Quisiera que me apoyen", refirió la madre. Luego que realizara con éxito la extirpación del tumor de 1,5 kilos y la posterior reconstrucción del rostro de Victoria Mendoza Rurush, la primera que se llevó a cabo en el Perú, un caso parecido salió a la luz en Ica.</p>
-<p>Madeleine Licas García, de solo 20 años de edad y madre de dos niñas, también sufría un gran tumor en el lado derecho del rostro. Ello inició hace dos años, cuando la campesina, natural de Santiago de Chocorvos de Huancavelica, se golpeó fuertemente el pómulo derecho. El gran quiste hizo que pierda sensibilidad en la cara, además de causarle gran dolor. El padre de la joven, Adán Licas, dijo que si bien su hija no ha perdió lucidez, el tumor crecía cada vez más y perjudicaba su equilibrio.</p>
+                                <p>Madeleine Licas García (22) estuvo internada en el Hospital Nacional “Dos de Mayo” con un tumor en la zona temporal parietal derecha del cráneo. La mujer, madre de dos niños, pidió ayuda para afrontar la operación, a fin de extirparle la tumoración. "Estoy mal, quisiera que me ayuden, porque no tengo dinero. Quisiera que me apoyen", refirió la madre. Luego que realizara con éxito la extirpación del tumor de 1,5 kilos y la posterior reconstrucción del rostro de Victoria Mendoza Rurush, la primera que se llevó a cabo en el Perú, un caso parecido salió a la luz en Ica.</p>
+                                <p>Madeleine Licas García, de solo 20 años de edad y madre de dos niñas, también sufría un gran tumor en el lado derecho del rostro. Ello inició hace dos años, cuando la campesina, natural de Santiago de Chocorvos de Huancavelica, se golpeó fuertemente el pómulo derecho. El gran quiste hizo que pierda sensibilidad en la cara, además de causarle gran dolor. El padre de la joven, Adán Licas, dijo que si bien su hija no ha perdió lucidez, el tumor crecía cada vez más y perjudicaba su equilibrio.</p>
                             </div>
 
                         </div>
