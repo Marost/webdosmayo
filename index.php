@@ -188,8 +188,8 @@ $script_popup=true;
                                     <div>
                                         <h2>Entregan donaciones en el día del neumólogo....</h2>
                                         <p>En el marco de las celebraciones por el "Día del Neumólogo", que se celebra cada 30 de agosto, el Comité de Damas Voluntarias...</p>
+                                        <a class="art-mas" href="">Más...</a>
                                     </div>
-                                    <a class="art-mas" href="">Más...</a>
                                     <img width="120" height="135" src="/imagenes/upload/img5.jpg">
 
                                 </article>
