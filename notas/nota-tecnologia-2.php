@@ -36,6 +36,10 @@
                                 <h2>El único y más moderno angiografo del país está en el Hospital Nacional Dos de Mayo</h2>
                             </div>
 
+                            <div class="imagen">
+                                <img src="/imagenes/upload/angiografo-1.jpg">
+                            </div>
+
                             <div class="contenido">
 <p>Demostrando que el Hospital Nacional “Dos de Mayo” cuenta con equipamiento de última generación, posee el angiografo digital biplanar más moderno del Perú, el cual es único en el país y tercero en Sudamérica.</p>
 
@@ -54,6 +58,11 @@
 <p>Asimismo, consta de un cardio defibrilador, un monitor de presión, una banda térmica y una estación de trabajo con cinco monitores.</p>
 
 <p>Bajo el manejo y responsabilidad de este equipo se encuentra un equipo multidisciplinario altamente calificado. Se ubica en el sótano del Centro de Tratamiento Intensivo y Diagnóstico Especializado (CETIDE).</p>
+                            </div>
+
+                            <div class="imagen">
+                                <img src="/imagenes/upload/angiografo-2.jpg">
+                                <img src="/imagenes/upload/angiografo-3.jpg">
                             </div>
 
                         </div>
