@@ -47,6 +47,10 @@
 <p>Asimismo, fue reconocido por instituciones internacionales debido a los excelentes resultados de control de calidad externa de las pruebas de laboratorio del área de autoinmunidad, lo cual posiciona al personal y equipamiento con los más altos estándares de evaluación interlaboratorial, a nivel internacional.</p>
                             </div>
 
+                            <div class="imagen">
+                                <img src="/imagenes/upload/reconocimiento-2.jpg" width="330">
+                            </div>
+
                         </div>
 
                     </section>

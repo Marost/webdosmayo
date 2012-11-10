@@ -141,7 +141,10 @@ $script_popup=true;
 
                                     <h2><a href="/notas/nota-reconocimientos-institucionales.php">Reconocen al laboratorio del HNDM en Control de Calidad y altos...</a></h2>
                                     <p>Por su participación en el Programa de Control de Calidad Interlaboratorial INSIGHT que fue organizado por instituciones internacionales, el laboratorio del Hospital Nacional Dos de Mayo fue reconocido...</p>
-                                    <img width="370" height="130" alt="" title=" " src="imagenes/upload/reconocimiento-slide.jpg">
+                                    <div class="slider-bxslider">
+                                        <img width="370" height="130" alt="" title=" " src="imagenes/upload/reconocimiento-slide.jpg">
+                                        <img width="370" height="130" alt="" title=" " src="imagenes/upload/reconocimiento-slide-2.jpg">
+                                    </div>
                                     <a class="art-mas" href="/notas/nota-reconocimientos-institucionales.php">Más...</a>
 
                                 </article>

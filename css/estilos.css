@@ -313,7 +313,7 @@ header nav ul .submenu-prensa li a {
   color: #454747;
   font-size: 36px;
   font-weight: normal;
-  line-height: 120%;
+  line-height: 150%;
   margin-bottom: 3px;
   letter-spacing: -2px;
 }
@@ -1062,6 +1062,16 @@ header nav ul .submenu-prensa li a {
 }
 #opciones-lista li span.icon-laboral {
   background-position: -340px 0;
+}
+#opciones-lista li a#popupen-ubicanos {
+  font-size: 20px;
+  height: 40px;
+}
+#opciones-lista li a#popupen-ubicanos span {
+  width: 40px;
+  height: 40px;
+  left: 10px;
+  top: 10px;
 }
 #opciones-lista li a:hover {
   background: #1D4B7B;

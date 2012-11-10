@@ -33,7 +33,7 @@
                         <div class="nw-nota">
 
                             <div class="titulo">
-                                <h2>Directorio Telefónico</h2>
+                                <h2>Directorio Interno</h2>
                             </div>
 
                             <div class="contenido">
