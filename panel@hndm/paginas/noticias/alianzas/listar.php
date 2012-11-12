@@ -93,7 +93,7 @@ if(confirm("¿Está seguro de borrar este registro?\n"+nombre)) {
 				<?php include("../../../menu-izq.php"); ?>
             </div><!--FIN PANEL IZQ-->
             <div id="panel-der">
-            	<h2>Lista - Noticias</h2>
+            	<h2>Lista - Alianzas</h2>
     <div id="contenido_total">
     	<div id="mensaje" >
         	<form id="form1" name="form1" method="get" action="listar.php">
@@ -130,11 +130,11 @@ if(confirm("¿Está seguro de borrar este registro?\n"+nombre)) {
                                 por: <strong><?php echo $fila["dato_usuario"] ?></strong></p>
                             </td>
                             <td width="15%" align="center">
-                            <?php //if($fila_prv_user["noticias_eliminar"]==1){ ?>
+                            <?php //if($fila_prv_user["Alianzas_eliminar"]==1){ ?>
                                 <a onclick="eliminarRegistro(<?php echo $fila["id"] ?>, '<?php echo $fila["titulo"] ?>');" href="javascript:;">
                                     <img src="../../../images/eliminar_16.png" width="16" height="16" title="Eliminar registro" /></a>
                             <?php //} ?>
-                            <?php// if($fila_prv_user["noticias_modificar"]==1){ ?>
+                            <?php// if($fila_prv_user["Alianzas_modificar"]==1){ ?>
                            		<a href="form-modificar.php?id=<?php echo $fila["id"] ?>">
                                 	<img src="../../../images/editar_16.png" width="16" height="16" title="Modiciar registro" /></a>
                             <?php //} ?>

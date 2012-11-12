@@ -48,7 +48,7 @@ $fila_query=mysql_fetch_array($rst_query);
 			$imagen=$_POST['flash_uploader_0_tmpname'];
 			$carpeta_imagen=fechaCarpeta()."/";
 			$thumb=PhpThumbFactory::create("../../../../imagenes/upload/".$carpeta_imagen."".$imagen."");
-			$thumb->adaptiveResize(370,130);
+			$thumb->adaptiveResize(370,220);
 			$thumb->save("../../../../imagenes/upload/".$carpeta_imagen."thumb/".$imagen."", "jpg");
 			$mostrar_imagen=1;
 			/*$video=$fila_query["video"];

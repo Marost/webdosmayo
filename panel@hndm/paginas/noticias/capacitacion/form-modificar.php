@@ -87,7 +87,7 @@ jq(function() {
 				<?php include("../../../menu-izq.php"); ?>
             </div><!--FIN PANEL IZQ-->
             <div id="panel-der">
-            	<h2>Modificar - Noticia</h2>
+            	<h2>Modificar - Capacitación</h2>
     <div id="contenido_total">
         <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
             <tr>

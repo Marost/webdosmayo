@@ -770,6 +770,7 @@ header nav ul .submenu-prensa li a {
 }
 #news .nw-nota .imagen img {
   border: 3px solid #666;
+  margin: 10px;
 }
 #news .nw-nota .imagen .slider-bxslider {
   border: 10px solid #666;

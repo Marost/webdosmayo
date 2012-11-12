@@ -27,7 +27,7 @@ if($_POST['flash_uploader_0_tmpname']<>""){
 	$imagen=$_POST['flash_uploader_0_tmpname'];
 	$carpeta_imagen=fechaCarpeta()."/";	
 	$thumb=PhpThumbFactory::create("../../../../imagenes/upload/".$carpeta_imagen."".$imagen."");
-	$thumb->adaptiveResize(370,130);
+	$thumb->adaptiveResize(120,135);
 	$thumb->save("../../../../imagenes/upload/".$carpeta_imagen."thumb/".$imagen."", "jpg");
 	/*if($tipo_video=="youtube"){
 		$mostrar_video=1;
