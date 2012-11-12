@@ -1,3 +1,12 @@
+<?php
+/*DIAGNOSTICO - LISTA*/
+$rst_apdiagnost_lista_wg=mysql_query("SELECT * FROM DM_noticia WHERE categoria=2 ORDER BY titulo ASC;", $conexion);
+
+/*ESPECIALIDADES*/
+$rst_apdiagnost_wg=mysql_query("SELECT * FROM DM_noticia_categoria WHERE id=2;", $conexion);
+$fila_apdiagnost_wg=mysql_fetch_array($rst_apdiagnost_wg);
+$espec_url=$fila_apdiagnost_wg["url"];
+?>
 <aside id="sidebar">
 
     <div id="mrq_ap_diagnostico" class="mrq_lista">
@@ -8,62 +17,13 @@
         <div id="mrq_ap_diagnostico_lista" class="mrq_lista_item">
             <div>
                 <ul>
-                    <li><a href="#">Laboratorio Clinico</a></li>
-                    <li><a href="#">Patologiía Clínica y Anatomía Patologica</a></li>
-                    <li><a href="#">Departamento de Diagnostico por Imágenes</a></li>
-                    <li><a href="#">Dosaje de medicamentos, gases y electrolitos</a></li>
-                    <li><a href="#">Hemocultivos</a></li>
-                    <li><a href="#">Tamizaje de sangre</a></li>
-                    <li><a href="#">Cultivos microbiológicos&nbsp;</a></li>
-                    <li><a href="#">Pruebas bioquímicas</a></li>
-                    <li><a href="#">Hemograma</a></li>
-                    <li><a href="#">Microbiología e Inmunología</a></li>
-                    <li><a href="#">Bioquímica y Laboratorio</a></li>
-                    <li><a href="#">Anatomía Patológica&nbsp;</a></li>
-                    <li><a href="#">Banco de Sangre</a></li>
-                    <li><a href="#">Tomografía&nbsp; Multicorte</a></li>
-                    <li><a href="#">Mamografía</a></li>
-                    <li><a href="#">Ecografía</a></li>
-                    <li><a href="#">Ecografía Doppler Tridimensional</a></li>
-                    <li><a href="#">Rayos X</a></li>
-                    
-                    <li><a href="#">Laboratorio Clinico</a></li>
-                    <li><a href="#">Patologiía Clínica y Anatomía Patologica</a></li>
-                    <li><a href="#">Departamento de Diagnostico por Imágenes</a></li>
-                    <li><a href="#">Dosaje de medicamentos, gases y electrolitos</a></li>
-                    <li><a href="#">Hemocultivos</a></li>
-                    <li><a href="#">Tamizaje de sangre</a></li>
-                    <li><a href="#">Cultivos microbiológicos&nbsp;</a></li>
-                    <li><a href="#">Pruebas bioquímicas</a></li>
-                    <li><a href="#">Hemograma</a></li>
-                    <li><a href="#">Microbiología e Inmunología</a></li>
-                    <li><a href="#">Bioquímica y Laboratorio</a></li>
-                    <li><a href="#">Anatomía Patológica&nbsp;</a></li>
-                    <li><a href="#">Banco de Sangre</a></li>
-                    <li><a href="#">Tomografía&nbsp; Multicorte</a></li>
-                    <li><a href="#">Mamografía</a></li>
-                    <li><a href="#">Ecografía</a></li>
-                    <li><a href="#">Ecografía Doppler Tridimensional</a></li>
-                    <li><a href="#">Rayos X</a></li>
-                    
-                    <li><a href="#">Laboratorio Clinico</a></li>
-                    <li><a href="#">Patologiía Clínica y Anatomía Patologica</a></li>
-                    <li><a href="#">Departamento de Diagnostico por Imágenes</a></li>
-                    <li><a href="#">Dosaje de medicamentos, gases y electrolitos</a></li>
-                    <li><a href="#">Hemocultivos</a></li>
-                    <li><a href="#">Tamizaje de sangre</a></li>
-                    <li><a href="#">Cultivos microbiológicos&nbsp;</a></li>
-                    <li><a href="#">Pruebas bioquímicas</a></li>
-                    <li><a href="#">Hemograma</a></li>
-                    <li><a href="#">Microbiología e Inmunología</a></li>
-                    <li><a href="#">Bioquímica y Laboratorio</a></li>
-                    <li><a href="#">Anatomía Patológica&nbsp;</a></li>
-                    <li><a href="#">Banco de Sangre</a></li>
-                    <li><a href="#">Tomografía&nbsp; Multicorte</a></li>
-                    <li><a href="#">Mamografía</a></li>
-                    <li><a href="#">Ecografía</a></li>
-                    <li><a href="#">Ecografía Doppler Tridimensional</a></li>
-                    <li><a href="#">Rayos X</a></li>
+                    <?php while($fila_apdiagnost_lista_wg=mysql_fetch_array($rst_apdiagnost_lista_wg)){
+                            $espec_lista_id=$fila_apdiagnost_lista_wg["id"];
+                            $espec_lista_titulo=$fila_apdiagnost_lista_wg["titulo"];
+                            $espec_lista_url=$fila_apdiagnost_lista_wg["url"];
+                    ?>
+                        <li><a href="/<?php echo $espec_url."/".$espec_lista_id."-".$espec_lista_url; ?>"><?php echo $espec_lista_titulo; ?></a></li>
+                    <?php } ?>
                 </ul>
             </div>
         </div>
