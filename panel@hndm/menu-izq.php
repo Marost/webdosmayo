@@ -30,6 +30,9 @@ jmnpr(document).ready(function(){
   <dd>
     <ul class="items">
       <li>
+        <a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/noticias/categorias/listar.php">
+          Categorias</a></li>
+      <li>
         <a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/noticias/alianzas/listar.php">
           Alianzas</a></li>
       <li>
