@@ -10,7 +10,8 @@
                 </div>
                     
                 <div class="items">
-                    <img alt="" src="imagenes/empresas/minsa.jpg" width="152" height="37">
+                    <a href="http://www.minsa.gob.pe">
+                    <img alt="" src="imagenes/empresas/minsa.jpg" width="152" height="37"></a>
                 </div>
                 
                 <div class="items">
@@ -22,11 +23,13 @@
                 </div>
                 
                 <div class="items">
-                    <img alt="" src="imagenes/empresas/sis.jpg" height="37">
+                    <a href="http://www.sis.gob.pe/">
+                    <img alt="" src="imagenes/empresas/sis.jpg" height="37"></a>
                 </div>
                 
                 <div class="items">
-                    <img alt="" src="imagenes/empresas/presidencia-republica.jpg" width="168" height="37">
+                    <a href="http://www.presidencia.gob.pe/">
+                    <img alt="" src="imagenes/empresas/presidencia-republica.jpg" width="84" height="37"></a>
                 </div>
                 
                 <div class="items">
@@ -39,7 +42,8 @@
                 </div>
                     
                 <div class="items">
-                    <img alt="" src="imagenes/empresas/minsa.jpg" width="152" height="37">
+                    <a href="http://www.minsa.gob.pe">
+                    <img alt="" src="imagenes/empresas/minsa.jpg" width="152" height="37"></a>
                 </div>
                 
                 <div class="items">
@@ -51,11 +55,13 @@
                 </div>
                 
                 <div class="items">
-                    <img alt="" src="imagenes/empresas/sis.jpg" height="37">
+                    <a href="http://www.sis.gob.pe/">
+                    <img alt="" src="imagenes/empresas/sis.jpg" height="37"></a>
                 </div>
                 
                 <div class="items">
-                    <img alt="" src="imagenes/empresas/presidencia-republica.jpg" width="168" height="37">
+                    <a href="http://www.presidencia.gob.pe/">
+                    <img alt="" src="imagenes/empresas/presidencia-republica.jpg" width="84" height="37"></a>
                 </div>
                 
                 <div class="items">
@@ -68,7 +74,8 @@
                 </div>
                     
                 <div class="items">
-                    <img alt="" src="imagenes/empresas/minsa.jpg" width="152" height="37">
+                    <a href="http://www.minsa.gob.pe">
+                    <img alt="" src="imagenes/empresas/minsa.jpg" width="152" height="37"></a>
                 </div>
                 
                 <div class="items">
@@ -80,11 +87,13 @@
                 </div>
                 
                 <div class="items">
-                    <img alt="" src="imagenes/empresas/sis.jpg" height="37">
+                    <a href="http://www.sis.gob.pe/">
+                    <img alt="" src="imagenes/empresas/sis.jpg" height="37"></a>
                 </div>
                 
                 <div class="items">
-                    <img alt="" src="imagenes/empresas/presidencia-republica.jpg" width="168" height="37">
+                    <a href="http://www.presidencia.gob.pe/">
+                    <img alt="" src="imagenes/empresas/presidencia-republica.jpg" width="84" height="37"></a>
                 </div>
                 
                 <div class="items">
