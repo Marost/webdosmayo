@@ -304,7 +304,7 @@ skins available:
 }
 
 .allinone_bannerWithPlaylist.pureGallery .slider-vertical.ui-slider { position: relative;}
-.allinone_bannerWithPlaylist.pureGallery .slider-vertical.ui-slider .ui-slider-handle { position: absolute; z-index: 2; width: 6px; height: 25px; cursor: pointer; background:url(skins/pureGallery/scrollerFaceOFF.png) 0 0 no-repeat; }
+.allinone_bannerWithPlaylist.pureGallery .slider-vertical.ui-slider .ui-slider-handle { position: absolute; z-index: 2; width: 10px; height: 25px; cursor: pointer; background:url(skins/pureGallery/scrollerFaceOFF.png) 0 0 no-repeat; }
 .allinone_bannerWithPlaylist.pureGallery .slider-vertical.ui-slider .ui-slider-handle:hover { background:url(skins/pureGallery/scrollerFaceON.png) 0 0 no-repeat; }
 .allinone_bannerWithPlaylist.pureGallery .slider-vertical.ui-slider .ui-slider-range { position: absolute; z-index: 1; display: block; border: 0; }
 
@@ -323,7 +323,11 @@ skins available:
 
 
 /* Corner radius */
-.allinone_bannerWithPlaylist.pureGallery .slider-vertical.ui-corner-all {}
+.allinone_bannerWithPlaylist.pureGallery .slider-vertical.ui-corner-all {
+	height: 360px !important;
+	left: 610px !important;
+	width: 10px !important;
+}
 
 
 
