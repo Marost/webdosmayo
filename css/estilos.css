@@ -601,6 +601,10 @@ header nav ul .submenu-prensa li a {
   padding: 15px 0 10px 0;
   width: 100%;
 }
+#news #nw-campania-esp .nws-contenido a {
+  font-weight: bold;
+  padding-left: 10px;
+}
 #news #nw-campania-esp .nws-contenido ul {
   list-style: none;
   margin: 0;

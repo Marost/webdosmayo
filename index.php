@@ -126,7 +126,7 @@ $script_popup=true;
                                         <li><a href=""><img src="/imagenes/campanias-especiales/icon-campana-especial-02.png"></a></li>
                                         <li><a href=""><img src="/imagenes/campanias-especiales/icon-campana-especial-03.png"></a></li>
                                     </ul>
-                                    
+                                    <a href="">Más...</a>
 
                                 </div>
 
