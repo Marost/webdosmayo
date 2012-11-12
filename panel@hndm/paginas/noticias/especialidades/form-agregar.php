@@ -154,7 +154,6 @@ jq(document).ready(function(){
     </div><!--FIN CUERPO-->
 </div>
 <script type="text/javascript">
-var spryselect = new Spry.Widget.ValidationSelect("spryselect", {invalidValue:"0"});
 var TabbedPanels1 = new Spry.Widget.TabbedPanels("TabbedPanels1");
 var sprytextfield1 = new Spry.Widget.ValidationTextField("sprytextfield1", "time");
 </script>
