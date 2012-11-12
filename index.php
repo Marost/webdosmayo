@@ -1,4 +1,9 @@
 <?php
+/*CONEXION Y FUNCIONES*/
+require_once("panel@hndm/conexion/conexion.php");
+require_once("panel@hndm/conexion/funciones.php");
+require_once("panel@hndm/conexion/funcion-paginacion.php");
+
 $script_popup=true;
 ?>
 <!DOCTYPE html>
