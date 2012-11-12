@@ -1,3 +1,9 @@
+<?php
+/*CONEXION Y FUNCIONES*/
+require_once("panel@hndm/conexion/conexion.php");
+require_once("panel@hndm/conexion/funciones.php");
+require_once("panel@hndm/conexion/funcion-paginacion.php");
+?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->

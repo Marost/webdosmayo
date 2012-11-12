@@ -17,7 +17,7 @@ $categoria_id=$fila_categoria["id"];
 $categoria_titulo=$fila_categoria["categoria"];
 
 /*LISTA DE NOTICIAS*/
-$rst_noticias=mysql_query("SELECT * FROM DM_noticia WHERE categoria=$categoria_id;", $conexion);
+$rst_noticias=mysql_query("SELECT * FROM DM_noticia WHERE categoria=$categoria_id ORDER BY titulo ASC;", $conexion);
 
 ?>
 <!DOCTYPE html>
