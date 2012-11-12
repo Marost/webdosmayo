@@ -28,9 +28,7 @@ $hora_actual=$hora[0].":".$hora[1];
 <script src="../../../js/ckeditor/ckeditor.js" type="text/javascript"></script>
 
 <!-- SPRY -->
-<script src="/SpryAssets/SpryValidationSelect.js" type="text/javascript"></script>
 <script src="/SpryAssets/SpryTabbedPanels.js" type="text/javascript"></script>
-<link href="/SpryAssets/SpryValidationSelect.css" rel="stylesheet" type="text/css" />
 <link href="/SpryAssets/SpryTabbedPanels.css" rel="stylesheet" type="text/css" />
 <link href="/SpryAssets/SpryValidationTextField.css" rel="stylesheet" type="text/css" />
 <script src="/SpryAssets/SpryValidationTextField.js" type="text/javascript"></script>
@@ -182,9 +180,9 @@ jq(function() {
     </div><!--FIN CUERPO-->
 </div>
 <script type="text/javascript">
-var spryselect = new Spry.Widget.ValidationSelect("spryselect", {invalidValue:"0"});
+
 var TabbedPanels1 = new Spry.Widget.TabbedPanels("TabbedPanels1");
-var spryselect2 = new Spry.Widget.ValidationSelect("spryselect2", {invalidValue:"0"});
+
 var sprytextfield1 = new Spry.Widget.ValidationTextField("sprytextfield1", "time");
 </script>
 </body>
