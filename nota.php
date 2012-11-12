@@ -11,8 +11,8 @@ $url_noticia_url=$_REQUEST["url"];
 $url_web=$web."".$url_categoria."/".$url_noticia_id."-".$url_noticia_url;
 
 /*NOTICIA*/
-$rst_noticia=mysql_query("SELECT * FROM DM_noticia WHERE id=$url_noticia_id;", $conexion)
-$fila_noticia=mysql_fetch_array($rst_noticia)
+$rst_noticia=mysql_query("SELECT * FROM DM_noticia WHERE id=$url_noticia_id;", $conexion);
+$fila_noticia=mysql_fetch_array($rst_noticia);
 
 /*VARIABLES DE NOTICIA*/
 $noticia_titulo=$fila_noticia["titulo"];
