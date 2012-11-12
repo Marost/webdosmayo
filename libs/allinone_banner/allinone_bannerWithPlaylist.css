@@ -243,7 +243,7 @@ skins available:
 }
 .allinone_bannerWithPlaylist.pureGallery .thumbsHolder_ThumbOFF {
 	display:block;
-	height:128px;
+	height:90px;
 	background:#000000;
 	text-align:left;
 	line-height:1.4em;
@@ -273,8 +273,8 @@ skins available:
 	margin-right:10px;
 	opacity:0.4;
 	filter:alpha(opacity=40); /* For IE8 and earlier */
-	width:214px;
-	height:128px;	
+	width:90px;
+	height:90px;	
 }
 
 .allinone_bannerWithPlaylist.pureGallery .thumbsHolder_ThumbON img {
