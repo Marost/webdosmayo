@@ -1,4 +1,4 @@
-z<?php
+<?php
 include("../../../conexion/funciones.php");
 /**
  * upload.php

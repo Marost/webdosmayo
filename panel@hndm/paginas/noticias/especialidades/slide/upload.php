@@ -18,7 +18,7 @@ include("../../../../conexion/funciones.php");
 	header("Pragma: no-cache");
 	// Settings
 	$targetDir = "../../../../../imagenes/upload/".fechaCarpeta();
-	$targetDirThumb = "../../../../../imagenes/upload/".fechaCarpeta()."/thumb"; /*ini_get("upload_tmp_dir") . DIRECTORY_SEPARATOR . "plupload";*/
+	$targetDirThumb = "../../../../../imagenes/upload/".fechaCarpeta()."/thumb";
 	$cleanupTargetDir = false; // Remove old files
 	$maxFileAge = 60 * 60; // Temp file age in seconds
 
