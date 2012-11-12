@@ -216,3 +216,26 @@ jAcod(document).ready(function(){
 <link rel="stylesheet" href="/libs/progressbar/ui.progress-bar.css">
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="/libs/progressbar/progress.js"></script>
+
+<!-- SLIDE NOTICIA -->
+<link href="/libs/allinone_banner/allinone_bannerWithPlaylist.css" rel="stylesheet" type="text/css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
+<script src="/libs/allinone_banner/jquery.ui.touch-punch.min.js"></script>
+<script src="/libs/allinone_banner/jquery.mousewheel.min.js"></script>
+<script src="/libs/allinone_banner/allinone_bannerWithPlaylist.js"></script>
+<!--[if IE]><script src="/libs/allinone_banner/excanvas.compiled.js" type="text/javascript"></script><![endif]-->
+<script>
+var jNotSld=jQuery.noConflict();
+jNotSld(document).ready(function(){
+    jNotSld('.imagen_slide').allinone_bannerWithPlaylist({
+        skin: 'pureGallery',
+        width: 620,
+        height: 360,
+        borderWidth: 0,
+        playlistWidth:90,
+        origThumbImgW:90,
+        origThumbImgH:90
+    });
+});
+</script>
