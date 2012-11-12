@@ -1,3 +1,12 @@
+<?php
+/*ESPECIALIDADES - LISTA*/
+$rst_especialidades_lista_wg=mysql_query("SELECT * FROM DM_noticia WHERE categoria=5 ORDER BY titulo ASC;", $conexion)
+
+/*ESPECIALIDADES*/
+$rst_especialidades_wg=mysql_query("SELECT * FROM DM_noticia_categoria WHERE id=5;", $conexion)
+$fila_especialidades_wg=mysql_fetch_array($rst_especialidades_wg);
+$espec_url=$fila_especialidades_wg["url"];
+?>
 <div class="header-container">
     <header class="wrapper clearfix">
 
@@ -55,125 +64,17 @@
             <div id="mrq_especialidades_lista" class="mrq_lista_item">
                 <div>
                     <ul>
-                        <li><a href="#">Medicina</a></li>
-                        <li><a href="#">Cirugía</a></li>
-                        <li><a href="#">Odontoestomatología</a></li>
-                        <li><a href="#">Cirugía de Torax y Cardiovascular</a></li>
-                        <li><a href="#">Pediatria y Neonatología</a></li>
-                        <li><a href="#">Gineco-Obstetricia</a></li>
-                        <li><a href="#">Emergencia</a></li>                
-                        <li><a href="#">Medicina Interna</a></li>
-                        <li><a href="#">Cardiología</a></li>
-                        <li><a href="#">Reumatología</a></li>
-                        <li><a href="#">Nefrología</a></li>
-                        <li><a href="#">Endocrinología</a></li>
-                        <li><a href="#">Dermatología</a></li>
-                        <li><a href="#">Neumología</a></li>
-                        <li><a href="#">Gastroenterología</a></li>
-                        <li><a href="#">Neurología</a></li>
-                        <li><a href="#">Medicina Física y Rehabilitación</a></li>
-                        <li><a href="#">Psiquiatría</a></li>
-                        <li><a href="#">Psicología</a></li>
-                        <li><a href="#">Oncología Médica</a></li>
-                        <li><a href="#">Hematología Clínica</a></li>
-                        <li><a href="#">Enfermedades infecciosas y tropicales</a></li>
-                        <li><a href="#">Otorrinolaringología</a></li>
-                        <li><a href="#">Urología</a></li>
-                        <li><a href="#">Cirugía Plástica y Reconstructiva</a></li>
-                        <li><a href="#">Neurocirugía</a></li>
-                        <li><a href="#">Cirugía Pediátrica General y Especializada</a></li>
-                        <li><a href="#">Oftalmología</a></li>
-                        <li><a href="#">Cirugía de Cabeza y Cuello</a></li>
-                        <li><a href="#">Carielogia y Endodoncia</a></li>
-                        <li><a href="#">Odonto-pediatría</a></li>
-                        <li><a href="#">Cardiovascular</a></li>
-                        <li><a href="#">Pediatría y Neonatología</a></li>
-                        <li><a href="#">Obstetricia</a></li>
-                        <li><a href="#">Ginecología</a></li>
-                        <li><a href="#">Reproducción Humana</a></li>
-                        <li><a href="#">Oncología Ginecológica</a></li>
-                        <li><a href="#">Despistaje de Cáncer</a></li>
-                        <li><a href="#">Planificación Familiar</a></li>
-                        
-                        <li><a href="#">Medicina</a></li>
-                        <li><a href="#">Cirugía</a></li>
-                        <li><a href="#">Odontoestomatología</a></li>
-                        <li><a href="#">Cirugía de Torax y Cardiovascular</a></li>
-                        <li><a href="#">Pediatria y Neonatología</a></li>
-                        <li><a href="#">Gineco-Obstetricia</a></li>
-                        <li><a href="#">Emergencia</a></li>                
-                        <li><a href="#">Medicina Interna</a></li>
-                        <li><a href="#">Cardiología</a></li>
-                        <li><a href="#">Reumatología</a></li>
-                        <li><a href="#">Nefrología</a></li>
-                        <li><a href="#">Endocrinología</a></li>
-                        <li><a href="#">Dermatología</a></li>
-                        <li><a href="#">Neumología</a></li>
-                        <li><a href="#">Gastroenterología</a></li>
-                        <li><a href="#">Neurología</a></li>
-                        <li><a href="#">Medicina Física y Rehabilitación</a></li>
-                        <li><a href="#">Psiquiatría</a></li>
-                        <li><a href="#">Psicología</a></li>
-                        <li><a href="#">Oncología Médica</a></li>
-                        <li><a href="#">Hematología Clínica</a></li>
-                        <li><a href="#">Enfermedades infecciosas y tropicales</a></li>
-                        <li><a href="#">Otorrinolaringología</a></li>
-                        <li><a href="#">Urología</a></li>
-                        <li><a href="#">Cirugía Plástica y Reconstructiva</a></li>
-                        <li><a href="#">Neurocirugía</a></li>
-                        <li><a href="#">Cirugía Pediátrica General y Especializada</a></li>
-                        <li><a href="#">Oftalmología</a></li>
-                        <li><a href="#">Cirugía de Cabeza y Cuello</a></li>
-                        <li><a href="#">Carielogia y Endodoncia</a></li>
-                        <li><a href="#">Odonto-pediatría</a></li>
-                        <li><a href="#">Cardiovascular</a></li>
-                        <li><a href="#">Pediatría y Neonatología</a></li>
-                        <li><a href="#">Obstetricia</a></li>
-                        <li><a href="#">Ginecología</a></li>
-                        <li><a href="#">Reproducción Humana</a></li>
-                        <li><a href="#">Oncología Ginecológica</a></li>
-                        <li><a href="#">Despistaje de Cáncer</a></li>
-                        <li><a href="#">Planificación Familiar</a></li>
-                        
-                        <li><a href="#">Medicina</a></li>
-                        <li><a href="#">Cirugía</a></li>
-                        <li><a href="#">Odontoestomatología</a></li>
-                        <li><a href="#">Cirugía de Torax y Cardiovascular</a></li>
-                        <li><a href="#">Pediatria y Neonatología</a></li>
-                        <li><a href="#">Gineco-Obstetricia</a></li>
-                        <li><a href="#">Emergencia</a></li>                
-                        <li><a href="#">Medicina Interna</a></li>
-                        <li><a href="#">Cardiología</a></li>
-                        <li><a href="#">Reumatología</a></li>
-                        <li><a href="#">Nefrología</a></li>
-                        <li><a href="#">Endocrinología</a></li>
-                        <li><a href="#">Dermatología</a></li>
-                        <li><a href="#">Neumología</a></li>
-                        <li><a href="#">Gastroenterología</a></li>
-                        <li><a href="#">Neurología</a></li>
-                        <li><a href="#">Medicina Física y Rehabilitación</a></li>
-                        <li><a href="#">Psiquiatría</a></li>
-                        <li><a href="#">Psicología</a></li>
-                        <li><a href="#">Oncología Médica</a></li>
-                        <li><a href="#">Hematología Clínica</a></li>
-                        <li><a href="#">Enfermedades infecciosas y tropicales</a></li>
-                        <li><a href="#">Otorrinolaringología</a></li>
-                        <li><a href="#">Urología</a></li>
-                        <li><a href="#">Cirugía Plástica y Reconstructiva</a></li>
-                        <li><a href="#">Neurocirugía</a></li>
-                        <li><a href="#">Cirugía Pediátrica General y Especializada</a></li>
-                        <li><a href="#">Oftalmología</a></li>
-                        <li><a href="#">Cirugía de Cabeza y Cuello</a></li>
-                        <li><a href="#">Carielogia y Endodoncia</a></li>
-                        <li><a href="#">Odonto-pediatría</a></li>
-                        <li><a href="#">Cardiovascular</a></li>
-                        <li><a href="#">Pediatría y Neonatología</a></li>
-                        <li><a href="#">Obstetricia</a></li>
-                        <li><a href="#">Ginecología</a></li>
-                        <li><a href="#">Reproducción Humana</a></li>
-                        <li><a href="#">Oncología Ginecológica</a></li>
-                        <li><a href="#">Despistaje de Cáncer</a></li>
-                        <li><a href="#">Planificación Familiar</a></li>
+
+                        <?php 
+                        for ($i=1; $i <=3 ; $i++) {
+
+                            while($fila_especialidades_lista_wg=mysql_fetch_array($rst_especialidades_lista_wg)){
+                                $espec_lista_id=$fila_especialidades_lista_wg["id"];
+                                $espec_lista_titulo=$fila_especialidades_lista_wg["titulo"];
+                                $espec_lista_url=$fila_especialidades_lista_wg["url"];
+                        ?>
+                            <li><a href="/<?php echo $espec_url."".$espec_lista_url; ?>"><?php echo $espec_lista_titulo; ?></a></li>
+                        <?php } } ?>
                     </ul>
                 </div>
             </div>
