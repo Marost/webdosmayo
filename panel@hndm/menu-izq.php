@@ -1,7 +1,7 @@
-<script type="text/javascript" src="<?php echo $fila_empresa["web"] ?>js/jquery-1.2.6.js"></script>
-<script type="text/javascript" src="<?php echo $fila_empresa["web"] ?>js/jscript_jquery.dimensions.js"></script>
-<script type="text/javascript" src="<?php echo $fila_empresa["web"] ?>js/jscript_jquery.mousewheel.min.js"></script>
-<script type="text/javascript" src="<?php echo $fila_empresa["web"] ?>js/jscript_jzScrollHorizontalPane.js"></script>
+<script type="text/javascript" src="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>js/jquery-1.2.6.js"></script>
+<script type="text/javascript" src="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>js/jscript_jquery.dimensions.js"></script>
+<script type="text/javascript" src="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>js/jscript_jquery.mousewheel.min.js"></script>
+<script type="text/javascript" src="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>js/jscript_jzScrollHorizontalPane.js"></script>
 <script type="text/javascript">
 var jmnpr = jQuery.noConflict();
 jmnpr(document).ready(function(){
