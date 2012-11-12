@@ -66,14 +66,14 @@ $espec_url=$fila_especialidades_wg["url"];
                     <ul>
 
                         <?php 
-                        for ($i=1; $i <=3 ; $i++) {
+                        for ($i=0; $i<=3 ; $i++) {
 
                             while($fila_especialidades_lista_wg=mysql_fetch_array($rst_especialidades_lista_wg)){
                                 $espec_lista_id=$fila_especialidades_lista_wg["id"];
                                 $espec_lista_titulo=$fila_especialidades_lista_wg["titulo"];
                                 $espec_lista_url=$fila_especialidades_lista_wg["url"];
                         ?>
-                            <li><a href="/<?php echo $espec_url."".$espec_lista_url; ?>"><?php echo $espec_lista_titulo; ?></a></li>
+                            <li><a href="/<?php echo $espec_url."/".$espec_lista_url; ?>"><?php echo $espec_lista_titulo; ?></a></li>
                         <?php } } ?>
                     </ul>
                 </div>
