@@ -31,7 +31,7 @@ $rst_noticias=mysql_query("SELECT * FROM DM_noticia WHERE categoria=$categoria_i
         <title><?php echo $categoria_titulo; ?></title>
         <meta name="description" content="">
 
-        <?php require_once("../w-header-scripts.php") ?>
+        <?php require_once("w-header-scripts.php") ?>
 
     </head>
     <body>
@@ -42,7 +42,7 @@ $rst_noticias=mysql_query("SELECT * FROM DM_noticia WHERE categoria=$categoria_i
         <div id="interior">
 
             <div class="header-container">
-                <?php require_once("../w-header.php") ?>
+                <?php require_once("w-header.php") ?>
 
             </div>
 
@@ -77,12 +77,12 @@ $rst_noticias=mysql_query("SELECT * FROM DM_noticia WHERE categoria=$categoria_i
 
                     </section>
 
-                    <?php require_once("../w-sidebar.php") ?>
+                    <?php require_once("w-sidebar.php") ?>
 
                 </div> <!-- #main -->
             </div> <!-- #main-container -->
 
-            <?php require_once("../w-footer.php") ?>
+            <?php require_once("w-footer.php") ?>
 
         </div>
 

@@ -336,8 +336,8 @@ FileETag None
 # RewriteBase /
 </IfModule>
 
-RewriteRule ^(.*)/([0-9]*)-(.*)$               /nota.php?cat=$1&id=$2&url=$3
-RewriteRule ^(.*)$                             /categoria.php?cat=$1
+RewriteRule ^c-(.*)$                      /categoria.php?cat=$1
+RewriteRule ^(.*)/([0-9]*)-(.*)$          /nota.php?cat=$1&id=$2&url=$3
 
 # ----------------------------------------------------------------------
 # Suppress or force the "www." at the beginning of URLs
