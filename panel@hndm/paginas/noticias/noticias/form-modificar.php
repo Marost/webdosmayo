@@ -53,7 +53,7 @@ jfec(function() {
 </script>
 
 <!-- PLUPLOAD -->
-<link rel="stylesheet" type="text/css" href="../../../css/plupload.queue.css"/>
+<link rel="stylesheet" type="text/css" href="../../../js/plupload.queue.css"/>
 <script type="text/javascript" src="http://www.google.com/jsapi"></script>
 <script type="text/javascript">
 	google.load("jquery", "1.3");
