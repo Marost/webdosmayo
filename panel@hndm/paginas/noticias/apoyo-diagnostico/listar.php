@@ -11,7 +11,7 @@ $buscar=$_REQUEST["busqueda"];
 
 if ($_REQUEST["btnbuscar"]=="")
 {
-	$rst_query=mysql_query("SELECT * FROM ".$tabla_suf."_noticia WHERE id>0 AND categoria=2 ORDER BY fecha_publicacion DESC;", $conexion);
+	$rst_query=mysql_query("SELECT * FROM ".$tabla_suf."_noticia WHERE id>0 AND categoria=2 ORDER BY titulo ASC;", $conexion);
 	$num_registros=mysql_num_rows($rst_query);
 		
 	$registros=20;	
@@ -21,7 +21,7 @@ if ($_REQUEST["btnbuscar"]=="")
 	else
 	$inicio=0;
 	
-	$rst_query=mysql_query("SELECT * FROM ".$tabla_suf."_noticia WHERE id>0 AND categoria=2 ORDER BY fecha_publicacion DESC LIMIT $inicio, $registros;", $conexion);
+	$rst_query=mysql_query("SELECT * FROM ".$tabla_suf."_noticia WHERE id>0 AND categoria=2 ORDER BY titulo ASC LIMIT $inicio, $registros;", $conexion);
 	$paginas=ceil($num_registros/$registros);
 }
 //-------------------------------------------------
@@ -29,7 +29,7 @@ if ($_REQUEST["btnbuscar"]=="")
 
 if ($_REQUEST["btnbuscar"]!="" || $_REQUEST["busqueda"]!="")
 {
-	$rst_query=mysql_query("SELECT * FROM ".$tabla_suf."_noticia WHERE titulo LIKE '%$buscar%' AND categoria=2 ORDER BY fecha_publicacion DESC;", $conexion);
+	$rst_query=mysql_query("SELECT * FROM ".$tabla_suf."_noticia WHERE titulo LIKE '%$buscar%' AND categoria=2 ORDER BY titulo ASC;", $conexion);
 	$num_registros=mysql_num_rows($rst_query);
 	
 	$registros=10;	
@@ -39,7 +39,7 @@ if ($_REQUEST["btnbuscar"]!="" || $_REQUEST["busqueda"]!="")
 	else
 		$inicio=0;
 	
-	$rst_query=mysql_query("SELECT * FROM ".$tabla_suf."_noticia WHERE titulo LIKE '%$buscar%' AND categoria=2 ORDER BY fecha_publicacion DESC LIMIT $inicio, $registros;", $conexion);
+	$rst_query=mysql_query("SELECT * FROM ".$tabla_suf."_noticia WHERE titulo LIKE '%$buscar%' AND categoria=2 ORDER BY titulo ASC LIMIT $inicio, $registros;", $conexion);
 	$paginas=ceil($num_registros/$registros);
 	
 }
@@ -126,20 +126,12 @@ if(confirm("¿Está seguro de borrar este registro?\n"+nombre)) {
                             <td width="85%">
                             	<p class="texto-azul12-Arial">
                                 <strong><?php echo $fila["titulo"] ?></strong></p>
-                              <p>Publicado el: <strong><?php echo $fila["fecha_publicacion"] ?></strong> 
-                                por: <strong><?php echo $fila["dato_usuario"] ?></strong></p>
                             </td>
                             <td width="15%" align="center">
-                            <?php //if($fila_prv_user["noticias_eliminar"]==1){ ?>
                                 <a onclick="eliminarRegistro(<?php echo $fila["id"] ?>, '<?php echo $fila["titulo"] ?>');" href="javascript:;">
                                     <img src="../../../images/eliminar_16.png" width="16" height="16" title="Eliminar registro" /></a>
-                            <?php //} ?>
-                            <?php// if($fila_prv_user["noticias_modificar"]==1){ ?>
-                           		<a href="form-modificar.php?id=<?php echo $fila["id"] ?>">
-                                	<img src="../../../images/editar_16.png" width="16" height="16" title="Modiciar registro" /></a>
-                            <?php //} ?>
-                                <a href="slide/listar.php?noticia=<?php echo $fila["id"] ?>">
-                                    <img src="../../../images/mult_32.png" width="16" height="16" title="Slider de fotos" /></a>
+                           	    <a href="form-modificar.php?id=<?php echo $fila["id"] ?>">
+                                    <img src="../../../images/editar_16.png" width="16" height="16" title="Modiciar registro" /></a>
                                 </td>
                           </tr>
                           <?php } ?>
