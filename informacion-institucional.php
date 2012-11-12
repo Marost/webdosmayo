@@ -55,7 +55,7 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
 
         </div>
 
-<?php require_once("w-footer.php") ?>
+<?php require_once("w-popup.php") ?>
 
     </body>
 </html>
