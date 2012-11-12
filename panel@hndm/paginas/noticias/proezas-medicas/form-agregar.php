@@ -1,15 +1,15 @@
 <?php
 session_start();
 include("../../../conexion/conexion.php");
-include("../../../conexion/funciones.php");
 include("../../../conexion/verificar_sesion.php");
 
-//NOTICIA
-$rst_query=mysql_query("SELECT * FROM ".$tabla_suf."_noticia WHERE id=". $_REQUEST["id"].";", $conexion);
-$fila_query=mysql_fetch_array($rst_query);
+//CATEGORIA
+$rst_categoria=mysql_query("SELECT * FROM ".$tabla_suf."_noticia_categoria WHERE id>0 ORDER BY categoria ASC;", $conexion);
+
+
 
 //VARIABLES PARA LA HORA
-$fechaTotal=$fila_query["fecha_publicacion"];
+$fechaTotal=date("Y-m-d H:i:s");
 $fecha=explode(" ", $fechaTotal);
 $fecha_actual=$fecha[0];
 $hora=explode(":", $fecha[1]);
@@ -20,12 +20,12 @@ $hora_actual=$hora[0].":".$hora[1];
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Administración</title>
+<title>Administración | </title>
 <link rel="stylesheet" type="text/css" href="../../../css/estilo-panel.css"/>
 <link rel="stylesheet" type="text/css" href="../../../css/style-listas.css" />
 
 <!-- CKEDITOR -->
-<script src="../../../js/ckeditor/ckeditor.js" type="text/javascript"></script>
+<script type="text/javascript" src="../../../js/ckeditor/ckeditor.js"></script>
 
 <!-- SPRY -->
 <script src="/SpryAssets/SpryValidationSelect.js" type="text/javascript"></script>
@@ -71,8 +71,7 @@ jq(function() {
 		filters : [ {title : "Image files", extensions : "jpg,gif,png"}],
 		resize : {width : 550, height : 350, quality : 70},
 		flash_swf_url : '../../../js/plupload/plupload.flash.swf'
-	});
-	
+	});	
 });
 </script>
 
@@ -87,70 +86,44 @@ jq(function() {
 				<?php include("../../../menu-izq.php"); ?>
             </div><!--FIN PANEL IZQ-->
             <div id="panel-der">
-            	<h2>Modificar - Noticia</h2>
+            	<h2>Agregar - Noticia</h2>
     <div id="contenido_total">
         <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
             <tr>
             	<td>
-                <form action="actualizar.php?id=<?php echo $_REQUEST["id"]; ?>" method="post" enctype="multipart/form-data" name="form1" id="form1">
+                <form action="guardar.php" method="post" enctype="multipart/form-data" id="form1" >
             	  <table width="100%" border="0" align="center" cellpadding="5" cellspacing="0">
             	    <tr>
             	      <td colspan="2" align="center">&nbsp;</td>
           	      </tr>
             	    <tr>
-            	      <td width="20%" height="30" align="right"><p><strong>Titulo:</strong></p></td>
-            	      <td width="80%" height="30" align="left"><input name="titulo" type="text" id="titulo" value='<?php echo $fila_query["titulo"] ?>' size="50" /></td>
+            	      <td width="20%" height="30" align="right" ><p><strong>Titulo:</strong></p></td>
+            	      <td width="80%" height="30" align="left"><input name="titulo" type="text" id="titulo" size="50" /></td>
           	      </tr>
             	    <tr>
-            	      <td height="30" align="right"><p><strong>Contenido:</strong></p></td>
-            	      <td height="30" align="left">&nbsp;</td>
+            	      <td width="20%" height="30" align="right"><p><strong>Contenido:</strong></p></td>
+            	      <td width="80%" height="30" align="left" >&nbsp;</td>
           	      </tr>
             	    <tr>
             	      <td height="35" colspan="2" align="center"><p>
             	        <label>
-            	          <textarea class="ckeditor" name="contenido" id="contenido"><?php echo $fila_query["contenido"] ?></textarea>
+            	          <textarea class="ckeditor" name="contenido" id="contenido"></textarea>
           	          </label>
-          	        </p></td>
-          	      </tr>
-            	    <tr>
+                      </p></td>
+           	        </tr>
+           	      <tr>
             	      <td colspan="2"><div id="TabbedPanels1" class="TabbedPanels">
             	        <ul class="TabbedPanelsTabGroup">
             	          <li class="TabbedPanelsTab" tabindex="0">Imagen</li>
             	        </ul>
             	        <div class="TabbedPanelsContentGroup">
             	          <div class="TabbedPanelsContent">
-            	            <table width="100%" border="0" cellpadding="5" cellspacing="0">
-            	              <tr>
-            	                <td align="right"><p>&nbsp;</p></td>
-            	                <td align="left"><p>
-            	                  <strong><label for="tipo_multimedia_imagen">
-                                  <?php if($fila_query["mostrar_imagen"]==1){ ?>
-            	                  <input name="tipo_multimedia" type="radio" id="tipo_multimedia_imagen" value="imagen" checked="checked" />
-                                  <?php }else{ ?>
-                                  <input name="tipo_multimedia" type="radio" id="tipo_multimedia_imagen" value="imagen" />
-                                  <?php } ?>
-                                  
-            	                  Mostrar imagen</label>
-          	                      </strong></p></td>
-          	                </tr>
-            	              <tr>
-            	                <td width="20%" align="right"><p><strong>Imagen actual:</strong></p></td>
-            	                <td width="80%" align="left">
-            	                  <img src="../../../../imagenes/upload/<?php echo $fila_query["carpeta_imagen"]."".$fila_query["imagen"] ?>" alt="" width="150" />
-            	                  <input name="imagen_actual" type="hidden" id="imagen_actual" value="<?php echo $fila_query["imagen"] ?>" />
-            	                  <input name="carpeta_imagen" type="hidden" id="carpeta_imagen" value="<?php echo $fila_query["carpeta_imagen"] ?>" /></td>
-          	                </tr>
-            	              <tr>
-            	                <td colspan="2">
-                                  <p align="left"><strong>Selecciona una imagen para la noticia:</strong></p>
-                                  <div>
-                                  <div id="flash_uploader" style="width: 450px; height: 330px;">
-                                  You browser doesn't have Flash installed.</div>
-                                  </div>
-                                </td>
-            	                </tr>
-          	              </table>
-            	          </div>
+                          <p align="left"><strong>Selecciona una imagen para la noticia:</strong></p>
+                          <div>
+                            <div id="flash_uploader" style="width: 450px; height: 330px;">
+                              You browser doesn't have Flash installed.</div>
+                          </div>
+                        </div>
             	        </div>
           	        </div></td>
            	        </tr>
@@ -161,16 +134,17 @@ jq(function() {
             	    <tr>
             	      <td align="right" ><p><strong>Hora publicación:</strong></p></td>
             	      <td><span id="sprytextfield1">
-            	        <input name="hora" type="text" id="hora" value="<?php echo $hora_actual; ?>" size="20" />
-            	        <span class="textfieldRequiredMsg">Ingrese la hora a publicar</span> <span class="textfieldInvalidFormatMsg">Formato no válido.</span></span></td>
+                      <input name="hora" type="text" id="hora" value="<?php echo $hora_actual; ?>" size="20" />
+                      <span class="textfieldRequiredMsg">Ingrese la hora a publicar</span>
+                      <span class="textfieldInvalidFormatMsg">Formato no válido.</span></span></td>
           	      </tr>
-            	    <tr>
-            	      <td colspan="2" align="center">
-            	        <input type="submit" name="guardar" id="guardar" value="Guardar" />
-            	        <input type="reset" name="borrar" id="borrar" value="Limpiar Datos" />
-                      <input type="hidden" name="categoria" value="6">
-           	          </td>
-          	      </tr>
+                <tr>
+                  <td colspan="2" align="center">
+                    <input type="submit" name="guardar" id="guardar" value="Guardar" />
+                    <input type="reset" name="borrar" id="borrar" value="Limpiar Datos" />
+                    <input type="hidden" name="categoria" value="7">
+                  </td>
+                  </tr>
               </table>
                 </form>
               </td>
@@ -184,7 +158,6 @@ jq(function() {
 <script type="text/javascript">
 var spryselect = new Spry.Widget.ValidationSelect("spryselect", {invalidValue:"0"});
 var TabbedPanels1 = new Spry.Widget.TabbedPanels("TabbedPanels1");
-var spryselect2 = new Spry.Widget.ValidationSelect("spryselect2", {invalidValue:"0"});
 var sprytextfield1 = new Spry.Widget.ValidationTextField("sprytextfield1", "time");
 </script>
 </body>

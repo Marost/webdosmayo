@@ -168,7 +168,7 @@ jq(function() {
             	      <td colspan="2" align="center">
             	        <input type="submit" name="guardar" id="guardar" value="Guardar" />
             	        <input type="reset" name="borrar" id="borrar" value="Limpiar Datos" />
-                      <input type="hidden" name="categoria" value="6">
+                      <input type="hidden" name="categoria" value="7">
            	          </td>
           	      </tr>
               </table>

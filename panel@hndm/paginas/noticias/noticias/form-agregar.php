@@ -6,8 +6,7 @@ include("../../../conexion/verificar_sesion.php");
 //CATEGORIA
 $rst_categoria=mysql_query("SELECT * FROM ".$tabla_suf."_noticia_categoria WHERE id>0 ORDER BY categoria ASC;", $conexion);
 
-//TAGS
-$rst_tags=mysql_query("SELECT * FROM ".$tabla_suf."_noticia_tags WHERE id>0 ORDER BY nombre ASC;", $conexion);
+
 
 //VARIABLES PARA LA HORA
 $fechaTotal=date("Y-m-d H:i:s");
@@ -143,7 +142,7 @@ jq(function() {
                   <td colspan="2" align="center">
                     <input type="submit" name="guardar" id="guardar" value="Guardar" />
                     <input type="reset" name="borrar" id="borrar" value="Limpiar Datos" />
-                    <input type="hidden" name="categoria" value="1">
+                    <input type="hidden" name="categoria" value="6">
                   </td>
                   </tr>
               </table>

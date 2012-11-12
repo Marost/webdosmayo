@@ -11,7 +11,7 @@ $buscar=$_REQUEST["busqueda"];
 
 if ($_REQUEST["btnbuscar"]=="")
 {
-	$rst_query=mysql_query("SELECT * FROM ".$tabla_suf."_noticia WHERE id>0 AND categoria=6 ORDER BY fecha_publicacion DESC;", $conexion);
+	$rst_query=mysql_query("SELECT * FROM ".$tabla_suf."_noticia WHERE id>0 AND categoria=4 ORDER BY fecha_publicacion DESC;", $conexion);
 	$num_registros=mysql_num_rows($rst_query);
 		
 	$registros=20;	
@@ -21,7 +21,7 @@ if ($_REQUEST["btnbuscar"]=="")
 	else
 	$inicio=0;
 	
-	$rst_query=mysql_query("SELECT * FROM ".$tabla_suf."_noticia WHERE id>0 AND categoria=6 ORDER BY fecha_publicacion DESC LIMIT $inicio, $registros;", $conexion);
+	$rst_query=mysql_query("SELECT * FROM ".$tabla_suf."_noticia WHERE id>0 AND categoria=4 ORDER BY fecha_publicacion DESC LIMIT $inicio, $registros;", $conexion);
 	$paginas=ceil($num_registros/$registros);
 }
 //-------------------------------------------------
@@ -29,7 +29,7 @@ if ($_REQUEST["btnbuscar"]=="")
 
 if ($_REQUEST["btnbuscar"]!="" || $_REQUEST["busqueda"]!="")
 {
-	$rst_query=mysql_query("SELECT * FROM ".$tabla_suf."_noticia WHERE titulo LIKE '%$buscar%' AND categoria=6 ORDER BY fecha_publicacion DESC;", $conexion);
+	$rst_query=mysql_query("SELECT * FROM ".$tabla_suf."_noticia WHERE titulo LIKE '%$buscar%' AND categoria=4 ORDER BY fecha_publicacion DESC;", $conexion);
 	$num_registros=mysql_num_rows($rst_query);
 	
 	$registros=10;	
@@ -39,7 +39,7 @@ if ($_REQUEST["btnbuscar"]!="" || $_REQUEST["busqueda"]!="")
 	else
 		$inicio=0;
 	
-	$rst_query=mysql_query("SELECT * FROM ".$tabla_suf."_noticia WHERE titulo LIKE '%$buscar%' AND categoria=6 ORDER BY fecha_publicacion DESC LIMIT $inicio, $registros;", $conexion);
+	$rst_query=mysql_query("SELECT * FROM ".$tabla_suf."_noticia WHERE titulo LIKE '%$buscar%' AND categoria=4 ORDER BY fecha_publicacion DESC LIMIT $inicio, $registros;", $conexion);
 	$paginas=ceil($num_registros/$registros);
 	
 }
