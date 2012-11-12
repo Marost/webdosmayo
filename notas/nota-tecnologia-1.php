@@ -43,7 +43,7 @@ require_once("../panel@hndm/conexion/funcion-paginacion.php");
                             </div>
 
                             <div class="imagen">
-                                <img width="550" height="350" alt="" title=" " src="/imagenes/upload/angiografia-digital-1.jpg">
+                                <img width="500" height="320" alt="" title=" " src="/imagenes/upload/angiografia-digital-1.jpg">
                             </div>
 
                             <div class="contenido">
