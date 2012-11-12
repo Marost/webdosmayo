@@ -5,24 +5,24 @@ $rst_apdiagnost_lista_wg=mysql_query("SELECT * FROM DM_noticia WHERE categoria=2
 /*ESPECIALIDADES*/
 $rst_apdiagnost_wg=mysql_query("SELECT * FROM DM_noticia_categoria WHERE id=2;", $conexion);
 $fila_apdiagnost_wg=mysql_fetch_array($rst_apdiagnost_wg);
-$espec_url=$fila_apdiagnost_wg["url"];
+$apdgt_url=$fila_apdiagnost_wg["url"];
 ?>
 <aside id="sidebar">
 
     <div id="mrq_ap_diagnostico" class="mrq_lista">
 
         <h2>Apoyo al Diagnóstico</h2>
-        <a class="mrq-vm" href="/notas/apoyo-diagnostico.php">Más...</a>
+        <a class="mrq-vm" href="/<?php echo $apdgt_url; ?>">Más...</a>
 
         <div id="mrq_ap_diagnostico_lista" class="mrq_lista_item">
             <div>
                 <ul>
                     <?php while($fila_apdiagnost_lista_wg=mysql_fetch_array($rst_apdiagnost_lista_wg)){
-                            $espec_lista_id=$fila_apdiagnost_lista_wg["id"];
-                            $espec_lista_titulo=$fila_apdiagnost_lista_wg["titulo"];
-                            $espec_lista_url=$fila_apdiagnost_lista_wg["url"];
+                            $apdgt_lista_id=$fila_apdiagnost_lista_wg["id"];
+                            $apdgt_lista_titulo=$fila_apdiagnost_lista_wg["titulo"];
+                            $apdgt_lista_url=$fila_apdiagnost_lista_wg["url"];
                     ?>
-                        <li><a href="/<?php echo $espec_url."/".$espec_lista_id."-".$espec_lista_url; ?>"><?php echo $espec_lista_titulo; ?></a></li>
+                        <li><a href="/<?php echo $apdgt_url."/".$apdgt_lista_id."-".$apdgt_lista_url; ?>"><?php echo $apdgt_lista_titulo; ?></a></li>
                     <?php } ?>
                 </ul>
             </div>

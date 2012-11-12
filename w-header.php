@@ -59,7 +59,7 @@ $espec_url=$fila_especialidades_wg["url"];
         <div id="mrq_especialidades" class="mrq_lista">
 
             <h2>Especialidades</h2>
-            <a class="mrq-vm" href="/notas/especialidades.php">Más...</a>
+            <a class="mrq-vm" href="/<?php echo $espec_url; ?>">Más...</a>
 
             <div id="mrq_especialidades_lista" class="mrq_lista_item">
                 <div>
