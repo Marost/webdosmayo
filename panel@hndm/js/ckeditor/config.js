@@ -4,10 +4,11 @@ For licensing, see LICENSE.html or http://ckeditor.com/license
 */
 
 CKEDITOR.editorConfig = function(config) {
-   config.filebrowserBrowseUrl = '/scripts/kcfinder/browse.php?type=files';
-   config.filebrowserImageBrowseUrl = '/scripts/kcfinder/browse.php?type=images';
-   config.filebrowserFlashBrowseUrl = '/scripts/kcfinder/browse.php?type=flash';
-   config.filebrowserUploadUrl = '/scripts/kcfinder/upload.php?type=files';
-   config.filebrowserImageUploadUrl = '/scripts/kcfinder/upload.php?type=images';
-   config.filebrowserFlashUploadUrl = '/scripts/kcfinder/upload.php?type=flash';
+	var carpeta="panel@hndm";
+   config.filebrowserBrowseUrl = '/'.carpeta.'/js/kcfinder/browse.php?type=files';
+   config.filebrowserImageBrowseUrl = '/'.carpeta.'/js/kcfinder/browse.php?type=images';
+   config.filebrowserFlashBrowseUrl = '/'.carpeta.'/js/kcfinder/browse.php?type=flash';
+   config.filebrowserUploadUrl = '/'.carpeta.'/js/kcfinder/upload.php?type=files';
+   config.filebrowserImageUploadUrl = '/'.carpeta.'/js/kcfinder/upload.php?type=images';
+   config.filebrowserFlashUploadUrl = '/'.carpeta.'/js/kcfinder/upload.php?type=flash';
 };

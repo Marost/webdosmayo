@@ -45,7 +45,7 @@ jmnpr(document).ready(function(){
       	<a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/noticias/especialidades/listar.php">
         	Especialides</a></li>
       <li>
-        <a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/noticias/notiicas/listar.php">
+        <a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/noticias/noticias/listar.php">
           Noticias</a></li>
       <li>
       	<a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/noticias/proezas-medicas/listar.php">
@@ -66,7 +66,7 @@ jmnpr(document).ready(function(){
         	Listar</a></li>
     </ul>
   </dd>
-  <dt class="items"><b>Campañas Especiales</b></dt>
+  <dt class="items"><b>Campañas</b></dt>
   <dd>
     <ul class="items">
       <li>
