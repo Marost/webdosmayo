@@ -40,18 +40,20 @@ $fila_query=mysql_fetch_array($rst_query);
 		if($_POST['flash_uploader_0_tmpname']==""){
 			$imagen=$_POST["imagen_actual"];
 			$carpeta_imagen=$_POST["carpeta_imagen"];
-			$video=$fila_query["video"];
+			$mostrar_imagen=1;
+			/*$video=$fila_query["video"];
 			$carpeta_video=$fila_query["carpeta_video"];
-			$tipo_video=$fila_query["tipo_video"];
+			$tipo_video=$fila_query["tipo_video"];*/
 		}elseif($_POST['flash_uploader_0_tmpname']<>""){
 			$imagen=$_POST['flash_uploader_0_tmpname'];
 			$carpeta_imagen=fechaCarpeta()."/";
 			$thumb=PhpThumbFactory::create("../../../../imagenes/upload/".$carpeta_imagen."".$imagen."");
 			$thumb->adaptiveResize(370,130);
 			$thumb->save("../../../../imagenes/upload/".$carpeta_imagen."thumb/".$imagen."", "jpg");
-			$video=$fila_query["video"];
+			$mostrar_imagen=1;
+			/*$video=$fila_query["video"];
 			$carpeta_video=$fila_query["carpeta_video"];
-			$tipo_video=$fila_query["tipo_video"];
+			$tipo_video=$fila_query["tipo_video"];*/
 		}
 		/*$mostrar_imagen=1; $mostrar_video=2;
 	}elseif($tipo_multimedia=="video"){
