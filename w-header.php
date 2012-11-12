@@ -1,9 +1,9 @@
 <?php
 /*ESPECIALIDADES - LISTA*/
-$rst_especialidades_lista_wg=mysql_query("SELECT * FROM DM_noticia WHERE categoria=5 ORDER BY titulo ASC;", $conexion)
+$rst_especialidades_lista_wg=mysql_query("SELECT * FROM DM_noticia WHERE categoria=5 ORDER BY titulo ASC;", $conexion);
 
 /*ESPECIALIDADES*/
-$rst_especialidades_wg=mysql_query("SELECT * FROM DM_noticia_categoria WHERE id=5;", $conexion)
+$rst_especialidades_wg=mysql_query("SELECT * FROM DM_noticia_categoria WHERE id=5;", $conexion);
 $fila_especialidades_wg=mysql_fetch_array($rst_especialidades_wg);
 $espec_url=$fila_especialidades_wg["url"];
 ?>
