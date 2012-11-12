@@ -64,7 +64,7 @@ jfec(function() {
 <script type="text/javascript" src="../../../js/plupload/jquery.plupload.queue.min.js"></script>
 <script>
 var jq = jQuery.noConflict();
-jq(function() {
+jq(document).ready(function(){
 	jq("#flash_uploader").pluploadQueue({
 		runtimes : 'flash', url : 'upload.php', max_file_size : '10mb',
 		chunk_size : '1mb', unique_names : true,
