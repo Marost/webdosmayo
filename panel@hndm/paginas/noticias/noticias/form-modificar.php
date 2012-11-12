@@ -53,7 +53,7 @@ jfec(function() {
 </script>
 
 <!-- PLUPLOAD -->
-<link rel="stylesheet" type="text/css" href="../../../js/plupload.queue.css"/>
+<link rel="stylesheet" type="text/css" href="../../../js/plupload/plupload.queue.css"/>
 <script type="text/javascript" src="http://www.google.com/jsapi"></script>
 <script type="text/javascript">
 	google.load("jquery", "1.3");
@@ -69,7 +69,7 @@ jq(function() {
 		runtimes : 'flash', url : 'upload.php', max_file_size : '10mb',
 		chunk_size : '1mb', unique_names : true,
 		filters : [ {title : "Image files", extensions : "jpg,gif,png"}],
-		resize : {width : 620, height : 390, quality : 100},
+		resize : {width : 550, height : 350, quality : 70},
 		flash_swf_url : '../../../js/plupload/plupload.flash.swf'
 	});
 	
