@@ -76,11 +76,22 @@ $noticia_imagen_carpeta=$fila_noticia["carpeta_imagen"];
                                 <?php echo $noticia_contenido; ?>
                             </div>
 
-                            <!-- <div class="imagen">
-                                <img width="330" alt="" title=" " src="/imagenes/upload/noticia-emergencia-2.jpg">
-                                
-                                <img width="330" alt="" title=" " src="/imagenes/upload/noticia-emergencia-3.jpg">
-                            </div> -->
+                            <div class="imagen_slide" style="display:none;">
+                                <ul class="allinone_bannerWithPlaylist_list">   
+                                    <li data-bottom-thumb="">
+                                      <img src="" alt="" /></li>
+                                    <li data-bottom-thumb="">
+                                      <img src="" alt="" /></li>
+                                    <li data-bottom-thumb="">
+                                      <img src="" alt="" /></li>
+                                    <li data-bottom-thumb="">
+                                      <img src="" alt="" /></li>
+                                    <li data-bottom-thumb="">
+                                      <img src="" alt="" /></li>
+                                    <li data-bottom-thumb="">
+                                      <img src="" alt="" /></li>
+                                </ul>
+                            </div>
 
                         </div>
 
