@@ -74,7 +74,7 @@ $espec_url=$fila_especialidades_wg["url"];
                                 $espec_lista_titulo=$fila_especialidades_lista_wg["titulo"];
                                 $espec_lista_url=$fila_especialidades_lista_wg["url"];
                         ?>
-                            <li><a href="/<?php echo $espec_url."/".$espec_lista_url; ?>"><?php echo $espec_lista_titulo; ?></a></li>
+                            <li><a href="/<?php echo $espec_url."/".$espec_lista_id."-".$espec_lista_url; ?>"><?php echo $espec_lista_titulo; ?></a></li>
                         <?php } $i++;} ?>
                     </ul>
                 </div>

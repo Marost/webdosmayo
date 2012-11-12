@@ -1,4 +1,26 @@
+<?php
+/*CONEXION Y FUNCIONES*/
+require_once("panel@hndm/conexion/conexion.php");
+require_once("panel@hndm/conexion/funciones.php");
+require_once("panel@hndm/conexion/funcion-paginacion.php");
 
+/*VARIABLES DE URL*/
+$url_categoria=$_REQUEST["cat"];
+$url_noticia_id=$_REQUEST["id"];
+$url_noticia_url=$_REQUEST["url"];
+$url_web=$web."".$url_categoria."/".$url_noticia_id."-".$url_noticia_url;
+
+/*NOTICIA*/
+$rst_noticia=mysql_query("SELECT * FROM DM_noticia WHERE id=$url_noticia_id;", $conexion)
+$fila_noticia=mysql_fetch_array($rst_noticia)
+
+/*VARIABLES DE NOTICIA*/
+$noticia_titulo=$fila_noticia["titulo"];
+$noticia_contenido=$fila_noticia["contenido"];
+$noticia_imagen=$fila_noticia["imagen"];
+$noticia_imagen_carpeta=$fila_noticia["carpeta_imagen"];
+
+?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -7,8 +29,15 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Hospital Nacional Dos de Mayo</title>
-        <meta name="description" content="">
+        <title><?php echo $noticia_titulo; ?></title>
+        
+        <!-- OPEN GRAPH -->
+        <meta property="og:title" content="<?php echo $noticia_titulo; ?>" />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="<?php echo $url_web; ?>" />
+        <meta property="og:image" content="" />
+        <meta property="og:site_name" content="<?php echo $web_nombre; ?>" />
+        <meta property="fb:admins" content="1376286793" />
 
         <?php require_once("w-header-scripts.php") ?>
 
@@ -31,7 +60,29 @@
 
                     <section id="news">
 
-                        
+                        <div class="nw-nota">
+
+                            <div class="titulo">
+                                <h2><?php echo $noticia_titulo; ?></h2>
+                            </div>
+
+                            <?php if($noticia_imagen<>""){ ?>
+                            <div class="imagen">
+                                <img alt="<?php echo $noticia_titulo; ?>" title=" " src="/imagenes/upload/<?php echo $noticia_imagen_carpeta."".$noticia_imagen; ?>">
+                            </div>
+                            <?php } ?>
+
+                            <div class="contenido">
+                                <?php echo $noticia_contenido; ?>
+                            </div>
+
+                            <!-- <div class="imagen">
+                                <img width="330" alt="" title=" " src="/imagenes/upload/noticia-emergencia-2.jpg">
+                                
+                                <img width="330" alt="" title=" " src="/imagenes/upload/noticia-emergencia-3.jpg">
+                            </div> -->
+
+                        </div>
 
                     </section>
 
