@@ -40,8 +40,8 @@ $fila_noticia=mysql_fetch_array($rst_noticia);
 <title>Administración | </title>
 <link rel="stylesheet" type="text/css" href="../../../../css/estilo-panel.css"/>
 <link rel="stylesheet" type="text/css" href="../../../../css/style-listas.css">
-<script type="text/javascript" src="../../../../../js/jquery-1.3.2.min.js"></script>
-<script type="text/javascript" src="../../../../../js/jquery-ui-1.8.5.custom.min.js"></script>
+<script type="text/javascript" src="/js/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="/js/jquery-ui-1.8.5.custom.min.js"></script>
 <script type="text/javascript">
 var jq = jQuery.noConflict();
 jq(document).ready(function() {
@@ -99,7 +99,7 @@ if(confirm("¿Está seguro de borrar todos los registros?")) {
 <ul id="test-list">
 	<?php while($fila_galeria=mysql_fetch_array($rst_galeria)){ ?>
         <li id="listItem_<?php echo $fila_galeria["id"] ?>" class="alto">
-            <img src="../../../../img/arrow.png" alt="move" width="16" height="16" class="handle" />
+            <img src="../../../../images/arrow.png" alt="move" width="16" height="16" class="handle" />
             <a onclick="eliminarRegistro(<?php echo $fila_galeria["id"] ?>, <?php echo $idnoticia ?>);" href="javascript:;">
             <img src="../../../../images/eliminar_16.png" width="16" height="16" title="Eliminar registro" /></a>
             <a href="form-modificar.php?id=<?php echo $fila_galeria["id"] ?>&amp;noticia=<?php echo $idnoticia ?>">
