@@ -651,7 +651,7 @@ header nav ul .submenu-prensa li a {
 #news article.directorio-doctor .datos {
   float: left;
   padding: 12px 0;
-  width: 330px;
+  width: 340px;
 }
 #news article.directorio-doctor .datos img {
   float: left;
@@ -659,7 +659,7 @@ header nav ul .submenu-prensa li a {
 }
 #news article.directorio-doctor .datos div {
   float: left;
-  width: 200px;
+  width: 170px;
 }
 #news article.directorio-doctor .datos div h2 {
   font-family: "Source Sans", sans-serif;
@@ -675,7 +675,7 @@ header nav ul .submenu-prensa li a {
   float: left;
   padding: 0 10px 0 10px;
   text-align: justify;
-  width: 399px;
+  width: 389px;
 }
 #news article.directorio-doctor .contenido p {
   font-size: 12px;

@@ -30,7 +30,7 @@
 
                         <article class="directorio-doctor">
                             <div class="datos">
-                                <img src="/imagenes/doctores/dr_roca.jpg" width="120" height="120">
+                                <img src="/imagenes/doctores/dr_roca.jpg" width="160" height="120">
                                 <div>
                                     <h2>José Roca Mendoza</h2>
                                     <p>Director General</p>
@@ -45,7 +45,7 @@
 
                         <article class="directorio-doctor">
                             <div class="datos">
-                                <img src="/imagenes/doctores/dr_silva.jpg" width="120" height="120">
+                                <img src="/imagenes/doctores/dr_silva.jpg" width="160" height="120">
                                 <div>
                                     <h2>Manuel Silva Zumaran</h2>
                                     <p>Director Adjunto</p>
@@ -60,7 +60,7 @@
 
                         <article class="directorio-doctor">
                             <div class="datos">
-                                <img src="/imagenes/doctores/dr_rodriguez.jpg" width="120" height="120">
+                                <img src="/imagenes/doctores/dr_rodriguez.jpg" width="160" height="120">
                                 <div>
                                     <h2>Silvia Rodriguez Lichtenheldt</h2>
                                     <p>Directora Ejecutiva de Administración</p>
