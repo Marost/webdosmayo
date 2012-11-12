@@ -20,6 +20,10 @@ $noticia_contenido=$fila_noticia["contenido"];
 $noticia_imagen=$fila_noticia["imagen"];
 $noticia_imagen_carpeta=$fila_noticia["carpeta_imagen"];
 
+/*NOTICIA - SLIDE*/
+$rst_noticia_slide=mysql_query("SELECT * FROM DM_noticia_slide WHERE noticia=$url_noticia_id ORDER BY orden ASC;", $conexion);
+$num_noticia_slide=mysql_fetch_array($rst_noticia_slide);
+
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -76,22 +80,21 @@ $noticia_imagen_carpeta=$fila_noticia["carpeta_imagen"];
                                 <?php echo $noticia_contenido; ?>
                             </div>
 
+                            <?php if($num_noticia_slide>0){ ?>
                             <div class="imagen_slide" style="display:none;">
                                 <ul class="allinone_bannerWithPlaylist_list">   
-                                    <li data-bottom-thumb="">
-                                      <img src="" alt="" /></li>
-                                    <li data-bottom-thumb="">
-                                      <img src="" alt="" /></li>
-                                    <li data-bottom-thumb="">
-                                      <img src="" alt="" /></li>
-                                    <li data-bottom-thumb="">
-                                      <img src="" alt="" /></li>
-                                    <li data-bottom-thumb="">
-                                      <img src="" alt="" /></li>
-                                    <li data-bottom-thumb="">
-                                      <img src="" alt="" /></li>
+                                    <?php while ($fila_noticia_slide=mysql_fetch_array($rst_noticia_slide)){
+                                        /*VARIABLES DE SLIDE*/
+                                        $noticia_slide_id=$fila_noticia_slide["id"];
+                                        $noticia_slide_imagen=$fila_noticia_slide["imagen"];
+                                        $noticia_slide_imagen_carpeta=$fila_noticia_slide["carpeta"];
+                                    ?>
+                                        <li data-bottom-thumb="/imagenes/upload/<?php echo $noticia_slide_imagen_carpeta."thumb/".$noticia_slide_imagen; ?>">
+                                      <img src="/imagenes/upload/<?php echo $noticia_slide_imagen_carpeta."".$noticia_slide_imagen; ?>" alt="" /></li>
+                                    <?php } ?>
                                 </ul>
                             </div>
+                            <?php } ?>
 
                         </div>
 
