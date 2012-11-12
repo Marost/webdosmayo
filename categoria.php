@@ -14,7 +14,7 @@ $fila_categoria=mysql_fetch_array($rst_categoria);
 
 /*VARIABLES DE CATEGORIA*/
 $categoria_id=$fila_categoria["id"];
-$categoria_titulo=$fila_categoria["titulo"];
+$categoria_titulo=$fila_categoria["categoria"];
 
 /*LISTA DE NOTICIAS*/
 $rst_noticias=mysql_query("SELECT * FROM DM_noticia WHERE categoria=$categoria_id;", $conexion);
