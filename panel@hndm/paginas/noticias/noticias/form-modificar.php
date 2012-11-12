@@ -8,16 +8,6 @@ include("../../../conexion/verificar_sesion.php");
 $rst_query=mysql_query("SELECT * FROM ".$tabla_suf."_noticia WHERE id=". $_REQUEST["id"].";", $conexion);
 $fila_query=mysql_fetch_array($rst_query);
 
-//CATEGORIA
-$rst_categoria=mysql_query("SELECT * FROM ".$tabla_suf."_noticia_categoria WHERE id>0 ORDER BY categoria ASC;", $conexion);
-
-//PUBLICAR
-$rst_comentarios=mysql_query("SELECT * FROM ".$tabla_suf."_publicar WHERE id>0 ORDER BY id ASC;", $conexion);
-
-//TAGS
-$tags=explode(",", $fila_query["tags"]);	//SEPARACION DE ARRAY CON COMAS
-$rst_tags=mysql_query("SELECT * FROM ".$tabla_suf."_noticia_tags WHERE id>0 ORDER BY nombre ASC;", $conexion);
-
 //VARIABLES PARA LA HORA
 $fechaTotal=$fila_query["fecha_publicacion"];
 $fecha=explode(" ", $fechaTotal);
@@ -37,23 +27,20 @@ $hora_actual=$hora[0].":".$hora[1];
 <!-- CKEDITOR -->
 <script src="../../../js/ckeditor/ckeditor.js" type="text/javascript"></script>
 
-<!-- VIDEO -->
-<script type="text/javascript" src="../../../../js/flowplayer-3.2.6.min.js"></script>
-
 <!-- SPRY -->
-<script src="../../../../SpryAssets/SpryValidationSelect.js" type="text/javascript"></script>
-<script src="../../../../SpryAssets/SpryTabbedPanels.js" type="text/javascript"></script>
-<link href="../../../../SpryAssets/SpryValidationSelect.css" rel="stylesheet" type="text/css" />
-<link href="../../../../SpryAssets/SpryTabbedPanels.css" rel="stylesheet" type="text/css" />
-<link href="../../../../SpryAssets/SpryValidationTextField.css" rel="stylesheet" type="text/css" />
-<script src="../../../../SpryAssets/SpryValidationTextField.js" type="text/javascript"></script>
+<script src="/SpryAssets/SpryValidationSelect.js" type="text/javascript"></script>
+<script src="/SpryAssets/SpryTabbedPanels.js" type="text/javascript"></script>
+<link href="/SpryAssets/SpryValidationSelect.css" rel="stylesheet" type="text/css" />
+<link href="/SpryAssets/SpryTabbedPanels.css" rel="stylesheet" type="text/css" />
+<link href="/SpryAssets/SpryValidationTextField.css" rel="stylesheet" type="text/css" />
+<script src="/SpryAssets/SpryValidationTextField.js" type="text/javascript"></script>
 
 <!-- FECHA -->
-<link type="text/css" href="../../../../js/themes/base/jquery.ui.all.css" rel="stylesheet" />
-<script type="text/javascript" src="../../../../js/jquery-1.4.2.js"></script>
-<script type="text/javascript" src="../../../../js/ui/jquery.ui.core.js"></script>
-<script type="text/javascript" src="../../../../js/ui/jquery.ui.widget.js"></script>
-<script type="text/javascript" src="../../../../js/ui/jquery.ui.datepicker.js"></script>
+<link type="text/css" href="/js/themes/base/jquery.ui.all.css" rel="stylesheet" />
+<script type="text/javascript" src="/js/jquery-1.4.2.js"></script>
+<script type="text/javascript" src="/js/ui/jquery.ui.core.js"></script>
+<script type="text/javascript" src="/js/ui/jquery.ui.widget.js"></script>
+<script type="text/javascript" src="/js/ui/jquery.ui.datepicker.js"></script>
 <script type="text/javascript">
 var jfec = jQuery.noConflict();
 jfec(function() {
@@ -83,13 +70,6 @@ jq(function() {
 		chunk_size : '1mb', unique_names : true,
 		filters : [ {title : "Image files", extensions : "jpg,gif,png"}],
 		resize : {width : 620, height : 390, quality : 100},
-		flash_swf_url : '../../../js/plupload/plupload.flash.swf'
-	});
-	
-	jq("#video_uploader").pluploadQueue({
-		runtimes : 'flash', url : 'upload_video.php', max_file_size : '150mb',
-		chunk_size : '1mb', unique_names : true,
-		filters : [ {title : "(.flv) | (.mp3) | (.mp4)", extensions : "flv,mp3,mp4"}],
 		flash_swf_url : '../../../js/plupload/plupload.flash.swf'
 	});
 	
@@ -136,8 +116,6 @@ jq(function() {
             	      <td colspan="2"><div id="TabbedPanels1" class="TabbedPanels">
             	        <ul class="TabbedPanelsTabGroup">
             	          <li class="TabbedPanelsTab" tabindex="0">Imagen</li>
-                          <li class="TabbedPanelsTab" tabindex="0">Video</li>
-                          <li class="TabbedPanelsTab" tabindex="0">Tags</li>
             	        </ul>
             	        <div class="TabbedPanelsContentGroup">
             	          <div class="TabbedPanelsContent">
@@ -164,168 +142,18 @@ jq(function() {
           	                </tr>
             	              <tr>
             	                <td colspan="2">
-                                <p align="left"><strong>Selecciona una imagen para la noticia:</strong></p>
-                        <div>
-                        <div id="flash_uploader" style="width: 450px; height: 330px;">
-                        You browser doesn't have Flash installed.</div>
-                        </div>
+                                  <p align="left"><strong>Selecciona una imagen para la noticia:</strong></p>
+                                  <div>
+                                  <div id="flash_uploader" style="width: 450px; height: 330px;">
+                                  You browser doesn't have Flash installed.</div>
+                                  </div>
                                 </td>
             	                </tr>
           	              </table>
             	          </div>
-                          <div class="TabbedPanelsContent">
-                            <table width="80%" border="0" align="center" cellpadding="5" cellspacing="0">
-                              <tr>
-                                <td colspan="2"><p> <strong>
-                                  <label for="tipo_multimedia_video">
-                                    <?php if($fila_query["mostrar_video"]==1){ ?>
-                                    <input name="tipo_multimedia" type="radio" id="tipo_multimedia_video" value="video" checked="checked" />
-                                    <?php }else{ ?>
-                                    <input name="tipo_multimedia" type="radio" id="tipo_multimedia_video" value="video" />
-                                    <?php } ?>
-                                    Mostrar video</label>
-                                </strong></p></td>
-                                </tr>
-                              <tr>
-                                <td width="23%"><p> <strong>
-                                  <label>
-                                    <?php if($fila_query["tipo_video"]=="youtube"){ ?>
-                                    <input name="video" type="radio" value="youtube" checked="checked" />
-                                    <?php }else{ ?>
-                                    <input name="video" type="radio" value="youtube" />
-                                    <?php } ?>
-                                    Youtube</label>
-                                  &nbsp;</strong></p></td>
-                                <td width="77%"><p>http://www.youtube.com/watch?v=
-                                  <?php if($fila_query["tipo_video"]=="youtube"){ ?>
-                                  <input name="video-youtube" type="text" id="video-youtube" value="<?php echo $fila_query["video"] ?>" size="30" />
-                                  <?php }else{ ?>
-                                  <input name="video-youtube" type="text" id="video-youtube" size="30" />
-                                  <?php } ?>
-                                </p>
-                                  <p class="texto-ejemplo"> Ejemplo:   http://www.youtube.com/watch?v=<strong>XL-Q_JtBbz8</strong></p></td>
-                              </tr>
-                              <tr>
-                                <td width="23%"><p> <strong>
-                                  <label>
-                                    <?php if($fila_query["tipo_video"]=="vimeo"){ ?>
-                                    <input name="video" type="radio" value="vimeo" checked="checked" />
-                                    <?php }else{ ?>
-                                    <input name="video" type="radio" value="vimeo" />
-                                    <?php } ?>
-                                    Vimeo</label>
-                                </strong></p></td>
-                                <td><p>http://vimeo.com/
-                                  <?php if($fila_query["tipo_video"]=="vimeo"){ ?>
-                                  <input name="video-vimeo" type="text" id="video-vimeo" value="<?php echo $fila_query["video"] ?>" size="30" />
-                                  <?php }else{ ?>
-                                  <input name="video-vimeo" type="text" id="video-vimeo" size="30" />
-                                  <?php } ?>
-                                </p>
-                                  <p class="texto-ejemplo"> Ejemplo: http://vimeo.com/<strong>18625012</strong></p></td>
-                              </tr>
-                              <tr>
-                                <td width="23%"><p> <strong>
-                                  <label>
-                                    <?php if($fila_query["tipo_video"]=="dailymotion"){ ?>
-                                    <input name="video" type="radio" value="dailymotion" checked="checked" />
-                                    <?php }else{ ?>
-                                    <input name="video" type="radio" value="dailymotion" />
-                                    <?php } ?>
-                                    Dailymotion</label>
-                                  &nbsp;</strong></p></td>
-                                <td><p> http://www.dailymotion.com/video/
-                                  <?php if($fila_query["tipo_video"]=="dailymotion"){ ?>
-                                  <input name="video-dailymotion" type="text" id="video-dailymotion" value="<?php echo $fila_query["video"] ?>" size="30" />
-                                  <?php }else{ ?>
-                                  <input name="video-dailymotion" type="text" id="video-dailymotion" size="30" />
-                                  <?php } ?>
-                                </p>
-                                  <p class="texto-ejemplo">Ejemplo:   http://www.dailymotion.com/video/<strong>xgl1hb</strong>_nombre-video</p></td>
-                              </tr>
-                              <tr>
-                                <td width="23%"><p> <strong>
-                                  <label>
-                                    <?php if($fila_query["tipo_video"]=="flv"){ ?>
-                                    <input name="video" type="radio" value="flv" checked="checked"/>
-                                    <?php }else{ ?>
-                                    <input name="video" type="radio" value="flv" />
-                                    <?php } ?>
-                                    FLV</label>
-                                  &nbsp;</strong></p></td>
-                                <td><p>
-                                  <?php if($fila_query["tipo_video"]=="flv"){ ?>
-                                  <input name="video_actual" type="hidden" id="video_actual" value="<?php echo $fila_query["video"] ?>" />
-                                  <?php }else{ ?>
-                                  <input name="video_actual" type="hidden" id="video_actual" />
-                                  <?php } ?>
-                                  <input name="carpeta_video" type="hidden" id="carpeta_video" value="<?php echo $fila_query["carpeta_video"] ?>" />
-                                </p></td>
-                              </tr>
-                              <tr>
-                                <td colspan="2">
-                                	<div id="video_uploader" style="width: 450px; height: 330px;">You browser doesn't have Flash installed.</div>
-                                </td>
-                                </tr>
-                              <tr>
-                                <td align="right"><p><strong>Video actual:</strong></p></td>
-                                <td>&nbsp;</td>
-                              </tr>
-                              <tr>
-                                <td align="right">&nbsp;</td>
-                                <td>
-                                	<?php echo 
-                                tipoVideo($fila_query["tipo_video"], 
-                                $fila_query["carpeta_video"],
-                                $fila_query["video"],
-                                $fila_query["imagen"],
-                                $fila_query["carpeta_imagen"],
-                                $fila_query["id"], 400, 260, $fila_empresa["web"]) ?>
-                                </td>
-                              </tr>
-                            </table>
-                          </div>
-                          <div class="TabbedPanelsContent">
-<?php while($fila_tags=mysql_fetch_array($rst_tags)){ if(in_array($fila_tags["id"], $tags)){ ?>
-<div class="item_checkbox">
-	<label> <input type="checkbox" name="tags[]" value="<?php echo $fila_tags["id"] ?>" id="item_tags" checked="checked" /><?php echo $fila_tags["nombre"] ?></label></div>
-<?php }else{ ?>
-<div class="item_checkbox">
-	<label><input type="checkbox" name="tags[]" value="<?php echo $fila_tags["id"] ?>" id="item_tags" /><?php echo $fila_tags["nombre"] ?></label>
-</div>
-<?php }}  ?>
-                          </div>
             	        </div>
           	        </div></td>
            	        </tr>
-            	    <tr>
-            	      <td align="right"><p><strong>Categoria:</strong></p></td>
-            	      <td><p><span id="spryselect">
-            	        <select name="categoria" id="categoria">
-            	          <option value="0">[ Seleccionar opcion ]</option>
-            	          <?php while ($fila_categoria=mysql_fetch_array($rst_categoria)){
-                                if ($fila_categoria["id"]==$fila_query["categoria"]){
-                                    echo "<option selected=''  value='". $fila_categoria["id"] ."'>". $fila_categoria["categoria"] ."</option>";
-								}else{
-                                    echo "<option value='". $fila_categoria["id"] ."'>". $fila_categoria["categoria"] ."</option>";
-                            }} ?>
-          	          </select>
-            	        <span class="selectInvalidMsg">Selecciona una opci&oacute;n.</span><span class="selectRequiredMsg">Seleccione una categoria</span></span></p></td>
-          	      </tr>
-            	    <tr>
-            	      <td align="right"><p><strong>Comentarios:</strong></p></td>
-            	      <td><p><span id="spryselect2">
-            	        <select name="comentarios" id="comentarios">
-            	          <option value="0">[ Seleccionar opcion ]</option>
-            	          <?php while ($fila_comentarios=mysql_fetch_array($rst_comentarios)){
-                                if ($fila_comentarios["id"]==$fila_query["comentarios"]){
-                                    echo "<option selected='' value='".$fila_comentarios["id"]."'>".$fila_comentarios["publicar"] ."</option>";
-								}else{
-                                    echo "<option value='".$fila_comentarios["id"]."'>".$fila_comentarios["publicar"]."</option>";
-                            }} ?>
-          	          </select>
-            	        <span class="selectInvalidMsg">Selecciona una opci&oacute;n.</span><span class="selectRequiredMsg">Seleccione una categoria</span></span></p></td>
-          	      </tr>
             	    <tr>
             	      <td align="right" ><p><strong>Fecha publicación:</strong></p></td>
             	      <td><input name="fecha" type="text" id="fecha" value="<?php echo $fecha_actual; ?>" size="20" /></td>
@@ -337,21 +165,11 @@ jq(function() {
             	        <span class="textfieldRequiredMsg">Ingrese la hora a publicar</span> <span class="textfieldInvalidFormatMsg">Formato no válido.</span></span></td>
           	      </tr>
             	    <tr>
-            	      <td align="right" ><p><strong>Mover noticia a:</strong></p></td>
-            	      <td><p>
-            	        <label for="checkbox"></label>
-                        <select name="mover_noticia" id="mover_noticia">
-                          <option value="ninguno">Ninguno</option>
-                          <option value="not_mes">Noticia del Mes</option>
-                        </select>
-            	      </p></td>
-          	      </tr>
-            	    <tr>
-            	      <td colspan="2" align="center"><label>
+            	      <td colspan="2" align="center">
             	        <input type="submit" name="guardar" id="guardar" value="Guardar" />
-            	        &nbsp;
-            	        <input type="reset" name="button2" id="button2" value="Limpiar Datos" />
-           	          </label></td>
+            	        <input type="reset" name="borrar" id="borrar" value="Limpiar Datos" />
+                      <input type="hidden" name="categoria" value="1">
+           	          </td>
           	      </tr>
               </table>
                 </form>
