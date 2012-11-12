@@ -16,7 +16,7 @@
     <div id="contenido">
     	<div id="content_login">
         	<div id="img_login">
-           	  <img src="../imagenes/logo_v312.png" alt="" width="297" />
+           	  <img src="../imagenes/logo.png" alt="" width="297" />
 			</div><!-- FIN IMAGEN LOGIN -->
             <div id="formulario_login">
 <form action="conexion/verificar.php" method="post">
