@@ -457,13 +457,9 @@ skins available:
 
 
 /* Corner radius */
-.allinone_bannerWithPlaylist.easy .slider-vertical.ui-corner-all {}
-
-
-
-
-
-
+.allinone_bannerWithPlaylist.easy .slider-vertical.ui-corner-all {
+	width: 360px;
+}
 
 /***ELEGANT TEXTS***/
 
