@@ -1,7 +1,7 @@
-<script type="text/javascript" src="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>js/jquery-1.2.6.js"></script>
-<script type="text/javascript" src="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>js/jscript_jquery.dimensions.js"></script>
-<script type="text/javascript" src="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>js/jscript_jquery.mousewheel.min.js"></script>
-<script type="text/javascript" src="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>js/jscript_jzScrollHorizontalPane.js"></script>
+<script type="text/javascript" src="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/js/jquery-1.2.6.js"></script>
+<script type="text/javascript" src="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/js/jscript_jquery.dimensions.js"></script>
+<script type="text/javascript" src="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/js/jscript_jquery.mousewheel.min.js"></script>
+<script type="text/javascript" src="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/js/jscript_jzScrollHorizontalPane.js"></script>
 <script type="text/javascript">
 var jmnpr = jQuery.noConflict();
 jmnpr(document).ready(function(){
@@ -26,24 +26,33 @@ jmnpr(document).ready(function(){
 
 <dl id="nav">
 
-  <dt class="items"><b>Noticias</b></dt>
+  <dt class="items"><b>Opciones</b></dt>
   <dd>
     <ul class="items">
       <li>
-      	<a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/slide_superior/listar.php">
-        	Slide Superior</a></li>
+        <a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/noticias/alianzas/listar.php">
+          Alianzas</a></li>
       <li>
-      	<a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/noticias/noticias_superior/listar.php">
-        	Noticia del Mes</a></li>
+        <a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/noticias/apoyo-diagnostico/listar.php">
+          Apoyo al Diagnóstico</a></li>
       <li>
-      	<a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/noticias/noticias/listar.php">
-        	Noticia</a></li>
+        <a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/noticias/capacitacion/listar.php">
+          Capacitación</a></li>
       <li>
-      	<a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/noticias/categorias/listar.php">
-        	Categorias</a></li>
+        <a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/noticias/equipos-tecnologia/listar.php">
+          Equipos de Última Tecnología</a></li>
       <li>
-      	<a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/noticias/tags/listar.php">
-        	Tags</a></li>
+      	<a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/noticias/especialidades/listar.php">
+        	Especialides</a></li>
+      <li>
+        <a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/noticias/notiicas/listar.php">
+          Noticias</a></li>
+      <li>
+      	<a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/noticias/proezas-medicas/listar.php">
+        	Proezas Médicas</a></li>      
+      <li>
+        <a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/noticias/reconocimientos-institucionales/listar.php">
+          Reconocimientos Institucionales</a></li>
     </ul>
   </dd>
   <dt class="items"><b>Videos</b></dt>
@@ -57,15 +66,15 @@ jmnpr(document).ready(function(){
         	Listar</a></li>
     </ul>
   </dd>
-  <dt class="items"><b>Editorial</b></dt>
+  <dt class="items"><b>Campañas Especiales</b></dt>
   <dd>
     <ul class="items">
       <li>
-      	<a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/columnistas/form-agregar.php">
-        	Agregar</a></li>
+        <a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/videos/form-agregar.php">
+          Agregar</a></li>
       <li>
-      	<a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/columnistas/listar.php">
-        	Listar</a></li>
+        <a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/videos/listar.php">
+          Listar</a></li>
     </ul>
   </dd>
   <dt class="items"><b>Galeria</b></dt>
@@ -79,28 +88,6 @@ jmnpr(document).ready(function(){
         	Listar</a></li>
     </ul>
   </dd>
-  <dt class="items"><b>Mensajes</b></dt>
-  <dd>
-    <ul class="items">
-      <li>
-      	<a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/noticias/cartas/listar_sr.php">
-        	Cartas</a></li>
-      <li>
-      	<a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/noticias/saludos/listar.php">
-        	Saludos</a></li>
-    </ul>
-  </dd>
-  <dt class="items"><b>Sorteo</b></dt>
-  <dd>
-    <ul class="items">
-      <li>
-      	<a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/noticias/sorteo/form-agregar.php">
-        	Agregar</a></li>
-      <li>
-      	<a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/noticias/sorteo/listar.php">
-        	Listar</a></li>
-    </ul>
-  </dd>
   <div class="espacio"></div>
   <dt class="items"><b>Usuario</b></dt>
   <dd>
@@ -111,15 +98,6 @@ jmnpr(document).ready(function(){
       <li>
       	<a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/usuarios/administracion/listar.php">
         	Listar</a></li>
-    </ul>
-  </dd>
-  <div class="espacio"></div>
-  <dt class="items"><b>Web</b></dt>
-  <dd>
-    <ul>
-      <li>
-      	<a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/usuarios/web/listar.php">
-        	Usuarios</a></li>
     </ul>
   </dd>
 </dl>
