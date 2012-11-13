@@ -103,6 +103,8 @@ $rst_noticias_ant=mysql_query("SELECT * FROM DM_noticia WHERE categoria=$noticia
 
                         </div>
 
+                        <?php if($noticia_categoria<>2 or $noticia_categoria<>5){ ?>
+
                         <div class="nw-nota">
 
                             <h4>Noticias anteriores</h4>
@@ -121,6 +123,8 @@ $rst_noticias_ant=mysql_query("SELECT * FROM DM_noticia WHERE categoria=$noticia
                             </div>
 
                         </div>
+
+                        <?php } ?>
 
                     </section>
 
