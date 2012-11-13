@@ -1,4 +1,5 @@
 <?php
+require_once("../../conexion/conexion.php");
 
 /** This file is part of KCFinder project
   *
@@ -26,7 +27,7 @@ $_CONFIG = array(
     'theme' => "oxygen",
 
     'uploadURL' => "upload",
-    'uploadDir' => "",
+    'uploadDir' => $web."imagenes/uploadhndm",
 
     'dirPerms' => 0755,
     'filePerms' => 0644,
