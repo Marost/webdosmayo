@@ -44,91 +44,91 @@ require_once("../panel@hndm/conexion/funcion-paginacion.php");
 
                             <div class="contenido">
 
-                                <table width="450" border="1" cellpadding="3" cellspacing="0">
+                                <table width="450" border="0" align="center" cellpadding="3" cellspacing="3">
                                   <tr>
-                                    <td width="46" align="center" bgcolor="#00B0F0"><strong>N°</strong></td>
-                                    <td width="134" align="center" bgcolor="#00B0F0"><strong>Nº DE TELEF</strong></td>
-                                    <td width="268" bgcolor="#00B0F0"><strong>OFICINA </strong></td>
+                                    <td width="46" align="center" bgcolor="#2D65AE"><strong>N°</strong></td>
+                                    <td width="134" align="center" bgcolor="#2D65AE"><strong>Nº DE TELEF</strong></td>
+                                    <td width="268" bgcolor="#2D65AE"><strong>OFICINA </strong></td>
                                   </tr>
                                   <tr>
-                                    <td width="46" align="center">1</td>
-                                    <td width="134" align="center">3281420</td>
-                                    <td width="268">Central    Telefónica</td>
+                                    <td width="46" align="center" bgcolor="#DADADA">1</td>
+                                    <td width="134" align="center" bgcolor="#DADADA">3281420</td>
+                                    <td width="268" bgcolor="#DADADA">Central    Telefónica</td>
                                   </tr>
                                   <tr>
-                                    <td width="46" align="center">2</td>
-                                    <td width="134" align="center">3280028</td>
-                                    <td width="268">Central    Telefónica</td>
+                                    <td width="46" align="center" bgcolor="#DADADA">2</td>
+                                    <td width="134" align="center" bgcolor="#DADADA">3280028</td>
+                                    <td width="268" bgcolor="#DADADA">Central    Telefónica</td>
                                   </tr>
                                   <tr>
-                                    <td width="46" align="center">3</td>
-                                    <td width="134" align="center">3281414</td>
-                                    <td width="268">Dirección    General (telefax)</td>
+                                    <td width="46" align="center" bgcolor="#DADADA">3</td>
+                                    <td width="134" align="center" bgcolor="#DADADA">3281414</td>
+                                    <td width="268" bgcolor="#DADADA">Dirección    General (telefax)</td>
                                   </tr>
                                   <tr>
-                                    <td width="46" align="center">4</td>
-                                    <td width="134" align="center">3281421</td>
-                                    <td width="268">Dirección    General Adjunta</td>
+                                    <td width="46" align="center" bgcolor="#DADADA">4</td>
+                                    <td width="134" align="center" bgcolor="#DADADA">3281421</td>
+                                    <td width="268" bgcolor="#DADADA">Dirección    General Adjunta</td>
                                   </tr>
                                   <tr>
-                                    <td width="46" align="center">5</td>
-                                    <td width="134" align="center">3281434</td>
-                                    <td width="268">Dirección    Ejecutiva de Administración</td>
+                                    <td width="46" align="center" bgcolor="#DADADA">5</td>
+                                    <td width="134" align="center" bgcolor="#DADADA">3281434</td>
+                                    <td width="268" bgcolor="#DADADA">Dirección    Ejecutiva de Administración</td>
                                   </tr>
                                   <tr>
-                                    <td width="46" align="center">6</td>
-                                    <td width="134" align="center">3281488</td>
-                                    <td width="268">Oficina de    Seguros</td>
+                                    <td width="46" align="center" bgcolor="#DADADA">6</td>
+                                    <td width="134" align="center" bgcolor="#DADADA">3281488</td>
+                                    <td width="268" bgcolor="#DADADA">Oficina de    Seguros</td>
                                   </tr>
                                   <tr>
-                                    <td width="46" align="center">7</td>
-                                    <td width="134" align="center">3287676</td>
-                                    <td width="268">Oficina de    Seguros (2° piso)</td>
+                                    <td width="46" align="center" bgcolor="#DADADA">7</td>
+                                    <td width="134" align="center" bgcolor="#DADADA">3287676</td>
+                                    <td width="268" bgcolor="#DADADA">Oficina de    Seguros (2° piso)</td>
                                   </tr>
                                   <tr>
-                                    <td width="46" align="center">8</td>
-                                    <td width="134" align="center">3284444</td>
-                                    <td width="268">Logística    (Programación)</td>
+                                    <td width="46" align="center" bgcolor="#DADADA">8</td>
+                                    <td width="134" align="center" bgcolor="#DADADA">3284444</td>
+                                    <td width="268" bgcolor="#DADADA">Logística    (Programación)</td>
                                   </tr>
                                   <tr>
-                                    <td width="46" align="center">9</td>
-                                    <td width="134" align="center">3281330</td>
-                                    <td width="268">Logística    (Adqusisiciones)</td>
+                                    <td width="46" align="center" bgcolor="#DADADA">9</td>
+                                    <td width="134" align="center" bgcolor="#DADADA">3281330</td>
+                                    <td width="268" bgcolor="#DADADA">Logística    (Adqusisiciones)</td>
                                   </tr>
                                   <tr>
-                                    <td width="46" align="center">10</td>
-                                    <td width="134" align="center">3287272</td>
-                                    <td width="268">Personal</td>
+                                    <td width="46" align="center" bgcolor="#DADADA">10</td>
+                                    <td width="134" align="center" bgcolor="#DADADA">3287272</td>
+                                    <td width="268" bgcolor="#DADADA">Personal</td>
                                   </tr>
                                   <tr>
-                                    <td width="46" align="center">11</td>
-                                    <td width="134" align="center">3281340</td>
-                                    <td width="268">Economía</td>
+                                    <td width="46" align="center" bgcolor="#DADADA">11</td>
+                                    <td width="134" align="center" bgcolor="#DADADA">3281340</td>
+                                    <td width="268" bgcolor="#DADADA">Economía</td>
                                   </tr>
                                   <tr>
-                                    <td width="46" align="center">12</td>
-                                    <td width="134" align="center">3288960</td>
-                                    <td width="268">Epidemiología</td>
+                                    <td width="46" align="center" bgcolor="#DADADA">12</td>
+                                    <td width="134" align="center" bgcolor="#DADADA">3288960</td>
+                                    <td width="268" bgcolor="#DADADA">Epidemiología</td>
                                   </tr>
                                   <tr>
-                                    <td width="46" align="center">13</td>
-                                    <td width="134" align="center">3287474</td>
-                                    <td width="268">Planeamiento</td>
+                                    <td width="46" align="center" bgcolor="#DADADA">13</td>
+                                    <td width="134" align="center" bgcolor="#DADADA">3287474</td>
+                                    <td width="268" bgcolor="#DADADA">Planeamiento</td>
                                   </tr>
                                   <tr>
-                                    <td width="46" align="center">14</td>
-                                    <td width="134" align="center">3280124</td>
-                                    <td width="268">Capacitación</td>
+                                    <td width="46" align="center" bgcolor="#DADADA">14</td>
+                                    <td width="134" align="center" bgcolor="#DADADA">3280124</td>
+                                    <td width="268" bgcolor="#DADADA">Capacitación</td>
                                   </tr>
                                   <tr>
-                                    <td width="46" align="center">15</td>
-                                    <td width="134" align="center">3281424</td>
-                                    <td width="268">Emergencia</td>
+                                    <td width="46" align="center" bgcolor="#DADADA">15</td>
+                                    <td width="134" align="center" bgcolor="#DADADA">3281424</td>
+                                    <td width="268" bgcolor="#DADADA">Emergencia</td>
                                   </tr>
                                   <tr>
-                                    <td width="46" align="center">16</td>
-                                    <td width="134" align="center">3280887</td>
-                                    <td width="268">Comunicaciones</td>
+                                    <td width="46" align="center" bgcolor="#DADADA">16</td>
+                                    <td width="134" align="center" bgcolor="#DADADA">3280887</td>
+                                    <td width="268" bgcolor="#DADADA">Comunicaciones</td>
                                   </tr>
                                 </table><br><br>
 
