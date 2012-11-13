@@ -68,7 +68,7 @@ $rst_noticias_ant=mysql_query("SELECT * FROM DM_noticia WHERE categoria=$noticia
 
                     <section id="news">
 
-                        <div class="nw-nota borde_bottom">
+                        <div class="nw-nota borde-bottom">
 
                             <div class="titulo">
                                 <h2><?php echo $noticia_titulo; ?></h2>
