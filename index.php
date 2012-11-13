@@ -20,20 +20,20 @@ $cont_pro_medic=1;
 
 
 /*CAPACITACION*/
-$rst_capacit=mysql_query("SELECT * FROM DM_noticia WHERE categoria=3 ORDER BY fecha_publicacion DESC LIMIT 2;", $conexion);
+$rst_capacit=mysql_query("SELECT * FROM DM_noticia WHERE categoria=3 ORDER BY fecha_publicacion DESC LIMIT 1;", $conexion);
 $fila_capacit=mysql_fetch_array($rst_capacit);
-$capacit_id=$capacit_medic["id"];
-$capacit_url=$capacit_medic["url"];
-$capacit_titulo=substr($capacit_medic["titulo"],0,45)."...";
-$capacit_contenido=substr(soloDescripcion($capacit_medic["contenido"]),0,130)."...";
-$capacit_imagen=$capacit_medic["imagen"];
-$capacit_imagen_carpeta=$capacit_medic["carpeta_imagen"];
+$capacit_id=$fila_capacit["id"];
+$capacit_url=$fila_capacit["url"];
+$capacit_titulo=substr($fila_capacit["titulo"],0,45)."...";
+$capacit_contenido=substr(soloDescripcion($fila_capacit["contenido"]),0,130)."...";
+$capacit_imagen=$fila_capacit["imagen"];
+$capacit_imagen_carpeta=$fila_capacit["carpeta_imagen"];
 $capacit_categoria=seleccionTabla(3, "id", "DM_noticia_categoria", $conexion);
 $capacit_url_final=$capacit_categoria["url"]."/".$capacit_id."-".$capacit_url;
 
 
 /*RECONOCIMIENTOS INSTITUCIONALES*/
-$rst_recon_inst=mysql_query("SELECT * FROM DM_noticia WHERE categoria=8 ORDER BY fecha_publicacion DESC LIMIT 2;", $conexion);
+$rst_recon_inst=mysql_query("SELECT * FROM DM_noticia WHERE categoria=8 ORDER BY fecha_publicacion DESC LIMIT 1;", $conexion);
 $fila_recon_inst=mysql_fetch_array($rst_recon_inst);
 $recon_inst_id=$fila_recon_inst["id"];
 $recon_inst_url=$fila_recon_instc["url"];
@@ -51,12 +51,12 @@ $cont_noticias=1;
 
 
 /*ALIANZAS*/
-$rst_alianzas=mysql_query("SELECT * FROM DM_noticia WHERE categoria=1 ORDER BY fecha_publicacion DESC LIMIT 2;", $conexion);
+$rst_alianzas=mysql_query("SELECT * FROM DM_noticia WHERE categoria=1 ORDER BY fecha_publicacion DESC LIMIT 1;", $conexion);
 $fila_alianzas=mysql_fetch_array($rst_alianzas);
 $alianzas_id=$fila_alianzas["id"];
 $alianzas_url=$fila_alianzas["url"];
-$alianzas_titulo=substr($fila_alianzas["titulo"],0,60)."...";
-$alianzas_contenido=substr(soloDescripcion($fila_alianzas["contenido"]),0,225)."...";
+$alianzas_titulo=substr($fila_alianzas["titulo"],0,45)."...";
+$alianzas_contenido=substr(soloDescripcion($fila_alianzas["contenido"]),0,130)."...";
 $alianzas_imagen=$fila_alianzas["imagen"];
 $alianzas_imagen_carpeta=$fila_alianzas["carpeta_imagen"];
 $alianzas_categoria=seleccionTabla(1, "id", "DM_noticia_categoria", $conexion);
@@ -256,7 +256,7 @@ $alianzas_url_final=$alianzas_categoria["url"]."/".$alianzas_id."-".$alianzas_ur
                                         $noticias_contenido=substr(soloDescripcion($fila_noticias["contenido"]),0,225)."...";
                                         $noticias_imagen=$fila_noticias["imagen"];
                                         $noticias_imagen_carpeta=$fila_noticias["carpeta_imagen"];
-                                        $noticias_categoria=seleccionTabla(4, "id", "DM_noticia_categoria", $conexion);
+                                        $noticias_categoria=seleccionTabla(1, "id", "DM_noticia_categoria", $conexion);
                                         $noticias_url_final=$noticias_categoria["url"]."/".$noticias_id."-".$noticias_url;
                                     ?>
 
@@ -265,7 +265,7 @@ $alianzas_url_final=$alianzas_categoria["url"]."/".$alianzas_id."-".$alianzas_ur
 
                                             <h2><a href="<?php echo $noticias_url_final; ?>"><?php echo $noticias_titulo; ?></a></h2>
                                             <div class="slider-bxslider">
-                                                <img width="370" height="220" alt="" title=" " src="/imagenes/upload/<?php echo $noticias_imagen_carpeta."thumb/".$noticias_imagen; ?>">
+                                                <img width="370" height="130" alt="" title=" " src="/imagenes/upload/<?php echo $noticias_imagen_carpeta."thumb/".$noticias_imagen; ?>">
                                             </div>
                                             <p><?php echo $noticias_contenido; ?></p>
                                             <a class="art-mas" href="<?php echo $noticias_url_final; ?>">Más...</a>
