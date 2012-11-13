@@ -658,6 +658,9 @@ header nav ul .submenu-prensa li a {
   text-align: center;
   width: 340px;
 }
+#news article.directorio-doctor .datos img {
+  border: 5px solid #999;
+}
 #news article.directorio-doctor .datos div {
   float: left;
   width: 340px;
