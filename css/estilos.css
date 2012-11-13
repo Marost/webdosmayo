@@ -562,6 +562,7 @@ header nav ul .submenu-prensa li a {
   -webkit-border-radius: 10px 10px 0px 0px;
   margin: 0;
   letter-spacing: normal;
+  line-height: normal;
 }
 #news #nwi-pest #nwip-select ul li a:hover {
   background-color: #2D65AE;

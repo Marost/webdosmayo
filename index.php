@@ -7,30 +7,60 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
 /*VARIABLES DE SCRIPTS*/
 $script_popup=true;
 
+
 /*-----------------------*/
 /*EQUIPOS DE ULTIMA TECNOLOGIA*/
 $rst_eq_tecno=mysql_query("SELECT * FROM DM_noticia WHERE categoria=4 ORDER BY fecha_publicacion DESC LIMIT 2;", $conexion);
 $cont_eq_tecno=1;
 
+
 /*PROEZAS MEDICAS*/
 $rst_pro_medic=mysql_query("SELECT * FROM DM_noticia WHERE categoria=7 ORDER BY fecha_publicacion DESC LIMIT 2;", $conexion);
 $cont_pro_medic=1;
 
+
 /*CAPACITACION*/
 $rst_capacit=mysql_query("SELECT * FROM DM_noticia WHERE categoria=3 ORDER BY fecha_publicacion DESC LIMIT 2;", $conexion);
-$cont_capacit=1;
+$fila_capacit=mysql_fetch_array($rst_capacit);
+$capacit_id=$capacit_medic["id"];
+$capacit_url=$capacit_medic["url"];
+$capacit_titulo=substr($capacit_medic["titulo"],0,45)."...";
+$capacit_contenido=substr(soloDescripcion($capacit_medic["contenido"]),0,130)."...";
+$capacit_imagen=$capacit_medic["imagen"];
+$capacit_imagen_carpeta=$capacit_medic["carpeta_imagen"];
+$capacit_categoria=seleccionTabla(3, "id", "DM_noticia_categoria", $conexion);
+$capacit_url_final=$capacit_categoria["url"]."/".$capacit_id."-".$capacit_url;
+
 
 /*RECONOCIMIENTOS INSTITUCIONALES*/
 $rst_recon_inst=mysql_query("SELECT * FROM DM_noticia WHERE categoria=8 ORDER BY fecha_publicacion DESC LIMIT 2;", $conexion);
-$cont_recon_inst=1;
+$fila_recon_inst=mysql_fetch_array($rst_recon_inst);
+$recon_inst_id=$fila_recon_inst["id"];
+$recon_inst_url=$fila_recon_instc["url"];
+$recon_inst_titulo=substr($fila_recon_inst["titulo"],0,65)."...";
+$recon_inst_contenido=substr(soloDescripcion($fila_recon_inst["contenido"]),0,225)."...";
+$recon_inst_imagen=$fila_recon_inst["imagen"];
+$recon_inst_imagen_carpeta=$fila_recon_inst["carpeta_imagen"];
+$recon_inst_categoria=seleccionTabla(8, "id", "DM_noticia_categoria", $conexion);
+$recon_inst_url_final=$recon_inst_categoria["url"]."/".$recon_inst_id."-".$recon_inst_url;
+
 
 /*NOTICIAS*/
 $rst_noticias=mysql_query("SELECT * FROM DM_noticia WHERE categoria=6 ORDER BY fecha_publicacion DESC LIMIT 2;", $conexion);
 $cont_noticias=1;
 
+
 /*ALIANZAS*/
-$rst_recon_inst=mysql_query("SELECT * FROM DM_noticia WHERE categoria=1 ORDER BY fecha_publicacion DESC LIMIT 2;", $conexion);
-$cont_recon_inst=1;
+$rst_alianzas=mysql_query("SELECT * FROM DM_noticia WHERE categoria=1 ORDER BY fecha_publicacion DESC LIMIT 2;", $conexion);
+$fila_alianzas=mysql_fetch_array($rst_alianzas);
+$alianzas_id=$fila_alianzas["id"];
+$alianzas_url=$fila_alianzas["url"];
+$alianzas_titulo=substr($fila_alianzas["titulo"],0,60)."...";
+$alianzas_contenido=substr(soloDescripcion($fila_alianzas["contenido"]),0,225)."...";
+$alianzas_imagen=$fila_alianzas["imagen"];
+$alianzas_imagen_carpeta=$fila_alianzas["carpeta_imagen"];
+$alianzas_categoria=seleccionTabla(1, "id", "DM_noticia_categoria", $conexion);
+$alianzas_url_final=$alianzas_categoria["url"]."/".$alianzas_id."-".$alianzas_url;
 
 ?>
 <!DOCTYPE html>
@@ -90,7 +120,7 @@ $cont_recon_inst=1;
 
                                             <h2><a href="<?php echo $eq_tecno_url_final; ?>"><?php echo $eq_tecno_titulo; ?></a></h2>
                                             <div class="slider-bxslider">
-                                                <img width="370" height="220" alt="" title=" " src="/imagenes/upload/<?php echo $eq_tecno_imagen_carpeta."".$eq_tecno_imagen; ?>">
+                                                <img width="370" height="220" alt="" title=" " src="/imagenes/upload/<?php echo $eq_tecno_imagen_carpeta."thumb/".$eq_tecno_imagen; ?>">
                                             </div>
                                             <p><?php echo $eq_tecno_contenido; ?></p>
                                             <a class="art-mas" href="<?php echo $eq_tecno_url_final; ?>">Más...</a>
@@ -114,26 +144,42 @@ $cont_recon_inst=1;
 
                                 <div class="nwips-container pest-content" id="pest-select-2">
 
-                                    <article class="borde-bottom news-noticia">
+                                    <?php while ($fila_pro_medic=mysql_fetch_array($rst_pro_medic)) { 
+                                        $pro_medic_id=$fila_pro_medic["id"];
+                                        $pro_medic_url=$fila_pro_medic["url"];
+                                        $pro_medic_titulo=substr($fila_pro_medic["titulo"],0,60)."...";
+                                        $pro_medic_contenido=substr(soloDescripcion($fila_pro_medic["contenido"]),0,225)."...";
+                                        $pro_medic_imagen=$fila_pro_medic["imagen"];
+                                        $pro_medic_imagen_carpeta=$fila_pro_medic["carpeta_imagen"];
+                                        $pro_medic_categoria=seleccionTabla(7, "id", "DM_noticia_categoria", $conexion);
+                                        $pro_medic_url_final=$pro_medic_categoria["url"]."/".$pro_medic_id."-".$pro_medic_url;
+                                    ?>
 
-                                        <h2><a href="/notas/nota-proeza-medica-1.php">Cirujanos del Hospital Dos de Mayo reconstruyen rostro...</a></h2>
-                                        <div class="slider-bxslider">
-                                            <img width="370" height="220" alt="" src="/imagenes/upload/proezas-3.jpg" title=" ">
-                                            <img width="370" height="220" alt="" src="/imagenes/upload/proezas-1.jpg" title=" ">
-                                            <img width="370" height="220" alt="" src="/imagenes/upload/proezas-2.jpg" title=" ">                                            
-                                        </div>
-                                        <p>Verónica Liz Llano (25), una humilde madre arequipeña perdió parte de la cara, del lado izquierdo, en un accidente de tránsito y se encuentra internada en el Hospital Nacional “Dos de Mayo”...</p>
-                                        <a class="art-mas" href="">Más...</a>
+                                        <?php if($cont_pro_medic==1){ ?>
+                                            <article class="borde-bottom news-noticia">
 
-                                    </article>
+                                                <h2><a href="<?php echo $pro_medic_url_final; ?>"><?php echo $pro_medic_titulo; ?></a></h2>
+                                                <div class="slider-bxslider">
+                                                    <img width="370" height="220" alt="" title=" " src="/imagenes/upload/<?php echo $pro_medic_imagen_carpeta."thumb/".$pro_medic_imagen; ?>">
+                                                </div>
+                                                <p><?php echo $pro_medic_contenido; ?></p>
+                                                <a class="art-mas" href="<?php echo $pro_medic_url_final; ?>">Más...</a>
 
-                                    <article class="news-noticia">
+                                            </article>
+                                        <?php } ?>
 
-                                        <h2><a href="/notas/nota-proeza-medica-2.php">Joven madre huancavelicana fue operada en Hospital Nacional...</a></h2>
-                                        <p>Madeleine Licas García (22) estuvo internada en el Hospital Nacional “Dos de Mayo” con un tumor en la zona temporal parietal derecha del cráneo. La mujer, madre de dos niños, pidió ayuda para afrontar...</p>
-                                        <a class="art-mas" href="/notas/nota-proeza-medica-2.php">Más...</a>
+                                        <?php if($cont_pro_medic==2){ ?>
+                                            <article class="news-noticia">
 
-                                    </article>
+                                                <h2><a href="<?php echo $pro_medic_url_final; ?>"><?php echo $pro_medic_titulo; ?></a></h2>
+                                                <p><?php echo $pro_medic_contenido; ?></p>
+                                                <a class="art-mas" href="<?php echo $pro_medic_url_final; ?>">Más...</a>
+
+                                            </article>
+                                        <?php } ?>
+
+                                    <?php $cont_pro_medic++;} ?>
+
                                 </div>
                             </div>
 
@@ -145,12 +191,12 @@ $cont_recon_inst=1;
 
                                 <article class="nws-contenido">
 
-                                    <img width="120" height="135" src="/imagenes/upload/nota-capacitacion-slide.jpg">
+                                    <img width="120" height="135" src="/imagenes/upload/<?php echo $capacit_imagen_carpeta."thumb/".$capacit_imagen; ?>">
                                     <div>
-                                        <h2><a href="/notas/nota-capacitacion.php">Trabajadores del HNDM son capacitados...</a></h2>
-                                        <p>El Comité Institucional de Lactancia Materna del HNDM capacita, promueve y difunde los beneficios de la leche materna...</p>
+                                        <h2><a href="<?php echo $capacit_url_final; ?>"><?php echo $capacit_titulo; ?></a></h2>
+                                        <p><?php echo $capacit_contenido; ?></p>
                                     </div>
-                                    <a class="art-mas" href="/notas/nota-capacitacion.php">Más...</a>
+                                    <a class="art-mas" href="<?php echo $capacit_url_final; ?>">Más...</a>
 
                                 </article>
                             </div>
@@ -187,13 +233,12 @@ $cont_recon_inst=1;
 
                                 <article class="news-noticia">
 
-                                    <h2><a href="/notas/nota-reconocimientos-institucionales.php">Reconocen al laboratorio del HNDM en Control de Calidad y altos...</a></h2>
-                                    <p>Por su participación en el Programa de Control de Calidad Interlaboratorial INSIGHT que fue organizado por instituciones internacionales, el laboratorio del Hospital Nacional Dos de Mayo fue reconocido...</p>
+                                    <h2><a href="<?php echo $recon_inst_url_final; ?>"><?php echo $recon_inst_titulo; ?></a></h2>
+                                    <p><?php echo $recon_inst_contenido; ?></p>
                                     <div class="slider-bxslider">
-                                        <img width="370" height="130" alt="" title=" " src="imagenes/upload/reconocimiento-slide.jpg">
-                                        <img width="370" height="130" alt="" title=" " src="imagenes/upload/reconocimiento-slide-2.jpg">
+                                        <img width="370" height="130" alt="" title=" " src="imagenes/upload/<?php echo $recon_inst_imagen_carpeta."thumb/".$recon_inst_imagen; ?>">
                                     </div>
-                                    <a class="art-mas" href="/notas/nota-reconocimientos-institucionales.php">Más...</a>
+                                    <a class="art-mas" href="<?php echo $recon_inst_url_final; ?>">Más...</a>
 
                                 </article>
                             </div>
@@ -204,25 +249,41 @@ $cont_recon_inst=1;
                                     <h3>Noticias</h3>
                                 </div>
 
-                                <article class="news-noticia borde-bottom">
+                                <?php while ($fila_noticias=mysql_fetch_array($rst_noticias)) { 
+                                        $noticias_id=$fila_noticias["id"];
+                                        $noticias_url=$fila_noticias["url"];
+                                        $noticias_titulo=substr($fila_noticias["titulo"],0,60)."...";
+                                        $noticias_contenido=substr(soloDescripcion($fila_noticias["contenido"]),0,225)."...";
+                                        $noticias_imagen=$fila_noticias["imagen"];
+                                        $noticias_imagen_carpeta=$fila_noticias["carpeta_imagen"];
+                                        $noticias_categoria=seleccionTabla(4, "id", "DM_noticia_categoria", $conexion);
+                                        $noticias_url_final=$noticias_categoria["url"]."/".$noticias_id."-".$noticias_url;
+                                    ?>
 
-                                    <h2><a href="/notas/nota-1.php">Emergencia de Pediatría celebró sus 14 años de aniversario...</a></h2>
-                                    <p>El Hospital Nacional “Dos de Mayo” celebró los 14 años de Aniversario de Emergencia de Pediatría, con una misa y Ceremonia Protocolar, esta última fue encabezada por el Director General del nosocomio, Dr. José Roca Mendoza...</p>
-                                    <div class="slider-bxslider">
-                                        <img width="370" height="130" alt="" title=" " src="imagenes/upload/noticia-1.jpg">
-                                        <img width="370" height="130" alt="" title=" " src="imagenes/upload/noticia-2.jpg">
-                                        <img width="370" height="130" alt="" title=" " src="imagenes/upload/noticia-3.jpg">
-                                    </div>
-                                    <a class="art-mas" href="">Más...</a>
+                                        <?php if($cont_noticias==1){ ?>
+                                        <article class="borde-bottom news-noticia">
 
-                                </article>
+                                            <h2><a href="<?php echo $noticias_url_final; ?>"><?php echo $noticias_titulo; ?></a></h2>
+                                            <div class="slider-bxslider">
+                                                <img width="370" height="220" alt="" title=" " src="/imagenes/upload/<?php echo $noticias_imagen_carpeta."thumb/".$noticias_imagen; ?>">
+                                            </div>
+                                            <p><?php echo $noticias_contenido; ?></p>
+                                            <a class="art-mas" href="<?php echo $noticias_url_final; ?>">Más...</a>
 
-                                <article class="news-noticia">
+                                        </article>
+                                        <?php } ?>
 
-                                    <h2><a href="/notas/nota-2.php">Viceministro de Salud visitó a los heridos de los enfrentamientos...</a></h2>
-                                    <a class="art-mas" href="/notas/nota-2.php">Más...</a>
+                                        <?php if($cont_noticias==2){ ?>
+                                            <article class="news-noticia">
 
-                                </article>
+                                                <h2><a href="<?php echo $noticias_url_final; ?>"><?php echo $noticias_titulo; ?></a></h2>
+                                                <p><?php echo $noticias_contenido; ?></p>
+                                                <a class="art-mas" href="<?php echo $noticias_url_final; ?>">Más...</a>
+
+                                            </article>
+                                        <?php } ?>
+
+                                    <?php $cont_noticias++;} ?>
                             </div>
 
                             <div class="nw-seccion">
@@ -234,11 +295,11 @@ $cont_recon_inst=1;
                                 <article class="nws-contenido">
 
                                     <div>
-                                        <h2><a href="/notas/nota-alianza.php">Sociedad Peruana de Neumología y HNDM entregan...</a></h2>
-                                        <p>En el marco de las celebraciones por el "Día del Neumólogo", que se celebra cada 30 de agosto, el Comité de Damas Voluntarias...</p>
-                                        <a class="art-mas" href="/notas/nota-alianza.php">Más...</a>
+                                        <h2><a href="<?php echo $alianzas_url_final; ?>"><?php echo $alianzas_titulo; ?></a></h2>
+                                        <p><?php echo $recon_inst_contenido; ?></p>
+                                        <a class="art-mas" href="<?php echo $recon_inst_url_final; ?>">Más...</a>
                                     </div>
-                                    <img width="120" height="135" src="/imagenes/upload/nota-alianza-slide.jpg">
+                                    <img width="120" height="135" src="/imagenes/upload/<?php echo $alianzas_imagen_carpeta."thumb/".$alianzas_imagen; ?>">
 
                                 </article>
                             </div>
