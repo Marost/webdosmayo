@@ -69,7 +69,7 @@ if ($buscar!=""){
 
         </div>
 
-<?php require_once("w-footer.php") ?>
+<?php require_once("w-popup.php") ?>
 
     </body>
 </html>
