@@ -22,7 +22,7 @@ $noticia_imagen_carpeta=$fila_noticia["carpeta_imagen"];
 
 /*NOTICIA - SLIDE*/
 $rst_noticia_slide=mysql_query("SELECT * FROM DM_noticia_slide WHERE noticia=$url_noticia_id ORDER BY orden ASC;", $conexion);
-$num_noticia_slide=mysql_fetch_array($rst_noticia_slide);
+$num_noticia_slide=mysql_num_rows($rst_noticia_slide);
 
 ?>
 <!DOCTYPE html>
