@@ -347,6 +347,24 @@ function crearCarpeta(){
 	return $carpeta;
 }
 
+function primerParrafo($texto){
+	$b_superior="</p>";
+	if(ereg($b_superior, $texto)){
+		$total=explode($b_superior, $texto);
+		return $total[0];
+	}
+}
+
+function soloDescripcion($texto){
+	$b_superior="</p>";
+	$e_parrafo="<p>";
+	if(ereg($b_superior, $texto)){
+		$total=explode($b_superior, $texto);
+		$parrafo=explode($e_parrafo,$total[0]);
+		return $parrafo[1];
+	}
+}
+
 function getRealIP(){
    if( $_SERVER['HTTP_X_FORWARDED_FOR'] != '' )
    {
@@ -387,6 +405,11 @@ function getRealIP(){
                "unknown" );
    }
    return $client_ip;
+}
+
+function seleccionTabla($id, $id_tabla, $tabla, $conexion){
+	$rst_query=mysql_query("SELECT * FROM ".$tabla." WHERE ".$id_tabla."=".$id , $conexion);
+	return $fila_query=mysql_fetch_array($rst_query);
 }
 
 ?>
