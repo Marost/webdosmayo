@@ -25,7 +25,7 @@ $fila_capacit=mysql_fetch_array($rst_capacit);
 $capacit_id=$fila_capacit["id"];
 $capacit_url=$fila_capacit["url"];
 $capacit_titulo=substr($fila_capacit["titulo"],0,45)."...";
-$capacit_contenido=substr(soloDescripcion($fila_capacit["contenido"]),0,130)."...";
+$capacit_contenido=substr(soloDescripcion($fila_capacit["contenido"]),0,140)."...";
 $capacit_imagen=$fila_capacit["imagen"];
 $capacit_imagen_carpeta=$fila_capacit["carpeta_imagen"];
 $capacit_categoria=seleccionTabla(3, "id", "DM_noticia_categoria", $conexion);
@@ -296,8 +296,8 @@ $alianzas_url_final=$alianzas_categoria["url"]."/".$alianzas_id."-".$alianzas_ur
 
                                     <div>
                                         <h2><a href="<?php echo $alianzas_url_final; ?>"><?php echo $alianzas_titulo; ?></a></h2>
-                                        <p><?php echo $recon_inst_contenido; ?></p>
-                                        <a class="art-mas" href="<?php echo $recon_inst_url_final; ?>">Más...</a>
+                                        <p><?php echo $alianzas_contenido; ?></p>
+                                        <a class="art-mas" href="<?php echo $alianzas_url_final; ?>">Más...</a>
                                     </div>
                                     <img width="120" height="135" src="/imagenes/upload/<?php echo $alianzas_imagen_carpeta."thumb/".$alianzas_imagen; ?>">
 
