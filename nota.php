@@ -43,8 +43,9 @@ $rst_noticias_ant=mysql_query("SELECT * FROM DM_noticia WHERE categoria=$noticia
         <meta property="og:title" content="<?php echo $noticia_titulo; ?>" />
         <meta property="og:type" content="article" />
         <meta property="og:url" content="<?php echo $url_web; ?>" />
-        <meta property="og:image" content="" />
+        <meta property="og:image" content="<?php echo $web.""."/imagenes/upload/".$noticia_imagen_carpeta."".$noticia_imagen; ?>" />
         <meta property="og:site_name" content="<?php echo $web_nombre; ?>" />
+        <meta property="og:description" content="<?php echo soloDescripcion($noticia_contenido); ?>"/>
         <meta property="fb:admins" content="1376286793" />
 
         <?php require_once("w-header-scripts.php") ?>
