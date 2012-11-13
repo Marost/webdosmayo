@@ -43,6 +43,95 @@ require_once("../panel@hndm/conexion/funcion-paginacion.php");
                             </div>
 
                             <div class="contenido">
+
+                                <table width="450" border="1" cellpadding="3" cellspacing="0">
+                                  <tr>
+                                    <td width="46" align="center" bgcolor="#00B0F0"><strong>N°</strong></td>
+                                    <td width="134" align="center" bgcolor="#00B0F0"><strong>Nº DE TELEF</strong></td>
+                                    <td width="268" bgcolor="#00B0F0"><strong>OFICINA </strong></td>
+                                  </tr>
+                                  <tr>
+                                    <td width="46" align="center">1</td>
+                                    <td width="134" align="center">3281420</td>
+                                    <td width="268">Central    Telefónica</td>
+                                  </tr>
+                                  <tr>
+                                    <td width="46" align="center">2</td>
+                                    <td width="134" align="center">3280028</td>
+                                    <td width="268">Central    Telefónica</td>
+                                  </tr>
+                                  <tr>
+                                    <td width="46" align="center">3</td>
+                                    <td width="134" align="center">3281414</td>
+                                    <td width="268">Dirección    General (telefax)</td>
+                                  </tr>
+                                  <tr>
+                                    <td width="46" align="center">4</td>
+                                    <td width="134" align="center">3281421</td>
+                                    <td width="268">Dirección    General Adjunta</td>
+                                  </tr>
+                                  <tr>
+                                    <td width="46" align="center">5</td>
+                                    <td width="134" align="center">3281434</td>
+                                    <td width="268">Dirección    Ejecutiva de Administración</td>
+                                  </tr>
+                                  <tr>
+                                    <td width="46" align="center">6</td>
+                                    <td width="134" align="center">3281488</td>
+                                    <td width="268">Oficina de    Seguros</td>
+                                  </tr>
+                                  <tr>
+                                    <td width="46" align="center">7</td>
+                                    <td width="134" align="center">3287676</td>
+                                    <td width="268">Oficina de    Seguros (2° piso)</td>
+                                  </tr>
+                                  <tr>
+                                    <td width="46" align="center">8</td>
+                                    <td width="134" align="center">3284444</td>
+                                    <td width="268">Logística    (Programación)</td>
+                                  </tr>
+                                  <tr>
+                                    <td width="46" align="center">9</td>
+                                    <td width="134" align="center">3281330</td>
+                                    <td width="268">Logística    (Adqusisiciones)</td>
+                                  </tr>
+                                  <tr>
+                                    <td width="46" align="center">10</td>
+                                    <td width="134" align="center">3287272</td>
+                                    <td width="268">Personal</td>
+                                  </tr>
+                                  <tr>
+                                    <td width="46" align="center">11</td>
+                                    <td width="134" align="center">3281340</td>
+                                    <td width="268">Economía</td>
+                                  </tr>
+                                  <tr>
+                                    <td width="46" align="center">12</td>
+                                    <td width="134" align="center">3288960</td>
+                                    <td width="268">Epidemiología</td>
+                                  </tr>
+                                  <tr>
+                                    <td width="46" align="center">13</td>
+                                    <td width="134" align="center">3287474</td>
+                                    <td width="268">Planeamiento</td>
+                                  </tr>
+                                  <tr>
+                                    <td width="46" align="center">14</td>
+                                    <td width="134" align="center">3280124</td>
+                                    <td width="268">Capacitación</td>
+                                  </tr>
+                                  <tr>
+                                    <td width="46" align="center">15</td>
+                                    <td width="134" align="center">3281424</td>
+                                    <td width="268">Emergencia</td>
+                                  </tr>
+                                  <tr>
+                                    <td width="46" align="center">16</td>
+                                    <td width="134" align="center">3280887</td>
+                                    <td width="268">Comunicaciones</td>
+                                  </tr>
+                                </table><br><br>
+
                                 <table width="650" border="0" align="center" cellpadding="3" cellspacing="3">
                                   <tr>
                                     <td width="54" bgcolor="#2D65AE">&nbsp;</td>
