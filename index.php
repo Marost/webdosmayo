@@ -55,7 +55,7 @@ $rst_alianzas=mysql_query("SELECT * FROM DM_noticia WHERE categoria=1 ORDER BY f
 $fila_alianzas=mysql_fetch_array($rst_alianzas);
 $alianzas_id=$fila_alianzas["id"];
 $alianzas_url=$fila_alianzas["url"];
-$alianzas_titulo=substr($fila_alianzas["titulo"],0,45)."...";
+$alianzas_titulo=substr($fila_alianzas["titulo"],0,39)."...";
 $alianzas_contenido=substr(soloDescripcion($fila_alianzas["contenido"]),0,130)."...";
 $alianzas_imagen=$fila_alianzas["imagen"];
 $alianzas_imagen_carpeta=$fila_alianzas["carpeta_imagen"];
