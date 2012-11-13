@@ -78,13 +78,14 @@ $cont_recon_inst=1;
                                         $eq_tecno_id=$fila_eq_tecno["id"];
                                         $eq_tecno_url=$fila_eq_tecno["url"];
                                         $eq_tecno_titulo=substr($fila_eq_tecno["titulo"],0,60)."...";
-                                        $eq_tecno_contenido=substr(soloDescripcion($fila_eq_tecno["contenido"]),0,215);
+                                        $eq_tecno_contenido=substr(soloDescripcion($fila_eq_tecno["contenido"]),0,225)."...";
                                         $eq_tecno_imagen=$fila_eq_tecno["imagen"];
                                         $eq_tecno_imagen_carpeta=$fila_eq_tecno["carpeta_imagen"];
                                         $eq_tecno_categoria=seleccionTabla(4, "id", "DM_noticia_categoria", $conexion);
                                         $eq_tecno_url_final=$eq_tecno_categoria["url"]."/".$eq_tecno_id."-".$eq_tecno_url;
                                     ?>
 
+                                        <?php if($cont_eq_tecno==1){ ?>
                                         <article class="borde-bottom news-noticia">
 
                                             <h2><a href="<?php echo $eq_tecno_url_final; ?>"><?php echo $eq_tecno_titulo; ?></a></h2>
@@ -95,6 +96,7 @@ $cont_recon_inst=1;
                                             <a class="art-mas" href="<?php echo $eq_tecno_url_final; ?>">Más...</a>
 
                                         </article>
+                                        <?php } ?>
 
                                         <?php if($cont_eq_tecno==2){ ?>
                                             <article class="news-noticia">
