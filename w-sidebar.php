@@ -20,9 +20,12 @@ $apdgt_url=$fila_apdiagnost_wg["url"];
                     <?php while($fila_apdiagnost_lista_wg=mysql_fetch_array($rst_apdiagnost_lista_wg)){
                             $apdgt_lista_id=$fila_apdiagnost_lista_wg["id"];
                             $apdgt_lista_titulo=$fila_apdiagnost_lista_wg["titulo"];
+                            $apdgt_lista_contenido=$fila_apdiagnost_lista_wg["contenido"];
                             $apdgt_lista_url=$fila_apdiagnost_lista_wg["url"];
+                            if($apdgt_lista_contenido==""){ $apdgt_lista_url_final="construccion";}
+                            else{ $apdgt_lista_url_final=$apdgt_url."/".$apdgt_lista_id."-".$apdgt_lista_url; }
                     ?>
-                        <li><a href="/<?php echo $apdgt_url."/".$apdgt_lista_id."-".$apdgt_lista_url; ?>"><?php echo $apdgt_lista_titulo; ?></a></li>
+                        <li><a href="<?php echo $apdgt_lista_url_final; ?>"><?php echo $apdgt_lista_titulo; ?></a></li>
                     <?php } ?>
                 </ul>
             </div>
