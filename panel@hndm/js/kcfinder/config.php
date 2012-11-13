@@ -26,8 +26,8 @@ $_CONFIG = array(
 
     'theme' => "oxygen",
 
-    'uploadURL' => "upload",
-    'uploadDir' => $web."imagenes/uploadhndm",
+    'uploadURL' => $web."imagenes/uploadhndm",
+    'uploadDir' => "",
 
     'dirPerms' => 0755,
     'filePerms' => 0644,
