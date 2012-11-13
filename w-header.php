@@ -27,6 +27,8 @@ $espec_url=$fila_especialidades_wg["url"];
                         <li><a href="directorio.php">Directorio</a></li>
                         <li><a href="/notas/historia.php">Historia</a></li>
                         <li><a href="informacion-institucional.php">Información Institucional</a></li>
+                        <li><a href="">Nuestras Oficinas</a></li>
+                        <li><a href="">Normatividad</a></li>
                         <li><a href="javscript:;" id="enl-intranet">Intranet</a></li>
                     </ul>
                 </li>
