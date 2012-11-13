@@ -19,10 +19,14 @@ $noticia_titulo=$fila_noticia["titulo"];
 $noticia_contenido=$fila_noticia["contenido"];
 $noticia_imagen=$fila_noticia["imagen"];
 $noticia_imagen_carpeta=$fila_noticia["carpeta_imagen"];
+$noticia_categoria=$fila_noticia["categoria"];
 
 /*NOTICIA - SLIDE*/
 $rst_noticia_slide=mysql_query("SELECT * FROM DM_noticia_slide WHERE noticia=$url_noticia_id ORDER BY orden ASC;", $conexion);
 $num_noticia_slide=mysql_num_rows($rst_noticia_slide);
+
+/*NOTICIAS ANTERIORES*/
+$rst_noticias_ant=mysql_query("SELECT * FROM DM_noticia WHERE categoria=$noticia_categoria ORDER BY fecha_publicacion DESC LIMIT 5;", $conexion);
 
 ?>
 <!DOCTYPE html>
@@ -64,7 +68,7 @@ $num_noticia_slide=mysql_num_rows($rst_noticia_slide);
 
                     <section id="news">
 
-                        <div class="nw-nota">
+                        <div class="nw-nota borde_bottom">
 
                             <div class="titulo">
                                 <h2><?php echo $noticia_titulo; ?></h2>
@@ -95,6 +99,25 @@ $num_noticia_slide=mysql_num_rows($rst_noticia_slide);
                                 </ul>
                             </div>
                             <?php } ?>
+
+                        </div>
+
+                        <div class="nw-nota">
+
+                            <h4>Noticias anteriores</h4>
+
+                            <div class="contenido">
+                                <ul>
+                                    <?php while($fila_noticia_ant=mysql_fetch_array($rst_noticias_ant)){
+                                        $notant_id=$fila_noticia_ant["id"];
+                                        $notant_titulo=$fila_noticia_ant["titulo"];
+                                        $notant_url=$fila_noticia_ant["url"];
+                                        $notant_url_final=$web."".$url_categoria."/".$notant_id."-".$notant_url;
+                                    ?>
+                                    <li><a href=""><?php echo $notant_titulo; ?></a></li>
+                                    <?php } ?>
+                                </ul>
+                            </div>
 
                         </div>
 
