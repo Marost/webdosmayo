@@ -41,7 +41,7 @@ require_once("../panel@hndm/conexion/funcion-paginacion.php");
                             
                             <div class="nwn-lista">
 
-                                <h3>HISTORIA</h3>
+                                <h3>Historia</h3>
                                 <div>
                                     <img src="/imagenes/upload/historia-1.jpg" width="300" style="float:left; padding:0 8px 8px 0;"><p>Los orígenes de nuestra institución  se remontan al Hospital Nuestra Señora de la Concepción. Quince años después deriva en lo que fue el Hospital Real de San Andrés y desde 1875 se denomina Hospital Dos de Mayo. Como primera y legendaria institución de salud ha sido y es partícipe del desarrollo de la Medicina Moderna Nacional.</p>
 
@@ -69,7 +69,7 @@ require_once("../panel@hndm/conexion/funcion-paginacion.php");
                                     <p>Hoy el Hospital Nacional Dos de Mayo trae tras si, todo el prestigio y éxitos que en otras generaciones se dio en nuestra institución. Ese espíritu de entrega, de avance, de desarrollo en bien de la salud de los peruanos y que fue el motor de cada uno de los que nos precedieron se aúna en este nuevo hospital que tenemos como futuro y que hoy nos pone a la cabeza de las instituciones de salud con más y mejores profesionales, técnicos y personal de salud en general, con renovada y moderna infraestructura y equipamiento, accesible a nuestra población, dentro de políticas de gobierno siempre favorables a todos los peruanos.</p>
                                 </div>
 
-                                <h3>¿QUIENES SOMOS?</h3>
+                                <h3>¿Quienes Somos?</h3>
                                 <div>
                                     <p>El Hospital Nacional "Dos de Mayo" es un órgano desconcentrado de la Dirección de Salud V Lima Ciudad, perteneciente al Ministerio de Salud. Ubicado en la zona de los Barrios Altos, sus orígenes se remontan al Hospital Nuestra Señora de la Concepción, que luego pasa a ser el Hospital Real de San Andrés, para posteriormente en 1875 erigirse como Hospital Dos de Mayo, institución de salud, partícipe del desarrollo de la Medicina Moderna Nacional.</p>
                                     <p>A pocos años de inaugurado el Hospital Nacional Dos de Mayo ocurrió la Guerra del Pacífico. En la ocupación de Lima por parte del ejército chileno nuestro Hospital fue tomado por las tropas invasoras desde el 20 de febrero de 1881 hasta el 29 de diciembre de 1883. En toda esa etapa sólo los niños pudieron recibir atención por parte del Dr. Leonardo Villar y las Hermanas de la Caridad.
