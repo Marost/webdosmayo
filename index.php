@@ -4,7 +4,34 @@ require_once("panel@hndm/conexion/conexion.php");
 require_once("panel@hndm/conexion/funciones.php");
 require_once("panel@hndm/conexion/funcion-paginacion.php");
 
+/*VARIABLES DE SCRIPTS*/
 $script_popup=true;
+
+/*-----------------------*/
+/*EQUIPOS DE ULTIMA TECNOLOGIA*/
+$rst_eq_tecno=mysql_query("SELECT * FROM DM_noticia WHERE categoria=4 ORDER BY fecha_publicacion DESC LIMIT 2;", $conexion);
+$cont_eq_tecno=1;
+
+/*PROEZAS MEDICAS*/
+$rst_pro_medic=mysql_query("SELECT * FROM DM_noticia WHERE categoria=7 ORDER BY fecha_publicacion DESC LIMIT 2;", $conexion);
+$cont_pro_medic=1;
+
+/*CAPACITACION*/
+$rst_capacit=mysql_query("SELECT * FROM DM_noticia WHERE categoria=3 ORDER BY fecha_publicacion DESC LIMIT 2;", $conexion);
+$cont_capacit=1;
+
+/*RECONOCIMIENTOS INSTITUCIONALES*/
+$rst_recon_inst=mysql_query("SELECT * FROM DM_noticia WHERE categoria=8 ORDER BY fecha_publicacion DESC LIMIT 2;", $conexion);
+$cont_recon_inst=1;
+
+/*NOTICIAS*/
+$rst_noticias=mysql_query("SELECT * FROM DM_noticia WHERE categoria=6 ORDER BY fecha_publicacion DESC LIMIT 2;", $conexion);
+$cont_noticias=1;
+
+/*ALIANZAS*/
+$rst_recon_inst=mysql_query("SELECT * FROM DM_noticia WHERE categoria=1 ORDER BY fecha_publicacion DESC LIMIT 2;", $conexion);
+$cont_recon_inst=1;
+
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -47,26 +74,40 @@ $script_popup=true;
 
                                 <div class="nwips-container pest-content" id="pest-select-1">
 
-                                    <article class="borde-bottom news-noticia">
+                                    <?php while ($fila_eq_tecno=mysql_fetch_array($rst_eq_tecno)) { 
+                                        $eq_tecno_id=$fila_eq_tecno["id"];
+                                        $eq_tecno_url=$fila_eq_tecno["url"];
+                                        $eq_tecno_titulo=substr($fila_eq_tecno["titulo"],0,60)."...";
+                                        $eq_tecno_contenido=substr(soloDescripcion($fila_eq_tecno["contenido"]),0,215);
+                                        $eq_tecno_imagen=$fila_eq_tecno["imagen"];
+                                        $eq_tecno_imagen_carpeta=$fila_eq_tecno["carpeta_imagen"];
+                                        $eq_tecno_categoria=seleccionTabla(4, "id", "DM_noticia_categoria", $conexion);
+                                        $eq_tecno_url_final=$eq_tecno_categoria["url"]."/".$eq_tecno_id."-".$eq_tecno_url;
+                                    ?>
 
-                                        <h2><a href="/notas/nota-tecnologia-1.php">Un resonador magnético de última tecnología posee...</a></h2>
-                                        <div class="slider-bxslider">
-                                            <img width="370" height="220" alt="" title=" " src="/imagenes/upload/angiografia-digital.jpg">
-                                            <img width="370" height="220" alt="" title=" " src="/imagenes/upload/slide-tecnologia-1.jpg">
-                                        </div>
+                                        <article class="borde-bottom news-noticia">
 
-                                        <p>Al servicio de la población se encuentra el resonador magnético que posee el Hospital Nacional “Dos de Mayo”, a través del cual se pueden realizar estudios de alta complejidad a nivel del cerebro...</p>
-                                        <a class="art-mas" href="/notas/nota-tecnologia-1.php">Más...</a>
+                                            <h2><a href="<?php echo $eq_tecno_url_final; ?>"><?php echo $eq_tecno_titulo; ?></a></h2>
+                                            <div class="slider-bxslider">
+                                                <img width="370" height="220" alt="" title=" " src="/imagenes/upload/<?php echo $eq_tecno_imagen_carpeta."".$eq_tecno_imagen; ?>">
+                                            </div>
+                                            <p><?php echo $eq_tecno_contenido; ?></p>
+                                            <a class="art-mas" href="<?php echo $eq_tecno_url_final; ?>">Más...</a>
 
-                                    </article>
+                                        </article>
 
-                                    <article class="news-noticia">
+                                        <?php if($cont_eq_tecno==2){ ?>
+                                            <article class="news-noticia">
 
-                                        <h2><a href="/notas/nota-tecnologia-2.php">El único y más moderno angiografo del país está en el HNDM</a></h2>
-                                        <p>Demostrando que el Hospital Nacional “Dos de Mayo” cuenta con equipamiento de última generación, posee el angiografo digital biplanar más moderno  del Perú, el cual es único en el país...</p>
-                                        <a class="art-mas" href="/notas/nota-tecnologia-2.php">Más...</a>
+                                                <h2><a href="<?php echo $eq_tecno_url_final; ?>"><?php echo $eq_tecno_titulo; ?></a></h2>
+                                                <p><?php echo $eq_tecno_contenido; ?></p>
+                                                <a class="art-mas" href="<?php echo $eq_tecno_url_final; ?>">Más...</a>
 
-                                    </article>
+                                            </article>
+                                        <?php } ?>
+
+                                    <?php $cont_eq_tecno++;} ?>
+
                                 </div>
 
                                 <div class="nwips-container pest-content" id="pest-select-2">
