@@ -26,7 +26,7 @@ $rst_noticia_slide=mysql_query("SELECT * FROM DM_noticia_slide WHERE noticia=$ur
 $num_noticia_slide=mysql_num_rows($rst_noticia_slide);
 
 /*NOTICIAS ANTERIORES*/
-$rst_noticias_ant=mysql_query("SELECT * FROM DM_noticia WHERE categoria=$noticia_categoria ORDER BY fecha_publicacion DESC LIMIT 5;", $conexion);
+$rst_noticias_ant=mysql_query("SELECT * FROM DM_noticia WHERE categoria=$noticia_categoria AND id<>$url_noticia_id ORDER BY fecha_publicacion DESC LIMIT 5;", $conexion);
 
 ?>
 <!DOCTYPE html>
@@ -114,7 +114,7 @@ $rst_noticias_ant=mysql_query("SELECT * FROM DM_noticia WHERE categoria=$noticia
                                         $notant_url=$fila_noticia_ant["url"];
                                         $notant_url_final=$web."".$url_categoria."/".$notant_id."-".$notant_url;
                                     ?>
-                                    <li><a href=""><?php echo $notant_titulo; ?></a></li>
+                                    <li><a href="<?php echo $notant_url_final; ?>"><?php echo $notant_titulo; ?></a></li>
                                     <?php } ?>
                                 </ul>
                             </div>
