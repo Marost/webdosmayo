@@ -296,6 +296,7 @@ menu,
 ol,
 ul {
     padding: 0 0 0 40px;
+    line-height: 150%;
 }
 
 /*
