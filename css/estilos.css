@@ -650,32 +650,30 @@ header nav ul .submenu-prensa li a {
 #news article.directorio-doctor {
   float: left;
   padding-bottom: 10px;
-  margin-bottom: 10px;
+  margin: 10px 0 5px 0;
 }
 #news article.directorio-doctor .datos {
+  border-right: 1px solid #000;
   float: left;
-  padding: 12px 0;
+  text-align: center;
   width: 340px;
-}
-#news article.directorio-doctor .datos img {
-  float: left;
-  margin-right: 10px;
 }
 #news article.directorio-doctor .datos div {
   float: left;
-  width: 170px;
+  width: 340px;
 }
 #news article.directorio-doctor .datos div h2 {
   font-family: "Source Sans", sans-serif;
-  font-size: 23px;
+  font-size: 20px;
   font-weight: normal;
   margin: 0;
 }
 #news article.directorio-doctor .datos div p {
   color: #0071BC;
+  margin: 0;
+  padding: 0;
 }
 #news article.directorio-doctor .contenido {
-  border-left: 1px solid #000;
   float: left;
   padding: 0 10px 0 10px;
   text-align: justify;
