@@ -336,7 +336,7 @@ FileETag None
 # RewriteBase /
 </IfModule>
 
-RewriteRule ^c-(.*)$                      /categoria.php?cat=$1
+RewriteRule ^cat/(.*)$                      /categoria.php?cat=$1
 RewriteRule ^(.*)/([0-9]*)-(.*)$          /nota.php?cat=$1&id=$2&url=$3
 
 # ----------------------------------------------------------------------

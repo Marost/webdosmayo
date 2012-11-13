@@ -12,7 +12,7 @@ $apdgt_url=$fila_apdiagnost_wg["url"];
     <div id="mrq_ap_diagnostico" class="mrq_lista">
 
         <h2>Apoyo al Diagnóstico</h2>
-        <a class="mrq-vm" href="/<?php echo "c-".$apdgt_url; ?>">Más...</a>
+        <a class="mrq-vm" href="/<?php echo "cat/".$apdgt_url; ?>">Más...</a>
 
         <div id="mrq_ap_diagnostico_lista" class="mrq_lista_item">
             <div>

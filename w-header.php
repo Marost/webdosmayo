@@ -27,7 +27,7 @@ $espec_url=$fila_especialidades_wg["url"];
                         <li><a href="directorio.php">Directorio</a></li>
                         <li><a href="/notas/historia.php">Historia</a></li>
                         <li><a href="informacion-institucional.php">Información Institucional</a></li>
-                        <li><a href="">Nuestras Oficinas</a></li>
+                        <li><a href="/cat/nuestras-oficinas">Nuestras Oficinas</a></li>
                         <li><a href="">Normatividad</a></li>
                         <li><a href="javscript:;" id="enl-intranet">Intranet</a></li>
                     </ul>
@@ -61,7 +61,7 @@ $espec_url=$fila_especialidades_wg["url"];
         <div id="mrq_especialidades" class="mrq_lista">
 
             <h2>Especialidades</h2>
-            <a class="mrq-vm" href="/<?php echo "c-".$espec_url; ?>">Más...</a>
+            <a class="mrq-vm" href="/<?php echo "cat/".$espec_url; ?>">Más...</a>
 
             <div id="mrq_especialidades_lista" class="mrq_lista_item">
                 <div>

@@ -54,7 +54,7 @@ $rst_noticias=mysql_query("SELECT * FROM DM_noticia WHERE categoria=$categoria_i
                         <div class="nw-nota">
 
                             <div class="titulo">
-                                <h2>Especialidades</h2>
+                                <h2><?php echo $categoria_titulo; ?></h2>
                             </div>
 
                             <div class="contenido">
@@ -67,9 +67,7 @@ $rst_noticias=mysql_query("SELECT * FROM DM_noticia WHERE categoria=$categoria_i
                                     ?>
                                         <li><a href="/<?php echo $url_categoria."/".$noticias_id."-".$noticias_url; ?>"><?php echo $noticias_titulo; ?></a></li>
                                     <?php } ?>
-
-                                    <li><a href="#">Medicina</a></li>
-
+                                    
                                 </ul>
                             </div>
 
