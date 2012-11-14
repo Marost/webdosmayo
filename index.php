@@ -209,13 +209,13 @@ $alianzas_url_final=$alianzas_categoria["url"]."/".$alianzas_id."-".$alianzas_ur
                                 <div class="nws-contenido">
 
                                     <ul>
-                                        <li><a href=""><img src="/imagenes/campanias-especiales/campania1.jpg"></a></li>
-                                        <li><a href=""><img src="/imagenes/campanias-especiales/campania-2.jpg"></a></li>
-                                        <li><a href=""><img src="/imagenes/campanias-especiales/icon-campana-especial-01.png"></a></li>
-                                        <li><a href=""><img src="/imagenes/campanias-especiales/icon-campana-especial-02.png"></a></li>
-                                        <li><a href=""><img src="/imagenes/campanias-especiales/icon-campana-especial-03.png"></a></li>
+                                        <li><a href="campanas.php"><img src="/imagenes/campanias-especiales/campania1.jpg"></a></li>
+                                        <li><a href="campanas.php"><img src="/imagenes/campanias-especiales/campania-2.jpg"></a></li>
+                                        <li><a href="campanas.php"><img src="/imagenes/campanias-especiales/icon-campana-especial-01.png"></a></li>
+                                        <li><a href="campanas.php"><img src="/imagenes/campanias-especiales/icon-campana-especial-02.png"></a></li>
+                                        <li><a href="campanas.php"><img src="/imagenes/campanias-especiales/icon-campana-especial-03.png"></a></li>
                                     </ul>
-                                    <a href="">Más...</a>
+                                    <a href="campanas.php">Más...</a>
 
                                 </div>
 
