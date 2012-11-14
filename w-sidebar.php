@@ -63,7 +63,7 @@ $apdgt_url=$fila_apdiagnost_wg["url"];
 
     <div id="opciones-lista">
         <ul>
-            <li><a href="javascript:;" id="popupen-escribanos"><span class="img icon-escribanos"></span>Escribanos</a></li>
+            <li><a href="javascript:;" id="popupen-escribanos"><span class="p-escribanos img icon-escribanos"></span>Escribanos</a></li>
             <li><a href="construccion" class="last"><span class="img icon-laboral"></span>Oportunidad Laboral</a></li>
             <li><a href="javascript:;" id="popupen-ubicanos">Ubícanos<img src="/imagenes/mapa.png"></a></li>
         </ul>

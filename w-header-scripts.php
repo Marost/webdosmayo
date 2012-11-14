@@ -85,7 +85,7 @@ jMenu(document).ready(function(){
 });
 </script>
 
-<!-- TELEFONO -->
+<!-- TELEFONO EFECTO -->
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="/libs/marquee/jquery.marquee.js"></script>
 <script>
@@ -103,13 +103,13 @@ jMarq(document).ready(function(){
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="/js/marquee-apoyo-diagnostico.js"></script>
 
-<!-- ESCRIBANOS -->
+<!-- POPUP ESCRIBANOS -->
 <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script  src="/libs/blockui/jquery.blockUI.js"></script>
 <script >
 var jcladd = jQuery.noConflict();
 jcladd(document).ready(function() { 
-    jcladd('#popupen-escribanos').click(function() { 
+    jcladd('.p-escribanos').click(function() { 
         jcladd.blockUI({ message: jcladd('#popup-escribanos'), css: {top: '20%'} }); 
     });
     
@@ -121,7 +121,7 @@ jcladd(document).ready(function() {
 });
 </script>
 
-<!-- MAPA -->
+<!-- POPUP MAPA -->
 <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script  src="/libs/blockui/jquery.blockUI.js"></script>
 <script >
@@ -139,43 +139,25 @@ jMapUbi(document).ready(function() {
 });
 </script>
 
-<!-- TELEFONO -->
+<!-- POPUP TELEFONO -->
 <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script  src="/libs/blockui/jquery.blockUI.js"></script>
 <script >
-var jMapUbi = jQuery.noConflict();
-jMapUbi(document).ready(function() { 
-    jMapUbi('#ver_telf').click(function() { 
-        jMapUbi.blockUI({ message: jMapUbi('#popup-telefono'), css: {top: '20%'} }); 
+var jTelf = jQuery.noConflict();
+jTelf(document).ready(function() { 
+    jTelf('#ver_telf').click(function() { 
+        jTelf.blockUI({ message: jTelf('#popup-telefono'), css: {top: '20%'} }); 
     });
     
-    jMapUbi('#popup-tel-cerrar').click(function() { 
-        jMapUbi.unblockUI(); 
+    jTelf('#popup-tel-cerrar').click(function() { 
+        jTelf.unblockUI(); 
         return false; 
     });
      
 });
 </script>
 
-<!-- TELEFONO -->
-<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script  src="/libs/blockui/jquery.blockUI.js"></script>
-<script >
-var jMapUbi = jQuery.noConflict();
-jMapUbi(document).ready(function() { 
-    jMapUbi('.icon-correo').click(function() { 
-        jMapUbi.blockUI({ message: jMapUbi('#popup-correo'), css: {top: '20%'} }); 
-    });
-    
-    jMapUbi('#popup-correo-cerrar').click(function() { 
-        jMapUbi.unblockUI(); 
-        return false; 
-    });
-     
-});
-</script>
-
-<!-- TELEFONO -->
+<!-- POPUP INTRANET -->
 <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script  src="/libs/blockui/jquery.blockUI.js"></script>
 <script >
