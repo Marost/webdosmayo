@@ -41,65 +41,69 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
                                 <h2>Contrato Administrativo de Servicios</h2>
                             </div>
 
-                            <article>
+                            <div class="contenido">
 
-                                <a href="#"><img src="imagenes/cas.png"></a>
+                                <article>
 
-                                <div>
-                                    <p><strong>Convocatoria N° 700</strong></p>
-                                    <p><strong>Direccion General de Salud de las Peronas</strong></p>
-                                    <p>Publicado el 07 de Noviembre del 2012</p>
-                                </div>
+                                    <a href="#"><img src="imagenes/cas.png"></a>
 
-                            </article>
+                                    <div>
+                                        <p><strong>Convocatoria N° 700</strong></p>
+                                        <p><strong>Direccion General de Salud de las Peronas</strong></p>
+                                        <p>Publicado el 07 de Noviembre del 2012</p>
+                                    </div>
 
-                            <article>
+                                </article>
 
-                                <a href="#"><img src="imagenes/cas.png"></a>
+                                <article>
 
-                                <div>
-                                    <p><strong>Convocatoria N° 699</strong></p>
-                                    <p><strong>Direccion General de Salud de las Peronas</strong></p>
-                                    <p>Publicado el 07 de Noviembre del 2012</p>
-                                </div>
+                                    <a href="#"><img src="imagenes/cas.png"></a>
 
-                            </article>
+                                    <div>
+                                        <p><strong>Convocatoria N° 699</strong></p>
+                                        <p><strong>Direccion General de Salud de las Peronas</strong></p>
+                                        <p>Publicado el 07 de Noviembre del 2012</p>
+                                    </div>
 
-                            <article>
+                                </article>
 
-                                <a href="#"><img src="imagenes/cas.png"></a>
+                                <article>
 
-                                <div>
-                                    <p><strong>Convocatoria N° 698</strong></p>
-                                    <p><strong>Direccion General de Salud de las Peronas</strong></p>
-                                    <p>Publicado el 07 de Noviembre del 2012</p>
-                                </div>
+                                    <a href="#"><img src="imagenes/cas.png"></a>
 
-                            </article>
+                                    <div>
+                                        <p><strong>Convocatoria N° 698</strong></p>
+                                        <p><strong>Direccion General de Salud de las Peronas</strong></p>
+                                        <p>Publicado el 07 de Noviembre del 2012</p>
+                                    </div>
 
-                            <article>
+                                </article>
 
-                                <a href="#"><img src="imagenes/cas.png"></a>
+                                <article>
 
-                                <div>
-                                    <p><strong>Convocatoria N° 697</strong></p>
-                                    <p><strong>Direccion General de Salud de las Peronas</strong></p>
-                                    <p>Publicado el 07 de Noviembre del 2012</p>
-                                </div>
+                                    <a href="#"><img src="imagenes/cas.png"></a>
 
-                            </article>
+                                    <div>
+                                        <p><strong>Convocatoria N° 697</strong></p>
+                                        <p><strong>Direccion General de Salud de las Peronas</strong></p>
+                                        <p>Publicado el 07 de Noviembre del 2012</p>
+                                    </div>
 
-                            <article>
+                                </article>
 
-                                <a href="#"><img src="imagenes/cas.png"></a>
+                                <article>
 
-                                <div>
-                                    <p><strong>Convocatoria N° 696</strong></p>
-                                    <p><strong>Direccion General de Salud de las Peronas</strong></p>
-                                    <p>Publicado el 07 de Noviembre del 2012</p>
-                                </div>
+                                    <a href="#"><img src="imagenes/cas.png"></a>
 
-                            </article>
+                                    <div>
+                                        <p><strong>Convocatoria N° 696</strong></p>
+                                        <p><strong>Direccion General de Salud de las Peronas</strong></p>
+                                        <p>Publicado el 07 de Noviembre del 2012</p>
+                                    </div>
+
+                                </article>
+
+                            </div>
 
                         </div>
 

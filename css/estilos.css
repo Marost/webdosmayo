@@ -888,8 +888,7 @@ header nav ul .submenu-prensa li a {
 #news .cas .titulo h2 {
   font-size: 22px;
 }
-#news .cas .contenido h3,
-#news .cas .contenido h3 a {
+#news .cas .contenido h3 {
   color: #000;
   font-size: 17px;
 }
