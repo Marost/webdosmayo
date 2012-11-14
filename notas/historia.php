@@ -43,7 +43,8 @@ require_once("../panel@hndm/conexion/funcion-paginacion.php");
 
                                 <h3>Historia</h3>
                                 <div>
-                                    <img src="/imagenes/upload/historia-1.jpg" width="300" style="float:left; padding:0 8px 8px 0;"><p>Los orígenes de nuestra institución  se remontan al Hospital Nuestra Señora de la Concepción. Quince años después deriva en lo que fue el Hospital Real de San Andrés y desde 1875 se denomina Hospital Dos de Mayo. Como primera y legendaria institución de salud ha sido y es partícipe del desarrollo de la Medicina Moderna Nacional.</p>
+                                    <img src="/imagenes/upload/historia-1.jpg" width="300" style="float:left; padding:0 8px 8px 0;">
+                                    <p>Los orígenes de nuestra institución  se remontan al Hospital Nuestra Señora de la Concepción. Quince años después deriva en lo que fue el Hospital Real de San Andrés y desde 1875 se denomina Hospital Dos de Mayo. Como primera y legendaria institución de salud ha sido y es partícipe del desarrollo de la Medicina Moderna Nacional.</p>
 
                                     <p>Se sabe que el 16 de marzo de 1538, el Cabildo de la Ciudad de Lima, asigna dos solares para el funcionamiento del Primer Hospital del Perú y de América con el nombre de "Nuestra Señora de la Concepción" (Se ubicaba junto al actual Convento de Santo Domingo). En esa época la estrechez de sus ambientes hizo que el 21 de noviembre de 1545, el mismo cabildo asignara 8 solares para la reubicación del Hospital de la Ciudad frente a la actual Plaza Italia. Este nuevo hospital sería conocido como "Real Hospital de San Andrés" produciéndose el traslado de pacientes y enseres en 1550.</p>
 
@@ -78,6 +79,7 @@ require_once("../panel@hndm/conexion/funcion-paginacion.php");
 
                                 <h3>Daniel Alcides Carrión: Mártir de la Medicina Peruana y Héroe Nacional Civil</h3>
                                 <div>
+                                    <img src="/imagenes/upload/daniel-alcides-carrion.jpg" style="float:left; padding:0 8px 8px 0;">
                                     <p>El 5 de octubre de 1885, Daniel A. Carrión, estudiante de 6to. año de Medicina fallece, pasando a la inmortalidad al demostrar la unidad clínica de la antigua enfermedad llamada Verruga Peruana y la Fiebre de la Oroya, que diezmó obreros que trabajaban en la construcción de las vias del Ferrocarril Central.</p>
                                     <p>En estos 137 años de vida institucional diferentes y diversas gestiones han acompañado y marcado el desarrollo médico, asistencial, científico y académico del Perú a través de generaciones de profesionales de la salud que se han formado en nuestras instalaciones.</p>
 
