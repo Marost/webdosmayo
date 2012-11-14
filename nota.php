@@ -107,7 +107,7 @@ $rst_noticias_ant=mysql_query("SELECT * FROM DM_noticia WHERE categoria=$noticia
                             </div>
                             <?php }else{ ?>
                             <div style="float:left; margin: 10px 0;">
-                                <a href="<?php echo $url_categoria; ?>" style="font-weight: bold; font-size: 14px;">Regresar</a>
+                                <a href="cat/<?php echo $url_categoria; ?>" style="font-weight: bold; font-size: 14px;">Regresar</a>
                             </div>
                             <?php } ?>
 
