@@ -221,3 +221,23 @@ jNotSld(document).ready(function(){
     });
 });
 </script>
+
+<!-- SLIDER PATRIMONIO HISTORICO -->
+<link href="/libs/allinone_banner/allinone_bannerRotator.css" rel="stylesheet" type="text/css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
+<script src="/libs/allinone_banner/jquery.ui.touch-punch.min.js"></script>
+<script src="/libs/allinone_banner/jquery.mousewheel.min.js"></script>
+<script src="/libs/allinone_banner/allinone_bannerRotator.js"></script>
+<!--[if IE]><script src="/libs/allinone_banner/excanvas.compiled.js" type="text/javascript"></script><![endif]-->
+<script>
+var jNotSld=jQuery.noConflict();
+jNotSld(document).ready(function(){
+    jjQuery('#patrimonio-historico').allinone_bannerRotator({
+        skin: 'classic',
+        width: 220,
+        height: 150,
+        thumbsWrapperMarginBottom:5
+    });
+});
+</script>

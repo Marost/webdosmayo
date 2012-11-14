@@ -55,7 +55,7 @@ $apdgt_url=$fila_apdiagnost_wg["url"];
         </form>
     </div>
 
-    <div id="patrimonio-historico" class="slider-bxslider">
+    <div id="patrimonio-historico">
         <img src="imagenes/slide/patrimonio-historico-1.jpg" width="220" height="120" title=" ">
         <img src="imagenes/slide/patrimonio-historico-2.jpg" width="220" height="120" title=" ">
         <img src="imagenes/slide/patrimonio-historico-3.jpg" width="220" height="120" title=" ">
