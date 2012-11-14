@@ -55,10 +55,12 @@ $apdgt_url=$fila_apdiagnost_wg["url"];
         </form>
     </div>
 
-    <div id="patrimonio-historico">
-        <img src="imagenes/slide/patrimonio-historico-1.jpg" width="220" height="120" title=" ">
-        <img src="imagenes/slide/patrimonio-historico-2.jpg" width="220" height="120" title=" ">
-        <img src="imagenes/slide/patrimonio-historico-3.jpg" width="220" height="120" title=" ">
+    <div id="patrimonio-historico" style="display:none;">
+        <ul class="allinone_bannerRotator_list">
+            <li><img src="imagenes/slide/patrimonio-historico-1.jpg" width="220" height="120" title=" "></li>
+            <li><img src="imagenes/slide/patrimonio-historico-2.jpg" width="220" height="120" title=" "></li>
+            <li><img src="imagenes/slide/patrimonio-historico-3.jpg" width="220" height="120" title=" "></li>
+        </ul>
     </div>
 
     <div id="opciones-lista">
