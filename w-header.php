@@ -41,7 +41,7 @@ $espec_url=$fila_especialidades_wg["url"];
                 <li><a href="http://www.peru.gob.pe/transparencia/pep_transparencia_lista_planes.asp?id_entidad=13628&id_tema=1">Transparencia</a></li>
                 <li class="last"><a href="javascript:;">Prensa</a>
                     <ul class="submenu-prensa">
-                        <li><a href="/construccion">Sala de Prensa</a></li>
+                        <li><a href="sala-prensa.php">Sala de Prensa</a></li>
                     </ul>
                 </li>
             </ul>
