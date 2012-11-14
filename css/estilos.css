@@ -860,19 +860,26 @@ header nav ul .submenu-prensa li a {
   margin-bottom: 10px;
 }
 #news .info-epidemiologico .contenido article.down-item {
+  border: none;
   float: left;
-  margin: 20px 0 20px 10px;
+  margin: 20px 0 0 10px;
   width: 100%;
 }
 #news .info-epidemiologico .contenido article.down-item a {
   float: left;
 }
+#news .info-epidemiologico .contenido article.down-item h4 {
+  float: left;
+  margin: 0;
+}
 #news .info-epidemiologico .contenido article.down-item h4 a {
+  color: #000;
   float: left;
   font-size: 16px;
   margin: 7px 0 0 10px;
 }
 #news .info-epidemiologico .contenido .regresar {
+  color: #000;
   font-size: 14px;
   font-weight: bold;
 }
