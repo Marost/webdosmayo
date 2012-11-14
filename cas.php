@@ -43,6 +43,14 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
 
                             <div class="contenido">
 
+                                <select>
+                                    <option>Seleccion año</option>
+                                </select>
+
+                                <select>
+                                    <option>Seleccion mes</option>
+                                </select>
+
                                 <article>
 
                                     <a href="#"><img src="imagenes/cas.png"></a>

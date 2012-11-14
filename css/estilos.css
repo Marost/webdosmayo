@@ -923,7 +923,7 @@ header nav ul .submenu-prensa li a {
 }
 #sidebar .slider-bxslider {
   float: left;
-  height: 120px;
+  height: 150px;
   overflow: hidden;
   width: 220px;
   z-index: 88;
@@ -1311,7 +1311,7 @@ POPUP
 }
 .popup .popup-box {
   padding: 70px 20px 20px 20px;
-  color: #878787;
+  color: #000;
 }
 .popup .popup-box p {
   font-size: 12px;
@@ -1337,7 +1337,7 @@ POPUP
   border: none;
 }
 .popup .popup-box form fieldset label {
-  color: #878787;
+  color: #000;
   text-shadow: 2px 2px 2px white;
   font-size: 12px;
   padding: 0 0 0 20px;
