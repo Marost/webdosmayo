@@ -103,7 +103,7 @@ $rst_noticias_ant=mysql_query("SELECT * FROM DM_noticia WHERE categoria=$noticia
 
                         </div>
 
-                        <?php if($noticia_categoria<>2 or $noticia_categoria<>5){ ?>
+                        <?php if($noticia_categoria==1 or $noticia_categoria==3 or $noticia_categoria==4 or $noticia_categoria==6 or $noticia_categoria==7 or $noticia_categoria==8){ ?>
 
                         <div class="nw-nota">
 
