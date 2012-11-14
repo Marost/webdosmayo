@@ -880,8 +880,10 @@ header nav ul .submenu-prensa li a {
 }
 #news .info-epidemiologico .contenido .regresar {
   color: #000;
+  float: left;
   font-size: 14px;
   font-weight: bold;
+  margin-top: 20px;
 }
 #news .borde-bottom {
   border-bottom: 2px dotted #999;

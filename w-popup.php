@@ -83,7 +83,7 @@
     
     <div class="popup-box">
         <h2>Intranet</h2>
-        <a href="http://www.hdosdemayo.gob.pe/webmail"><img src="/imagenes/popup/correo-institucional.png"></a>
+        <a href="http://www.hdosdemayo.gob.pe/webmail" target="_blank"><img src="/imagenes/popup/correo-institucional.png"></a>
         <a href="/notas/directorio-telefonico.php"><img src="/imagenes/popup/popup.png"></a>
     </div>
                 
