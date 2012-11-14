@@ -29,7 +29,6 @@ $rst_noticias=mysql_query("SELECT * FROM DM_noticia WHERE categoria=$categoria_i
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title><?php echo $categoria_titulo; ?></title>
-        <meta name="description" content="">
 
         <?php require_once("w-header-scripts.php") ?>
 
@@ -63,9 +62,12 @@ $rst_noticias=mysql_query("SELECT * FROM DM_noticia WHERE categoria=$categoria_i
                                     <?php while($fila_noticias=mysql_fetch_array($rst_noticias)){
                                             $noticias_id=$fila_noticias["id"];
                                             $noticias_titulo=$fila_noticias["titulo"];
+                                            $noticias_contenido=$fila_noticias["contenido"];
                                             $noticias_url=$fila_noticias["url"];
+                                            if($noticias_contenido==""){ $noticias_url_final="construccion";}
+                                            else{ $noticias_url_final=$url_categoria."/".$noticias_id."-".$noticias_url; }
                                     ?>
-                                        <li><a href="/<?php echo $url_categoria."/".$noticias_id."-".$noticias_url; ?>"><?php echo $noticias_titulo; ?></a></li>
+                                        <li><a href="<?php echo $noticias_url_final; ?>"><?php echo $noticias_titulo; ?></a></li>
                                     <?php } ?>
                                     
                                 </ul>

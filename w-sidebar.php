@@ -12,7 +12,7 @@ $apdgt_url=$fila_apdiagnost_wg["url"];
     <div id="mrq_ap_diagnostico" class="mrq_lista">
 
         <h2>Apoyo al Diagnóstico</h2>
-        <a class="mrq-vm" href="/<?php echo "cat/".$apdgt_url; ?>">Más...</a>
+        <a class="mrq-vm" href="<?php echo "cat/".$apdgt_url; ?>">Más...</a>
 
         <div id="mrq_ap_diagnostico_lista" class="mrq_lista_item">
             <div>
@@ -35,14 +35,14 @@ $apdgt_url=$fila_apdiagnost_wg["url"];
     <div id="secciones-lista">
     
         <ul>
-            <li><a href="/notas/construccion.php"><span class="img icon-online"></span>Resultados <br>Online</a></li>
-            <li><a href="javascript:;"><span class="img icon-atencion"></span>Atención al Asegurado</a></li>
-            <li><a href="javascript:;"><span class="img icon-libro"></span>Libro de Reclamaciones</a></li>
-            <li><a href="javascript:;"><span class="img icon-tarifario"></span>Tarifario <br>Virtual</a></li>
-            <li><a href="javascript:;"><span class="img icon-boletin"></span>Información Epidemiológico</a></li>
+            <li><a href="construccion"><span class="img icon-online"></span>Resultados <br>Online</a></li>
+            <li><a href="construccion"><span class="img icon-atencion"></span>Atención al Asegurado</a></li>
+            <li><a href="construccion"><span class="img icon-libro"></span>Libro de Reclamaciones</a></li>
+            <li><a href="construccion"><span class="img icon-tarifario"></span>Tarifario <br>Virtual</a></li>
+            <li><a href="construccion"><span class="img icon-boletin"></span>Información Epidemiológico</a></li>
             <li><a href="http://observatorio.digemid.minsa.gob.pe/"><span class="img icon-observatorio"></span>Observatorio de Medicamentos</a></li>
-            <li><a href="/notas/construccion.php"><span class="img icon-online"></span>Citas <br>Online</a><div>PRONTO</div></li>
-            <li><a href="javascript:;"><span class="img icon-cas"></span>Contrato Administrativo de Servicios</a></li>
+            <li><a href="construccion"><span class="img icon-online"></span>Citas <br>Online</a><div>PRONTO</div></li>
+            <li><a href="construccion"><span class="img icon-cas"></span>Contrato Administrativo de Servicios</a></li>
         </ul>
     </div>
 
@@ -64,7 +64,7 @@ $apdgt_url=$fila_apdiagnost_wg["url"];
     <div id="opciones-lista">
         <ul>
             <li><a href="javascript:;" id="popupen-escribanos"><span class="img icon-escribanos"></span>Escribanos</a></li>
-            <li><a href="javascript:;" class="last"><span class="img icon-laboral"></span>Oportunidad Laboral</a></li>
+            <li><a href="construccion" class="last"><span class="img icon-laboral"></span>Oportunidad Laboral</a></li>
             <li><a href="javascript:;" id="popupen-ubicanos">Ubícanos<img src="/imagenes/mapa.png"></a></li>
         </ul>
     </div>
