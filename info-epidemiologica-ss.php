@@ -46,12 +46,12 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
                                 <h3>Documentos Adjuntos</h3>
 
                                 <article class="down-item">
-                                    <a href="/documentos/sala-situacional-julio-2012.pdf"><img src="/imagenes/download.png" width="32" height="32"></a>
+                                    <a href="/documentos/sala-situacional-julio-2012.ppt"><img src="/imagenes/download.png" width="32" height="32"></a>
                                     <h4><a href="/documentos/sala-situacional-julio-2012.pdf">Sala Situacional HNDM - Julio 2012</a></h4>
                                 </article>
 
                                 <article class="down-item">
-                                    <a href="/documentos/sala-situacional-agosto-2012.pdf"><img src="/imagenes/download.png" width="32" height="32"></a>
+                                    <a href="/documentos/sala-situacional-agosto-2012.ppt"><img src="/imagenes/download.png" width="32" height="32"></a>
                                     <h4><a href="/documentos/sala-situacional-agosto-2012.pdf">Sala Situacional HNDM - Agosto 2012</a></h4>
                                 </article>
 
