@@ -885,6 +885,25 @@ header nav ul .submenu-prensa li a {
   font-weight: bold;
   margin-top: 20px;
 }
+#news .cas .titulo h2 {
+  font-size: 22px;
+}
+#news .cas .contenido h3,
+#news .cas .contenido h3 a {
+  color: #000;
+  font-size: 17px;
+}
+#news .cas .contenido article {
+  border-bottom: 2px dotted #999;
+  margin-bottom: 10px;
+}
+#news .cas .contenido .regresar {
+  color: #000;
+  float: left;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 20px;
+}
 #news .borde-bottom {
   border-bottom: 2px dotted #999;
 }
