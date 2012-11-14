@@ -45,16 +45,15 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
                             <div class="contenido">
                                 
                                 <article style="float:left;">
-                                    <img src="imagenes/upload/mision.jpg" width="300" style="float:left;width: 230px;margin-right: 15px;border: 5px solid #999;">
                                     <h4>Misión</h4>
                                     <p>Brindar servicios de salud de alta complejidad, desarrollando actividades de prevención de riesgos, promoción, recuperación y rehabilitación en salud, a la población en todas las etapas de su vida con equidad y calidad.</p>
+                                    <p style="text-align:center;"><img src="imagenes/upload/mision.jpg" width="400" style="float: right; border: 5px solid #999;"></p>
                                 </article>
 
                                 <article style="float:left;">
-                                    <h4 style="width: 450px; float: left;">Visión</h4>
-                                    <img src="imagenes/upload/vision.jpg" width="300" style="float: right;margin-left: 15px;width: 230px;border: 5px solid #999;">
-                                    <p style="float: left;width: 450px;">
-                                        Ser al 2013, un hospital acreditado, de alta capacidad resolutiva con tecnología de punta, que brinde servicios integrales de salud, de calidad, en forma humanística que incentive la investigación, docencia y desarrollo tecnológico, con personas comprometidas, solidarias, competentes que trabajen en equipo y con ética, garantizando a la población atención oportuna, equitativa, respetando sus derechos.</p>
+                                    <h4>Visión</h4>
+                                    <p>Ser al 2013, un hospital acreditado, de alta capacidad resolutiva con tecnología de punta, que brinde servicios integrales de salud, de calidad, en forma humanística que incentive la investigación, docencia y desarrollo tecnológico, con personas comprometidas, solidarias, competentes que trabajen en equipo y con ética, garantizando a la población atención oportuna, equitativa, respetando sus derechos.</p>
+                                    <p style="text-align:center;"><img src="imagenes/upload/vision.jpg" width="400" style="float: right; border: 5px solid #999;"></p>
                                 </article>
 
                             </div>
