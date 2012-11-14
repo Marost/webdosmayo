@@ -38,12 +38,12 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
                         <div class="nw-nota borde-bottom">
 
                             <div class="titulo">
-                                <h2>Tarifario</h2>
+                                <h2>Tarifario Virtual</h2>
                             </div>
 
                             <div class="contenido">
                                 
-                                <table width="600" border="1" cellpadding="3" cellspacing="3">
+                                <table width="600" align="center" border="0" cellpadding="3" cellspacing="3">
                                           <col width="282">
                                           <col width="102">
                                           <tr>
@@ -3491,7 +3491,7 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
                                             <td align="right" bgcolor="#DADADA">27.400</td>
                                           </tr>
                                         </table>
-                                
+
                             </div>
 
                         </div>
