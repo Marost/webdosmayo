@@ -86,7 +86,7 @@ $rst_noticias=mysql_query("SELECT * FROM DM_noticia WHERE categoria=$categoria_i
 
         </div>
 
-<?php require_once("../w-popup.php") ?>
+<?php require_once("w-popup.php") ?>
         
     </body>
 </html>

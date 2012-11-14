@@ -38,8 +38,8 @@ $apdgt_url=$fila_apdiagnost_wg["url"];
             <li><a href="construccion"><span class="img icon-online"></span>Resultados <br>Online</a></li>
             <li><a href="construccion"><span class="img icon-atencion"></span>Atención al Asegurado</a></li>
             <li><a href="construccion"><span class="img icon-libro"></span>Libro de Reclamaciones</a></li>
-            <li><a href="construccion"><span class="img icon-tarifario"></span>Tarifario <br>Virtual</a></li>
-            <li><a href="construccion"><span class="img icon-boletin"></span>Información Epidemiológico</a></li>
+            <li><a href="tarifario.php"><span class="img icon-tarifario"></span>Tarifario <br>Virtual</a></li>
+            <li><a href="construccion"><span class="img icon-boletin"></span>Información Epidemiológica</a></li>
             <li><a href="http://observatorio.digemid.minsa.gob.pe/"><span class="img icon-observatorio"></span>Observatorio de Medicamentos</a></li>
             <li><a href="construccion"><span class="img icon-online"></span>Citas <br>Online</a><div>PRONTO</div></li>
             <li><a href="construccion"><span class="img icon-cas"></span>Contrato Administrativo de Servicios</a></li>
