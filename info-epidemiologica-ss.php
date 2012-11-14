@@ -47,12 +47,20 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
 
                                 <article class="down-item">
                                     <a href="/documentos/sala-situacional-julio-2012.ppt"><img src="/imagenes/download.png" width="32" height="32"></a>
+<<<<<<< HEAD
                                     <h4><a href="/documentos/sala-situacional-julio-2012.ppt">Sala Situacional HNDM - Julio 2012</a></h4>
+=======
+                                    <h4><a href="/documentos/sala-situacional-julio-2012.pdf">Sala Situacional HNDM - Julio 2012</a></h4>
+>>>>>>> 7b45e33f4295aa163334a499bbfff25a87e75367
                                 </article>
 
                                 <article class="down-item">
                                     <a href="/documentos/sala-situacional-agosto-2012.ppt"><img src="/imagenes/download.png" width="32" height="32"></a>
+<<<<<<< HEAD
                                     <h4><a href="/documentos/sala-situacional-agosto-2012.ppt">Sala Situacional HNDM - Agosto 2012</a></h4>
+=======
+                                    <h4><a href="/documentos/sala-situacional-agosto-2012.pdf">Sala Situacional HNDM - Agosto 2012</a></h4>
+>>>>>>> 7b45e33f4295aa163334a499bbfff25a87e75367
                                 </article>
 
                                 <a class="regresar" href="info-epidemiologica.php">Regresar</a>
