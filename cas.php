@@ -56,57 +56,10 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
                                     <a href="#"><img src="imagenes/cas.png"></a>
 
                                     <div>
-                                        <p><strong>Convocatoria N° 700</strong></p>
-                                        <p><strong>Direccion General de Salud de las Peronas</strong></p>
-                                        <p>Publicado el 07 de Noviembre del 2012</p>
-                                    </div>
-
-                                </article>
-
-                                <article>
-
-                                    <a href="#"><img src="imagenes/cas.png"></a>
-
-                                    <div>
-                                        <p><strong>Convocatoria N° 699</strong></p>
-                                        <p><strong>Direccion General de Salud de las Peronas</strong></p>
-                                        <p>Publicado el 07 de Noviembre del 2012</p>
-                                    </div>
-
-                                </article>
-
-                                <article>
-
-                                    <a href="#"><img src="imagenes/cas.png"></a>
-
-                                    <div>
-                                        <p><strong>Convocatoria N° 698</strong></p>
-                                        <p><strong>Direccion General de Salud de las Peronas</strong></p>
-                                        <p>Publicado el 07 de Noviembre del 2012</p>
-                                    </div>
-
-                                </article>
-
-                                <article>
-
-                                    <a href="#"><img src="imagenes/cas.png"></a>
-
-                                    <div>
-                                        <p><strong>Convocatoria N° 697</strong></p>
-                                        <p><strong>Direccion General de Salud de las Peronas</strong></p>
-                                        <p>Publicado el 07 de Noviembre del 2012</p>
-                                    </div>
-
-                                </article>
-
-                                <article>
-
-                                    <a href="#"><img src="imagenes/cas.png"></a>
-
-                                    <div>
-                                        <p><strong>Convocatoria N° 696</strong></p>
-                                        <p><strong>Direccion General de Salud de las Peronas</strong></p>
-                                        <p>Publicado el 07 de Noviembre del 2012</p>
+                                        <p><strong>PROCESO DE CONTRATACIÓN Nº 003-2012-HNDM-CECAS</strong></p>
+                                        <p><strong>CONVOCATORIA PARA LA CONTRATACIÓN ADMINISTRATIVA DE SERVICIOS DE PERSONAL PROFESIONAL MÉDICO, ASISTENCIALES Y ADMINISTRATIVOS</strong></p>
+                                        <p>COMISIÓN EVALUADORA DE CONTRATACIÓN ADMINISTRATIVA DE SERVICIOS - CECAS</p>
+                                        <p><a href="#">Bases</a> | <a href="#">Fe de Erratas</a> | <a href="#">Resultados Finales 1 al 8</a> | <a href="#">Resultados Finales 9 al 16</a></p>
                                     </div>
 
                                 </article>

@@ -32,10 +32,9 @@ $espec_url=$fila_especialidades_wg["url"];
                         <li><a href="javascript:;" target="_blank" id="enl-intranet">Intranet</a></li>
                     </ul>
                 </li>
-                <li><a href="javascript:;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                <li><a href="javascript:;">Publicaciones</a>
                     <ul class="submenu">
-                        <li><a href="/construccion">Publicaciones</a></li>
-                        <li><a href="/construccion">Directorio Telefónico</a></li>                    
+                        <li><a href="/construccion">Información Estadistica</a></li>
                     </ul>
                 </li>
                 <li><a href="http://www.peru.gob.pe/transparencia/pep_transparencia_lista_planes.asp?id_entidad=13628&id_tema=1">Transparencia</a></li>
