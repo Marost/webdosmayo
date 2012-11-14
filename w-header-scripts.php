@@ -233,7 +233,7 @@ jNotSld(document).ready(function(){
 <script>
 var jPatHist=jQuery.noConflict();
 jPatHist(document).ready(function(){
-    jPatHist('#patrimonio-historico').allinone_bannerRotator({
+    jPatHist('#patrimonio-historico div').allinone_bannerRotator({
         skin: 'classic',
         width: 220,
         height: 150,
