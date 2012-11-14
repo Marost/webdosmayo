@@ -35,28 +35,28 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
 
                     <section id="news">
 
-                        <div class="nw-nota">
+                        <div class="nw-nota info-epidemiologico">
 
                             <div class="titulo">
                                 <h2>Boletín Epidemiológico</h2>
                             </div>
 
-                            <div class="contenido info-epss-items">
+                            <div class="contenido">
                                 
                                 <h3>Documentos Adjuntos</h3>
 
-                                <article>
+                                <article class="down-item">
                                     <a href="/documentos/boletin-julio-2012.pdf"><img src="/imagenes/download.png" width="32" height="32"></a>
-                                    <h4>Boletín Epidemiológico HNDM - Julio 2012</h4>
+                                    <h4><a href="/documentos/boletin-julio-2012.pdf">Boletín Epidemiológico HNDM - Julio 2012</a></h4>
                                 </article>
 
-                                <article>
+                                <article class="down-item">
                                     <a href="/documentos/boletin-agosto-2012.pdf"><img src="/imagenes/download.png" width="32" height="32"></a>
-                                    <h4>Boletín Epidemiológico HNDM - Agosto 2012</h4>
+                                    <h4><a href="/documentos/boletin-agosto-2012.pdf">Boletín Epidemiológico HNDM - Agosto 2012</a></h4>
                                 </article>
 
                                 <a class="regresar" href="info-epidemiologica.php">Regresar</a>
-                                
+
                             </div>
 
                         </div>

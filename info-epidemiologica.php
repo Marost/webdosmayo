@@ -35,13 +35,13 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
 
                     <section id="news">
 
-                        <div class="nw-nota">
+                        <div class="nw-nota info-epidemiologico">
 
                             <div class="titulo">
                                 <h2>Información Epidemiológica</h2>
                             </div>
 
-                            <div class="contenido info-epidemiologico">
+                            <div class="contenido">
                                 
                                 <article>
                                     <h3><a href="info-epidemiologica-ep.php">Boletín Epidemiológico</a></h3>

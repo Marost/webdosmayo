@@ -847,6 +847,35 @@ header nav ul .submenu-prensa li a {
 #news .nw-nota .nwn-lista div {
   border: none;
 }
+#news .info-epidemiologico .titulo h2 {
+  font-size: 22px;
+}
+#news .info-epidemiologico .contenido h3,
+#news .info-epidemiologico .contenido h3 a {
+  color: #000;
+  font-size: 17px;
+}
+#news .info-epidemiologico .contenido article {
+  border-bottom: 2px dotted #999;
+  margin-bottom: 10px;
+}
+#news .info-epidemiologico .contenido article.down-item {
+  float: left;
+  margin: 20px 0 20px 10px;
+  width: 100%;
+}
+#news .info-epidemiologico .contenido article.down-item a {
+  float: left;
+}
+#news .info-epidemiologico .contenido article.down-item h4 a {
+  float: left;
+  font-size: 16px;
+  margin: 7px 0 0 10px;
+}
+#news .info-epidemiologico .contenido .regresar {
+  font-size: 14px;
+  font-weight: bold;
+}
 #news .borde-bottom {
   border-bottom: 2px dotted #999;
 }
