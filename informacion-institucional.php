@@ -36,13 +36,29 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
 
                     <section id="news">
 
-                        <h2>Información Institucional</h2>
+                        <div class="nw-nota">
 
-                        <h4>Misión</h4>
-                        <p>Brindar servicios de salud de alta complejidad, desarrollando actividades de prevención de riesgos, promoción, recuperación y rehabilitación en salud, a la población en todas las etapas de su vida con equidad y calidad.</p>
+                            <div class="titulo">
+                                <h2>Información Institucional</h2>
+                            </div>
 
-                        <h4>Visión</h4>
-                        <p>Ser al 2013, un hospital acreditado, de alta capacidad resolutiva con tecnología de punta, que brinde servicios integrales de salud, de calidad, en forma humanística que incentive la investigación, docencia y desarrollo tecnológico, con personas comprometidas, solidarias, competentes que trabajen en equipo y con ética, garantizando a la población atención oportuna, equitativa, respetando sus derechos.</p>
+                            <div class="contenido" style="text-align:center;">
+                                
+                                <article>
+                                    <img src="imagenes/upload/mision.jpg" width="300" style="float:left;">
+                                    <h4>Misión</h4>
+                                    <p>Brindar servicios de salud de alta complejidad, desarrollando actividades de prevención de riesgos, promoción, recuperación y rehabilitación en salud, a la población en todas las etapas de su vida con equidad y calidad.</p>
+                                </article>
+
+                                <article>
+                                    <h4>Visión</h4>
+                                    <p>Ser al 2013, un hospital acreditado, de alta capacidad resolutiva con tecnología de punta, que brinde servicios integrales de salud, de calidad, en forma humanística que incentive la investigación, docencia y desarrollo tecnológico, con personas comprometidas, solidarias, competentes que trabajen en equipo y con ética, garantizando a la población atención oportuna, equitativa, respetando sus derechos.</p>
+                                    <img src="imagenes/upload/vision.jpg" width="300" style="float:left;">
+                                </article>
+
+                            </div>
+
+                        </div>
 
                     </section>
 
