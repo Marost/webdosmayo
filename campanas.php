@@ -35,7 +35,7 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
 
                     <section id="news">
 
-                        <div class="nw-nota borde-bottom">
+                        <div class="nw-nota">
 
                             <div class="titulo">
                                 <h2>Campañas Especiales</h2>
