@@ -42,7 +42,7 @@ $apdgt_url=$fila_apdiagnost_wg["url"];
             <li><a href="info-epidemiologica.php"><span class="img icon-boletin"></span>Información Epidemiológica</a></li>
             <li><a href="http://observatorio.digemid.minsa.gob.pe/"><span class="img icon-observatorio"></span>Observatorio de Medicamentos</a></li>
             <li><a href="construccion"><span class="img icon-online"></span>Citas <br>Online</a><div>PRONTO</div></li>
-            <li><a href="construccion"><span class="img icon-cas"></span>Contrato Administrativo de Servicios</a></li>
+            <li><a href="cas.php"><span class="img icon-cas"></span>Contrato Administrativo de Servicios</a></li>
         </ul>
     </div>
 
@@ -64,7 +64,7 @@ $apdgt_url=$fila_apdiagnost_wg["url"];
     <div id="opciones-lista">
         <ul>
             <li><a href="javascript:;" id="popupen-escribanos" class="p-escribanos"><span class="img icon-escribanos"></span>Escribanos</a></li>
-            <li><a href="construccion" class="last"><span class="img icon-laboral"></span>Oportunidad Laboral</a></li>
+            <li><a href="cas.php" class="last"><span class="img icon-laboral"></span>Oportunidad Laboral</a></li>
             <li><a href="javascript:;" id="popupen-ubicanos">Ubícanos<img src="/imagenes/mapa.png"></a></li>
         </ul>
     </div>
