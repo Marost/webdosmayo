@@ -39,13 +39,12 @@ $espec_url=$fila_especialidades_wg["url"];
                         <ul>
                             <li><a href="construccion">Información Estadistica</a></li>
                             <li><a href="#">Información Epideológica</a>
-                                <span class="icon">&nbsp;</span>    
-                                <ul>
-                                    <li><a href="info-epidemiologica-ss.php">Sala Situacional</a></li>
-                                    <li><a href="info-epidemiologica-ep.php">Boletin Epidemiologico</a></li>
-                                </ul>
+                                <span class="icon">&nbsp;</span>
+                                <div class="accordion">
+                                    <a href="info-epidemiologica-ss.php">Sala Situacional</a>
+                                    <a href="info-epidemiologica-ep.php">Boletin Epidemiologico</a>
+                                </div>
                             </li>
-                            <li><a href="http://www.google.com">Asia</a></li>
                         </ul>
                     </li>
                     <li><a href="/">Transparencia</a></li>
