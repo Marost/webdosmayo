@@ -101,6 +101,22 @@ $rst_noticias_ant=mysql_query("SELECT * FROM DM_noticia WHERE categoria=$noticia
                             </div>
                             <?php } ?>
 
+                            <?php if($noticia_categoria==9){ ?>
+                            <div class="imagen_slide" style="display:none;">
+                                <ul class="allinone_bannerWithPlaylist_list">   
+                                    <?php while ($fila_noticia_slide=mysql_fetch_array($rst_noticia_slide)){
+                                        /*VARIABLES DE SLIDE*/
+                                        $noticia_slide_id=$fila_noticia_slide["id"];
+                                        $noticia_slide_imagen=$fila_noticia_slide["imagen"];
+                                        $noticia_slide_imagen_carpeta=$fila_noticia_slide["carpeta"];
+                                    ?>
+                                        <li data-bottom-thumb="/imagenes/upload/<?php echo $noticia_slide_imagen_carpeta."thumb/".$noticia_slide_imagen; ?>">
+                                      <img src="/imagenes/upload/<?php echo $noticia_slide_imagen_carpeta."".$noticia_slide_imagen; ?>" alt="" /></li>
+                                    <?php } ?>
+                                </ul>
+                            </div>
+                            <?php } ?>
+
                             <?php if($noticia_categoria==1 or $noticia_categoria==3 or $noticia_categoria==4 or $noticia_categoria==6 or $noticia_categoria==7 or $noticia_categoria==8){ ?>
                             <div style="float:left; margin: 10px 0;">
                                 <a href="nota-ant.php" style="font-weight: bold; font-size: 14px;">Regresar</a>
