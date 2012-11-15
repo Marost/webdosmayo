@@ -85,8 +85,8 @@ skins available:
 	position:absolute;
 	background:#000000;
 	border-top:1px solid #e66b19;
-	height:121px !important;
-	width:100%;
+	height:90px !important;
+	width:100% !important;
 	overflow:hidden;
 	z-index:10;
 }
@@ -116,7 +116,7 @@ skins available:
 }
 .allinone_thumbnailsBanner.cool .carouselLeftNav {
 	position:absolute;
-	width:29px;
+	width:29px !important;
 	height:90px;
 	background:url(skins/cool/carouselLeftNav.png) 0 0 no-repeat;
 	cursor: pointer;	
@@ -136,7 +136,7 @@ skins available:
 
 .allinone_thumbnailsBanner.cool .carouselRightNav {
 	position:absolute;
-	width:29px;
+	width:29px !important;
 	height:90px;
 	background:url(skins/cool/carouselRightNav.png) 0 0 no-repeat;
 	cursor: pointer;
@@ -205,7 +205,7 @@ skins available:
 .allinone_thumbnailsBanner.simple .thumbsHolderVisibleWrapper {
 	position:absolute;
 	width:100%;
-	height:121px;
+	height:90px;
 	overflow:hidden;
 }
 .allinone_thumbnailsBanner.simple .thumbsHolder {
