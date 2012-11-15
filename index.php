@@ -208,13 +208,19 @@ $alianzas_url_final=$alianzas_categoria["url"]."/".$alianzas_id."-".$alianzas_ur
 
                                 <div class="nws-contenido">
 
-                                    <ul>
-                                        <li><a href="campanas.php"><img src="/imagenes/campanias-especiales/campania1.jpg"></a></li>
-                                        <li><a href="campanas.php"><img src="/imagenes/campanias-especiales/campania-2.jpg"></a></li>
-                                        <li><a href="campanas.php"><img src="/imagenes/campanias-especiales/icon-campana-especial-01.png"></a></li>
-                                        <li><a href="campanas.php"><img src="/imagenes/campanias-especiales/icon-campana-especial-02.png"></a></li>
-                                        <li><a href="campanas.php"><img src="/imagenes/campanias-especiales/icon-campana-especial-03.png"></a></li>
+                                    <div>
+                                    
+                                    <ul class="allinone_carousel_list">
+                
+                                        <li data-link="campanas.php"><img src="/imagenes/campanias-especiales/campana1.jpg" alt="" /></li>
+                                        <li data-link="campanas.php"><img src="/imagenes/campanias-especiales/campana2.jpg" alt="" /></li>
+                                        <li data-link="campanas.php"><img src="/imagenes/campanias-especiales/campana3.jpg" alt="" /></li>
+                                        <li data-link="campanas.php"><img src="/imagenes/campanias-especiales/campana4.jpg" alt="" /></li>
+                                          
                                     </ul>
+
+                                    </div>
+
                                     <a href="campanas.php">Más...</a>
 
                                 </div>
