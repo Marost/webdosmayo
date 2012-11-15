@@ -256,7 +256,7 @@ jCampEsp(document).ready(function(){
     jCampEsp('#nw-campania-esp .nws-contenido div').allinone_carousel({
         skin: 'charming',
         width: 355,
-        height: 300,
+        height: 370,
         autoPlay: 3,
         resizeImages:true,
         autoHideBottomNav:false,
