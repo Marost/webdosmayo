@@ -253,7 +253,7 @@ jPatHist(document).ready(function(){
 <script>
 var jCampEsp=jQuery.noConflict();
 jCampEsp(document).ready(function(){
-    jCampEsp('#nw-campania-esp .nws-contenido .div').allinone_carousel({
+    jCampEsp('#nw-campania-esp .nws-contenido div').allinone_carousel({
         skin: 'charming',
         width: 370,
         height: 300,
