@@ -79,16 +79,26 @@ require_once("../panel@hndm/conexion/funcion-paginacion.php");
 
                                 <h3>Daniel Alcides Carrión: Mártir de la Medicina Peruana y Héroe Nacional Civil</h3>
                                 <div>
-                                    <img src="/imagenes/upload/daniel-alcides-carrion.jpg" style="float:left; padding:0 8px 8px 0;">
+                                    <img src="/imagenes/upload/daniel-alcides-carrion.jpg" style="float:left; width: 150px;">
                                     <p>El 5 de octubre de 1885, Daniel A. Carrión, estudiante de 6to. año de Medicina fallece, pasando a la inmortalidad al demostrar la unidad clínica de la antigua enfermedad llamada Verruga Peruana y la Fiebre de la Oroya, que diezmó obreros que trabajaban en la construcción de las vias del Ferrocarril Central.</p>
                                     <p>En estos 137 años de vida institucional diferentes y diversas gestiones han acompañado y marcado el desarrollo médico, asistencial, científico y académico del Perú a través de generaciones de profesionales de la salud que se han formado en nuestras instalaciones.</p>
 
-                                    <p>El renombre de sus especialistas ha trascendido el escenario nacional llevando prestigio médico, científico y académico a nuestro país.
+                                    <img src="imagenes/upload/carrion4.jpg" style="
+    width: 180px;
+    float: right;
+    padding: 0 0 0 12px;
+"><p>El renombre de sus especialistas ha trascendido el escenario nacional llevando prestigio médico, científico y académico a nuestro país.
                                     El fortalecimineto de la microred del hospital a través de 14 centros y puestos de salud, la aplicación de un Proyecto de Inversión en la Unidad de Hemodiálisis que acoge a personas de menores recursos económicos, son una muestra de las tareas que se vienen cumpliendo desde hace 4 años. Programa de Cirugía de Tórax y Cardiovascular Gracias a un Convenio firmado entre el Ministerio de Salud y la PAMS (Peruvian American Medical Society) se estableció en el Hospital Nacional Dos de Mayo el Programa de Cirugía de Tórax y Cardiovascular.</p>
+
 
                                     <p>Desde 1999 hasta la actualidad en el HNDM se realizan 1700 cirugías cardíacas complejas, todas dirigidas a pacientes sin recursos. De este total, 1000 son cardiacas, 600 torácicas y 100 vasculares. El Programa de ayuda con cirugía cardiaca de manera permanente, ha merecido reconocimientos y premios nacionales e internacionales como el recibido en mayo de 2007 por The World Heart Foundation (Ginebra-Suiza), institución que ha incorporado al Programa como miembro activo. El apoyo del PAMS como cooperante, además de la labor asistencial ha fortalecido al HNDM con equipamiento y entrenamiento de profesionales médicos y de enfermería, fuera del Hospital, sin costo para la Institución. Esto ha permitido la formación de Residentes Médicos de la especialidad a través de la Universidad Nacional Mayor de San Marcos. La obra del fundador Dr. Efraín Montesinos Mosqueira perdura a través del Programa que ha permitido al HNDM ser líder entre los Hospitales del MINSA en Cirugía Cardiaca de Corazón Abierto de Adultos pobres e indigentes.</p>
 
-                                    <p>Entre los logros de los últimos años figura las importantes compras de equipos e implementos  médicos de alta tecnología en las principales áreas de intervención médica, quirúrgica, emergencia así como de diagnóstico tanto en Patología Clínica  como Laboratorio y por Imágenes como es el caso del moderno Tomógrafo Espiral Multicorte, el Resonador, Cineangiografo, equipos de medicina nuclear, de muy alta precisión entre los Hospitales del Ministerio de Salud. Esta ventaja tecnológica que permite apoyar en el diagnóstico de enfermedades por medio de procedimientos no invasivos y en contados segundos, con esto se logra atender a personas de escasos o limitados recursos económicos que ya coberturados por el Seguro que posibilita el Estado Peruano.</p>
+                                    
+<img src="imagenes/upload/carrion1.jpg" style="
+    width: 250px;
+    float: left;
+    padding: 0 11px 0 0;
+"><p>Entre los logros de los últimos años figura las importantes compras de equipos e implementos  médicos de alta tecnología en las principales áreas de intervención médica, quirúrgica, emergencia así como de diagnóstico tanto en Patología Clínica  como Laboratorio y por Imágenes como es el caso del moderno Tomógrafo Espiral Multicorte, el Resonador, Cineangiografo, equipos de medicina nuclear, de muy alta precisión entre los Hospitales del Ministerio de Salud. Esta ventaja tecnológica que permite apoyar en el diagnóstico de enfermedades por medio de procedimientos no invasivos y en contados segundos, con esto se logra atender a personas de escasos o limitados recursos económicos que ya coberturados por el Seguro que posibilita el Estado Peruano.</p>
                                 </div>
 
                             </div>
