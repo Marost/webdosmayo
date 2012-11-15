@@ -254,7 +254,7 @@ jPatHist(document).ready(function(){
 <script>
 var jCampEsp=jQuery.noConflict();
 jCampEsp(document).ready(function(){
-    jQuery('#allinone_thumbnailsBanner_cool').allinone_thumbnailsBanner({
+    jQuery('#nw-campania-esp .nws-contenido div').allinone_thumbnailsBanner({
         skin: 'cool',
         numberOfThumbsPerScreen:2,
         width: 350,
