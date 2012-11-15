@@ -53,7 +53,7 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
 
                                 <article>
 
-                                    <a class="imagen" href="#"><img src="imagenes/cas.png"></a>
+                                    <a class="imagen-cas" href="#"><img src="imagenes/cas.png"></a>
 
                                     <div>
                                         <p><strong>PROCESO DE CONTRATACIÓN Nº 003-2012-HNDM-CECAS</strong></p>
