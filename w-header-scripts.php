@@ -258,7 +258,7 @@ jCampEsp(document).ready(function(){
         skin: 'cool',
         numberOfThumbsPerScreen:2,
         width: 350,
-        height: 310,
+        height: 300,
         origthumbsHolderWrapperH:121,
         thumbsWrapperMarginTop:0
     });
