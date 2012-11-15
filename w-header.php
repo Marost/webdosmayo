@@ -50,7 +50,7 @@ $espec_url=$fila_especialidades_wg["url"];
                     <li><a href="/">Transparencia</a></li>
                     <li><a href="#">Prensa<span class="icon">&nbsp;</span></a>
                         <ul class="submenu-prensa">
-                            <li><a href="sala-prensa.php">Sala de Prensa</a></li>
+                            <li><a href="construccion">Sala de Prensa</a></li>
                         </ul>
                     </li>
                 </ul>
