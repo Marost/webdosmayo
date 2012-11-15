@@ -51,7 +51,7 @@ skins available:
 	left:0;
 	top:0;
 	z-index:2;
-	width:100%;
+	width:100% !important;
 }
 
 .allinone_thumbnailsBanner.cool .leftNav {
@@ -98,6 +98,7 @@ skins available:
 }
 .allinone_thumbnailsBanner.cool .thumbsHolder {
 	position:absolute;
+	width: 100%;
 }
 .allinone_thumbnailsBanner.cool .thumbsHolder_ThumbOFF {
 	float:left;

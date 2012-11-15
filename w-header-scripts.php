@@ -259,7 +259,6 @@ jCampEsp(document).ready(function(){
         numberOfThumbsPerScreen:2,
         width: 350,
         height: 300,
-        origthumbsHolderWrapperH:121,
         thumbsWrapperMarginTop:0
     });
 });
