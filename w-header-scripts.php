@@ -71,6 +71,7 @@ jSlideNI(document).ready(function() {
 <link rel="stylesheet" href="/libs/sherpa/styles/960_fluid.css" />
 <link rel="stylesheet" href="/libs/sherpa/styles/main.css" />
 <link rel="stylesheet" href="/libs/sherpa/styles/bar_nav.css" />
+<link rel="stylesheet" href="/libs/sherpa/styles/skins/theme_blue.css" />
 <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/themes/base/jquery-ui.css" />
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/jquery-ui.min.js"></script>
