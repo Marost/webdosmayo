@@ -243,30 +243,24 @@ jPatHist(document).ready(function(){
 </script>
 
 <!-- SLIDER CAMPAÑAS -->
-<link href="/libs/allinone_banner/allinone_carousel.css" rel="stylesheet" type="text/css">
+<link href="/libs/allinone_banner/allinone_thumbnailsBanner.css" rel="stylesheet" type="text/css">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
 <script src="/libs/allinone_banner/jquery.ui.touch-punch.min.js"></script>
 <script src="/libs/allinone_banner/jquery.mousewheel.min.js"></script>
-<script src="/libs/allinone_banner/allinone_carousel.js"></script>
+<script src="/libs/allinone_banner/allinone_thumbnailsBanner.js"></script>
+<script src="/libs/allinone_banner/reflection.js" type="text/javascript"></script>
 <!--[if IE]><script src="/libs/allinone_banner/excanvas.compiled.js" type="text/javascript"></script><![endif]-->
 <script>
 var jCampEsp=jQuery.noConflict();
 jCampEsp(document).ready(function(){
-    jCampEsp('#nw-campania-esp .nws-contenido div').allinone_carousel({
-        skin: 'charming',
-        width: 280,
-        height: 370,
-        autoPlay: 3,
-        resizeImages:true,
-        autoHideBottomNav:false,
-        showElementTitle:false,
-        verticalAdjustment:50,
-        showPreviewThumbs:false,
-        numberOfVisibleItems:5,
-        nextPrevMarginTop:23,
-        playMovieMarginTop:0,
-        bottomNavMarginBottom:-10
-    }); 
+    jQuery('#allinone_thumbnailsBanner_cool').allinone_thumbnailsBanner({
+        skin: 'cool',
+        numberOfThumbsPerScreen:2,
+        width: 350,
+        height: 310,
+        origthumbsHolderWrapperH:121,
+        thumbsWrapperMarginTop:0
+    });
 });
 </script>
