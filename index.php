@@ -211,10 +211,14 @@ $alianzas_url_final=$alianzas_categoria["url"]."/".$alianzas_id."-".$alianzas_ur
                                     <div>
                                         
                                         <ul class="allinone_carousel_list">
-                                            <li data-link="campanas.php"><img src="/imagenes/campanias-especiales/campana1.jpg" alt="" /></li>
-                                            <li data-link="campanas.php"><img src="/imagenes/campanias-especiales/campana2.jpg" alt="" /></li>
-                                            <li data-link="campanas.php"><img src="/imagenes/campanias-especiales/campana3.jpg" alt="" /></li>
-                                            <li data-link="campanas.php"><img src="/imagenes/campanias-especiales/campana4.jpg" alt="" /></li>
+                                            <li data-link="campanas.php" data-bottom-thumb="/imagenes/campanias-especiales/thumb110/campana1.jpg">
+                                                <img src="/imagenes/campanias-especiales/thumb350/campana1.jpg" alt="" /></li>
+                                            <li data-link="campanas.php" data-bottom-thumb="/imagenes/campanias-especiales/thumb110/campana2.jpg">
+                                                <img src="/imagenes/campanias-especiales/thumb350/campana2.jpg" alt="" /></li>
+                                            <li data-link="campanas.php" data-bottom-thumb="/imagenes/campanias-especiales/thumb110/campana3.jpg">
+                                                <img src="/imagenes/campanias-especiales/thumb350/campana3.jpg" alt="" /></li>
+                                            <li data-link="campanas.php" data-bottom-thumb="/imagenes/campanias-especiales/thumb110/campana4.jpg">
+                                                <img src="/imagenes/campanias-especiales/thumb350/campana4.jpg" alt="" /></li>
                                         </ul>
 
                                     </div>

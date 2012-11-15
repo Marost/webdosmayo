@@ -59,7 +59,7 @@ skins available:
 	left:0px;
 	top:50%;
 	/*margin-top:-20px;  height/2 */
-	width:22px;
+	width:22px !important;
 	height:75px;
 	background:url(skins/cool/leftNavOFF.png) 0 0 no-repeat;
 	cursor: pointer;
@@ -73,7 +73,7 @@ skins available:
 	right:0px;
 	top:50%;
 	/*margin-top:-20px;  height/2 */
-	width:22px;
+	width:22px !important;
 	height:75px;
 	background:url(skins/cool/rightNavOFF.png) 0 0 no-repeat;
 	cursor: pointer;
