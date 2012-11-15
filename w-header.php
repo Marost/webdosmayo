@@ -20,36 +20,46 @@ $espec_url=$fila_especialidades_wg["url"];
         </div>
 
         <nav>
-            <ul id="nav">
-                <li class="first"><a href="/" class="current">Inicio</a></li>
-                <li><a href="javascript:;">Institucional</a>
-                    <ul class="submenu">
-                        <li><a href="directorio.php">Directorio</a></li>
-                        <li><a href="/notas/historia.php">Historia</a></li>
-                        <li><a href="informacion-institucional.php">Información Institucional</a></li>
-                        <li><a href="/cat/nuestras-oficinas">Nuestras Oficinas</a></li>
-                        <li><a href="/construccion">Normatividad</a></li>
-                        <li><a href="javascript:;" target="_blank" id="enl-intranet">Intranet</a></li>
-                    </ul>
-                </li>
-                <li><a href="javascript:;">Publicaciones</a>
-                    <ul class="submenu">
-                        <li><a href="/construccion">Información Estadistica</a></li>
-                    </ul>
-                </li>
-                <li><a href="http://www.peru.gob.pe/transparencia/pep_transparencia_lista_planes.asp?id_entidad=13628&id_tema=1">Transparencia</a></li>
-                <li class="last"><a href="javascript:;">Prensa</a>
-                    <ul class="submenu-prensa">
-                        <li><a href="sala-prensa.php">Sala de Prensa</a></li>
-                    </ul>
-                </li>
-            </ul>
+
+            <div id="top_nav" class="nav_down bar_nav grid_16 round_all">
+                <ul class="round_all clearfix">
+                    <li><a class="round_left" href="/">Inicio</a></li>
+                    <li><a href="#">Institucional
+                        <span class="icon">&nbsp;</span></a>
+                        <ul>
+                            <li><a href="directorio.php">Directorio</a></li>
+                            <li><a href="/notas/historia.php">Historia</a></li>
+                            <li><a href="informacion-institucional.php">Información Institucional</a></li>
+                            <li><a href="/cat/nuestras-oficinas">Nuestras Oficinas</a></li>
+                            <li><a href="/construccion">Normatividad</a></li>
+                            <li><a href="javascript:;" target="_blank" id="enl-intranet">Intranet</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Publicaciones<span class="icon">&nbsp;</span></a>
+                        <ul>
+                            <li><a href="construccion">Información Estadistica</a></li>
+                            <li><a href="#">Información Epideológica</a>
+                                <span class="icon">&nbsp;</span>    
+                                <ul>
+                                    <li><a href="info-epidemiologica-ss.php">Sala Situacional</a></li>
+                                    <li><a href="info-epidemiologica-ep.php">Boletin Epidemiologico</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="http://www.google.com">Asia</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/">Transparencia</a></li>
+                    <li><a href="#">Prensa<span class="icon">&nbsp;</span></a>
+                        <ul>
+                            <li><a href="#">Sala de Prensa</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
         </nav><!-- MENU PRINCIPAL -->
 
-        <h1>
-            <a class="logo-principal" href="/">
-                Hospital Nacional Dos de Mayo</a>
-        </h1>
+        <h1><a class="logo-principal" href="/">Hospital Nacional Dos de Mayo</a></h1>
 
         <div id="slider">
             <img src="imagenes/slide/img1.jpg" alt="" title="<div class='block1'><div class='indent-block'><h1><strong>137 años</strong>de Historia y Tradición</h1>al Servicio de la Medicina Peruana</div></div>">

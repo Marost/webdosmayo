@@ -68,22 +68,15 @@ jSlideNI(document).ready(function() {
 </script>
 
 <!-- MENU -->
-<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script>
-var jMenu=jQuery.noConflict();
-jMenu(document).ready(function(){
-    jMenu('#nav>li').hover(
-        function(){
-        jMenu('.submenu',this).stop(true,true).slideDown('fast');
-        jMenu('.submenu-prensa',this).stop(true,true).slideDown('fast');
-        },
-        function(){
-        jMenu('.submenu',this).slideUp('fast');
-        jMenu('.submenu-prensa',this).slideUp('fast');
-        }
-    );
-});
-</script>
+<link rel="stylesheet" href="/libs/sherpa/styles/960_fluid.css" />
+<link rel="stylesheet" href="/libs/sherpa/styles/main.css" />
+<link rel="stylesheet" href="/libs/sherpa/styles/bar_nav.css" />
+<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/themes/base/jquery-ui.css" />
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/libs/sherpa/scripts/jquery.cookie.js"></script>
+<script type="text/javascript" src="/libs/sherpa/scripts/jquery.hoverIntent.minified.js"></script>
+<script type="text/javascript" src="/libs/sherpa/scripts/sherpa_ui.js"></script>
 
 <!-- TELEFONO EFECTO -->
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
