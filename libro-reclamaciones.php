@@ -93,7 +93,7 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
                                 <p>
                                     PRESENTA TU RECLAMO aqu&iacute; v&iacute;a e-mail:</p>
                                 <p>
-                                    Si consideras necesario presentar alg&uacute;n reclamo al hospital, debes hacer click <a href="">AQU&Iacute;</a></p>
+                                    Si consideras necesario presentar alg&uacute;n reclamo al hospital, debes hacer click <a href="libro-reclamaciones-form.php">AQU&Iacute;</a></p>
                                 <p>
                                     Una vez enviado tu reclamo un equipo de profesionales del hospital te estar&aacute; respondiendo.</p>
                                 <p>
