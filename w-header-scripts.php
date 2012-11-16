@@ -231,7 +231,9 @@ jPatHist(document).ready(function(){
         width: 220,
         height: 150,
         thumbsWrapperMarginBottom:5,
-        showAllControllers: false
+        showAllControllers: false,
+        showNavArrows: false,
+        showBottomNav: false
     });
 });
 </script>
