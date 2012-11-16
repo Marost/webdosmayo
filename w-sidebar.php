@@ -39,7 +39,7 @@ $apdgt_url=$fila_apdiagnost_wg["url"];
             <li><a href="atencion-asegurado.php"><span class="img icon-atencion"></span>Atención al Asegurado</a></li>
             <li><a href="libro-reclamaciones.php"><span class="img icon-libro"></span>Libro de Reclamaciones</a></li>
             <li><a href="tarifario.php"><span class="img icon-tarifario"></span>Tarifario <br>Virtual</a></li>
-            <li><a href="info-epidemiologica.php"><span class="img icon-boletin"></span>Información Epidemiológica</a></li>
+            <li><a href="construccion"><span class="img icon-boletin"></span></a></li>
             <li><a href="http://observatorio.digemid.minsa.gob.pe/"><span class="img icon-observatorio"></span>Observatorio de Medicamentos</a></li>
             <li><a href="construccion"><span class="img icon-online"></span>Citas <br>Online</a><div>PRONTO</div></li>
             <li><a href="cas.php"><span class="img icon-cas"></span>Contrato Administrativo de Servicios</a></li>
@@ -58,9 +58,9 @@ $apdgt_url=$fila_apdiagnost_wg["url"];
     <div id="patrimonio-historico">
         <div style="display:none;">
         <ul class="allinone_bannerRotator_list">
-            <li><img src="imagenes/slide/patrimonio-historico-1.jpg" width="220" height="120" title=" "></li>
-            <li><img src="imagenes/slide/patrimonio-historico-2.jpg" width="220" height="120" title=" "></li>
-            <li><img src="imagenes/slide/patrimonio-historico-3.jpg" width="220" height="120" title=" "></li>
+            <li data-link="/notas/historia.php"><img src="imagenes/slide/patrimonio-historico-1.jpg" width="220" height="120" title=" "></li>
+            <li data-link="/notas/historia.php"><img src="imagenes/slide/patrimonio-historico-2.jpg" width="220" height="120" title=" "></li>
+            <li data-link="/notas/historia.php"><img src="imagenes/slide/patrimonio-historico-3.jpg" width="220" height="120" title=" "></li>
         </ul>
         </div>
     </div>

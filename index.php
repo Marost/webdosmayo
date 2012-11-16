@@ -315,12 +315,13 @@ $alianzas_url_final=$alianzas_categoria["url"]."/".$alianzas_id."-".$alianzas_ur
                             <div class="nw-seccion">
 
                                 <div class="nws-select">
-                                    <h3>Tour Virtual</h3>
+                                    <h3>Videos</h3>
                                 </div>
 
                                 <article class="nws-contenido">
 
                                     <iframe width="370" height="150" src="http://www.youtube.com/embed/B4_QQQCInFg?wmode=transparent&autohide=1&egm=0&hd=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=0&showsearch=0&theme=light" frameborder="0" allowfullscreen></iframe>
+                                    <a href="sala-prensa.php">Más...</a>
                                     
                                 </article>
                             </div>
