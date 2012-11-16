@@ -233,7 +233,8 @@ jPatHist(document).ready(function(){
         thumbsWrapperMarginBottom:5,
         showAllControllers: false,
         showNavArrows: false,
-        showBottomNav: false
+        showBottomNav: false,
+        showCircleTimer: false
     });
 });
 </script>
