@@ -87,7 +87,7 @@ $rst_noticias_ant=mysql_query("SELECT * FROM DM_noticia WHERE categoria=$noticia
                             <?php } ?>
 
                             <div class="contenido">
-                                <?php echo $noticia_contenido_comp[0]; ?>
+                                <?php echo $noticia_contenido_comp[1]; ?>
                             </div>
 
                             <?php if($num_noticia_slide>0){ ?>
