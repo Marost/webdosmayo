@@ -17,6 +17,7 @@ $fila_noticia=mysql_fetch_array($rst_noticia);
 /*VARIABLES DE NOTICIA*/
 $noticia_titulo=$fila_noticia["titulo"];
 $noticia_contenido=$fila_noticia["contenido"];
+$noticia_contenido_comp=explode(soloDescripcion($noticia_contenido), $noticia_contenido);
 $noticia_imagen=$fila_noticia["imagen"];
 $noticia_imagen_carpeta=$fila_noticia["carpeta_imagen"];
 $noticia_categoria=$fila_noticia["categoria"];
@@ -75,6 +76,10 @@ $rst_noticias_ant=mysql_query("SELECT * FROM DM_noticia WHERE categoria=$noticia
                                 <h2><?php echo $noticia_titulo; ?></h2>
                             </div>
 
+                            <div class="contenido">
+                                <p><?php echo soloDescripcion($noticia_contenido); ?></p>
+                            </div>
+
                             <?php if($noticia_imagen<>""){ ?>
                             <div class="imagen">
                                 <img alt="<?php echo $noticia_titulo; ?>" title=" " src="/imagenes/upload/<?php echo $noticia_imagen_carpeta."".$noticia_imagen; ?>">
@@ -82,7 +87,7 @@ $rst_noticias_ant=mysql_query("SELECT * FROM DM_noticia WHERE categoria=$noticia
                             <?php } ?>
 
                             <div class="contenido">
-                                <?php echo $noticia_contenido; ?>
+                                <?php echo $noticia_contenido_comp[0]; ?>
                             </div>
 
                             <?php if($num_noticia_slide>0){ ?>
