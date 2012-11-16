@@ -207,7 +207,7 @@ var jNotSld=jQuery.noConflict();
 jNotSld(document).ready(function(){
     jNotSld('.imagen_slide div').allinone_thumbnailsBanner({
         skin: 'cool',
-        numberOfThumbsPerScreen:2,
+        numberOfThumbsPerScreen:4,
         width: 620,
         height: 360,
         thumbsWrapperMarginTop:0
