@@ -58,9 +58,9 @@ $apdgt_url=$fila_apdiagnost_wg["url"];
     <div id="patrimonio-historico">
         <div style="display:none;">
         <ul class="allinone_bannerRotator_list">
-            <li data-link="/notas/historia.php"><img src="imagenes/slide/patrimonio-historico-1.jpg" width="220" height="120" title=" "></li>
-            <li data-link="/notas/historia.php"><img src="imagenes/slide/patrimonio-historico-2.jpg" width="220" height="120" title=" "></li>
-            <li data-link="/notas/historia.php"><img src="imagenes/slide/patrimonio-historico-3.jpg" width="220" height="120" title=" "></li>
+            <li data-link="/notas/historia.php" data-target="_self"><img src="imagenes/slide/patrimonio-historico-1.jpg" width="220" height="120" title=" "></li>
+            <li data-link="/notas/historia.php" data-target="_self"><img src="imagenes/slide/patrimonio-historico-2.jpg" width="220" height="120" title=" "></li>
+            <li data-link="/notas/historia.php" data-target="_self"><img src="imagenes/slide/patrimonio-historico-3.jpg" width="220" height="120" title=" "></li>
         </ul>
         </div>
     </div>
