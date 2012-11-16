@@ -51,55 +51,39 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
                                     <option>Seleccion mes</option>
                                 </select>
 
-                                <table width="710" border="1">
-                                  <tr>
-                                    <td width="104" height="25">Tipo</td>
-                                    <td>CAS</td>
-                                  </tr>
-                                  <tr>
-                                    <td>Nombre</td>
-                                    <td>CONVOCATORIA PARA LA CONTRATACIÓN ADMINISTRATIVA DE SERVICIOS DE PERSONAL PROFESIONAL MÉDICO, ASISTENCIALES Y ADMINISTRATIVOS</td>
-                                  </tr>
-                                  <tr>
-                                    <td width="104">Documentos</td>
-                                    <td width="590">Bases</td>
-                                  </tr>
-                                  <tr>
-                                    <td width="104">Seleccionados</td>
-                                    <td width="590">Resultados</td>
-                                  </tr>
-                                  <tr>
-                                    <td width="104">Fe de Erratas</td>
-                                    <td width="590">Documento</td>
-                                  </tr>
-                                  <tr>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                  </tr>
-                                  <tr>
-                                    <td width="104" height="25">Tipo</td>
-                                    <td>CAS</td>
-                                  </tr>
-                                  <tr>
-                                    <td>Nombre</td>
-                                    <td>CONVOCATORIA PARA LA CONTRATACIÓN ADMINISTRATIVA DE SERVICIOS DE PERSONAL PROFESIONAL MÉDICO, ASISTENCIALES Y ADMINISTRATIVOS</td>
-                                  </tr>
-                                  <tr>
-                                    <td width="104">Documentos</td>
-                                    <td width="590">Bases</td>
-                                  </tr>
-                                  <tr>
-                                    <td width="104">Seleccionados</td>
-                                    <td width="590">Resultados</td>
-                                  </tr>
-                                  <tr>
-                                    <td width="104">Fe de Erratas</td>
-                                    <td width="590">Documento</td>
-                                  </tr>
-                                  <tr>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                  </tr>
+                                <table class="tabla_cas" width="710" border="0">
+                                    <tbody>
+                                        <tr>
+                                            <td class="dato_cabecera tdcab-sup" width="104" height="25">Tipo</td>
+                                            <td class="dato_contenido tdcont-sup">CAS</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="dato_cabecera">Nombre</td>
+                                            <td class="dato_contenido">CONVOCATORIA PARA LA CONTRATACIÓN ADMINISTRATIVA DE SERVICIOS DE PERSONAL PROFESIONAL MÉDICO, ASISTENCIALES Y ADMINISTRATIVOS</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="dato_cabecera">Documentos</td>
+                                            <td class="dato_contenido">
+                                                <ul>
+                                                    <li><a class="word48" title="" href=""></a></li>
+                                                    <li><a class="pwpt48" title="" href=""></a></li>
+                                                    <li><a class="excel48" title="" href=""></a></li>
+                                                    <li><a class="pdf48" title="" href=""></a></li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                  
+                                        <tr>
+                                            <td class="dato_cabecera tdcab-inf">Observaciones</td>
+                                            <td class="dato_contenido">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                                consequat.</p>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
                                 </table>
 
                             </div>

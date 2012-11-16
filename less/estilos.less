@@ -882,7 +882,7 @@ header nav{
 			table{
 				tr{
 					td{
-						padding: 6px 0 6px 0;
+						padding: 6px;
 
 						strong{
 							color: #fff;
@@ -1013,27 +1013,72 @@ header nav{
 				font-size: 17px;
 			}
 
-			article{
-				float: left;
-				border-bottom: 2px dotted #999;
-				padding: 0 0 10px 10px;
-				margin: 10px 0;
-				width: 100%;
+			table.tabla_cas{
+				border:none;
+				margin-top: 20px;
 
-				a.imagen-cas{
-					float: left;
-					margin-top: 8px;
+				td.dato_cabecera{
+					border-bottom: 1px solid white;
+					border-left: 1px solid black;
+					border-right: 1px solid black;
+					background: #064792;
+				    color: #fff;
+				    font-weight: bold;
 				}
 
-				div{
-					float: left;
-					margin-left: 12px;
-					width: 80%;
+				td.tdcab-sup{
+					border-top: 1px solid black;
+				}
 
-					p{
-						margin:0;
-						padding: 0;
-					}
+				td.tdcab-inf{
+					border-bottom: 1px solid black;
+				}
+
+				td.dato_contenido{
+					border-bottom: 1px solid black;
+    				border-right: 1px solid black;
+    				
+    				ul{
+    					list-style: none;
+    					margin: 0; 
+    					padding: 0;
+
+    					li{
+    						list-style: none;
+	    					margin: 0;
+	    					padding: 0;
+
+    						a{
+    							background: url("imagenes/icon-files.png");
+    							display: block;
+    							float: left;
+    							height: 48px;
+    							margin: 0 5px;
+    							text-indent: -1000em;
+    							width: 48px;    							
+    						}
+
+    						a.word48{
+    							background-position: 0 -84px;
+    						}
+    						a.pwpt48{
+    							background-position: -68px -84px;
+    						}
+    						a.excel48{
+    							background-position: -136px -84px;
+    						}
+    						a.pdf48{
+    							background-position: -204px -84px;
+    						}
+
+    					}
+    				}
+				}
+
+				td.tdcont-sup{
+					border-bottom: 1px solid #000;
+				    border-top: 1px solid #000;
+				    border-right: 1px solid #000;
 				}
 			}
 		}
