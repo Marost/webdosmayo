@@ -133,16 +133,6 @@ $rst_noticias_ant=mysql_query("SELECT * FROM DM_noticia WHERE categoria=$noticia
                             </div>
                             <?php } ?>
 
-                            <?php if($noticia_categoria==1 or $noticia_categoria==3 or $noticia_categoria==4 or $noticia_categoria==6 or $noticia_categoria==7 or $noticia_categoria==8){ ?>
-                            <div style="float:left; margin: 10px 0;">
-                                <a href="nota-ant.php" style="font-weight: bold; font-size: 14px;">Regresar</a>
-                            </div>
-                            <?php }else{ ?>
-                            <div style="float:left; margin: 10px 0;">
-                                <a href="cat/<?php echo $url_categoria; ?>" style="font-weight: bold; font-size: 14px;">Regresar</a>
-                            </div>
-                            <?php } ?>
-
                         </div>
 
                         <?php if($noticia_categoria==1 or $noticia_categoria==3 or $noticia_categoria==4 or $noticia_categoria==6 or $noticia_categoria==7 or $noticia_categoria==8){ ?>
@@ -150,6 +140,16 @@ $rst_noticias_ant=mysql_query("SELECT * FROM DM_noticia WHERE categoria=$noticia
                         <div class="nw-nota">
 
                             <h4>Noticias anteriores</h4>
+
+                            <?php if($noticia_categoria==1 or $noticia_categoria==3 or $noticia_categoria==4 or $noticia_categoria==6 or $noticia_categoria==7 or $noticia_categoria==8){ ?>
+                            <div style="float:left; margin: 10px 0;">
+                                <a href="nota-ant.php" style="font-weight: bold; font-size: 14px;">Más...</a>
+                            </div>
+                            <?php }else{ ?>
+                            <div style="float:left; margin: 10px 0;">
+                                <a href="cat/<?php echo $url_categoria; ?>" style="font-weight: bold; font-size: 14px;">Más...</a>
+                            </div>
+                            <?php } ?>
 
                             <div class="contenido">
                                 <ul>
