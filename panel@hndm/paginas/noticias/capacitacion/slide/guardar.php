@@ -19,7 +19,7 @@ if($num_notgaleria>0){
 	$cont_img=$num_notgaleria;
 	while($_POST['flash_uploader_'.$cont.'_tmpname']<>""){
 		$thumb{$cont}=PhpThumbFactory::create("../../../../../imagenes/upload/".$carpeta."".$_POST['flash_uploader_'.$cont.'_tmpname']."");
-		$thumb{$cont}->adaptiveResize(90,90);
+		$thumb{$cont}->adaptiveResize(110,65);
 		$thumb{$cont}->save("../../../../../imagenes/upload/".$carpeta."thumb/".$_POST['flash_uploader_'.$cont.'_tmpname']."", "jpg");
 		$imagen=$_POST['flash_uploader_'.$cont.'_tmpname'];
 		mysql_query("INSERT INTO ".$tabla_suf."_noticia_slide(fecha, hora, usuario, imagen, noticia, carpeta, orden) VALUES ('$fecha', '$hora', '$usuario_user','$imagen', $idnoticia, '$carpeta', $cont_img)",$conexion);
@@ -29,7 +29,7 @@ if($num_notgaleria>0){
 	$cont=0;
 	while($_POST['flash_uploader_'.$cont.'_tmpname']<>""){
 		$thumb{$cont}=PhpThumbFactory::create("../../../../../imagenes/upload/".$carpeta."".$_POST['flash_uploader_'.$cont.'_tmpname']."");
-		$thumb{$cont}->adaptiveResize(90,90);
+		$thumb{$cont}->adaptiveResize(110,65);
 		$thumb{$cont}->save("../../../../../imagenes/upload/".$carpeta."thumb/".$_POST['flash_uploader_'.$cont.'_tmpname']."", "jpg");
 		$imagen=$_POST['flash_uploader_'.$cont.'_tmpname'];
 		mysql_query("INSERT INTO ".$tabla_suf."_noticia_slide(fecha, hora, usuario, imagen, noticia, carpeta, orden) VALUES ('$fecha', '$hora', '$usuario_user','$imagen', $idnoticia, '$carpeta', $cont)",$conexion);
