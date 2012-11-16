@@ -230,7 +230,8 @@ jPatHist(document).ready(function(){
         skin: 'classic',
         width: 220,
         height: 150,
-        thumbsWrapperMarginBottom:5
+        thumbsWrapperMarginBottom:5,
+        showAllControllers: false
     });
 });
 </script>
