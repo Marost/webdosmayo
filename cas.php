@@ -51,18 +51,56 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
                                     <option>Seleccion mes</option>
                                 </select>
 
-                                <article>
-
-                                    <a class="imagen-cas" href="#"><img src="imagenes/cas.png"></a>
-
-                                    <div>
-                                        <p><strong>PROCESO DE CONTRATACIÓN Nº 003-2012-HNDM-CECAS</strong></p>
-                                        <p><strong>CONVOCATORIA PARA LA CONTRATACIÓN ADMINISTRATIVA DE SERVICIOS DE PERSONAL PROFESIONAL MÉDICO, ASISTENCIALES Y ADMINISTRATIVOS</strong></p>
-                                        <p>COMISIÓN EVALUADORA DE CONTRATACIÓN ADMINISTRATIVA DE SERVICIOS - CECAS</p>
-                                        <p><a href="#">Bases</a> | <a href="#">Fe de Erratas</a> | <a href="#">Resultados Finales 1 al 8</a> | <a href="#">Resultados Finales 9 al 16</a></p>
-                                    </div>
-
-                                </article>
+                                <table width="710" border="1">
+                                  <tr>
+                                    <td width="104" height="25">Tipo</td>
+                                    <td>CAS</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Nombre</td>
+                                    <td>CONVOCATORIA PARA LA CONTRATACIÓN ADMINISTRATIVA DE SERVICIOS DE PERSONAL PROFESIONAL MÉDICO, ASISTENCIALES Y ADMINISTRATIVOS</td>
+                                  </tr>
+                                  <tr>
+                                    <td width="104">Documentos</td>
+                                    <td width="590">Bases</td>
+                                  </tr>
+                                  <tr>
+                                    <td width="104">Seleccionados</td>
+                                    <td width="590">Resultados</td>
+                                  </tr>
+                                  <tr>
+                                    <td width="104">Fe de Erratas</td>
+                                    <td width="590">Documento</td>
+                                  </tr>
+                                  <tr>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                  </tr>
+                                  <tr>
+                                    <td width="104" height="25">Tipo</td>
+                                    <td>CAS</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Nombre</td>
+                                    <td>CONVOCATORIA PARA LA CONTRATACIÓN ADMINISTRATIVA DE SERVICIOS DE PERSONAL PROFESIONAL MÉDICO, ASISTENCIALES Y ADMINISTRATIVOS</td>
+                                  </tr>
+                                  <tr>
+                                    <td width="104">Documentos</td>
+                                    <td width="590">Bases</td>
+                                  </tr>
+                                  <tr>
+                                    <td width="104">Seleccionados</td>
+                                    <td width="590">Resultados</td>
+                                  </tr>
+                                  <tr>
+                                    <td width="104">Fe de Erratas</td>
+                                    <td width="590">Documento</td>
+                                  </tr>
+                                  <tr>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                  </tr>
+                                </table>
 
                             </div>
 
