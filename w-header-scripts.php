@@ -44,7 +44,7 @@ jSlider(document).ready(function() {
 });
 </script>
 
-<!-- SLIDE NOTAS -->
+<!-- SLIDE NOTAS - PAGINA PRINCIPAL-->
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="/js/jquery.nivo.slider.pack.js"></script>
 <script>
@@ -194,24 +194,23 @@ jAcod(document).ready(function(){
 <script src="/libs/progressbar/progress.js"></script>
 
 <!-- SLIDE NOTICIA -->
-<link href="/libs/allinone_banner/allinone_bannerWithPlaylist.css" rel="stylesheet" type="text/css">
+<link href="/libs/allinone_banner/allinone_thumbnailsBanner.css" rel="stylesheet" type="text/css">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
 <script src="/libs/allinone_banner/jquery.ui.touch-punch.min.js"></script>
 <script src="/libs/allinone_banner/jquery.mousewheel.min.js"></script>
-<script src="/libs/allinone_banner/allinone_bannerWithPlaylist.js"></script>
+<script src="/libs/allinone_banner/allinone_thumbnailsBanner.js"></script>
+<script src="/libs/allinone_banner/reflection.js" type="text/javascript"></script>
 <!--[if IE]><script src="/libs/allinone_banner/excanvas.compiled.js" type="text/javascript"></script><![endif]-->
 <script>
 var jNotSld=jQuery.noConflict();
 jNotSld(document).ready(function(){
-    jNotSld('.imagen_slide').allinone_bannerWithPlaylist({
-        skin: 'pureGallery',
+    jNotSld('.imagen_slide').allinone_thumbnailsBanner({
+        skin: 'cool',
+        numberOfThumbsPerScreen:2,
         width: 620,
         height: 360,
-        borderWidth: 0,
-        playlistWidth:90,
-        origThumbImgW:90,
-        origThumbImgH:90
+        thumbsWrapperMarginTop:0
     });
 });
 </script>
@@ -248,7 +247,7 @@ jPatHist(document).ready(function(){
 <script>
 var jCampEsp=jQuery.noConflict();
 jCampEsp(document).ready(function(){
-    jQuery('#nw-campania-esp .nws-contenido div').allinone_thumbnailsBanner({
+    jCampEsp('#nw-campania-esp .nws-contenido div').allinone_thumbnailsBanner({
         skin: 'cool',
         numberOfThumbsPerScreen:2,
         width: 350,

@@ -87,7 +87,7 @@ $rst_noticias_ant=mysql_query("SELECT * FROM DM_noticia WHERE categoria=$noticia
 
                             <?php if($num_noticia_slide>0){ ?>
                             <div class="imagen_slide" style="display:none;">
-                                <ul class="allinone_bannerWithPlaylist_list">   
+                                <ul class="allinone_carousel_list">   
                                     <?php while ($fila_noticia_slide=mysql_fetch_array($rst_noticia_slide)){
                                         /*VARIABLES DE SLIDE*/
                                         $noticia_slide_id=$fila_noticia_slide["id"];
@@ -103,7 +103,7 @@ $rst_noticias_ant=mysql_query("SELECT * FROM DM_noticia WHERE categoria=$noticia
 
                             <?php if($noticia_categoria==9){ ?>
                             <div class="imagen_slide" style="display:none;">
-                                <ul class="allinone_bannerWithPlaylist_list">   
+                                <ul class="allinone_carousel_list">   
                                     <?php while ($fila_noticia_slide=mysql_fetch_array($rst_noticia_slide)){
                                         /*VARIABLES DE SLIDE*/
                                         $noticia_slide_id=$fila_noticia_slide["id"];
