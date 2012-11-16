@@ -609,7 +609,7 @@ require_once("../panel@hndm/conexion/funcion-paginacion.php");
   </tr>
   <tr bgcolor="#DADADA">
     <td>235</td>
-    <td><p>Dr. Wilder Peña  Madonado</p></td>
+    <td>Dr. Wilder Peña  Madonado</td>
     <td>&nbsp;</td>
   </tr>
   <tr bgcolor="#DADADA">
@@ -1061,7 +1061,7 @@ require_once("../panel@hndm/conexion/funcion-paginacion.php");
   </tr>
   <tr bgcolor="#DADADA">
     <td>280</td>
-    <td><p>Dr.  Carlos Alberto Delgado Silva </p></td>
+    <td>Dr.  Carlos Alberto Delgado Silva</td>
     <td>&nbsp;</td>
   </tr>
   <tr bgcolor="#DADADA">
@@ -1176,7 +1176,7 @@ require_once("../panel@hndm/conexion/funcion-paginacion.php");
   </tr>
   <tr bgcolor="#DADADA">
     <td>286</td>
-    <td><p>Mg. &nbsp;Jovita Silva Robledo</p></td>
+    <td>Mg. &nbsp;Jovita Silva Robledo</td>
     <td>&nbsp;</td>
   </tr>
   <tr bgcolor="#DADADA">
@@ -1204,7 +1204,7 @@ require_once("../panel@hndm/conexion/funcion-paginacion.php");
   </tr>
   <tr bgcolor="#DADADA">
     <td>8225</td>
-    <td><p>Dr. Eduardo Farfán Castro </p></td>
+    <td>Dr. Eduardo Farfán Castro</td>
     <td>&nbsp;</td>
   </tr>
   <tr bgcolor="#DADADA">
@@ -1214,16 +1214,16 @@ require_once("../panel@hndm/conexion/funcion-paginacion.php");
   </tr>
   <tr bgcolor="#DADADA">
     <td bgcolor="#2D65AE">&nbsp;</td>
-    <td colspan="2" bgcolor="#2D65AE"><p><strong>UNIDAD DE CUIDADOS INTENSIVOS (UCI)</strong></p></td>
+    <td colspan="2" bgcolor="#2D65AE"><strong>UNIDAD DE CUIDADOS INTENSIVOS (UCI)</strong></td>
   </tr>
   <tr bgcolor="#DADADA">
-    <td><strong>8227</strong></td>
-    <td><strong>Dr. Humberto Lira Veliz</strong></td>
+    <td>8227</td>
+    <td>Dr. Humberto Lira Veliz</td>
     <td>&nbsp;</td>
   </tr>
   <tr bgcolor="#DADADA">
-    <td><strong>8227</strong></td>
-    <td><strong>Unidad de Cuidados Intermedios (UCIN)</strong></td>
+    <td>8227</td>
+    <td>Unidad de Cuidados Intermedios (UCIN)</td>
     <td>&nbsp;</td>
   </tr>
   <tr bgcolor="#DADADA">
