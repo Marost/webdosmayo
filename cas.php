@@ -64,7 +64,7 @@ $rst_cas=mysql_query("SELECT * FROM DM_cas ORDER BY fecha_publicacion DESC", $co
                                             $cas_observaciones=$fila_cas["observaciones"];
 
                                             /*DOCUMENTOS*/
-                                            $rst_cas_docs=mysql_query("SELECT * FROM DM_cas_documentos WHERE cas=$cas_id ORDER BY orden ASC;", $conexion)
+                                            $rst_cas_docs=mysql_query("SELECT * FROM DM_cas_documentos WHERE cas=$cas_id ORDER BY orden ASC;", $conexion);
                                         ?>
                                         <tr>
                                             <td class="dato_cabecera tdcab-sup" width="104" height="25">Tipo</td>
