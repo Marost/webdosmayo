@@ -11,9 +11,9 @@
 <script src="/js/vendor/modernizr-2.6.1.min.js"></script>
 
 <?php if($script_tabs==true){ ?>
-<!-- TABS -->
-<script src="http://code.jquery.com/jquery-latest.js"></script>
-<script src="/js/tabs.js"></script>        
+    <!-- TABS -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="/js/tabs.js"></script>        
 <?php } ?>
 
 <!-- SLIDE SUPERIOR -->
@@ -47,28 +47,28 @@ jSlider(document).ready(function() {
 </script>
 
 <?php if($script_slnot_prin==true){ ?>
-<!-- SLIDE NOTAS - PAGINA PRINCIPAL-->
-<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script src="/js/jquery.nivo.slider.pack.js"></script>
-<script>
-var jSlideNI=jQuery.noConflict();
-jSlideNI(document).ready(function() {
-    jSlideNI('.slider-bxslider').nivoSlider({
-        effect:'sliceUpDown',
-        slices:5,
-        animSpeed:500,
-        pauseTime:8000,
-        startSlide:0,
-        directionNav:false,
-        directionNavHide:false,
-        controlNav:true,
-        controlNavThumbs:false,
-        controlNavThumbsFromRel:false,
-        controlNavThumbsSearch: '.jpg',
-        controlNavThumbsReplace: '_thumb.jpg'
+    <!-- SLIDE NOTAS - PAGINA PRINCIPAL-->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/js/jquery.nivo.slider.pack.js"></script>
+    <script>
+    var jSlideNI=jQuery.noConflict();
+    jSlideNI(document).ready(function() {
+        jSlideNI('.slider-bxslider').nivoSlider({
+            effect:'sliceUpDown',
+            slices:5,
+            animSpeed:500,
+            pauseTime:8000,
+            startSlide:0,
+            directionNav:false,
+            directionNavHide:false,
+            controlNav:true,
+            controlNavThumbs:false,
+            controlNavThumbsFromRel:false,
+            controlNavThumbsSearch: '.jpg',
+            controlNavThumbsReplace: '_thumb.jpg'
+        });
     });
-});
-</script>
+    </script>
 <?php } ?>
 
 <!-- MENU -->
@@ -174,34 +174,33 @@ jIntran(document).ready(function() {
 </script>
 
 <?php if($script_acordeon==true){ ?>
-<!-- ACORDEON -->
-<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css" />
-<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
-<script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>
-<script>
-var jAcod=jQuery.noConflict();
-jAcod(document).ready(function(){
-    jAcod(".nwn-lista").accordion({
-        heightStyle: "content"
+    <!-- ACORDEON -->
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css" />
+    <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>
+    <script>
+    var jAcod=jQuery.noConflict();
+    jAcod(document).ready(function(){
+        jAcod(".nwn-lista").accordion({
+            heightStyle: "content"
+        });
     });
-});
-</script>
+    </script>
 <?php } ?>
 
 <?php if($script_popup==true){ ?>
-<!-- POPUP -->
-<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script  src="/js/popup.js"></script>
+    <!-- POPUP PAGINA PRINCIPAL-->
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script  src="/js/popup.js"></script>
 <?php } ?>
 
 <?php if($script_direcinterno==true){ ?>
-<!-- DIRECTORIO INTERNO -->
-<link rel="stylesheet" href="/libs/progressbar/ui.progress-bar.css">
-<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script src="/libs/progressbar/progress.js"></script>
+    <!-- DIRECTORIO INTERNO -->
+    <link rel="stylesheet" href="/libs/progressbar/ui.progress-bar.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/libs/progressbar/progress.js"></script>
 <?php } ?>
 
-<?php if($script_slide_noticia==true){ ?>
 <!-- SLIDE NOTICIA -->
 <link href="/libs/allinone_banner/allinone_thumbnailsBanner.css" rel="stylesheet" type="text/css">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
@@ -223,7 +222,6 @@ jNotSld(document).ready(function(){
     });
 });
 </script>
-<?php } ?>
 
 <!-- SLIDER PATRIMONIO HISTORICO -->
 <link href="/libs/allinone_banner/allinone_bannerRotator.css" rel="stylesheet" type="text/css">
@@ -250,27 +248,27 @@ jPatHist(document).ready(function(){
 </script>
 
 <?php if($script_slide_campana==true){ ?>
-<!-- SLIDER CAMPAÑAS -->
-<link href="/libs/allinone_banner/allinone_thumbnailsBanner.css" rel="stylesheet" type="text/css">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
-<script src="/libs/allinone_banner/jquery.ui.touch-punch.min.js"></script>
-<script src="/libs/allinone_banner/jquery.mousewheel.min.js"></script>
-<script src="/libs/allinone_banner/allinone_thumbnailsBanner.js"></script>
-<script src="/libs/allinone_banner/reflection.js" type="text/javascript"></script>
-<!--[if IE]><script src="/libs/allinone_banner/excanvas.compiled.js" type="text/javascript"></script><![endif]-->
-<script>
-var jCampEsp=jQuery.noConflict();
-jCampEsp(document).ready(function(){
-    jCampEsp('#nw-campania-esp .nws-contenido div').allinone_thumbnailsBanner({
-        skin: 'cool',
-        numberOfThumbsPerScreen:2,
-        width: 350,
-        height: 300,
-        thumbsWrapperMarginTop:0
+    <!-- SLIDER CAMPAÑAS -->
+    <link href="/libs/allinone_banner/allinone_thumbnailsBanner.css" rel="stylesheet" type="text/css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
+    <script src="/libs/allinone_banner/jquery.ui.touch-punch.min.js"></script>
+    <script src="/libs/allinone_banner/jquery.mousewheel.min.js"></script>
+    <script src="/libs/allinone_banner/allinone_thumbnailsBanner.js"></script>
+    <script src="/libs/allinone_banner/reflection.js" type="text/javascript"></script>
+    <!--[if IE]><script src="/libs/allinone_banner/excanvas.compiled.js" type="text/javascript"></script><![endif]-->
+    <script>
+    var jCampEsp=jQuery.noConflict();
+    jCampEsp(document).ready(function(){
+        jCampEsp('#nw-campania-esp .nws-contenido div').allinone_thumbnailsBanner({
+            skin: 'cool',
+            numberOfThumbsPerScreen:2,
+            width: 350,
+            height: 300,
+            thumbsWrapperMarginTop:0
+        });
     });
-});
-</script>
+    </script>
 <?php } ?>
 
 <!-- GOOGLE ANALYTICS -->
@@ -290,8 +288,8 @@ jCampEsp(document).ready(function(){
 
 
 <?php if($script_tarifario==true){ ?>
-<!-- TARIFARIO TABLA -->
-<link rel="stylesheet" type="text/css" href="/libs/creative_table/css/creative.css">
-<script src="/libs/creative_table/js/jquery-1.4.2.min.js"></script>
-<script src="/libs/creative_table/js/creative_table_ajax-1.3.js"></script>
+    <!-- TARIFARIO TABLA -->
+    <link rel="stylesheet" type="text/css" href="/libs/creative_table/css/creative.css">
+    <script src="/libs/creative_table/js/jquery-1.4.2.min.js"></script>
+    <script src="/libs/creative_table/js/creative_table_ajax-1.3.js"></script>
 <?php } ?>
