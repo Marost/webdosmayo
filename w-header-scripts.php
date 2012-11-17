@@ -203,7 +203,7 @@ jIntran(document).ready(function() {
 
 <!-- SLIDE NOTICIA -->
 <link href="/libs/allinone_banner/allinone_thumbnailsBanner.css" rel="stylesheet" type="text/css">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
 <script src="/libs/allinone_banner/jquery.ui.touch-punch.min.js"></script>
 <script src="/libs/allinone_banner/jquery.mousewheel.min.js"></script>
@@ -225,7 +225,7 @@ jNotSld(document).ready(function(){
 
 <!-- SLIDER PATRIMONIO HISTORICO -->
 <link href="/libs/allinone_banner/allinone_bannerRotator.css" rel="stylesheet" type="text/css">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
 <script src="/libs/allinone_banner/jquery.ui.touch-punch.min.js"></script>
 <script src="/libs/allinone_banner/jquery.mousewheel.min.js"></script>
@@ -247,29 +247,29 @@ jPatHist(document).ready(function(){
 });
 </script>
 
-<?php if($script_slide_campana==true){ ?>
-    <!-- SLIDER CAMPAÑAS -->
-    <link href="/libs/allinone_banner/allinone_thumbnailsBanner.css" rel="stylesheet" type="text/css">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
-    <script src="/libs/allinone_banner/jquery.ui.touch-punch.min.js"></script>
-    <script src="/libs/allinone_banner/jquery.mousewheel.min.js"></script>
-    <script src="/libs/allinone_banner/allinone_thumbnailsBanner.js"></script>
-    <script src="/libs/allinone_banner/reflection.js" type="text/javascript"></script>
-    <!--[if IE]><script src="/libs/allinone_banner/excanvas.compiled.js" type="text/javascript"></script><![endif]-->
-    <script>
-    var jCampEsp=jQuery.noConflict();
-    jCampEsp(document).ready(function(){
-        jCampEsp('#nw-campania-esp .nws-contenido div').allinone_thumbnailsBanner({
-            skin: 'cool',
-            numberOfThumbsPerScreen:2,
-            width: 350,
-            height: 300,
-            thumbsWrapperMarginTop:0
-        });
+
+<!-- SLIDER CAMPAÑAS -->
+<link href="/libs/allinone_banner/allinone_thumbnailsBanner.css" rel="stylesheet" type="text/css">
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
+<script src="/libs/allinone_banner/jquery.ui.touch-punch.min.js"></script>
+<script src="/libs/allinone_banner/jquery.mousewheel.min.js"></script>
+<script src="/libs/allinone_banner/allinone_thumbnailsBanner.js"></script>
+<script src="/libs/allinone_banner/reflection.js" type="text/javascript"></script>
+<!--[if IE]><script src="/libs/allinone_banner/excanvas.compiled.js" type="text/javascript"></script><![endif]-->
+<script>
+var jCampEsp=jQuery.noConflict();
+jCampEsp(document).ready(function(){
+    jCampEsp('#nw-campania-esp .nws-contenido div').allinone_thumbnailsBanner({
+        skin: 'cool',
+        numberOfThumbsPerScreen:2,
+        width: 350,
+        height: 300,
+        thumbsWrapperMarginTop:0
     });
-    </script>
-<?php } ?>
+});
+</script>
+
 
 <!-- GOOGLE ANALYTICS -->
 <script type="text/javascript">
