@@ -61,6 +61,7 @@ $rst_cas=mysql_query("SELECT * FROM DM_cas ORDER BY fecha_publicacion DESC", $co
                                             $cas_id=$fila_cas["id"];
                                             $cas_titulo=$fila_cas["titulo"];
                                             $cas_tipo=$fila_cas["tipo"];
+                                            $cas_carpetas=$fila_cas["carpeta_documentos"];
                                             $cas_observaciones=$fila_cas["observaciones"];
 
                                             /*DOCUMENTOS*/
@@ -78,8 +79,40 @@ $rst_cas=mysql_query("SELECT * FROM DM_cas ORDER BY fecha_publicacion DESC", $co
                                             <td class="dato_cabecera">Documentos</td>
                                             <td class="dato_contenido">
                                                 <ul>
-                                                    <?php while($fil_cas_docs=mysql_fetch_array($rst_cas_docs)){ ?>
-                                                        <li><a class="word48" title="" href=""></a></li>
+                                                    <?php while($fila_cas_docs=mysql_fetch_array($rst_cas_docs)){
+                                                        $docs_titulo=$fila_cas_docs["titulo"];
+                                                        $docs_documento=$fila_cas_docs["documento"];
+                                                        $docs_documento_tipo=$fila_cas_docs["documento_tipo"];
+                                                    ?>
+                                                        <li>
+
+                                                            <a 
+                                                            
+                                                            <?php if($docs_documento_tipo=="doc" or $docs_documento_tipo=="docx"){ ?>
+                                                                class="word48"     
+                                                            <?php }elseif($docs_documento_tipo=="xls" or $docs_documento_tipo=="xlsx"){ ?>
+                                                                class="excel48" 
+                                                            <?php }elseif($docs_documento_tipo=="ppt" or $docs_documento_tipo=="pptx" or $docs_documento_tipo=="pps" or $docs_documento_tipo=="ppsx"){ ?>
+                                                                class="pwpt48" 
+                                                            <?php }elseif($docs_documento_tipo=="pdf"){ ?>
+                                                                class="pdf48" 
+                                                            <?php }elseif($docs_documento_tipo=="gif"){ ?>
+                                                                class="gif48" 
+                                                            <?php }elseif($docs_documento_tipo=="png"){ ?>
+                                                                class="png48" 
+                                                            <?php }elseif($docs_documento_tipo=="bmp"){ ?>
+                                                                class="bmp48" 
+                                                            <?php }elseif($docs_documento_tipo=="jpg" or $docs_documento_tipo=="jpeg"){ ?>
+                                                                class="jpg48" 
+                                                            <?php }elseif($docs_documento_tipo=="zip" or $docs_documento_tipo=="rar"){ ?>
+                                                                class="zip48" 
+                                                            <?php } ?>
+
+                                                            title="<?php echo $docs_titulo; ?>" target="_blank" 
+                                                            href="/documentos/<?php echo $cas_carpetas."".$docs_documento; ?>">
+                                                            <?php echo $docs_titulo; ?></a>
+
+                                                        </li>
                                                     <?php } ?>
                                                 </ul>
                                             </td>
