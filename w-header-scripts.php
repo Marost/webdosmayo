@@ -286,7 +286,7 @@ jCampEsp(document).ready(function(){
 var jTarif=jQuery.noConflict();
 jTarif(document).ready(function(){
 
-    jTarif("#tarifario_medicamento").addClass("active");
+    jTarif("#tarif_medicamento").addClass("active");
     jTarif.post("/tarifario/tarifario_lista.php", {tipo: "medicamento"},
     function(data){
         jTarif("#tarifario_contenido").html(data);

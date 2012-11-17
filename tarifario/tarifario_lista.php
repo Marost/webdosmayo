@@ -66,6 +66,6 @@ if($_POST['ajax_option']!=''){
 
 <?php echo $out;?>
 
-<?php }elseif($tipo=="procedimientos"){ ?>
+<?php }elseif($tipo=="procedimiento"){ ?>
 Tabla de procedimientos
 <?php } ?>
