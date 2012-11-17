@@ -1,13 +1,9 @@
 <?php
-// Open the DB connection and select the DB - creates the function getCreativePagerLyte()
-include_once('../libs/creative_table/configurations.php');
 
-/*VARIABLE URL*/
 $tipo=$_POST["tipo"];
-?>
 
-<?php
 if($tipo=="medicamento"){
+	include_once('../libs/creative_table/configurations.php');
 
 	// Gets the data
 	$id=isset($_POST['id']) ? $_POST['id'] : '';
@@ -20,7 +16,7 @@ if($tipo=="medicamento"){
 	$extra_cols=isset($_POST['extra_cols']) ? $_POST['extra_cols'] : array();
 
 	// Uses the creativeTable to build the table
-	include_once('libs/creative_table/creativeTable.php');
+	include_once('../libs/creative_table/creativeTable.php');
 
 	$ct=new CreativeTable();
 
@@ -35,7 +31,7 @@ if($tipo=="medicamento"){
 
 	$params['header']                   = 'Descripcion,Precio';
 	$params['width']                    = '600,100';
-	$params['search_html']              = '<span id="#ID#_search_value">Buscar...</span><a id="#ID#_advanced_search" href="javascript: ctShowAdvancedSearch(\'#ID#\');" title="Advanced Search"><img src="images/advanced_search.png" /></a><div id="#ID#_loader"></div>';
+	$params['search_html']              = '<span id="#ID#_search_value">Buscar...</span><a id="#ID#_advanced_search" href="javascript: ctShowAdvancedSearch(\'#ID#\');" title="Advanced Search"><img src="/libs/creative_table/images/advanced_search.png" /></a><div id="#ID#_loader"></div>';
 	$params['items_per_page_init']      = '10,20,50,100';
 
 	$ct->table($params);
@@ -49,7 +45,9 @@ if($tipo=="medicamento"){
 
  	echo $out;
 
- }elseif($tipo=="procedimiento"){ 
+}elseif($tipo=="procedimiento"){ 
+
+ 	include_once('../libs/creative_table/configurations.php');
 
 	// Gets the data
 	$id=isset($_POST['id']) ? $_POST['id'] : '';
