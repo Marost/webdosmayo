@@ -175,7 +175,7 @@
 
 #ct_pager li{
     display: inline;
-    background:none; 
+    background:none !important; 
 }
 
 #ct_pager li a{

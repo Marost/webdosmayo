@@ -28,7 +28,7 @@ include_once('../libs/creative_table/creativeTable.php');
 $ct=new CreativeTable();
 
 // Data Gathering
-$params['sql_query']                = "SELECT titulo,precio FROM DM_tarifario WHERE tipo=1";
+$params['sql_query']                = "SELECT titulo,precio FROM DM_tarifario";
 $params['search']                   = $search;
 $params['multiple_search']          = $multiple_search;
 $params['items_per_page']           = $items_per_page;
@@ -84,7 +84,7 @@ include_once('../libs/creative_table/creativeTable.php');
 $ct=new CreativeTable();
 
 // Data Gathering
-$params['sql_query']                = "SELECT titulo,precio FROM DM_tarifario WHERE tipo=2";
+$params['sql_query']                = "SELECT titulo,precio FROM DM_tarifario";
 $params['search']                   = $search;
 $params['multiple_search']          = $multiple_search;
 $params['items_per_page']           = $items_per_page;
