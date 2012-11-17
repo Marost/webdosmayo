@@ -49,8 +49,8 @@ $script_tarifario=true;
                                 
                                 <div id="tarifario_cabecera">
                                   <ul>
-                                    <li><a id="tarif_medicamento" class="medicamento" href="javascript:;">Medicamentos</a></li>
-                                    <li><a id="tarif_procedimiento" class="procedimiento" href="javascript:;">Procedimientos</a></li>
+                                    <li><a id="tarif_medicamento" rel="medicamento" href="javascript:;">Medicamentos</a></li>
+                                    <li><a id="tarif_procedimiento" rel="procedimiento" href="javascript:;">Procedimientos</a></li>
                                   </ul>
                                 </div>
 

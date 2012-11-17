@@ -306,7 +306,7 @@ jTarif(document).ready(function(){
     jTarif("#tarifario_cabecera ul li a").click(function(){
         jTarif("#tarifario_cabecera ul li a").removeClass("active");
         jTarif(this).addClass("active");
-        var tipo = jTarif(this).attr("class");
+        var tipo = jTarif(this).attr("rel");
         jTarif.post("tarifario/tarifario_lista.php", {tipo: tipo},
         function(data){
             jTarif("#tarifario_contenido").html(data);
