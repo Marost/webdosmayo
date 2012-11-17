@@ -3,12 +3,12 @@
 $bd_servidor="localhost";
 $bd_usuario="marost2_admin";
 $bd_pass="master@18073";
-$bd_basedatos="marost2_hndmWP"
+$bd_basedatos="marost2_hndmWP";
 
-$db_server      = $bd_servidor;
-$db_username    = $bd_usuario;
-$db_password    = $bd_pass;
-$db_name        = $bd_basedatos;
+$db_server=$bd_servidor;
+$db_username=$bd_usuario;
+$db_password=$bd_pass;
+$db_name=$bd_basedatos;
 // ***************************************
 
 mysql_connect($db_server, $db_username, $db_password) or die("Could not connect: " . mysql_error());
