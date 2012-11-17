@@ -7,7 +7,7 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
 /*SCRIPTS*/
 $script_tarifario=true;
 
-include_once('../libs/creative_table/configurations.php');
+include_once('libs/creative_table/configurations.php');
 
 // Gets the data
 $id=isset($_POST['id']) ? $_POST['id'] : '';
@@ -20,7 +20,7 @@ $total_items=(isset($_POST['total_items']) and $_POST['total_items']>=0) ? $_POS
 $extra_cols=isset($_POST['extra_cols']) ? $_POST['extra_cols'] : array();
 
 // Uses the creativeTable to build the table
-include_once('../libs/creative_table/creativeTable.php');
+include_once('libs/creative_table/creativeTable.php');
 
 $ct=new CreativeTable();
 
