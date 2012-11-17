@@ -79,7 +79,7 @@ require_once("../panel@hndm/conexion/funcion-paginacion.php");
 
                                 <h3>Daniel Alcides Carrión: Mártir de la Medicina Peruana y Héroe Nacional Civil</h3>
                                 <div>
-                                    <img src="/imagenes/upload/daniel-alcides-carrion.jpg" style="float:left; width: 150px;">
+                                    <img src="/imagenes/upload/daniel-alcides-carrion.jpg" style="float:left; width: 150px; margin: 0 8px 10px 0;">
                                     <p>El 5 de octubre de 1885, Daniel A. Carrión, estudiante de 6to. año de Medicina fallece, pasando a la inmortalidad al demostrar la unidad clínica de la antigua enfermedad llamada Verruga Peruana y la Fiebre de la Oroya, que diezmó obreros que trabajaban en la construcción de las vias del Ferrocarril Central.</p>
                                     <p>En estos 137 años de vida institucional diferentes y diversas gestiones han acompañado y marcado el desarrollo médico, asistencial, científico y académico del Perú a través de generaciones de profesionales de la salud que se han formado en nuestras instalaciones.</p>
 
