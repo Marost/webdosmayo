@@ -79,7 +79,7 @@ if($_POST['ajax_option']!=''){
 
                     <section id="news">
 
-                        <div class="nw-nota borde-bottom">
+                        <div class="nw-nota">
 
                             <div class="titulo">
                                 <h2>Tarifario Virtual</h2>
@@ -91,7 +91,7 @@ if($_POST['ajax_option']!=''){
                                 <div id="tarifario_cabecera">
                                   <ul>
                                     <li class="selected"><a id="tarif_medicamento" href="javascript:;">Medicamentos</a></li>
-                                    <li><a id="tarif_procedimiento" href="javascript:;">Procedimientos</a></li>
+                                    <li><a id="tarif_procedimiento" href="tarifario/procedimientos">Procedimientos</a></li>
                                   </ul>
                                 </div>
 

@@ -90,8 +90,8 @@ if($_POST['ajax_option']!=''){
                                 
                                 <div id="tarifario_cabecera">
                                   <ul>
-                                    <li><a id="tarif_medicamento" href="javascript:;">Medicamentos</a></li>
-                                    <li class="selected"><a id="tarif_procedimiento" class="active" href="javascript:;">Procedimientos</a></li>
+                                    <li><a id="tarif_medicamento" href="tarifario/medicamentos">Medicamentos</a></li>
+                                    <li class="selected"><a id="tarif_procedimiento" class="active">Procedimientos</a></li>
                                   </ul>
                                 </div>
 
