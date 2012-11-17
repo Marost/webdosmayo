@@ -18,31 +18,6 @@ $script_tarifario=true;
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>Tarifario</title>
 
-        <!-- TARIFARIO -->
-        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-        <script>
-        var jTarif=jQuery.noConflict();
-        jTarif(document).ready(function(){
-
-            jTarif("#tarif_medicamento").addClass("active");
-            jTarif.post("tarifario/tarifario_lista.php", {tipo: "medicamento"},
-            function(data){
-                jTarif("#tarifario_contenido").html(data);
-            });
-
-            jTarif("#tarifario_cabecera ul li a").click(function(){
-                jTarif("#tarifario_cabecera ul li a").removeClass("active");
-                jTarif(this).addClass("active");
-                var tipo = jTarif(this).attr("rel");
-                jTarif.post("tarifario/tarifario_lista.php", {tipo: tipo},
-                function(data){
-                    jTarif("#tarifario_contenido").html(data);
-                });
-            })
-
-        });
-        </script>
-
     </head>
     <body>
         <!--[if lt IE 7]>
