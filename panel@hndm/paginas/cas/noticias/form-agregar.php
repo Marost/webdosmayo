@@ -103,7 +103,7 @@ jq(function() {
            	      </tr>
                   <tr>
                     <td align="right" ><p><strong>Tipo:</strong></p></td>
-                    <td><input name="tipo" type="text" id="tipo" value="" size="250" /></td>
+                    <td><input name="tipo" type="text" id="tipo" value="" size="20" /></td>
                   </tr>
             	    <tr>
             	      <td align="right" ><p><strong>Fecha publicación:</strong></p></td>
