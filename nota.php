@@ -4,6 +4,9 @@ require_once("panel@hndm/conexion/conexion.php");
 require_once("panel@hndm/conexion/funciones.php");
 require_once("panel@hndm/conexion/funcion-paginacion.php");
 
+/*SCRIPT*/
+$script_slide_noticia=true;
+
 /*VARIABLES DE URL*/
 $url_categoria=$_REQUEST["cat"];
 $url_noticia_id=$_REQUEST["id"];
