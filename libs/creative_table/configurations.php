@@ -1,6 +1,4 @@
 <?php
-require_once("../../panel@hndm/conexion/conexion.php");
-
 // *** You only need to configure this ***
 $db_server      = $bd_servidor;
 $db_username    = $bd_usuario;
