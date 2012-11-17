@@ -60,9 +60,9 @@ if($_POST['ajax_option']!=''){
 }
 
 ?>
-<link rel="stylesheet" type="text/css" href="/libs/creative_table/creative.css">
-<script type="text/javascript" src="/libs/creative_table/js/jquery-1.4.2.min.js"></script>
-<script type="text/javascript" src="/libs/creative_table/js/creative_table_ajax-1.3.js"></script>
+<link rel="stylesheet" type="text/css" href="/libs/creative_table/css/creative.css">
+<script src="/libs/creative_table/js/jquery-1.4.2.min.js"></script>
+<script src="/libs/creative_table/js/creative_table_ajax-1.3.js"></script>
 
 <?php echo $out;?>
 

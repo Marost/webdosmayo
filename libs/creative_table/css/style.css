@@ -1,19 +1,8 @@
 /* YOU DONT NEED THIS CSS */
 /* This is only for presentation purpose */
 
-/* RESET */
-html,body,a,h1,h2,div{ margin: 0px; padding: 0px;}
-img{ border: 0px; }
-
-
 /* LAYOUT*/
-body{
-    background: #C0C0C0 url(../images/logo.png) no-repeat center top;
-    color: #555555;
-    font-family: Verdana;
-    font-size: 12px;
-    line-height: 20px;
-}
+
 
 #container, #container2{
     margin: 0px auto 30px;
