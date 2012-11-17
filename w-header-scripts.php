@@ -272,8 +272,8 @@ jCampEsp(document).ready(function(){
 });
 </script>
 <?php } ?>
+
 <!-- GOOGLE ANALYTICS -->
-<!--  
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -287,7 +287,7 @@ jCampEsp(document).ready(function(){
   })();
 
 </script>
--->
+
 
 <?php if($script_tarifario==true){ ?>
 <!-- TARIFARIO TABLA -->
