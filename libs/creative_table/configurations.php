@@ -1,5 +1,10 @@
 <?php
 // *** You only need to configure this ***
+$bd_servidor="localhost";
+$bd_usuario="marost2_admin";
+$bd_pass="master@18073";
+$bd_basedatos="marost2_hndmWP"
+
 $db_server      = $bd_servidor;
 $db_username    = $bd_usuario;
 $db_password    = $bd_pass;
