@@ -52,8 +52,8 @@ include("../../conexion/funciones.php");
 
 	// Create target dir
 	if (!file_exists($targetDir) or !file_exists($targetDirThumb) or !file_exists($targetDirThumb75)){
-		@mkdir($targetDir);
-		@mkdir($targetDirThumb);
+		@mkdir($targetDir, 0777);
+		@mkdir($targetDirThumb, 0777);
 		@mkdir($targetDirThumb75);
 	}
 	

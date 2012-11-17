@@ -18,7 +18,7 @@ $fecha_mes=date("Y-m");
 
 //CREACION DE CARPETA PARA GUARDAR DOCUMENTOS
 $nombre_carpeta=getUrlAmigable(eliminarTextoURL($titulo))."-".$fecha_mes;
-mkdir("../../../../documentos/".$nombre_carpeta, 0755);
+mkdir("../../../../documentos/".$nombre_carpeta, 0777);
 $nombre_carpeta_final=getUrlAmigable(eliminarTextoURL($titulo))."-".$fecha_mes."/";
 
 //INSERTANDO DATOS

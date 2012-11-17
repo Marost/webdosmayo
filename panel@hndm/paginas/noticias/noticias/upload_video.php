@@ -51,7 +51,7 @@ include("../../../conexion/funciones.php");
 
 	// Create target dir
 	if (!file_exists($targetDir))
-		@mkdir($targetDir);
+		@mkdir($targetDir, 0777);
 
 	// Remove old temp files
 	if (is_dir($targetDir) && ($dir = opendir($targetDir))) {

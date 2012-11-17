@@ -60,7 +60,7 @@ $carpeta_cas=$fila_cas["carpeta_documentos"];
 
 	// Create target dir
 	if (!file_exists($targetDir)){
-		@mkdir($targetDir);
+		@mkdir($targetDir, 0777);
 	}
 
 	// Remove old temp files
