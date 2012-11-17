@@ -39,7 +39,7 @@ if($num_notgaleria>0){
 			rename($ruta_archivo{$cont}.$archivo_tmp{$cont}, $ruta_archivo{$cont}.$archivo_name_total{$cont});
 		}
 
-		$sw=myqsl_query("INSERT INTO ".$tabla_suf."_cas_documentos (titulo, documento, documento_tipo, cas, orden)
+		mysql_query("INSERT INTO ".$tabla_suf."_cas_documentos (titulo, documento, documento_tipo, cas, orden)
 			VALUES('".htmlspecialchars($archivo_name{$cont})."', '".$archivo_name_total{$cont}."', '".$archivo_name_extension{$cont}."', $idnoticia, $cont_img)", $conexion);
 
 		$cont++; $cont_img++;
@@ -64,7 +64,7 @@ if($num_notgaleria>0){
 			rename($ruta_archivo{$cont}.$archivo_tmp{$cont}, $ruta_archivo{$cont}.$archivo_name_total{$cont});
 		}
 
-		$sw=myqsl_query("INSERT INTO ".$tabla_suf."_cas_documentos (titulo, documento, documento_tipo, cas, orden)
+		mysql_query("INSERT INTO ".$tabla_suf."_cas_documentos (titulo, documento, documento_tipo, cas, orden)
 			VALUES('".htmlspecialchars($archivo_name{$cont})."', '".$archivo_name_total{$cont}."', '".$archivo_name_extension{$cont}."', $idnoticia, $cont)", $conexion);
 
 		$cont++;
