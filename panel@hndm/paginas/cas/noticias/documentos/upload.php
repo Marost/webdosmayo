@@ -1,5 +1,14 @@
 <?php
 include("../../../../conexion/funciones.php");
+
+/*VARIABLES DE URL*/
+$id=$_REQUEST["id"];
+
+/*CARPETA DE DOCUMENTOS DE CAS*/
+$rst_cas=mysql_query("SELECT * FROM DM_cas WHERE id=$id", $conexion);
+$fila_cas=mysql_fetch_array($rst_cas);
+$carpeta_cas=$fila_cas["carpeta_documentos"];
+
 /**
  * upload.php
  *
@@ -17,8 +26,7 @@ include("../../../../conexion/funciones.php");
 	header("Cache-Control: post-check=0, pre-check=0", false);
 	header("Pragma: no-cache");
 	// Settings
-	$targetDir = "../../../../../imagenes/upload/".fechaCarpeta();
-	$targetDirThumb = "../../../../../imagenes/upload/".fechaCarpeta()."/thumb"; /*ini_get("upload_tmp_dir") . DIRECTORY_SEPARATOR . "plupload";*/
+	$targetDir = "../../../../../documentos/".$carpeta_documentos;
 	$cleanupTargetDir = false; // Remove old files
 	$maxFileAge = 60 * 60; // Temp file age in seconds
 
@@ -50,9 +58,8 @@ include("../../../../conexion/funciones.php");
 	}
 
 	// Create target dir
-	if (!file_exists($targetDir) or !file_exists($targetDirThumb)){
+	if (!file_exists($targetDir)){
 		@mkdir($targetDir);
-		@mkdir($targetDirThumb);
 	}
 
 	// Remove old temp files

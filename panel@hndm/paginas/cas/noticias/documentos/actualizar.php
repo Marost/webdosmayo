@@ -23,7 +23,7 @@ if($_POST['flash_uploader_0_tmpname']==""){
 	$archivo_name_prmlnk=getUrlAmigable($archivo_name_nombre);
 	$archivo_name_total=$archivo_name_prmlnk.".".$archivo_name_extension;
 	
-	$ruta_archivo="./documentos/".$carpeta_archivo."/";
+	$ruta_archivo="../../../../../documentos/".$carpeta_archivo;
 	if(file_exists($ruta_archivo.$archivo_tmp)){
 		rename($ruta_archivo.$archivo_tmp, $ruta_archivo.$archivo_name_total);
 	}

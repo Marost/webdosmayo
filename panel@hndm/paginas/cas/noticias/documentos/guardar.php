@@ -34,7 +34,7 @@ if($num_notgaleria>0){
 		$archivo_name_prmlnk."".$cont=getUrlAmigable($archivo_name_nombre."".$cont);
 		$archivo_name_total."".$cont=$archivo_name_prmlnk."".$cont.".".$archivo_name_extension."".$cont;
 		
-		$ruta_archivo."".$cont="./documentos/".$carpeta_archivo."/";
+		$ruta_archivo."".$cont="../../../../../documentos/".$carpeta_archivo;
 		if(file_exists($ruta_archivo."".$cont.$archivo_tmp."".$cont)){
 			rename($ruta_archivo."".$cont.$archivo_tmp."".$cont, $ruta_archivo."".$cont.$archivo_name_total."".$cont);
 		}
@@ -59,7 +59,7 @@ if($num_notgaleria>0){
 		$archivo_name_prmlnk."".$cont=getUrlAmigable($archivo_name_nombre."".$cont);
 		$archivo_name_total."".$cont=$archivo_name_prmlnk."".$cont.".".$archivo_name_extension."".$cont;
 		
-		$ruta_archivo."".$cont="./documentos/".$carpeta_archivo."/";
+		$ruta_archivo."".$cont="../../../../../documentos/".$carpeta_archivo;
 		if(file_exists($ruta_archivo."".$cont.$archivo_tmp."".$cont)){
 			rename($ruta_archivo."".$cont.$archivo_tmp."".$cont, $ruta_archivo."".$cont.$archivo_name_total."".$cont);
 		}
