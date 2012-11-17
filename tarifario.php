@@ -75,7 +75,7 @@ $script_tarifario=true;
                                         $ct=new CreativeTable();
 
                                         // Data Gathering
-                                        $params['sql_query']                = "SELECT * FROM imdbtop250";
+                                        $params['sql_query']                = "SELECT titulo,precio FROM DM_tarifario WHERE tipo=1";
                                         $params['search']                   = $search;
                                         $params['multiple_search']          = $multiple_search;
                                         $params['items_per_page']           = $items_per_page;
@@ -84,10 +84,10 @@ $script_tarifario=true;
                                         $params['total_items']              = $total_items;
 
                                         // Layout Configurations (Most used - the commented lines are the default values)
-                                        $params['header']                   = 'Rank,Rating,Title,Votes'; // If you need to use the comma use &#44; instead of ,
-                                        $params['width']                    = '45,60,,70';
+                                        $params['header']                   = 'Descripcion,Precio'; // If you need to use the comma use &#44; instead of ,
+                                        $params['width']                    = '600,100';
                                         //$params['search_init']            = true;
-                                        //$params['search_html']            = '<span id="#ID#_search_value">Search...</span><a id="#ID#_advanced_search" href="javascript: ctShowAdvancedSearch(\'#ID#\');" title="Advanced Search"><img src="images/advanced_search.png" /></a><div id="#ID#_loader"></div>';
+                                        $params['search_html']            = '<span id="#ID#_search_value">Buscar...</span><a id="#ID#_advanced_search" href="javascript: ctShowAdvancedSearch(\'#ID#\');" title="Advanced Search"><img src="images/advanced_search.png" /></a><div id="#ID#_loader"></div>';
                                         //$params['multiple_search_init']   = 'hide';
                                         $params['items_per_page_init']      = '10,20,50,100'; // default: '10*$i';
                                         //$params['items_per_page_all']     = '#TOTAL_ITEMS#';
@@ -112,7 +112,7 @@ $script_tarifario=true;
                                     <link rel="stylesheet" type="text/css" href="/libs/creative_table/css/creative.css">
                                     <script src="/libs/creative_table/js/jquery-1.4.2.min.js"></script>
                                     <script src="/libs/creative_table/js/creative_table_ajax-1.3.js"></script>
-                                    
+
                                     <?php echo $out;?>
 
                                 </div>
