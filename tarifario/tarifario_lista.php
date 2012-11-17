@@ -3,7 +3,7 @@
 // Open the DB connection and select the DB - creates the function getCreativePagerLyte()
 include_once('../libs/creative_table/configurations.php');
 ?>
-aaa
+
 <?php
 /*VARIABLE URL*/
 $tipo=$_POST["tipo"];
