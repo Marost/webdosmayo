@@ -105,7 +105,7 @@ $params['total_items']          = $total_items;
 //$params['form_init']          = true;
 //$params['form_url']           = '';
 $params['header']               = 'Descripcion,Precio'; // If you need to use the comma use &#44; instead of , default: false
-$params['width']                = '185,,95,50'; // default: ''
+$params['width']                = '600,100'; // default: ''
 //$params['search_init']        = true;
 $params['search_html']          = '<span id="#ID#_search_value">Buscar...</span><a id="#ID#_advanced_search" href="javascript: ctShowAdvancedSearch(\'#ID#\');" title="Advanced Search"><img src="images/advanced_search.png" /></a><a href="javascript: ctSubmitForm(\'#ID#\',\'\',1);" style="margin-left: 10px; color: #555555; text-decoration: none;">Search</a>';
 $params['multiple_search_init'] = filled_array($multiple_search) ? true: 'hide';
