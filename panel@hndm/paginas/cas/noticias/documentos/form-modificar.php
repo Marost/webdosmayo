@@ -30,7 +30,7 @@ $fila_query=mysql_fetch_array($rst_query);
 var jq = jQuery.noConflict();
 jq(function() {
 	jq("#flash_uploader").pluploadQueue({
-    runtimes: 'flash', url: 'upload.php', max_file_size: '100mb',
+    runtimes: 'flash', url: 'upload.php?id=<?php echo $idnoticia; ?>', max_file_size: '100mb',
     chunk_size: '1mb', unique_names: true,
     filters: [ {title: "Documentos | Imagenes", extensions: "doc,docx,xls,xlsx,ppt,ppts,pps,ppsx,pdf,jpg,jpeg,gif,png"}],
     flash_swf_url: '../../../../js/plupload/plupload.flash.swf'
@@ -48,7 +48,7 @@ jq(function() {
 				<?php include("../../../../menu-izq.php"); ?>
             </div><!--FIN PANEL IZQ-->
             <div id="panel-der">
-            	<h2>Modificar - Foto</h2>
+            	<h2>Modificar - Documentos</h2>
     <div id="contenido_total">
         <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
             <tr>
@@ -61,10 +61,10 @@ jq(function() {
           	      </tr>
 
             	    <tr>
-            	      <td width="20%" height="30" align="right" class="texto_izq"><p><strong>Foto:</strong></p></td>
-            	      <td width="80%" height="30" align="left" class="texto_der"><label for="archivo"></label><img src="../../../../../imagenes/upload/<?php echo $fila_query["carpeta"]."".$fila_query["imagen"] ?>" width="150" />
-           	          
-           	          <input name="carpeta" type="hidden" id="carpeta" value="<?php echo $fila_query["carpeta"] ?>" /></td>
+            	      <td width="20%" height="30" align="right" class="texto_izq"><p><strong>Titulo:</strong></p></td>
+            	      <td width="80%" height="30" align="left" class="texto_der">
+                      <input type="text" name="titulo" id="titulo" value="<?php echo $fila_query["titulo"] ?>" size="55" />
+                    </td>
           	      </tr>
             	    
                   <tr>

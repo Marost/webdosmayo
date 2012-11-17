@@ -40,7 +40,7 @@ if($num_notgaleria>0){
 		}
 
 		mysql_query("INSERT INTO ".$tabla_suf."_cas_documentos (titulo, documento, documento_tipo, cas, orden)
-			VALUES('".htmlspecialchars($archivo_name{$cont})."', '".$archivo_name_total{$cont}."', '".$archivo_name_extension{$cont}."', $idnoticia, $cont_img)", $conexion);
+			VALUES('".htmlspecialchars($archivo_name_nombre{$cont})."', '".$archivo_name_total{$cont}."', '".$archivo_name_extension{$cont}."', $idnoticia, $cont_img)", $conexion);
 
 		$cont++; $cont_img++;
 	}
@@ -65,7 +65,7 @@ if($num_notgaleria>0){
 		}
 
 		mysql_query("INSERT INTO ".$tabla_suf."_cas_documentos (titulo, documento, documento_tipo, cas, orden)
-			VALUES('".htmlspecialchars($archivo_name{$cont})."', '".$archivo_name_total{$cont}."', '".$archivo_name_extension{$cont}."', $idnoticia, $cont)", $conexion);
+			VALUES('".htmlspecialchars($archivo_name_nombre{$cont})."', '".$archivo_name_total{$cont}."', '".$archivo_name_extension{$cont}."', $idnoticia, $cont)", $conexion);
 
 		$cont++;
 	}

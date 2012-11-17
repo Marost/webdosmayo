@@ -48,7 +48,7 @@ jq(function() {
 				<?php include("../../../../menu-izq.php"); ?>
             </div><!--FIN PANEL IZQ-->
             <div id="panel-der">
-            	<h2>Agregar - Fotos</h2>
+            	<h2>Agregar - Documentos</h2>
     <div id="contenido_total">
         <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
             <tr>
