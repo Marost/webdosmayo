@@ -193,7 +193,7 @@ jAcod(document).ready(function(){
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="/libs/progressbar/progress.js"></script>
 
-<?php if($script_slide_noticia=true){ ?>
+<?php if($script_slide_noticia==true){ ?>
 <!-- SLIDE NOTICIA -->
 <link href="/libs/allinone_banner/allinone_thumbnailsBanner.css" rel="stylesheet" type="text/css">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
@@ -241,6 +241,7 @@ jPatHist(document).ready(function(){
 });
 </script>
 
+<?php if($script_slide_campana==true){ ?>
 <!-- SLIDER CAMPAÑAS -->
 <link href="/libs/allinone_banner/allinone_thumbnailsBanner.css" rel="stylesheet" type="text/css">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
@@ -262,7 +263,7 @@ jCampEsp(document).ready(function(){
     });
 });
 </script>
-
+<?php } ?>
 <!-- GOOGLE ANALYTICS -->
 <!--  
 <script type="text/javascript">
