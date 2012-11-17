@@ -1,10 +1,22 @@
 <?php
+//VALORES PARA CONEXION
+$bd_servidor="localhost";
+$bd_usuario="marost2_admin";
+$bd_pass="master@18073";
+$bd_basedatos="marost2_hndmWP";
+
 //CONEXION CON EL SERVIDOR
-$conexion=mysql_connect("localhost","marost2_admin","master@18073");
-mysql_select_db("marost2_hndmWP",$conexion);
+$conexion=mysql_connect($bd_servidor,$bd_usuario,$bd_pass);
+mysql_select_db($bd_basedatos,$conexion);
 
 //ZONA HORARIA
 date_default_timezone_set('America/Lima');
+
+//VARIABLES GLOBALES BD
+global $bd_servidor;
+global $bd_usuario;
+global $bd_pass;
+global $bd_basedatos;
 
 //VARIABLES GLOBALES
 global $carpeta_admin;
