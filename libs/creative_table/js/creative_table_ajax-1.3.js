@@ -137,7 +137,7 @@ function ctSubmitForm(table_id,page,pass_total_items,reload_option){
     onInit();
 
     // starts the loading gif
-    $('#'+table_id+'_loader').css("backgroundImage", "url(images/loading.gif)");
+    $('#'+table_id+'_loader').css("backgroundImage", "url(/libs/creative_table/images/loading.gif)");
 
     var multiple_search_str='';
 

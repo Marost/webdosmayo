@@ -118,7 +118,7 @@ class CreativeTable{
         $this->width                = isset($params['width']) ? $params['width'] : '';
         $this->search_init          = isset($params['search_init']) ? $params['search_init'] : true;
         $this->search_type          = isset($params['search_type']) ? $params['search_type'] : 'like';
-        $this->search_html          = isset($params['search_html']) ? $params['search_html'] : '<span id="#ID#_search_value">Search...</span><a id="#ID#_advanced_search" href="javascript: ctShowAdvancedSearch(\'#ID#\');" title="Advanced Search"><img src="images/advanced_search.png" /></a><div id="#ID#_loader"></div>';
+        $this->search_html          = isset($params['search_html']) ? $params['search_html'] : '<span id="#ID#_search_value">Search...</span><a id="#ID#_advanced_search" href="javascript: ctShowAdvancedSearch(\'#ID#\');" title="Advanced Search"><img src="/libs/creative_table/images/advanced_search.png" /></a><div id="#ID#_loader"></div>';
         $this->multiple_search_init = isset($params['multiple_search_init']) ? $params['multiple_search_init'] : 'hide';
         $this->multiple_search_type = isset($params['multiple_search_type']) ? $params['multiple_search_type'] : 'like';
         $this->items_per_page_init  = isset($params['items_per_page_init']) ? $params['items_per_page_init'] : '10*$i';
