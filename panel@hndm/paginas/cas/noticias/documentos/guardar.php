@@ -24,23 +24,23 @@ if($num_notgaleria>0){
 	$cont_img=$num_notgaleria;
 
 	while($_POST['flash_uploader_'.$cont.'_tmpname']<>""){
-		$archivo_tmp."".$cont=$_POST['flash_uploader_'.$cont.'_tmpname'];
-		$archivo_tmp_extension."".$cont=end(explode('.',$archivo_tmp."".$cont));
-		$archivo_tmp_nombre."".$cont=substr($archivo_tmp."".$cont,0,strlen($archivo_tmp."".$cont)-(strlen($archivo_tmp_extension."".$cont)+1));
+		$archivo_tmp{$cont}=$_POST['flash_uploader_'.$cont.'_tmpname'];
+		$archivo_tmp_extension{$cont}=end(explode('.',$archivo_tmp{$cont}));
+		$archivo_tmp_nombre{$cont}=substr($archivo_tmp{$cont},0,strlen($archivo_tmp{$cont})-(strlen($archivo_tmp_extension{$cont})+1));
 		
-		$archivo_name."".$cont=$_POST['flash_uploader_0_name'];	
-		$archivo_name_extension."".$cont=end(explode('.',$archivo_name."".$cont));
-		$archivo_name_nombre."".$cont=substr($archivo_name."".$cont,0,strlen($archivo_name."".$cont)-(strlen($archivo_name_extension."".$cont)+1));
-		$archivo_name_prmlnk."".$cont=getUrlAmigable($archivo_name_nombre."".$cont);
-		$archivo_name_total."".$cont=$archivo_name_prmlnk."".$cont.".".$archivo_name_extension."".$cont;
+		$archivo_name{$cont}=$_POST['flash_uploader_'.$cont.'_name'];	
+		$archivo_name_extension{$cont}=end(explode('.',$archivo_name{$cont}));
+		$archivo_name_nombre{$cont}=substr($archivo_name{$cont},0,strlen($archivo_name{$cont})-(strlen($archivo_name_extension{$cont})+1));
+		$archivo_name_prmlnk{$cont}=getUrlAmigable($archivo_name_nombre{$cont});
+		$archivo_name_total{$cont}=$archivo_name_prmlnk{$cont}.".".$archivo_name_extension{$cont};
 		
-		$ruta_archivo."".$cont="../../../../../documentos/".$carpeta_archivo;
-		if(file_exists($ruta_archivo."".$cont.$archivo_tmp."".$cont)){
-			rename($ruta_archivo."".$cont.$archivo_tmp."".$cont, $ruta_archivo."".$cont.$archivo_name_total."".$cont);
+		$ruta_archivo{$cont}="../../../../../documentos/".$carpeta_archivo;
+		if(file_exists($ruta_archivo{$cont}.$archivo_tmp{$cont})){
+			rename($ruta_archivo{$cont}.$archivo_tmp{$cont}, $ruta_archivo{$cont}.$archivo_name_total{$cont});
 		}
 
 		$sw=myqsl_query("INSERT INTO ".$tabla_suf."_cas_documentos (titulo, documento, documento_tipo, cas, orden)
-			VALUES('".htmlspecialchars($archivo_name."".$cont)."', '".$archivo_name_total."".$cont."', '".$archivo_name_extension."".$cont."', $idnoticia, $cont_img)", $conexion);
+			VALUES('".htmlspecialchars($archivo_name{$cont})."', '".$archivo_name_total{$cont}."', '".$archivo_name_extension{$cont}."', $idnoticia, $cont_img)", $conexion);
 
 		$cont++; $cont_img++;
 	}
@@ -49,23 +49,23 @@ if($num_notgaleria>0){
 	$cont=0;
 
 	while($_POST['flash_uploader_'.$cont.'_tmpname']<>""){
-		$archivo_tmp."".$cont=$_POST['flash_uploader_'.$cont.'_tmpname'];
-		$archivo_tmp_extension."".$cont=end(explode('.',$archivo_tmp."".$cont));
-		$archivo_tmp_nombre."".$cont=substr($archivo_tmp."".$cont,0,strlen($archivo_tmp."".$cont)-(strlen($archivo_tmp_extension."".$cont)+1));
+		$archivo_tmp{$cont}=$_POST['flash_uploader_'.$cont.'_tmpname'];
+		$archivo_tmp_extension{$cont}=end(explode('.',$archivo_tmp{$cont}));
+		$archivo_tmp_nombre{$cont}=substr($archivo_tmp{$cont},0,strlen($archivo_tmp{$cont})-(strlen($archivo_tmp_extension{$cont})+1));
 		
-		$archivo_name."".$cont=$_POST['flash_uploader_0_name'];	
-		$archivo_name_extension."".$cont=end(explode('.',$archivo_name."".$cont));
-		$archivo_name_nombre."".$cont=substr($archivo_name."".$cont,0,strlen($archivo_name."".$cont)-(strlen($archivo_name_extension."".$cont)+1));
-		$archivo_name_prmlnk."".$cont=getUrlAmigable($archivo_name_nombre."".$cont);
-		$archivo_name_total."".$cont=$archivo_name_prmlnk."".$cont.".".$archivo_name_extension."".$cont;
+		$archivo_name{$cont}=$_POST['flash_uploader_'.$cont.'_name'];	
+		$archivo_name_extension{$cont}=end(explode('.',$archivo_name{$cont}));
+		$archivo_name_nombre{$cont}=substr($archivo_name{$cont},0,strlen($archivo_name{$cont})-(strlen($archivo_name_extension{$cont})+1));
+		$archivo_name_prmlnk{$cont}=getUrlAmigable($archivo_name_nombre{$cont});
+		$archivo_name_total{$cont}=$archivo_name_prmlnk{$cont}.".".$archivo_name_extension{$cont};
 		
-		$ruta_archivo."".$cont="../../../../../documentos/".$carpeta_archivo;
-		if(file_exists($ruta_archivo."".$cont.$archivo_tmp."".$cont)){
-			rename($ruta_archivo."".$cont.$archivo_tmp."".$cont, $ruta_archivo."".$cont.$archivo_name_total."".$cont);
+		$ruta_archivo{$cont}="../../../../../documentos/".$carpeta_archivo;
+		if(file_exists($ruta_archivo{$cont}.$archivo_tmp{$cont})){
+			rename($ruta_archivo{$cont}.$archivo_tmp{$cont}, $ruta_archivo{$cont}.$archivo_name_total{$cont});
 		}
 
 		$sw=myqsl_query("INSERT INTO ".$tabla_suf."_cas_documentos (titulo, documento, documento_tipo, cas, orden)
-			VALUES('".htmlspecialchars($archivo_name."".$cont)."', '".$archivo_name_total."".$cont."', '".$archivo_name_extension."".$cont."', $idnoticia, $cont)", $conexion);
+			VALUES('".htmlspecialchars($archivo_name{$cont})."', '".$archivo_name_total{$cont}."', '".$archivo_name_extension{$cont}."', $idnoticia, $cont)", $conexion);
 
 		$cont++;
 	}
