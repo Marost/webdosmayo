@@ -287,7 +287,7 @@ var jTarif=jQuery.noConflict();
 jTarif(document).ready(function(){
 
     jTarif("#tarif_medicamento").addClass("active");
-    jTarif.post("/tarifario/tarifario_lista.php", {tipo: "medicamento"},
+    jTarif.post("tarifario/tarifario_lista.php", {tipo: "medicamento"},
     function(data){
         jTarif("#tarifario_contenido").html(data);
     });
@@ -296,7 +296,7 @@ jTarif(document).ready(function(){
         jTarif("#tarifario_cabecera ul li a").removeClass("active");
         jTarif(this).addClass("active");
         var tipo = jTarif(this).attr("class");
-        jTarif.post("/tarifario/tarifario_lista.php", {tipo: tipo},
+        jTarif.post("tarifario/tarifario_lista.php", {tipo: tipo},
         function(data){
             jTarif("#tarifario_contenido").html(data);
         });

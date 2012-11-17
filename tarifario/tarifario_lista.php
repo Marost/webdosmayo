@@ -6,7 +6,7 @@ include_once('../libs/creative_table/configurations.php');
 
 <?php
 /*VARIABLE URL*/
-$tipo=$_POST["TIPO"];
+$tipo=$_POST["tipo"];
 
 if($tipo=="medicamento"){
 
