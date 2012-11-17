@@ -42,6 +42,9 @@ jmnpr(document).ready(function(){
         <a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/noticias/capacitacion/listar.php">
           Capacitación</a></li>
       <li>
+        <a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/noticias/capacitacion/listar.php">
+          CAS</a></li>
+      <li>
         <a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/noticias/equipos-tecnologia/listar.php">
           Equipos de Última Tecnología</a></li>
       <li>
