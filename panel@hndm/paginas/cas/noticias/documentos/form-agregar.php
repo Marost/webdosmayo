@@ -31,7 +31,7 @@ jq(function() {
 	jq("#flash_uploader").pluploadQueue({
     runtimes: 'flash', url: 'upload.php?id=<?php echo $idnoticia; ?>', max_file_size: '100mb',
     chunk_size: '1mb', unique_names: true,
-    filters: [ {title: "Documentos | Imagenes", extensions: "doc,docx,xls,xlsx,ppt,ppts,pps,ppsx,pdf,jpg,jpeg,gif,png"}],
+    filters: [ {title: "Documentos | Imagenes", extensions: "doc,docx,xls,xlsx,ppt,pptx,pps,ppsx,pdf,jpg,jpeg,gif,png"}],
     flash_swf_url: '../../../../js/plupload/plupload.flash.swf'
   });
 });
