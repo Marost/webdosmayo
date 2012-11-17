@@ -53,13 +53,13 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
                             <div class="datos">
                                 <img src="/imagenes/doctores/dr_silva.jpg" width="270" height="160">
                                 <div>
-                                    <h2>Manuel Silva Zumaran</h2>
+                                    <h2>Dr. Manuel Silva Zumarán</h2>
                                     <p>Director Adjunto</p>
                                 </div>
                             </div>
 
                             <div class="contenido">
-                                <p>Médico cirujano egresado de la Universidad Nacional Mayor de San Marcos, promoción 70A –1980, con especialidad de Medicina Interna en la Universidad Peruana Cayetano Heredia. Realizó su internado en el Hospital Nacional “Dos de Mayo” (HNDM). Asimismo, efectuó una Maestría en Administración con mención en Gestión Hospitalaria. Más de 25 años de labor como médico internista en el HNDM, respectivamente en la Sala San Andrés.</p>
+                                <p>Médico cirujano egresado de la Universidad Nacional Mayor de San Marcos, promoción 70A –1980, con especialidad de Medicina Interna en la Universidad Peruana Cayetano Heredia. Realizó su internado en el Hospital Nacional “Dos de Mayo” (HNDM). Asimismo, efectuó una Maestría en Salud Pública con mención en Gestión Hospitalaria. Más de 25 años de labor como médico internista en el HNDM, respectivamente en la Sala San Andrés del referido hospital.</p>
                             </div>
 
                         </article>

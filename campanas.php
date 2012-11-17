@@ -35,14 +35,18 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
 
                     <section id="news">
 
-                        <div class="nw-nota">
+                        <div class="nw-nota campania">
 
                             <div class="titulo">
                                 <h2>Campañas Especiales</h2>
                             </div>
 
-                            <div class="contenido" style="text-align:center;">
-                                <img src="imagenes/upload/campanas.jpg">
+                            <div class="contenido">
+
+                                <article>
+                                    <div></div>
+                                </article>
+                            
                             </div>
 
                         </div>

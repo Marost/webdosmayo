@@ -3,6 +3,9 @@
 require_once("panel@hndm/conexion/conexion.php");
 require_once("panel@hndm/conexion/funciones.php");
 require_once("panel@hndm/conexion/funcion-paginacion.php");
+
+/*CAS*/
+$rst_cas=mysql_query("SELECT * FROM DM_cas ORDER BY fecha_publicacion DESC", $conexion);
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -53,22 +56,31 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
 
                                 <table class="tabla_cas" width="710" border="0">
                                     <tbody>
+
+                                        <?php while($fila_cas=mysql_fetch_array($rst_cas){
+                                            $cas_id=$fila_cas["id"];
+                                            $cas_titulo=$fila_cas["titulo"];
+                                            $cas_tipo=$fila_cas["tipo"];
+                                            $cas_observaciones=$fila_cas["observaciones"];
+
+                                            /*DOCUMENTOS*/
+                                            $rst_cas_docs=mysql_query("SELECT * FROM DM_cas_documentos WHERE cas=$cas_id ORDER BY orden ASC;", $conexion)
+                                        ?>
                                         <tr>
                                             <td class="dato_cabecera tdcab-sup" width="104" height="25">Tipo</td>
-                                            <td class="dato_contenido tdcont-sup">CAS</td>
+                                            <td class="dato_contenido tdcont-sup"><?php echo $cas_tipo; ?></td>
                                         </tr>
                                         <tr>
                                             <td class="dato_cabecera">Nombre</td>
-                                            <td class="dato_contenido">CONVOCATORIA PARA LA CONTRATACIÓN ADMINISTRATIVA DE SERVICIOS DE PERSONAL PROFESIONAL MÉDICO, ASISTENCIALES Y ADMINISTRATIVOS</td>
+                                            <td class="dato_contenido"><?php echo $cas_titulo; ?></td>
                                         </tr>
                                         <tr>
                                             <td class="dato_cabecera">Documentos</td>
                                             <td class="dato_contenido">
                                                 <ul>
+                                                    <?php while($fil_cas_docs=mysql_fetch_array($rst_cas_docs)){ ?>
                                                     <li><a class="word48" title="" href=""></a></li>
-                                                    <li><a class="pwpt48" title="" href=""></a></li>
-                                                    <li><a class="excel48" title="" href=""></a></li>
-                                                    <li><a class="pdf48" title="" href=""></a></li>
+                                                    <?php } ?>
                                                 </ul>
                                             </td>
                                         </tr>
@@ -76,13 +88,11 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
                                         <tr>
                                             <td class="dato_cabecera tdcab-inf">Observaciones</td>
                                             <td class="dato_contenido">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                                consequat.</p>
+                                                <?php echo $cas_observaciones; ?>
                                             </td>
                                         </tr>
-
+                                        <tr><td></td><td></td></tr>
+                                        <?php } ?>
                                     </tbody>
                                 </table>
 
