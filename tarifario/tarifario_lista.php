@@ -28,7 +28,7 @@ include_once('../libs/creative_table/creativeTable.php');
 $ct=new CreativeTable();
 
 // Data Gathering
-$params['sql_query']                = "SELECT titulo,precio FROM DM_tarifario";
+$params['sql_query']                = "SELECT titulo,precio FROM DM_tarifario WHERE tipo=1";
 $params['search']                   = $search;
 $params['multiple_search']          = $multiple_search;
 $params['items_per_page']           = $items_per_page;
@@ -43,8 +43,19 @@ $params['width']                    = '600,100';
 // ***********************************************************************************
 // UNCOMMENT TO TEST THE DIFFERENTS OPTIONS AND SEE THE RESULTS AND TEST SOME YOURSELF
 
-$params['items_per_page_init']      = '25,50,75,100';   // creates the select box with those options
+// default: '$i*10';
+$params['items_per_page_init']    	= false;            // wont show the select box with the items per page
+$params['items_per_page_init']      = '10,20,50,100';   // creates the select box with those options
+$params['items_per_page_init']    	= '$i*10';          // you may configure with a function where $i is the iteration, in this case will be: 1*50,2*50,3*50,... resulting in 50,100,150,... dont forget to include the slashes in the string
+
+// default: '#TOTAL_ITEMS#'
 $params['items_per_page_all']       = false;            // wont show the show all option in the select box
+$params['items_per_page_all']     	= 'Show all';       // show the show all option with the text 'Show All'
+$params['items_per_page_all']     	= '#TOTAL_ITEMS#';  // show the show all option replacing the tag #TOTAL_ITEMS# with total of items value - default
+
+// default: ctItemsPerPageSubmitForm(\'#ID#\')
+//$params['items_per_page_url']     = 'alert(\'#ID# - #PAGE# - #ITEMS_PER_PAGE# - #TOTAL_ITEMS#\');';   // javascript code triggered on onchange event of the select box (you may use tags)
+
 
 // ***********************************************************************************
 
@@ -84,7 +95,7 @@ include_once('../libs/creative_table/creativeTable.php');
 $ct=new CreativeTable();
 
 // Data Gathering
-$params['sql_query']                = "SELECT titulo,precio FROM DM_tarifario";
+$params['sql_query']                = "SELECT titulo,precio FROM DM_tarifario WHERE tipo=2";
 $params['search']                   = $search;
 $params['multiple_search']          = $multiple_search;
 $params['items_per_page']           = $items_per_page;
@@ -99,8 +110,15 @@ $params['width']                    = '600,100';
 // ***********************************************************************************
 // UNCOMMENT TO TEST THE DIFFERENTS OPTIONS AND SEE THE RESULTS AND TEST SOME YOURSELF
 
-$params['items_per_page_init']      = '25,50,75,100';   // creates the select box with those options
+// default: '$i*10';
+$params['items_per_page_init']    	= false;            // wont show the select box with the items per page
+$params['items_per_page_init']      = '10,20,50,100';   // creates the select box with those options
+$params['items_per_page_init']    	= '$i*10';          // you may configure with a function where $i is the iteration, in this case will be: 1*50,2*50,3*50,... resulting in 50,100,150,... dont forget to include the slashes in the string
+
+// default: '#TOTAL_ITEMS#'
 $params['items_per_page_all']       = false;            // wont show the show all option in the select box
+$params['items_per_page_all']     	= 'Show all';       // show the show all option with the text 'Show All'
+$params['items_per_page_all']     	= '#TOTAL_ITEMS#';  // show the show all option replacing the tag #TOTAL_ITEMS# with total of items value - default
 
 // ***********************************************************************************
 
