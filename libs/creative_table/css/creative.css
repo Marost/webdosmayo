@@ -175,7 +175,8 @@
 
 #ct_pager li{
     display: inline;
-    background:none !important; 
+    background:none !important;
+    padding: 1px !important;
 }
 
 #ct_pager li a{

@@ -339,6 +339,8 @@ FileETag None
 RewriteRule ^cat/(.*)$                  /categoria.php?cat=$1
 RewriteRule ^(.*)/([0-9]*)-(.*)$        /nota.php?cat=$1&id=$2&url=$3
 RewriteRule ^construccion$              /construccion.php
+RewriteRule ^tarifario/medicamentos$    /tarifario-medicamentos.php
+RewriteRule ^tarifario/procedimientos$    /tarifario-procedimientos.php
 
 # ----------------------------------------------------------------------
 # Suppress or force the "www." at the beginning of URLs

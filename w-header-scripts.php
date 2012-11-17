@@ -289,36 +289,8 @@ jCampEsp(document).ready(function(){
 </script>
 -->
 
-
 <?php if($script_tarifario==true){ ?>
-<!-- TARIFARIO -->
-<!-- 
-<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script>
-var jTarif=jQuery.noConflict();
-jTarif(document).ready(function(){
-
-    jTarif("#tarif_medicamento").addClass("active");
-    jTarif.post("tarifario/tarifario_lista.php", {tipo: "medicamento"},
-    function(data){
-        jTarif("#tarifario_contenido").html(data);
-    });
-
-    jTarif("#tarifario_cabecera ul li a").click(function(){
-        jTarif("#tarifario_cabecera ul li a").removeClass("active");
-        jTarif(this).addClass("active");
-        var tipo = jTarif(this).attr("rel");
-        jTarif.post("tarifario/tarifario_lista.php", {tipo: tipo},
-        function(data){
-            jTarif("#tarifario_contenido").html(data);
-        });
-    })
-
-});
-</script>
- -->
- 
-<!-- TABLA -->
+<!-- TARIFARIO TABLA -->
 <link rel="stylesheet" type="text/css" href="/libs/creative_table/css/creative.css">
 <script src="/libs/creative_table/js/jquery-1.4.2.min.js"></script>
 <script src="/libs/creative_table/js/creative_table_ajax-1.3.js"></script>

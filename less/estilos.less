@@ -1099,6 +1099,50 @@ header nav{
 		}
 	}
 
+	#tarifario_cabecera{
+
+		border-bottom:1px solid #ccc;
+		float: left;
+		width: 100%;
+
+		ul{
+			list-style: none;
+			padding: 0;
+			position:relative;
+			margin:0;
+
+			li{ 
+				background:none; 
+				padding-left:0; 
+				float:left; 
+				margin-right:5px;
+
+				a{ 
+					display:block; 
+					float:left; 
+					color:#3c3b3b; 
+					text-decoration:none; 
+					font-size:14px;
+					.pestana();
+					line-height: normal;
+				}
+
+				a:hover{
+					background-color:#2D65AE;
+					color:#fff;							
+				}
+			}
+
+			li.selected{
+
+				a { 
+					background-color:#2D65AE;
+					color:#fff;							
+				}
+			}
+		}	
+	}
+
 	.borde-bottom{
 		border-bottom: 2px dotted #999;
 	}
