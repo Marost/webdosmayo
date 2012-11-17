@@ -46,13 +46,13 @@ $rst_cas=mysql_query("SELECT * FROM DM_cas ORDER BY fecha_publicacion DESC", $co
 
                             <div class="contenido">
 
-                                <select>
+                                <!-- <select>
                                     <option>Seleccion año</option>
                                 </select>
 
                                 <select>
                                     <option>Seleccion mes</option>
-                                </select>
+                                </select> -->
 
                                 <table class="tabla_cas" width="710" border="0">
                                     <tbody>

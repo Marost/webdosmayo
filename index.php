@@ -211,13 +211,13 @@ $alianzas_url_final=$alianzas_categoria["url"]."/".$alianzas_id."-".$alianzas_ur
                                     <div>
                                         
                                         <ul class="allinone_carousel_list">
-                                            <li data-link="campanas.php" data-bottom-thumb="/imagenes/campanias-especiales/thumb110/campana1.jpg">
+                                            <li data-bottom-thumb="/imagenes/campanias-especiales/thumb110/campana1.jpg">
                                                 <img src="/imagenes/campanias-especiales/thumb350/campana1.jpg" alt="" /></li>
-                                            <li data-link="campanas.php" data-bottom-thumb="/imagenes/campanias-especiales/thumb110/campana2.jpg">
+                                            <li data-bottom-thumb="/imagenes/campanias-especiales/thumb110/campana2.jpg">
                                                 <img src="/imagenes/campanias-especiales/thumb350/campana2.jpg" alt="" /></li>
-                                            <li data-link="campanas.php" data-bottom-thumb="/imagenes/campanias-especiales/thumb110/campana3.jpg">
+                                            <li data-bottom-thumb="/imagenes/campanias-especiales/thumb110/campana3.jpg">
                                                 <img src="/imagenes/campanias-especiales/thumb350/campana3.jpg" alt="" /></li>
-                                            <li data-link="campanas.php" data-bottom-thumb="/imagenes/campanias-especiales/thumb110/campana4.jpg">
+                                            <li data-bottom-thumb="/imagenes/campanias-especiales/thumb110/campana4.jpg">
                                                 <img src="/imagenes/campanias-especiales/thumb350/campana4.jpg" alt="" /></li>
                                         </ul>
 
@@ -321,7 +321,7 @@ $alianzas_url_final=$alianzas_categoria["url"]."/".$alianzas_id."-".$alianzas_ur
                                 <article class="nws-contenido">
 
                                     <iframe width="370" height="150" src="http://www.youtube.com/embed/B4_QQQCInFg?wmode=transparent&autohide=1&egm=0&hd=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=0&showsearch=0&theme=light" frameborder="0" allowfullscreen></iframe>
-                                    <a href="sala-prensa.php">Más...</a>
+                                    <a href="construccion">Más...</a>
                                     
                                 </article>
                             </div>

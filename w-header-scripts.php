@@ -1,4 +1,4 @@
-<base href ="http://dosdemayofinal.marostsac.com">
+<base href ="<?php echo $web; ?>">
 
 <!-- ESTILOS -->
 <link rel="stylesheet" href="/css/normalize.min.css">
