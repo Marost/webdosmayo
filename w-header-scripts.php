@@ -10,9 +10,11 @@
 <!-- MODERNIZR -->
 <script src="/js/vendor/modernizr-2.6.1.min.js"></script>
 
+<?php if($script_tabs==true){ ?>
 <!-- TABS -->
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 <script src="/js/tabs.js"></script>        
+<?php } ?>
 
 <!-- SLIDE SUPERIOR -->
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
@@ -44,6 +46,7 @@ jSlider(document).ready(function() {
 });
 </script>
 
+<?php if($script_slnot_prin==true){ ?>
 <!-- SLIDE NOTAS - PAGINA PRINCIPAL-->
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="/js/jquery.nivo.slider.pack.js"></script>
@@ -66,6 +69,7 @@ jSlideNI(document).ready(function() {
     });
 });
 </script>
+<?php } ?>
 
 <!-- MENU -->
 <link rel="stylesheet" href="/libs/sherpa/styles/960_fluid.css" />
@@ -169,6 +173,7 @@ jIntran(document).ready(function() {
 });
 </script>
 
+<?php if($script_acordeon==true){ ?>
 <!-- ACORDEON -->
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css" />
 <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
@@ -181,6 +186,7 @@ jAcod(document).ready(function(){
     });
 });
 </script>
+<?php } ?>
 
 <?php if($script_popup==true){ ?>
 <!-- POPUP -->
@@ -188,10 +194,12 @@ jAcod(document).ready(function(){
 <script  src="/js/popup.js"></script>
 <?php } ?>
 
-<!-- LISTA -->
+<?php if($script_direcinterno==true){ ?>
+<!-- DIRECTORIO INTERNO -->
 <link rel="stylesheet" href="/libs/progressbar/ui.progress-bar.css">
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="/libs/progressbar/progress.js"></script>
+<?php } ?>
 
 <?php if($script_slide_noticia==true){ ?>
 <!-- SLIDE NOTICIA -->

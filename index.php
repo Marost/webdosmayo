@@ -7,6 +7,8 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
 /*VARIABLES DE SCRIPTS*/
 $script_popup=true;
 $script_slide_campana=true;
+$script_tabs=true;
+$script_slnot_prin=true;
 
 /*-----------------------*/
 /*EQUIPOS DE ULTIMA TECNOLOGIA*/
