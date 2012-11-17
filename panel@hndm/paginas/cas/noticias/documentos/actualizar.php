@@ -9,10 +9,11 @@ $idnoticia=$_REQUEST["noticia"];
 $fecha=fechaPost();
 $hora=date("H:i");
 
-if($_POST['flash_uploader_0_tmpname']==""){
-	$archivo_name=$_POST["documento"];
-	$archivo_name_extension=$_POST["documento_tipo"];
-}else{
+/*EXTRAER CARPETA DE DOCUMENTOS*/
+$documentos=seleccionTabla($idnoticia, "id", "DM_cas", $conexion);
+$carpeta_archivo=$documentos["carpeta_documentos"];
+
+if($_POST['flash_uploader_0_tmpname']<>""){
 	$archivo_tmp=$_POST['flash_uploader_0_tmpname'];
 	$archivo_tmp_extension=end(explode('.',$archivo_tmp));
 	$archivo_tmp_nombre=substr($archivo_tmp,0,strlen($archivo_tmp)-(strlen($archivo_tmp_extension)+1));
@@ -27,9 +28,12 @@ if($_POST['flash_uploader_0_tmpname']==""){
 	if(file_exists($ruta_archivo.$archivo_tmp)){
 		rename($ruta_archivo.$archivo_tmp, $ruta_archivo.$archivo_name_total);
 	}
+}else{
+	$archivo_name=$_POST["documento"];
+	$archivo_name_extension=$_POST["documento_tipo"];
 }
 
-mysql_query("UPDATE ".$tabla_suf."_cas_documentos SET titulo='".htmlspecialchars($titulo)."', documento='$documento', 
+mysql_query("UPDATE ".$tabla_suf."_cas_documentos SET titulo='".htmlspecialchars($titulo)."', documento='$archivo_name', 
 	documento_tipo='$archivo_name_extension', cas=$idnoticia WHERE id=". $_REQUEST["id"].";", $conexion);
 	
 if (mysql_errno()!=0)
