@@ -40,7 +40,7 @@ if($num_notgaleria>0){
 		}
 
 		$sw=myqsl_query("INSERT INTO ".$tabla_suf."_cas_documentos (titulo, documento, documento_tipo, cas, orden)
-			VALUES('".htmlspecialchars($archivo_name)."', '$archivo_name_total', '$archivo_name_extension', $idnoticia, $cont_img)";
+			VALUES('".htmlspecialchars($archivo_name."".$cont)."', '".$archivo_name_total."".$cont."', '".$archivo_name_extension."".$cont."', $idnoticia, $cont_img)";
 
 		$cont++; $cont_img++;
 	}
@@ -65,7 +65,7 @@ if($num_notgaleria>0){
 		}
 
 		$sw=myqsl_query("INSERT INTO ".$tabla_suf."_cas_documentos (titulo, documento, documento_tipo, cas, orden)
-			VALUES('".htmlspecialchars($archivo_name)."', '$archivo_name_total', '$archivo_name_extension', $idnoticia, $cont)";
+			VALUES('".htmlspecialchars($archivo_name."".$cont)."', '".$archivo_name_total."".$cont."', '".$archivo_name_extension."".$cont."', $idnoticia, $cont)";
 
 		$cont++;
 	}
