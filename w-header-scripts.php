@@ -292,6 +292,7 @@ jCampEsp(document).ready(function(){
 
 <?php if($script_tarifario==true){ ?>
 <!-- TARIFARIO -->
+<!-- 
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script>
 var jTarif=jQuery.noConflict();
@@ -315,7 +316,8 @@ jTarif(document).ready(function(){
 
 });
 </script>
-
+ -->
+ 
 <!-- TABLA -->
 <link rel="stylesheet" type="text/css" href="/libs/creative_table/css/creative.css">
 <script src="/libs/creative_table/js/jquery-1.4.2.min.js"></script>
