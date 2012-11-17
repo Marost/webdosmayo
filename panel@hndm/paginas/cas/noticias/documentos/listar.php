@@ -98,6 +98,7 @@ if(confirm("¿Está seguro de borrar todos los registros?")) {
                     <td colspan="2">
 <ul id="test-list">
 	<?php while($fila_galeria=mysql_fetch_array($rst_galeria)){
+      $documento_titulo=$fila_galeria["titulo"];
       $documento_tipo=$fila_galeria["documento_tipo"];
   ?>
         <li id="listItem_<?php echo $fila_galeria["id"] ?>" class="alto">
@@ -109,27 +110,25 @@ if(confirm("¿Está seguro de borrar todos los registros?")) {
             <a href="form-modificar.php?id=<?php echo $fila_galeria["id"] ?>&amp;noticia=<?php echo $idnoticia ?>">
             <img src="../../../../images/editar_16.png" width="16" height="16" /></a>
 
-
             <?php if($documento_tipo=="doc" or $documento_tipo=="docx"){ ?>
-                <img src="../../../../images/icons/icon-file-docx.png" width="150" />
+                <img title="<?php echo $documento_titulo; ?>" src="../../../../images/icons/icon-file-docx.png" width="150" />
             <?php }elseif($documento_tipo=="xls" or $documento_tipo=="xlsx"){ ?>
-                <img src="../../../../images/icons/icon-file-xlsx.png" width="150" />
+                <img title="<?php echo $documento_titulo; ?>" src="../../../../images/icons/icon-file-xlsx.png" width="150" />
             <?php }elseif($documento_tipo=="ppt" or $documento_tipo=="pptx" or $documento_tipo=="pps" or $documento_tipo=="ppsx"){ ?>
-                <img src="../../../../images/icons/icon-file-pptx.png" width="150" />
+                <img title="<?php echo $documento_titulo; ?>" src="../../../../images/icons/icon-file-pptx.png" width="150" />
             <?php }elseif($documento_tipo=="pdf"){ ?>
-                <img src="../../../../images/icons/icon-file-pdf.png" width="150" />
+                <img title="<?php echo $documento_titulo; ?>" src="../../../../images/icons/icon-file-pdf.png" width="150" />
             <?php }elseif($documento_tipo=="gif"){ ?>
-                <img src="../../../../images/icons/icon-file-gif.png" width="150" />
+                <img title="<?php echo $documento_titulo; ?>" src="../../../../images/icons/icon-file-gif.png" width="150" />
             <?php }elseif($documento_tipo=="png"){ ?>
-                <img src="../../../../images/icons/icon-file-png.png" width="150" />
+                <img title="<?php echo $documento_titulo; ?>" src="../../../../images/icons/icon-file-png.png" width="150" />
             <?php }elseif($documento_tipo=="bmp"){ ?>
-                <img src="../../../../images/icons/icon-file-bmp.png" width="150" />
+                <img title="<?php echo $documento_titulo; ?>" src="../../../../images/icons/icon-file-bmp.png" width="150" />
             <?php }elseif($documento_tipo=="jpg" or $documento_tipo=="jpeg"){ ?>
-                <img src="../../../../images/icons/icon-file-jpg.png" width="150" />
+                <img title="<?php echo $documento_titulo; ?>" src="../../../../images/icons/icon-file-jpg.png" width="150" />
             <?php }elseif($documento_tipo=="zip" or $documento_tipo=="rar"){ ?>
-                <img src="../../../../images/icons/icon-file-zip.png" width="150" />
+                <img title="<?php echo $documento_titulo; ?>" src="../../../../images/icons/icon-file-zip.png" width="150" />
             <?php } ?>
-
 
         </li>
     <?php } ?>
