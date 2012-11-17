@@ -260,3 +260,48 @@ jCampEsp(document).ready(function(){
     });
 });
 </script>
+
+<!-- GOOGLE ANALYTICS -->
+<!--  
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-20229980-23']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+-->
+
+
+<?php if($script_tarifario==true){ ?>
+<!-- TARIFARIO -->
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+var jTarif=jQuery.noConflict();
+jTarif(document).ready(function(){
+
+    jTarif("#tarifario_medicamento").addClass("active");
+    jTarif.post("/tarifario/tarifario_lista.php", {tipo: "medicamento"},
+    function(data){
+        jTarif("#tarifario_contenido").html(data);
+    });
+
+    jTarif("#tarifario_cabecera ul li a").click(function(){
+        jTarif("#tarifario_cabecera ul li a").removeClass("active");
+        jTarif(this).addClass("active");
+        var tipo = jTarif(this).attr("class");
+        jTarif.post("/tarifario/tarifario_lista.php", {tipo: tipo},
+        function(data){
+            jTarif("#tarifario_contenido").html(data);
+        });
+    })
+
+});
+</script>
+<?php } ?>
