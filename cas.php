@@ -17,7 +17,7 @@ $rst_cas=mysql_query("SELECT * FROM DM_cas ORDER BY fecha_publicacion DESC", $co
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>Contrato Administrativo de Servicios</title>
 
-        <?php require_once("w-header-scripts.php") ?>
+        <?php require_once("w-header-scripts.php"); ?>
 
     </head>
     <body>
@@ -57,7 +57,7 @@ $rst_cas=mysql_query("SELECT * FROM DM_cas ORDER BY fecha_publicacion DESC", $co
                                 <table class="tabla_cas" width="710" border="0">
                                     <tbody>
 
-                                        <?php while($fila_cas=mysql_fetch_array($rst_cas){
+                                        <?php while($fila_cas=mysql_fetch_array($rst_cas)){
                                             $cas_id=$fila_cas["id"];
                                             $cas_titulo=$fila_cas["titulo"];
                                             $cas_tipo=$fila_cas["tipo"];
@@ -79,7 +79,7 @@ $rst_cas=mysql_query("SELECT * FROM DM_cas ORDER BY fecha_publicacion DESC", $co
                                             <td class="dato_contenido">
                                                 <ul>
                                                     <?php while($fil_cas_docs=mysql_fetch_array($rst_cas_docs)){ ?>
-                                                    <li><a class="word48" title="" href=""></a></li>
+                                                        <li><a class="word48" title="" href=""></a></li>
                                                     <?php } ?>
                                                 </ul>
                                             </td>
