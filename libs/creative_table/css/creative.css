@@ -175,16 +175,17 @@
 
 #ct_pager li{
     display: inline;
+    background:none; 
 }
 
 #ct_pager li a{
     display: inline;
-    color: #ffffff;
-    font-size: 12px;
-    text-decoration: none;
-    margin-right: 3px;
-    padding: 5px;
-    background-color: #404046;
+    color: #ffffff !important;
+    font-size: 12px !important;
+    text-decoration: none !important;
+    margin-right: 3px !important;
+    padding: 5px !important;
+    background-color: #404046 !important;
 }
 
 #ct_pager li a:hover{
@@ -193,8 +194,8 @@
 }
 
 #ct_pager li a.selected{
-    background-color: #04A3F5;
-    color: #ffffff;
+    background-color: #04A3F5 !important;
+    color: #ffffff !important;
 }
 
 #ct_pager_info1{
