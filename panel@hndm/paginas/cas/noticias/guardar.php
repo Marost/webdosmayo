@@ -17,8 +17,9 @@ $fecha_anio=date("Y");
 $fecha_mes=date("Y-m");
 
 //CREACION DE CARPETA PARA GUARDAR DOCUMENTOS
-$nombre_carpeta=getUrlAmigable(eliminarTextoURL($titulo))."-".$fecha_mes."/";
+$nombre_carpeta=getUrlAmigable(eliminarTextoURL($titulo))."-".$fecha_mes;
 mkdir("../../../../documentos/".$nombre_carpeta, 0755);
+$nombre_carpeta_final=getUrlAmigable(eliminarTextoURL($titulo))."-".$fecha_mes."/";
 
 //INSERTANDO DATOS
 $rst_guardar=mysql_query("INSERT INTO ".$tabla_suf."_cas (titulo, 
@@ -31,7 +32,7 @@ fecha_mes,
 dato_usuario) VALUES('".htmlspecialchars($titulo)."',
 '$tipo',
 '$observaciones', 
-'$nombre_carpeta',
+'$nombre_carpeta_final',
 '$fecha_pub', 
 '$fecha_anio', 
 '$fecha_mes',
