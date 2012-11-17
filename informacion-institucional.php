@@ -59,21 +59,23 @@ $script_slide_noticia=true;
                                     <p style="text-align:center;"><img src="imagenes/upload/vision.jpg" width="400" style="border: 5px solid #999;"></p>
                                 </article>
 
-                                <div class="imagen_slide" style="display:none;">
-                                    <ul class="allinone_bannerWithPlaylist_list">
-                                        <li data-bottom-thumb="/imagenes/mision-vision/thumb/img1.jpg">
-                                          <img src="/imagenes/mision-vision/img1.jpg" alt="" /></li>
-                                        <li data-bottom-thumb="/imagenes/mision-vision/thumb/img2.jpg">
-                                          <img src="/imagenes/mision-vision/img2.jpg" alt="" /></li>
-                                        <li data-bottom-thumb="/imagenes/mision-vision/thumb/img3.jpg">
-                                          <img src="/imagenes/mision-vision/img3.jpg" alt="" /></li>
-                                        <li data-bottom-thumb="/imagenes/mision-vision/thumb/img4.jpg">
-                                          <img src="/imagenes/mision-vision/img4.jpg" alt="" /></li>
-                                        <li data-bottom-thumb="/imagenes/mision-vision/thumb/img5.jpg">
-                                          <img src="/imagenes/mision-vision/img5.jpg" alt="" /></li>
-                                        <li data-bottom-thumb="/imagenes/mision-vision/thumb/img6.jpg">
-                                          <img src="/imagenes/mision-vision/img6.jpg" alt="" /></li>
-                                    </ul>
+                                <div class="imagen_slide">
+                                    <div style="display:none;">
+                                        <ul class="allinone_bannerWithPlaylist_list">
+                                            <li data-bottom-thumb="/imagenes/mision-vision/thumb/img1.jpg">
+                                              <img src="/imagenes/mision-vision/img1.jpg" alt="" /></li>
+                                            <li data-bottom-thumb="/imagenes/mision-vision/thumb/img2.jpg">
+                                              <img src="/imagenes/mision-vision/img2.jpg" alt="" /></li>
+                                            <li data-bottom-thumb="/imagenes/mision-vision/thumb/img3.jpg">
+                                              <img src="/imagenes/mision-vision/img3.jpg" alt="" /></li>
+                                            <li data-bottom-thumb="/imagenes/mision-vision/thumb/img4.jpg">
+                                              <img src="/imagenes/mision-vision/img4.jpg" alt="" /></li>
+                                            <li data-bottom-thumb="/imagenes/mision-vision/thumb/img5.jpg">
+                                              <img src="/imagenes/mision-vision/img5.jpg" alt="" /></li>
+                                            <li data-bottom-thumb="/imagenes/mision-vision/thumb/img6.jpg">
+                                              <img src="/imagenes/mision-vision/img6.jpg" alt="" /></li>
+                                        </ul>
+                                    </div>
                                 </div>
 
                             </div>

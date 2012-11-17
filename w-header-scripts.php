@@ -189,7 +189,7 @@ jIntran(document).ready(function() {
 <?php } ?>
 
 <?php if($script_popup==true){ ?>
-    <!-- POPUP PAGINA PRINCIPAL-->
+    <!-- POPUP -->
     <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script  src="/js/popup.js"></script>
 <?php } ?>
@@ -201,31 +201,33 @@ jIntran(document).ready(function() {
     <script src="/libs/progressbar/progress.js"></script>
 <?php } ?>
 
-<!-- SLIDE NOTICIA -->
-<link href="/libs/allinone_banner/allinone_thumbnailsBanner.css" rel="stylesheet" type="text/css">
-<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
-<script src="/libs/allinone_banner/jquery.ui.touch-punch.min.js"></script>
-<script src="/libs/allinone_banner/jquery.mousewheel.min.js"></script>
-<script src="/libs/allinone_banner/allinone_thumbnailsBanner.js"></script>
-<script src="/libs/allinone_banner/reflection.js" type="text/javascript"></script>
-<!--[if IE]><script src="/libs/allinone_banner/excanvas.compiled.js" type="text/javascript"></script><![endif]-->
-<script>
-var jNotSld=jQuery.noConflict();
-jNotSld(document).ready(function(){
-    jNotSld('.imagen_slide div').allinone_thumbnailsBanner({
-        skin: 'cool',
-        numberOfThumbsPerScreen:4,
-        width: 620,
-        height: 360,
-        thumbsWrapperMarginTop:0
+<?php if($script_slide_noticia==true){ ?>
+    <!-- SLIDE NOTICIA -->
+    <link href="/libs/allinone_banner/allinone_thumbnailsBanner.css" rel="stylesheet" type="text/css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
+    <script src="/libs/allinone_banner/jquery.ui.touch-punch.min.js"></script>
+    <script src="/libs/allinone_banner/jquery.mousewheel.min.js"></script>
+    <script src="/libs/allinone_banner/allinone_thumbnailsBanner.js"></script>
+    <script src="/libs/allinone_banner/reflection.js" type="text/javascript"></script>
+    <!--[if IE]><script src="/libs/allinone_banner/excanvas.compiled.js" type="text/javascript"></script><![endif]-->
+    <script>
+    var jNotSld=jQuery.noConflict();
+    jNotSld(document).ready(function(){
+        jNotSld('.imagen_slide div').allinone_thumbnailsBanner({
+            skin: 'cool',
+            numberOfThumbsPerScreen:4,
+            width: 620,
+            height: 360,
+            thumbsWrapperMarginTop:0
+        });
     });
-});
-</script>
+    </script>
+<?php } ?>
 
 <!-- SLIDER PATRIMONIO HISTORICO -->
 <link href="/libs/allinone_banner/allinone_bannerRotator.css" rel="stylesheet" type="text/css">
-<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
 <script src="/libs/allinone_banner/jquery.ui.touch-punch.min.js"></script>
 <script src="/libs/allinone_banner/jquery.mousewheel.min.js"></script>
@@ -247,29 +249,29 @@ jPatHist(document).ready(function(){
 });
 </script>
 
-
-<!-- SLIDER CAMPAÑAS -->
-<link href="/libs/allinone_banner/allinone_thumbnailsBanner.css" rel="stylesheet" type="text/css">
-<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
-<script src="/libs/allinone_banner/jquery.ui.touch-punch.min.js"></script>
-<script src="/libs/allinone_banner/jquery.mousewheel.min.js"></script>
-<script src="/libs/allinone_banner/allinone_thumbnailsBanner.js"></script>
-<script src="/libs/allinone_banner/reflection.js" type="text/javascript"></script>
-<!--[if IE]><script src="/libs/allinone_banner/excanvas.compiled.js" type="text/javascript"></script><![endif]-->
-<script>
-var jCampEsp=jQuery.noConflict();
-jCampEsp(document).ready(function(){
-    jCampEsp('#nw-campania-esp .nws-contenido div').allinone_thumbnailsBanner({
-        skin: 'cool',
-        numberOfThumbsPerScreen:2,
-        width: 350,
-        height: 300,
-        thumbsWrapperMarginTop:0
+<?php if($script_slide_campana==true){ ?>
+    <!-- SLIDER CAMPAÑAS -->
+    <link href="/libs/allinone_banner/allinone_thumbnailsBanner.css" rel="stylesheet" type="text/css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
+    <script src="/libs/allinone_banner/jquery.ui.touch-punch.min.js"></script>
+    <script src="/libs/allinone_banner/jquery.mousewheel.min.js"></script>
+    <script src="/libs/allinone_banner/allinone_thumbnailsBanner.js"></script>
+    <script src="/libs/allinone_banner/reflection.js" type="text/javascript"></script>
+    <!--[if IE]><script src="/libs/allinone_banner/excanvas.compiled.js" type="text/javascript"></script><![endif]-->
+    <script>
+    var jCampEsp=jQuery.noConflict();
+    jCampEsp(document).ready(function(){
+        jCampEsp('#nw-campania-esp .nws-contenido div').allinone_thumbnailsBanner({
+            skin: 'cool',
+            numberOfThumbsPerScreen:2,
+            width: 350,
+            height: 300,
+            thumbsWrapperMarginTop:0
+        });
     });
-});
-</script>
-
+    </script>
+<?php } ?>
 
 <!-- GOOGLE ANALYTICS -->
 <script type="text/javascript">
