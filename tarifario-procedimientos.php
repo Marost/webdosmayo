@@ -33,10 +33,10 @@ $params['sort']                     = $sort;
 $params['page']                     = $page;
 $params['total_items']              = $total_items;
 
-$params['header']                   = 'Descripcion,Precio';
+$params['header']                   = 'Descripcion,Precio (S/.)';
 $params['width']                    = '600,100';
 $params['search_html']              = '<span id="#ID#_search_value">Buscar...</span><a id="#ID#_advanced_search" href="javascript: ctShowAdvancedSearch(\'#ID#\');" title="Advanced Search"><img src="/libs/creative_table/images/advanced_search.png" /></a><div id="#ID#_loader"></div>';
-$params['items_per_page_init']      = '10,20,50,100';
+$params['items_per_page_init']      = '30,60,120,150';
 
 $ct->table($params);
 $ct->pager = getCreativePagerLite('ct',$page,$ct->total_items,$ct->items_per_page);
