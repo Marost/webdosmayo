@@ -1,3 +1,14 @@
+<?php
+
+/*POPUP*/
+$rst_w_popup=mysql_query("SELECT * FROM DM_popup ORDER BY fecha_publicacion DESC LIMIT 1;", $conexion);
+$fila_popup=mysql_fetch_array($rst_w_popup);
+/*POPUP - VARIABLES*/
+$w_popup_titulo=$fila_popup["titulo"];
+$w_popup_imagen=$fila_popup["imagen"];
+$w_popup_imagen_carpeta=$fila_popup["imagen_carpeta"];
+
+?>
 <div id="popup-escribanos" class="popup">
     
     <a id="popup-esc-cerrar" href="javascript:;">Cerrar</a>
@@ -90,7 +101,7 @@
 <div id="popUpDiv">
     <div id="capaPng">
         <div>
-            <img src="/imagenes/upload/popup.jpg" width="800" height="599">
+            <img src="/imagenes/upload/<?php echo $w_popup_imagen_carpeta."".$w_popup_imagen; ?>" title="<?php echo $w_popup_titulo; ?>" alt="<?php echo $w_popup_titulo; ?>">
         </div>
         <a href="javascript:void(0);" title="Cerrar" id="cerrar">Cerrar</a>
     </div>
