@@ -30,6 +30,7 @@ jefform(document).ready(function(){
 	    		success: function() {
 					jefform('#progressbar').hide();
 					jefform('form').slideUp(1500).show;
+					jefform('.esc_mensaje').removeClass("ocultar");
 	    		},
 				error: function() {
 					jefform('#progressbar').hide();				

@@ -18,6 +18,10 @@ $w_popup_imagen_alto=$w_popup_imagen_dimensiones[1];
     
     <div class="popup-box">
       <h2>Escríbanos</h2>
+
+        <p class="esc_mensaje ocultar">Gracias por escribirnos.</p>
+        <p class="esc_mensaje ocultar">Nos comunicaremos contigo a la brevedad posible.</p>
+
         <form method="post" id="form1">
             <div class="container">
             
