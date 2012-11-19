@@ -29,7 +29,7 @@ jefform(document).ready(function(){
 	    		data: datos,
 	    		success: function() {
 					jefform('#progressbar').hide();
-					jefform('form').slideUp(1500).show;
+					jefform('form#form_escribanos').slideUp(1500).show;
 					jefform('.esc_mensaje').removeClass("ocultar");
 	    		},
 				error: function() {
