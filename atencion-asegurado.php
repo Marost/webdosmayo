@@ -3,6 +3,15 @@
 require_once("panel@hndm/conexion/conexion.php");
 require_once("panel@hndm/conexion/funciones.php");
 require_once("panel@hndm/conexion/funcion-paginacion.php");
+
+/*ATENCION AL ASEGURADO*/
+$rst_atencion=mysql_query("SELECT * FROM DM_atencion_asegurado ORDER BY fecha_publicacion DESC LIMIT 1;", $conexion);
+$fila_atencion=mysql_fetch_array($rst_atencion);
+
+/*VARIABLES*/
+$atencion_titulo=$fila_atencion["titulo"];
+$atencion_contenido=$fila_atencion["contenido"];
+
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -43,30 +52,7 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
 
                             <div class="contenido">
 
-                                <p style="text-align:center;"><img src="imagenes/upload/atencion-asegurado.jpg"></p>
-
-                                <p><strong>&iquest;C&Oacute;MO&nbsp; ME AFILIO AL SEGURO INTEGRAL DE SALUD- SIS?</strong></p>
-                                <ol>
-                                    <li>
-                                        El interesado solicita la afiliaci&oacute;n en el establecimiento de salud m&aacute;s cercano a su domicilio.</li>
-                                    <li>
-                                        El responsable de la afiliaci&oacute;n brinda informaci&oacute;n sobre la cobertura y beneficios al solicitante.
-                                        <ul style="">
-                                            <li>
-                                                Solicita el DNI y/o el CE, para iniciar el proceso de afiliaci&oacute;n al o los interesados.</li>
-                                            <li>
-                                                Consulta el enlace del SISFOH, ubicado en el modulo de afiliaci&oacute;n de la p&aacute;gina web del SIASIS.</li>
-                                            <li>
-                                                Verifica las condiciones para la afiliaci&oacute;n al seguro SUBSIDIADO del SIS:</li>
-                                        </ul>
-                                        <ol style="margin-left: 40px;">
-                                            <li>
-                                                Elegibilidad en el SISFOH</li>
-                                            <li>
-                                                No contar con otro seguro de salud (ESSALUD u otro seguro de salud).</li>
-                                        </ol>
-                                    </li>
-                                </ol>
+                                <?php echo $atencion_contenido; ?>
 
                             </div>
 

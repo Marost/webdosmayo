@@ -342,6 +342,8 @@ RewriteRule ^construccion$              /construccion.php
 RewriteRule ^tarifario/medicamentos$    /tarifario-medicamentos.php
 RewriteRule ^tarifario/procedimientos$  /tarifario-procedimientos.php
 RewriteRule ^historia$                  /historia.php
+RewriteRule ^atencion-asegurado$        /atencion-asegurado.php
+RewriteRule ^cas$                       /cas.php
 
 # ----------------------------------------------------------------------
 # Suppress or force the "www." at the beginning of URLs
