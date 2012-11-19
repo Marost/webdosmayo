@@ -28,7 +28,7 @@ $espec_url=$fila_especialidades_wg["url"];
                         <span class="icon">&nbsp;</span></a>
                         <ul>
                             <li><a href="directorio.php">Directorio</a></li>
-                            <li><a href="/notas/historia.php">Historia</a></li>
+                            <li><a href="historia">Historia</a></li>
                             <li><a href="informacion-institucional.php">Información Institucional</a></li>
                             <li><a href="/cat/nuestras-oficinas">Nuestras Oficinas</a></li>
                             <li><a href="normatividad.php">Normatividad</a></li>
