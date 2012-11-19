@@ -300,15 +300,14 @@ jCampEsp(document).ready(function(){
 <script>
     var jHist = jQuery.noConflict();
     jHist(document).ready(function(){
-        jHist("#historia").addClass("active");
         jHist.post("historia-datos.php", {tipo: 1},
         function(data){
             jHist("#tarifario_contenido").html(data);
         });
         
-        jHist("#tarifario_cabecera ul li a").click(function(){
-            jHist("#tarifario_cabecera ul li a").removeClass("active");
-            jHist(this).addClass("active");
+        jHist("#tarifario_cabecera ul li").click(function(){
+            jHist("#tarifario_cabecera ul li").removeClass("selected");
+            jHist(this).addClass("selected");
             var tipo = jHist(this).attr("rel");
             jHist.post("historia-datos.php", {tipo: tipo},
             function(data){

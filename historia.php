@@ -21,7 +21,7 @@ $daniel_carrion=seleccionTabla(3, "id", "DM_historia", $conexion);
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Tarifario</title>
+        <title>Historia</title>
 
         <?php require_once("w-header-scripts.php"); ?>
 
@@ -51,9 +51,9 @@ $daniel_carrion=seleccionTabla(3, "id", "DM_historia", $conexion);
                                 <div id="tarifario_cabecera">
                                   <ul>
                                     
-                                    <li class="selected"><a id="historia" rel="1" href="javascript:;"><?php echo $historia["titulo"]; ?></a></li>
-                                    <li><a id="quienes_somos" rel="2" href="javascript:;"><?php echo $quienes_somos["titulo"]; ?></a></li>
-                                    <li><a id="daniel_carrion" rel="3" href="javascript:;"><?php echo $daniel_carrion["titulo"]; ?></a></li>
+                                    <li id="historia" class="selected"><a rel="1" href="javascript:;"><?php echo $historia["titulo"]; ?></a></li>
+                                    <li id="quienes_somos"><a rel="2" href="javascript:;"><?php echo $quienes_somos["titulo"]; ?></a></li>
+                                    <li id="daniel_carrion"><a rel="3" href="javascript:;"><?php echo $daniel_carrion["titulo"]; ?></a></li>
                                     
                                   </ul>
                                 </div>
