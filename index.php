@@ -322,7 +322,7 @@ $alianzas_url_final=$alianzas_categoria["url"]."/".$alianzas_id."-".$alianzas_ur
 
                                 <article class="nws-contenido">
 
-                                    <iframe width="370" height="150" src="http://www.youtube.com/embed/B4_QQQCInFg?wmode=transparent&autohide=1&egm=0&hd=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=0&showsearch=0&theme=light" frameborder="0" allowfullscreen></iframe>
+                                    <iframe width="370" height="150" src="http://www.youtube.com/embed/BEMv8j2wdQw?wmode=transparent&autohide=1&egm=0&hd=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=0&showsearch=0&theme=light" frameborder="0" allowfullscreen></iframe>
                                     <a href="construccion">Más...</a>
                                     
                                 </article>
