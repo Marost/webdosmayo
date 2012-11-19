@@ -7,7 +7,10 @@ $fila_popup=mysql_fetch_array($rst_w_popup);
 $w_popup_titulo=$fila_popup["titulo"];
 $w_popup_imagen=$fila_popup["imagen"];
 $w_popup_imagen_carpeta=$fila_popup["imagen_carpeta"];
-
+$w_popup_imagen_url=$web."imagenes/upload/".$w_popup_imagen_carpeta."".$w_popup_imagen;
+$w_popup_imagen_dimensiones=getimagesize($w_popup_imagen_url);
+$w_popup_imagen_ancho=$w_popup_imagen_dimensiones[0];
+$w_popup_imagen_alto=$w_popup_imagen_dimensiones[1];
 ?>
 <div id="popup-escribanos" class="popup">
     
@@ -101,7 +104,9 @@ $w_popup_imagen_carpeta=$fila_popup["imagen_carpeta"];
 <div id="popUpDiv">
     <div id="capaPng">
         <div>
-            <img src="/imagenes/upload/<?php echo $w_popup_imagen_carpeta."".$w_popup_imagen; ?>" title="<?php echo $w_popup_titulo; ?>" alt="<?php echo $w_popup_titulo; ?>">
+            <img src="/imagenes/upload/<?php echo $w_popup_imagen_carpeta."".$w_popup_imagen; ?>" 
+            title="<?php echo $w_popup_titulo; ?>" alt="<?php echo $w_popup_titulo; ?>"
+            width="<?php echo $w_popup_imagen_ancho; ?>" height="<?php echo $w_popup_imagen_alto; ?>">
         </div>
         <a href="javascript:void(0);" title="Cerrar" id="cerrar">Cerrar</a>
     </div>
