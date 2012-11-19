@@ -23,6 +23,8 @@ $num_noticia_slide=mysql_num_rows($rst_noticia_slide);
     <?php echo $noticia_contenido; ?>
 </div>
 
+<?php if($num_noticia_slide>0){ ?>
+
 <!-- SLIDE NOTICIA -->
 <link href="/libs/allinone_banner/allinone_thumbnailsBanner.css" rel="stylesheet" type="text/css">
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
@@ -45,7 +47,6 @@ jNotSld(document).ready(function(){
 });
 </script>
 
-<?php if($num_noticia_slide>0){ ?>
 <div class="historia_slide">
 
     <div style="display:none;">
