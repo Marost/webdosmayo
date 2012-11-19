@@ -111,7 +111,7 @@ $rst_cas=mysql_query("SELECT * FROM DM_cas ORDER BY fecha_publicacion DESC", $co
                                                                     class="zip" 
                                                                 <?php } ?>
                                                             >
-                                                            </span><?php echo $docs_titulo; ?></a>
+                                                            </span><p><?php echo $docs_titulo; ?></p></a>
 
                                                         </li>
                                                     <?php } ?>
