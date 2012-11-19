@@ -27,11 +27,11 @@ $espec_url=$fila_especialidades_wg["url"];
                     <li><a href="#">Institucional
                         <span class="icon">&nbsp;</span></a>
                         <ul>
-                            <li><a href="directorio.php">Directorio</a></li>
+                            <li><a href="directorio">Directorio</a></li>
                             <li><a href="historia">Historia</a></li>
-                            <li><a href="informacion-institucional.php">Información Institucional</a></li>
-                            <li><a href="/cat/nuestras-oficinas">Nuestras Oficinas</a></li>
-                            <li><a href="normatividad.php">Normatividad</a></li>
+                            <li><a href="informacion-institucional">Información Institucional</a></li>
+                            <li><a href="cat/nuestras-oficinas">Nuestras Oficinas</a></li>
+                            <li><a href="construccion">Normatividad</a></li>
                             <li><a href="javascript:;" target="_blank" id="enl-intranet">Intranet</a></li>
                         </ul>
                     </li>
@@ -41,8 +41,8 @@ $espec_url=$fila_especialidades_wg["url"];
                             <li><a href="#">Información Epidemiológica</a>
                                 <span class="icon">&nbsp;</span>
                                 <div class="accordion">
-                                    <a href="info-epidemiologica-ss.php">Sala Situacional</a>
-                                    <a href="info-epidemiologica-ep.php">Boletin Epidemiologico</a>
+                                    <a href="sala-situacional">Sala Situacional</a>
+                                    <a href="boletin-epidemiologico">Boletin Epidemiologico</a>
                                 </div>
                             </li>
                         </ul>
