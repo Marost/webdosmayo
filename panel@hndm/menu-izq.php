@@ -39,6 +39,9 @@ jmnpr(document).ready(function(){
         <a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/noticias/apoyo-diagnostico/listar.php">
           Apoyo al Diagnóstico</a></li>
       <li>
+        <a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/noticias/atencion-asegurado/listar.php">
+          Atención al Asegurado</a></li>
+      <li>
         <a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/noticias/capacitacion/listar.php">
           Capacitación</a></li>
       <li>
