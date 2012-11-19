@@ -32,9 +32,9 @@ $w_popup_imagen_alto=$w_popup_imagen_dimensiones[1];
                 </fieldset>
 
                 <fieldset>
-                    <label><input type="radio" name="opcion-escribanos" value="comentarios">Comentarios</label>
-                    <label><input type="radio" name="opcion-escribanos" value="quejas">Quejas</label>
-                    <label><input type="radio" name="opcion-escribanos" value="sugerencias">Sugerencias</label>
+                    <label><input type="radio" class="radio" name="opcion-escribanos" value="comentarios">Comentarios</label>
+                    <label><input type="radio" class="radio" name="opcion-escribanos" value="quejas">Quejas</label>
+                    <label><input type="radio" class="radio" name="opcion-escribanos" value="sugerencias">Sugerencias</label>
                 </fieldset>
                 
                 <fieldset>
@@ -43,6 +43,7 @@ $w_popup_imagen_alto=$w_popup_imagen_dimensiones[1];
                 </fieldset>
             
                   <button id="btn-escribanos" class="btn-custom btn_large">Enviar &raquo;</button>
+                  <img src="imagenes/progressbar.gif" alt="Progreso" id="progressbar" class="ocultar">
                   
             </div>
         </form>                                                    
