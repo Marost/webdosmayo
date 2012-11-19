@@ -88,31 +88,30 @@ $rst_cas=mysql_query("SELECT * FROM DM_cas ORDER BY fecha_publicacion DESC", $co
                                                     ?>
                                                         <li>
 
-                                                            <a 
-                                                            
-                                                            <?php if($docs_documento_tipo=="doc" or $docs_documento_tipo=="docx"){ ?>
-                                                                class="word48"     
-                                                            <?php }elseif($docs_documento_tipo=="xls" or $docs_documento_tipo=="xlsx"){ ?>
-                                                                class="excel48" 
-                                                            <?php }elseif($docs_documento_tipo=="ppt" or $docs_documento_tipo=="pptx" or $docs_documento_tipo=="pps" or $docs_documento_tipo=="ppsx"){ ?>
-                                                                class="pwpt48" 
-                                                            <?php }elseif($docs_documento_tipo=="pdf"){ ?>
-                                                                class="pdf48" 
-                                                            <?php }elseif($docs_documento_tipo=="gif"){ ?>
-                                                                class="gif48" 
-                                                            <?php }elseif($docs_documento_tipo=="png"){ ?>
-                                                                class="png48" 
-                                                            <?php }elseif($docs_documento_tipo=="bmp"){ ?>
-                                                                class="bmp48" 
-                                                            <?php }elseif($docs_documento_tipo=="jpg" or $docs_documento_tipo=="jpeg"){ ?>
-                                                                class="jpg48" 
-                                                            <?php }elseif($docs_documento_tipo=="zip" or $docs_documento_tipo=="rar"){ ?>
-                                                                class="zip48" 
-                                                            <?php } ?>
-
-                                                            title="<?php echo $docs_titulo; ?>" target="_blank" 
+                                                            <a title="<?php echo $docs_titulo; ?>" target="_blank" 
                                                             href="/documentos/<?php echo $cas_carpetas."".$docs_documento; ?>">
-                                                            <?php echo $docs_titulo; ?></a>
+                                                            <span
+                                                                <?php if($docs_documento_tipo=="doc" or $docs_documento_tipo=="docx"){ ?>
+                                                                    class="word"     
+                                                                <?php }elseif($docs_documento_tipo=="xls" or $docs_documento_tipo=="xlsx"){ ?>
+                                                                    class="excel" 
+                                                                <?php }elseif($docs_documento_tipo=="ppt" or $docs_documento_tipo=="pptx" or $docs_documento_tipo=="pps" or $docs_documento_tipo=="ppsx"){ ?>
+                                                                    class="pwpt" 
+                                                                <?php }elseif($docs_documento_tipo=="pdf"){ ?>
+                                                                    class="pdf" 
+                                                                <?php }elseif($docs_documento_tipo=="gif"){ ?>
+                                                                    class="gif" 
+                                                                <?php }elseif($docs_documento_tipo=="png"){ ?>
+                                                                    class="png" 
+                                                                <?php }elseif($docs_documento_tipo=="bmp"){ ?>
+                                                                    class="bmp" 
+                                                                <?php }elseif($docs_documento_tipo=="jpg" or $docs_documento_tipo=="jpeg"){ ?>
+                                                                    class="jpg" 
+                                                                <?php }elseif($docs_documento_tipo=="zip" or $docs_documento_tipo=="rar"){ ?>
+                                                                    class="zip" 
+                                                                <?php } ?>
+                                                            >
+                                                            </span><?php echo $docs_titulo; ?></a>
 
                                                         </li>
                                                     <?php } ?>
