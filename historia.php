@@ -49,13 +49,17 @@ $daniel_carrion=seleccionTabla(3, "id", "DM_historia", $conexion);
                             <div class="contenido">
                                 
                                 <div id="tarifario_cabecera">
+                                  
                                   <ul>
-                                    
                                     <li rel="1" id="historia" class="selected"><a href="javascript:;"><?php echo $historia["titulo"]; ?></a></li>
                                     <li rel="2" id="quienes_somos"><a href="javascript:;"><?php echo $quienes_somos["titulo"]; ?></a></li>
                                     <li rel="3" id="daniel_carrion"><a href="javascript:;"><?php echo $daniel_carrion["titulo"]; ?></a></li>
-                                    
                                   </ul>
+
+                                  <div>
+                                        <img  id="progressbar" src="/imagenes/progressbar.gif" width="220" height="19" class="ocultar">
+                                  </div>
+
                                 </div>
 
                                 <div id="tarifario_contenido"></div>

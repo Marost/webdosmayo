@@ -302,16 +302,20 @@ jCampEsp(document).ready(function(){
     jHist(document).ready(function(){
         jHist.post("historia-datos.php", {tipo: 1},
         function(data){
+            jHist("#progressbar").removeClass("ocultar");
             jHist("#tarifario_contenido").html(data);
+            jHist("#progressbar").addClass("ocultar");
         });
         
         jHist("#tarifario_cabecera ul li").click(function(){
+            jHist("#progressbar").removeClass("ocultar");
             jHist("#tarifario_cabecera ul li").removeClass("selected");
             jHist(this).addClass("selected");
             var tipo = jHist(this).attr("rel");
             jHist.post("historia-datos.php", {tipo: tipo},
             function(data){
                 jHist("#tarifario_contenido").html(data);
+                jHist("#progressbar").addClass("ocultar");
             });
         })
         
