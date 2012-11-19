@@ -51,9 +51,9 @@ $daniel_carrion=seleccionTabla(3, "id", "DM_historia", $conexion);
                                 <div id="tarifario_cabecera">
                                   <ul>
                                     
-                                    <li id="historia" class="selected"><a rel="1" href="javascript:;"><?php echo $historia["titulo"]; ?></a></li>
-                                    <li id="quienes_somos"><a rel="2" href="javascript:;"><?php echo $quienes_somos["titulo"]; ?></a></li>
-                                    <li id="daniel_carrion"><a rel="3" href="javascript:;"><?php echo $daniel_carrion["titulo"]; ?></a></li>
+                                    <li rel="1" id="historia" class="selected"><a href="javascript:;"><?php echo $historia["titulo"]; ?></a></li>
+                                    <li rel="2" id="quienes_somos"><a href="javascript:;"><?php echo $quienes_somos["titulo"]; ?></a></li>
+                                    <li rel="3" id="daniel_carrion"><a href="javascript:;"><?php echo $daniel_carrion["titulo"]; ?></a></li>
                                     
                                   </ul>
                                 </div>
