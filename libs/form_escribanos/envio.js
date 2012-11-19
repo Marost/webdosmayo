@@ -5,11 +5,8 @@ jefform(document).ready(function(){
 		var nombre = jefform("#esc_nombre").val();
 			email = jefform("#esc_email").val();
 			mensaje = jefform("#esc_mensaje").val();
+			mensaje_tipo = jefform(".radio:checked").val();
 			validacion_email = /^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$/;
-		
-			jefform("input.radio").click(function() { 
-				var mensaje_tipo=jefform(":checked").val();
-			});
 
 		if (nombre == "") {
 		    jefform("#esc_nombre").focus();
