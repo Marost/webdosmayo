@@ -57,8 +57,11 @@ jmnpr(document).ready(function(){
         <a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/noticias/nuestras-oficinas/listar.php">
           Nuestras Oficinas</a></li>
       <li>
+        <a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/popup/noticias/listar.php">
+          POPUP</a></li>
+      <li>
       	<a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/noticias/proezas-medicas/listar.php">
-        	Proezas Médicas</a></li>      
+        	Proezas Médicas</a></li>
       <li>
         <a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/noticias/reconocimientos-institucionales/listar.php">
           Reconocimientos Institucionales</a></li>
