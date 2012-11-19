@@ -35,7 +35,7 @@ $num_noticia_slide=mysql_num_rows($rst_noticia_slide);
 <script>
 var jNotSld=jQuery.noConflict();
 jNotSld(document).ready(function(){
-    jNotSld('.imagen_slide div').allinone_thumbnailsBanner({
+    jNotSld('.historia_slide div').allinone_thumbnailsBanner({
         skin: 'cool',
         numberOfThumbsPerScreen:4,
         width: 620,
@@ -46,7 +46,7 @@ jNotSld(document).ready(function(){
 </script>
 
 <?php if($num_noticia_slide>0){ ?>
-<div class="imagen_slide">
+<div class="historia_slide">
 
     <div style="display:none;">
     
