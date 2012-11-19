@@ -8,7 +8,7 @@ jefform(document).ready(function(){
 			validacion_email = /^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$/;
 		
 			jefform("input.radio").click(function() { 
-				mensaje_tipo=jefform(":checked").val();
+				var mensaje_tipo=jefform(":checked").val();
 			});
 
 		if (nombre == "") {
@@ -32,13 +32,10 @@ jefform(document).ready(function(){
 	    		data: datos,
 	    		success: function() {
 					jefform('#progressbar').hide();
-					jefform('.contac_msj').slideUp(1500).show();
 					jefform('form').slideUp(1500).show;
-					jefform('#msj_enviado').slideDown(2000).show();
 	    		},
 				error: function() {
-					jefform('#progressbar').hide();
-					jefform('#msj_enviado').slideDown(1000).show();				
+					jefform('#progressbar').hide();				
 				}
 	   		});
 	 		return false;	
