@@ -293,3 +293,29 @@ jCampEsp(document).ready(function(){
     <script src="/libs/creative_table/js/jquery-1.4.2.min.js"></script>
     <script src="/libs/creative_table/js/creative_table_ajax-1.3.js"></script>
 <?php } ?>
+
+<?php if($script_historia==true){ ?>
+<!-- HISTORIA -->
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+    var jHist = jQuery.noConflict();
+    jHist(document).ready(function(){
+        jHist("#historia").addClass("active");
+        jHist.post("historia-datos.php", {tipo: 1},
+        function(data){
+            jHist("#tarifario_contenido").html(data);
+        });
+        
+        jHist("#tarifario_cabecera ul li a").click(function(){
+            jHist("#tarifario_cabecera ul li a").removeClass("active");
+            jHist(this).addClass("active");
+            var tipo = jHist(this).attr("rel");
+            jHist.post("historia-datos.php", {tipo: tipo},
+            function(data){
+                jHist("#tarifario_contenido").html(data);
+            });
+        })
+        
+    });
+</script>
+<?php } ?>
