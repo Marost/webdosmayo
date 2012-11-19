@@ -103,7 +103,6 @@ jMarq(document).ready(function(){
 
 <!-- POPUP ESCRIBANOS -->
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script src="/libs/form_escribanos/envio.js"></script>
 <script src="/libs/blockui/jquery.blockUI.js"></script>
 <script >
 var jcladd = jQuery.noConflict();
@@ -119,6 +118,10 @@ jcladd(document).ready(function() {
      
 });
 </script>
+
+<!-- POPUP ESCRIBANOS - ENVIO -->
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="/libs/form_escribanos/envio.js"></script>
 
 <!-- POPUP MAPA -->
 <script  src="http://code.jquery.com/jquery-latest.min.js"></script>

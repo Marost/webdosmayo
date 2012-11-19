@@ -21,9 +21,6 @@ jefform(document).ready(function(){
 		    jefform("#esc_mensaje").focus();
 		    return false;
 		}else {
-
-			if (comentarios) {};
-
 			jefform('#progressbar').removeClass('ocultar');
 			var datos = 'nombre='+ nombre + 
 						'&email='+ email + 
