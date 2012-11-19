@@ -102,8 +102,9 @@ jMarq(document).ready(function(){
 <script src="/js/marquee-apoyo-diagnostico.js"></script>
 
 <!-- POPUP ESCRIBANOS -->
-<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script  src="/libs/blockui/jquery.blockUI.js"></script>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="/lbs/form_escribanos/envio.js"></script>
+<script src="/libs/blockui/jquery.blockUI.js"></script>
 <script >
 var jcladd = jQuery.noConflict();
 jcladd(document).ready(function() { 
