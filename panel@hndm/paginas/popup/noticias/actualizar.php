@@ -30,7 +30,7 @@ if($_POST['flash_uploader_0_tmpname']==""){
 mysql_query("UPDATE ".$tabla_suf."_popup SET titulo='".htmlspecialchars($titulo)."', 
 imagen='$imagen', 
 dato_usuario='$usuario_user', 
-carpeta_imagen='$carpeta_imagen',
+imagen_carpeta='$carpeta_imagen',
 fecha_publicacion='$fecha_pub' WHERE id=$idnoticia;", $conexion);
 	
 if (mysql_errno()!=0){
