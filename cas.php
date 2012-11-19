@@ -63,6 +63,8 @@ $rst_cas=mysql_query("SELECT * FROM DM_cas ORDER BY fecha_publicacion DESC", $co
                                             $cas_tipo=$fila_cas["tipo"];
                                             $cas_carpetas=$fila_cas["carpeta_documentos"];
                                             $cas_observaciones=$fila_cas["observaciones"];
+                                            $cas_fecha_total=explode(" ", $fila_cas["fecha_publicacion"]);
+                                            $cas_fecha=explode("-", $cas_fecha_total);
 
                                             /*DOCUMENTOS*/
                                             $rst_cas_docs=mysql_query("SELECT * FROM DM_cas_documentos WHERE cas=$cas_id ORDER BY orden ASC;", $conexion);
@@ -116,13 +118,16 @@ $rst_cas=mysql_query("SELECT * FROM DM_cas ORDER BY fecha_publicacion DESC", $co
                                                     <?php } ?>
                                                 </ul>
                                             </td>
-                                        </tr>
-                                  
+                                        </tr>                                  
                                         <tr>
                                             <td class="dato_cabecera tdcab-inf">Observaciones</td>
                                             <td class="dato_contenido">
                                                 <?php echo $cas_observaciones; ?>
                                             </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="dato_cabecera">Fecha de Publicacion</td>
+                                            <td class="dato_contenido"><?php echo nombreFecha($cas_fecha[0],$cas_fecha[1],$cas_fecha[2]); ?></td>
                                         </tr>
                                         <tr><td></td><td></td></tr>
                                         <?php } ?>
