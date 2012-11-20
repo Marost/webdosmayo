@@ -326,3 +326,7 @@ jCampEsp(document).ready(function(){
     });
 </script>
 <?php } ?>
+
+<!-- LIBRO DE RECLAMACIONES -->
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="/libs/form_reclamo/envio.js"></script>

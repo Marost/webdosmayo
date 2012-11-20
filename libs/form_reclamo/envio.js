@@ -1,4 +1,4 @@
-var jefformRecRec = jQuery.noConflict();
+var jefformRec = jQuery.noConflict();
 jefformRec(document).ready(function(){
 	jefformRec("#reclamo_enviar").click(function() {
 		
@@ -36,24 +36,24 @@ jefformRec(document).ready(function(){
 		    return false;
 		}else {
 			jefformRec('#progressbar').removeClass('ocultar');
-			var datos = "rec_nombre="+rec_nombre+
-						"&rec_apellidos="+rec_apellidos+
-						"&rec_dni="+rec_dni+
-						"&rec_edad="+rec_edad+
-						"&rec_ocupacion="+rec_ocupacion+
-						"&rec_email="+rec_email+
-						"&rec_telmovil="+rec_telmovil+
-						"&rec_telfijo="+rec_telfijo+
-						"&rec_direccion="+rec_direccion+
-						"&rec_prov_nombre="+rec_prov_nombre+
-						"&rec_prov_apellidos="+rec_prov_apellidos+
-						"&rec_prov_dni="+rec_prov_dni+
-						"&rec_prov_email="+rec_prov_email+
-						"&rec_prov_telefono="+rec_prov_telefono+
-						"&rec_prov_direccion="+rec_prov_direccion+
-						"&rec_fecha="+rec_fecha+
-						"&rec_caso="+rec_caso+
-						"&rec_solicita="+rec_solicita+
+			var datos = 'rec_nombre='+ rec_nombre +
+						'&rec_apellidos='+ rec_apellidos +
+						'&rec_dni='+ rec_dni +
+						'&rec_edad='+ rec_edad +
+						'&rec_ocupacion='+ rec_ocupacion +
+						'&rec_email='+ rec_email +
+						'&rec_telmovil='+ rec_telmovil +
+						'&rec_telfijo='+ rec_telfijo +
+						'&rec_direccion='+ rec_direccion +
+						'&rec_prov_nombre='+ rec_prov_nombre +
+						'&rec_prov_apellidos='+ rec_prov_apellidos +
+						'&rec_prov_dni='+ rec_prov_dni +
+						'&rec_prov_email='+ rec_prov_email +
+						'&rec_prov_telefono='+ rec_prov_telefono +
+						'&rec_prov_direccion='+ rec_prov_direccion +
+						'&rec_fecha='+ rec_fecha +
+						'&rec_caso='+ rec_caso +
+						'&rec_solicita='+ rec_solicita +
 			jefformRec.ajax({
 	    		type: "POST",
 	    		url: "libs/form_reclamo/envio.php",

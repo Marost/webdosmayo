@@ -1,5 +1,5 @@
 <?php
-include("../../panel@hndm/conexion/conexion.php");
+/*include("../../panel@hndm/conexion/conexion.php");*/
 
 //VARIABLES - DATOS DE LA ASOCIACIÓN
 $rec_nombre=$_POST["rec_nombre"];
