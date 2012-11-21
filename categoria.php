@@ -21,7 +21,7 @@ $rst_noticias=mysql_query("SELECT * FROM DM_noticia WHERE categoria=$categoria_i
 
 ################################################################
 //PAGINACION DE NOTICIAS
-require("class_pagination.php");
+require("libs/pagination/class_pagination.php");
 
 //INICIO DE PAGINACION
 $page = (isset($_GET['page'])) ? intval($_GET['page']) : 1;
