@@ -101,6 +101,7 @@ $query  = mysql_query("SELECT * FROM DM_noticia WHERE categoria=$categoria_id LI
                                 
                                     <article class="categoria_noticias">
 
+                                        <?php if($noticiacat_imagen<>""){ ?>
                                         <div class="imagen">
                                             <img src="imagenes/upload/<?php echo $noticiacat_imagen_carpeta."".$noticiacat_imagen; ?>">
                                         </div>
@@ -109,7 +110,14 @@ $query  = mysql_query("SELECT * FROM DM_noticia WHERE categoria=$categoria_id LI
                                             <h3><a href="<?php echo $url_categoria."/".$noticiacat_id."-".$noticiacat_url; ?>"><?php echo $noticiacat_titulo; ?></a></h3>
                                             <p><?php echo $noticiacat_contenido; ?></p>
                                         </div>
+                                        <?php }else{ ?>
+                                        
+                                        <div class="datos an100">
+                                            <h3><a href="<?php echo $url_categoria."/".$noticiacat_id."-".$noticiacat_url; ?>"><?php echo $noticiacat_titulo; ?></a></h3>
+                                            <p><?php echo $noticiacat_contenido; ?></p>
+                                        </div>
 
+                                        <?php } ?>
 
                                     </article>
                                 
