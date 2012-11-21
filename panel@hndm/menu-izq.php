@@ -109,6 +109,17 @@ jmnpr(document).ready(function(){
           Procedimientos</a></li>
     </ul>
   </dd>
+  <dt class="items"><b>Directorio</b></dt>
+  <dd>
+    <ul class="items">
+      <li>
+        <a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/directorio/medicos/listar.php">
+          Médicos</a></li>
+      <li>
+        <a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/directorio/funcionarios/listar.php">
+          Otros Funcionarios</a></li>
+    </ul>
+  </dd>
   <dt class="items"><b>Galeria</b></dt>
   <dd>
     <ul class="items">
