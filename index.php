@@ -9,7 +9,6 @@ $script_popup=true;
 $script_slide_campana=true;
 $script_tabs=true;
 $script_slnot_prin=true;
-$script_campana=true;
 
 /*-----------------------*/
 /*EQUIPOS DE ULTIMA TECNOLOGIA*/
@@ -78,6 +77,32 @@ $alianzas_url_final=$alianzas_categoria["url"]."/".$alianzas_id."-".$alianzas_ur
         <meta name="description" content="">
 
         <?php require_once("w-header-scripts.php") ?>
+
+        <!-- SLIDER CAMPAÑAS -->
+        <link href="/libs/allinone_banner/allinone_thumbnailsBanner.css" rel="stylesheet" type="text/css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
+        <script src="/libs/allinone_banner/jquery.ui.touch-punch.min.js"></script>
+        <script src="/libs/allinone_banner/jquery.mousewheel.min.js"></script>
+        <script src="/libs/allinone_banner/allinone_thumbnailsBanner.js"></script>
+        <script src="/libs/allinone_banner/reflection.js" ></script>
+        <!--[if IE]><script src="/libs/allinone_banner/excanvas.compiled.js" ></script><![endif]-->
+        <script>
+        var jCampEsp=jQuery.noConflict();
+        jCampEsp(document).ready(function(){
+            jCampEsp('#nw-campania-esp .nws-contenido div').allinone_thumbnailsBanner({
+                skin: 'cool',
+                numberOfThumbsPerScreen:2,
+                width: 350,
+                height: 300,
+                thumbsWrapperMarginTop:0
+            });
+        });
+        </script>
+
+        <!-- POPUP PAGINA PRINCIPAL-->
+        <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script  src="/js/popup.js"></script>
 
     </head>
     <body>

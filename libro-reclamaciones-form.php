@@ -16,6 +16,10 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
         
         <?php require_once("w-header-scripts.php") ?>
 
+        <!-- LIBRO DE RECLAMACIONES -->
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="/libs/form_reclamo/envio.js"></script>
+
     </head>
     <body>
         <!--[if lt IE 7]>

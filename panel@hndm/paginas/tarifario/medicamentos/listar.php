@@ -130,7 +130,7 @@ if(confirm("¿Está seguro de borrar este registro?\n"+nombre)) {
                             </td>
                             <td width="15%"  align="center">
                             	<p><?php echo $fila["precio"] ?></p>
-                            </td>                            
+                            </td>
                             <td width="10%" align="center">
                             
                                 <a onclick="eliminarRegistro(<?php echo $fila["id"] ?>, '<?php echo $fila["titulo"] ?>');" href="javascript:;">
