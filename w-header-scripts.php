@@ -10,6 +10,21 @@
 <!-- MODERNIZR -->
 <script src="/js/vendor/modernizr-2.6.1.min.js"></script>
 
+<!-- GOOGLE ANALYTICS -->
+<script >
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-20229980-23']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
 <?php if($script_tabs==true){ ?>
 <!-- TABS -->
 <script src="http://code.jquery.com/jquery-latest.js"></script>
@@ -52,11 +67,11 @@ jSlider(document).ready(function() {
 <link rel="stylesheet" href="/libs/sherpa/styles/bar_nav.css" />
 <link rel="stylesheet" href="/libs/sherpa/styles/skins/theme_blue.css" />
 <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/themes/base/jquery-ui.css" />
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/jquery-ui.min.js"></script>
-<script type="text/javascript" src="/libs/sherpa/scripts/jquery.cookie.js"></script>
-<script type="text/javascript" src="/libs/sherpa/scripts/jquery.hoverIntent.minified.js"></script>
-<script type="text/javascript" src="/libs/sherpa/scripts/sherpa_ui.js"></script>
+<script  src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<script  src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/jquery-ui.min.js"></script>
+<script  src="/libs/sherpa/scripts/jquery.cookie.js"></script>
+<script  src="/libs/sherpa/scripts/jquery.hoverIntent.minified.js"></script>
+<script  src="/libs/sherpa/scripts/sherpa_ui.js"></script>
 
 <!-- TELEFONO EFECTO -->
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
@@ -180,6 +195,30 @@ jAcod(document).ready(function(){
 <script src="/libs/progressbar/progress.js"></script>
 <?php } ?>
 
+<?php if($script_campana==true){ ?>
+<!-- SLIDER CAMPAÑAS -->
+<link href="/libs/allinone_banner/allinone_thumbnailsBanner.css" rel="stylesheet" type="text/css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
+<script src="/libs/allinone_banner/jquery.ui.touch-punch.min.js"></script>
+<script src="/libs/allinone_banner/jquery.mousewheel.min.js"></script>
+<script src="/libs/allinone_banner/allinone_thumbnailsBanner.js"></script>
+<script src="/libs/allinone_banner/reflection.js" ></script>
+<!--[if IE]><script src="/libs/allinone_banner/excanvas.compiled.js" ></script><![endif]-->
+<script>
+var jCampEsp=jQuery.noConflict();
+jCampEsp(document).ready(function(){
+    jCampEsp('#nw-campania-esp .nws-contenido div').allinone_thumbnailsBanner({
+        skin: 'cool',
+        numberOfThumbsPerScreen:2,
+        width: 350,
+        height: 300,
+        thumbsWrapperMarginTop:0
+    });
+});
+</script>
+<?php } ?>
+
 <?php if($script_slide_noticia==true){ ?>
 <!-- SLIDE NOTICIA -->
 <link href="/libs/allinone_banner/allinone_thumbnailsBanner.css" rel="stylesheet" type="text/css">
@@ -188,8 +227,8 @@ jAcod(document).ready(function(){
 <script src="/libs/allinone_banner/jquery.ui.touch-punch.min.js"></script>
 <script src="/libs/allinone_banner/jquery.mousewheel.min.js"></script>
 <script src="/libs/allinone_banner/allinone_thumbnailsBanner.js"></script>
-<script src="/libs/allinone_banner/reflection.js" type="text/javascript"></script>
-<!--[if IE]><script src="/libs/allinone_banner/excanvas.compiled.js" type="text/javascript"></script><![endif]-->
+<script src="/libs/allinone_banner/reflection.js" ></script>
+<!--[if IE]><script src="/libs/allinone_banner/excanvas.compiled.js" ></script><![endif]-->
 <script>
 var jNotSld=jQuery.noConflict();
 jNotSld(document).ready(function(){
@@ -211,7 +250,7 @@ jNotSld(document).ready(function(){
 <script src="/libs/allinone_banner/jquery.ui.touch-punch.min.js"></script>
 <script src="/libs/allinone_banner/jquery.mousewheel.min.js"></script>
 <script src="/libs/allinone_banner/allinone_bannerRotator.js"></script>
-<!--[if IE]><script src="/libs/allinone_banner/excanvas.compiled.js" type="text/javascript"></script><![endif]-->
+<!--[if IE]><script src="/libs/allinone_banner/excanvas.compiled.js" ></script><![endif]-->
 <script>
 var jPatHist=jQuery.noConflict();
 jPatHist(document).ready(function(){
@@ -226,45 +265,6 @@ jPatHist(document).ready(function(){
         showCircleTimer: false
     });
 });
-</script>
-
-<?php if($script_campana==true){ ?>
-<!-- SLIDER CAMPAÑAS -->
-<link href="/libs/allinone_banner/allinone_thumbnailsBanner.css" rel="stylesheet" type="text/css">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
-<script src="/libs/allinone_banner/jquery.ui.touch-punch.min.js"></script>
-<script src="/libs/allinone_banner/jquery.mousewheel.min.js"></script>
-<script src="/libs/allinone_banner/allinone_thumbnailsBanner.js"></script>
-<script src="/libs/allinone_banner/reflection.js" type="text/javascript"></script>
-<!--[if IE]><script src="/libs/allinone_banner/excanvas.compiled.js" type="text/javascript"></script><![endif]-->
-<script>
-var jCampEsp=jQuery.noConflict();
-jCampEsp(document).ready(function(){
-    jCampEsp('#nw-campania-esp .nws-contenido div').allinone_thumbnailsBanner({
-        skin: 'cool',
-        numberOfThumbsPerScreen:2,
-        width: 350,
-        height: 300,
-        thumbsWrapperMarginTop:0
-    });
-});
-</script>
-<?php } ?>
-
-<!-- GOOGLE ANALYTICS -->
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-20229980-23']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
 </script>
 
 <?php if($script_tarifario==true){ ?>
