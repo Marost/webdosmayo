@@ -85,6 +85,7 @@ $alianzas_url_final=$alianzas_categoria["url"]."/".$alianzas_id."-".$alianzas_ur
         <script src="/libs/allinone_banner/jquery.ui.touch-punch.min.js"></script>
         <script src="/libs/allinone_banner/jquery.mousewheel.min.js"></script>
         <script src="/libs/allinone_banner/allinone_thumbnailsBanner.js"></script>
+        <script src="/libs/allinone_banner/reflection.js" type="text/javascript"></script>
         <!--[if IE]><script src="/libs/allinone_banner/excanvas.compiled.js" type="text/javascript"></script><![endif]-->
         <script>
         var jCampEsp=jQuery.noConflict();
