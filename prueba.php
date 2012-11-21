@@ -169,27 +169,9 @@ jIntran(document).ready(function() {
 });
 </script>
 
-<!-- ACORDEON -->
-<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css" />
-<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
-<script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>
-<script>
-var jAcod=jQuery.noConflict();
-jAcod(document).ready(function(){
-    jAcod(".nwn-lista").accordion({
-        heightStyle: "content"
-    });
-});
-</script>
-
 <!-- POPUP PAGINA PRINCIPAL-->
 <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script  src="/js/popup.js"></script>
-
-<!-- DIRECTORIO INTERNO -->
-<link rel="stylesheet" href="/libs/progressbar/ui.progress-bar.css">
-<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script src="/libs/progressbar/progress.js"></script>
 
 <!-- SLIDER CAMPAÑAS -->
 <link href="/libs/allinone_banner/allinone_thumbnailsBanner.css" rel="stylesheet" type="text/css">
@@ -212,29 +194,6 @@ jCampEsp(document).ready(function(){
     });
 });
 </script>
-
-<!-- SLIDE NOTICIA -->
-<link href="/libs/allinone_banner/allinone_thumbnailsBanner.css" rel="stylesheet" type="text/css">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
-<script src="/libs/allinone_banner/jquery.ui.touch-punch.min.js"></script>
-<script src="/libs/allinone_banner/jquery.mousewheel.min.js"></script>
-<script src="/libs/allinone_banner/allinone_thumbnailsBanner.js"></script>
-<script src="/libs/allinone_banner/reflection.js" ></script>
-<!--[if IE]><script src="/libs/allinone_banner/excanvas.compiled.js" ></script><![endif]-->
-<script>
-var jNotSld=jQuery.noConflict();
-jNotSld(document).ready(function(){
-    jNotSld('.imagen_slide div').allinone_thumbnailsBanner({
-        skin: 'cool',
-        numberOfThumbsPerScreen:4,
-        width: 620,
-        height: 360,
-        thumbsWrapperMarginTop:0
-    });
-});
-</script>
-
 
 <!-- SLIDER PATRIMONIO HISTORICO -->
 <link href="/libs/allinone_banner/allinone_bannerRotator.css" rel="stylesheet" type="text/css">
@@ -260,44 +219,12 @@ jPatHist(document).ready(function(){
 });
 </script>
 
-<!-- TARIFARIO TABLA -->
-<link rel="stylesheet" type="text/css" href="/libs/creative_table/css/creative.css">
-<script src="/libs/creative_table/js/jquery-1.4.2.min.js"></script>
-<script src="/libs/creative_table/js/creative_table_ajax-1.3.js"></script>
-
-<!-- HISTORIA -->
-<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script>
-    var jHist = jQuery.noConflict();
-    jHist(document).ready(function(){
-        jHist.post("historia-datos.php", {tipo: 1},
-        function(data){
-            jHist("#progressbar").removeClass("ocultar");
-            jHist("#tarifario_contenido").html(data);
-            jHist("#progressbar").addClass("ocultar");
-        });
-        
-        jHist("#tarifario_cabecera ul li").click(function(){
-            jHist("#progressbar").removeClass("ocultar");
-            jHist("#tarifario_cabecera ul li").removeClass("selected");
-            jHist(this).addClass("selected");
-            var tipo = jHist(this).attr("rel");
-            jHist.post("historia-datos.php", {tipo: tipo},
-            function(data){
-                jHist("#tarifario_contenido").html(data);
-                jHist("#progressbar").addClass("ocultar");
-            });
-        })
-        
-    });
-</script>
-
-<!-- LIBRO DE RECLAMACIONES -->
-<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script src="/libs/form_reclamo/envio.js"></script>
 </head>
 <body>
 <div id="nw-campania-esp">
+
+    <?php require_once("w-header.php") ?>
+
     <div class="nws-select">
         <h3>Campañas Especiales</h3>
     </div>
@@ -322,6 +249,8 @@ jPatHist(document).ready(function(){
         <a href="campanas.php">Más...</a>
 
     </div>
+
+    <?php require_once("w-sidebar.php") ?>
 
 </div>
 </body>
