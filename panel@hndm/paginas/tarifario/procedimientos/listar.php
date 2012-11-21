@@ -116,27 +116,28 @@ if(confirm("¿Está seguro de borrar este registro?\n"+nombre)) {
                       <table width="100%" align="center" cellpadding="5" cellspacing="0" id="cebreado-php">
                         <thead>
                           <tr class="titulo-campo">
-                            <th width="85%" height="22" align="left">Noticia</th>
-                            <th width="15%" height="22" align="center">acciones</th>
+                            <th width="75%" height="22" align="left">Noticia</th>
+                            <th width="15%" height="22" align="left">Precio</th>
+                            <th width="10%" height="22" align="center">Acciones</th>
                           </tr>
                         </thead>
                         <tbody>
                           <?php while ($fila=mysql_fetch_array($rst_query)){ ?>
                           <tr<?php echo alt($zebra); $zebra++; ?>>
-                            <td width="85%">
+                            <td width="75%">
                             	<p class="texto-azul12-Arial">
                                 <strong><?php echo $fila["titulo"] ?></strong></p>
                             </td>
                             <td width="15%" align="center">
+                              <p><?php echo $fila["precio"] ?></p>
+                            </td>
+                            <td width="10%" align="center">
                             
                                 <a onclick="eliminarRegistro(<?php echo $fila["id"] ?>, '<?php echo $fila["titulo"] ?>');" href="javascript:;">
                                     <img src="../../../images/eliminar_16.png" width="16" height="16" title="Eliminar registro" /></a>
                             
                            		<a href="form-modificar.php?id=<?php echo $fila["id"] ?>">
                                 	<img src="../../../images/editar_16.png" width="16" height="16" title="Modiciar registro" /></a>
-                            <?php //} ?>
-                                <a href="slide/listar.php?noticia=<?php echo $fila["id"] ?>">
-                                    <img src="../../../images/mult_32.png" width="16" height="16" title="Slider de fotos" /></a>
                                 </td>
                           </tr>
                           <?php } ?>

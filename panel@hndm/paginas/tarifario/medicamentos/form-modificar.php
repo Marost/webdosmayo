@@ -44,7 +44,7 @@ $fila_query=mysql_fetch_array($rst_query);
           	      </tr>
             	    <tr>
                     <td width="20%" height="30" align="right" ><p><strong>Precio:</strong></p></td>
-                    <td width="80%" height="30" align="left"><input name="precio" type="text" id="precio" size="50" /></td>
+                    <td width="80%" height="30" align="left"><input name="precio" type="text" id="precio" size="50" value="<?php echo $fila_query["precio"] ?>" /></td>
                   </tr>
             	    <tr>
             	      <td colspan="2" align="center">
