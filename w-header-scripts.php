@@ -46,31 +46,6 @@ jSlider(document).ready(function() {
 });
 </script>
 
-<?php if($script_slnot_prin==true){ ?>
-<!-- SLIDE NOTAS - PAGINA PRINCIPAL -->
-<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script src="/js/jquery.nivo.slider.pack.js"></script>
-<script>
-var jSlideNI=jQuery.noConflict();
-jSlideNI(document).ready(function() {
-    jSlideNI('.slider-bxslider').nivoSlider({
-        effect:'sliceUpDown',
-        slices:5,
-        animSpeed:500,
-        pauseTime:8000,
-        startSlide:0,
-        directionNav:false,
-        directionNavHide:false,
-        controlNav:true,
-        controlNavThumbs:false,
-        controlNavThumbsFromRel:false,
-        controlNavThumbsSearch: '.jpg',
-        controlNavThumbsReplace: '_thumb.jpg'
-    });
-});
-</script>
-<?php } ?>
-
 <!-- MENU -->
 <link rel="stylesheet" href="/libs/sherpa/styles/960_fluid.css" />
 <link rel="stylesheet" href="/libs/sherpa/styles/main.css" />
