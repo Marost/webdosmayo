@@ -5,7 +5,7 @@ require_once("panel@hndm/conexion/funciones.php");
 require_once("panel@hndm/conexion/funcion-paginacion.php");
 
 /*INFORMACION INSTITUCIONAL*/
-$rst_info_inst=mysql_query("SELECT * FROM DM_informacion_institucional ORDER BY fecha_publicacion DESC LIMIT 1;", $conexion);
+$rst_info_inst=mysql_query("SELECT * FROM DM_info_institucional ORDER BY fecha_publicacion DESC LIMIT 1;", $conexion);
 $fila_info_inst=mysql_fetch_array($rst_info_inst);
 
 /*VARIABLES*/
@@ -14,7 +14,7 @@ $infoinst_titulo=$fila_info_inst["titulo"];
 $infoinst_contenido=$fila_info_inst["contenido"];
 
 /*INFORMACION INSTITUCIONAL*/
-$rst_info_inst_slide=mysql_query("SELECT * FROM DM_informacion_institucional_slide WHERE noticia=$infoinst_id ORDER BY orden ASC;", $conexion);
+$rst_info_inst_slide=mysql_query("SELECT * FROM DM_info_institucional_slide WHERE noticia=$infoinst_id ORDER BY orden ASC;", $conexion);
 $num_info_inst_slide=mysql_num_rows($rst_info_inst_slide);
 
 ?>
