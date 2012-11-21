@@ -5,7 +5,7 @@ require_once("panel@hndm/conexion/funciones.php");
 require_once("panel@hndm/conexion/funcion-paginacion.php");
 
 /*DIRECTORIO*/
-$rst_directorio=mysql_query("SELECT * FROM DM_directorio ORDER BY fecha_publicacion ASC;");
+$rst_directorio=mysql_query("SELECT * FROM DM_directorio ORDER BY fecha_publicacion DESC;");
 
 /*DIRECTORIO - OTROS FUNCIONARIOS*/
 $rst_direct_funcionarios=mysql_query("SELECT * FROM DM_directorio_funcionarios ORDER BY titulo ASC;", $conexion);
