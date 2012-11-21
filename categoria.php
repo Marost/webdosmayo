@@ -28,9 +28,9 @@ $page = (isset($_GET['page'])) ? intval($_GET['page']) : 1;
 $query     = mysql_query("SELECT COUNT(*) as count FROM DM_noticia WHERE categoria=$categoria_id;", $conexion);
 $row       = mysql_fetch_assoc($query);
 $generated = intval($row['count']);
-$pagination = new Pagination("10", $generated, $page, $url_web."&page", 1, 0);
+$pagination = new Pagination("2", $generated, $page, $url_web."&page", 1, 0);
 $start = $pagination->prePagination();
-$query  = mysql_query("SELECT * FROM DM_noticia WHERE categoria=$categoria_id LIMIT $start, 10", $conexion);
+$query  = mysql_query("SELECT * FROM DM_noticia WHERE categoria=$categoria_id LIMIT $start, 2", $conexion);
 
 ?>
 <!DOCTYPE html>
