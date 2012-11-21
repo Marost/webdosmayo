@@ -6,7 +6,7 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
 
 /*VARIABLES DE URL*/
 $url_categoria=$_REQUEST["cat"];
-$url_web=$web."".$url_categoria;
+$url_web=$web."cat/".$url_categoria;
 
 /*CATEGORIA*/
 $rst_categoria=mysql_query("SELECT * FROM DM_noticia_categoria WHERE url='$url_categoria';", $conexion);
