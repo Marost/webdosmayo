@@ -11,7 +11,7 @@ $buscar=$_REQUEST["busqueda"];
 
 if ($_REQUEST["btnbuscar"]=="")
 {
-	$rst_query=mysql_query("SELECT * FROM ".$tabla_suf."_directorio_funcionarios ORDER BY titulo ASC;", $conexion);
+	$rst_query=mysql_query("SELECT * FROM ".$tabla_suf."_directorio ORDER BY titulo ASC;", $conexion);
 	$num_registros=mysql_num_rows($rst_query);
 		
 	$registros=20;	
