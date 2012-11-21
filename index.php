@@ -211,7 +211,7 @@ $alianzas_url_final=$alianzas_categoria["url"]."/".$alianzas_id."-".$alianzas_ur
 
                                 <div class="nws-contenido">
 
-                                    <div>
+                                    <div style="display:none;">
                                         
                                         <ul class="allinone_carousel_list">
                                             <li data-bottom-thumb="/imagenes/campanias-especiales/thumb110/campana1.jpg">
