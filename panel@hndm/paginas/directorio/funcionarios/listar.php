@@ -136,9 +136,7 @@ if(confirm("¿Está seguro de borrar este registro?\n"+nombre)) {
                             
                            		<a href="form-modificar.php?id=<?php echo $fila["id"] ?>">
                                 	<img src="../../../images/editar_16.png" width="16" height="16" title="Modiciar registro" /></a>
-                            <?php //} ?>
-                                <a href="slide/listar.php?noticia=<?php echo $fila["id"] ?>">
-                                    <img src="../../../images/mult_32.png" width="16" height="16" title="Slider de fotos" /></a>
+                                  
                                 </td>
                           </tr>
                           <?php } ?>

@@ -137,9 +137,9 @@ jq(function() {
             	              <tr>
             	                <td width="20%" align="right"><p><strong>Imagen actual:</strong></p></td>
             	                <td width="80%" align="left">
-            	                  <img src="../../../../imagenes/upload/<?php echo $fila_query["carpeta_imagen"]."".$fila_query["imagen"] ?>" alt="" width="150" />
+            	                  <img src="../../../../imagenes/upload/<?php echo $fila_query["imagen_carpeta"]."".$fila_query["imagen"] ?>" alt="" width="150" />
             	                  <input name="imagen_actual" type="hidden" id="imagen_actual" value="<?php echo $fila_query["imagen"] ?>" />
-            	                  <input name="carpeta_imagen" type="hidden" id="carpeta_imagen" value="<?php echo $fila_query["carpeta_imagen"] ?>" /></td>
+            	                  <input name="carpeta_imagen" type="hidden" id="carpeta_imagen" value="<?php echo $fila_query["imagen_carpeta"] ?>" /></td>
           	                </tr>
             	              <tr>
             	                <td colspan="2">
