@@ -117,7 +117,7 @@ if(confirm("¿Está seguro de borrar este registro?\n"+nombre)) {
                         <thead>
                           <tr class="titulo-campo">
                             <th width="75%" height="22" align="left">Noticia</th>
-                            <th width="15%" height="22" align="left">Precio</th>
+                            <th width="15%" height="22" align="center">Precio (S/.)</th>
                             <th width="10%" height="22" align="center">Acciones</th>
                           </tr>
                         </thead>
