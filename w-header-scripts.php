@@ -182,13 +182,6 @@ jAcod(document).ready(function(){
 </script>
 <?php } ?>
 
-<?php if($script_direcinterno==true){ ?>
-<!-- DIRECTORIO INTERNO -->
-<link rel="stylesheet" href="/libs/progressbar/ui.progress-bar.css">
-<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script src="/libs/progressbar/progress.js"></script>
-<?php } ?>
-
 <!-- SLIDER PATRIMONIO HISTORICO -->
 <link href="/libs/allinone_banner/allinone_bannerRotator.css" rel="stylesheet" type="text/css">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>

@@ -48,7 +48,7 @@ jProgBar(document).ready(function() {
 	jProgBar("#lista").change(function(){
 		var lista=jProgBar(this).val();
 		
-		jProgBar.post("lista.php", {lista: lista},
+		jProgBar.post("directorio-lista.php", {lista: lista},
 		function(data){
 			jProgBar("#progress_bar").show();
 			jProgBar('#progress_bar .ui-progress .ui-label').hide();
