@@ -102,10 +102,10 @@ jmnpr(document).ready(function(){
   <dd>
     <ul class="items">
       <li>
-        <a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/noticias/medicamentos/listar.php">
+        <a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/tarifario/medicamentos/listar.php">
           Medicamentos</a></li>
       <li>
-        <a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/noticias/procedimientos/listar.php">
+        <a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/tarifario/procedimientos/listar.php">
           Procedimientos</a></li>
     </ul>
   </dd>
