@@ -1,7 +1,7 @@
 <html>
 <head>
     <title></title>
-    
+
 <base href ="<?php echo $web; ?>">
 
 <!-- ESTILOS -->
@@ -29,11 +29,9 @@
 
 </script>
 
-<?php if($script_tabs==true){ ?>
 <!-- TABS -->
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 <script src="/js/tabs.js"></script>        
-<?php } ?>
 
 <!-- SLIDE SUPERIOR -->
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
@@ -171,7 +169,6 @@ jIntran(document).ready(function() {
 });
 </script>
 
-<?php if($script_acordeon==true){ ?>
 <!-- ACORDEON -->
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css" />
 <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
@@ -184,22 +181,16 @@ jAcod(document).ready(function(){
     });
 });
 </script>
-<?php } ?>
 
-<?php if($script_popup==true){ ?>
 <!-- POPUP PAGINA PRINCIPAL-->
 <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script  src="/js/popup.js"></script>
-<?php } ?>
 
-<?php if($script_direcinterno==true){ ?>
 <!-- DIRECTORIO INTERNO -->
 <link rel="stylesheet" href="/libs/progressbar/ui.progress-bar.css">
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="/libs/progressbar/progress.js"></script>
-<?php } ?>
 
-<?php if($script_campana==true){ ?>
 <!-- SLIDER CAMPAÑAS -->
 <link href="/libs/allinone_banner/allinone_thumbnailsBanner.css" rel="stylesheet" type="text/css">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
@@ -221,9 +212,7 @@ jCampEsp(document).ready(function(){
     });
 });
 </script>
-<?php } ?>
 
-<?php if($script_slide_noticia==true){ ?>
 <!-- SLIDE NOTICIA -->
 <link href="/libs/allinone_banner/allinone_thumbnailsBanner.css" rel="stylesheet" type="text/css">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
@@ -245,7 +234,7 @@ jNotSld(document).ready(function(){
     });
 });
 </script>
-<?php } ?>
+
 
 <!-- SLIDER PATRIMONIO HISTORICO -->
 <link href="/libs/allinone_banner/allinone_bannerRotator.css" rel="stylesheet" type="text/css">
@@ -271,14 +260,11 @@ jPatHist(document).ready(function(){
 });
 </script>
 
-<?php if($script_tarifario==true){ ?>
 <!-- TARIFARIO TABLA -->
 <link rel="stylesheet" type="text/css" href="/libs/creative_table/css/creative.css">
 <script src="/libs/creative_table/js/jquery-1.4.2.min.js"></script>
 <script src="/libs/creative_table/js/creative_table_ajax-1.3.js"></script>
-<?php } ?>
 
-<?php if($script_historia==true){ ?>
 <!-- HISTORIA -->
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script>
@@ -305,7 +291,6 @@ jPatHist(document).ready(function(){
         
     });
 </script>
-<?php } ?>
 
 <!-- LIBRO DE RECLAMACIONES -->
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
