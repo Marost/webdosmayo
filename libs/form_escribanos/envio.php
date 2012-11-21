@@ -27,12 +27,13 @@ $body = '<!DOCTYPE HTML> <html lang="es"> <head> <meta charset="utf-8">
 <h2>Escribanos</h2>
 <p><strong>Nombre:</strong> '.$nombre.'</p>
 <p><strong>E-mail:</strong> '.$email.'</p>
+<p><strong>Tipo:</strong> '.$mensaje_tipo.'</p>
 <p><strong>Mensaje:</strong> '.$mensaje.'</p>
 
 </body>
 </html>';
 	
-$from="marcolopez49@hotmail.com";
+$from="centraldeconsultas@hdosdemayo.gob.pe";
 $asunto="HNDM | Mensaje";
 $headers= "From: HNDM <".strip_tags($from)."> \r\n";
 $headers.= "MIME-Version: 1.0\r\n";
