@@ -97,7 +97,9 @@ $alianzas_url_final=$alianzas_categoria["url"]."/".$alianzas_id."-".$alianzas_ur
                 height: 300,
                 thumbsWrapperMarginTop:0
             });
-            jCampEsp("img.reflect").reflect({/* Put custom options here */});
+            jCampEsp(function() {
+                jCampEsp("img.reflect").reflect({/* Put custom options here */});
+            });
         });
         </script>
 
