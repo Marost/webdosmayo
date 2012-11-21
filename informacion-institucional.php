@@ -4,8 +4,19 @@ require_once("panel@hndm/conexion/conexion.php");
 require_once("panel@hndm/conexion/funciones.php");
 require_once("panel@hndm/conexion/funcion-paginacion.php");
 
-/*SCRIPTS*/
-$script_slide_noticia=true;
+/*INFORMACION INSTITUCIONAL*/
+$rst_info_inst=mysql_query("SELECT * FROM DM_informacion_institucional ORDER BY fecha_publicacion DESC LIMIT 1;", $conexion);
+$fila_info_inst=mysql_fetch_array($rst_info_inst);
+
+/*VARIABLES*/
+$infoinst_id=$fila_info_inst["id"];
+$infoinst_titulo=$fila_info_inst["titulo"];
+$infoinst_contenido=$fila_info_inst["contenido"];
+
+/*INFORMACION INSTITUCIONAL*/
+$rst_info_inst_slide=mysql_query("SELECT * FROM DM_informacion_institucional_slide WHERE noticia=$infoinst_id ORDER BY orden ASC;", $conexion);
+$num_info_inst_slide=mysql_num_rows($rst_info_inst_slide);
+
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -15,7 +26,7 @@ $script_slide_noticia=true;
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Hospital Nacional Dos de Mayo</title>
+        <title>Información Institucional</title>
         <meta name="description" content="">
 
         <?php require_once("w-header-scripts.php") ?>
@@ -69,36 +80,28 @@ $script_slide_noticia=true;
 
                             <div class="contenido">
                                 
-                                <article style="float:left;">
-                                    <h4>Misión</h4>
-                                    <p>Brindar servicios de salud de alta complejidad, desarrollando actividades de prevención de riesgos, promoción, recuperación y rehabilitación en salud, a la población en todas las etapas de su vida con equidad y calidad.</p>
-                                    <p style="text-align:center;"><img src="imagenes/upload/mision.jpg" width="400" style="border: 5px solid #999;"></p>
-                                </article>
+                                <?php echo $infoinst_contenido; ?>
 
-                                <article style="float:left;">
-                                    <h4>Visión</h4>
-                                    <p>Ser al 2013, un hospital acreditado, de alta capacidad resolutiva con tecnología de punta, que brinde servicios integrales de salud, de calidad, en forma humanística que incentive la investigación, docencia y desarrollo tecnológico, con personas comprometidas, solidarias, competentes que trabajen en equipo y con ética, garantizando a la población atención oportuna, equitativa, respetando sus derechos.</p>
-                                    <p style="text-align:center;"><img src="imagenes/upload/vision.jpg" width="400" style="border: 5px solid #999;"></p>
-                                </article>
-
+                                <?php if($num_info_inst_slide>0){ ?>
                                 <div class="imagen_slide">
+
                                     <div style="display:none;">
-                                        <ul class="allinone_bannerWithPlaylist_list">
-                                            <li data-bottom-thumb="/imagenes/mision-vision/thumb/img1.jpg">
-                                              <img src="/imagenes/mision-vision/img1.jpg" alt="" /></li>
-                                            <li data-bottom-thumb="/imagenes/mision-vision/thumb/img2.jpg">
-                                              <img src="/imagenes/mision-vision/img2.jpg" alt="" /></li>
-                                            <li data-bottom-thumb="/imagenes/mision-vision/thumb/img3.jpg">
-                                              <img src="/imagenes/mision-vision/img3.jpg" alt="" /></li>
-                                            <li data-bottom-thumb="/imagenes/mision-vision/thumb/img4.jpg">
-                                              <img src="/imagenes/mision-vision/img4.jpg" alt="" /></li>
-                                            <li data-bottom-thumb="/imagenes/mision-vision/thumb/img5.jpg">
-                                              <img src="/imagenes/mision-vision/img5.jpg" alt="" /></li>
-                                            <li data-bottom-thumb="/imagenes/mision-vision/thumb/img6.jpg">
-                                              <img src="/imagenes/mision-vision/img6.jpg" alt="" /></li>
+                                    
+                                        <ul class="allinone_bannerWithPlaylist_list">   
+                                            <?php while ($fila_info_inst_slide=mysql_fetch_array($rst_info_inst_slide)){
+                                                /*VARIABLES DE SLIDE*/
+                                                $infoinst_slide_id=$fila_info_inst_slide["id"];
+                                                $infoinst_slide_imagen=$fila_info_inst_slide["imagen"];
+                                                $infoinst_slide_imagen_carpeta=$fila_info_inst_slide["carpeta"];
+                                            ?>
+                                                <li data-bottom-thumb="/imagenes/upload/<?php echo $infoinst_slide_imagen_carpeta."thumb/".$infoinst_slide_imagen; ?>">
+                                              <img src="/imagenes/upload/<?php echo $infoinst_slide_imagen_carpeta."".$infoinst_slide_imagen; ?>" alt="" /></li>
+                                            <?php } ?>
                                         </ul>
                                     </div>
+
                                 </div>
+                                <?php } ?>
 
                             </div>
 
