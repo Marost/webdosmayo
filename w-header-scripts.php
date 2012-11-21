@@ -205,6 +205,7 @@ jIntran(document).ready(function() {
     <script src="/libs/progressbar/progress.js"></script>
 <?php } ?>
 
+<?php if($script_slide_noticia==true){ ?>
 <!-- SLIDE NOTICIA -->
 <link href="/libs/allinone_banner/allinone_thumbnailsBanner.css" rel="stylesheet" type="text/css">
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
@@ -226,6 +227,7 @@ jNotSld(document).ready(function(){
     });
 });
 </script>
+<?php } ?>
 
 <!-- SLIDER PATRIMONIO HISTORICO -->
 <link href="/libs/allinone_banner/allinone_bannerRotator.css" rel="stylesheet" type="text/css">
@@ -251,28 +253,29 @@ jPatHist(document).ready(function(){
 });
 </script>
 
-
-<!-- SLIDER CAMPAÑAS -->
-<link href="/libs/allinone_banner/allinone_thumbnailsBanner.css" rel="stylesheet" type="text/css">
-<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
-<script src="/libs/allinone_banner/jquery.ui.touch-punch.min.js"></script>
-<script src="/libs/allinone_banner/jquery.mousewheel.min.js"></script>
-<script src="/libs/allinone_banner/allinone_thumbnailsBanner.js"></script>
-<script src="/libs/allinone_banner/reflection.js" type="text/javascript"></script>
-<!--[if IE]><script src="/libs/allinone_banner/excanvas.compiled.js" type="text/javascript"></script><![endif]-->
-<script>
-var jCampEsp=jQuery.noConflict();
-jCampEsp(document).ready(function(){
-    jCampEsp('#nw-campania-esp .nws-contenido div').allinone_thumbnailsBanner({
-        skin: 'cool',
-        numberOfThumbsPerScreen:2,
-        width: 350,
-        height: 300,
-        thumbsWrapperMarginTop:0
+<?php if($script_campana==true){ ?>
+    <!-- SLIDER CAMPAÑAS -->
+    <link href="/libs/allinone_banner/allinone_thumbnailsBanner.css" rel="stylesheet" type="text/css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
+    <script src="/libs/allinone_banner/jquery.ui.touch-punch.min.js"></script>
+    <script src="/libs/allinone_banner/jquery.mousewheel.min.js"></script>
+    <script src="/libs/allinone_banner/allinone_thumbnailsBanner.js"></script>
+    <script src="/libs/allinone_banner/reflection.js" type="text/javascript"></script>
+    <!--[if IE]><script src="/libs/allinone_banner/excanvas.compiled.js" type="text/javascript"></script><![endif]-->
+    <script>
+    var jCampEsp=jQuery.noConflict();
+    jCampEsp(document).ready(function(){
+        jCampEsp('#nw-campania-esp .nws-contenido div').allinone_thumbnailsBanner({
+            skin: 'cool',
+            numberOfThumbsPerScreen:2,
+            width: 350,
+            height: 300,
+            thumbsWrapperMarginTop:0
+        });
     });
-});
-</script>
+    </script>
+<?php } ?>
 
 
 <!-- GOOGLE ANALYTICS -->
@@ -299,32 +302,32 @@ jCampEsp(document).ready(function(){
 <?php } ?>
 
 <?php if($script_historia==true){ ?>
-<!-- HISTORIA -->
-<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script>
-    var jHist = jQuery.noConflict();
-    jHist(document).ready(function(){
-        jHist.post("historia-datos.php", {tipo: 1},
-        function(data){
-            jHist("#progressbar").removeClass("ocultar");
-            jHist("#tarifario_contenido").html(data);
-            jHist("#progressbar").addClass("ocultar");
-        });
-        
-        jHist("#tarifario_cabecera ul li").click(function(){
-            jHist("#progressbar").removeClass("ocultar");
-            jHist("#tarifario_cabecera ul li").removeClass("selected");
-            jHist(this).addClass("selected");
-            var tipo = jHist(this).attr("rel");
-            jHist.post("historia-datos.php", {tipo: tipo},
+    <!-- HISTORIA -->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        var jHist = jQuery.noConflict();
+        jHist(document).ready(function(){
+            jHist.post("historia-datos.php", {tipo: 1},
             function(data){
+                jHist("#progressbar").removeClass("ocultar");
                 jHist("#tarifario_contenido").html(data);
                 jHist("#progressbar").addClass("ocultar");
             });
-        })
-        
-    });
-</script>
+            
+            jHist("#tarifario_cabecera ul li").click(function(){
+                jHist("#progressbar").removeClass("ocultar");
+                jHist("#tarifario_cabecera ul li").removeClass("selected");
+                jHist(this).addClass("selected");
+                var tipo = jHist(this).attr("rel");
+                jHist.post("historia-datos.php", {tipo: tipo},
+                function(data){
+                    jHist("#tarifario_contenido").html(data);
+                    jHist("#progressbar").addClass("ocultar");
+                });
+            })
+            
+        });
+    </script>
 <?php } ?>
 
 <!-- LIBRO DE RECLAMACIONES -->

@@ -9,6 +9,7 @@ $script_popup=true;
 $script_slide_campana=true;
 $script_tabs=true;
 $script_slnot_prin=true;
+$script_campana=true;
 
 /*-----------------------*/
 /*EQUIPOS DE ULTIMA TECNOLOGIA*/
