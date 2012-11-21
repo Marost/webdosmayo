@@ -99,7 +99,7 @@ $query  = mysql_query("SELECT * FROM DM_noticia WHERE categoria=$categoria_id LI
                                     $noticiacat_imagen_carpeta=$row["carpeta_imagen"];
                                 ?>
                                 
-                                    <article ="categoria_noticias">
+                                    <article class="categoria_noticias">
 
                                         <div class="imagen">
                                             <img src="imagenes/upload/<?php echo $noticiacat_imagen_carpeta."".$noticiacat_imagen; ?>">

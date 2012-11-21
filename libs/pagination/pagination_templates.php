@@ -31,11 +31,11 @@ THE FOLLOWING VARIABLES ARE INTERPRETED BY THE TEMPLATE COMPILER, AND CAN BE USE
 <!--unselected end-->
 
 <!--previous-->
-        <span><a href="[location][previous_page]" title="">&laquo; Previous</a></span>
+        <span><a href="[location][previous_page]" title="">&laquo; Anterior</a></span>
 <!--previous end-->
 
 <!--next-->
-        <span><a href="[location][next_page]" title="">Next &raquo;</a></span>
+        <span><a href="[location][next_page]" title="">Siguiente &raquo;</a></span>
 <!--next end-->
 
 <!--left_arrow_disabled-->
