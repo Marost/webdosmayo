@@ -98,6 +98,17 @@ jmnpr(document).ready(function(){
           Listar</a></li>
     </ul>
   </dd>
+  <dt class="items"><b>Tarifario</b></dt>
+  <dd>
+    <ul class="items">
+      <li>
+        <a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/noticias/medicamentos/listar.php">
+          Medicamentos</a></li>
+      <li>
+        <a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/noticias/procedimientos/listar.php">
+          Procedimientos</a></li>
+    </ul>
+  </dd>
   <dt class="items"><b>Galeria</b></dt>
   <dd>
     <ul class="items">
