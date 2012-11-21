@@ -55,7 +55,7 @@ $rst_direct_funcionarios=mysql_query("SELECT * FROM DM_directorio_funcionarios O
                         ?>
                         <article class="directorio-doctor">
                             <div class="datos">
-                                <img src="/imagenes/upload/<?php echo $imagen_carpeta."".$directorio_imagen; ?>" width="270" height="160" alt="<?php echo $directorio_titulo; ?>" >
+                                <img src="/imagenes/upload/<?php echo $directorio_imagen_carpeta."".$directorio_imagen; ?>" width="270" height="160" alt="<?php echo $directorio_titulo; ?>" >
                                 <div>
                                     <h2><?php echo $directorio_titulo; ?></h2>
                                     <p><?php echo $directorio_cargo; ?></p>
