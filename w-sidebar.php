@@ -6,8 +6,63 @@ $rst_apdiagnost_lista_wg=mysql_query("SELECT * FROM DM_noticia WHERE categoria=2
 $rst_apdiagnost_wg=mysql_query("SELECT * FROM DM_noticia_categoria WHERE id=2;", $conexion);
 $fila_apdiagnost_wg=mysql_fetch_array($rst_apdiagnost_wg);
 $apdgt_url=$fila_apdiagnost_wg["url"];
+
+//VIDEO
+$rst_videos_sup=mysql_query("SELECT * FROM DM_videos ORDER BY fecha_publicacion DESC LIMIT 4;", $conexion);
+
+//VIDEO TITULO
+$rst_videos_inf=mysql_query("SELECT * FROM DM_videos ORDER BY fecha_publicacion DESC LIMIT 4;", $conexion);
+
+
 ?>
 <aside id="sidebar">
+
+    <?php if($videos_sidebar==true){ ?>
+    <div id="video-sidebar">
+                        
+        <div id="video_select">
+            <?php while($fila_videos_sup=mysql_fetch_array($rst_videos_sup)){ ?>
+                <div>
+                    <div class="pvids_imagen">
+                    <?php echo VideoYoutube($fila_videos_sup["video"], 290, 150) ?>
+                      </div>
+                      <div class="pvids_descripcion">
+                        <p><?php echo stripslashes($fila_videos_sup["titulo"]); ?></p>
+                      </div>
+                </div><!-- PANEL VIDEO ITEM LISTA-->
+            <?php } ?>
+        </div>
+
+        <div id="video_items">
+          
+            <ul>
+                <?php while($fila_videos_inf=mysql_fetch_array($rst_videos_inf)){
+                        $video_inf=$fila_videos_inf["video"];
+                        $urlyoutube="http://www.youtube.com/watch?v=".$video_inf;
+                        $youtube = new SSDTube();
+                        $youtube->identify($urlyoutube, true);
+                ?>
+                <li>
+                    <div class="pvidii_imagen">
+                        <?php if($fila_videos_inf["imagen"]==""){ ?>
+                            <img src="<?php echo $youtube->thumbnail_1_url; ?>" width="85" height="70" alt="<?php echo $fila_videos_inf["titulo"]; ?>"/>
+                        <?php }else{ ?>
+                            <img src="imagenes/upload/<?php echo $fila_videos_inf["carpeta_imagen"]."thumb/".$fila_videos_inf["imagen"] ?>" width="85" height="70" alt="<?php echo $fila_videos_inf["titulo"]; ?>" />
+                        <?php } ?>
+                  </div>
+                        
+                  <div class="pvidii_contenido">
+                        <p><?php echo $fila_videos_inf["titulo"]; ?></p>
+                  </div>
+                </li>
+                <?php } ?>
+                
+            </ul>  
+          
+        </div>
+
+    </div>
+    <?php } ?>
 
     <div id="mrq_ap_diagnostico" class="mrq_lista">
 

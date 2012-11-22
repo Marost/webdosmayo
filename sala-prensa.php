@@ -6,6 +6,7 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
 
 /*VARIABLES*/
 $url_web=$web."sala-prensa";
+$videos_sidebar=true;
 
 ################################################################
 //PAGINACION DE NOTICIAS
@@ -35,6 +36,16 @@ $rst_noticias   = mysql_query("SELECT * FROM DM_noticia WHERE categoria<>2 AND c
 
         <!-- PAGINACION -->
         <link rel="stylesheet" href="/libs/pagination/pagination.css" media="screen">
+
+        <!-- VIDEOS -->
+        <script src="/js/jquery.tools.min.1.2.5.js"></script>
+        <script type="text/javascript">
+        var jcv = jQuery.noConflict();
+        jcv(function(){
+            jcv("#scsdbic_video_items ul").tabs("#scsdbic_video_select > div", {effect: 'fade', fadeOutSpeed: 400});
+        });
+        </script>
+
 
     </head>
     <body>
@@ -94,6 +105,7 @@ $rst_noticias   = mysql_query("SELECT * FROM DM_noticia WHERE categoria<>2 AND c
                                         <p class="categoria"><?php echo $noticias_categoria["categoria"] ?></p>
                                         <h3><a href="<?php echo $noticias_categoria["url"]."/".$noticias_id."-".$noticias_url; ?>"><?php echo $noticias_titulo; ?></a></h3>
                                         <p><?php echo $noticias_contenido; ?></p>
+                                        <p class="fecha"><?php echo nombreFecha($noticias_fecha[0],$noticias_fecha[1],$noticias_fecha[2]); ?></p>
                                     </div>
 
                                     <?php } ?>

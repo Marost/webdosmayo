@@ -1217,7 +1217,7 @@ header nav{
 
 			p.fecha{
 				color: #16467D;
-				font-weight: bold;
+					font-weight: bold;
 			}
 
 			p{
@@ -1503,6 +1503,124 @@ header nav{
 	}
 
 }
+
+#video-sidebar{
+	width: 220px;
+	float: left;
+
+	#scsdbic_video_select{ 
+		width:220px; 
+		height:245px; 
+		float:left; 
+		position:relative; 
+		margin:0 0 5px 0;
+	}
+	
+	#scsdbic_video_items{ 
+		width:220px; 
+		float:left; 
+		position:relative;
+
+		.scsdbicv_item{ 
+			background-color:#c1c1c1; 
+			width:210px; 
+			float:left; 
+			padding:5px; 
+			margin:5px 0 0 0; 
+			border-bottom:1px dashed #666;
+		}
+
+		.scsdbicv_item:hover{ 
+			background-color:#fff; 
+			cursor:pointer;
+		}
+
+		.scsdbicvi_imagen{ 
+			width:85px; 
+			float:left; 
+			margin-right:5px;
+		}
+
+		.scsdbicvi_titulo{ 
+			width:130px; 
+			float:left; 
+			font-size:12px; 
+			font-weight:bold;
+		}
+
+		ul{ 
+			list-style:none; 
+			margin:0; 
+			padding:0;
+
+			li{ 
+				float:left;	
+				width:210px; 
+				list-style-type:none; 
+				background-color:#C1C1C1; 
+				margin:0 0 5px 0; 
+				padding:5px; 
+				border-bottom:1px dashed #ABABAB; 
+				cursor:pointer;
+
+				.pvidii_imagen{ 
+					width:85px; 
+					height:70px; 
+					float:left; 
+					margin:0 5px 0 0; 
+					background-color:#000;
+				}
+
+				.pvidii_contenido{ 
+					width:125px; 
+					float:left;
+
+					p{ line-height:120%;}
+				}
+			}
+
+			li.current{ 
+				background-color:#ffffff; 
+				color:#000000; 
+				font-weight:bold;
+			}
+		}
+	}
+	
+	
+	#scsdbic_video_select{
+		div{ 
+			width:290px; 
+			position:absolute; 
+			left:0; 
+			top:0;
+
+			.pvids_imagen{ 
+				width:290px; 
+				height:193px; 
+				float:left; position:relative;
+			}
+
+			.pvids_descripcion{ 
+				width:280px; 
+				float:left; 
+				position:relative; 
+				background-color:#000; 
+				padding:5px; 
+				color:#fff; 
+				text-align:center; 
+				font-size:11px;
+			}
+		}
+
+		div.player{ 
+			width:290px; 
+			height:193px; 
+			float:left;
+		}
+	}
+}
+
 
 /* ===============
     FOOTER
