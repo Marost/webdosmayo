@@ -11,10 +11,6 @@ $contenido=$_POST["contenido"];
 $categoria=$_POST["categoria"];
 $fecha=fechaLarga();
 $hora=date("H:i");
-//$tipo_video=$_POST["video"];
-/*$tags=$_POST["tags"]; //ARRAY DE TAGS
-if($tags==""){ $union_tags=0;}
-elseif($tags<>""){ $union_tags=implode(",", $tags); } //JUNTAR ARRAY DE TAGS*/
 
 //FECHA PUBLICACION
 $fecha_publicacion=$_POST["fecha"];
@@ -29,22 +25,9 @@ if($_POST['flash_uploader_0_tmpname']<>""){
 	$thumb=PhpThumbFactory::create("../../../../imagenes/upload/".$carpeta_imagen."".$imagen."");
 	$thumb->adaptiveResize(120,135);
 	$thumb->save("../../../../imagenes/upload/".$carpeta_imagen."thumb/".$imagen."", "jpg");
-	/*if($tipo_video=="youtube"){
-		$mostrar_video=1;
-		$video=$_POST["video-youtube"];
-	}elseif($tipo_video=="vimeo"){
-		$mostrar_video=1;
-		$video=$_POST["video-vimeo"];
-	}elseif($tipo_video=="dailymotion"){
-		$mostrar_video=1;
-		$video=$_POST["video-dailymotion"];
-	}elseif($tipo_video=="flv"){
-		$mostrar_video=1;
-		$carpeta_video=fechaCarpeta()."/";
-		$video=$_POST['video_uploader_0_tmpname'];
-	}else{
-		$mostrar_video=0;
-	}*/
+	$thumb200=PhpThumbFactory::create("../../../../imagenes/upload/".$carpeta_imagen."".$imagen."");
+	$thumb200->adaptiveResize(200,135);
+	$thumb200->save("../../../../imagenes/upload/".$carpeta_imagen."thumb200/".$imagen."", "jpg");
 }else{
 	$imagen=="";
 	$video="";

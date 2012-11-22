@@ -9,14 +9,8 @@ $idnoticia=$_REQUEST["id"];
 $titulo=$_POST["titulo"];
 $contenido=$_POST["contenido"];
 $categoria=$_POST["categoria"];
-/*$comentarios=$_POST["comentarios"];*/
 $fecha=fechaLarga();
 $hora=date("H:i");
-/*$multimedia=2;
-$tipo_multimedia=$_POST["tipo_multimedia"];
-$tags=$_POST["tags"];
-if($tags==""){ $union_tags=0; }
-elseif($tags<>""){ $union_tags=implode(",", $tags);}*/
 
 //FECHA PUBLICACION
 $fecha_publicacion=$_POST["fecha"];
@@ -27,57 +21,21 @@ $fecha_pub=$fecha_publicacion." ".$hora_publicacion.":00";
 $rst_query=mysql_query("SELECT * FROM ".$tabla_suf."_noticia WHERE id=$idnoticia LIMIT 1;", $conexion);
 $fila_query=mysql_fetch_array($rst_query);
 
-/*if($tipo_multimedia==""){
-	$imagen="";
-	$carpeta_imagen="";
-	$video="";
-	$carpeta_video="";
-	$tipo_video="";
-	$mostrar_imagen=2; $mostrar_video=2;
-}else{
-	//IMAGEN Y VIDEO
-	if($tipo_multimedia=="imagen"){*/
-		if($_POST['flash_uploader_0_tmpname']==""){
-			$imagen=$_POST["imagen_actual"];
-			$carpeta_imagen=$_POST["carpeta_imagen"];
-			$mostrar_imagen=1;
-			/*$video=$fila_query["video"];
-			$carpeta_video=$fila_query["carpeta_video"];
-			$tipo_video=$fila_query["tipo_video"];*/
-		}elseif($_POST['flash_uploader_0_tmpname']<>""){
-			$imagen=$_POST['flash_uploader_0_tmpname'];
-			$carpeta_imagen=fechaCarpeta()."/";
-			$thumb=PhpThumbFactory::create("../../../../imagenes/upload/".$carpeta_imagen."".$imagen."");
-			$thumb->adaptiveResize(370,220);
-			$thumb->save("../../../../imagenes/upload/".$carpeta_imagen."thumb/".$imagen."", "jpg");
-			$mostrar_imagen=1;
-			/*$video=$fila_query["video"];
-			$carpeta_video=$fila_query["carpeta_video"];
-			$tipo_video=$fila_query["tipo_video"];*/
-		}
-		/*$mostrar_imagen=1; $mostrar_video=2;
-	}elseif($tipo_multimedia=="video"){
-		if($_POST["video"]=="youtube"){
-			$video=$_POST["video-youtube"];
-			$tipo_video=$_POST["video"];
-		}elseif($_POST["video"]=="vimeo"){
-			$video=$_POST["video-vimeo"];
-			$tipo_video=$_POST["video"];
-		}elseif($_POST["video"]=="dailymotion"){
-			$video=$_POST["video-dailymotion"];
-			$tipo_video=$_POST["video"];
-		}if($_POST["video"]=="flv"){
-			$carpeta_video=fechaCarpeta()."/";
-			if($_POST['video_uploader_0_tmpname']<>""){
-				$video=$_POST['video_uploader_0_tmpname'];
-			}
-			$tipo_video=$_POST["video"];
-		}
-		$carpeta_imagen=$_POST["carpeta_imagen"]; 
-		$imagen=$_POST["imagen_actual"]; $mostrar_imagen=2; $mostrar_video=1;
-	}
-
-}*/
+if($_POST['flash_uploader_0_tmpname']==""){
+	$imagen=$_POST["imagen_actual"];
+	$carpeta_imagen=$_POST["carpeta_imagen"];
+	$mostrar_imagen=1;
+}elseif($_POST['flash_uploader_0_tmpname']<>""){
+	$imagen=$_POST['flash_uploader_0_tmpname'];
+	$carpeta_imagen=fechaCarpeta()."/";
+	$thumb=PhpThumbFactory::create("../../../../imagenes/upload/".$carpeta_imagen."".$imagen."");
+	$thumb->adaptiveResize(370,220);
+	$thumb->save("../../../../imagenes/upload/".$carpeta_imagen."thumb/".$imagen."", "jpg");
+	$thumb200=PhpThumbFactory::create("../../../../imagenes/upload/".$carpeta_imagen."".$imagen."");
+	$thumb200->adaptiveResize(200,135);
+	$thumb200->save("../../../../imagenes/upload/".$carpeta_imagen."thumb200/".$imagen."", "jpg");
+	$mostrar_imagen=1;
+}
 
 //GUARDAR DATOS
 mysql_query("UPDATE ".$tabla_suf."_noticia SET titulo='".htmlspecialchars($titulo)."', 

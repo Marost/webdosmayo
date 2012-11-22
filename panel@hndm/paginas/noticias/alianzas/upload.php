@@ -20,6 +20,7 @@ include("../../../conexion/funciones.php");
 	// Settings
 	$targetDir = "../../../../imagenes/upload/".fechaCarpeta();
 	$targetDirThumb = "../../../../imagenes/upload/".fechaCarpeta()."/thumb";
+	$targetDirThumb200 = "../../../../imagenes/upload/".fechaCarpeta()."/thumb200";
 	$cleanupTargetDir = false; // Remove old files
 	$maxFileAge = 60 * 60; // Temp file age in seconds
 
@@ -51,9 +52,10 @@ include("../../../conexion/funciones.php");
 	}
 
 	// Create target dir
-	if (!file_exists($targetDir) or !file_exists($targetDirThumb)){
+	if (!file_exists($targetDir) or !file_exists($targetDirThumb) or !file_exists($targetDirThumb200)){
 		@mkdir($targetDir, 0777);
 		@mkdir($targetDirThumb, 0777);
+		@mkdir($targetDirThumb200, 0777);
 	}
 
 	// Remove old temp files
