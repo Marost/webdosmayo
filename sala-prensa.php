@@ -33,6 +33,9 @@ $rst_noticias   = mysql_query("SELECT * FROM DM_noticia WHERE categoria<>2 AND c
         
         <?php require_once("w-header-scripts.php") ?>
 
+        <!-- PAGINACION -->
+        <link rel="stylesheet" href="/libs/pagination/pagination.css" media="screen">
+
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -65,7 +68,7 @@ $rst_noticias   = mysql_query("SELECT * FROM DM_noticia WHERE categoria<>2 AND c
                                     $noticias_url=$fila_noticias["url"];
                                     $noticias_categoria=seleccionTabla($fila_noticias["categoria"], "id", "DM_noticia_categoria", $conexion);
                                     $noticias_titulo=$fila_noticias["titulo"];
-                                    $noticias_contenido=$fila_noticias["contenido"];
+                                    $noticias_contenido=soloDescripcion($fila_noticias["contenido"]);
                                     $noticias_imagen=$fila_noticias["imagen"];
                                     $noticias_imagen_carpeta=$fila_noticias["carpeta_imagen"];
                                     $noticias_fecha=$fila_noticias["fecha_publicacion"];
