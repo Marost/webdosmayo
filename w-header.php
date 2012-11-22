@@ -24,7 +24,7 @@ $espec_url=$fila_especialidades_wg["url"];
             <div id="top_nav" class="nav_down bar_nav grid_16 round_all">
                 <ul class="round_all clearfix">
                     <li><a class="round_left" href="/">Inicio</a></li>
-                    <li><a href="#">Institucional
+                    <li><a href="javascript:;">Institucional
                         <span class="icon">&nbsp;</span></a>
                         <ul>
                             <li><a href="directorio">Directorio</a></li>
@@ -35,7 +35,7 @@ $espec_url=$fila_especialidades_wg["url"];
                             <li><a href="javascript:;" target="_blank" id="enl-intranet">Intranet</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Publicaciones<span class="icon">&nbsp;</span></a>
+                    <li><a href="javascript:;">Publicaciones<span class="icon">&nbsp;</span></a>
                         <ul>
                             <li><a href="construccion">Información Estadistica</a></li>
                             <li><a href="#">Información Epidemiológica</a>
@@ -48,9 +48,9 @@ $espec_url=$fila_especialidades_wg["url"];
                         </ul>
                     </li>
                     <li><a href="http://www.peru.gob.pe/transparencia/pep_transparencia_lista_planes.asp?id_entidad=13628&id_tema=1" target="_blank">Transparencia</a></li>
-                    <li><a href="#">Prensa<span class="icon">&nbsp;</span></a>
+                    <li><a href="javascript:;">Prensa<span class="icon">&nbsp;</span></a>
                         <ul class="submenu-prensa">
-                            <li><a href="construccion">Sala de Prensa</a></li>
+                            <li><a href="sala-prensa">Sala de Prensa</a></li>
                         </ul>
                     </li>
                 </ul>
