@@ -59,19 +59,19 @@ $rst_noticias   = mysql_query("SELECT * FROM DM_noticia WHERE categoria<>2 AND c
                             </div>
 
                             <div class="contenido">
-                                    
-                                <article class="categoria_noticias">
+                                
+                                <?php while($fila_noticias=mysql_fetch_assoc($rst_noticias)){
+                                    $noticias_id=$fila_noticias["id"];
+                                    $noticias_url=$fila_noticias["url"];
+                                    $noticias_categoria=seleccionTabla($fila_noticias["categoria"], "id", "DM_noticia_categoria", $conexion);
+                                    $noticias_titulo=$fila_noticias["titulo"];
+                                    $noticias_contenido=$fila_noticias["contenido"];
+                                    $noticias_imagen=$fila_noticias["imagen"];
+                                    $noticias_imagen_carpeta=$fila_noticias["carpeta_imagen"];
+                                    $noticias_fecha=$fila_noticias["fecha_publicacion"];
+                                ?>
 
-                                    <?php while($fila_noticias=mysql_fetch_assoc($rst_noticias)){
-                                        $noticias_id=$fila_noticias["id"];
-                                        $noticias_url=$fila_noticias["url"];
-                                        $noticias_categoria=seleccionTabla($fila_noticias["categoria"], "id", "DM_noticia_categoria", $conexion);
-                                        $noticias_titulo=$fila_noticias["titulo"];
-                                        $noticias_contenido=$fila_noticias["contenido"];
-                                        $noticias_imagen=$fila_noticias["imagen"];
-                                        $noticias_imagen_carpeta=$fila_noticias["carpeta_imagen"];
-                                        $noticias_fecha=$fila_noticias["fecha_publicacion"];
-                                    ?>
+                                <article class="categoria_noticias">
 
                                     <?php if($noticias_imagen<>""){ ?>
                                     <div class="imagen">
@@ -94,6 +94,8 @@ $rst_noticias   = mysql_query("SELECT * FROM DM_noticia WHERE categoria<>2 AND c
                                     <?php } ?>
 
                                 </article>
+
+                                <?php } $pagination->pagination(); ?>
 
                             </div>                            
 
