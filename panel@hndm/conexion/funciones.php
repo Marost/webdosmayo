@@ -255,6 +255,13 @@ function tipoVideo($tipo, $carpeta_video, $video, $imagen, $carpeta_imagen, $ide
 	return $codigo;
 }
 
+function VideoYoutube($video, $ancho, $alto){
+	$codigo='<iframe width="'.$ancho.'" height="'.$alto.'" 
+					src="http://www.youtube.com/embed/'.$video.'?wmode=transparent&autohide=1&egm=0&hd=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=0&showsearch=0&theme=light" 
+					frameborder="0" allowfullscreen></iframe>';
+	return $codigo;
+}
+
 function extraerArray($string){ 
     $string = explode(",", $string); 
     $salida = array(); 
