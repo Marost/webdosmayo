@@ -25,12 +25,12 @@ require("libs/pagination/class_pagination.php");
 
 //INICIO DE PAGINACION
 $page = (isset($_GET['page'])) ? intval($_GET['page']) : 1;
-$query     = mysql_query("SELECT COUNT(*) as count FROM DM_noticia WHERE categoria=$categoria_id;", $conexion);
+$query     = mysql_query("SELECT COUNT(*) as count FROM DM_noticia WHERE categoria=$categoria_id ORDER BY fecha_publicacion DESC;", $conexion);
 $row       = mysql_fetch_assoc($query);
 $generated = intval($row['count']);
 $pagination = new Pagination("7", $generated, $page, $url_web."&page", 1, 0);
 $start = $pagination->prePagination();
-$query  = mysql_query("SELECT * FROM DM_noticia WHERE categoria=$categoria_id LIMIT $start, 7", $conexion);
+$query  = mysql_query("SELECT * FROM DM_noticia WHERE categoria=$categoria_id ORDER BY fecha_publicacion DESC LIMIT $start, 7", $conexion);
 
 ?>
 <!DOCTYPE html>
