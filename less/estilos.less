@@ -1508,15 +1508,45 @@ header nav{
 	width: 220px;
 	float: left;
 
-	#scsdbic_video_select{ 
+	#video_select{ 
 		width:220px; 
 		height:245px; 
 		float:left; 
 		position:relative; 
 		margin:0 0 5px 0;
+
+		div{ 
+			width:290px; 
+			position:absolute; 
+			left:0; 
+			top:0;
+
+			.pvids_imagen{ 
+				width:290px; 
+				height:193px; 
+				float:left; position:relative;
+			}
+
+			.pvids_descripcion{ 
+				width:280px; 
+				float:left; 
+				position:relative; 
+				background-color:#000; 
+				padding:5px; 
+				color:#fff; 
+				text-align:center; 
+				font-size:11px;
+			}
+		}
+
+		div.player{ 
+			width:290px; 
+			height:193px; 
+			float:left;
+		}
 	}
 	
-	#scsdbic_video_items{ 
+	#video_items{ 
 		width:220px; 
 		float:left; 
 		position:relative;
@@ -1584,39 +1614,6 @@ header nav{
 				color:#000000; 
 				font-weight:bold;
 			}
-		}
-	}
-	
-	
-	#scsdbic_video_select{
-		div{ 
-			width:290px; 
-			position:absolute; 
-			left:0; 
-			top:0;
-
-			.pvids_imagen{ 
-				width:290px; 
-				height:193px; 
-				float:left; position:relative;
-			}
-
-			.pvids_descripcion{ 
-				width:280px; 
-				float:left; 
-				position:relative; 
-				background-color:#000; 
-				padding:5px; 
-				color:#fff; 
-				text-align:center; 
-				font-size:11px;
-			}
-		}
-
-		div.player{ 
-			width:290px; 
-			height:193px; 
-			float:left;
 		}
 	}
 }

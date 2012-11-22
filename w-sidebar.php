@@ -21,12 +21,14 @@ $rst_videos_inf=mysql_query("SELECT * FROM DM_videos ORDER BY fecha_publicacion 
 
     <?php if($videos_sidebar==true){ ?>
     <div id="video-sidebar">
+
+        <h2>Videoteca</h2>
                         
         <div id="video_select">
             <?php while($fila_videos_sup=mysql_fetch_array($rst_videos_sup)){ ?>
                 <div>
                     <div class="pvids_imagen">
-                    <?php echo VideoYoutube($fila_videos_sup["video"], 290, 150) ?>
+                    <?php echo VideoYoutube($fila_videos_sup["video"], 220, 150) ?>
                       </div>
                       <div class="pvids_descripcion">
                         <p><?php echo stripslashes($fila_videos_sup["titulo"]); ?></p>
