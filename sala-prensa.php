@@ -55,7 +55,7 @@ $rst_noticias   = mysql_query("SELECT * FROM DM_noticia WHERE categoria<>2 AND c
 
                     <section id="news">
 
-                        <div class="nw-nota borde-bottom">
+                        <div class="nw-nota">
 
                             <div class="titulo">
                                 <h2>Sala de Prensa</h2>
@@ -71,7 +71,8 @@ $rst_noticias   = mysql_query("SELECT * FROM DM_noticia WHERE categoria<>2 AND c
                                     $noticias_contenido=soloDescripcion($fila_noticias["contenido"]);
                                     $noticias_imagen=$fila_noticias["imagen"];
                                     $noticias_imagen_carpeta=$fila_noticias["carpeta_imagen"];
-                                    $noticias_fecha=$fila_noticias["fecha_publicacion"];
+                                    $noticias_fecha_total=explode(" ",$fila_noticias["fecha_publicacion"]);
+                                    $noticias_fecha=explode("-", $noticias_fecha_total[0])
                                 ?>
 
                                 <article class="categoria_noticias">
@@ -85,6 +86,7 @@ $rst_noticias   = mysql_query("SELECT * FROM DM_noticia WHERE categoria<>2 AND c
                                         <p class="categoria"><?php echo $noticias_categoria["categoria"] ?></p>
                                         <h3><a href="<?php echo $noticias_categoria["url"]."/".$noticias_id."-".$noticias_url; ?>"><?php echo $noticias_titulo; ?></a></h3>
                                         <p><?php echo $noticias_contenido; ?></p>
+                                        <p class="fecha"><?php echo nombreFecha($noticias_fecha[0],$noticias_fecha[1],$noticias_fecha[2]); ?></p>
                                     </div>
                                     <?php }else{ ?>
                                     
