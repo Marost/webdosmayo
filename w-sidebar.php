@@ -1,4 +1,6 @@
 <?php
+include("libs/ssdtube/SSDTube.php");
+
 /*DIAGNOSTICO - LISTA*/
 $rst_apdiagnost_lista_wg=mysql_query("SELECT * FROM DM_noticia WHERE categoria=2 ORDER BY titulo ASC;", $conexion);
 

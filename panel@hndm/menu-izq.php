@@ -83,7 +83,7 @@ jmnpr(document).ready(function(){
   <dd>
     <ul class="items">
       <li>
-      	<a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/videos//noticias/form-agregar.php">
+      	<a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/videos/noticias/form-agregar.php">
         	Agregar</a></li>
       <li>
       	<a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/videos/noticias/listar.php">
