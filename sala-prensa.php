@@ -42,7 +42,7 @@ $rst_noticias   = mysql_query("SELECT * FROM DM_noticia WHERE categoria<>2 AND c
         <script type="text/javascript">
         var jcv = jQuery.noConflict();
         jcv(function(){
-            jcv("#scsdbic_video_items ul").tabs("#scsdbic_video_select > div", {effect: 'fade', fadeOutSpeed: 400});
+            jcv("#video_items ul").tabs("#video_select > div", {effect: 'fade', fadeOutSpeed: 400});
         });
         </script>
 
