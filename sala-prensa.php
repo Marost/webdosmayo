@@ -4,8 +4,8 @@ require_once("panel@hndm/conexion/conexion.php");
 require_once("panel@hndm/conexion/funciones.php");
 require_once("panel@hndm/conexion/funcion-paginacion.php");
 
-/*TODAS LAS NOTICIAS*/
-$rst_noticias=mysql_query("SELECT * FROM DM_noticia WHERE categoria<>2 AND categoria<>5 AND categoria<>9 ORDER BY fecha_publicacion DESC;", $conexion);
+/*VARIABLES*/
+$url_web=$web."sala-prensa";
 
 ################################################################
 //PAGINACION DE NOTICIAS
@@ -16,10 +16,9 @@ $page = (isset($_GET['page'])) ? intval($_GET['page']) : 1;
 $rst_noticias   = mysql_query("SELECT COUNT(*) as count FROM DM_noticia WHERE categoria<>2 AND categoria<>5 AND categoria<>9 ORDER BY fecha_publicacion DESC", $conexion);
 $fila_noticias  = mysql_fetch_assoc($rst_noticias);
 $generated      = intval($fila_noticias['count']);
-$pagination     = new Pagination("7", $generated, $page, $url_web."&page", 1, 0);
+$pagination     = new Pagination("7", $generated, $page, $url_web."?page", 1, 0);
 $start          = $pagination->prePagination();
 $rst_noticias   = mysql_query("SELECT * FROM DM_noticia WHERE categoria<>2 AND categoria<>5 AND categoria<>9 ORDER BY fecha_publicacion DESC LIMIT $start, 7", $conexion);
-
 
 ?>
 <!DOCTYPE html>
