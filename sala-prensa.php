@@ -89,13 +89,12 @@ $rst_noticias   = mysql_query("SELECT * FROM DM_noticia WHERE categoria<>2 AND c
                                 <article class="categoria_noticias">
 
                                     <?php if($noticias_imagen<>""){ ?>
-                                    <div class="imagen">
-                                        <img src="imagenes/upload/<?php echo $noticias_imagen_carpeta."thumb200/".$noticias_imagen; ?>" width="200" height="135" alt="<?php echo $noticias_titulo; ?>">
-                                    </div>
-
                                     <div class="datos">
                                         <p class="categoria"><?php echo $noticias_categoria["categoria"] ?></p>
                                         <h3><a href="<?php echo $noticias_categoria["url"]."/".$noticias_id."-".$noticias_url; ?>"><?php echo $noticias_titulo; ?></a></h3>
+                                        <div class="imagen">
+                                            <img src="imagenes/upload/<?php echo $noticias_imagen_carpeta."thumb200/".$noticias_imagen; ?>" width="150" height="95" alt="<?php echo $noticias_titulo; ?>">
+                                        </div>
                                         <p><?php echo $noticias_contenido; ?></p>
                                         <p class="fecha"><?php echo nombreFecha($noticias_fecha[0],$noticias_fecha[1],$noticias_fecha[2]); ?></p>
                                     </div>
