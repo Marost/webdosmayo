@@ -19,7 +19,7 @@ THE FOLLOWING VARIABLES ARE INTERPRETED BY THE TEMPLATE COMPILER, AND CAN BE USE
 
 <!--pagination_header-->
 <div class="outer_pagination">
-    <div class="pagination purple">
+    <div class="pagination blue">
 <!--pagination_header end-->
 
 <!--selected-->

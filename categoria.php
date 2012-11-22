@@ -74,7 +74,7 @@ $query  = mysql_query("SELECT * FROM DM_noticia WHERE categoria=$categoria_id LI
 
                             <div class="contenido">
 
-                                <?php if($categoria_id==2 or $categoria_id==5){ ?>
+                                <?php if($categoria_id==2 or $categoria_id==5 or $categoria_id==9){ ?>
                                 <ul>
 
                                     <?php while($fila_noticias=mysql_fetch_array($rst_noticias)){
@@ -103,7 +103,7 @@ $query  = mysql_query("SELECT * FROM DM_noticia WHERE categoria=$categoria_id LI
 
                                         <?php if($noticiacat_imagen<>""){ ?>
                                         <div class="imagen">
-                                            <img src="imagenes/upload/<?php echo $noticiacat_imagen_carpeta."".$noticiacat_imagen; ?>">
+                                            <img src="imagenes/upload/<?php echo $noticiacat_imagen_carpeta."thumb200/".$noticiacat_imagen; ?>" width="200" height="135" alt="<?php echo $noticiacat_titulo; ?>">
                                         </div>
 
                                         <div class="datos">
