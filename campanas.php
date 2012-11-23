@@ -43,9 +43,22 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
 
                             <div class="contenido">
 
-                                <article>
-                                    <div></div>
-                                </article>
+                                <div id="tarifario_cabecera">
+                                  
+                                  <ul>
+                                    <li rel="1" id="proposito" class="selected"><a href="javascript:;">Proposito de la Campaña</a></li>
+                                    <li rel="2" id="material"><a href="javascript:;">Material Comunicacional</a></li>
+                                    <li rel="3" id="nota-prensa"><a href="javascript:;">Nota de Prensa</a></li>
+                                    <li rel="4" id="rebote-medios"><a href="javascript:;">Rebote en Medios</a></li>
+                                  </ul>
+
+                                  <div>
+                                        <img  id="progressbar" src="/imagenes/progressbar.gif" width="220" height="19" class="ocultar">
+                                  </div>
+
+                                </div>
+
+                                <div id="tarifario_contenido"></div>
                             
                             </div>
 
