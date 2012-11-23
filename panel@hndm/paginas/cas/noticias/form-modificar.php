@@ -80,7 +80,7 @@ jfec(function() {
             	    <tr>
             	      <td height="35" colspan="2" align="center"><p>
             	        <label>
-            	          <textarea class="ckeditor" name="contenido" id="contenido"><?php echo $fila_query["contenido"] ?></textarea>
+            	          <textarea class="ckeditor" name="contenido" id="contenido"><?php echo $fila_query["observaciones"] ?></textarea>
           	          </label>
           	        </p></td>
           	      </tr>

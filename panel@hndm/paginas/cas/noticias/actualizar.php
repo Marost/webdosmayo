@@ -2,9 +2,9 @@
 session_start();
 include("../../../conexion/conexion.php");
 include("../../../conexion/funciones.php");
-require_once('../../../../libs/thumbs/ThumbLib.inc.php');
 
 //DECLARACION DE VARIABLES
+$idnoticia=$_REQUEST["id"];
 $titulo=$_POST["titulo"];
 $tipo=$_POST["tipo"];
 $observaciones=$_POST["contenido"];
@@ -18,8 +18,8 @@ $fecha_mes=date("Y-m");
 
 //GUARDAR DATOS
 mysql_query("UPDATE ".$tabla_suf."_cas SET titulo='".htmlspecialchars($titulo)."', 
-tipo='$tipo', 
-observaciones='$observaciones', 
+tipo='".htmlspecialchars($tipo)."', 
+observaciones='".htmlspecialchars($observaciones)."', 
 fecha_publicacion='$fecha_pub',
 fecha_anio='$fecha_anio', 
 fecha_mes='$fecha_mes', 

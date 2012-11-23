@@ -2,7 +2,6 @@
 session_start();
 include("../../../conexion/conexion.php");
 include("../../../conexion/funciones.php");
-require_once('../../../../libs/thumbs/ThumbLib.inc.php');
 
 //DECLARACION DE VARIABLES
 $titulo=$_POST["titulo"];
