@@ -53,7 +53,7 @@ $rst_mp_oficinas=mysql_query("SELECT * FROM DM_noticia WHERE categoria=9 ORDER B
 
                             <div class="contenido">
                                     
-                                <ul id="mapa-sitio">
+                                <dl id="mapa-sitio">
                                     <dt><a href="">Inicio</a></dt>
                                     <dt><a href="">Institucional</a>
                                         <dl>
