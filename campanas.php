@@ -52,10 +52,10 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
                                     <li rel="4" id="rebote-medios"><a href="javascript:;">Rebote en Medios</a></li>
                                   </ul>
 
-                                  <div>
-                                        <img  id="progressbar" src="/imagenes/progressbar.gif" width="220" height="19" class="ocultar">
-                                  </div>
+                                </div>
 
+                                <div>
+                                    <img  id="progressbar" src="/imagenes/progressbar.gif" width="220" height="19" class="ocultar">
                                 </div>
 
                                 <div id="tarifario_contenido"></div>
