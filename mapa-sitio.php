@@ -54,83 +54,83 @@ $rst_mp_oficinas=mysql_query("SELECT * FROM DM_noticia WHERE categoria=9 ORDER B
                             <div class="contenido">
                                     
                                 <ul id="mapa-sitio">
-                                    <li><a href="">Inicio</a></li>
-                                    <li><a href="">Institucional</a>
-                                        <ul>
-                                            <li><a href="">Directorio</a></li>
-                                            <li><a href="">Historia</a></li>
-                                            <li><a href="">Información Institucional</a></li>
-                                            <li><a href="">Nuestras Oficinas</a>
-                                                <ul>
+                                    <dt><a href="">Inicio</a></dt>
+                                    <dt><a href="">Institucional</a>
+                                        <dl>
+                                            <dt><a href="">Directorio</a></dt>
+                                            <dt><a href="">Historia</a></dt>
+                                            <dt><a href="">Información Institucional</a></dt>
+                                            <dt><a href="">Nuestras Oficinas</a>
+                                                <dl>
                                                     <?php while ($fila_mp_oficinas=mysql_fetch_array($rst_mp_oficinas)){
                                                         $mp_oficinas_id=$fila_mp_oficinas["id"];
                                                         $mp_oficinas_url=$fila_mp_oficinas["url"];
                                                         $mp_oficinas_titulo=$fila_mp_oficinas["titulo"];
                                                     ?>
-                                                    <li><a href="nuestras-oficinas/<?php echo $mp_oficinas_id."-".$mp_oficinas_url; ?>"><?php echo $mp_oficinas_titulo; ?></a></li>
+                                                    <dt><a href="nuestras-oficinas/<?php echo $mp_oficinas_id."-".$mp_oficinas_url; ?>"><?php echo $mp_oficinas_titulo; ?></a></dt>
                                                     <?php } ?>
-                                                </ul>
-                                            </li>
-                                            <li><a href="">Normatividad</a></li>
-                                            <li><a href="">Intranet</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="">Publicaciones</a>
-                                        <ul>
-                                            <li><a href="">Información Estadística</a></li>
-                                            <li><a href="">Información Epidemiológica</a>
-                                                <ul>
-                                                    <li><a href="">Sala Situacional</a></li>
-                                                    <li><a href="">Boletín Epidemiológico</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="">Transparencia</a></li>
-                                    <li><a href="">Sala de Prensa</a>
-                                        <ul>
-                                            <li><a href="">Alianzas</a></li>
-                                            <li><a href="">Capacitación</a></li>
-                                            <li><a href="">Equipos de Última Tecnología</a></li>
-                                            <li><a href="">Noticias</a></li>
-                                            <li><a href="">Proezas Médicas</a></li>
-                                            <li><a href="">Reconocimientos Institucionales</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="">Campañas Especiales</a></li>
-                                    <li><a href="">Apoyo al Diagnóstico</a>
-                                        <ul>
+                                                </dl>
+                                            </dt>
+                                            <dt><a href="">Normatividad</a></dt>
+                                            <dt><a href="">Intranet</a></dt>
+                                        </dl>
+                                    </dt>
+                                    <dt><a href="">Publicaciones</a>
+                                        <dl>
+                                            <dt><a href="">Información Estadística</a></dt>
+                                            <dt><a href="">Información Epidemiológica</a>
+                                                <dl>
+                                                    <dt><a href="">Sala Situacional</a></dt>
+                                                    <dt><a href="">Boletín Epidemiológico</a></dt>
+                                                </dl>
+                                            </dt>
+                                        </dl>
+                                    </dt>
+                                    <dt><a href="">Transparencia</a></dt>
+                                    <dt><a href="">Sala de Prensa</a>
+                                        <dl>
+                                            <dt><a href="">Alianzas</a></dt>
+                                            <dt><a href="">Capacitación</a></dt>
+                                            <dt><a href="">Equipos de Última Tecnología</a></dt>
+                                            <dt><a href="">Noticias</a></dt>
+                                            <dt><a href="">Proezas Médicas</a></dt>
+                                            <dt><a href="">Reconocimientos Institucionales</a></dt>
+                                        </dl>
+                                    </dt>
+                                    <dt><a href="">Campañas Especiales</a></dt>
+                                    <dt><a href="">Apoyo al Diagnóstico</a>
+                                        <dl>
                                             <?php while ($fila_mp_apoyodiag=mysql_fetch_array($rst_mp_apoyodiag)){
                                                 $mp_apoyodiag_id=$fila_mp_apoyodiag["id"];
                                                 $mp_apoyodiag_url=$fila_mp_apoyodiag["url"];
                                                 $mp_apoyodiag_titulo=$fila_mp_apoyodiag["titulo"];
                                             ?>
-                                            <li><a href="apoyo-al-diagnostico/<?php echo $mp_apoyodiag_id."-".$mp_apoyodiag_url; ?>"><?php echo $mp_apoyodiag_titulo; ?></a></li>
+                                            <dt><a href="apoyo-al-diagnostico/<?php echo $mp_apoyodiag_id."-".$mp_apoyodiag_url; ?>"><?php echo $mp_apoyodiag_titulo; ?></a></dt>
                                             <?php } ?>
-                                        </ul>
-                                    </li>
-                                    <li><a href="">Especialidades</a>
-                                        <ul>
+                                        </dl>
+                                    </dt>
+                                    <dt><a href="">Especialidades</a>
+                                        <dl>
                                             <?php while ($fila_mp_especialidades=mysql_fetch_array($rst_mp_especialidades)){
                                                 $mp_especialidades_id=$fila_mp_especialidades["id"];
                                                 $mp_especialidades_url=$fila_mp_especialidades["url"];
                                                 $mp_especialidades_titulo=$fila_mp_especialidades["titulo"];
                                             ?>
-                                            <li><a href="especialidades/<?php echo $mp_especialidades_id."-".$mp_especialidades_url; ?>"><?php echo $mp_especialidades_titulo; ?></a></li>
+                                            <dt><a href="especialidades/<?php echo $mp_especialidades_id."-".$mp_especialidades_url; ?>"><?php echo $mp_especialidades_titulo; ?></a></dt>
                                             <?php } ?>
-                                        </ul>
-                                    </li>
-                                    <li><a href="">Libro de Reclamaciones</a></li>
-                                    <li><a href="">Tarifario Virtual</a>
-                                        <ul>
-                                            <li><a href="">Medicamentos</a></li>
-                                            <li><a href="">Procedimientos</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="">Observatorio de Medicamentos</a></li>
-                                    <li><a href="">Contrato Administrativo de Servicios - CAS</a></li>
+                                        </dl>
+                                    </dt>
+                                    <dt><a href="">Libro de Reclamaciones</a></dt>
+                                    <dt><a href="">Tarifario Virtual</a>
+                                        <dl>
+                                            <dt><a href="">Medicamentos</a></dt>
+                                            <dt><a href="">Procedimientos</a></dt>
+                                        </dl>
+                                    </dt>
+                                    <dt><a href="">Observatorio de Medicamentos</a></dt>
+                                    <dt><a href="">Contrato Administrativo de Servicios - CAS</a></dt>
 
-                                </ul>
+                                </dl>
 
                             </div>
 
