@@ -110,7 +110,7 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
                                       </p></td>
                                     </tr>
                                     <tr>
-                                      <td colspan="8"><h3>IDENTIFICACION DE LA ATENCIÓN</h3></td>
+                                      <td colspan="8"><h3>ACCIONES ADOPTADAS POR LA ENTIDAD</h3></td>
                                     </tr>
                                     <tr>
                                       <td class="titulo" colspan="8"><p>Detalle:</p></td>

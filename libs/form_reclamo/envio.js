@@ -26,9 +26,12 @@ jefformRec(document).ready(function(){
 		}else {
 			jefformRec('#progressbar').removeClass('ocultar');
 			var datos = 'rec_nombre='+ rec_nombre +
+						'&rec_domicilio='+ rec_domicilio +
 						'&rec_dni='+ rec_dni +
+						'&rec_telefono='+ rec_telefono +
 						'&rec_email='+ rec_email +
-						'&rec_direccion='+ rec_direccion;
+						'&rec_descripcion='+ rec_descripcion +
+						'&rec_detalle='+ rec_detalle;
 			jefformRec.ajax({
 	    		type: "POST",
 	    		url: "libs/form_reclamo/envio.php",

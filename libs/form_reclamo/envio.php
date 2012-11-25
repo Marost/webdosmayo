@@ -3,23 +3,13 @@
 
 //VARIABLES - DATOS DE LA ASOCIACIÓN
 $rec_nombre=$_POST["rec_nombre"];
-$rec_apellidos=$_POST["rec_apellidos"];
+$rec_domicilio=$_POST["rec_domicilio"];
 $rec_dni=$_POST["rec_dni"];
-$rec_edad=$_POST["rec_edad"];
-$rec_ocupacion=$_POST["rec_ocupacion"];
+$rec_telefono=$_POST["rec_telefono"];
 $rec_email=$_POST["rec_email"];
-$rec_telmovil=$_POST["rec_telmovil"];
-$rec_telfijo=$_POST["rec_telfijo"];
-$rec_direccion=$_POST["rec_direccion"];
-$rec_prov_nombre=$_POST["rec_prov_nombre"];
-$rec_prov_apellidos=$_POST["rec_prov_apellidos"];
-$rec_prov_dni=$_POST["rec_prov_dni"];
-$rec_prov_email=$_POST["rec_prov_email"];
-$rec_prov_telefono=$_POST["rec_prov_telefono"];
-$rec_prov_direccion=$_POST["rec_prov_direccion"];
-$rec_fecha=$_POST["rec_fecha"];
-$rec_caso=$_POST["rec_caso"];
-$rec_solicita=$_POST["rec_solicita"];
+$rec_descripcion=$_POST["rec_descripcion"];
+$rec_detalle=$_POST["rec_detalle"];
+$rec_fecha=date("d")."/".date("m")."/".date("Y");
 
 //GUARDAR EN LA BASE DE DATOS
 /*mysql_query("INSERT INTO DM_escribanos (nombre,
@@ -39,29 +29,20 @@ $body = '<!DOCTYPE HTML> <html lang="es"> <head> <meta charset="utf-8">
 </head>
 <body>
 <h2>Reclamo</h2>
-<h3>DATOS DEL RECLAMANTE</h3>
+<p><strong>Fecha:</strong> '.$rec_fecha.'</p>
+<p></p>
+<h3>Identificación de Usuario</h3>
 <p><strong>Nombre:</strong> '.$rec_nombre.'</p>
-<p><strong>Apellidos:</strong> '.$rec_apellidos.'</p>
-<p><strong>DNI:</strong> '.$rec_dni.'</p>
-<p><strong>Edad:</strong> '.$rec_edad.'</p>
-<p><strong>Ocupación:</strong> '.$rec_ocupacion.'</p>
-<p><strong>Email:</strong> '.$rec_email.'</p>
-<p><strong>Telefono Movil:</strong> '.$rec_telmovil.'</p>
-<p><strong>Telefono Fijo:</strong> '.$rec_telfijo.'</p>
-<p><strong>Dirección:</strong> '.$rec_direccion.'</p>
+<p><strong>Domicilio:</strong> '.$rec_domicilio.'</p>
+<p><strong>DNI / CE:</strong> '.$rec_dni.'</p>
+<p><strong>Teléfono:</strong> '.$rec_telefono.'</p>
+<p><strong>E-mail:</strong> '.$rec_email.'</p>
 <p></p>
-<h3>DATOS DEL PROVEEDOR RECLAMADO</h3>
-<p><strong>Nombres:</strong> '.$rec_prov_nombre.'</p>
-<p><strong>Apellidos:</strong> '.$rec_prov_apellidos.'</p>
-<p><strong>DNI:</strong> '.$rec_prov_dni.'</p>
-<p><strong>Email:</strong> '.$rec_prov_email.'</p>
-<p><strong>Telefono:</strong> '.$rec_prov_telefono.'</p>
-<p><strong>Dirección:</strong> '.$rec_prov_direccion.'</p>
+<h3>Identificación de la Atención</h3>
+<p><strong>Descripción:</strong> '.$rec_descripcion.'</p>
 <p></p>
-<h3>MOTIVO DE RECLAMO</h3>
-<p><strong>Fecha de ocurrencia:</strong> '.$rec_fecha.'</p>
-<p><strong>Cuéntenos su caso:</strong> '.$rec_caso.'</p>
-<p><strong>Solicita:</strong> '.$rec_solicita.'</p>
+<h3>Acciones Adoptadas por la Entidad</h3>
+<p><strong>Detalle:</strong> '.$rec_detalle.'</p>
 
 </body>
 </html>';
