@@ -70,6 +70,10 @@ $rst_cas=mysql_query("SELECT * FROM DM_cas ORDER BY fecha_publicacion DESC", $co
                                             $rst_cas_docs=mysql_query("SELECT * FROM DM_cas_documentos WHERE cas=$cas_id ORDER BY orden ASC;", $conexion);
                                         ?>
                                         <tr>
+                                            <td class="dato_cabecera tdcab-inf">Fecha Publicacion</td>
+                                            <td class="dato_contenido"><?php echo nombreFecha($cas_fecha[0],$cas_fecha[1],$cas_fecha[2]); ?></td>
+                                        </tr>
+                                        <tr>
                                             <td class="dato_cabecera tdcab-sup" width="104" height="25">Tipo</td>
                                             <td class="dato_contenido tdcont-sup"><?php echo $cas_tipo; ?></td>
                                         </tr>
@@ -123,10 +127,6 @@ $rst_cas=mysql_query("SELECT * FROM DM_cas ORDER BY fecha_publicacion DESC", $co
                                             <td class="dato_contenido">
                                                 <?php echo $cas_observaciones; ?>
                                             </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="dato_cabecera tdcab-inf">Fecha Publicacion</td>
-                                            <td class="dato_contenido"><?php echo nombreFecha($cas_fecha[0],$cas_fecha[1],$cas_fecha[2]); ?></td>
                                         </tr>
                                         <tr><td></td><td></td></tr>
                                         <?php } ?>
