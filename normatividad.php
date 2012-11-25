@@ -5,7 +5,7 @@ require_once("panel@hndm/conexion/funciones.php");
 require_once("panel@hndm/conexion/funcion-paginacion.php");
 
 /*CAS*/
-$rst_normatividad=mysql_query("SELECT * FROM DM_normatividad ORDER BY fecha_publicacion DESC", $conexion);
+$rst_cas=mysql_query("SELECT * FROM DM_normatividad ORDER BY fecha_publicacion DESC", $conexion);
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -41,7 +41,7 @@ $rst_normatividad=mysql_query("SELECT * FROM DM_normatividad ORDER BY fecha_publ
                         <div class="nw-nota cas">
 
                             <div class="titulo">
-                                <h2>Contrato Administrativo de Servicios</h2>
+                                <h2>Normatividad</h2>
                             </div>
 
                             <div class="contenido">
