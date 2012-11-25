@@ -63,6 +63,9 @@ jmnpr(document).ready(function(){
         <a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/noticias/libro-reclamaciones/listar.php">
           Libro de Reclamaciones</a></li>
       <li>
+        <a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/normatividad/noticias/listar.php">
+          Normatividad</a></li>
+      <li>
         <a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/noticias/noticias/listar.php">
           Noticias</a></li>
       <li>

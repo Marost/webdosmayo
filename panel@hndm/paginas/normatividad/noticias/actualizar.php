@@ -17,7 +17,7 @@ $fecha_anio=date("Y");
 $fecha_mes=date("Y-m");
 
 //GUARDAR DATOS
-mysql_query("UPDATE ".$tabla_suf."_cas SET titulo='".htmlspecialchars($titulo)."', 
+mysql_query("UPDATE ".$tabla_suf."_normatividad SET titulo='".htmlspecialchars($titulo)."', 
 tipo='".htmlspecialchars($tipo)."', 
 observaciones='$observaciones', 
 fecha_publicacion='$fecha_pub',
