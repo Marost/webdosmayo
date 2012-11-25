@@ -31,7 +31,7 @@ $espec_url=$fila_especialidades_wg["url"];
                             <li><a href="historia">Historia</a></li>
                             <li><a href="informacion-institucional">Información Institucional</a></li>
                             <li><a href="cat/nuestras-oficinas">Nuestras Oficinas</a></li>
-                            <li><a href="construccion">Normatividad</a></li>
+                            <li><a href="normatividad">Normatividad</a></li>
                             <li><a href="javascript:;" target="_blank" id="enl-intranet">Intranet</a></li>
                         </ul>
                     </li>
