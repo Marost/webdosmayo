@@ -89,12 +89,12 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
                                       <td colspan="3"><p>
                                         <input type="text" name="reclamo_dni" id="reclamo_dni">
                                       </p></td>
-                                      <td class="titulo" width="37"><p>Telf.</p></td>
-                                      <td width="180"><p>
+                                      <td class="titulo" width="80"><p>Telf.</p></td>
+                                      <td width="140"><p>
                                         <input type="text" name="reclamo_telefono" id="reclamo_telefono">
                                       </p></td>
-                                      <td class="titulo" width="60"><p>E-mail</p></td>
-                                      <td width="180"><p>
+                                      <td class="titulo" width="80"><p>E-mail</p></td>
+                                      <td width="140"><p>
                                         <input type="text" name="reclamo_email" id="reclamo_email">
                                       </p></td>
                                     </tr>
