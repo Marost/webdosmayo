@@ -89,7 +89,7 @@ if(confirm("¿Está seguro de borrar todos los registros?")) {
               <table width="100%" border="0" align="center" cellpadding="5" cellspacing="0">
                   <tr>
                     <td width="71%" ><p><a href="form-agregar.php?noticia=<?php echo $idnoticia; ?>">
-                    <strong>AGREGAR FOTOS</strong></a></p></td>
+                    <strong>AGREGAR</strong></a></p></td>
                     <td width="29%" ><p>
                     <a onclick="eliminarTodo(<?php echo $idnoticia; ?>, 'all');" href="javascript:;">
                     <strong>Borrar todo</strong></a></p></td>

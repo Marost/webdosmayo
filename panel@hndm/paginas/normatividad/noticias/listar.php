@@ -92,7 +92,7 @@ if(confirm("¿Está seguro de borrar este registro?\n"+nombre)) {
 				<?php include("../../../menu-izq.php"); ?>
             </div><!--FIN PANEL IZQ-->
             <div id="panel-der">
-            	<h2>Lista - CAS</h2>
+            	<h2>Lista - Normatividad</h2>
     <div id="contenido_total">
     	<div id="mensaje" >
         	<form id="form1" name="form1" method="get" action="listar.php">
