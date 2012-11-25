@@ -102,12 +102,11 @@ $query  = mysql_query("SELECT * FROM DM_noticia WHERE categoria=$categoria_id OR
                                     <article class="categoria_noticias">
 
                                         <?php if($noticiacat_imagen<>""){ ?>
-                                        <div class="imagen">
-                                            <img src="imagenes/upload/<?php echo $noticiacat_imagen_carpeta."thumb200/".$noticiacat_imagen; ?>" width="200" height="135" alt="<?php echo $noticiacat_titulo; ?>">
-                                        </div>
-
                                         <div class="datos">
                                             <h3><a href="<?php echo $url_categoria."/".$noticiacat_id."-".$noticiacat_url; ?>"><?php echo $noticiacat_titulo; ?></a></h3>
+                                            <div class="imagen">
+                                                <img src="imagenes/upload/<?php echo $noticiacat_imagen_carpeta."thumb200/".$noticiacat_imagen; ?>" width="150" height="95" alt="<?php echo $noticiacat_titulo; ?>">
+                                            </div>
                                             <p><?php echo $noticiacat_contenido; ?></p>
                                         </div>
                                         <?php }else{ ?>

@@ -54,13 +54,13 @@ $rst_mp_oficinas=mysql_query("SELECT * FROM DM_noticia WHERE categoria=9 ORDER B
                             <div class="contenido">
                                     
                                 <dl id="mapa-sitio">
-                                    <dt><a href="">Inicio</a></dt>
-                                    <dt><a href="">Institucional</a>
+                                    <dt><a href="/">Inicio</a></dt>
+                                    <dt><a href="javascript:;">Institucional</a>
                                         <dl>
-                                            <dt><a href="">Directorio</a></dt>
-                                            <dt><a href="">Historia</a></dt>
-                                            <dt><a href="">Información Institucional</a></dt>
-                                            <dt><a href="">Nuestras Oficinas</a>
+                                            <dt><a href="directorio">Directorio</a></dt>
+                                            <dt><a href="historia">Historia</a></dt>
+                                            <dt><a href="informacion-institucional">Información Institucional</a></dt>
+                                            <dt><a href="cat/nuestras-oficinas">Nuestras Oficinas</a>
                                                 <dl>
                                                     <?php while ($fila_mp_oficinas=mysql_fetch_array($rst_mp_oficinas)){
                                                         $mp_oficinas_id=$fila_mp_oficinas["id"];
@@ -71,34 +71,34 @@ $rst_mp_oficinas=mysql_query("SELECT * FROM DM_noticia WHERE categoria=9 ORDER B
                                                     <?php } ?>
                                                 </dl>
                                             </dt>
-                                            <dt><a href="">Normatividad</a></dt>
-                                            <dt><a href="">Intranet</a></dt>
+                                            <dt><a href="javascript:;">Normatividad</a></dt>
+                                            <dt><a href="javascript:;">Intranet</a></dt>
                                         </dl>
                                     </dt>
-                                    <dt><a href="">Publicaciones</a>
+                                    <dt><a href="javascript:;">Publicaciones</a>
                                         <dl>
-                                            <dt><a href="">Información Estadística</a></dt>
-                                            <dt><a href="">Información Epidemiológica</a>
+                                            <dt><a href="javascript:;">Información Estadística</a></dt>
+                                            <dt><a href="javascript:;">Información Epidemiológica</a>
                                                 <dl>
-                                                    <dt><a href="">Sala Situacional</a></dt>
-                                                    <dt><a href="">Boletín Epidemiológico</a></dt>
+                                                    <dt><a href="sala-situacional">Sala Situacional</a></dt>
+                                                    <dt><a href="boletin-epidemiologico">Boletín Epidemiológico</a></dt>
                                                 </dl>
                                             </dt>
                                         </dl>
                                     </dt>
-                                    <dt><a href="">Transparencia</a></dt>
-                                    <dt><a href="">Sala de Prensa</a>
+                                    <dt><a href="http://www.peru.gob.pe/transparencia/pep_transparencia_lista_planes.asp?id_entidad=13628&id_tema=1" target="_blank">Transparencia</a></dt>
+                                    <dt><a href="sala-prensa">Sala de Prensa</a>
                                         <dl>
-                                            <dt><a href="">Alianzas</a></dt>
-                                            <dt><a href="">Capacitación</a></dt>
-                                            <dt><a href="">Equipos de Última Tecnología</a></dt>
-                                            <dt><a href="">Noticias</a></dt>
-                                            <dt><a href="">Proezas Médicas</a></dt>
-                                            <dt><a href="">Reconocimientos Institucionales</a></dt>
+                                            <dt><a href="cat/alianzas">Alianzas</a></dt>
+                                            <dt><a href="cat/capacitacion">Capacitación</a></dt>
+                                            <dt><a href="cat/equipos-ultima-tecnologia">Equipos de Última Tecnología</a></dt>
+                                            <dt><a href="cat/noticias">Noticias</a></dt>
+                                            <dt><a href="cat/proezas-medicas">Proezas Médicas</a></dt>
+                                            <dt><a href="cat/reconocimientos-institucionales">Reconocimientos Institucionales</a></dt>
                                         </dl>
                                     </dt>
-                                    <dt><a href="">Campañas Especiales</a></dt>
-                                    <dt><a href="">Apoyo al Diagnóstico</a>
+                                    <dt><a href="javascript:;">Campañas Especiales</a></dt>
+                                    <dt><a href="cat/apoyo-al-diagnostico">Apoyo al Diagnóstico</a>
                                         <dl>
                                             <?php while ($fila_mp_apoyodiag=mysql_fetch_array($rst_mp_apoyodiag)){
                                                 $mp_apoyodiag_id=$fila_mp_apoyodiag["id"];
@@ -109,7 +109,7 @@ $rst_mp_oficinas=mysql_query("SELECT * FROM DM_noticia WHERE categoria=9 ORDER B
                                             <?php } ?>
                                         </dl>
                                     </dt>
-                                    <dt><a href="">Especialidades</a>
+                                    <dt><a href="cat/especialidades">Especialidades</a>
                                         <dl>
                                             <?php while ($fila_mp_especialidades=mysql_fetch_array($rst_mp_especialidades)){
                                                 $mp_especialidades_id=$fila_mp_especialidades["id"];
@@ -120,15 +120,15 @@ $rst_mp_oficinas=mysql_query("SELECT * FROM DM_noticia WHERE categoria=9 ORDER B
                                             <?php } ?>
                                         </dl>
                                     </dt>
-                                    <dt><a href="">Libro de Reclamaciones</a></dt>
-                                    <dt><a href="">Tarifario Virtual</a>
+                                    <dt><a href="libro-reclamaciones">Libro de Reclamaciones</a></dt>
+                                    <dt><a href="javascript:;">Tarifario Virtual</a>
                                         <dl>
-                                            <dt><a href="">Medicamentos</a></dt>
-                                            <dt><a href="">Procedimientos</a></dt>
+                                            <dt><a href="tarifario/medicamentos">Medicamentos</a></dt>
+                                            <dt><a href="tarifario/procedimientos">Procedimientos</a></dt>
                                         </dl>
                                     </dt>
-                                    <dt><a href="">Observatorio de Medicamentos</a></dt>
-                                    <dt><a href="">Contrato Administrativo de Servicios - CAS</a></dt>
+                                    <dt><a href="http://observatorio.digemid.minsa.gob.pe/" target="_blank">Observatorio de Medicamentos</a></dt>
+                                    <dt><a href="cas">Contrato Administrativo de Servicios - CAS</a></dt>
 
                                 </dl>
 

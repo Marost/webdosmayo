@@ -51,115 +51,85 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
                                 <p class="reclamo_mensaje ocultar">Nos estaremos comunicando contigo a la brevedad posible.</p>
 
                                 <form id="form_reclamo" name="form_reclamo" method="post">
-                                  <table width="670" class="libro-reclamaciones" >
+                                  <table width="740" border="0" cellpadding="2" cellspacing="2" class="libro-reclamaciones">
                                     <tr>
-                                      <td colspan="2"><h3>DATOS DEL RECLAMANTE / RECLAMADO</h3></td>
+                                      <td class="titulo" width="97"><p>&nbsp;</p></td>
+                                      <td class="titulo" width="65" align="center"><p>DIA</p></td>
+                                      <td class="titulo" width="64" align="center"><p>MES</p></td>
+                                      <td class="titulo" width="65" align="center"><p>AÑO</p></td>
+                                      <td class="titulo" colspan="4" align="center"><p>HOJA DE RECLAMACIÓN</p></td>
                                     </tr>
                                     <tr>
-                                      <td colspan="2"><strong>DATOS DEL RECLAMANTE</strong></td>
+                                      <td class="titulo"><p>Fecha</p></td>
+                                      <td width="65" align="center"><p><?php echo date("d"); ?></p></td>
+                                      <td width="64" align="center"><p><?php echo date("m"); ?></p></td>
+                                      <td width="65" align="center"><p><?php echo date("Y"); ?></p></td>
+                                      <td colspan="4" align="center"><p>&nbsp;</p></td>
                                     </tr>
                                     <tr>
-                                      <td width="175">Nombres</td>
-                                      <td width="480"><input name="reclamo_nombre" type="text" id="reclamo_nombre" size="30"></td>
+                                      <td colspan="8"><p>&nbsp;</p></td>
                                     </tr>
                                     <tr>
-                                      <td>Apellidos</td>
-                                      <td><input name="reclamo_apellidos" type="text" id="reclamo_apellidos" size="30"></td>
+                                      <td colspan="8"><h3>IDENTIFICACION DE USUARIO</h3></td>
                                     </tr>
                                     <tr>
-                                      <td>DNI</td>
-                                      <td><input type="text" name="reclamo_dni" id="reclamo_dni"></td>
+                                      <td class="titulo"><p>Nombre</p></td>
+                                      <td colspan="7"><p>
+                                        <input name="reclamo_nombre" type="text" id="reclamo_nombre" size="60">
+                                      </p></td>
                                     </tr>
                                     <tr>
-                                      <td>Edad</td>
-                                      <td><input type="text" name="reclamo_edad" id="reclamo_edad"></td>
+                                      <td class="titulo"><p>Domicilio</p></td>
+                                      <td colspan="7"><p>
+                                        <input name="reclamo_domicilio" type="text" id="reclamo_domicilio" size="80">
+                                      </p></td>
                                     </tr>
                                     <tr>
-                                      <td>Ocupación</td>
-                                      <td><input name="reclamo_ocupacion" type="text" id="ocupacion" size="70"></td>
+                                      <td class="titulo"><p>DNI / CE</p></td>
+                                      <td colspan="3"><p>
+                                        <input type="text" name="reclamo_dni" id="reclamo_dni">
+                                      </p></td>
+                                      <td class="titulo" width="80"><p>Telf.</p></td>
+                                      <td width="140"><p>
+                                        <input type="text" name="reclamo_telefono" id="reclamo_telefono">
+                                      </p></td>
+                                      <td class="titulo" width="80"><p>E-mail</p></td>
+                                      <td width="140"><p>
+                                        <input type="text" name="reclamo_email" id="reclamo_email">
+                                      </p></td>
                                     </tr>
                                     <tr>
-                                      <td>Correo electrónico</td>
-                                      <td><input name="reclamo_email" type="text" id="reclamo_email" size="40"></td>
+                                      <td colspan="8"><h3>IDENTIFICACION DE LA ATENCIÓN</h3></td>
                                     </tr>
                                     <tr>
-                                      <td>Teléfono Móvil</td>
-                                      <td><input type="text" name="reclamo_telmovil" id="reclamo_telmovil"></td>
+                                      <td class="titulo" colspan="8"><p>Descripción:</p></td>
                                     </tr>
                                     <tr>
-                                      <td>Teléfono Fijo</td>
-                                      <td><input type="text" name="reclamo_telfijo" id="reclamo_telfijo"></td>
+                                      <td colspan="8"><p>
+                                        <textarea name="reclamo_descripcion" id="reclamo_descripcion" cols="45" rows="5"></textarea>
+                                      </p></td>
                                     </tr>
                                     <tr>
-                                      <td>Dirección</td>
-                                      <td><input name="reclamo_direccion" type="text" id="reclamo_direccion" size="70"></td>
+                                      <td colspan="8"><h3>IDENTIFICACION DE LA ATENCIÓN</h3></td>
                                     </tr>
                                     <tr>
-                                      <td>&nbsp;</td>
-                                      <td>&nbsp;</td>
+                                      <td class="titulo" colspan="8"><p>Detalle:</p></td>
                                     </tr>
                                     <tr>
-                                      <td colspan="2"><strong>DATOS DEL PROVEEDOR RECLAMADO</strong></td>
+                                      <td colspan="8"><p>
+                                        <textarea name="reclamo_detelle" id="reclamo_detalle" cols="45" rows="5"></textarea>
+                                      </p></td>
                                     </tr>
                                     <tr>
-                                      <td width="175">Nombres</td>
-                                      <td><input name="reclamo_prov_nombre" type="text" id="reclamo_prov_nombre" size="70"></td>
-                                    </tr>
-                                    <tr>
-                                      <td>Apellidos</td>
-                                      <td><input name="reclamo_prov_apellidos" type="text" id="reclamo_prov_apellidos" size="70"></td>
-                                    </tr>
-                                    <tr>
-                                      <td>Documento de Identidad</td>
-                                      <td><input type="text" name="reclamo_prov_dni" id="reclamo_prov_dni"></td>
-                                    </tr>
-                                    <tr>
-                                      <td>Correo electrónico</td>
-                                      <td><input name="reclamo_prov_email" type="text" id="reclamo_prov_email" size="70"></td>
-                                    </tr>
-                                    <tr>
-                                      <td>Teléfonos</td>
-                                      <td><input type="text" name="reclamo_prov_telefono" id="reclamo_prov_telefono"></td>
-                                    </tr>
-                                    <tr>
-                                      <td>Dirección</td>
-                                      <td><input name="reclamo_prov_direccion" type="text" id="reclamo_prov_direccion" size="70"></td>
-                                    </tr>
-                                    <tr>
-                                      <td>&nbsp;</td>
-                                      <td>&nbsp;</td>
-                                    </tr>
-                                    <tr>
-                                      <td colspan="2"><h3>MOTIVO DEL RECLAMO</h3></td>
-                                    </tr>
-                                    <tr>
-                                      <td><strong>DATOS DEL HECHO</strong></td>
-                                      <td>&nbsp;</td>
-                                    </tr>
-                                    <tr>
-                                      <td>Fecha de ocurrencia</td>
-                                      <td><input type="text" name="reclamo_fecha" id="reclamo_fecha"></td>
-                                    </tr>
-                                    <tr>
-                                      <td>Cuéntenos su caso</td>
-                                      <td><textarea name="reclamo_caso" id="reclamo_caso" cols="75" rows="10"></textarea></td>
-                                    </tr>
-                                    <tr>
-                                      <td>Qué solicita</td>
-                                      <td><input name="reclamo_solicita" type="text" id="reclamo_solicita" size="70"></td>
-                                    </tr>
-                                    <tr>
-                                      <td colspan="2">&nbsp;</td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="2" align="center">
-                                            <img src="imagenes/progressbar.gif" alt="Cargando..." class="ocultar" id="progressbar">
+                                      <td colspan="8" align="center"><p>
+                                          <img src="imagenes/progressbar.gif" alt="Cargando..." class="ocultar" id="progressbar">
                                             <button class="reclamo_boton" id="reclamo_enviar">Enviar reclamo</button>
                                             <button class="reclamo_boton" id="reclamo_cancelar">Cancelar</button>
-                                        </td>
+                                      </p></td>
                                     </tr>
                                   </table>
                                 </form>
+
                             </div>
 
                             <div class="contenido">
