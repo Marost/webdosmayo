@@ -13,9 +13,9 @@ $espec_url=$fila_especialidades_wg["url"];
         <div id="icons-sup">
 
             <ul>
-                <li><a class="icon-home" href="">Home</a></li>
+                <li><a class="icon-home" href="/">Home</a></li>
                 <li><a class="p-escribanos icon-correo" href="javascript:;">Correo</a></li>
-                <li><a class="icon-mapa-sitio" href="">Mapa de Stio</a></li>
+                <li><a class="icon-mapa-sitio" href="mapa-sitio">Mapa de Stio</a></li>
             </ul>
         </div>
 

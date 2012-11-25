@@ -350,6 +350,7 @@ RewriteRule ^sala-situacional$                       /info-epidemiologica-ss.php
 RewriteRule ^boletin-epidemiologico$                       /info-epidemiologica-ep.php
 RewriteRule ^libro-reclamaciones$                       /libro-reclamaciones.php
 RewriteRule ^sala-prensa$                       /sala-prensa.php
+RewriteRule ^mapa-sitio$                       /mapa-sitio.php
 
 # ----------------------------------------------------------------------
 # Suppress or force the "www." at the beginning of URLs
