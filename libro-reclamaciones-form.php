@@ -53,17 +53,14 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
                                 <form id="form_reclamo" name="form_reclamo" method="post">
                                   <table width="740" border="0" cellpadding="2" cellspacing="2">
                                     <tr>
-                                      <td colspan="8"><p>LIBRO DE RECLAMACIONES</p></td>
+                                      <td class="titulo" width="97"><p>&nbsp;</p></td>
+                                      <td class="titulo" width="65" align="center"><p>DIA</p></td>
+                                      <td class="titulo" width="64" align="center"><p>MES</p></td>
+                                      <td class="titulo" width="65" align="center"><p>AÑO</p></td>
+                                      <td class="titulo" colspan="4" align="center"><p>HOJA DE RECLAMACIÓN</p></td>
                                     </tr>
                                     <tr>
-                                      <td width="97"><p>&nbsp;</p></td>
-                                      <td width="65" align="center"><p>DIA</p></td>
-                                      <td width="64" align="center"><p>MES</p></td>
-                                      <td width="65" align="center"><p>AÑO</p></td>
-                                      <td colspan="4" align="center"><p>HOJA DE RECLAMACIÓN</p></td>
-                                    </tr>
-                                    <tr>
-                                      <td><p>Fecha</p></td>
+                                      <td class="titulo"><p>Fecha</p></td>
                                       <td width="65" align="center"><p><?php echo date("d"); ?></p></td>
                                       <td width="64" align="center"><p><?php echo date("m"); ?></p></td>
                                       <td width="65" align="center"><p><?php echo date("Y"); ?></p></td>
@@ -73,39 +70,39 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
                                       <td colspan="8"><p>&nbsp;</p></td>
                                     </tr>
                                     <tr>
-                                      <td colspan="8"><p>IDENTIFICACION DE USUARIO</p></td>
+                                      <td colspan="8"><h3>IDENTIFICACION DE USUARIO</h3></td>
                                     </tr>
                                     <tr>
-                                      <td><p>Nombre</p></td>
+                                      <td class="titulo"><p>Nombre</p></td>
                                       <td colspan="7"><p>
                                         <input name="reclamo_nombre" type="text" id="reclamo_nombre" size="60">
                                       </p></td>
                                     </tr>
                                     <tr>
-                                      <td><p>Domicilio</p></td>
+                                      <td class="titulo"><p>Domicilio</p></td>
                                       <td colspan="7"><p>
                                         <input name="reclamo_domicilio" type="text" id="reclamo_domicilio" size="80">
                                       </p></td>
                                     </tr>
                                     <tr>
-                                      <td><p>DNI / CE</p></td>
+                                      <td class="titulo"><p>DNI / CE</p></td>
                                       <td colspan="3"><p>
                                         <input type="text" name="reclamo_dni" id="reclamo_dni">
                                       </p></td>
-                                      <td width="37"><p>Telf.</p></td>
+                                      <td class="titulo" width="37"><p>Telf.</p></td>
                                       <td width="180"><p>
                                         <input type="text" name="reclamo_telefono" id="reclamo_telefono">
                                       </p></td>
-                                      <td width="60"><p>E-mail</p></td>
+                                      <td class="titulo" width="60"><p>E-mail</p></td>
                                       <td width="180"><p>
                                         <input type="text" name="reclamo_email" id="reclamo_email">
                                       </p></td>
                                     </tr>
                                     <tr>
-                                      <td colspan="8"><p>IDENTIFICACION DE LA ATENCIÓN</p></td>
+                                      <td colspan="8"><h3>IDENTIFICACION DE LA ATENCIÓN</h3></td>
                                     </tr>
                                     <tr>
-                                      <td colspan="8"><p>Descripción:</p></td>
+                                      <td class="titulo" colspan="8"><p>Descripción:</p></td>
                                     </tr>
                                     <tr>
                                       <td colspan="8"><p>
@@ -113,10 +110,10 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
                                       </p></td>
                                     </tr>
                                     <tr>
-                                      <td colspan="8"><p>IDENTIFICACION DE LA ATENCIÓN</p></td>
+                                      <td colspan="8"><h3>IDENTIFICACION DE LA ATENCIÓN</h3></td>
                                     </tr>
                                     <tr>
-                                      <td colspan="8"><p>Detalle:</p></td>
+                                      <td class="titulo" colspan="8"><p>Detalle:</p></td>
                                     </tr>
                                     <tr>
                                       <td colspan="8"><p>
