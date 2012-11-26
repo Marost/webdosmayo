@@ -5,7 +5,7 @@ require_once("panel@hndm/conexion/funciones.php");
 require_once("panel@hndm/conexion/funcion-paginacion.php");
 
 /*VARIABLES DE URL*/
-$idnota=$_REQUEST["id"];
+$url_web=$web."campanias";
 
 ################################################################
 //PAGINACION
@@ -13,12 +13,12 @@ require("libs/pagination/class_pagination.php");
 
 //INICIO DE PAGINACION
 $page = (isset($_GET['page'])) ? intval($_GET['page']) : 1;
-$rst_noticias   = mysql_query("SELECT COUNT(*) as count FROM DM_campania ORDER BY fecha_publicacion DESC", $conexion);
+$rst_noticias   = mysql_query("SELECT COUNT(*) as count FROM DM_campania WHERE id>0 ORDER BY fecha_publicacion DESC", $conexion);
 $fila_noticias  = mysql_fetch_assoc($rst_noticias);
 $generated      = intval($fila_noticias['count']);
 $pagination     = new Pagination("6", $generated, $page, $url_web."?page", 1, 0);
 $start          = $pagination->prePagination();
-$rst_noticias   = mysql_query("SELECT * FROM DM_campania ORDER BY fecha_publicacion DESC LIMIT $start, 6", $conexion);
+$rst_noticias   = mysql_query("SELECT * FROM DM_campania WHERE id>0 ORDER BY fecha_publicacion DESC LIMIT $start, 6", $conexion);
 
 
 ?>
@@ -89,7 +89,6 @@ $rst_noticias   = mysql_query("SELECT * FROM DM_campania ORDER BY fecha_publicac
                                     $noticias_imagen=$fila_noticias["imagen"];
                                     $noticias_imagen_carpeta=$fila_noticias["carpeta_imagen"];
                                     $noticias_imagen_portada=$fila_noticias["imagen_portada"];
-                                    $noticias_imagen_portada_carpeta=$fila_noticias["carpeta_imagen_portada"];
                                     $noticias_fecha_total=explode(" ",$fila_noticias["fecha_publicacion"]);
                                 ?>
 
