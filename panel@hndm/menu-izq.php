@@ -108,10 +108,10 @@ jmnpr(document).ready(function(){
   <dd>
     <ul class="items">
       <li>
-        <a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/sala-situacional/listar.php">
+        <a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/sala-situacional/noticias/listar.php">
           Sala Situacional</a></li>
       <li>
-        <a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/epidemiologico/listar.php">
+        <a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/epidemiologico/noticias/listar.php">
           Boletín Epidemiologico</a></li>
     </ul>
   </dd>
