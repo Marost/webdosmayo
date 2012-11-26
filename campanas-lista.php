@@ -88,15 +88,16 @@ $rst_noticias   = mysql_query("SELECT * FROM DM_campania ORDER BY fecha_publicac
                                     $noticias_titulo=$fila_noticias["titulo"];
                                     $noticias_imagen=$fila_noticias["imagen"];
                                     $noticias_imagen_carpeta=$fila_noticias["carpeta_imagen"];
-                                    //$noticias_imagen_portada=$fila_noticias["imagen_portada"];
                                     $noticias_fecha_total=explode(" ",$fila_noticias["fecha_publicacion"]);
+                                    $noticias_fecha=explode("-", $noticias_fecha_total[0]);
                                 ?>
 
                                 <article class="categoria_noticias">
 
                                     <div class="datos">
                                         <p class="categoria"><?php echo nombreFecha($noticias_fecha[0],$noticias_fecha[1],$noticias_fecha[2]); ?></p>
-                                        <h3><a href="<?php echo $noticias_categoria["url"]."/".$noticias_id."-".$noticias_url; ?>"><?php echo $noticias_titulo; ?></a></h3>
+                                        <h3><a href="<?php echo $noticias_categoria["url"]."/".$noticias_id."-".$noticias_url; ?>">
+                                            <?php echo $noticias_titulo; ?></a></h3>
                                         <div class="imagen">
                                             <img src="imagenes/upload/<?php echo $noticias_imagen_carpeta."thumb200/".$noticias_imagen; ?>" width="300" alt="<?php echo $noticias_titulo; ?>">
                                         </div>

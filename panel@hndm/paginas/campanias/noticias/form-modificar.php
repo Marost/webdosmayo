@@ -28,6 +28,8 @@ $hora_actual=$hora[0].":".$hora[1];
 <script src="../../../js/ckeditor/ckeditor.js" type="text/javascript"></script>
 
 <!-- SPRY -->
+<script src="/SpryAssets/SpryTabbedPanels.js" type="text/javascript"></script>
+<link href="/SpryAssets/SpryTabbedPanels.css" rel="stylesheet" type="text/css" />
 <link href="/SpryAssets/SpryValidationTextField.css" rel="stylesheet" type="text/css" />
 <script src="/SpryAssets/SpryValidationTextField.js" type="text/javascript"></script>
 
@@ -45,6 +47,29 @@ jfec(function() {
 		buttonImage: '../../../images/calendar.gif',
 		buttonImageOnly: true
 	});
+});
+</script>
+
+<!-- PLUPLOAD -->
+<link rel="stylesheet" type="text/css" href="../../../js/plupload/plupload.queue.css"/>
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript">
+  google.load("jquery", "1.3");
+</script>
+<script type="text/javascript" src="../../../js/plupload/gears_init.js"></script>
+<script type="text/javascript" src="http://bp.yahooapis.com/2.4.21/browserplus-min.js"></script>
+<script type="text/javascript" src="../../../js/plupload/plupload.full.min.js"></script>
+<script type="text/javascript" src="../../../js/plupload/jquery.plupload.queue.min.js"></script>
+<script type="text/javascript">
+var jq = jQuery.noConflict();
+jq(function() {
+  jq("#flash_uploader").pluploadQueue({
+    runtimes: 'flash', url: 'upload.php', max_file_size: '10mb',
+    chunk_size: '1mb', unique_names: true,
+    filters: [ {title: "Image files", extensions: "jpg,gif,png"}],
+    resize: {width: 500, height: 320, quality: 100},
+    flash_swf_url: '../../../js/plupload/plupload.flash.swf'
+  }); 
 });
 </script>
 
@@ -73,6 +98,37 @@ jfec(function() {
             	      <td width="20%" height="30" align="right"><p><strong>Titulo:</strong></p></td>
             	      <td width="80%" height="30" align="left"><input name="titulo" type="text" id="titulo" value='<?php echo $fila_query["titulo"] ?>' size="50" /></td>
           	      </tr>
+                  <tr>
+                    <td colspan="2"><div id="TabbedPanels1" class="TabbedPanels">
+                      <ul class="TabbedPanelsTabGroup">
+                        <li class="TabbedPanelsTab" tabindex="0">Imagen</li>
+                      </ul>
+                      <div class="TabbedPanelsContentGroup">
+                        <div class="TabbedPanelsContent">
+                          <table width="100%" border="0" cellpadding="5" cellspacing="0">
+                            <tr>
+                              <td width="20%" align="right"><p><strong>Imagen actual:</strong></p></td>
+                              <td width="80%" align="left">
+                                <img src="../../../../imagenes/upload/<?php echo $fila_query["carpeta_imagen"]."".$fila_query["imagen"] ?>" alt="" width="150" />
+                                <input name="imagen_actual" type="hidden" id="imagen_actual" value="<?php echo $fila_query["imagen"] ?>" />
+                                <input name="carpeta_imagen" type="hidden" id="carpeta_imagen" value="<?php echo $fila_query["carpeta_imagen"] ?>" />
+                                <input name="imagen_portada_actual" type="hidden" id="imagen_portada_actual" value="<?php echo $fila_query["imagen_portada"] ?>" />
+                              </td>
+                            </tr>
+                            <tr>
+                              <td colspan="2">
+                                  <p align="left"><strong>Selecciona una imagen para la noticia:</strong></p>
+                                  <div>
+                                  <div id="flash_uploader" style="width: 450px; height: 330px;">
+                                  You browser doesn't have Flash installed.</div>
+                                  </div>
+                                </td>
+                              </tr>
+                          </table>
+                        </div>
+                      </div>
+                    </div></td>
+                    </tr>
             	    <tr>
             	      <td height="30" align="right"><p><strong>Proposito:</strong></p></td>
             	      <td height="30" align="left">&nbsp;</td>
@@ -111,6 +167,7 @@ jfec(function() {
     </div><!--FIN CUERPO-->
 </div>
 <script type="text/javascript">
+var TabbedPanels1 = new Spry.Widget.TabbedPanels("TabbedPanels1");
 var sprytextfield1 = new Spry.Widget.ValidationTextField("sprytextfield1", "time");
 </script>
 </body>
