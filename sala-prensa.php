@@ -46,6 +46,26 @@ $rst_noticias   = mysql_query("SELECT * FROM DM_noticia WHERE categoria<>2 AND c
         });
         </script>
 
+        <!-- ALTO DE DIV -->
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script type="text/javascript">
+        var jald = jQuery.noConflict();
+        function equalHeight(group) {
+           tallest = 0;
+           group.each(function() {
+              thisHeight = jald(this).height();
+              if(thisHeight > tallest) {
+                 tallest = thisHeight;
+              }
+           });
+           group.height(tallest);
+        }
+
+        jald(document).ready(function() {
+           equalHeight(jald(".categoria_noticias"));
+        });
+
+        </script>
 
     </head>
     <body>
@@ -86,7 +106,7 @@ $rst_noticias   = mysql_query("SELECT * FROM DM_noticia WHERE categoria<>2 AND c
                                     $noticias_fecha_total=explode(" ",$fila_noticias["fecha_publicacion"]);
                                     $noticias_fecha=explode("-", $noticias_fecha_total[0])
                                 ?>
-                                
+
                                 <article
                                     <?php if($noticias_categoria_id==1){ ?>
                                     class="categoria_noticias cnot_alianzas"
@@ -108,7 +128,7 @@ $rst_noticias   = mysql_query("SELECT * FROM DM_noticia WHERE categoria<>2 AND c
                                         <p class="categoria"><?php echo $noticias_categoria["categoria"] ?></p>
                                         <h3><a href="<?php echo $noticias_categoria["url"]."/".$noticias_id."-".$noticias_url; ?>"><?php echo $noticias_titulo; ?></a></h3>
                                         <div class="imagen">
-                                            <img src="imagenes/upload/<?php echo $noticias_imagen_carpeta."thumb200/".$noticias_imagen; ?>" width="150" height="95" alt="<?php echo $noticias_titulo; ?>">
+                                            <img src="imagenes/upload/<?php echo $noticias_imagen_carpeta."thumb200/".$noticias_imagen; ?>" width="300" height="200" alt="<?php echo $noticias_titulo; ?>">
                                         </div>
                                         <p><?php echo $noticias_contenido; ?></p>
                                         <p class="fecha"><?php echo nombreFecha($noticias_fecha[0],$noticias_fecha[1],$noticias_fecha[2]); ?></p>
