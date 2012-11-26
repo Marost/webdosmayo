@@ -104,6 +104,17 @@ jmnpr(document).ready(function(){
           Listar</a></li>
     </ul>
   </dd>
+  <dt class="items"><b>Epidemiologica</b></dt>
+  <dd>
+    <ul class="items">
+      <li>
+        <a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/sala-situacional/listar.php">
+          Sala Situacional</a></li>
+      <li>
+        <a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/epidemiologico/listar.php">
+          Boletín Epidemiologico</a></li>
+    </ul>
+  </dd>
   <dt class="items"><b>Tarifario</b></dt>
   <dd>
     <ul class="items">
