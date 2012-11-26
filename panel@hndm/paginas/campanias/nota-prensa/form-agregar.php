@@ -4,7 +4,7 @@ include("../../../conexion/conexion.php");
 include("../../../conexion/verificar_sesion.php");
 
 /*VARAIABLES DE URL*/
-$idcampania=$_REQUEST["camapania"];
+$idcampania=$_REQUEST["campania"];
 
 //VARIABLES PARA LA HORA
 $fechaTotal=date("Y-m-d H:i:s");
