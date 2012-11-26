@@ -355,6 +355,7 @@ RewriteRule ^mapa-sitio$                       /mapa-sitio.php
 RewriteRule ^normatividad$                       /normatividad.php
 RewriteRule ^campanias$                       /campanas-lista.php
 RewriteRule ^campanias/([0-9]*)/(.*)$               /campanas.php?id=$1&url=$2
+RewriteRule ^campanias/nota/([0-9]*)/(.*)$               /campanas-nota.php?id=$1&url=$2
 
 # ----------------------------------------------------------------------
 # Suppress or force the "www." at the beginning of URLs
