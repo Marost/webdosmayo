@@ -92,7 +92,8 @@ $rst_noticias   = mysql_query("SELECT * FROM DM_campania ORDER BY fecha_publicac
                                     $noticias_fecha=explode("-", $noticias_fecha_total[0]);
 
                                     /*ANCHO Y ALTO*/
-                                    $noticias_imagen_dimensiones=getimagesize($noticias_imagen);
+                                    $noticias_imagen_url=$web."imagenes/upload/".$noticias_imagen_carpeta."".$noticias_imagen;
+                                    $noticias_imagen_dimensiones=getimagesize($noticias_imagen_url);
                                     $noticias_imagen_ancho=$noticias_imagen_dimensiones[0];
                                     $noticias_imagen_alto=$noticias_imagen_dimensiones[1];
                                     $ancho_final = 250;
