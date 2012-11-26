@@ -107,39 +107,25 @@ $rst_noticias   = mysql_query("SELECT * FROM DM_noticia WHERE categoria<>2 AND c
                                     $noticias_fecha=explode("-", $noticias_fecha_total[0])
                                 ?>
 
-                                <article
-                                    <?php if($noticias_categoria_id==1){ ?>
-                                    class="categoria_noticias cnot_alianzas"
-                                    <?php }elseif($noticias_categoria_id==3){ ?>
-                                    class="categoria_noticias cnot_capacitacion"
-                                    <?php }elseif($noticias_categoria_id==4){ ?>
-                                    class="categoria_noticias cnot_equipos"
-                                    <?php }elseif($noticias_categoria_id==6){ ?>
-                                    class="categoria_noticias cnot_noticias"
-                                    <?php }elseif($noticias_categoria_id==7){ ?>
-                                    class="categoria_noticias cnot_proezas"
-                                    <?php }elseif($noticias_categoria_id==8){ ?>
-                                    class="categoria_noticias cnot_reconocimientos"
-                                    <?php } ?>
-                                >
+                                <article class="categoria_noticias">
 
                                     <?php if($noticias_imagen<>""){ ?>
                                     <div class="datos">
-                                        <p class="categoria"><?php echo $noticias_categoria["categoria"] ?></p>
+                                        <p class="categoria"><?php echo $noticias_categoria["categoria"] ?> - <?php echo nombreFecha($noticias_fecha[0],$noticias_fecha[1],$noticias_fecha[2]); ?></p>
                                         <h3><a href="<?php echo $noticias_categoria["url"]."/".$noticias_id."-".$noticias_url; ?>"><?php echo $noticias_titulo; ?></a></h3>
                                         <div class="imagen">
                                             <img src="imagenes/upload/<?php echo $noticias_imagen_carpeta."thumb200/".$noticias_imagen; ?>" width="300" height="200" alt="<?php echo $noticias_titulo; ?>">
                                         </div>
                                         <p><?php echo $noticias_contenido; ?></p>
-                                        <p class="fecha"><?php echo nombreFecha($noticias_fecha[0],$noticias_fecha[1],$noticias_fecha[2]); ?></p>
+                                        <a href="<?php echo $noticias_categoria["url"]."/".$noticias_id."-".$noticias_url; ?>">Más...</a>
                                     </div>
                                     <?php }else{ ?>
                                     
                                     <div class="datos an100">
-                                        <p class="categoria"><?php echo $noticias_categoria["categoria"] ?></p>
+                                        <p class="categoria"><?php echo $noticias_categoria["categoria"] ?> - <?php echo nombreFecha($noticias_fecha[0],$noticias_fecha[1],$noticias_fecha[2]); ?></p>
                                         <h3><a href="<?php echo $noticias_categoria["url"]."/".$noticias_id."-".$noticias_url; ?>"><?php echo $noticias_titulo; ?></a></h3>
                                         <p><?php echo $noticias_contenido; ?></p>
-                                        <p class="fecha"><?php echo nombreFecha($noticias_fecha[0],$noticias_fecha[1],$noticias_fecha[2]); ?></p>
+                                        <a href="<?php echo $noticias_categoria["url"]."/".$noticias_id."-".$noticias_url; ?>">Más...</a>
                                     </div>
 
                                     <?php } ?>
