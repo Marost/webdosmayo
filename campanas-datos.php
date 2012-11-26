@@ -25,7 +25,7 @@ $campania_dato=$_POST["tipo"];
 <?php }elseif ($campania_dato=="material"){
 
     /*DOCUMENTOS*/
-    $rst_cas_docs=mysql_query("SELECT * FROM DM_campania_rebote WHERE cas=$campania_id ORDER BY orden ASC;", $conexion);
+    $rst_cas_docs=mysql_query("SELECT * FROM DM_campania_material WHERE cas=$campania_id ORDER BY orden ASC;", $conexion);
     
 ?>
     

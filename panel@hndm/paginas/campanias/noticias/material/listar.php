@@ -9,7 +9,7 @@ $cebra=1;
 $url="listar.php";
 $idnoticia=$_REQUEST["campania"];
 
-$rst_galeria=mysql_query("SELECT * FROM ".$tabla_suf."_campania_material WHERE cas=$idnoticia ORDER BY orden ASC;", $conexion);
+$rst_galeria=mysql_query("SELECT * FROM ".$tabla_suf."_campania_material WHERE campania=$idnoticia ORDER BY orden ASC;", $conexion);
 $num_galeria=mysql_num_rows($rst_galeria);
 	
 if ($num_galeria==0){ $mensaje2="No hay registros en la base de datos";}
