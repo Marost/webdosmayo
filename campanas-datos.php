@@ -116,7 +116,7 @@ $campania_dato=$_POST["tipo"];
     <table class="tabla_cas" width="700" border="0">
         <tbody>
             <tr>
-                <td class="dato_contenido">
+                <td class="dato_contenido" style="border:none;">
                     <ul>
                         <?php while($fila_cas_docs=mysql_fetch_array($rst_cas_docs)){
                             $docs_titulo=$fila_cas_docs["titulo"];
