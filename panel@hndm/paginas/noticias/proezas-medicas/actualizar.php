@@ -32,7 +32,7 @@ if($_POST['flash_uploader_0_tmpname']==""){
 	$thumb->adaptiveResize(370,220);
 	$thumb->save("../../../../imagenes/upload/".$carpeta_imagen."thumb/".$imagen."", "jpg");
 	$thumb200=PhpThumbFactory::create("../../../../imagenes/upload/".$carpeta_imagen."".$imagen."");
-	$thumb200->adaptiveResize(200,135);
+	$thumb200->adaptiveResize(300,200);
 	$thumb200->save("../../../../imagenes/upload/".$carpeta_imagen."thumb200/".$imagen."", "jpg");
 	$mostrar_imagen=1;
 }
