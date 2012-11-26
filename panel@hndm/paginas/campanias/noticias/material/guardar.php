@@ -10,7 +10,7 @@ $hora=date("H:i");
 $carpeta=fechaCarpeta()."/";
 
 //CONSULTA PARA SABER SI EXISTEN IMAGENES DE LA NOTICIA
-$rst_notgaleria=mysql_query("SELECT * FROM ".$tabla_suf."_campania_material WHERE cas=$idnoticia", $conexion);
+$rst_notgaleria=mysql_query("SELECT * FROM ".$tabla_suf."_campania_material WHERE campania=$idnoticia", $conexion);
 $num_notgaleria=mysql_num_rows($rst_notgaleria);
 $fila_notgaleria=mysql_fetch_array($rst_notgaleria);
 
@@ -39,7 +39,7 @@ if($num_notgaleria>0){
 			rename($ruta_archivo{$cont}.$archivo_tmp{$cont}, $ruta_archivo{$cont}.$archivo_name_total{$cont});
 		}
 
-		mysql_query("INSERT INTO ".$tabla_suf."_campania_material (titulo, documento, documento_tipo, cas, orden)
+		mysql_query("INSERT INTO ".$tabla_suf."_campania_material (titulo, documento, documento_tipo, campania, orden)
 			VALUES('".htmlspecialchars($archivo_name_nombre{$cont})."', '".$archivo_name_total{$cont}."', '".$archivo_name_extension{$cont}."', $idnoticia, $cont_img)", $conexion);
 
 		$cont++; $cont_img++;
@@ -64,7 +64,7 @@ if($num_notgaleria>0){
 			rename($ruta_archivo{$cont}.$archivo_tmp{$cont}, $ruta_archivo{$cont}.$archivo_name_total{$cont});
 		}
 
-		mysql_query("INSERT INTO ".$tabla_suf."_campania_material (titulo, documento, documento_tipo, cas, orden)
+		mysql_query("INSERT INTO ".$tabla_suf."_campania_material (titulo, documento, documento_tipo, campania, orden)
 			VALUES('".htmlspecialchars($archivo_name_nombre{$cont})."', '".$archivo_name_total{$cont}."', '".$archivo_name_extension{$cont}."', $idnoticia, $cont)", $conexion);
 
 		$cont++;

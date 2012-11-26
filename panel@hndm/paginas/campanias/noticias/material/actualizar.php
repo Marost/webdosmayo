@@ -10,7 +10,7 @@ $fecha=fechaPost();
 $hora=date("H:i");
 
 /*EXTRAER CARPETA DE DOCUMENTOS*/
-$documentos=seleccionTabla($idnoticia, "id", "DM_cas", $conexion);
+$documentos=seleccionTabla($idnoticia, "id", "DM_campania_material", $conexion);
 $carpeta_archivo=$documentos["carpeta_documentos"];
 
 if($_POST['flash_uploader_0_tmpname']<>""){
@@ -34,7 +34,7 @@ if($_POST['flash_uploader_0_tmpname']<>""){
 }
 
 mysql_query("UPDATE ".$tabla_suf."_campania_material SET titulo='".htmlspecialchars($titulo)."', documento='$archivo_name', 
-	documento_tipo='$archivo_name_extension', cas=$idnoticia WHERE id=". $_REQUEST["id"].";", $conexion);
+	documento_tipo='$archivo_name_extension', campania=$idnoticia WHERE id=". $_REQUEST["id"].";", $conexion);
 	
 if (mysql_errno()!=0)
 {
