@@ -57,7 +57,7 @@ $rst_campanias=mysql_query("SELECT * FROM DM_campania ORDER BY fecha_publicacion
                                 ?>
 
                                 <article>
-                                    <h3><a href="campanias/data/<?php echo $campania_id."-".$campania_url; ?>"><?php echo $campania_titulo; ?></a></h3>
+                                    <h3><a href="campanias/<?php echo $campania_id."/".$campania_url; ?>"><?php echo $campania_titulo; ?></a></h3>
                                 </article>
 
                                 <?php } ?>
