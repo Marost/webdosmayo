@@ -343,6 +343,7 @@ RewriteRule ^tarifario/medicamentos$    /tarifario-medicamentos.php
 RewriteRule ^tarifario/procedimientos$  /tarifario-procedimientos.php
 RewriteRule ^historia$                  /historia.php
 RewriteRule ^atencion-asegurado$        /atencion-asegurado.php
+RewriteRule ^atencion-ciudadano$        /atencion-ciudadano.php
 RewriteRule ^cas$                       /cas.php
 RewriteRule ^directorio$                       /directorio.php
 RewriteRule ^informacion-institucional$                       /informacion-institucional.php
