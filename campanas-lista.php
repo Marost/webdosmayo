@@ -13,12 +13,12 @@ require("libs/pagination/class_pagination.php");
 
 //INICIO DE PAGINACION
 $page = (isset($_GET['page'])) ? intval($_GET['page']) : 1;
-$rst_noticias   = mysql_query("SELECT COUNT(*) as count FROM DM_campania WHERE id>0 ORDER BY fecha_publicacion DESC", $conexion);
+$rst_noticias   = mysql_query("SELECT COUNT(*) as count FROM DM_campania ORDER BY fecha_publicacion DESC", $conexion);
 $fila_noticias  = mysql_fetch_assoc($rst_noticias);
 $generated      = intval($fila_noticias['count']);
 $pagination     = new Pagination("6", $generated, $page, $url_web."?page", 1, 0);
 $start          = $pagination->prePagination();
-$rst_noticias   = mysql_query("SELECT * FROM DM_campania WHERE id>0 ORDER BY fecha_publicacion DESC LIMIT $start, 6", $conexion);
+$rst_noticias   = mysql_query("SELECT * FROM DM_campania ORDER BY fecha_publicacion DESC LIMIT $start, 6", $conexion);
 
 
 ?>
@@ -88,13 +88,12 @@ $rst_noticias   = mysql_query("SELECT * FROM DM_campania WHERE id>0 ORDER BY fec
                                     $noticias_titulo=$fila_noticias["titulo"];
                                     $noticias_imagen=$fila_noticias["imagen"];
                                     $noticias_imagen_carpeta=$fila_noticias["carpeta_imagen"];
-                                    $noticias_imagen_portada=$fila_noticias["imagen_portada"];
+                                    //$noticias_imagen_portada=$fila_noticias["imagen_portada"];
                                     $noticias_fecha_total=explode(" ",$fila_noticias["fecha_publicacion"]);
                                 ?>
 
                                 <article class="categoria_noticias">
 
-                                    <?php if($noticias_imagen<>""){ ?>
                                     <div class="datos">
                                         <p class="categoria"><?php echo nombreFecha($noticias_fecha[0],$noticias_fecha[1],$noticias_fecha[2]); ?></p>
                                         <h3><a href="<?php echo $noticias_categoria["url"]."/".$noticias_id."-".$noticias_url; ?>"><?php echo $noticias_titulo; ?></a></h3>
@@ -103,7 +102,6 @@ $rst_noticias   = mysql_query("SELECT * FROM DM_campania WHERE id>0 ORDER BY fec
                                         </div>
                                         <a href="<?php echo $noticias_categoria["url"]."/".$noticias_id."-".$noticias_url; ?>">Más...</a>
                                     </div>
-                                    <?php } ?>
 
                                 </article>
                                 <?php } ?>
