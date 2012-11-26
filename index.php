@@ -240,13 +240,25 @@ $alianzas_url_final=$alianzas_categoria["url"]."/".$alianzas_id."-".$alianzas_ur
                                         
                                         <ul class="allinone_carousel_list">
                                             <li data-bottom-thumb="/imagenes/campanias-especiales/thumb110/campana1.jpg">
-                                                <img src="/imagenes/campanias-especiales/thumb350/campana1.jpg" alt="" /></li>
+                                                <div style="float:left; width:100%">
+                                                    <img src="/imagenes/campanias-especiales/thumb350/campana1.jpg" alt="" />
+                                                </div>
+                                            </li>
                                             <li data-bottom-thumb="/imagenes/campanias-especiales/thumb110/campana2.jpg">
-                                                <img src="/imagenes/campanias-especiales/thumb350/campana2.jpg" alt="" /></li>
+                                                <div style="float:left; width:100%">
+                                                    <img src="/imagenes/campanias-especiales/thumb350/campana2.jpg" alt="" />
+                                                </div>
+                                            </li>
                                             <li data-bottom-thumb="/imagenes/campanias-especiales/thumb110/campana3.jpg">
-                                                <img src="/imagenes/campanias-especiales/thumb350/campana3.jpg" alt="" /></li>
+                                                <div style="float:left; width:100%">
+                                                    <img src="/imagenes/campanias-especiales/thumb350/campana3.jpg" alt="" />
+                                                </div>
+                                            </li>
                                             <li data-bottom-thumb="/imagenes/campanias-especiales/thumb110/campana4.jpg">
-                                                <img src="/imagenes/campanias-especiales/thumb350/campana4.jpg" alt="" /></li>
+                                                <div style="float:left; width:100%">
+                                                    <img src="/imagenes/campanias-especiales/thumb350/campana4.jpg" alt="" />
+                                                </div>
+                                            </li>
                                         </ul>
 
                                     </div>
