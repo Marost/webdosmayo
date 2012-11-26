@@ -38,7 +38,7 @@ $rst_cas=mysql_query("SELECT * FROM DM_epidemiologico ORDER BY fecha_publicacion
 
                     <section id="news">
 
-                        <div class="nw-nota info-epidemiologico">
+                        <div class="nw-nota cas">
 
                             <div class="titulo">
                                 <h2>Boletín Epidemiológico</h2>
