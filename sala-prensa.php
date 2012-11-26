@@ -77,7 +77,8 @@ $rst_noticias   = mysql_query("SELECT * FROM DM_noticia WHERE categoria<>2 AND c
                                 <?php while($fila_noticias=mysql_fetch_assoc($rst_noticias)){
                                     $noticias_id=$fila_noticias["id"];
                                     $noticias_url=$fila_noticias["url"];
-                                    $noticias_categoria=seleccionTabla($fila_noticias["categoria"], "id", "DM_noticia_categoria", $conexion);
+                                    $noticias_categoria_id=$fila_noticias["categoria"];
+                                    $noticias_categoria=seleccionTabla($noticias_categoria_id, "id", "DM_noticia_categoria", $conexion);
                                     $noticias_titulo=$fila_noticias["titulo"];
                                     $noticias_contenido=soloDescripcion($fila_noticias["contenido"]);
                                     $noticias_imagen=$fila_noticias["imagen"];
@@ -85,8 +86,22 @@ $rst_noticias   = mysql_query("SELECT * FROM DM_noticia WHERE categoria<>2 AND c
                                     $noticias_fecha_total=explode(" ",$fila_noticias["fecha_publicacion"]);
                                     $noticias_fecha=explode("-", $noticias_fecha_total[0])
                                 ?>
-
-                                <article class="categoria_noticias">
+                                
+                                <article
+                                    <?php if($noticias_categoria_id==1){ ?>
+                                    class="categoria_noticias cnot_alianzas"
+                                    <?php }elseif($noticias_categoria_id==3){ ?>
+                                    class="categoria_noticias cnot_capacitacion"
+                                    <?php }elseif($noticias_categoria_id==4){ ?>
+                                    class="categoria_noticias cnot_equipos"
+                                    <?php }elseif($noticias_categoria_id==6){ ?>
+                                    class="categoria_noticias cnot_noticias"
+                                    <?php }elseif($noticias_categoria_id==7){ ?>
+                                    class="categoria_noticias cnot_proezas"
+                                    <?php }elseif($noticias_categoria_id==8){ ?>
+                                    class="categoria_noticias cnot_reconocimientos"
+                                    <?php } ?>
+                                >
 
                                     <?php if($noticias_imagen<>""){ ?>
                                     <div class="datos">
