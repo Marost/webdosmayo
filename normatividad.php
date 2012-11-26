@@ -67,7 +67,7 @@ $rst_cas=mysql_query("SELECT * FROM DM_normatividad ORDER BY fecha_publicacion D
                                             $cas_fecha=explode("-", $cas_fecha_total[0]);
 
                                             /*DOCUMENTOS*/
-                                            $rst_cas_docs=mysql_query("SELECT * FROM DM_cas_documentos WHERE cas=$cas_id ORDER BY orden ASC;", $conexion);
+                                            $rst_cas_docs=mysql_query("SELECT * FROM DM_normativiadad_documentos WHERE cas=$cas_id ORDER BY orden ASC;", $conexion);
                                         ?>
                                         <tr>
                                             <td class="dato_cabecera tdcab-sup">Fecha Publicacion</td>
