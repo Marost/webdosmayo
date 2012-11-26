@@ -72,7 +72,7 @@ $campania_dato=$_POST["tipo"];
 
     $rst_noticias=mysql_query("SELECT * FROM DM_campania_noticia WHERE campania=$campania_id; ORDER BY fecha_publicacion DESC;", $conexion);
 
-    while($fila_noticias=mysql_fetch_assoc($rst_noticias)){
+    while($fila_noticias=mysql_fetch_array($rst_noticias)){
         $noticias_id=$fila_noticias["id"];
         $noticias_url=$fila_noticias["url"];
         $noticias_categoria_id=$fila_noticias["categoria"];

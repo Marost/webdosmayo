@@ -43,7 +43,7 @@ if (mysql_errno()!=0)
 	//header("Location:listar.php?mensaje=5");
 } else {
 	mysql_close($conexion);
-	header("Location:listar.php?mensaje=2&noticia=$idnoticia");
+	header("Location:listar.php?mensaje=2&campania=$idnoticia");
 }
 
 ?>

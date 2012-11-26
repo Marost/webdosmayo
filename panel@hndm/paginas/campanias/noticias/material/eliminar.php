@@ -6,7 +6,7 @@ $tipo=$_REQUEST["tipo"];
 $idnoticia=$_REQUEST["noticia"];
 
 if($tipo=="all"){
-	mysql_query("DELETE FROM ".$tabla_suf."_campania_material WHERE noticia=$idnoticia;",$conexion);
+	mysql_query("DELETE FROM ".$tabla_suf."_campania_material WHERE campania=$idnoticia;",$conexion);
 }else{
 	mysql_query("DELETE FROM ".$tabla_suf."_campania_material WHERE id=".$_REQUEST["id"].";",$conexion);
 }
@@ -14,10 +14,10 @@ if($tipo=="all"){
 if (mysql_errno()!=0)
 {
 	mysql_close($conexion);
-	header("Location:listar.php?mensaje=6&noticia=$idnoticia");
+	header("Location:listar.php?mensaje=6&campania=$idnoticia");
 } else {
 	mysql_close($conexion);
-	header("Location:listar.php?mensaje=3&noticia=$idnoticia");
+	header("Location:listar.php?mensaje=3&campania=$idnoticia");
 }
 
 ?>

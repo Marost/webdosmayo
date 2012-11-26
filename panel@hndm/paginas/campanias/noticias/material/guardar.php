@@ -79,7 +79,7 @@ if (mysql_errno()!=0)
 	//header("Location:listar.php?mensaje=4");
 } else {
 	mysql_close($conexion);
-	header("Location:listar.php?mensaje=1&noticia=$idnoticia");
+	header("Location:listar.php?mensaje=1&campania=$idnoticia");
 }
 
 ?>
