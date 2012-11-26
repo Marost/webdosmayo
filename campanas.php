@@ -44,7 +44,7 @@ $campania_titulo=$fila_campanias["titulo"];
                     jHist("#tarifario_cabecera ul li").removeClass("selected");
                     jHist(this).addClass("selected");
                     var tipo = jHist(this).attr("rel");
-                    jHist.post("historia-datos.php", {tipo: tipo, id: <?php echo $idnota; ?>},
+                    jHist.post("campanas-datos.php", {tipo: tipo, id: <?php echo $idnota; ?>},
                     function(data){
                         jHist("#tarifario_contenido").html(data);
                         jHist("#progressbar").addClass("ocultar");
