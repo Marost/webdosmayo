@@ -10,7 +10,7 @@ $campania_dato=$_POST["tipo"];
 
 ?>
 
-<?php }if ($campania_dato=="proposito"){ ?>
+<?php if ($campania_dato=="proposito"){ ?>
 
     <?php
 
