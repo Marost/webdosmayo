@@ -145,9 +145,10 @@ $rst_noticias   = mysql_query("SELECT * FROM DM_noticia WHERE categoria<>2 AND c
                                     <?php } ?>
 
                                 </article>
+                                <?php } ?>
 
                                 <div style="width=100%; float:left;">
-                                    <?php } ?> <?php $pagination->pagination(); ?>
+                                    <?php $pagination->pagination(); ?>
                                 </div>
 
                             </div>                            
