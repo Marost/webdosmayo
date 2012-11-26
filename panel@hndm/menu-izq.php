@@ -96,17 +96,6 @@ jmnpr(document).ready(function(){
         	Listar</a></li>
     </ul>
   </dd>
-  <dt class="items"><b>Campañas</b></dt>
-  <dd>
-    <ul class="items">
-      <li>
-        <a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/videos/form-agregar.php">
-          Agregar</a></li>
-      <li>
-        <a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/videos/listar.php">
-          Listar</a></li>
-    </ul>
-  </dd>
   <dt class="items"><b>Epidemiologica</b></dt>
   <dd>
     <ul class="items">
@@ -138,17 +127,6 @@ jmnpr(document).ready(function(){
       <li>
         <a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/directorio/funcionarios/listar.php">
           Otros Funcionarios</a></li>
-    </ul>
-  </dd>
-  <dt class="items"><b>Galeria</b></dt>
-  <dd>
-    <ul class="items">
-      <li>
-      	<a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/galeria/form-agregar.php">
-        	Agregar</a></li>
-      <li>
-      	<a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/galeria/listar.php">
-        	Listar</a></li>
     </ul>
   </dd>
   <div class="espacio"></div>
