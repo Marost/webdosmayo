@@ -14,7 +14,7 @@ $url_noticia_url=$_REQUEST["url"];
 $url_web=$web."".$url_categoria."/".$url_noticia_id."-".$url_noticia_url;
 
 /*NOTICIA*/
-$rst_noticia=mysql_query("SELECT * FROM DM_campanias_noticia WHERE id=$url_noticia_id;", $conexion);
+$rst_noticia=mysql_query("SELECT * FROM DM_campania_noticia WHERE id=$url_noticia_id;", $conexion);
 $fila_noticia=mysql_fetch_array($rst_noticia);
 
 /*VARIABLES DE NOTICIA*/
@@ -26,7 +26,7 @@ $noticia_imagen_carpeta=$fila_noticia["carpeta_imagen"];
 $noticia_categoria=$fila_noticia["categoria"];
 
 /*NOTICIA - SLIDE*/
-$rst_noticia_slide=mysql_query("SELECT * FROM DM_campanias_noticia_slide WHERE noticia=$url_noticia_id ORDER BY orden ASC;", $conexion);
+$rst_noticia_slide=mysql_query("SELECT * FROM DM_campania_noticia_slide WHERE noticia=$url_noticia_id ORDER BY orden ASC;", $conexion);
 $num_noticia_slide=mysql_num_rows($rst_noticia_slide);
 
 ?>
