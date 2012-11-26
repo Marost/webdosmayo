@@ -111,7 +111,7 @@ $rst_noticias   = mysql_query("SELECT * FROM DM_noticia WHERE categoria<>2 AND c
 
                                     <?php if($noticias_imagen<>""){ ?>
                                     <div class="datos">
-                                        <p class="categoria"><?php echo $noticias_categoria["categoria"] ?> - <?php echo nombreFecha($noticias_fecha[0],$noticias_fecha[1],$noticias_fecha[2]); ?></p>
+                                        <p class="categoria"><?php echo $noticias_categoria["categoria"] ?> <br> <?php echo nombreFecha($noticias_fecha[0],$noticias_fecha[1],$noticias_fecha[2]); ?></p>
                                         <h3><a href="<?php echo $noticias_categoria["url"]."/".$noticias_id."-".$noticias_url; ?>"><?php echo $noticias_titulo; ?></a></h3>
                                         <div class="imagen">
                                             <img src="imagenes/upload/<?php echo $noticias_imagen_carpeta."thumb200/".$noticias_imagen; ?>" width="300" height="200" alt="<?php echo $noticias_titulo; ?>">
@@ -122,7 +122,7 @@ $rst_noticias   = mysql_query("SELECT * FROM DM_noticia WHERE categoria<>2 AND c
                                     <?php }else{ ?>
                                     
                                     <div class="datos an100">
-                                        <p class="categoria"><?php echo $noticias_categoria["categoria"] ?> - <?php echo nombreFecha($noticias_fecha[0],$noticias_fecha[1],$noticias_fecha[2]); ?></p>
+                                        <p class="categoria"><?php echo $noticias_categoria["categoria"] ?> <br> <?php echo nombreFecha($noticias_fecha[0],$noticias_fecha[1],$noticias_fecha[2]); ?></p>
                                         <h3><a href="<?php echo $noticias_categoria["url"]."/".$noticias_id."-".$noticias_url; ?>"><?php echo $noticias_titulo; ?></a></h3>
                                         <p><?php echo $noticias_contenido; ?></p>
                                         <a href="<?php echo $noticias_categoria["url"]."/".$noticias_id."-".$noticias_url; ?>">Más...</a>

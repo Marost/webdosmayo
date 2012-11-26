@@ -98,7 +98,7 @@ $rst_videos_inf=mysql_query("SELECT * FROM DM_videos ORDER BY fecha_publicacion 
             <li><a href="atencion-asegurado"><span class="img icon-atencion"></span>Atención al Asegurado</a></li>
             <li><a href="libro-reclamaciones"><span class="img icon-libro"></span>Libro de Reclamaciones</a></li>
             <li><a href="tarifario/medicamentos"><span class="img icon-tarifario"></span>Tarifario <br>Virtual</a></li>
-            <li><a href="atencion-ciudadano"><span class="img icon-atencion"></span>Atención al Ciudadano</a></li>
+            <li><a href="atencion-ciudadano"><span class="img icon-ciudadano"></span>Atención al Ciudadano</a></li>
             <li><a href="http://observatorio.digemid.minsa.gob.pe/" target="_blank"><span class="img icon-observatorio"></span>Observatorio de Medicamentos</a></li>
             <li><a href="construccion"><span class="img icon-online"></span>Citas <br>Online</a><div>PRONTO</div></li>
             <li><a href="cas"><span class="img icon-cas"></span>Contrato Administrativo de Servicios</a></li>
