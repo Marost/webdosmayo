@@ -28,9 +28,9 @@ $page = (isset($_GET['page'])) ? intval($_GET['page']) : 1;
 $query     = mysql_query("SELECT COUNT(*) as count FROM DM_noticia WHERE categoria=$categoria_id ORDER BY fecha_publicacion DESC;", $conexion);
 $row       = mysql_fetch_assoc($query);
 $generated = intval($row['count']);
-$pagination = new Pagination("7", $generated, $page, $url_web."&page", 1, 0);
+$pagination = new Pagination("6", $generated, $page, $url_web."&page", 1, 0);
 $start = $pagination->prePagination();
-$query  = mysql_query("SELECT * FROM DM_noticia WHERE categoria=$categoria_id ORDER BY fecha_publicacion DESC LIMIT $start, 7", $conexion);
+$query  = mysql_query("SELECT * FROM DM_noticia WHERE categoria=$categoria_id ORDER BY fecha_publicacion DESC LIMIT $start, 6", $conexion);
 
 ?>
 <!DOCTYPE html>
@@ -47,6 +47,27 @@ $query  = mysql_query("SELECT * FROM DM_noticia WHERE categoria=$categoria_id OR
 
         <!-- PAGINACION -->
         <link rel="stylesheet" href="/libs/pagination/pagination.css" media="screen">
+
+        <!-- ALTO DE DIV -->
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script type="text/javascript">
+        var jald = jQuery.noConflict();
+        function equalHeight(group) {
+           tallest = 0;
+           group.each(function() {
+              thisHeight = jald(this).height();
+              if(thisHeight > tallest) {
+                 tallest = thisHeight;
+              }
+           });
+           group.height(tallest);
+        }
+
+        jald(document).ready(function() {
+           equalHeight(jald(".categoria_noticias"));
+        });
+
+        </script>        
 
     </head>
     <body>

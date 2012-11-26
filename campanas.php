@@ -3,6 +3,17 @@
 require_once("panel@hndm/conexion/conexion.php");
 require_once("panel@hndm/conexion/funciones.php");
 require_once("panel@hndm/conexion/funcion-paginacion.php");
+
+/*VARIABLES DE URL*/
+$idnota=$_REQUEST["id"];
+
+/*CAMPAÑAS*/
+$rst_campanias=mysql_query("SELECT * FROM DM_campania WHERE id=$idnota;", $conexion);
+$fila_campanias=mysql_fetch_array($rst_campanias);
+
+/*VARIABLES*/
+$campania_titulo=$fila_campanias["titulo"];
+
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -12,9 +23,36 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Campañas Especiales</title>
+        <title><?php echo $campania_titulo; ?></title>
 
         <?php require_once("w-header-scripts.php") ?>
+
+        <!-- HISTORIA -->
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script>
+            var jHist = jQuery.noConflict();
+            jHist(document).ready(function(){
+                jHist.post("campanas-datos.php", {tipo: "proposito", id: <?php echo $idnota; ?>},
+                function(data){
+                    jHist("#progressbar").removeClass("ocultar");
+                    jHist("#tarifario_contenido").html(data);
+                    jHist("#progressbar").addClass("ocultar");
+                });
+                
+                jHist("#tarifario_cabecera ul li").click(function(){
+                    jHist("#progressbar").removeClass("ocultar");
+                    jHist("#tarifario_cabecera ul li").removeClass("selected");
+                    jHist(this).addClass("selected");
+                    var tipo = jHist(this).attr("rel");
+                    jHist.post("historia-datos.php", {tipo: tipo, id: <?php echo $idnota; ?>},
+                    function(data){
+                        jHist("#tarifario_contenido").html(data);
+                        jHist("#progressbar").addClass("ocultar");
+                    });
+                })
+                
+            });
+        </script>
 
     </head>
     <body>
@@ -38,7 +76,7 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
                         <div class="nw-nota campania">
 
                             <div class="titulo">
-                                <h2>Campañas Especiales</h2>
+                                <h2><?php echo $campania_titulo; ?></h2>
                             </div>
 
                             <div class="contenido">
@@ -46,10 +84,10 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
                                 <div id="tarifario_cabecera">
                                   
                                   <ul>
-                                    <li rel="1" id="proposito" class="selected"><a href="javascript:;">Proposito de la Campaña</a></li>
-                                    <li rel="2" id="material"><a href="javascript:;">Material Comunicacional</a></li>
-                                    <li rel="3" id="nota-prensa"><a href="javascript:;">Nota de Prensa</a></li>
-                                    <li rel="4" id="rebote-medios"><a href="javascript:;">Rebote en Medios</a></li>
+                                    <li rel="proposito" id="proposito" class="selected"><a href="javascript:;">Proposito de la Campaña</a></li>
+                                    <li rel="material" id="material"><a href="javascript:;">Material Comunicacional</a></li>
+                                    <li rel="nota-prensa" id="nota-prensa"><a href="javascript:;">Nota de Prensa</a></li>
+                                    <li rel="rebote" id="rebote"><a href="javascript:;">Rebote en Medios</a></li>
                                   </ul>
 
                                 </div>
