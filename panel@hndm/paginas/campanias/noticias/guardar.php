@@ -20,6 +20,9 @@ $fecha_pub=$fecha_publicacion." ".$hora_publicacion.":00";
 //IMAGEN O VIDEO
 if($_POST['flash_uploader_0_tmpname']<>""){
 	$imagen=$_POST['flash_uploader_0_tmpname'];
+	$thumb=PhpThumbFactory::create("../../../../imagenes/upload/".$carpeta_imagen."".$imagen."");
+	$thumb->adaptiveResize(110,65);
+	$thumb->save("../../../../imagenes/upload/".$carpeta_imagen."thumb200/".$imagen."", "jpg");
 }
 
 if($_POST['flash_uploader_1_tmpname']<>""){

@@ -27,9 +27,11 @@ if($_POST['flash_uploader_0_tmpname']==""){
 	$carpeta_imagen=$_POST["carpeta_imagen"];
 }elseif($_POST['flash_uploader_0_tmpname']<>""){
 	$imagen=$_POST['flash_uploader_0_tmpname'];
-	$imagen_portada=$_POST["flash_uploader_1_tmpname"];
 	$carpeta_imagen=fechaCarpeta()."/";
-
+	$thumb=PhpThumbFactory::create("../../../../imagenes/upload/".$carpeta_imagen."".$imagen."");
+	$thumb->adaptiveResize(110,65);
+	$thumb->save("../../../../imagenes/upload/".$carpeta_imagen."thumb200/".$imagen."", "jpg");
+	$imagen_portada=$_POST["flash_uploader_1_tmpname"];
 }
 
 //GUARDAR DATOS

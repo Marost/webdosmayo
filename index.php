@@ -69,6 +69,9 @@ $rst_videos=mysql_query("SELECT * FROM DM_videos ORDER BY fecha_publicacion DESC
 $fila_videos=mysql_fetch_array($rst_videos);
 $videos_youtube=$fila_videos["video"];
 
+/*CAMPAÑAS*/
+$rst_campanias=mysql_query("SELECT * FROM DM_campania ORDER BY fecha_publicacion DESC LIMIT 6;", $conexion);
+
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -244,26 +247,20 @@ $videos_youtube=$fila_videos["video"];
                                     <div style="display:none;">
                                         
                                         <ul class="allinone_carousel_list">
-                                            <li data-bottom-thumb="/imagenes/campanias-especiales/thumb110/campana1.jpg">
-                                                <div style="float:left; width:100%">
-                                                    <img src="/imagenes/campanias-especiales/thumb350/campana1.jpg" alt="" />
-                                                </div>
+
+                                            <?php while($fila_campanias=mysql_fetch_array($rst_campanias)){
+                                                $campania_id=$fila_campanias["id"];
+                                                $campania_url=$fila_campanias["url"];
+                                                $campania_titulo=$fila_campanias["titulo"];
+                                                $campania_imagen_portada=$fila_campanias["imagen_portada"];
+                                                $campania_imagen_carpeta=$fila_campanias["carpeta_imagen"];
+                                            ?>
+                                            <li data-link="campanias/<?php echo $campania_id."/".$campania_url; ?>"
+                                            data-bottom-thumb="/imagenes/upload/<?php echo $campania_imagen_carpeta."thumb200/".$campania_imagen_carpeta; ?>">
+                                                <img src="/imagenes/upload/<?php echo $campania_imagen_carpeta."".$campania_imagen_carpeta; ?>" alt="" />
                                             </li>
-                                            <li data-bottom-thumb="/imagenes/campanias-especiales/thumb110/campana2.jpg">
-                                                <div style="float:left; width:100%">
-                                                    <img src="/imagenes/campanias-especiales/thumb350/campana2.jpg" alt="" />
-                                                </div>
-                                            </li>
-                                            <li data-bottom-thumb="/imagenes/campanias-especiales/thumb110/campana3.jpg">
-                                                <div style="float:left; width:100%">
-                                                    <img src="/imagenes/campanias-especiales/thumb350/campana3.jpg" alt="" />
-                                                </div>
-                                            </li>
-                                            <li data-bottom-thumb="/imagenes/campanias-especiales/thumb110/campana4.jpg">
-                                                <div style="float:left; width:100%">
-                                                    <img src="/imagenes/campanias-especiales/thumb350/campana4.jpg" alt="" />
-                                                </div>
-                                            </li>
+                                            <?php } ?>
+                                            
                                         </ul>
 
                                     </div>

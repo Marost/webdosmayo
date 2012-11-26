@@ -99,7 +99,7 @@ $rst_noticias   = mysql_query("SELECT * FROM DM_campania ORDER BY fecha_publicac
                                         <h3><a href="<?php echo $noticias_categoria["url"]."/".$noticias_id."-".$noticias_url; ?>">
                                             <?php echo $noticias_titulo; ?></a></h3>
                                         <div class="imagen">
-                                            <img src="imagenes/upload/<?php echo $noticias_imagen_carpeta."thumb200/".$noticias_imagen; ?>" width="300" alt="<?php echo $noticias_titulo; ?>">
+                                            <img src="imagenes/upload/<?php echo $noticias_imagen_carpeta."".$noticias_imagen; ?>" width="250" alt="<?php echo $noticias_titulo; ?>">
                                         </div>
                                         <a href="<?php echo $noticias_categoria["url"]."/".$noticias_id."-".$noticias_url; ?>">Más...</a>
                                     </div>

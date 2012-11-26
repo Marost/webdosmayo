@@ -62,7 +62,7 @@ jq(function() {
     runtimes: 'flash', url: 'upload.php', max_file_size: '10mb',
     chunk_size: '1mb', unique_names: true,
     filters: [ {title: "Image files", extensions: "jpg,gif,png"}],
-    resize: {width: 500, height: 320, quality: 100},
+    resize: {width: 500, height: 500, quality: 100},
     flash_swf_url: '../../../js/plupload/plupload.flash.swf'
   }); 
 });
