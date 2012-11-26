@@ -4,7 +4,7 @@ require_once("panel@hndm/conexion/conexion.php");
 require_once("panel@hndm/conexion/funciones.php");
 require_once("panel@hndm/conexion/funcion-paginacion.php");
 
-/*CAS*/
+/*NORMATIVIDAD*/
 $rst_cas=mysql_query("SELECT * FROM DM_normatividad ORDER BY fecha_publicacion DESC", $conexion);
 ?>
 <!DOCTYPE html>
