@@ -64,6 +64,11 @@ $alianzas_imagen_carpeta=$fila_alianzas["carpeta_imagen"];
 $alianzas_categoria=seleccionTabla(1, "id", "DM_noticia_categoria", $conexion);
 $alianzas_url_final=$alianzas_categoria["url"]."/".$alianzas_id."-".$alianzas_url;
 
+/*VIDEOS*/
+$rst_videos=mysql_query("SELECT * FROM DM_videos ORDER BY fecha_publicacion DESC LIMIT 1;", $conexion);
+$fila_videos=mysql_fetch_array($rst_videos);
+$videos_youtube=$fila_videos["video"];
+
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -263,7 +268,7 @@ $alianzas_url_final=$alianzas_categoria["url"]."/".$alianzas_id."-".$alianzas_ur
 
                                     </div>
 
-                                    <a href="campanas.php">Más...</a>
+                                    <a href="campanias">Más...</a>
 
                                 </div>
 
@@ -360,8 +365,9 @@ $alianzas_url_final=$alianzas_categoria["url"]."/".$alianzas_id."-".$alianzas_ur
 
                                 <article class="nws-contenido">
 
-                                    <iframe width="370" height="150" src="http://www.youtube.com/embed/BEMv8j2wdQw?wmode=transparent&autohide=1&egm=0&hd=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=0&showsearch=0&theme=light" frameborder="0" allowfullscreen></iframe>
-                                    <a href="construccion">Más...</a>
+                                    <iframe width="370" height="150" frameborder="0" allowfullscreen
+                                    src="http://www.youtube.com/embed/<?php echo $videos_youtube; ?>?wmode=transparent&autohide=1&egm=0&hd=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=0&showsearch=0&theme=light"></iframe>
+                                    <a href="sala-prensa">Más...</a>
                                     
                                 </article>
                             </div>
