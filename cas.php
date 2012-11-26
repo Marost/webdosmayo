@@ -109,7 +109,7 @@ $rst_cas=mysql_query("SELECT * FROM DM_cas ORDER BY fecha_publicacion DESC", $co
                                                                     class="png" 
                                                                 <?php }elseif($docs_documento_tipo=="bmp"){ ?>
                                                                     class="bmp" 
-                                                                <?php }elseif($docs_documento_tipo=="jpg" or $docs_documento_tipo=="jpeg"){ ?>
+                                                                <?php }elseif($docs_documento_tipo=="jpg" or $docs_documento_tipo=="jpeg" or $docs_documento_tipo=="JPG" or $docs_documento_tipo=="JPEG"){ ?>
                                                                     class="jpg" 
                                                                 <?php }elseif($docs_documento_tipo=="zip" or $docs_documento_tipo=="rar"){ ?>
                                                                     class="zip" 

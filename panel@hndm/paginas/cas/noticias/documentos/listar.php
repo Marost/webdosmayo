@@ -124,7 +124,7 @@ if(confirm("¿Está seguro de borrar todos los registros?")) {
                 <img title="<?php echo $documento_titulo; ?>" src="../../../../images/icons/icon-file-png.png" width="150" />
             <?php }elseif($documento_tipo=="bmp"){ ?>
                 <img title="<?php echo $documento_titulo; ?>" src="../../../../images/icons/icon-file-bmp.png" width="150" />
-            <?php }elseif($documento_tipo=="jpg" or $documento_tipo=="jpeg"){ ?>
+            <?php }elseif($documento_tipo=="jpg" or $documento_tipo=="jpeg" or $documento_tipo=="JPG" or $documento_tipo=="JPEG"){ ?>
                 <img title="<?php echo $documento_titulo; ?>" src="../../../../images/icons/icon-file-jpg.png" width="150" />
             <?php }elseif($documento_tipo=="zip" or $documento_tipo=="rar"){ ?>
                 <img title="<?php echo $documento_titulo; ?>" src="../../../../images/icons/icon-file-zip.png" width="150" />
