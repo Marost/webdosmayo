@@ -70,26 +70,23 @@ $campania_dato=$_POST["tipo"];
 
     <?php
 
-    $rst_noticias=mysql_query("SELECT * FROM DM_campania_noticia WHERE campania=$campania_id; ORDER BY fecha_publicacion DESC;", $conexion);
+    $rst_noticias=mysql_query("SELECT * FROM DM_campania_noticia WHERE campania=$campania_id ORDER BY fecha_publicacion DESC;", $conexion);
 
     while($fila_noticias=mysql_fetch_array($rst_noticias)){
         $noticias_id=$fila_noticias["id"];
         $noticias_url=$fila_noticias["url"];
-        $noticias_categoria_id=$fila_noticias["categoria"];
-        $noticias_categoria=seleccionTabla($noticias_categoria_id, "id", "DM_noticia_categoria", $conexion);
         $noticias_titulo=$fila_noticias["titulo"];
         $noticias_contenido=soloDescripcion($fila_noticias["contenido"]);
         $noticias_imagen=$fila_noticias["imagen"];
         $noticias_imagen_carpeta=$fila_noticias["carpeta_imagen"];
         $noticias_fecha_total=explode(" ",$fila_noticias["fecha_publicacion"]);
-        $noticias_fecha=explode("-", $noticias_fecha_total[0])
+        $noticias_fecha=explode("-", $noticias_fecha_total[0]);
     ?>
 
     <article class="categoria_noticias">
 
         <?php if($noticias_imagen<>""){ ?>
         <div class="datos">
-            <p class="categoria"><?php echo $noticias_categoria["categoria"] ?></p>
             <h3><a href="<?php echo $noticias_categoria["url"]."/".$noticias_id."-".$noticias_url; ?>"><?php echo $noticias_titulo; ?></a></h3>
             <div class="imagen">
                 <img src="imagenes/upload/<?php echo $noticias_imagen_carpeta."thumb200/".$noticias_imagen; ?>" width="300" height="200" alt="<?php echo $noticias_titulo; ?>">
@@ -100,7 +97,6 @@ $campania_dato=$_POST["tipo"];
         <?php }else{ ?>
         
         <div class="datos an100">
-            <p class="categoria"><?php echo $noticias_categoria["categoria"] ?></p>
             <h3><a href="<?php echo $noticias_categoria["url"]."/".$noticias_id."-".$noticias_url; ?>"><?php echo $noticias_titulo; ?></a></h3>
             <p><?php echo $noticias_contenido; ?></p>
             <p class="fecha"><?php echo nombreFecha($noticias_fecha[0],$noticias_fecha[1],$noticias_fecha[2]); ?></p>
