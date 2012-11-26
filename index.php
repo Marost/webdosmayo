@@ -252,12 +252,13 @@ $rst_campanias=mysql_query("SELECT * FROM DM_campania ORDER BY fecha_publicacion
                                                 $campania_id=$fila_campanias["id"];
                                                 $campania_url=$fila_campanias["url"];
                                                 $campania_titulo=$fila_campanias["titulo"];
+                                                $campania_imagen=$fila_campanias["imagen"];
                                                 $campania_imagen_portada=$fila_campanias["imagen_portada"];
                                                 $campania_imagen_carpeta=$fila_campanias["carpeta_imagen"];
                                             ?>
                                             <li data-link="campanias/<?php echo $campania_id."/".$campania_url; ?>"
-                                            data-bottom-thumb="/imagenes/upload/<?php echo $campania_imagen_carpeta."thumb200/".$campania_imagen_carpeta; ?>">
-                                                <img src="/imagenes/upload/<?php echo $campania_imagen_carpeta."".$campania_imagen_carpeta; ?>" alt="" />
+                                            data-bottom-thumb="/imagenes/upload/<?php echo $campania_imagen_carpeta."thumb200/".$campania_imagen; ?>">
+                                                <img src="/imagenes/upload/<?php echo $campania_imagen_carpeta."".$campania_imagen_portada; ?>" alt="" />
                                             </li>
                                             <?php } ?>
                                             
