@@ -90,6 +90,14 @@ $rst_noticias   = mysql_query("SELECT * FROM DM_campania ORDER BY fecha_publicac
                                     $noticias_imagen_carpeta=$fila_noticias["carpeta_imagen"];
                                     $noticias_fecha_total=explode(" ",$fila_noticias["fecha_publicacion"]);
                                     $noticias_fecha=explode("-", $noticias_fecha_total[0]);
+
+                                    /*ANCHO Y ALTO*/
+                                    $noticias_imagen_dimensiones=getimagesize($noticias_imagen);
+                                    $noticias_imagen_ancho=$noticias_imagen_dimensiones[0];
+                                    $noticias_imagen_alto=$noticias_imagen_dimensiones[1];
+                                    $ancho_final = 250;
+                                    $alto_final = ($ancho_final / $noticias_imagen_ancho) * $noticias_imagen_alto;
+
                                 ?>
 
                                 <article class="categoria_noticias">
@@ -99,7 +107,7 @@ $rst_noticias   = mysql_query("SELECT * FROM DM_campania ORDER BY fecha_publicac
                                         <h3><a href="<?php echo $noticias_categoria["url"]."/".$noticias_id."-".$noticias_url; ?>">
                                             <?php echo $noticias_titulo; ?></a></h3>
                                         <div class="imagen">
-                                            <img src="imagenes/upload/<?php echo $noticias_imagen_carpeta."".$noticias_imagen; ?>" width="250" alt="<?php echo $noticias_titulo; ?>">
+                                            <img src="imagenes/upload/<?php echo $noticias_imagen_carpeta."".$noticias_imagen; ?>" width="250" height="<?php echo $alto_final; ?>" alt="<?php echo $noticias_titulo; ?>">
                                         </div>
                                         <a href="<?php echo $noticias_categoria["url"]."/".$noticias_id."-".$noticias_url; ?>">Más...</a>
                                     </div>
