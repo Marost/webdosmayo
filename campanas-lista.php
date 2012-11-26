@@ -7,8 +7,19 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
 /*VARIABLES DE URL*/
 $idnota=$_REQUEST["id"];
 
-/*CAMPAÑAS*/
-$rst_campanias=mysql_query("SELECT * FROM DM_campania ORDER BY fecha_publicacion DESC;", $conexion);
+################################################################
+//PAGINACION
+require("libs/pagination/class_pagination.php");
+
+//INICIO DE PAGINACION
+$page = (isset($_GET['page'])) ? intval($_GET['page']) : 1;
+$rst_noticias   = mysql_query("SELECT COUNT(*) as count FROM DM_campania ORDER BY fecha_publicacion DESC", $conexion);
+$fila_noticias  = mysql_fetch_assoc($rst_noticias);
+$generated      = intval($fila_noticias['count']);
+$pagination     = new Pagination("6", $generated, $page, $url_web."?page", 1, 0);
+$start          = $pagination->prePagination();
+$rst_noticias   = mysql_query("SELECT * FROM DM_campania ORDER BY fecha_publicacion DESC LIMIT $start, 6", $conexion);
+
 
 ?>
 <!DOCTYPE html>
@@ -22,6 +33,27 @@ $rst_campanias=mysql_query("SELECT * FROM DM_campania ORDER BY fecha_publicacion
         <title>Campañas Especiales</title>
 
         <?php require_once("w-header-scripts.php") ?>
+
+        <!-- ALTO DE DIV -->
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script type="text/javascript">
+        var jald = jQuery.noConflict();
+        function equalHeight(group) {
+           tallest = 0;
+           group.each(function() {
+              thisHeight = jald(this).height();
+              if(thisHeight > tallest) {
+                 tallest = thisHeight;
+              }
+           });
+           group.height(tallest);
+        }
+
+        jald(document).ready(function() {
+           equalHeight(jald(".categoria_noticias"));
+        });
+
+        </script>
 
     </head>
     <body>
@@ -50,17 +82,36 @@ $rst_campanias=mysql_query("SELECT * FROM DM_campania ORDER BY fecha_publicacion
 
                             <div class="contenido">
 
-                                <?php while($fila_campania=mysql_fetch_array($rst_campanias)){
-                                    $campania_id=$fila_campania["id"];
-                                    $campania_url=$fila_campania["url"];
-                                    $campania_titulo=$fila_campania["titulo"];
+                                <?php while($fila_noticias=mysql_fetch_assoc($rst_noticias)){
+                                    $noticias_id=$fila_noticias["id"];
+                                    $noticias_url=$fila_noticias["url"];
+                                    $noticias_titulo=$fila_noticias["titulo"];
+                                    $noticias_imagen=$fila_noticias["imagen"];
+                                    $noticias_imagen_carpeta=$fila_noticias["carpeta_imagen"];
+                                    $noticias_imagen_portada=$fila_noticias["imagen_portada"];
+                                    $noticias_imagen_portada_carpeta=$fila_noticias["carpeta_imagen_portada"];
+                                    $noticias_fecha_total=explode(" ",$fila_noticias["fecha_publicacion"]);
                                 ?>
 
-                                <article>
-                                    <h3><a href="campanias/<?php echo $campania_id."/".$campania_url; ?>"><?php echo $campania_titulo; ?></a></h3>
-                                </article>
+                                <article class="categoria_noticias">
 
+                                    <?php if($noticias_imagen<>""){ ?>
+                                    <div class="datos">
+                                        <p class="categoria"><?php echo nombreFecha($noticias_fecha[0],$noticias_fecha[1],$noticias_fecha[2]); ?></p>
+                                        <h3><a href="<?php echo $noticias_categoria["url"]."/".$noticias_id."-".$noticias_url; ?>"><?php echo $noticias_titulo; ?></a></h3>
+                                        <div class="imagen">
+                                            <img src="imagenes/upload/<?php echo $noticias_imagen_carpeta."thumb200/".$noticias_imagen; ?>" width="300" alt="<?php echo $noticias_titulo; ?>">
+                                        </div>
+                                        <a href="<?php echo $noticias_categoria["url"]."/".$noticias_id."-".$noticias_url; ?>">Más...</a>
+                                    </div>
+                                    <?php } ?>
+
+                                </article>
                                 <?php } ?>
+
+                                <div style="width=100%; float:left;">
+                                    <?php $pagination->pagination(); ?>
+                                </div>
                             
                             </div>
 

@@ -104,7 +104,7 @@ $rst_noticias   = mysql_query("SELECT * FROM DM_noticia WHERE categoria<>2 AND c
                                     $noticias_imagen=$fila_noticias["imagen"];
                                     $noticias_imagen_carpeta=$fila_noticias["carpeta_imagen"];
                                     $noticias_fecha_total=explode(" ",$fila_noticias["fecha_publicacion"]);
-                                    $noticias_fecha=explode("-", $noticias_fecha_total[0])
+                                    $noticias_fecha=explode("-", $noticias_fecha_total[0]);
                                 ?>
 
                                 <article class="categoria_noticias">
