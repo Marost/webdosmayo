@@ -4,8 +4,22 @@ require_once("panel@hndm/conexion/conexion.php");
 require_once("panel@hndm/conexion/funciones.php");
 require_once("panel@hndm/conexion/funcion-paginacion.php");
 
-/*NORMATIVIDAD*/
-$rst_cas=mysql_query("SELECT * FROM DM_normatividad ORDER BY fecha_publicacion DESC", $conexion);
+/* VARIABLES */
+$url_web=$web."normatividad";
+
+################################################################
+//PAGINACION DE NOTICIAS
+require("libs/pagination/class_pagination.php");
+
+//INICIO DE PAGINACION
+$page = (isset($_GET['page'])) ? intval($_GET['page']) : 1;
+$rst_cas        = mysql_query("SELECT COUNT(*) as count FROM DM_normatividad ORDER BY fecha_publicacion DESC", $conexion);
+$fila_cas       = mysql_fetch_assoc($rst_cas);
+$generated      = intval($fila_cas['count']);
+$pagination     = new Pagination("5", $generated, $page, $url_web."?page", 1, 0);
+$start          = $pagination->prePagination();
+$rst_cas        = mysql_query("SELECT * FROM DM_normatividad ORDER BY fecha_publicacion DESC LIMIT $start, 5", $conexion);
+
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -18,6 +32,9 @@ $rst_cas=mysql_query("SELECT * FROM DM_normatividad ORDER BY fecha_publicacion D
         <title>Normatividad</title>
 
         <?php require_once("w-header-scripts.php"); ?>
+
+        <!-- PAGINACION -->
+        <link rel="stylesheet" href="/libs/pagination/pagination.css" media="screen">
 
     </head>
     <body>
@@ -70,7 +87,7 @@ $rst_cas=mysql_query("SELECT * FROM DM_normatividad ORDER BY fecha_publicacion D
                                             $rst_cas_docs=mysql_query("SELECT * FROM DM_normatividad_documentos WHERE cas=$cas_id ORDER BY orden ASC;", $conexion);
                                         ?>
                                         <tr>
-                                            <td class="dato_cabecera tdcab-sup">Fecha Publicacion</td>
+                                            <td class="dato_cabecera tdcab-sup">Fecha</td>
                                             <td class="dato_contenido tdcont-sup"><?php echo nombreFecha($cas_fecha[0],$cas_fecha[1],$cas_fecha[2]); ?></td>
                                         </tr>
                                         <tr>
@@ -132,6 +149,10 @@ $rst_cas=mysql_query("SELECT * FROM DM_normatividad ORDER BY fecha_publicacion D
                                         <?php } ?>
                                     </tbody>
                                 </table>
+
+                                <div style="width=100%; float:left;">
+                                    <?php $pagination->pagination(); ?>
+                                </div>
 
                             </div>
 
