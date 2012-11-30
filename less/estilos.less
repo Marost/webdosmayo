@@ -945,6 +945,10 @@ header nav{
 
 	}
 
+	.salapr{
+		width: 740px !important;
+	}
+
 	.info-epidemiologico{
 		.titulo{
 
@@ -1166,6 +1170,58 @@ header nav{
 		}	
 	}
 
+	#salapr_cabecera{
+		border-bottom:1px solid #ccc;
+		float: left;
+		margin: 0 0 10px 0;
+		width: 100%;
+
+		div{
+			float: left;
+			width: 220px;
+			height: 19px;
+			padding: 15px 0 0 75px;
+		}
+
+		ul{
+			list-style: none;
+			padding: 0;
+			position:relative;
+			margin:0;
+
+			li{ 
+				background:none; 
+				padding:0; 
+				float:left; 
+				margin: 0 1px 0 0;
+
+				a{ 
+					display:block; 
+					float:left; 
+					color:#3c3b3b; 
+					text-decoration:none; 
+					font-size:11px !important;
+					padding: 8px !important;
+					.pestana();
+					line-height: normal;
+				}
+
+				a:hover{
+					background-color:#2D65AE;
+					color:#fff;							
+				}
+			}
+
+			li.selected{
+
+				a { 
+					background-color:#2D65AE;
+					color:#fff;							
+				}
+			}
+		}	
+	}
+
 	table.libro-reclamaciones{
 		border: none;
 		border-color:white;
@@ -1212,18 +1268,17 @@ header nav{
 		margin-bottom: 10px;
 		margin-right: 10px;
 		width: 334px;
-		padding: 5px;
+		padding: 5px 12px;
 		border: 1px solid #999;
 
 		.imagen{
 			float: left;
 			margin-bottom: 0 !important;
-			width: 335px !important;
+			width: 334px !important;
 		}
 
 		.datos{
 			float: left;
-			padding: 10px 0 0 0;
 			width: 100%;
 
 			h3, h3 a{

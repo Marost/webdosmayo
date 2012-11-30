@@ -350,7 +350,7 @@ RewriteRule ^informacion-institucional$                       /informacion-insti
 RewriteRule ^sala-situacional$                       /info-epidemiologica-ss.php
 RewriteRule ^boletin-epidemiologico$                       /info-epidemiologica-ep.php
 RewriteRule ^libro-reclamaciones$                       /libro-reclamaciones.php
-RewriteRule ^sala-prensa$                       /sala-prensa.php
+RewriteRule ^sala-prensa/(.*)$                  /sala-prensa.php?cat=$1
 RewriteRule ^mapa-sitio$                       /mapa-sitio.php
 RewriteRule ^normatividad$                       /normatividad.php
 RewriteRule ^campanias$                       /campanas-lista.php

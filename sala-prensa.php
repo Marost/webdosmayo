@@ -5,8 +5,14 @@ require_once("panel@hndm/conexion/funciones.php");
 require_once("panel@hndm/conexion/funcion-paginacion.php");
 
 /*VARIABLES*/
-$url_web=$web."sala-prensa";
+$categoria=$_REQUEST["cat"];
+$url_web=$web."sala-prensa/".$categoria;
 $videos_sidebar=true;
+
+/*ID DE CATEGORIA*/
+$rst_categoria=mysql_query("SELECT * FROM DM_noticia_categoria WHERE url='".$categoria."' LIMIT 1;", $conexion);
+$fila_categoria=mysql_fetch_array($rst_categoria);
+$categoria_id=$fila_categoria["id"];
 
 ################################################################
 //PAGINACION DE NOTICIAS
@@ -14,12 +20,12 @@ require("libs/pagination/class_pagination.php");
 
 //INICIO DE PAGINACION
 $page = (isset($_GET['page'])) ? intval($_GET['page']) : 1;
-$rst_noticias   = mysql_query("SELECT COUNT(*) as count FROM DM_noticia WHERE categoria<>2 AND categoria<>5 AND categoria<>9 ORDER BY fecha_publicacion DESC", $conexion);
+$rst_noticias   = mysql_query("SELECT COUNT(*) as count FROM DM_noticia WHERE categoria=$categoria_id ORDER BY fecha_publicacion DESC", $conexion);
 $fila_noticias  = mysql_fetch_assoc($rst_noticias);
 $generated      = intval($fila_noticias['count']);
-$pagination     = new Pagination("6", $generated, $page, $url_web."?page", 1, 0);
+$pagination     = new Pagination("6", $generated, $page, $url_web."&page", 1, 0);
 $start          = $pagination->prePagination();
-$rst_noticias   = mysql_query("SELECT * FROM DM_noticia WHERE categoria<>2 AND categoria<>5 AND categoria<>9 ORDER BY fecha_publicacion DESC LIMIT $start, 6", $conexion);
+$rst_noticias   = mysql_query("SELECT * FROM DM_noticia WHERE categoria=$categoria_id ORDER BY fecha_publicacion DESC LIMIT $start, 6", $conexion);
 
 ?>
 <!DOCTYPE html>
@@ -86,7 +92,7 @@ $rst_noticias   = mysql_query("SELECT * FROM DM_noticia WHERE categoria<>2 AND c
 
                     <section id="news">
 
-                        <div class="nw-nota">
+                        <div class="nw-nota salapr">
 
                             <div class="titulo">
                                 <h2>Sala de Prensa</h2>
@@ -94,22 +100,24 @@ $rst_noticias   = mysql_query("SELECT * FROM DM_noticia WHERE categoria<>2 AND c
 
                             <div class="contenido">
 
-<div id="tarifario_cabecera">
-  
-    <ul>
-        <li class="selected"><a href="javascript:;">Alianzas</a></li>
-        <li ><a href="javascript:;">Capacitación</a></li>
-        <li ><a href="javascript:;">Equipos de Última Tecnología</a></li>
-        <li ><a href="javascript:;">Noticias</a></li>
-        <li ><a href="javascript:;">Proezas Médicas</a></li>
-        <li ><a href="javascript:;">Reconocimientos Institucionales</a></li>
-    </ul>
+                                <div id="salapr_cabecera">
+                                  
+                                    <ul>
+                                        <li <?php if($categoria=="alianzas"){ ?>class="selected"<?php } ?>>
+                                            <a href="sala-prensa/alianzas">Alianzas</a></li>
+                                        <li <?php if($categoria=="capacitacion"){ ?>class="selected"<?php } ?>>
+                                            <a href="sala-prensa/capacitacion">Capacitación</a></li>
+                                        <li <?php if($categoria=="equipos-ultima-tecnologia"){ ?>class="selected"<?php } ?>>
+                                            <a href="sala-prensa/equipos-ultima-tecnologia">Equipos de Última Tecnología</a></li>
+                                        <li <?php if($categoria=="noticias"){ ?>class="selected"<?php } ?>>
+                                            <a href="sala-prensa/noticias">Noticias</a></li>
+                                        <li <?php if($categoria=="proezas-medicas"){ ?>class="selected"<?php } ?>>
+                                            <a href="sala-prensa/proezas-medicas">Proezas Médicas</a></li>
+                                        <li <?php if($categoria=="reconocimientos-institucionales"){ ?>class="selected"<?php } ?>>
+                                            <a href="sala-prensa/reconocimientos-institucionales">Reconocimientos Institucionales</a></li>
+                                    </ul>
 
-    <div>
-        <img  id="progressbar" src="/imagenes/progressbar.gif" width="220" height="19" class="ocultar">
-    </div>
-
-</div>
+                                </div>
                                 
                                 <?php while($fila_noticias=mysql_fetch_assoc($rst_noticias)){
                                     $noticias_id=$fila_noticias["id"];
@@ -128,7 +136,6 @@ $rst_noticias   = mysql_query("SELECT * FROM DM_noticia WHERE categoria<>2 AND c
 
                                     <?php if($noticias_imagen<>""){ ?>
                                     <div class="datos">
-                                        <p class="categoria"><?php echo $noticias_categoria["categoria"] ?></p>
                                         <h3><a href="<?php echo $noticias_categoria["url"]."/".$noticias_id."-".$noticias_url; ?>"><?php echo $noticias_titulo; ?></a></h3>
                                         <div class="imagen">
                                             <img src="imagenes/upload/<?php echo $noticias_imagen_carpeta."thumb200/".$noticias_imagen; ?>" width="300" height="200" alt="<?php echo $noticias_titulo; ?>">
@@ -139,7 +146,6 @@ $rst_noticias   = mysql_query("SELECT * FROM DM_noticia WHERE categoria<>2 AND c
                                     <?php }else{ ?>
                                     
                                     <div class="datos an100">
-                                        <p class="categoria"><?php echo $noticias_categoria["categoria"] ?></p>
                                         <h3><a href="<?php echo $noticias_categoria["url"]."/".$noticias_id."-".$noticias_url; ?>"><?php echo $noticias_titulo; ?></a></h3>
                                         <p><?php echo $noticias_contenido; ?></p>
                                         <a href="<?php echo $noticias_categoria["url"]."/".$noticias_id."-".$noticias_url; ?>">Más...</a>
