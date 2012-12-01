@@ -74,7 +74,7 @@ $rst_noticias   = mysql_query("SELECT * FROM DM_campania ORDER BY fecha_publicac
 
                     <section id="news">
 
-                        <div class="nw-nota campania">
+                        <div class="nw-nota salapr">
 
                             <div class="titulo">
                                 <h2>Campañas Especiales</h2>
