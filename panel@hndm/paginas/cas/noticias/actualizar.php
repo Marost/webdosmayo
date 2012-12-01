@@ -13,8 +13,9 @@ $observaciones=$_POST["contenido"];
 $fecha_publicacion=$_POST["fecha"];
 $hora_publicacion=$_POST["hora"];
 $fecha_pub=$fecha_publicacion." ".$hora_publicacion.":00";
-$fecha_anio=date("Y");
-$fecha_mes=date("Y-m");
+$fecha_separacion=explode("-", $_POST["fecha"]);
+$fecha_anio=$fecha_separacion[0];
+$fecha_mes=$fecha_separacion[0]."-".$fecha_separacion[1];
 
 //GUARDAR DATOS
 mysql_query("UPDATE ".$tabla_suf."_cas SET titulo='".htmlspecialchars($titulo)."', 
