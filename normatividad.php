@@ -22,7 +22,7 @@ $rst_cas        = mysql_query("SELECT * FROM DM_normatividad ORDER BY fecha_publ
 
 ################################################################
 /*SELECCION DE AÑO*/
-$rst_selectanio=mysql_query("SELECT fecha_anio , count(*) as anio FROM DM_normatividad GROUP BY fecha_anio", $conexion);
+$rst_selectanio=mysql_query("SELECT DISTINCT fecha_anio FROM DM_normatividad", $conexion);
 
 ?>
 <!DOCTYPE html>
@@ -70,7 +70,7 @@ $rst_selectanio=mysql_query("SELECT fecha_anio , count(*) as anio FROM DM_normat
                                 <select>
                                     <option>Seleccion año</option>
                                     <?php while($fila_selectanio=mysql_fetch_array($rst_selectanio)){
-                                        $fechaAnio=$fila_selectanio["anio"];
+                                        $fechaAnio=$fila_selectanio["fecha_anio"];
                                     ?>
                                     <option><?php echo $fechaAnio; ?></option>
                                     <?php } ?>
@@ -91,6 +91,7 @@ $rst_selectanio=mysql_query("SELECT fecha_anio , count(*) as anio FROM DM_normat
                                     <option value="11">Noviembre</option>
                                     <option value="12">Diciembre</option>
                                 </select>
+
 
                                 <table class="tabla_cas" width="710" border="0">
                                     <tbody>
@@ -170,6 +171,7 @@ $rst_selectanio=mysql_query("SELECT fecha_anio , count(*) as anio FROM DM_normat
                                         <?php } ?>
                                     </tbody>
                                 </table>
+
 
                                 <div style="width=100%; float:left;">
                                     <?php $pagination->pagination(); ?>
