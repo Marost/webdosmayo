@@ -74,15 +74,15 @@ function codigoAleatorio($length=10,$uc=TRUE,$n=TRUE,$sc=FALSE)
 function nombreMes($numero_mes)
 {
 	switch($numero_mes){
-   		case 1: print "Enero"; break;
-		case 2: print "Febrero"; break;
-		case 3: print "Marzo"; break;
-		case 4: print "Abril"; break;
-		case 5: print "Mayo"; break;
-		case 6: print "Junio"; break;
-		case 7: print "Julio"; break;
-		case 8: print "Agosto"; break;
-		case 9: print "Septiembre"; break;
+   		case 01: print "Enero"; break;
+		case 02: print "Febrero"; break;
+		case 03: print "Marzo"; break;
+		case 04: print "Abril"; break;
+		case 05: print "Mayo"; break;
+		case 06: print "Junio"; break;
+		case 07: print "Julio"; break;
+		case 08: print "Agosto"; break;
+		case 09: print "Septiembre"; break;
 		case 10: print "Octubre"; break;
 		case 11: print "Noviembre"; break;
 		case 12: print "Diciembre"; break;
