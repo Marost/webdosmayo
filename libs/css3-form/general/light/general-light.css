@@ -76,7 +76,7 @@ textarea.form-input {
 .select-wrapper {
 	width: 250px;
 	float: left;
-	margin-bottom: 40px;
+	margin: 0 10px 10px 0;
 	overflow: hidden;
 	position: relative;
 }
@@ -140,7 +140,6 @@ div.option-group{
 
 /* Form submit button */
 .form-btn {
-	clear: both;
 	float: left;
 	padding: 0 15px;
 	height: 30px;
