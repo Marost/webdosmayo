@@ -58,6 +58,13 @@ if($anio>0 AND $mes>0){
         <!-- PAGINACION -->
         <link rel="stylesheet" href="/libs/pagination/pagination.css" media="screen">
 
+        <!-- CSS SELECT -->
+        <link rel="stylesheet" href="/libs/css3-form/general/light/general-light.css" />
+        <!--[if lt IE 9]>
+                <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+                <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -89,32 +96,36 @@ if($anio>0 AND $mes>0){
 
                                     <form name="busqueda_fecha" method="GET" action="normatividad">
 
-                                        <select name="anio">
-                                            <option>Seleccion año</option>
-                                            <?php while($fila_selectanio=mysql_fetch_array($rst_selectanio)){
-                                                $fechaAnio=$fila_selectanio["fecha_anio"];
-                                            ?>
-                                            <option value="<?php echo $fechaAnio; ?>"><?php echo $fechaAnio; ?></option>
-                                            <?php } ?>
-                                        </select>
+                                        <div class="select-wrapper">
+                                            <select name="anio">
+                                                <option>Seleccion año</option>
+                                                <?php while($fila_selectanio=mysql_fetch_array($rst_selectanio)){
+                                                    $fechaAnio=$fila_selectanio["fecha_anio"];
+                                                ?>
+                                                <option value="<?php echo $fechaAnio; ?>"><?php echo $fechaAnio; ?></option>
+                                                <?php } ?>
+                                            </select>
+                                        </div>
 
-                                        <select name="mes">
-                                            <option>Seleccion mes</option>
-                                            <option value="01">Enero</option>
-                                            <option value="02">Febrero</option>
-                                            <option value="03">Marzo</option>
-                                            <option value="04">Abril</option>
-                                            <option value="05">Mayo</option>
-                                            <option value="06">Junio</option>
-                                            <option value="07">Julio</option>
-                                            <option value="08">Agosto</option>
-                                            <option value="09">Septiembre</option>
-                                            <option value="10">Octubre</option>
-                                            <option value="11">Noviembre</option>
-                                            <option value="12">Diciembre</option>
-                                        </select>
+                                        <div class="select-wrapper">
+                                            <select name="mes">
+                                                <option>Seleccion mes</option>
+                                                <option value="01">Enero</option>
+                                                <option value="02">Febrero</option>
+                                                <option value="03">Marzo</option>
+                                                <option value="04">Abril</option>
+                                                <option value="05">Mayo</option>
+                                                <option value="06">Junio</option>
+                                                <option value="07">Julio</option>
+                                                <option value="08">Agosto</option>
+                                                <option value="09">Septiembre</option>
+                                                <option value="10">Octubre</option>
+                                                <option value="11">Noviembre</option>
+                                                <option value="12">Diciembre</option>
+                                            </select>
+                                        </div>
 
-                                        <input value="Buscar" type="submit">
+                                        <input class="form-btn" value="Buscar" type="submit">
 
                                     </form>
 
