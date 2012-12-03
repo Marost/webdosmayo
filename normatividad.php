@@ -42,7 +42,6 @@ if($anio>0 AND $mes>0){
     $rst_cas        = mysql_query("SELECT * FROM DM_normatividad WHERE fecha_mes='$fecha_seleccion' ORDER BY fecha_publicacion DESC LIMIT $start, 5", $conexion);
 }
 
-
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -132,7 +131,6 @@ if($anio>0 AND $mes>0){
 
                                 </div>
 
-
                                 <table class="tabla_cas" width="710" border="0">
                                     <tbody>
 
@@ -211,7 +209,6 @@ if($anio>0 AND $mes>0){
                                         <?php } ?>
                                     </tbody>
                                 </table>
-
 
                                 <div style="width=100%; float:left;">
                                     <?php $pagination->pagination(); ?>

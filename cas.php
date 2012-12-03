@@ -4,8 +4,44 @@ require_once("panel@hndm/conexion/conexion.php");
 require_once("panel@hndm/conexion/funciones.php");
 require_once("panel@hndm/conexion/funcion-paginacion.php");
 
-/*CAS*/
-$rst_cas=mysql_query("SELECT * FROM DM_cas ORDER BY fecha_publicacion DESC", $conexion);
+/* VARIABLES */
+$url_web=$web."cas";
+
+################################################################
+//PAGINACION DE NOTICIAS
+require("libs/pagination/class_pagination.php");
+
+//INICIO DE PAGINACION
+$page = (isset($_GET['page'])) ? intval($_GET['page']) : 1;
+$rst_cas        = mysql_query("SELECT COUNT(*) as count FROM DM_cas ORDER BY fecha_publicacion DESC", $conexion);
+$fila_cas       = mysql_fetch_assoc($rst_cas);
+$generated      = intval($fila_cas['count']);
+$pagination     = new Pagination("5", $generated, $page, $url_web."?page", 1, 0);
+$start          = $pagination->prePagination();
+$rst_cas        = mysql_query("SELECT * FROM DM_cas ORDER BY fecha_publicacion DESC LIMIT $start, 5", $conexion);
+
+################################################################
+/*SELECCION DE AÑO*/
+$rst_selectanio=mysql_query("SELECT DISTINCT fecha_anio FROM DM_cas", $conexion);
+
+################################################################
+/*VARIABLES DE URL AL BUSCAR*/
+$anio=$_REQUEST["anio"];
+$mes=$_REQUEST["mes"];
+$fecha_seleccion=$anio."-".$mes;
+
+if($anio>0 AND $mes>0){
+    $url_web=$web."normatividad?anio=$anio&mes=$mes";
+    $nombre_fecha=nombreMes($mes)." ".$anio;
+    $page = (isset($_GET['page'])) ? intval($_GET['page']) : 1;
+    $rst_cas        = mysql_query("SELECT COUNT(*) as count FROM DM_cas WHERE fecha_mes='$fecha_seleccion' ORDER BY fecha_publicacion DESC", $conexion);
+    $fila_cas       = mysql_fetch_assoc($rst_cas);
+    $generated      = intval($fila_cas['count']);
+    $pagination     = new Pagination("5", $generated, $page, $url_web."&page", 1, 0);
+    $start          = $pagination->prePagination();
+    $rst_cas        = mysql_query("SELECT * FROM DM_cas WHERE fecha_mes='$fecha_seleccion' ORDER BY fecha_publicacion DESC LIMIT $start, 5", $conexion);
+}
+
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -18,6 +54,16 @@ $rst_cas=mysql_query("SELECT * FROM DM_cas ORDER BY fecha_publicacion DESC", $co
         <title>Contrato Administrativo de Servicios</title>
 
         <?php require_once("w-header-scripts.php"); ?>
+
+        <!-- PAGINACION -->
+        <link rel="stylesheet" href="/libs/pagination/pagination.css" media="screen">
+
+        <!-- CSS SELECT -->
+        <link rel="stylesheet" href="/libs/css3-form/general/light/general-light.css" />
+        <!--[if lt IE 9]>
+                <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+                <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
 
     </head>
     <body>
@@ -41,18 +87,49 @@ $rst_cas=mysql_query("SELECT * FROM DM_cas ORDER BY fecha_publicacion DESC", $co
                         <div class="nw-nota cas">
 
                             <div class="titulo">
-                                <h2>Contrato Administrativo de Servicios</h2>
+                                <h2>Contrato Administrativo de Servicios<?php if($anio>0 AND $mes>0){ echo ": ".$nombre_fecha; } ?></h2>
                             </div>
 
                             <div class="contenido">
 
-                                <!-- <select>
-                                    <option>Seleccion año</option>
-                                </select>
+                                <div id="busqueda_cabecera">
 
-                                <select>
-                                    <option>Seleccion mes</option>
-                                </select> -->
+                                    <form name="busqueda_fecha" method="GET" action="normatividad">
+
+                                        <div class="select-wrapper">
+                                            <select name="anio">
+                                                <option>Seleccion año</option>
+                                                <?php while($fila_selectanio=mysql_fetch_array($rst_selectanio)){
+                                                    $fechaAnio=$fila_selectanio["fecha_anio"];
+                                                ?>
+                                                <option value="<?php echo $fechaAnio; ?>"><?php echo $fechaAnio; ?></option>
+                                                <?php } ?>
+                                            </select>
+                                        </div>
+
+                                        <div class="select-wrapper">
+                                            <select name="mes">
+                                                <option>Seleccion mes</option>
+                                                <option value="01">Enero</option>
+                                                <option value="02">Febrero</option>
+                                                <option value="03">Marzo</option>
+                                                <option value="04">Abril</option>
+                                                <option value="05">Mayo</option>
+                                                <option value="06">Junio</option>
+                                                <option value="07">Julio</option>
+                                                <option value="08">Agosto</option>
+                                                <option value="09">Septiembre</option>
+                                                <option value="10">Octubre</option>
+                                                <option value="11">Noviembre</option>
+                                                <option value="12">Diciembre</option>
+                                            </select>
+                                        </div>
+
+                                        <input class="form-btn" value="Buscar" type="submit">
+
+                                    </form>
+
+                                </div>
 
                                 <table class="tabla_cas" width="710" border="0">
                                     <tbody>
@@ -67,10 +144,10 @@ $rst_cas=mysql_query("SELECT * FROM DM_cas ORDER BY fecha_publicacion DESC", $co
                                             $cas_fecha=explode("-", $cas_fecha_total[0]);
 
                                             /*DOCUMENTOS*/
-                                            $rst_cas_docs=mysql_query("SELECT * FROM DM_cas_documentos WHERE cas=$cas_id ORDER BY orden ASC;", $conexion);
+                                            $rst_cas_docs=mysql_query("SELECT * FROM DM_normatividad_documentos WHERE cas=$cas_id ORDER BY orden ASC;", $conexion);
                                         ?>
                                         <tr>
-                                            <td class="dato_cabecera tdcab-sup">Fecha Publicacion</td>
+                                            <td class="dato_cabecera tdcab-sup">Fecha</td>
                                             <td class="dato_contenido tdcont-sup"><?php echo nombreFecha($cas_fecha[0],$cas_fecha[1],$cas_fecha[2]); ?></td>
                                         </tr>
                                         <tr>
@@ -132,6 +209,10 @@ $rst_cas=mysql_query("SELECT * FROM DM_cas ORDER BY fecha_publicacion DESC", $co
                                         <?php } ?>
                                     </tbody>
                                 </table>
+
+                                <div style="width=100%; float:left;">
+                                    <?php $pagination->pagination(); ?>
+                                </div>
 
                             </div>
 
