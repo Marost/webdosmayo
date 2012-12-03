@@ -31,6 +31,7 @@ $mes=$_REQUEST["mes"];
 $fecha_seleccion=$anio."-".$mes;
 
 if($anio>0 AND $mes>0){
+    $url_web=$web."normatividad?anio=$anio&mes=$mes";
     $page = (isset($_GET['page'])) ? intval($_GET['page']) : 1;
     $rst_cas        = mysql_query("SELECT COUNT(*) as count FROM DM_normatividad WHERE fecha_mes='$fecha_seleccion' ORDER BY fecha_publicacion DESC", $conexion);
     $fila_cas       = mysql_fetch_assoc($rst_cas);
@@ -86,7 +87,7 @@ if($anio>0 AND $mes>0){
 
                                 <div id="busqueda_cabecera">
 
-                                    <form name="busqueda_fecha" method="GET" action="normatividad-b">
+                                    <form name="busqueda_fecha" method="GET" action="normatividad">
 
                                         <select name="anio">
                                             <option>Seleccion año</option>
@@ -113,7 +114,7 @@ if($anio>0 AND $mes>0){
                                             <option value="12">Diciembre</option>
                                         </select>
 
-                                        <input name="boton_busqueda" value="Buscar">
+                                        <input value="Buscar" type="submit">
 
                                     </form>
 
