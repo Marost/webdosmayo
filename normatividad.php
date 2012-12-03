@@ -32,6 +32,7 @@ $fecha_seleccion=$anio."-".$mes;
 
 if($anio>0 AND $mes>0){
     $url_web=$web."normatividad?anio=$anio&mes=$mes";
+    $nombre_fecha=nombreMes($mes)." ".$anio;
     $page = (isset($_GET['page'])) ? intval($_GET['page']) : 1;
     $rst_cas        = mysql_query("SELECT COUNT(*) as count FROM DM_normatividad WHERE fecha_mes='$fecha_seleccion' ORDER BY fecha_publicacion DESC", $conexion);
     $fila_cas       = mysql_fetch_assoc($rst_cas);
@@ -87,7 +88,7 @@ if($anio>0 AND $mes>0){
                         <div class="nw-nota cas">
 
                             <div class="titulo">
-                                <h2>Normatividad</h2>
+                                <h2>Normatividad<?php if($anio>0 AND $mes>0){ echo ": ".$nombre_fecha; } ?></h2>
                             </div>
 
                             <div class="contenido">
