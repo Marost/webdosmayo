@@ -24,6 +24,23 @@ $rst_cas        = mysql_query("SELECT * FROM DM_normatividad ORDER BY fecha_publ
 /*SELECCION DE AÑO*/
 $rst_selectanio=mysql_query("SELECT DISTINCT fecha_anio FROM DM_normatividad", $conexion);
 
+################################################################
+/*VARIABLES DE URL AL BUSCAR*/
+$anio=$_REQUEST["anio"];
+$mes=$_REQUEST["mes"];
+$fecha_seleccion=$anio."-".$mes;
+
+if($anio>0 AND $mes>0){
+    $page = (isset($_GET['page'])) ? intval($_GET['page']) : 1;
+    $rst_cas        = mysql_query("SELECT COUNT(*) as count FROM DM_normatividad WHERE fecha_mes='$fecha_seleccion' ORDER BY fecha_publicacion DESC", $conexion);
+    $fila_cas       = mysql_fetch_assoc($rst_cas);
+    $generated      = intval($fila_cas['count']);
+    $pagination     = new Pagination("5", $generated, $page, $url_web."&page", 1, 0);
+    $start          = $pagination->prePagination();
+    $rst_cas        = mysql_query("SELECT * FROM DM_normatividad WHERE fecha_mes='$fecha_seleccion' ORDER BY fecha_publicacion DESC LIMIT $start, 5", $conexion);
+}
+
+
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -67,30 +84,40 @@ $rst_selectanio=mysql_query("SELECT DISTINCT fecha_anio FROM DM_normatividad", $
 
                             <div class="contenido">
 
-                                <select>
-                                    <option>Seleccion año</option>
-                                    <?php while($fila_selectanio=mysql_fetch_array($rst_selectanio)){
-                                        $fechaAnio=$fila_selectanio["fecha_anio"];
-                                    ?>
-                                    <option><?php echo $fechaAnio; ?></option>
-                                    <?php } ?>
-                                </select>
+                                <div id="busqueda_cabecera">
 
-                                <select>
-                                    <option>Seleccion mes</option>
-                                    <option value="01">Enero</option>
-                                    <option value="02">Febrero</option>
-                                    <option value="03">Marzo</option>
-                                    <option value="04">Abril</option>
-                                    <option value="05">Mayo</option>
-                                    <option value="06">Junio</option>
-                                    <option value="07">Julio</option>
-                                    <option value="08">Agosto</option>
-                                    <option value="09">Septiembre</option>
-                                    <option value="10">Octubre</option>
-                                    <option value="11">Noviembre</option>
-                                    <option value="12">Diciembre</option>
-                                </select>
+                                    <form name="busqueda_fecha" method="GET" action="normatividad-b">
+
+                                        <select name="anio">
+                                            <option>Seleccion año</option>
+                                            <?php while($fila_selectanio=mysql_fetch_array($rst_selectanio)){
+                                                $fechaAnio=$fila_selectanio["fecha_anio"];
+                                            ?>
+                                            <option value="<?php echo $fechaAnio; ?>"><?php echo $fechaAnio; ?></option>
+                                            <?php } ?>
+                                        </select>
+
+                                        <select name="mes">
+                                            <option>Seleccion mes</option>
+                                            <option value="01">Enero</option>
+                                            <option value="02">Febrero</option>
+                                            <option value="03">Marzo</option>
+                                            <option value="04">Abril</option>
+                                            <option value="05">Mayo</option>
+                                            <option value="06">Junio</option>
+                                            <option value="07">Julio</option>
+                                            <option value="08">Agosto</option>
+                                            <option value="09">Septiembre</option>
+                                            <option value="10">Octubre</option>
+                                            <option value="11">Noviembre</option>
+                                            <option value="12">Diciembre</option>
+                                        </select>
+
+                                        <input name="boton_busqueda" value="Buscar">
+
+                                    </form>
+
+                                </div>
 
 
                                 <table class="tabla_cas" width="710" border="0">
