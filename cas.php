@@ -94,7 +94,7 @@ if($anio>0 AND $mes>0){
 
                                 <div id="busqueda_cabecera">
 
-                                    <form name="busqueda_fecha" method="GET" action="normatividad">
+                                    <form name="busqueda_fecha" method="GET" action="cas">
 
                                         <div class="select-wrapper">
                                             <select name="anio">
