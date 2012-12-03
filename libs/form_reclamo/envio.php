@@ -28,7 +28,7 @@ $body = '<!DOCTYPE HTML> <html lang="es"> <head> <meta charset="utf-8">
 </style>
 </head>
 <body>
-<h2>Reclamo</h2>
+<h2>Libro de Reclamaciones</h2>
 <p><strong>Fecha:</strong> '.$rec_fecha.'</p>
 <p></p>
 <h3>Identificación de Usuario</h3>
@@ -47,7 +47,7 @@ $body = '<!DOCTYPE HTML> <html lang="es"> <head> <meta charset="utf-8">
 </body>
 </html>';
 	
-$from="marcolopez49@hotmail.com";
+$from="librodereclamaciones@hdosdemayo.gob.pe";
 $asunto="HNDM | Mensaje";
 $headers= "From: HNDM <".strip_tags($from)."> \r\n";
 $headers.= "MIME-Version: 1.0\r\n";

@@ -42,7 +42,7 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
                         <div class="nw-nota">
 
                             <div class="titulo">
-                                <h2>Presenta tu reclamo</h2>
+                                <h2>Libro de Reclamaciones</h2>
                             </div>
 
                             <div class="contenido">
@@ -133,7 +133,7 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
                             </div>
 
                             <div class="contenido">
-                                <a href="libro-reclamaciones.php">Volver</a>
+                                <a href="libro-reclamaciones">Volver</a>
                             </div>
 
                         </div>
