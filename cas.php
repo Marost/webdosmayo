@@ -31,7 +31,7 @@ $mes=$_REQUEST["mes"];
 $fecha_seleccion=$anio."-".$mes;
 
 if($anio>0 AND $mes>0){
-    $url_web=$web."normatividad?anio=$anio&mes=$mes";
+    $url_web=$web."cas?anio=$anio&mes=$mes";
     $nombre_fecha=nombreMes($mes)." ".$anio;
     $page = (isset($_GET['page'])) ? intval($_GET['page']) : 1;
     $rst_cas        = mysql_query("SELECT COUNT(*) as count FROM DM_cas WHERE fecha_mes='$fecha_seleccion' ORDER BY fecha_publicacion DESC", $conexion);
@@ -144,7 +144,7 @@ if($anio>0 AND $mes>0){
                                             $cas_fecha=explode("-", $cas_fecha_total[0]);
 
                                             /*DOCUMENTOS*/
-                                            $rst_cas_docs=mysql_query("SELECT * FROM DM_normatividad_documentos WHERE cas=$cas_id ORDER BY orden ASC;", $conexion);
+                                            $rst_cas_docs=mysql_query("SELECT * FROM DM_cas_documentos WHERE cas=$cas_id ORDER BY orden ASC;", $conexion);
                                         ?>
                                         <tr>
                                             <td class="dato_cabecera tdcab-sup">Fecha</td>
