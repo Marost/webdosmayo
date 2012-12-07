@@ -45,7 +45,7 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
                                 <p class="reclamo_mensaje ocultar">Gracias por escribirnos</p>
                                 <p class="reclamo_mensaje ocultar">Nos estaremos comunicando contigo a la brevedad posible.</p>
 
-                                <form id="form_reclamo" name="form_reclamo" method="post">
+                                <form id="form_reclamo" name="form_reclamo" method="post" action="/libs/form_reclamo/envio.php">
                                   <table width="850" border="1" cellpadding="3" cellspacing="3"  class="libro-reclamaciones">
                                     <tr>
                                       <td align="center">

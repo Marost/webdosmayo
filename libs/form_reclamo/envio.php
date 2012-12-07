@@ -78,4 +78,6 @@ $headers.= "Content-Type: text/html; charset=UTF-8\r\n";
 
 mail($from, $asunto, $body, $headers);
 
+header("Location: ../../libro-reclamaciones-form.php");
+
 ?>
