@@ -54,35 +54,36 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
                                       <td align="center">FORMATO PARA EL REGISTRO DE LA HOJA DE RECLAMACIONES</td>
                                     </tr>
                                     <tr>
-                                      <td align="center"><table width="100%" border="1" cellpadding="3" cellspacing="3">
+                                      <td align="center"><table align="left" width="50%" border="1" cellpadding="3" cellspacing="3">
                                         <tr>
-                                          <td width="15%">Señale la fecha:</td>
+                                          <td width="15%"><strong>Señale la fecha:</strong></td>
                                           <td width="15%">&nbsp;</td>
                                           <td width="15%">&nbsp;</td>
-                                          <td width="2%">&nbsp;</td>
-                                          <td width="15%">Hora:</td>
+                                          <td width="15%">:</td>
                                         </tr>
                                         <tr>
                                           <td width="15%" align="center"><?php echo date("d"); ?></td>
                                           <td width="15%" align="center"><?php echo date("m"); ?></td>
                                           <td width="15%" align="center"><?php echo date("Y"); ?></td>
-                                          <td>&nbsp;</td>
-                                          <td><?php echo date("H:m"); ?></td>
+                                          <td width="15%" align="center"><?php echo date("H:m"); ?></td>
                                         </tr>
                                         <tr>
-                                          <td width="15%" align="center">Dia</td>
-                                          <td width="15%" align="center">Mes</td>
-                                          <td width="15%" align="center">Año</td>
-                                          <td>&nbsp;</td>
-                                          <td>&nbsp;</td>
+                                          <td width="15%" align="center"><strong>Dia</strong></td>
+                                          <td width="15%" align="center"><strong>Mes</strong></td>
+                                          <td width="15%" align="center"><strong>Año</strong></td>
+                                          <td width="15%" align="center"><strong>Hora</strong></td>
                                         </tr>
                                       </table></td>
                                     </tr>
                                     <tr>
                                       <td><table width="100%" border="1" cellpadding="2" cellspacing="1">
                                         <tr>
-                                          <td>Nombres de la persona natural o razón social de la persona jurídica:</td>
-                                          </tr>
+                                          <td>
+                                              <strong>
+                                              Nombres de la persona natural o razón social de la persona jurídica:
+                                              </strong>
+                                          </td>
+                                        </tr>
                                         <tr>
                                           <td height="23">
                                             <input class="form-input" name="nombre" type="text" value="" size="130">
@@ -93,21 +94,17 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
                                     <tr>
                                       <td><table width="100%" border="1" cellpadding="1" cellspacing="1">
                                         <tr>
-                                          <td width="46%">Domicilio:</td>
-                                          <td width="1%">&nbsp;</td>
-                                          <td width="26%">Distrito:</td>
-                                          <td width="1%">&nbsp;</td>
-                                          <td width="26%">Nº  D.N.I. / C.E.</td>
+                                          <td width="46%"><strong>Domicilio:</strong></td>
+                                          <td width="26%"><strong>Distrito:</strong></td>
+                                          <td width="26%"><strong>Nº  D.N.I. / C.E.</strong></td>
                                           </tr>
                                         <tr>
                                           <td height="23">
                                             <input class="form-input" name="domicilio" type="text" size="60">
                                           </td>
-                                          <td>&nbsp;</td>
                                           <td>
                                             <input class="form-input" name="distrito" type="text" size="30">
                                           </td>
-                                          <td>&nbsp;</td>
                                           <td>
                                             <input class="form-input" name="dni" type="text" size="25">
                                           </td>
@@ -117,19 +114,15 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
                                     <tr>
                                       <td align="left"><table width="100%" border="1" cellpadding="1" cellspacing="1">
                                         <tr>
-                                          <td width="15%">Edad:</td>
-                                          <td width="1%">&nbsp;</td>
-                                          <td width="9%">Sexo:</td>
-                                          <td width="1%">&nbsp;</td>
-                                          <td width="36%">Teléfono:</td>
-                                          <td width="1%">&nbsp;</td>
-                                          <td width="37%">Email:</td>
+                                          <td width="15%"></strong>Edad:</strong></td>
+                                          <td width="9%"><strong>Sexo:</strong></td>
+                                          <td width="36%"><strong>Teléfono:</strong></td>
+                                          <td width="37%"><strong>Email:</strong></td>
                                           </tr>
                                         <tr>
                                           <td width="15%" align="center" valign="top">
                                             <input class="form-input" name="edad" type="text" size="20">
                                           </td>
-                                          <td width="1%" align="center">&nbsp;</td>
                                           <td width="9%" align="center">
                                             <div class="option-group radio">
                                               <input type="radio" name="sexo" id="sexo-m" />
@@ -139,10 +132,8 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
                                               <label for="sexo-f">F</label>
                                             </div>
                                           </td>
-                                          <td>&nbsp;</td>
                                           <td valign="top">
                                             <input class="form-input" name="telefono" type="text" size="25"></td>
-                                          <td>&nbsp;</td>
                                           <td valign="top">
                                             <input class="form-input" name="email" type="text" size="50"></td>
                                           </tr>
@@ -151,17 +142,14 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
                                     <tr>
                                       <td align="left"><table width="100%" border="1" cellpadding="1" cellspacing="1">
                                         <tr>
-                                          <td colspan="3">Identificación del bien contratado </td>
-                                          <td width="1%">&nbsp;</td>
-                                          <td width="70%">Motivo de la Queja o Sugerencia</td>
+                                          <td colspan="3"><strong>Identificación del bien contratado</strong></td>
+                                          <td width="70%"><strong>Motivo de la Queja o Sugerencia</strong></td>
                                           </tr>
                                         <tr>
                                           <td width="17%" align="center">Servicio</td>
-                                          <td width="1%" align="center">&nbsp;</td>
                                           <td width="11%" align="center">
                                             <input class="form-input" name="identificacion" type="text" size="15">
                                           </td>
-                                          <td>&nbsp;</td>
                                           <td>
                                             <input class="form-input" name="queja-sugerencia" type="text" size="95">
                                           </td>
@@ -171,7 +159,7 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
                                     <tr>
                                       <td align="left"><table width="100%" border="1" cellpadding="2" cellspacing="1">
                                         <tr>
-                                          <td>Identificación de la Atención Brindada:</td>
+                                          <td><strong>Identificación de la Atención Brindada:</strong></td>
                                         </tr>
                                         <tr>
                                           <td height="23">
@@ -183,10 +171,10 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
                                     <tr>
                                       <td height="147" align="left"><table width="100%" border="1" cellpadding="1" cellspacing="1">
                                         <tr>
-                                          <td width="25%">Tipo Atención:</td>
-                                          <td width="20%">Presenta Queja:</td>
-                                          <td width="25%">Tipo Personal:</td>
-                                          <td width="30%">Tipo de Vía de Canalización</td>
+                                          <td width="25%"><strong>Tipo Atención:</strong></td>
+                                          <td width="20%"><strong>Presenta Queja:</strong></td>
+                                          <td width="25%"><strong>Tipo Personal:</strong></td>
+                                          <td width="30%"><strong>Tipo de Vía de Canalización:</strong></td>
                                         </tr>
                                         <tr>
                                           <td width="25%" valign="top">
@@ -267,7 +255,7 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
                                     <tr>
                                       <td align="left"><table width="100%" border="1" cellpadding="2" cellspacing="1">
                                         <tr>
-                                          <td>MOTIVO DE QUEJA</td>
+                                          <td><strong>MOTIVO DE QUEJA</strong></td>
                                         </tr>
                                         <tr>
                                           <td height="23">
@@ -279,7 +267,7 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
                                     <tr>
                                       <td align="left"><table width="100%" border="1" cellpadding="2" cellspacing="1">
                                         <tr>
-                                          <td>UNIDAD, SERVICIO</td>
+                                          <td><strong>UNIDAD, SERVICIO</strong></td>
                                         </tr>
                                         <tr>
                                           <td height="23">
@@ -291,7 +279,7 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
                                     <tr>
                                       <td align="left"><table width="100%" border="1" cellpadding="2" cellspacing="1">
                                         <tr>
-                                          <td>DATOS DEL PERSONAL A QUIEN DIRIGEN EL RECLAMO</td>
+                                          <td><strong>DATOS DEL PERSONAL A QUIEN DIRIGEN EL RECLAMO</strong></td>
                                         </tr>
                                         <tr>
                                           <td height="23">
@@ -311,8 +299,8 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
                                           </td>
 
                                           <tr>
-                                            <td>
-                                              <input class="form-btn" type="submit" value="Enviar" />
+                                            <td align="center">
+                                              <input class="form-btn" type="submit" value="Enviar datos" />
                                             </td>
                                           </tr>
                                             
