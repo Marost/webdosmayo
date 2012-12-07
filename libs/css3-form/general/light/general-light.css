@@ -40,7 +40,6 @@ label span {
 /* Textbox and textarea */
 .form-input {
 	float: left;
-	height: 24px;
 	padding: 6px 10px;
 	font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	color: #333;
