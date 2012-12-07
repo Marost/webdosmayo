@@ -48,15 +48,15 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
                                 <form id="form_reclamo" name="form_reclamo" method="post">
                                   <table width="850" border="1" cellpadding="3" cellspacing="3"  class="libro-reclamaciones">
                                     <tr>
-                                      <td align="center"><p>HOSPITAL NACIONAL &quot;DOS DE MAYO&quot; - OFICINA DE GESTIÓN DE LA CALIDAD</p></td>
-                                    </tr>
-                                    <tr>
-                                      <td align="center">FORMATO PARA EL REGISTRO DE LA HOJA DE RECLAMACIONES</td>
+                                      <td align="center">
+                                        <h3>HOSPITAL NACIONAL &quot;DOS DE MAYO&quot; - OFICINA DE GESTIÓN DE LA CALIDAD</h3>
+                                        <h3>FORMATO PARA EL REGISTRO DE LA HOJA DE RECLAMACIONES</h3>
+                                      </td>
                                     </tr>
                                     <tr>
                                       <td align="center"><table align="left" width="50%" border="1" cellpadding="3" cellspacing="3">
                                         <tr>
-                                          <td class="titulo" colspan="4"><strong>Señale la fecha:</strong></td>
+                                          <td colspan="4"><strong>Señale la fecha:</strong></td>
                                         </tr>
                                         <tr>
                                           <td width="15%" align="center"><?php echo date("d"); ?></td>
