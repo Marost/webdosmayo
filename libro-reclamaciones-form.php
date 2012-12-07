@@ -33,12 +33,6 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
 
         <div id="interior">
 
-            <div class="header-container">
-                
-                <?php require_once("w-header.php") ?>
-
-            </div>
-
             <div class="main-container">
                 <div class="main wrapper clearfix">
 
@@ -103,7 +97,9 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
                                           <td>Nombres de la persona natural o razón social de la persona jurídica:</td>
                                           </tr>
                                         <tr>
-                                          <td height="23"><input name="textfield" type="text" id="textfield2" value="" size="130"></td>
+                                          <td height="23">
+                                            <input class="form-input" name="nombre" type="text" value="" size="130">
+                                          </td>
                                           </tr>
                                       </table></td>
                                     </tr>
@@ -199,12 +195,12 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
                                       <td height="147" align="left"><table width="100%" border="0" cellpadding="1" cellspacing="1">
                                         <tr>
                                           <td width="25%">Tipo Atención:</td>
-                                          <td width="25%">Presenta Queja:</td>
+                                          <td width="20%">Presenta Queja:</td>
                                           <td width="25%">Tipo Personal:</td>
-                                          <td width="25%">Tipo de Vía de Canalización</td>
+                                          <td width="30%">Tipo de Vía de Canalización</td>
                                         </tr>
                                         <tr>
-                                          <td width="25%" height="23">
+                                          <td width="25%" valign="top">
                                             <div class="option-group radio">
                                               <input type="radio" name="tipo-atencion" id="atencion-1" />
                                               <label for="atencion-1">Consulta Externa</label>
@@ -216,7 +212,7 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
                                               <label for="atencion-3">Hospitalización</label>
                                             </div>
                                           </td>
-                                          <td width="25%">
+                                          <td width="20%" valign="top">
                                             <div class="option-group radio">
                                               <input type="radio" name="presenta-queja" id="queja-1" />
                                               <label for="queja-1">Usuario</label>
@@ -225,7 +221,7 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
                                               <label for="queja-2">Acompañante</label>
                                             </div>
                                           </td>
-                                          <td width="25%">
+                                          <td width="25%" valign="top">
                                             <div class="option-group radio">
                                               <input type="radio" name="tipo-personal" id="personal-1" />
                                               <label for="personal-1">Enfermera(o)</label>
@@ -255,7 +251,7 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
                                               <label for="personal-9">Otros</label>
                                             </div>
                                           </td>
-                                          <td width="25%">
+                                          <td width="30%" valign="top">
                                             <div class="option-group radio">
                                               <input type="radio" name="tipo-via" id="canalizacion-1" />
                                               <label for="canalizacion-1">Oficina de Gest. de la Calidad</label>
@@ -325,9 +321,16 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
 
                                           </td>
 
+                                          <tr>
+                                            <td>
+                                              <input class="form-btn" type="submit" value="Enviar" />
+                                            </td>
+                                          </tr>
                                             
                                         </tr>
-                                      </table></td>
+                                      </table>
+
+                                    </td>
                                     </tr>
                                   </table>
                                 </form>
