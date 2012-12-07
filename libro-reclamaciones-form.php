@@ -122,10 +122,10 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
                                           </td>
                                           <td width="9%" align="center">
                                             <div class="option-group radio">
-                                              <input type="radio" name="sexo" id="sexo-m" />
+                                              <input type="radio" name="sexo" id="sexo-m" value="M" />
                                               <label for="sexo-m">M</label>
 
-                                              <input type="radio" name="sexo" id="sexo-f" />
+                                              <input type="radio" name="sexo" id="sexo-f" value="F" />
                                               <label for="sexo-f">F</label>
                                             </div>
                                           </td>
@@ -160,7 +160,7 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
                                         </tr>
                                         <tr>
                                           <td height="23">
-                                            <textarea class="form-input" name="identificacion" cols="130" rows="15"></textarea>
+                                            <textarea class="form-input" name="atencion-brindada" cols="130" rows="15"></textarea>
                                           </td>
                                         </tr>
                                       </table></td>
@@ -176,73 +176,73 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
                                         <tr>
                                           <td width="25%" valign="top">
                                             <div class="option-group radio">
-                                              <input type="radio" name="tipo-atencion" id="atencion-1" />
+                                              <input type="radio" name="tipo-atencion" id="atencion-1" value="Consulta Externa" />
                                               <label for="atencion-1">Consulta Externa</label>
 
-                                              <input type="radio" name="tipo-atencion" id="atencion-2" />
+                                              <input type="radio" name="tipo-atencion" id="atencion-2" value="Emergencia" />
                                               <label for="atencion-2">Emergencia</label>
 
-                                              <input type="radio" name="tipo-atencion" id="atencion-3" />
+                                              <input type="radio" name="tipo-atencion" id="atencion-3" value="Hospitalización" />
                                               <label for="atencion-3">Hospitalización</label>
                                             </div>
                                           </td>
                                           <td width="20%" valign="top">
                                             <div class="option-group radio">
-                                              <input type="radio" name="presenta-queja" id="queja-1" />
+                                              <input type="radio" name="presenta-queja" id="queja-1" value="Usuario" />
                                               <label for="queja-1">Usuario</label>
 
-                                              <input type="radio" name="presenta-queja" id="queja-2" />
+                                              <input type="radio" name="presenta-queja" id="queja-2" value="Acompañante" />
                                               <label for="queja-2">Acompañante</label>
                                             </div>
                                           </td>
                                           <td width="25%" valign="top">
                                             <div class="option-group radio">
-                                              <input type="radio" name="tipo-personal" id="personal-1" />
+                                              <input type="radio" name="tipo-personal" id="personal-1" value="Enfermera(o)" />
                                               <label for="personal-1">Enfermera(o)</label>
 
-                                              <input type="radio" name="tipo-personal" id="personal-2" />
+                                              <input type="radio" name="tipo-personal" id="personal-2" value="Médico" />
                                               <label for="personal-2">Médico</label>
 
-                                              <input type="radio" name="tipo-personal" id="personal-3" />
+                                              <input type="radio" name="tipo-personal" id="personal-3" value="Tecnologo Médico" />
                                               <label for="personal-3">Tecnologo Médico</label>
 
-                                              <input type="radio" name="tipo-personal" id="personal-4" />
-                                              <label for="personal-4">Tec. Adm</label>
+                                              <input type="radio" name="tipo-personal" id="personal-4" value="Tec. Adm" />
+                                              <label for="personal-4">Tec. Adm.</label>
                                               
-                                              <input type="radio" name="tipo-personal" id="personal-5" />
+                                              <input type="radio" name="tipo-personal" id="personal-5" value="Tec. Enferm." />
                                               <label for="personal-5">Tec. Enferm.</label>
                                               
-                                              <input type="radio" name="tipo-personal" id="personal-6" />
+                                              <input type="radio" name="tipo-personal" id="personal-6" value="Vigilante" />
                                               <label for="personal-6">Vigilante</label>
                                               
-                                              <input type="radio" name="tipo-personal" id="personal-7" />
+                                              <input type="radio" name="tipo-personal" id="personal-7" value="Asist. Social" />
                                               <label for="personal-7">Asist. Social</label>
                                               
-                                              <input type="radio" name="tipo-personal" id="personal-8" />
+                                              <input type="radio" name="tipo-personal" id="personal-8" value="No aplica" />
                                               <label for="personal-8">No aplica</label>
                                               
-                                              <input type="radio" name="tipo-personal" id="personal-9" />
+                                              <input type="radio" name="tipo-personal" id="personal-9" value="Otros" />
                                               <label for="personal-9">Otros</label>
                                             </div>
                                           </td>
                                           <td width="30%" valign="top">
                                             <div class="option-group radio">
-                                              <input type="radio" name="tipo-via" id="canalizacion-1" />
+                                              <input type="radio" name="tipo-via" id="canalizacion-1" value="Oficina de Gest. de la Calidad" />
                                               <label for="canalizacion-1">Oficina de Gest. de la Calidad</label>
 
-                                              <input type="radio" name="tipo-via" id="canalizacion-2" />
+                                              <input type="radio" name="tipo-via" id="canalizacion-2" value="Trámite Documentario" />
                                               <label for="canalizacion-2">Trámite Documentario</label>
                                               
-                                              <input type="radio" name="tipo-via" id="canalizacion-3" />
+                                              <input type="radio" name="tipo-via" id="canalizacion-3" value="Email" />
                                               <label for="canalizacion-3">Email</label>
                                               
-                                              <input type="radio" name="tipo-via" id="canalizacion-4" />
+                                              <input type="radio" name="tipo-via" id="canalizacion-4" value="Teléfono" />
                                               <label for="canalizacion-4">Teléfono</label>
                                               
-                                              <input type="radio" name="tipo-via" id="canalizacion-5" />
+                                              <input type="radio" name="tipo-via" id="canalizacion-5" value="Buzón" />
                                               <label for="canalizacion-5">Buzón</label>
                                               
-                                              <input type="radio" name="tipo-via" id="canalizacion-6" />
+                                              <input type="radio" name="tipo-via" id="canalizacion-6" value="Otros" />
                                               <label for="canalizacion-6">Otros</label>
                                             </div>
                                           </td>
@@ -286,10 +286,10 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
                                         <tr>
                                           <td>
                                             <div class="option-group radio">
-                                              <input type="radio" name="dt-personal" id="dt-personal-1" />
+                                              <input type="radio" name="dt-personal" id="dt-personal-1" value="No aplica" />
                                               <label for="dt-personal-1">No aplica</label>
                                               
-                                              <input type="radio" name="dt-personal" id="dt-personal-2" />
+                                              <input type="radio" name="dt-personal" id="dt-personal-2" value="No Identificado" />
                                               <label for="dt-personal-2">No Identificado</label>
                                             </div>
 
