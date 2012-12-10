@@ -25,7 +25,7 @@ $rst_cas        = mysql_query("SELECT * FROM DM_cas ORDER BY fecha_publicacion D
 $rst_selectanio=mysql_query("SELECT DISTINCT fecha_anio FROM DM_cas", $conexion);
 
 ################################################################
-/*VARIABLES DE URL AL BUSCAR*/
+/*VARIABLES DE URL AL BUSCAR POR AÑO Y MES*/
 $anio=$_REQUEST["anio"];
 $mes=$_REQUEST["mes"];
 $fecha_seleccion=$anio."-".$mes;
@@ -40,6 +40,21 @@ if($anio>0 AND $mes>0){
     $pagination     = new Pagination("5", $generated, $page, $url_web."&page", 1, 0);
     $start          = $pagination->prePagination();
     $rst_cas        = mysql_query("SELECT * FROM DM_cas WHERE fecha_mes='$fecha_seleccion' ORDER BY fecha_publicacion DESC LIMIT $start, 5", $conexion);
+}
+
+################################################################
+/*VARIABLES DE URL AL BUSCAR POR TEXTO*/
+$buscar=$_REQUEST["buscar"];
+
+if($buscar<>""){
+    $url_web=$web."cas?buscar=$buscar";
+    $page = (isset($_GET['page'])) ? intval($_GET['page']) : 1;
+    $rst_cas        = mysql_query("SELECT COUNT(*) as count FROM DM_cas WHERE titulo LIKE '%$buscar%' ORDER BY fecha_publicacion DESC", $conexion);
+    $fila_cas       = mysql_fetch_assoc($rst_cas);
+    $generated      = intval($fila_cas['count']);
+    $pagination     = new Pagination("5", $generated, $page, $url_web."&page", 1, 0);
+    $start          = $pagination->prePagination();
+    $rst_cas        = mysql_query("SELECT * FROM DM_cas WHERE titulo LIKE '%$buscar%' ORDER BY fecha_publicacion DESC LIMIT $start, 5", $conexion);
 }
 
 ?>
@@ -60,6 +75,10 @@ if($anio>0 AND $mes>0){
 
         <!-- CSS SELECT -->
         <link rel="stylesheet" href="/libs/css3-form/general/light/general-light.css" />
+
+        <!-- CSS SEARCH -->
+        <link rel="stylesheet" href="/libs/css3-form/search/light/search-light.css" />
+
         <!--[if lt IE 9]>
                 <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
                 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -94,11 +113,15 @@ if($anio>0 AND $mes>0){
 
                                 <div id="busqueda_cabecera">
 
-                                    <form name="busqueda_fecha" method="GET" action="cas">
+                                    <form name="busqueda" action="cas" class="search-form noframe nobtn rsmall">
+
+                                        <input type="text" name="buscar" class="search-input" placeholder="Buscar..." />
+
+                                        <p style="float: left; margin: 0 15px; padding: 10px 0 0 0; ">Ó</p>
 
                                         <div class="select-wrapper">
                                             <select name="anio">
-                                                <option>Seleccion año</option>
+                                                <option value="">Seleccion año</option>
                                                 <?php while($fila_selectanio=mysql_fetch_array($rst_selectanio)){
                                                     $fechaAnio=$fila_selectanio["fecha_anio"];
                                                 ?>
@@ -109,7 +132,7 @@ if($anio>0 AND $mes>0){
 
                                         <div class="select-wrapper">
                                             <select name="mes">
-                                                <option>Seleccion mes</option>
+                                                <option value="">Seleccion mes</option>
                                                 <option value="01">Enero</option>
                                                 <option value="02">Febrero</option>
                                                 <option value="03">Marzo</option>

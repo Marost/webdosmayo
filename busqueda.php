@@ -25,6 +25,17 @@ if ($buscar!=""){
 
         <?php require_once("w-header-scripts.php") ?>
 
+        <!-- CSS SELECT -->
+        <link rel="stylesheet" href="/libs/css3-form/general/light/general-light.css" />
+
+        <!-- CSS SEARCH -->
+        <link rel="stylesheet" href="/libs/css3-form/search/light/search-light.css" />
+
+        <!--[if lt IE 9]>
+                <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+                <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -45,9 +56,13 @@ if ($buscar!=""){
                     <section id="news">
 
                         <h2>Busca a tu Médico</h2>
-                        <form action="busqueda.php" method="GET">
-                            <input type="text" value="Buscar..." onfocus="if (this.value == 'Buscar...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Buscar...';}" name="buscar" />
-                            <input class="searchbutton" type="submit" value="Buscar" />
+
+                        <form name="busqueda" method="GET" action="busqueda.php" class="search-form noframe nobtn rsmall">
+
+                            <input type="text" name="buscar" class="search-input" placeholder="Buscar..." style="width: 350px;" >
+
+                            <input class="form-btn" value="Buscar" type="submit" style="margin-left:10px;">
+
                         </form>
                     
                         <ul>
