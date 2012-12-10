@@ -156,11 +156,20 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
                                     <tr>
                                       <td align="left"><table width="100%" border="1" cellpadding="2" cellspacing="1">
                                         <tr>
-                                          <td class="titulo"><strong>Identificación de la Atención Brindada:</strong></td>
+                                          <td class="titulo"><strong>Identificación de la Atención Brindada:</strong>
+                                            <p>Describa brevemente lo sucedido:</p>
+                                            <p>Si puede identificar a la persona coloque los datos, sino redacte los rasgos físicos.</p>
+                                            <p>Coloque el area que fue atendido.</p>
+                                            <p>Es importante su sinceridad y relate los hechos como sucedieron para realizar las correcciones respectivas.</p>
+                                            <p>Atte, </p>
+                                            <p>Oficina de Gestión de la Calidad</p>
+                                          </td>
                                         </tr>
                                         <tr>
                                           <td height="23">
-                                            <textarea class="form-input" name="atencion-brindada" cols="130" rows="15"></textarea>
+                                            <textarea class="form-input" name="atencion-brindada" cols="130" rows="15">
+
+                                            </textarea>
                                           </td>
                                         </tr>
                                       </table></td>
