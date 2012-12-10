@@ -11,6 +11,7 @@ $script_historia=true;
 $historia=seleccionTabla(1, "id", "DM_historia", $conexion);
 $quienes_somos=seleccionTabla(2, "id", "DM_historia", $conexion);
 $daniel_carrion=seleccionTabla(3, "id", "DM_historia", $conexion);
+$cetide=seleccionTabla(4, "id", "DM_historia", $conexion);
 
 ?>
 <!DOCTYPE html>
@@ -81,6 +82,7 @@ $daniel_carrion=seleccionTabla(3, "id", "DM_historia", $conexion);
                                     <li rel="1" id="historia" class="selected"><a href="javascript:;"><?php echo $historia["titulo"]; ?></a></li>
                                     <li rel="2" id="quienes_somos"><a href="javascript:;"><?php echo $quienes_somos["titulo"]; ?></a></li>
                                     <li rel="3" id="daniel_carrion"><a href="javascript:;"><?php echo $daniel_carrion["titulo"]; ?></a></li>
+                                    <li rel="4" id="cetide"><a href="javascript:;"><?php echo $cetide["titulo"]; ?></a></li>
                                   </ul>
 
                                   <div>
