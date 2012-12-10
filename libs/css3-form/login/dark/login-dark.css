@@ -65,7 +65,7 @@ input[type=submit]::-moz-focus-inner {
 	-moz-box-shadow:    0 1px 2px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.2);
 	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.2);
 	box-shadow:         0 1px 2px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.2);
-	behavior: url(PIE.htc);
+	behavior: url(/libs/css3-form/PIE.htc);
 }
 
 .login-form.nolabel {   /* only required for the demo */
@@ -105,7 +105,7 @@ input[type=submit]::-moz-focus-inner {
 	-o-transition:      all 0.4s ease-in-out;
 	-ms-transition:     all 0.4s ease-in-out;
 	transition:         all 0.4s ease-in-out;
-	behavior: url(PIE.htc);
+	behavior: url(/libs/css3-form/PIE.htc);
 }
 
 /* Focus style */
@@ -169,7 +169,7 @@ input[type=submit]::-moz-focus-inner {
 	-moz-background-clip:    padding;
 	-webkit-background-clip: padding-box;
 	background-clip:         padding-box;
-	behavior: url(PIE.htc);
+	behavior: url(/libs/css3-form/PIE.htc);
 }
 
 .login-btn:active {
@@ -240,7 +240,7 @@ input[type=submit]::-moz-focus-inner {
 	-moz-box-shadow:    inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 0 rgba(0, 0, 0, 0.7);
 	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 0 rgba(0, 0, 0, 0.7);
 	box-shadow:         inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 0 rgba(0, 0, 0, 0.7);
-	behavior: url(PIE.htc);
+	behavior: url(/libs/css3-form/PIE.htc);
 }
 
 
@@ -258,7 +258,7 @@ input[type=submit]::-moz-focus-inner {
 	-moz-box-shadow:    inset 0 1px 0 rgba(255, 255, 255, 0.2);
 	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
 	box-shadow:         inset 0 1px 0 rgba(255, 255, 255, 0.2);
-	behavior: url(PIE.htc);
+	behavior: url(/libs/css3-form/PIE.htc);
 }
 
 .bbar .forgot {

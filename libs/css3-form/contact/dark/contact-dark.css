@@ -83,7 +83,7 @@ section .group:last-of-type {
 	-o-transition:      all 0.4s ease-in-out;
 	-ms-transition:     all 0.4s ease-in-out;
 	transition:         all 0.4s ease-in-out;
-	behavior: url(PIE.htc);
+	behavior: url(/libs/css3-form/PIE.htc);
 }
 
 textarea.form-input {
@@ -155,7 +155,7 @@ textarea.form-input {
 	-moz-background-clip:    padding;
 	-webkit-background-clip: padding-box;
 	background-clip:         padding-box;
-	behavior: url(PIE.htc);
+	behavior: url(/libs/css3-form/PIE.htc);
 }
 
 .form-btn:active {
@@ -214,7 +214,7 @@ label span {
 	-moz-box-shadow:    0 1px 2px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.3);
 	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.3);
 	box-shadow:         0 1px 2px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.3);
-	behavior: URL(PIE.htc);
+	behavior: url(/libs/css3-form/PIE.htc);
 }
 
 
@@ -232,7 +232,7 @@ label span {
 	background-image:      -o-linear-gradient(top, #444444, #343434); /* Opera 11.10+ */
 	background-image:         linear-gradient(top, #444444, #343434);
 	-pie-background:          linear-gradient(top, #444444, #343434); /* IE6-IE9 */
-	behavior: URL(PIE.htc);
+	behavior: url(/libs/css3-form/PIE.htc);
 }
 
 .contact-form.tbar h3 {
@@ -256,7 +256,7 @@ label span {
 	-moz-box-shadow:    inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 1px rgba(0, 0, 0, 0.7);
 	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 1px rgba(0, 0, 0, 0.7);
 	box-shadow:         inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 1px rgba(0, 0, 0, 0.7);
-	behavior: url(PIE.htc);
+	behavior: url(/libs/css3-form/PIE.htc);
 }
 
 .contact-form.tbar .form-input {
@@ -375,7 +375,7 @@ label span {
 	z-index: 1;
 	-pie-background: linear-gradient(top, #4a535c, #1d2024); /* IE6 -IE9 */
 	border-radius: 8px 0 0 8px;
-	behavior: url(PIE.htc);
+	behavior: url(/libs/css3-form/PIE.htc);
 }
 
 .ie .msgtop.nolabel p .before:before {
@@ -440,7 +440,7 @@ label span {
 	-moz-box-shadow:    1px -1px 0 #666, 2px -2px 0 #444, 3px -3px #666, 4px -4px 0 #444, 5px -5px 0 #666, 6px -6px 0 #444, 7px -7px 0 #666, inset 0 1px 0 rgba(255, 255, 255, 0.3), 2px 2px 4px rgba(0, 0, 0, 0.7);
 	-webkit-box-shadow: 1px -1px 0 #666, 2px -2px 0 #444, 3px -3px #666, 4px -4px 0 #444, 5px -5px 0 #666, 6px -6px 0 #444, 7px -7px 0 #666, inset 0 1px 0 rgba(255, 255, 255, 0.3), 2px 2px 4px rgba(0, 0, 0, 0.7);
 	box-shadow:         1px -1px 0 #666, 2px -2px 0 #444, 3px -3px #666, 4px -4px 0 #444, 5px -5px 0 #666, 6px -6px 0 #444, 7px -7px 0 #666, inset 0 1px 0 rgba(255, 255, 255, 0.3), 2px 2px 4px rgba(0, 0, 0, 0.7);
-	behavior: url(PIE.htc);
+	behavior: url(/libs/css3-form/PIE.htc);
 }
 
 .form3d .form-input {
@@ -498,7 +498,7 @@ label span {
 	-moz-box-shadow:    0 14px 7px -12px rgba(0, 0, 0, 0.9);
 	-webkit-box-shadow: 0 14px 7px -12px rgba(0, 0, 0, 0.9);
 	box-shadow:         0 14px 7px -12px rgba(0, 0, 0, 0.9);
-	behavior: url(PIE.htc);
+	behavior: url(/libs/css3-form/PIE.htc);
 
 }
 

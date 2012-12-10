@@ -18,7 +18,7 @@ form.general {
 	-moz-box-shadow:    0 1px 2px rgba(0, 0, 0, 0.5);
 	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 	box-shadow:         0 1px 2px rgba(0, 0, 0, 0.5);
-	behavior: URL(PIE.htc);
+	behavior: url(/libs/css3-form/PIE.htc);
 }
 
 /* Labels */
@@ -60,7 +60,7 @@ label span {
 	-o-transition:      all 0.4s ease-in-out;
 	-ms-transition:     all 0.4s ease-in-out;
 	transition:         all 0.4s ease-in-out;
-	behavior: url(PIE.htc);
+	behavior: url(/libs/css3-form/PIE.htc);
 }
 
 textarea.form-input {
@@ -70,7 +70,7 @@ textarea.form-input {
 }
 
 .select-wrapper {
-	width: 250px;
+	width: 190px;
 	float: left;
 	margin: 0 10px 10px 0;
 	overflow: hidden;
@@ -135,7 +135,7 @@ div.option-group{
 .form-btn {
 	float: left;
 	padding: 0 15px;
-	height: 30px;
+	height: 36px;
 	font: bold 12px 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	text-align: center;
 	color: #fff;
@@ -161,7 +161,7 @@ div.option-group{
 	-moz-background-clip:    padding;
 	-webkit-background-clip: padding-box;
 	background-clip:         padding-box;
-	behavior: url(PIE.htc);
+	behavior: url(/libs/css3-form/PIE.htc);
 }
 
 .form-btn:active {
@@ -211,7 +211,7 @@ input[type=submit]::-moz-focus-inner {
 	-webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
 	box-shadow:         0 1px 0 rgba(0, 0, 0, 0.5);
 	-pie-watch-ancestors: 1;
-	behavior: url(PIE.htc);
+	behavior: url(/libs/css3-form/PIE.htc);
 }
 
 .ie .option-group.check label:before {
@@ -286,7 +286,7 @@ input[type=submit]::-moz-focus-inner {
 	-webkit-background-clip: padding-box;
 	background-clip:         padding-box;
 	-pie-watch-ancestors: 1;
-	behavior: url(PIE.htc);
+	behavior: url(/libs/css3-form/PIE.htc);
 }
 
 .ie .option-group.radio label:before {
@@ -305,7 +305,7 @@ input[type=submit]::-moz-focus-inner {
 	-moz-border-radius:    7px;
 	-webkit-border-radius: 7px;
 	border-radius:         7px;
-	behavior: url(PIE.htc);
+	behavior: url(/libs/css3-form/PIE.htc);
 }
 
 .ie .option-group.radio label:after, .ie .option-group.radio label .after  {
@@ -352,7 +352,7 @@ input[type=submit]::-moz-focus-inner {
 	-moz-box-shadow:    0 1px 1px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.5);
 	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.5);
 	box-shadow:         0 1px 1px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.5);
-	behavior: url(PIE.htc);
+	behavior: url(/libs/css3-form/PIE.htc);
 }
 
 .selectTop {
@@ -400,7 +400,7 @@ input[type=submit]::-moz-focus-inner {
 }
 
 select {
-	width: 240px;
+	width: 180px;
 	height: 24px;
 	padding: 8px 0 4px 10px;
 	border: 0;
