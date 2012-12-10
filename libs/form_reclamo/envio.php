@@ -69,8 +69,8 @@ $body = '<!DOCTYPE HTML> <html lang="es"> <head> <meta charset="utf-8">
 </body>
 </html>';
 	
-//$from="librodereclamaciones@hdosdemayo.gob.pe";
-$from="marcolopez49@hotmail.com";
+$from="librodereclamaciones@hdosdemayo.gob.pe";
+//$from="marcolopez49@hotmail.com";
 $asunto="HNDM | Mensaje";
 $headers= "From: HNDM <".strip_tags($from)."> \r\n";
 $headers.= "MIME-Version: 1.0\r\n";
