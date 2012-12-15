@@ -307,7 +307,7 @@ $rst_campanias=mysql_query("SELECT * FROM DM_campania ORDER BY fecha_publicacion
                                         $noticias_contenido=substr(soloDescripcion($fila_noticias["contenido"]),0,225)."...";
                                         $noticias_imagen=$fila_noticias["imagen"];
                                         $noticias_imagen_carpeta=$fila_noticias["carpeta_imagen"];
-                                        $noticias_categoria=seleccionTabla(1, "id", "DM_noticia_categoria", $conexion);
+                                        $noticias_categoria=seleccionTabla(6, "id", "DM_noticia_categoria", $conexion);
                                         $noticias_url_final=$noticias_categoria["url"]."/".$noticias_id."-".$noticias_url;
                                     ?>
 

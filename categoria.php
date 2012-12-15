@@ -87,7 +87,7 @@ $query  = mysql_query("SELECT * FROM DM_noticia WHERE categoria=$categoria_id OR
 
                     <section id="news">
 
-                        <div class="nw-nota">
+                        <div class="nw-nota salapr">
 
                             <div class="titulo">
                                 <h2><?php echo $categoria_titulo; ?></h2>
@@ -126,22 +126,30 @@ $query  = mysql_query("SELECT * FROM DM_noticia WHERE categoria=$categoria_id OR
                                         <div class="datos">
                                             <h3><a href="<?php echo $url_categoria."/".$noticiacat_id."-".$noticiacat_url; ?>"><?php echo $noticiacat_titulo; ?></a></h3>
                                             <div class="imagen">
-                                                <img src="imagenes/upload/<?php echo $noticiacat_imagen_carpeta."thumb200/".$noticiacat_imagen; ?>" width="150" height="95" alt="<?php echo $noticiacat_titulo; ?>">
+                                                <img src="imagenes/upload/<?php echo $noticiacat_imagen_carpeta."thumb200/".$noticiacat_imagen; ?>" width="300" height="200" alt="<?php echo $noticiacat_titulo; ?>">
                                             </div>
                                             <p><?php echo $noticiacat_contenido; ?></p>
+                                            <a href="<?php echo $url_categoria."/".$noticiacat_id."-".$noticiacat_url; ?>">Más...</a>
                                         </div>
                                         <?php }else{ ?>
                                         
                                         <div class="datos an100">
                                             <h3><a href="<?php echo $url_categoria."/".$noticiacat_id."-".$noticiacat_url; ?>"><?php echo $noticiacat_titulo; ?></a></h3>
                                             <p><?php echo $noticiacat_contenido; ?></p>
+                                            <a href="<?php echo $url_categoria."/".$noticiacat_id."-".$noticiacat_url; ?>">Más...</a>
                                         </div>
 
                                         <?php } ?>
 
                                     </article>
+
+                                    <?php } ?>
                                 
-                                <?php } $pagination->pagination(); } ?>
+                                    <div style="width=100%; float:left;">
+                                        <?php $pagination->pagination(); ?>
+                                    </div>
+
+                                <?php } ?>
 
                             </div>
 
