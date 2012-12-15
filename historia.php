@@ -63,9 +63,11 @@ $cetide=seleccionTabla(4, "id", "DM_historia", $conexion);
         <script>
             var jSlid = jQuery.noConflict();
 
-            jSlid(document).ready(function(){
+            jSlid(document).on("ready", startClSl);
+
+            function startClSl(){
                 jSlid("#tarifario_cabecera ul li").on("click", startClick);
-            });
+            }
 
             function startClick(datos){
                 jSlid("#tarifario_cabecera ul li").removeClass("selected");
@@ -83,8 +85,8 @@ $cetide=seleccionTabla(4, "id", "DM_historia", $conexion);
                 });
             }
 
-            function startSlider(valorJQ){    
-                valorJQ('.historia_slide div').allinone_thumbnailsBanner({
+            function startSlider(datoJQ){    
+                datoJQ('.historia_slide div').allinone_thumbnailsBanner({
                     skin: 'cool',
                     numberOfThumbsPerScreen:4,
                     width: 620,
