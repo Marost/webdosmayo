@@ -30,27 +30,68 @@ $cetide=seleccionTabla(4, "id", "DM_historia", $conexion);
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
         <script>
             var jHist = jQuery.noConflict();
-            jHist(document).ready(function(){
-                jHist.post("historia-datos.php", {tipo: 1},
-                function(data){
-                    jHist("#progressbar").removeClass("ocultar");
-                    jHist("#tarifario_contenido").html(data);
-                    jHist("#progressbar").addClass("ocultar");
+
+            jHist(document).on("ready", startDatHistoria(jHist));
+            
+            function startDatHistoria(datoJQ){
+                datoJQ.ajax({
+                    url:"historia-datos.php", 
+                    data: "tipo=1", 
+                    type: "POST",
+                    beforeSend: function(){
+                        datoJQ("#progressbar").removeClass("ocultar");
+                    },
+                    success: function(data){
+                        datoJQ("#tarifario_contenido").html(data);
+                        datoJQ("#progressbar").addClass("ocultar");
+                    }
                 });
-                
-                jHist("#tarifario_cabecera ul li").click(function(){
-                    jHist("#progressbar").removeClass("ocultar");
-                    jHist("#tarifario_cabecera ul li").removeClass("selected");
-                    jHist(this).addClass("selected");
-                    var tipo = jHist(this).attr("rel");
-                    jHist.post("historia-datos.php", {tipo: tipo},
-                    function(data){
-                        jHist("#tarifario_contenido").html(data);
-                        jHist("#progressbar").addClass("ocultar");
-                    });
-                })
-                
+            }
+
+        </script>
+
+        <!-- SLIDE NOTICIA -->
+        <link href="/libs/allinone_banner/allinone_thumbnailsBanner.css" rel="stylesheet" type="text/css">
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
+        <script src="/libs/allinone_banner/jquery.ui.touch-punch.min.js"></script>
+        <script src="/libs/allinone_banner/jquery.mousewheel.min.js"></script>
+        <script src="/libs/allinone_banner/allinone_thumbnailsBanner.js"></script>
+        <script src="/libs/allinone_banner/reflection.js" type="text/javascript"></script>
+        <!--[if IE]><script src="/libs/allinone_banner/excanvas.compiled.js" type="text/javascript"></script><![endif]-->
+
+        <script>
+            var jSlid = jQuery.noConflict();
+
+            jSlid(document).ready(function(){
+                jSlid("#tarifario_cabecera ul li").on("click", startClick);
             });
+
+            function startClick(datos){
+                jSlid("#tarifario_cabecera ul li").removeClass("selected");
+                jSlid("#progressbar").removeClass("ocultar");
+                jSlid(this).addClass("selected");
+                var tipo = datos.currentTarget.attributes.rel.value;
+                jSlid.ajax({
+                    url: "historia-datos.php", 
+                    data: "tipo="+tipo,
+                    type: "POST",
+                    success: function(data){
+                        jSlid("#tarifario_contenido").html(data);
+                        jSlid("#progressbar").addClass("ocultar", startSlider(jSlid));
+                    }
+                });
+            }
+
+            function startSlider(valorJQ){    
+                valorJQ('.historia_slide div').allinone_thumbnailsBanner({
+                    skin: 'cool',
+                    numberOfThumbsPerScreen:4,
+                    width: 620,
+                    height: 360,
+                    thumbsWrapperMarginTop:0
+                });
+            }
         </script>
 
     </head>
