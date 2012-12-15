@@ -25,28 +25,6 @@ $num_noticia_slide=mysql_num_rows($rst_noticia_slide);
 
 <?php if($num_noticia_slide>0){ ?>
 
-<!-- SLIDE NOTICIA -->
-<link href="/libs/allinone_banner/allinone_thumbnailsBanner.css" rel="stylesheet" type="text/css">
-<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
-<script src="/libs/allinone_banner/jquery.ui.touch-punch.min.js"></script>
-<script src="/libs/allinone_banner/jquery.mousewheel.min.js"></script>
-<script src="/libs/allinone_banner/allinone_thumbnailsBanner.js"></script>
-<script src="/libs/allinone_banner/reflection.js" type="text/javascript"></script>
-<!--[if IE]><script src="/libs/allinone_banner/excanvas.compiled.js" type="text/javascript"></script><![endif]-->
-<script>
-var jNotSld=jQuery.noConflict();
-jNotSld(document).ready(function(){
-    jNotSld('.historia_slide div').allinone_thumbnailsBanner({
-        skin: 'cool',
-        numberOfThumbsPerScreen:4,
-        width: 620,
-        height: 360,
-        thumbsWrapperMarginTop:0
-    });
-});
-</script>
-
 <div class="historia_slide">
 
     <div style="display:none;">
@@ -65,4 +43,5 @@ jNotSld(document).ready(function(){
     </div>
 
 </div>
+
 <?php } ?>
