@@ -106,7 +106,12 @@ if($buscar<>""){
                         <div class="nw-nota cas">
 
                             <div class="titulo">
-                                <h2>Normatividad<?php if($anio>0 AND $mes>0){ echo ": ".$nombre_fecha; } ?></h2>
+                                <h2>Normatividad
+                                    <?php 
+                                        if($anio>0 AND $mes>0){ echo ": ".$nombre_fecha;
+                                        }elseif($buscar<>""){ echo ": ".$buscar; }
+                                    ?>
+                                </h2>
                             </div>
 
                             <div class="contenido">

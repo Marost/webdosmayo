@@ -35,7 +35,7 @@ $espec_url=$fila_especialidades_wg["url"];
                             <li><a href="javascript:;" target="_blank" id="enl-intranet">Intranet</a></li>
                         </ul>
                     </li>
-                    <li><a href="javascript:;">Publicaciones<span class="icon">&nbsp;</span></a>
+                    <li><a href="javascript:;">Información en Salud<span class="icon">&nbsp;</span></a>
                         <ul>
                             <li><a href="construccion">Información Estadistica</a></li>
                             <li><a href="#">Información Epidemiológica</a>
