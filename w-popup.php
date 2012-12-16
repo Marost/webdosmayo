@@ -1,5 +1,4 @@
 <?php
-
 /*POPUP*/
 $rst_w_popup=mysql_query("SELECT * FROM DM_popup ORDER BY fecha_publicacion DESC LIMIT 1;", $conexion);
 $fila_popup=mysql_fetch_array($rst_w_popup);
@@ -100,7 +99,7 @@ $w_popup_imagen_alto=$w_popup_imagen_dimensiones[1];
     <div class="popup-box">
         <h2>Intranet</h2>
         <a href="http://www.hdosdemayo.gob.pe/webmail" target="_blank"><img src="/imagenes/popup/correo-institucional.png"></a>
-        <a href="/notas/directorio-telefonico.php"><img src="/imagenes/popup/popup.png"></a>
+        <a href="directorio-telefonico"><img src="/imagenes/popup/popup.png"></a>
     </div>
                 
 </div>
