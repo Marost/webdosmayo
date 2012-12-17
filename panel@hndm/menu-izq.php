@@ -99,6 +99,14 @@ jmnpr(document).ready(function(){
         	Listar</a></li>
     </ul>
   </dd>
+  <dt class="items"><b>Teléfonos</b></dt>
+  <dd>
+    <ul class="items">
+      <li>
+        <a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/telefonos/listar.php">
+          Anexos</a></li>
+    </ul>
+  </dd>
   <dt class="items"><b>Epidemiologica</b></dt>
   <dd>
     <ul class="items">
