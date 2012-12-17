@@ -49,12 +49,12 @@ $buscar=$_REQUEST["buscar"];
 if($buscar<>""){
     $url_web=$web."informacion-variada?buscar=$buscar";
     $page = (isset($_GET['page'])) ? intval($_GET['page']) : 1;
-    $rst_cas        = mysql_query("SELECT COUNT(*) as count FROM DM_cas WHERE titulo LIKE '%$buscar%' ORDER BY fecha_publicacion DESC", $conexion);
+    $rst_cas        = mysql_query("SELECT COUNT(*) as count FROM DM_info_variada WHERE titulo LIKE '%$buscar%' ORDER BY fecha_publicacion DESC", $conexion);
     $fila_cas       = mysql_fetch_assoc($rst_cas);
     $generated      = intval($fila_cas['count']);
     $pagination     = new Pagination("5", $generated, $page, $url_web."&page", 1, 0);
     $start          = $pagination->prePagination();
-    $rst_cas        = mysql_query("SELECT * FROM DM_cas WHERE titulo LIKE '%$buscar%' ORDER BY fecha_publicacion DESC LIMIT $start, 5", $conexion);
+    $rst_cas        = mysql_query("SELECT * FROM DM_info_variada WHERE titulo LIKE '%$buscar%' ORDER BY fecha_publicacion DESC LIMIT $start, 5", $conexion);
 }
 
 ?>
