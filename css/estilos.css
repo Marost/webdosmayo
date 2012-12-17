@@ -1441,9 +1441,8 @@ header nav ul .submenu-prensa {
 }
 #enlaces-interes marquee {
   height: 45px;
-  width: 3750px;
+  width: 998px;
   position: absolute;
-  left: -2770px;
 }
 #enlaces-interes .items {
   float: left;
