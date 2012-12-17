@@ -2,7 +2,6 @@
 session_start();
 include("../../../../conexion/conexion.php");
 include("../../../../conexion/funciones.php");
-require_once('../../../../../libs/thumbs/ThumbLib.inc.php');
 
 //DECLARACION DE VARIABLES
 $anexo=$_POST["anexo"];
@@ -11,13 +10,8 @@ $doctor=$_POST["doctor"];
 $id_anexo=$_POST["anx"];
 
 //INSERTANDO DATOS
-$rst_guardar=mysql_query("INSERT INTO ".$tabla_suf."_dirtelefono_doctor (anexo,
-	seccion,
-	doctor,
-	directorio) VALUES('$anexo',
-	'$seccion',
-	'$doctor',
-	$id_anexo);",$conexion);
+$rst_guardar=mysql_query("INSERT INTO ".$tabla_suf."_dirtelefono_doctor (anexo, seccion, doctor, directorio) 
+	VALUES('$anexo', '$seccion', '$doctor', $id_anexo);",$conexion);
 
 if (mysql_errno()!=0){
 	echo "error al insertar los datos ". mysql_errno() . " - ". mysql_error();

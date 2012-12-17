@@ -10,21 +10,20 @@ $url="listar.php";
 $buscar=$_REQUEST["busqueda"];
 $id_anexo=$_REQUEST["anx"];
 
-if ($_REQUEST["btnbuscar"]=="")
-{
-	$rst_query=mysql_query("SELECT * FROM ".$tabla_suf."_dirtelefono_doctor WHERE directorio=$id_anexo ORDER BY id DESC;", $conexion);
-	$num_registros=mysql_num_rows($rst_query);
-		
-	$registros=20;	
-	$pagina=$_GET["pag"];
-	if (is_numeric($pagina))
-	$inicio=(($pagina-1)*$registros);
-	else
-	$inicio=0;
+
+$rst_query=mysql_query("SELECT * FROM ".$tabla_suf."_dirtelefono_doctor WHERE directorio=$id_anexo ORDER BY id DESC;", $conexion);
+$num_registros=mysql_num_rows($rst_query);
 	
-	$rst_query=mysql_query("SELECT * FROM ".$tabla_suf."_dirtelefono_doctor WHERE directorio=$id_anexo ORDER BY id DESC LIMIT $inicio, $registros;", $conexion);
-	$paginas=ceil($num_registros/$registros);
-}
+$registros=20;	
+$pagina=$_GET["pag"];
+if (is_numeric($pagina))
+$inicio=(($pagina-1)*$registros);
+else
+$inicio=0;
+
+$rst_query=mysql_query("SELECT * FROM ".$tabla_suf."_dirtelefono_doctor WHERE directorio=$id_anexo ORDER BY id DESC LIMIT $inicio, $registros;", $conexion);
+$paginas=ceil($num_registros/$registros);
+
 
 //------- MENSAJE DE ERROR
 if($_REQUEST["mensaje"]==1)
@@ -43,7 +42,7 @@ elseif($_REQUEST["mensaje"]==6)
 
 //NOTICIA
 $rst_anexo=mysql_query("SELECT * FROM ".$tabla_suf."_dirtelefono WHERE id=$id_anexo;", $conexion);
-$fila_anexo=mysql_fetch_array($rst_query);
+$fila_anexo=mysql_fetch_array($rst_anexo);
 $anexo_titulo=$fila_anexo["titulo"];
 
 ?>
@@ -80,7 +79,7 @@ if(confirm("¿Está seguro de borrar este registro?\n"+nombre)) {
         <div id="contenido">
               <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
                   <tr>
-                    <td colspan="2"><p><a href="form-agregar.php"><strong>AGREGAR</strong></a></p></td>
+                    <td colspan="2"><p><a href="form-agregar.php?anx=<?php echo $id_anexo; ?>"><strong>AGREGAR</strong></a></p></td>
                   </tr>
                   <tr>
                     <td colspan="2">
@@ -96,7 +95,7 @@ if(confirm("¿Está seguro de borrar este registro?\n"+nombre)) {
                         <tbody>
                           <?php while ($fila=mysql_fetch_array($rst_query)){ ?>
                           <tr<?php echo alt($zebra); $zebra++; ?>>
-                            <td width="85%">
+                            <td width="10%">
                               <?php echo $fila["anexo"] ?>
                             </td>
                             <td width="50%">

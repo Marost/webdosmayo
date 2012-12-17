@@ -103,7 +103,7 @@ jmnpr(document).ready(function(){
   <dd>
     <ul class="items">
       <li>
-        <a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/telefonos/listar.php">
+        <a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/telefonos/anexos/listar.php">
           Anexos</a></li>
     </ul>
   </dd>
