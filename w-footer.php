@@ -18,7 +18,7 @@ $rst_list_empresas=mysql_query("SELECT * FROM DM_lista_empresas ORDER BY id ASC;
                 ?>
 
                 <div class="items">
-                    <a href="<?php echo $lsempresas_enlace; ?>" title="<?php echo $lsempresas_titulo; ?>">
+                    <a href="<?php echo $lsempresas_enlace; ?>" title="<?php echo $lsempresas_titulo; ?>" target="_blank">
                         <img alt="" src="/imagenes/upload/<?php echo $lsempresas_imagen_carpeta."/".$lsempresas_imagen; ?>" alt="<?php echo $lsempresas_titulo; ?>">
                     </a>
                 </div>

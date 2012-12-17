@@ -126,8 +126,6 @@ if(confirm("¿Está seguro de borrar este registro?\n"+nombre)) {
                             <td width="85%">
                             	<p class="texto-azul12-Arial">
                                 <strong><?php echo $fila["titulo"] ?></strong></p>
-                              <p>Publicado el: <strong><?php echo $fila["fecha_publicacion"] ?></strong> 
-                                por: <strong><?php echo $fila["dato_usuario"] ?></strong></p>
                             </td>
                             <td width="15%" align="center">
                             

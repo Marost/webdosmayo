@@ -84,7 +84,7 @@ jq(function() {
            	        </tr>
                   <tr>
                     <td width="20%" height="30" align="right" ><p><strong>Enlace:</strong></p></td>
-                    <td width="80%" height="30" align="left"><input name="Enlace" type="text" id="Enlace" size="50" /></td>
+                    <td width="80%" height="30" align="left"><input name="enlace" type="text" id="enlace" size="50" /></td>
                   </tr>
                 <tr>
                   <td colspan="2" align="center">
