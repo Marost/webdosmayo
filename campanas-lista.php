@@ -108,7 +108,9 @@ $rst_noticias   = mysql_query("SELECT * FROM DM_campania ORDER BY fecha_publicac
                                         <h3><a href="campanias/<?php echo $noticias_id."/".$noticias_url; ?>">
                                             <?php echo $noticias_titulo; ?></a></h3>
                                         <div class="imagen">
+                                            <a href="campanias/<?php echo $noticias_id."/".$noticias_url; ?>">
                                             <img src="imagenes/upload/<?php echo $noticias_imagen_carpeta."".$noticias_imagen; ?>" width="250" height="<?php echo $alto_final; ?>" alt="<?php echo $noticias_titulo; ?>">
+                                            </a>
                                         </div>
                                         <a href="campanias/<?php echo $noticias_id."/".$noticias_url; ?>">Más...</a>
                                     </div>
