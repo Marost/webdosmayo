@@ -9,6 +9,7 @@ $rst_atencion=mysql_query("SELECT * FROM DM_atencion_asegurado ORDER BY fecha_pu
 $fila_atencion=mysql_fetch_array($rst_atencion);
 
 /*VARIABLES*/
+$atencion_id=$fila_atencion["id"];
 $atencion_titulo=$fila_atencion["titulo"];
 $atencion_contenido=$fila_atencion["contenido"];
 
