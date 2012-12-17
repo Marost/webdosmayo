@@ -8,13 +8,6 @@ include("../../../conexion/verificar_sesion.php");
 $rst_query=mysql_query("SELECT * FROM ".$tabla_suf."_lista_empresas WHERE id=". $_REQUEST["id"].";", $conexion);
 $fila_query=mysql_fetch_array($rst_query);
 
-//VARIABLES PARA LA HORA
-$fechaTotal=$fila_query["fecha_publicacion"];
-$fecha=explode(" ", $fechaTotal);
-$fecha_actual=$fecha[0];
-$hora=explode(":", $fecha[1]);
-$hora_actual=$hora[0].":".$hora[1];
-
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -108,7 +101,11 @@ jq(function() {
                         </div>
                       </div>
                     </td>
-           	        </tr>            	    
+           	        </tr>
+                  <tr>
+                    <td width="20%" height="30" align="right"><p><strong>Enlace:</strong></p></td>
+                    <td width="80%" height="30" align="left"><input name="enlace" type="text" id="enlace" value='<?php echo $fila_query["enlace"] ?>' size="50" /></td>
+                  </tr>  
             	    <tr>
             	      <td colspan="2" align="center">
             	        <input type="submit" name="guardar" id="guardar" value="Guardar" />
