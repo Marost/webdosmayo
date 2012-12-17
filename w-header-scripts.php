@@ -196,7 +196,7 @@ jPatHist(document).ready(function(){
     jPatHist('#patrimonio-historico div').allinone_bannerRotator({
         skin: 'classic',
         width: 220,
-        height: 150,
+        height: 175,
         thumbsWrapperMarginBottom:5,
         showAllControllers: false,
         showNavArrows: false,
