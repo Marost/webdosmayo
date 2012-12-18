@@ -6,7 +6,7 @@ include("../../../../conexion/funciones.php");
 $id=$_REQUEST["id"];
 
 /*CARPETA DE DOCUMENTOS DE CAS*/
-$rst_cas=mysql_query("SELECT * FROM DM_info_variada_documentos WHERE id=$id", $conexion);
+$rst_cas=mysql_query("SELECT * FROM DM_info_variada WHERE id=$id", $conexion);
 $fila_cas=mysql_fetch_array($rst_cas);
 $carpeta_cas=$fila_cas["carpeta_documentos"];
 
