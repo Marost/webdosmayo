@@ -10,7 +10,7 @@ $fecha=fechaPost();
 $hora=date("H:i");
 
 /*EXTRAER CARPETA DE DOCUMENTOS*/
-$documentos=seleccionTabla($idnoticia, "id", "DM_cas", $conexion);
+$documentos=seleccionTabla($idnoticia, "id", "DM_info_variada", $conexion);
 $carpeta_archivo=$documentos["carpeta_documentos"];
 
 if($_POST['flash_uploader_0_tmpname']<>""){
