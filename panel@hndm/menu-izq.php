@@ -84,6 +84,9 @@ jmnpr(document).ready(function(){
         <a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/noticias/nuestras-oficinas/listar.php">
           Nuestras Oficinas</a></li>
       <li>
+        <a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/oportunidad-laboral/noticias/listar.php">
+          Oportunidad Laboral</a></li>
+      <li>
         <a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/popup/noticias/listar.php">
           POPUP</a></li>
       <li>
@@ -140,7 +143,7 @@ jmnpr(document).ready(function(){
     <ul class="items">
       <li>
         <a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/directorio/medicos/listar.php">
-          Médicos</a></li>
+          Directorio</a></li>
       <li>
         <a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/directorio/funcionarios/listar.php">
           Otros Funcionarios</a></li>

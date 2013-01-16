@@ -29,7 +29,7 @@ elseif($_REQUEST["mensaje"]==6)
 		$mensaje="Se ha producido un error al eliminar el registro";
 
 //NOTICIA
-$rst_noticia=mysql_query("SELECT * FROM ".$tabla_suf."_atencion_ciudadano WHERE id=$idnoticia LIMIT 1;", $conexion);
+$rst_noticia=mysql_query("SELECT * FROM ".$tabla_suf."_atencion_asegurado WHERE id=$idnoticia LIMIT 1;", $conexion);
 $fila_noticia=mysql_fetch_array($rst_noticia);
 
 ?>

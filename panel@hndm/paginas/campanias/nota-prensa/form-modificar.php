@@ -5,7 +5,7 @@ include("../../../conexion/funciones.php");
 include("../../../conexion/verificar_sesion.php");
 
 /*VARAIABLES DE URL*/
-$idcampania=$_REQUEST["camapania"];
+$idcampania=$_REQUEST["campania"];
 
 //NOTICIA
 $rst_query=mysql_query("SELECT * FROM ".$tabla_suf."_campania_noticia WHERE id=". $_REQUEST["id"].";", $conexion);
