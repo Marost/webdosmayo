@@ -27,13 +27,13 @@
 
 <?php if($script_tabs==true){ ?>
 <!-- TABS -->
-<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 <script src="/js/tabs.js"></script>        
 <?php } ?>
 
 <!-- SLIDE SUPERIOR -->
-<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script src="/js/jquery.nivo.slider.pack.js"></script>
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="/libs/nivo/jquery.nivo.slider.pack.js"></script>
 <script>
 var jSlider=jQuery.noConflict();
 jSlider(document).ready(function() {
@@ -74,7 +74,7 @@ jSlider(document).ready(function() {
 <script  src="/libs/sherpa/scripts/sherpa_ui.js"></script>
 
 <!-- TELEFONO EFECTO -->
-<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 <script src="/libs/marquee/jquery.marquee.js"></script>
 <script>
 var jMarq = jQuery.noConflict();
@@ -84,15 +84,15 @@ jMarq(document).ready(function(){
 </script>
 
 <!-- ESPECIALIDADES -->
-<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 <script src="/js/marquee-especialidades.js"></script>
 
 <!-- ANALISIS CLINICOS -->
-<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 <script src="/js/marquee-apoyo-diagnostico.js"></script>
 
 <!-- POPUP ESCRIBANOS -->
-<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 <script src="/libs/blockui/jquery.blockUI.js"></script>
 <script >
 var jcladd = jQuery.noConflict();
@@ -110,11 +110,11 @@ jcladd(document).ready(function() {
 </script>
 
 <!-- POPUP ESCRIBANOS - ENVIO -->
-<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 <script src="/libs/form_escribanos/envio.js"></script>
 
 <!-- POPUP MAPA -->
-<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 <script  src="/libs/blockui/jquery.blockUI.js"></script>
 <script >
 var jMapUbi = jQuery.noConflict();
@@ -132,7 +132,7 @@ jMapUbi(document).ready(function() {
 </script>
 
 <!-- POPUP TELEFONO -->
-<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 <script  src="/libs/blockui/jquery.blockUI.js"></script>
 <script >
 var jTelf = jQuery.noConflict();
@@ -150,7 +150,7 @@ jTelf(document).ready(function() {
 </script>
 
 <!-- POPUP INTRANET -->
-<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 <script  src="/libs/blockui/jquery.blockUI.js"></script>
 <script >
 var jIntran = jQuery.noConflict();
