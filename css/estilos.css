@@ -1706,11 +1706,7 @@ ESTILOS PROPIOS DEL POPUP 20090323@JCP
 #capaContent {
   display: block;
   width: 400px;
-  /* Necesario para que el script centre la capa horizontalmente en la página */
-
   height: 200px;
-  /* Necesario para que el script centre la capa verticalmente en la página */
-
   background-color: #FFF;
 }
 /* ===============
