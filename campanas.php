@@ -28,7 +28,7 @@ $campania_titulo=$fila_campanias["titulo"];
         <?php require_once("w-header-scripts.php") ?>
 
         <!-- CAMPAÑA -->
-        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
         <script>
             var jHist = jQuery.noConflict();
             jHist(document).ready(function(){

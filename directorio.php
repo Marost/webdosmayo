@@ -26,7 +26,7 @@ $rst_direct_funcionarios=mysql_query("SELECT * FROM DM_directorio_funcionarios O
 
         <!-- DIRECTORIO INTERNO -->
         <link rel="stylesheet" href="/libs/progressbar/ui.progress-bar.css">
-        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
         <script src="/libs/progressbar/progress.js"></script>
 
     </head>

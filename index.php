@@ -26,7 +26,7 @@ $rst_capacit=mysql_query("SELECT * FROM DM_noticia WHERE categoria=3 ORDER BY fe
 $fila_capacit=mysql_fetch_array($rst_capacit);
 $capacit_id=$fila_capacit["id"];
 $capacit_url=$fila_capacit["url"];
-$capacit_titulo=substr($fila_capacit["titulo"],0,45)."...";
+$capacit_titulo=substr($fila_capacit["titulo"],0,45);
 $capacit_contenido=substr(soloDescripcion($fila_capacit["contenido"]),0,140)."...";
 $capacit_imagen=$fila_capacit["imagen"];
 $capacit_imagen_carpeta=$fila_capacit["carpeta_imagen"];
@@ -39,7 +39,7 @@ $rst_recon_inst=mysql_query("SELECT * FROM DM_noticia WHERE categoria=8 ORDER BY
 $fila_recon_inst=mysql_fetch_array($rst_recon_inst);
 $recon_inst_id=$fila_recon_inst["id"];
 $recon_inst_url=$fila_recon_instc["url"];
-$recon_inst_titulo=substr($fila_recon_inst["titulo"],0,65)."...";
+$recon_inst_titulo=substr($fila_recon_inst["titulo"],0,65);
 $recon_inst_contenido=substr(soloDescripcion($fila_recon_inst["contenido"]),0,225)."...";
 $recon_inst_imagen=$fila_recon_inst["imagen"];
 $recon_inst_imagen_carpeta=$fila_recon_inst["carpeta_imagen"];
@@ -57,7 +57,7 @@ $rst_alianzas=mysql_query("SELECT * FROM DM_noticia WHERE categoria=1 ORDER BY f
 $fila_alianzas=mysql_fetch_array($rst_alianzas);
 $alianzas_id=$fila_alianzas["id"];
 $alianzas_url=$fila_alianzas["url"];
-$alianzas_titulo=substr($fila_alianzas["titulo"],0,39)."...";
+$alianzas_titulo=substr($fila_alianzas["titulo"],0,39);
 $alianzas_contenido=substr(soloDescripcion($fila_alianzas["contenido"]),0,130)."...";
 $alianzas_imagen=$fila_alianzas["imagen"];
 $alianzas_imagen_carpeta=$fila_alianzas["carpeta_imagen"];
@@ -88,7 +88,7 @@ $rst_campanias=mysql_query("SELECT * FROM DM_campania ORDER BY fecha_publicacion
 
         <!-- SLIDER CAMPAÑAS -->
         <link href="/libs/allinone_banner/allinone_thumbnailsBanner.css" rel="stylesheet" type="text/css">
-        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
         <script src="/libs/allinone_banner/jquery.ui.touch-punch.min.js"></script>
         <script src="/libs/allinone_banner/jquery.mousewheel.min.js"></script>
@@ -109,8 +109,8 @@ $rst_campanias=mysql_query("SELECT * FROM DM_campania ORDER BY fecha_publicacion
         </script>
 
         <!-- POPUP PAGINA PRINCIPAL-->
-        <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
-        <script  src="/js/popup.js"></script>
+        <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+        <script src="/js/popup.js"></script>
 
     </head>
     <body>
@@ -143,7 +143,7 @@ $rst_campanias=mysql_query("SELECT * FROM DM_campania ORDER BY fecha_publicacion
                                     <?php while ($fila_eq_tecno=mysql_fetch_array($rst_eq_tecno)) { 
                                         $eq_tecno_id=$fila_eq_tecno["id"];
                                         $eq_tecno_url=$fila_eq_tecno["url"];
-                                        $eq_tecno_titulo=substr($fila_eq_tecno["titulo"],0,60)."...";
+                                        $eq_tecno_titulo=substr($fila_eq_tecno["titulo"],0,60);
                                         $eq_tecno_contenido=substr(soloDescripcion($fila_eq_tecno["contenido"]),0,225)."...";
                                         $eq_tecno_imagen=$fila_eq_tecno["imagen"];
                                         $eq_tecno_imagen_carpeta=$fila_eq_tecno["carpeta_imagen"];
@@ -183,7 +183,7 @@ $rst_campanias=mysql_query("SELECT * FROM DM_campania ORDER BY fecha_publicacion
                                     <?php while ($fila_pro_medic=mysql_fetch_array($rst_pro_medic)) { 
                                         $pro_medic_id=$fila_pro_medic["id"];
                                         $pro_medic_url=$fila_pro_medic["url"];
-                                        $pro_medic_titulo=substr($fila_pro_medic["titulo"],0,60)."...";
+                                        $pro_medic_titulo=substr($fila_pro_medic["titulo"],0,60);
                                         $pro_medic_contenido=substr(soloDescripcion($fila_pro_medic["contenido"]),0,225)."...";
                                         $pro_medic_imagen=$fila_pro_medic["imagen"];
                                         $pro_medic_imagen_carpeta=$fila_pro_medic["carpeta_imagen"];
@@ -266,7 +266,7 @@ $rst_campanias=mysql_query("SELECT * FROM DM_campania ORDER BY fecha_publicacion
 
                                     </div>
 
-                                    <a href="campanias">Más...</a>
+                                    <a class="" href="campanias">Más...</a>
 
                                 </div>
 
@@ -303,7 +303,7 @@ $rst_campanias=mysql_query("SELECT * FROM DM_campania ORDER BY fecha_publicacion
                                 <?php while ($fila_noticias=mysql_fetch_array($rst_noticias)) { 
                                         $noticias_id=$fila_noticias["id"];
                                         $noticias_url=$fila_noticias["url"];
-                                        $noticias_titulo=substr($fila_noticias["titulo"],0,60)."...";
+                                        $noticias_titulo=substr($fila_noticias["titulo"],0,60);
                                         $noticias_contenido=substr(soloDescripcion($fila_noticias["contenido"]),0,225)."...";
                                         $noticias_imagen=$fila_noticias["imagen"];
                                         $noticias_imagen_carpeta=$fila_noticias["carpeta_imagen"];
@@ -365,7 +365,7 @@ $rst_campanias=mysql_query("SELECT * FROM DM_campania ORDER BY fecha_publicacion
 
                                     <iframe width="370" height="150" frameborder="0" allowfullscreen
                                     src="http://www.youtube.com/embed/<?php echo $videos_youtube; ?>?wmode=transparent&autohide=1&egm=0&hd=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=0&showsearch=0&theme=light"></iframe>
-                                    <a href="sala-prensa">Más...</a>
+                                    <a class="art-mas" href="sala-prensa">Más...</a>
                                     
                                 </article>
                             </div>

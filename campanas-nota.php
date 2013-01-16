@@ -53,7 +53,7 @@ $num_noticia_slide=mysql_num_rows($rst_noticia_slide);
 
         <!-- SLIDE NOTICIA -->
         <link href="/libs/allinone_banner/allinone_thumbnailsBanner.css" rel="stylesheet" type="text/css">
-        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
         <script src="/libs/allinone_banner/jquery.ui.touch-punch.min.js"></script>
         <script src="/libs/allinone_banner/jquery.mousewheel.min.js"></script>

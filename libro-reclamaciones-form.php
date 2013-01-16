@@ -20,10 +20,8 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
         <link rel="stylesheet" href="/libs/css3-form/general/light/general-light.css">
 
         <!-- LIBRO DE RECLAMACIONES -->
-        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
         <script src="/libs/form_reclamo/envio.js"></script>
-
-
 
     </head>
     <body>
