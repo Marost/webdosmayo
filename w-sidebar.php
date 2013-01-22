@@ -94,7 +94,6 @@ $rst_videos_inf=mysql_query("SELECT * FROM DM_videos ORDER BY fecha_publicacion 
     <div id="secciones-lista">
     
         <ul>
-            <li><a href="construccion"><span class="img icon-online"></span>Resultados <br>Online</a></li>
             <li><a href="atencion-asegurado"><span class="img icon-atencion"></span>Atención al Asegurado</a></li>
             <li><a href="libro-reclamaciones"><span class="img icon-libro"></span>Libro de Reclamaciones</a></li>
             <li><a href="tarifario/medicamentos"><span class="img icon-tarifario"></span>Tarifario <br>Virtual</a></li>
