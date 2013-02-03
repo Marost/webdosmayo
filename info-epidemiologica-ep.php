@@ -184,7 +184,7 @@ if($buscar<>""){
                                         </tr>
                                         <tr>
                                             <td class="dato_cabecera">Nombre</td>
-                                            <td class="dato_contenido"><?php echo $cas_titulo; ?></td>
+                                            <td class="dato_contenido"><strong><?php echo $cas_titulo; ?></strong></td>
                                         </tr>
                                         <tr>
                                             <td class="dato_cabecera">Documentos</td>
