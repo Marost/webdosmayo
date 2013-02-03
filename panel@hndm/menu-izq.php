@@ -143,10 +143,13 @@ jmnpr(document).ready(function(){
     <ul class="items">
       <li>
         <a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/directorio/medicos/listar.php">
-          Directorio</a></li>
+          Médicos</a></li>
       <li>
         <a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/directorio/funcionarios/listar.php">
           Otros Funcionarios</a></li>
+      <li>
+        <a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/directorio/medicos-otros/listar.php">
+          Otros Médicos</a></li>
     </ul>
   </dd>
   <div class="espacio"></div>
