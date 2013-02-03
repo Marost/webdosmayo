@@ -95,6 +95,9 @@ jmnpr(document).ready(function(){
       <li>
         <a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/noticias/reconocimientos-institucionales/listar.php">
           Reconocimientos Institucionales</a></li>
+      <li>
+        <a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/slide-superior/listar.php">
+          Slider Superior</a></li>
     </ul>
   </dd>
   <dt class="items"><b>Videos</b></dt>
