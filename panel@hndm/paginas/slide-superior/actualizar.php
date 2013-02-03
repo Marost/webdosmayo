@@ -21,7 +21,7 @@ if($_POST['flash_uploader_0_tmpname']==""){
 	$thumb{$cont}->save("../../../imagenes/upload/".$carpeta."thumb/".$imagen."", "jpg");	
 }
 
-mysql_query("UPDATE ".$tabla_suf."_slide_superior SET titulo='$titulo', dato_fecha='$fecha', dato_hora='$hora', dato_usuario='$usuario_user', imagen='$imagen', carpeta_imagen='$carpeta' WHERE id=". $_REQUEST["id"].";", $conexion);
+mysql_query("UPDATE ".$tabla_suf."_slide_superior SET titulo='$titulo', imagen='$imagen', carpeta_imagen='$carpeta' WHERE id=". $_REQUEST["id"].";", $conexion);
 	
 if (mysql_errno()!=0)
 {

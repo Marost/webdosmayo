@@ -22,7 +22,7 @@ if($num_notgaleria>0){
 		$thumb{$cont}=PhpThumbFactory::create("../../../imagenes/upload/".$carpeta."".$imagen."");
 		$thumb{$cont}->adaptiveResize(150,35);
 		$thumb{$cont}->save("../../../imagenes/upload/".$carpeta."thumb/".$imagen."", "jpg");
-		mysql_query("INSERT INTO ".$tabla_suf."_slide_superior(imagen, dato_fecha, dato_hora, dato_usuario, carpeta_imagen, orden) VALUES ('$imagen', '$fecha', '$hora', '$usuario_user', '$carpeta', $cont_img)",$conexion);
+		mysql_query("INSERT INTO ".$tabla_suf."_slide_superior(imagen, carpeta_imagen, orden) VALUES ('$imagen', '$carpeta', $cont_img)",$conexion);
 		$cont++; $cont_img++;
 	}
 }elseif($num_notgaleria==0){
@@ -32,7 +32,7 @@ if($num_notgaleria>0){
 		$thumb{$cont}=PhpThumbFactory::create("../../../imagenes/upload/".$carpeta."".$imagen."");
 		$thumb{$cont}->adaptiveResize(150,35);
 		$thumb{$cont}->save("../../../imagenes/upload/".$carpeta."thumb/".$imagen."", "jpg");
-		mysql_query("INSERT INTO ".$tabla_suf."_slide_superior(imagen, dato_fecha, dato_hora, dato_usuario, carpeta_imagen, orden) VALUES ('$imagen', '$fecha', '$hora', '$usuario_user', '$carpeta', $cont)",$conexion);
+		mysql_query("INSERT INTO ".$tabla_suf."_slide_superior(imagen, carpeta_imagen, orden) VALUES ('$imagen', '$carpeta', $cont)",$conexion);
 		$cont++;
 	}
 }
