@@ -6,6 +6,9 @@ $rst_especialidades_lista_wg=mysql_query("SELECT * FROM DM_noticia WHERE categor
 $rst_especialidades_wg=mysql_query("SELECT * FROM DM_noticia_categoria WHERE id=5;", $conexion);
 $fila_especialidades_wg=mysql_fetch_array($rst_especialidades_wg);
 $espec_url=$fila_especialidades_wg["url"];
+
+//SLIDER
+$rst_slider=mysql_query("SELECT * FROM DM_slide_superior ORDER BY orden ASC", $conexion);
 ?>
 <div class="header-container">
     <header class="wrapper clearfix">
@@ -61,9 +64,20 @@ $espec_url=$fila_especialidades_wg["url"];
         <h1><a class="logo-principal" href="/">Hospital Nacional Dos de Mayo</a></h1>
 
         <div id="slider">
-            <img src="imagenes/slide/img1.jpg" alt="" title="<div class='block1'><div class='indent-block'><h1><strong>137 años</strong>de Historia y Tradición</h1>al Servicio de la Medicina Peruana</div></div>">
-            <img src="imagenes/slide/img2.jpg" alt="" title="<div class='block1'><div class='indent-block'><h1><strong>Tecnología</strong>Equipos de última generación</h1>al servicio de todos los peruanos</div></div>">
-            <img src="imagenes/slide/img3.jpg" alt="" title="<div class='block1'><div class='indent-block'><h1><strong>Docencia</strong>Capacitación e</h1>investigación académica</div></div>">
+
+            <?php while($fila_slider=mysql_fetch_array($rst_slider)){
+                    $slider_imagen=$fila_slider["imagen"];
+                    $slider_imagen_carpeta=$fila_slider["carpeta_imagen"];
+                    $slider_titulo=explode("-", $fila_slider["titulo"]);
+            ?>
+
+            <img src="imagenes/upload/<?php echo $slider_imagen_carpeta."".$slider_imagen; ?>" alt="" 
+                    title="<div class='block1'>
+                                <div class='indent-block'>
+                                    <h1><strong><?php echo $slider_titulo[0]; ?></strong><?php echo $slider_titulo[1]; ?></h1><?php echo $slider_titulo[2]; ?></div></div>">
+
+            <?php } ?>
+
         </div>
 
         <div id="mrq_especialidades" class="mrq_lista">
