@@ -34,7 +34,7 @@ jq(function() {
 		chunk_size : '1mb',
 		unique_names : true,
 		filters : [{title : "Image files", extensions : "jpg,gif,png"}],
-		resize : {width : 990, height : 230, quality : 100},
+		resize : {width : 750, height : 318, quality : 100},
 		flash_swf_url : '../../js/plupload/plupload.flash.swf'
 	});
 });

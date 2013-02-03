@@ -27,7 +27,7 @@ jq(function() {
 		runtimes : 'flash', url : 'upload.php', max_file_size : '10mb',
 		chunk_size : '1mb', unique_names : true,
 		filters : [{title : "Image files", extensions : "jpg,png"}],
-		resize : {width : 990, height : 230, quality : 100},
+		resize : {width : 750, height : 318, quality : 100},
 		flash_swf_url : '../../js/plupload/plupload.flash.swf'
 	});
 });
