@@ -10,6 +10,7 @@ $script_slide_noticia=true;
 /*VARIABLES DE URL*/
 $url_noticia_id=$_REQUEST["id"];
 $url_noticia_url=$_REQUEST["url"];
+$url_web=$web."video/".$url_noticia_id."/".$url_noticia_url;
 
 /*NOTICIA*/
 $rst_noticia=mysql_query("SELECT * FROM DM_videos WHERE id=$url_noticia_id;", $conexion);
@@ -18,6 +19,7 @@ $fila_noticia=mysql_fetch_array($rst_noticia);
 /*VARIABLES DE NOTICIA*/
 $noticia_titulo=$fila_noticia["titulo"];
 $noticia_contenido=$fila_noticia["contenido"];
+$noticia_contenido_comp=explode(soloDescripcion($noticia_contenido), $noticia_contenido);
 $noticia_video=$fila_noticia["video"];
 
 /*NOTICIAS ANTERIORES*/
