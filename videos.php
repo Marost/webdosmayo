@@ -20,7 +20,6 @@ $fila_noticia=mysql_fetch_array($rst_noticia);
 /*VARIABLES DE NOTICIA*/
 $noticia_titulo=$fila_noticia["titulo"];
 $noticia_contenido=$fila_noticia["contenido"];
-$noticia_contenido_comp=explode(soloDescripcion($noticia_contenido), $noticia_contenido);
 $noticia_video=$fila_noticia["video"];
 
 /*NOTICIAS ANTERIORES*/
@@ -41,7 +40,6 @@ $rst_noticias_ant=mysql_query("SELECT * FROM DM_videos WHERE id<>$url_noticia_id
         <meta property="og:title" content="<?php echo $noticia_titulo; ?>" />
         <meta property="og:type" content="article" />
         <meta property="og:url" content="<?php echo $url_web; ?>" />
-        <meta property="og:image" content="<?php echo $web.""."/imagenes/upload/".$noticia_imagen_carpeta."".$noticia_imagen; ?>" />
         <meta property="og:site_name" content="<?php echo $web_nombre; ?>" />
         <meta property="og:description" content="<?php echo soloDescripcion($noticia_contenido); ?>"/>
         <meta property="fb:admins" content="1376286793" />
