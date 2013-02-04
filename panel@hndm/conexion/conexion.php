@@ -12,6 +12,9 @@ mysql_select_db($bd_basedatos,$conexion);
 //ZONA HORARIA
 date_default_timezone_set('America/Lima');
 
+//ERRORES DE PHP
+ini_set('display_errors', 0);
+
 //VARIABLES GLOBALES BD
 global $bd_servidor;
 global $bd_usuario;
