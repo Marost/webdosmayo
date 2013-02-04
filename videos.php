@@ -10,7 +10,6 @@ $script_slide_noticia=true;
 /*VARIABLES DE URL*/
 $url_noticia_id=$_REQUEST["id"];
 $url_noticia_url=$_REQUEST["url"];
-$url_web=$web."video/".$url_noticia_id."-".$url_noticia_url;
 
 /*NOTICIA*/
 $rst_noticia=mysql_query("SELECT * FROM DM_videos WHERE id=$url_noticia_id;", $conexion);
@@ -94,7 +93,7 @@ $rst_noticias_ant=mysql_query("SELECT * FROM DM_videos WHERE id<>$url_noticia_id
                                         $notant_id=$fila_noticia_ant["id"];
                                         $notant_titulo=$fila_noticia_ant["titulo"];
                                         $notant_url=$fila_noticia_ant["url"];
-                                        $notant_url_final=$web."".$url_categoria."/".$notant_id."-".$notant_url;
+                                        $notant_url_final=$web."video/".$notant_id."/".$notant_url;
                                     ?>
                                     <li><a href="<?php echo $notant_url_final; ?>"><?php echo $notant_titulo; ?></a></li>
                                     <?php } ?>
@@ -102,7 +101,7 @@ $rst_noticias_ant=mysql_query("SELECT * FROM DM_videos WHERE id<>$url_noticia_id
                             </div>
 
                             <div style="float:left; margin: 10px 0;">
-                                <a href="cat/<?php echo $url_categoria; ?>" style="font-weight: bold; font-size: 14px;">Más...</a>
+                                <a href="videos" style="font-weight: bold; font-size: 14px;">Más...</a>
                             </div>
 
                         </div>
