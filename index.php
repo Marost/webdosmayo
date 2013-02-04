@@ -368,14 +368,14 @@ $rst_campanias=mysql_query("SELECT * FROM DM_campania ORDER BY fecha_publicacion
 
                                     <div>
                                         <h2>
-                                            <a href="video/<?php echo $videos_id."-".$videos_url; ?>" title="">
+                                            <a href="video/<?php echo $videos_id."/".$videos_url; ?>" title="">
                                                 <?php echo $videos_titulo; ?></a>
                                         </h2>                                        
                                     </div>
 
                                     <iframe width="370" height="150" frameborder="0" allowfullscreen
                                     src="http://www.youtube.com/embed/<?php echo $videos_youtube; ?>?wmode=transparent&autohide=1&egm=0&hd=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=0&showsearch=0&theme=light"></iframe>
-                                    <a class="art-mas" href="video/<?php echo $videos_id."-".$videos_url; ?>">Más...</a>
+                                    <a class="art-mas" href="video/<?php echo $videos_id."/".$videos_url; ?>">Más...</a>
                                     
                                 </article>
                             </div>
