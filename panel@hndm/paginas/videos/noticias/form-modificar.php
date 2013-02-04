@@ -24,6 +24,9 @@ $hora_actual=$hora[0].":".$hora[1];
 <link rel="stylesheet" type="text/css" href="../../../css/estilo-panel.css"/>
 <link rel="stylesheet" type="text/css" href="../../../css/style-listas.css" />
 
+<!-- CKEDITOR -->
+<script type="text/javascript" src="../../../js/ckeditor/ckeditor.js"></script>
+
 <!-- SPRY -->
 <link href="/SpryAssets/SpryValidationTextField.css" rel="stylesheet" type="text/css" />
 <script src="/SpryAssets/SpryValidationTextField.js" type="text/javascript"></script>
@@ -68,8 +71,18 @@ jfec(function() {
           	      </tr>
             	    <tr>
             	      <td width="20%" height="30" align="right"><p><strong>Titulo:</strong></p></td>
-            	      <td width="80%" height="30" align="left"><input name="titulo" type="text" id="titulo" value='<?php echo $fila_query["titulo"] ?>' size="50" /></td>
+            	      <td width="80%" height="30" align="left">
+                      <input name="titulo" type="text" id="titulo" value='<?php echo $fila_query["titulo"] ?>' size="50" /></td>
           	      </tr>
+                  <tr>
+                    <td width="20%" height="30" align="right"><p><strong>Contenido:</strong></p></td>
+                    <td width="80%" height="30" align="left" >&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td height="35" colspan="2" align="center">
+                        <textarea class="ckeditor" name="contenido" id="contenido"><?php echo $fila_query["titulo"] ?></textarea>
+                    </td>
+                  </tr>
             	    <tr>
                     <td width="20%" height="30" align="right" ><p><strong>Enlace de video (Youtube):</strong></p></td>
                     <td width="80%" height="30" align="left"><p>http://www.youtube.com/watch?v=

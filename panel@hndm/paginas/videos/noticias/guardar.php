@@ -7,6 +7,7 @@ require_once('../../../../libs/thumbs/ThumbLib.inc.php');
 //DECLARACION DE VARIABLES
 $titulo=$_POST["titulo"];
 $url=getUrlAmigable(eliminarTextoURL($titulo));
+$contenido=$_POST["contenido"];
 $video=$_POST["video"];
 $fecha=fechaLarga();
 $hora=date("H:i");
@@ -18,13 +19,15 @@ $fecha_pub=$fecha_publicacion." ".$hora_publicacion.":00";
 
 //INSERTANDO DATOS
 $rst_guardar=mysql_query("INSERT INTO ".$tabla_suf."_videos (url,
-titulo, 
+titulo,
+contenido, 
 video,
 dato_fecha, 
 dato_hora, 
 dato_usuario, 
 fecha_publicacion) VALUES('$url',
 '".htmlspecialchars($titulo)."',
+'$contenido',
 '$video',
 '$fecha', 
 '$hora',
