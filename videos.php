@@ -8,10 +8,9 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
 $script_slide_noticia=true;
 
 /*VARIABLES DE URL*/
-$url_categoria=$_REQUEST["cat"];
 $url_noticia_id=$_REQUEST["id"];
 $url_noticia_url=$_REQUEST["url"];
-$url_web=$web."".$url_categoria."/".$url_noticia_id."-".$url_noticia_url;
+$url_web=$web."video/".$url_noticia_id."-".$url_noticia_url;
 
 /*NOTICIA*/
 $rst_noticia=mysql_query("SELECT * FROM DM_videos WHERE id=$url_noticia_id;", $conexion);
