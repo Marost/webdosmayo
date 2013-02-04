@@ -115,8 +115,6 @@ $query  = mysql_query("SELECT * FROM DM_videos ORDER BY fecha_publicacion DESC L
                                         <?php $pagination->pagination(); ?>
                                     </div>
 
-                                <?php } ?>
-
                             </div>
 
                         </div>
