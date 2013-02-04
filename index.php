@@ -366,7 +366,7 @@ $rst_campanias=mysql_query("SELECT * FROM DM_campania ORDER BY fecha_publicacion
 
                                 <article class="nws-contenido">
 
-                                    <div>
+                                    <div style="width: 100%;">
                                         <h2>
                                             <a href="video/<?php echo $videos_id."/".$videos_url; ?>" title="">
                                                 <?php echo $videos_titulo; ?></a>
