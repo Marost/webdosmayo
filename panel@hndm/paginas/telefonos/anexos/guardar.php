@@ -4,7 +4,7 @@ include("../../../conexion/conexion.php");
 include("../../../conexion/funciones.php");
 
 //DECLARACION DE VARIABLES
-$titulo=$_POST["titulo"];
+$titulo=$_POST["area"];
 
 //INSERTANDO DATOS
 $rst_guardar=mysql_query("INSERT INTO ".$tabla_suf."_dirtelefono (titulo) 

@@ -5,7 +5,7 @@ include("../../../conexion/funciones.php");
 
 //DECLARACION DE VARIABLES
 $idnoticia=$_REQUEST["id"];
-$titulo=$_POST["titulo"];
+$titulo=$_POST["area"];
 
 //GUARDAR DATOS
 mysql_query("UPDATE ".$tabla_suf."_dirtelefono SET titulo='".htmlspecialchars($titulo)."' 
