@@ -6,6 +6,7 @@ require_once('../../../../libs/thumbs/ThumbLib.inc.php');
 
 //DECLARACION DE VARIABLES
 $titulo=$_POST["titulo"];
+$publicar=1;
 
 //FECHA PUBLICACION
 $fecha_publicacion=$_POST["fecha"];
@@ -23,11 +24,13 @@ $rst_guardar=mysql_query("INSERT INTO ".$tabla_suf."_popup (titulo,
 imagen, 
 imagen_carpeta,
 dato_usuario, 
-fecha_publicacion) VALUES('".htmlspecialchars($titulo)."',
+fecha_publicacion,
+publicar) VALUES('".htmlspecialchars($titulo)."',
 '$imagen', 
 '$imagen_carpeta',
 '$usuario_user', 
-'$fecha_pub');",$conexion);
+'$fecha_pub',
+$publicar);",$conexion);
 
 if (mysql_errno()!=0){
 	echo "error al insertar los datos ". mysql_errno() . " - ". mysql_error();

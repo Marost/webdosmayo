@@ -2,8 +2,10 @@
 /*POPUP*/
 $rst_w_popup=mysql_query("SELECT * FROM DM_popup ORDER BY fecha_publicacion DESC LIMIT 1;", $conexion);
 $fila_popup=mysql_fetch_array($rst_w_popup);
+
 /*POPUP - VARIABLES*/
 $w_popup_titulo=$fila_popup["titulo"];
+$w_popup_publicar=$fila_popup["publicar"];
 $w_popup_imagen=$fila_popup["imagen"];
 $w_popup_imagen_carpeta=$fila_popup["imagen_carpeta"];
 $w_popup_imagen_url=$web."imagenes/upload/".$w_popup_imagen_carpeta."".$w_popup_imagen;
@@ -104,6 +106,7 @@ $w_popup_imagen_alto=$w_popup_imagen_dimensiones[1];
                 
 </div>
 
+<?php if($w_popup_publicar==1){ ?>
 <div id="capaPopUp"></div>
 <div id="popUpDiv">
     <div id="capaPng">
@@ -115,3 +118,4 @@ $w_popup_imagen_alto=$w_popup_imagen_dimensiones[1];
         <a href="javascript:void(0);" title="Cerrar" id="cerrar">Cerrar</a>
     </div>
 </div>
+<?php } ?>

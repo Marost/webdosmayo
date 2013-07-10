@@ -111,6 +111,7 @@ jq(function() {
             	      <td align="right" ><p><strong>Fecha publicación:</strong></p></td>
             	      <td><input name="fecha" type="text" id="fecha" value="<?php echo $fecha_actual; ?>" size="20" /></td>
           	      </tr>
+
             	    <tr>
             	      <td align="right" ><p><strong>Hora publicación:</strong></p></td>
             	      <td><span id="sprytextfield1">
@@ -118,6 +119,7 @@ jq(function() {
                       <span class="textfieldRequiredMsg">Ingrese la hora a publicar</span>
                       <span class="textfieldInvalidFormatMsg">Formato no válido.</span></span></td>
           	      </tr>
+
                 <tr>
                   <td colspan="2" align="center">
                     <input type="submit" name="guardar" id="guardar" value="Guardar" />

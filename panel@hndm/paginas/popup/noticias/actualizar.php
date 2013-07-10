@@ -13,6 +13,9 @@ $fecha_publicacion=$_POST["fecha"];
 $hora_publicacion=$_POST["hora"];
 $fecha_pub=$fecha_publicacion." ".$hora_publicacion.":00";
 
+//PUBLICAR
+if ($_POST["publicar"]<>""){ $publicar=$_POST["publicar"]; }else{ $publicar=0; }
+
 //SELECCIONAR REGISTRO PARA VERIFICAR IMAGEN
 $rst_query=mysql_query("SELECT * FROM ".$tabla_suf."_popup WHERE id=$idnoticia LIMIT 1;", $conexion);
 $fila_query=mysql_fetch_array($rst_query);
@@ -31,7 +34,8 @@ mysql_query("UPDATE ".$tabla_suf."_popup SET titulo='".htmlspecialchars($titulo)
 imagen='$imagen', 
 dato_usuario='$usuario_user', 
 imagen_carpeta='$carpeta_imagen',
-fecha_publicacion='$fecha_pub' WHERE id=$idnoticia;", $conexion);
+fecha_publicacion='$fecha_pub',
+publicar=$publicar WHERE id=$idnoticia;", $conexion);
 	
 if (mysql_errno()!=0){
 	echo "error al insertar los datos ". mysql_errno() . " - ". mysql_error();

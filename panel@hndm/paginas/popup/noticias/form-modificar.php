@@ -8,6 +8,9 @@ include("../../../conexion/verificar_sesion.php");
 $rst_query=mysql_query("SELECT * FROM ".$tabla_suf."_popup WHERE id=". $_REQUEST["id"].";", $conexion);
 $fila_query=mysql_fetch_array($rst_query);
 
+//VARIABLES
+$publicar=$fila_query["publicar"];
+
 //VARIABLES PARA LA HORA
 $fechaTotal=$fila_query["fecha_publicacion"];
 $fecha=explode(" ", $fechaTotal);
@@ -124,17 +127,29 @@ jq(function() {
             	          </div>
             	        </div>
           	        </div></td>
-           	        </tr>
+           	      </tr>
+
             	    <tr>
             	      <td align="right" ><p><strong>Fecha publicación:</strong></p></td>
             	      <td><input name="fecha" type="text" id="fecha" value="<?php echo $fecha_actual; ?>" size="20" /></td>
           	      </tr>
+
             	    <tr>
             	      <td align="right" ><p><strong>Hora publicación:</strong></p></td>
             	      <td><span id="sprytextfield1">
             	        <input name="hora" type="text" id="hora" value="<?php echo $hora_actual; ?>" size="20" />
-            	        <span class="textfieldRequiredMsg">Ingrese la hora a publicar</span> <span class="textfieldInvalidFormatMsg">Formato no válido.</span></span></td>
+            	        <span class="textfieldRequiredMsg">Ingrese la hora a publicar</span> <span class="textfieldInvalidFormatMsg">Formato no válido.</span></span>
+                    </td>
           	      </tr>
+
+                  <tr>
+                      <td align="right" ></td>
+                      <td>
+                        <input type="checkbox" <?php if($publicar==1){ ?>checked<?php } ?> value="1" name="publicar" />
+                        Publicar
+                      </td>
+                  </tr>
+
             	    <tr>
             	      <td colspan="2" align="center">
             	        <input type="submit" name="guardar" id="guardar" value="Guardar" />
