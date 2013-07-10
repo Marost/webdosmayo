@@ -129,4 +129,12 @@ $rst_videos_inf=mysql_query("SELECT * FROM DM_videos ORDER BY fecha_publicacion 
             <li><a href="javascript:;" id="popupen-ubicanos">Ubícanos<img src="/imagenes/mapa.png"></a></li>
         </ul>
     </div>
+
+    <div style="text-align:center">
+        <p style="float: left; width: 100%; margin: 0; font-weight: bold;">Visitas</p>
+        <a href="http://es.web-counter.net" title="Contador de isitas">
+            <img src="http://www.web-counter.net/count_20091204.php?c=WPIi9s5ISIi" style="border:0;padding:0;margin:0;" alt="contador de visitas">
+        </a>
+    </div>
+
 </aside>
