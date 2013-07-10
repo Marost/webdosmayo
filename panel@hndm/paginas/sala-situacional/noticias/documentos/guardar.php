@@ -15,7 +15,7 @@ $num_notgaleria=mysql_num_rows($rst_notgaleria);
 $fila_notgaleria=mysql_fetch_array($rst_notgaleria);
 
 /*EXTRAER CARPETA DE DOCUMENTOS*/
-$documentos=seleccionTabla($idnoticia, "id", "DM_normatividad", $conexion);
+$documentos=seleccionTabla($idnoticia, "id", "DM_sala_situacional", $conexion);
 $carpeta_archivo=$documentos["carpeta_documentos"];
 
 //DOCUMENTO
