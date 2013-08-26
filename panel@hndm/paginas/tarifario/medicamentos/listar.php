@@ -109,7 +109,8 @@ if(confirm("¿Está seguro de borrar este registro?\n"+nombre)) {
         <div id="contenido">
               <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
                   <tr>
-                    <td colspan="2"><p><a href="form-agregar.php"><strong>AGREGAR</strong></a></p></td>
+                    <td><p><a href="form-agregar.php"><strong>AGREGAR</strong></a></p></td>
+                    <td><p><a href="form-agregar-csv.php"><strong>Cambiar todos los registros</strong></a></p></td>
                   </tr>
                   <tr>
                     <td colspan="2">
