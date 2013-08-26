@@ -22,7 +22,7 @@ $rst_cas        = mysql_query("SELECT * FROM DM_normatividad ORDER BY fecha_publ
 
 ################################################################
 /*SELECCION DE AÑO*/
-$rst_selectanio=mysql_query("SELECT DISTINCT fecha_anio FROM DM_normatividad", $conexion);
+$rst_selectanio=mysql_query("SELECT DISTINCT fecha_anio FROM DM_normatividad ORDER BY fecha_anio DESC", $conexion);
 
 ################################################################
 /*VARIABLES DE URL AL BUSCAR*/
@@ -30,8 +30,8 @@ $anio=$_REQUEST["anio"];
 $mes=$_REQUEST["mes"];
 $fecha_seleccion=$anio."-".$mes;
 
-if($anio>0 AND $mes>0){
-    $url_web=$web."normatividad?anio=$anio&mes=$mes";
+if($anio>0 AND $mes>0 AND $buscar==""){
+    $url_web=$web."normatividad?buscar=&anio=$anio&mes=$mes";
     $nombre_fecha=nombreMes($mes)." ".$anio;
     $page = (isset($_GET['page'])) ? intval($_GET['page']) : 1;
     $rst_cas        = mysql_query("SELECT COUNT(*) as count FROM DM_normatividad WHERE fecha_mes='$fecha_seleccion' ORDER BY fecha_publicacion DESC", $conexion);
@@ -46,8 +46,8 @@ if($anio>0 AND $mes>0){
 /*VARIABLES DE URL AL BUSCAR POR TEXTO*/
 $buscar=$_REQUEST["buscar"];
 
-if($buscar<>""){
-    $url_web=$web."normatividad?buscar=$buscar";
+if($buscar<>"" AND $anio=="" AND $mes==""){
+    $url_web=$web."normatividad?buscar=$buscar&anio=&mes=";
     $page = (isset($_GET['page'])) ? intval($_GET['page']) : 1;
     $rst_cas        = mysql_query("SELECT COUNT(*) as count FROM DM_normatividad WHERE titulo LIKE '%$buscar%' ORDER BY fecha_publicacion DESC", $conexion);
     $fila_cas       = mysql_fetch_assoc($rst_cas);
