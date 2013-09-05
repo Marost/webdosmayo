@@ -347,6 +347,7 @@ RewriteRule ^historia$                  /historia.php
 RewriteRule ^atencion-asegurado$        /atencion-asegurado.php
 RewriteRule ^atencion-ciudadano$        /atencion-ciudadano.php
 RewriteRule ^cas$                       /cas.php
+RewriteRule ^transparencia$                       /transparencia.php
 RewriteRule ^oportunidad-laboral$                       /oportunidad-laboral.php
 RewriteRule ^informacion-variada$                       /info-variada.php
 RewriteRule ^directorio$                       /directorio.php
