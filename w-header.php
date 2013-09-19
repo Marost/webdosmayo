@@ -50,7 +50,7 @@ $rst_slider=mysql_query("SELECT * FROM DM_slide_superior ORDER BY orden ASC", $c
                             </li>
                         </ul>
                     </li>
-                    <li><a href="http://www.peru.gob.pe/transparencia/pep_transparencia_lista_planes_frame.asp?id_entidad=143&id_tema=1" target="_blank">Transparencia</a></li>
+                    <li><a href="transparencia">Transparencia</a></li>
                     <li><a href="javascript:;">Prensa<span class="icon">&nbsp;</span></a>
                         <ul class="submenu-prensa">
                             <li><a href="sala-prensa/alianzas">Sala de Prensa</a></li>

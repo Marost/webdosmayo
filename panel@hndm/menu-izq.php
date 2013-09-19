@@ -111,6 +111,17 @@ jmnpr(document).ready(function(){
         	Listar</a></li>
     </ul>
   </dd>
+  <dt class="items"><b>Transparencia</b></dt>
+  <dd>
+    <ul class="items">
+      <li>
+        <a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/transparencia/noticias/form-agregar.php">
+          Agregar</a></li>
+      <li>
+        <a href="<?php echo $fila_empresa["web"]."".$carpeta_admin; ?>/paginas/transparencia/noticias/listar.php">
+          Listar</a></li>
+    </ul>
+  </dd>
   <dt class="items"><b>Teléfonos</b></dt>
   <dd>
     <ul class="items">
