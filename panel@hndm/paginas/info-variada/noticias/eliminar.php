@@ -1,7 +1,7 @@
 <?php
 include ("../../../conexion/conexion.php");
 
-mysql_query("DELETE FROM ".$tabla_suf."_cas WHERE id=".$_REQUEST["id"].";",$conexion);
+mysql_query("DELETE FROM ".$tabla_suf."_info_variada WHERE id=".$_REQUEST["id"].";",$conexion);
 
 if (mysql_errno()!=0)
 {
