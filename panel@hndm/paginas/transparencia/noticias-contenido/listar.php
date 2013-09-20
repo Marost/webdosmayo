@@ -11,7 +11,7 @@ $buscar=$_REQUEST["busqueda"];
 
 if ($_REQUEST["btnbuscar"]=="")
 {
-	$rst_query=mysql_query("SELECT * FROM ".$tabla_suf."_transp ORDER BY fecha_publicacion DESC;", $conexion);
+	$rst_query=mysql_query("SELECT * FROM ".$tabla_suf."_transp_sub ORDER BY fecha_publicacion DESC;", $conexion);
 	$num_registros=mysql_num_rows($rst_query);
 		
 	$registros=20;	
@@ -21,7 +21,7 @@ if ($_REQUEST["btnbuscar"]=="")
 	else
 	$inicio=0;
 	
-	$rst_query=mysql_query("SELECT * FROM ".$tabla_suf."_transp ORDER BY fecha_publicacion DESC LIMIT $inicio, $registros;", $conexion);
+	$rst_query=mysql_query("SELECT * FROM ".$tabla_suf."_transp_sub ORDER BY fecha_publicacion DESC LIMIT $inicio, $registros;", $conexion);
 	$paginas=ceil($num_registros/$registros);
 }
 //-------------------------------------------------
@@ -29,7 +29,7 @@ if ($_REQUEST["btnbuscar"]=="")
 
 if ($_REQUEST["btnbuscar"]!="" || $_REQUEST["busqueda"]!="")
 {
-	$rst_query=mysql_query("SELECT * FROM ".$tabla_suf."_transp WHERE titulo LIKE '%$buscar%' ORDER BY fecha_publicacion DESC;", $conexion);
+	$rst_query=mysql_query("SELECT * FROM ".$tabla_suf."_transp_sub WHERE titulo LIKE '%$buscar%' ORDER BY fecha_publicacion DESC;", $conexion);
 	$num_registros=mysql_num_rows($rst_query);
 	
 	$registros=10;	
@@ -39,7 +39,7 @@ if ($_REQUEST["btnbuscar"]!="" || $_REQUEST["busqueda"]!="")
 	else
 		$inicio=0;
 	
-	$rst_query=mysql_query("SELECT * FROM ".$tabla_suf."_transp WHERE titulo LIKE '%$buscar%' ORDER BY fecha_publicacion DESC LIMIT $inicio, $registros;", $conexion);
+	$rst_query=mysql_query("SELECT * FROM ".$tabla_suf."_transp_sub WHERE titulo LIKE '%$buscar%' ORDER BY fecha_publicacion DESC LIMIT $inicio, $registros;", $conexion);
 	$paginas=ceil($num_registros/$registros);
 	
 }
@@ -136,9 +136,6 @@ if(confirm("¿Está seguro de borrar este registro?\n"+nombre)) {
                             
                            		  <a href="form-modificar.php?id=<?php echo $fila["id"] ?>">
                                 	<img src="../../../images/editar_16.png" width="16" height="16" title="Modiciar registro" /></a>
-
-                                <a href="../noticias-contenido/listar.php?not=<?php echo $fila["id"] ?>">
-                                  <img src="../../../images/list_16.png" width="16" height="16" title="Contenido" /></a>
 
                                 </td>
                           </tr>
