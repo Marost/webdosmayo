@@ -64,7 +64,17 @@ jfec(function() {
             	      <td width="20%" height="30" align="right" ><p><strong>Titulo:</strong></p></td>
             	      <td width="80%" height="30" align="left"><input name="titulo" type="text" id="titulo" size="50" /></td>
           	      </tr>
-            	    
+            	    <tr>
+                    <td width="20%" height="30" align="right" ><p><strong>Categoria:</strong></p></td>
+                    <td width="80%" height="30" align="left">
+                      <select name="categoria" id="categoria">
+                        <option value="">Contenido</option>
+                        <option value="">Subir archivo</option>
+                        <option value="">Enlace externo</option>
+                        <option value="">Lista de archivos</option>
+                      </select>
+                    </td>
+                  </tr>
             	    <tr>
             	      <td align="right" ><p><strong>Fecha publicación:</strong></p></td>
             	      <td><input name="fecha" type="text" id="fecha" value="<?php echo $fecha_actual; ?>" size="20" /></td>
