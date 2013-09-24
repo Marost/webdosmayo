@@ -7,11 +7,19 @@ require_once("panel@hndm/conexion/funcion-paginacion.php");
 /*VARIABLES - SCRIPTS*/
 $script_historia=true;
 
-/*HISTORIA - CABECERA*/
-$historia=seleccionTabla(1, "id", "DM_historia", $conexion);
-$quienes_somos=seleccionTabla(2, "id", "DM_historia", $conexion);
-$daniel_carrion=seleccionTabla(3, "id", "DM_historia", $conexion);
-$cetide=seleccionTabla(4, "id", "DM_historia", $conexion);
+//VARIABLES
+$url_noticia_id=4;
+
+/*NOTICIA*/
+$rst_noticia=mysql_query("SELECT * FROM DM_historia WHERE id=$url_noticia_id;", $conexion);
+$fila_noticia=mysql_fetch_array($rst_noticia);
+
+/*VARIABLES DE NOTICIA*/
+$noticia_contenido=$fila_noticia["contenido"];
+
+/*NOTICIA - SLIDE*/
+$rst_noticia_slide=mysql_query("SELECT * FROM DM_historia_slide WHERE noticia=$url_noticia_id ORDER BY orden ASC;", $conexion);
+$num_noticia_slide=mysql_num_rows($rst_noticia_slide);
 
 ?>
 <!DOCTYPE html>
@@ -22,32 +30,9 @@ $cetide=seleccionTabla(4, "id", "DM_historia", $conexion);
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Historia</title>
+        <title>CETIDE</title>
 
         <?php require_once("w-header-scripts.php"); ?>
-
-        <!-- HISTORIA -->
-        <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-        <script>
-            var jHist = jQuery.noConflict();
-
-            jHist(document).on("ready", startDatHistoria(jHist));
-            
-            function startDatHistoria(datoJQ){
-                datoJQ.ajax({
-                    url:"historia-datos.php", 
-                    data: "tipo=1", 
-                    type: "POST",
-                    beforeSend: function(){
-                        datoJQ("#progressbar").removeClass("ocultar");
-                    },
-                    success: function(data){
-                        datoJQ("#tarifario_contenido").html(data);
-                        datoJQ("#progressbar").addClass("ocultar");
-                    }
-                });
-            }
-        </script>
 
         <!-- SLIDE NOTICIA -->
         <link href="/libs/allinone_banner/allinone_thumbnailsBanner.css" rel="stylesheet" type="text/css">
@@ -62,27 +47,7 @@ $cetide=seleccionTabla(4, "id", "DM_historia", $conexion);
         <script>
             var jSlid = jQuery.noConflict();
 
-            jSlid(document).on("ready", startClSl);
-
-            function startClSl(){
-                jSlid("#tarifario_cabecera ul li").on("click", startClick);
-            }
-
-            function startClick(datos){
-                jSlid("#tarifario_cabecera ul li").removeClass("selected");
-                jSlid("#progressbar").removeClass("ocultar");
-                jSlid(this).addClass("selected");
-                var tipo = datos.currentTarget.attributes.rel.value;
-                jSlid.ajax({
-                    url: "historia-datos.php", 
-                    data: "tipo="+tipo,
-                    type: "POST",
-                    success: function(data){
-                        jSlid("#tarifario_contenido").html(data);
-                        jSlid("#progressbar").addClass("ocultar", startSlider(jSlid));
-                    }
-                });
-            }
+            jSlid(document).on("ready", startSlider);
 
             function startSlider(datoJQ){    
                 datoJQ('.historia_slide div').allinone_thumbnailsBanner({
@@ -121,19 +86,44 @@ $cetide=seleccionTabla(4, "id", "DM_historia", $conexion);
                                 <div id="tarifario_cabecera">
                                   
                                   <ul>
-                                    <li rel="1" id="historia" class="selected"><a href="javascript:;"><?php echo $historia["titulo"]; ?></a></li>
-                                    <li rel="2" id="quienes_somos"><a href="javascript:;"><?php echo $quienes_somos["titulo"]; ?></a></li>
-                                    <li rel="3" id="daniel_carrion"><a href="javascript:;"><?php echo $daniel_carrion["titulo"]; ?></a></li>
-                                    <li><a href="cetide"><?php echo $cetide["titulo"]; ?></a></li>
+                                    <li><a href="historia">Historia</a></li>
+                                    <li><a href="historia">¿Quienes somos?</a></li>
+                                    <li><a href="historia">Daniel Alcides Carrión</a></li>
+                                    <li id="cetide" class="selected"><a href="javascript:;">CETIDE</a></li>
                                   </ul>
-
-                                  <div>
-                                        <img  id="progressbar" src="/imagenes/progressbar.gif" width="220" height="19" class="ocultar">
-                                  </div>
 
                                 </div>
 
-                                <div id="tarifario_contenido"></div>
+                                <div id="tarifario_contenido">
+                                    
+                                    <div>
+                                        <?php echo $noticia_contenido; ?>
+                                    </div>
+
+                                    <?php if($num_noticia_slide>0){ ?>
+
+                                    <div class="historia_slide">
+
+                                        <div style="display:none;">
+                                        
+                                            <ul class="allinone_carousel_list">   
+                                                <?php while ($fila_noticia_slide=mysql_fetch_array($rst_noticia_slide)){
+                                                    /*VARIABLES DE SLIDE*/
+                                                    $noticia_slide_id=$fila_noticia_slide["id"];
+                                                    $noticia_slide_imagen=$fila_noticia_slide["imagen"];
+                                                    $noticia_slide_imagen_carpeta=$fila_noticia_slide["carpeta"];
+                                                ?>
+                                                    <li data-bottom-thumb="/imagenes/upload/<?php echo $noticia_slide_imagen_carpeta."thumb/".$noticia_slide_imagen; ?>">
+                                                  <img src="/imagenes/upload/<?php echo $noticia_slide_imagen_carpeta."".$noticia_slide_imagen; ?>" alt="" /></li>
+                                                <?php } ?>
+                                            </ul>
+                                        </div>
+
+                                    </div>
+
+                                    <?php } ?>
+
+                                </div>
 
                             </div>
 

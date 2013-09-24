@@ -117,7 +117,7 @@ $rst_videos_inf=mysql_query("SELECT * FROM DM_videos ORDER BY fecha_publicacion 
         <div style="display:none;">
         <ul class="allinone_bannerRotator_list">
             <li data-link="historia" data-target="_self"><img src="imagenes/slide/patrimonio-historico-1.jpg" width="220" height="175" title=" "></li>
-            <li data-link="historia" data-target="_self"><img src="imagenes/slide/patrimonio-historico-2.jpg" width="220" height="175" title=" "></li>
+            <li data-link="cetide" data-target="_self"><img src="imagenes/slide/patrimonio-historico-2.jpg" width="220" height="175" title=" "></li>
         </ul>
         </div>
     </div>
