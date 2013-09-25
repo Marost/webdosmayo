@@ -62,10 +62,23 @@ jfec(function() {
             	    <tr>
             	      <td colspan="2" align="center">&nbsp;</td>
           	      </tr>
+
             	    <tr>
             	      <td width="20%" height="30" align="right"><p><strong>Titulo:</strong></p></td>
             	      <td width="80%" height="30" align="left"><input name="titulo" type="text" id="titulo" value='<?php echo $fila_query["titulo"] ?>' size="50" /></td>
           	      </tr>
+
+                  <tr>
+                    <td width="20%" height="30" align="right"><p><strong>Categoria:</strong></p></td>
+                    <td width="80%" height="30" align="left">
+                      <select name="categoria" id="categoria">
+                        <option value="contenido">Contenido</option>
+                        <option value="archivo">Subir archivo</option>
+                        <option value="enlace">Enlace externo</option>
+                        <option value="lista">Lista de archivos</option>
+                      </select>
+                    </td>
+                  </tr>
             	    
             	    <tr>
             	      <td align="right" ><p><strong>Fecha publicación:</strong></p></td>
