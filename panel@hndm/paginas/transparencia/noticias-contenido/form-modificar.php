@@ -4,9 +4,15 @@ include("../../../conexion/conexion.php");
 include("../../../conexion/funciones.php");
 include("../../../conexion/verificar_sesion.php");
 
+
+
 //NOTICIA
 $rst_query=mysql_query("SELECT * FROM ".$tabla_suf."_transp_sub WHERE id=". $_REQUEST["id"].";", $conexion);
 $fila_query=mysql_fetch_array($rst_query);
+
+//VARIABLES
+$dato_titulo=$fila_query["titulo"];
+$dato_categoria=$fila_query["categoria"];
 
 //VARIABLES PARA LA HORA
 $fechaTotal=$fila_query["fecha_publicacion"];
@@ -57,7 +63,7 @@ jfec(function() {
         <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
             <tr>
             	<td>
-                <form action="actualizar.php?id=<?php echo $_REQUEST["id"]; ?>" method="post" enctype="multipart/form-data" name="form1" id="form1">
+                <form action="actualizar.php?id=<?php echo $_REQUEST["id"]; ?>&transp=<?php echo $Url_TranspID; ?>" method="post" enctype="multipart/form-data" name="form1" id="form1">
             	  <table width="100%" border="0" align="center" cellpadding="5" cellspacing="0">
             	    <tr>
             	      <td colspan="2" align="center">&nbsp;</td>
@@ -65,17 +71,22 @@ jfec(function() {
 
             	    <tr>
             	      <td width="20%" height="30" align="right"><p><strong>Titulo:</strong></p></td>
-            	      <td width="80%" height="30" align="left"><input name="titulo" type="text" id="titulo" value='<?php echo $fila_query["titulo"] ?>' size="50" /></td>
+            	      <td width="80%" height="30" align="left"><input name="titulo" type="text" id="titulo" value='<?php echo $dato_titulo; ?>' size="50" /></td>
           	      </tr>
 
                   <tr>
                     <td width="20%" height="30" align="right"><p><strong>Categoria:</strong></p></td>
                     <td width="80%" height="30" align="left">
                       <select name="categoria" id="categoria">
-                        <option value="contenido">Contenido</option>
-                        <option value="archivo">Subir archivo</option>
-                        <option value="enlace">Enlace externo</option>
-                        <option value="lista">Lista de archivos</option>
+                        <?php if($dato_categoria=="contenido"){ ?>
+                          <option value="contenido" selected>Contenido</option>
+                        <?php }elseif($dato_categoria=="archivo"){ ?>
+                          <option value="archivo">Subir archivo</option>
+                        <?php }elseif($dato_categoria=="enlace"){ ?>
+                          <option value="enlace">Enlace externo</option>
+                        <?php }elseif($dato_categoria=="lista"){ ?>
+                          <option value="lista">Lista de archivos</option>
+                        <?php } ?>
                       </select>
                     </td>
                   </tr>
@@ -94,8 +105,7 @@ jfec(function() {
             	      <td colspan="2" align="center">
             	        <input type="submit" name="guardar" id="guardar" value="Guardar" />
             	        <input type="reset" name="borrar" id="borrar" value="Limpiar Datos" />
-                      <input type="hidden" name="categoria" value="6">
-           	          </td>
+           	        </td>
           	      </tr>
               </table>
                 </form>

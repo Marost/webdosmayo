@@ -75,6 +75,7 @@ elseif($_REQUEST["mensaje"]==6)
 <title>Administración | </title>
 <link rel="stylesheet" type="text/css" href="../../../css/estilo-panel.css"/>
 <link rel="stylesheet" type="text/css" href="../../../css/style-listas.css">
+<link rel="stylesheet" type="text/css" href="../../../css/font.css">
 <script type="text/javascript">
 function eliminarRegistro(registro, nombre) {
 if(confirm("¿Está seguro de borrar este registro?\n"+nombre)) {
@@ -132,13 +133,16 @@ if(confirm("¿Está seguro de borrar este registro?\n"+nombre)) {
                             <td width="15%" align="center">
                             
                                 <a onclick="eliminarRegistro(<?php echo $fila["id"] ?>, '<?php echo $fila["titulo"] ?>');" href="javascript:;">
-                                    <img src="../../../images/eliminar_16.png" width="16" height="16" title="Eliminar registro" /></a>
+                                  <i class="icon-remove"></i>
+                                </a>
                             
                            		  <a href="form-modificar.php?id=<?php echo $fila["id"] ?>">
-                                	<img src="../../../images/editar_16.png" width="16" height="16" title="Modiciar registro" /></a>
+                                	<i class="icon-edit"></i>
+                                </a>
 
-                                <a href="../noticias-contenido/listar.php?not=<?php echo $fila["id"] ?>">
-                                  <img src="../../../images/list_16.png" width="16" height="16" title="Contenido" /></a>
+                                <a href="../noticias-contenido/listar.php?transp=<?php echo $fila["id"] ?>">
+                                  <i class="icon-list"></i>
+                                </a>
 
                                 </td>
                           </tr>

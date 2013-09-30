@@ -3,8 +3,8 @@ session_start();
 include("../../../conexion/conexion.php");
 include("../../../conexion/verificar_sesion.php");
 
-//CATEGORIA
-$rst_categoria=mysql_query("SELECT * FROM ".$tabla_suf."_noticia_categoria WHERE id>0 ORDER BY categoria ASC;", $conexion);
+//VARIABLE URL
+$Url_TranspID=$_REQUEST["transp"];
 
 //VARIABLES PARA LA HORA
 $fechaTotal=date("Y-m-d H:i:s");
@@ -55,7 +55,7 @@ jfec(function() {
         <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
             <tr>
             	<td>
-                <form action="guardar.php" method="post" enctype="multipart/form-data" id="form1" >
+                <form action="guardar.php?transp=<?php echo $Url_TranspID; ?>" method="post" enctype="multipart/form-data" id="form1" >
             	  <table width="100%" border="0" align="center" cellpadding="5" cellspacing="0">
             	    <tr>
             	      <td colspan="2" align="center">&nbsp;</td>
@@ -90,7 +90,6 @@ jfec(function() {
                   <td colspan="2" align="center">
                     <input type="submit" name="guardar" id="guardar" value="Guardar" />
                     <input type="reset" name="borrar" id="borrar" value="Limpiar Datos" />
-                    <input type="hidden" name="categoria" value="6">
                   </td>
                   </tr>
               </table>
