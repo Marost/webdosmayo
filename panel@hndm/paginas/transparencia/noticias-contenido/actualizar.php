@@ -4,6 +4,9 @@ include("../../../conexion/conexion.php");
 include("../../../conexion/funciones.php");
 require_once('../../../../libs/thumbs/ThumbLib.inc.php');
 
+//VARIABLE URL
+$Url_TranspID=$_REQUEST["transp"];
+
 //DECLARACION DE VARIABLES
 $idnoticia=$_REQUEST["id"];
 $titulo=$_POST["titulo"];
@@ -27,7 +30,7 @@ if (mysql_errno()!=0){
 } else {
 	//echo "error al insertar los datos ". mysql_errno() . " - ". mysql_error();
 	mysql_close($conexion);
-	header("Location:listar.php?mensaje=2");
+	header("Location:listar.php?transp=$Url_TranspID&mensaje=2");
 }
 
 ?>

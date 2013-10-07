@@ -14,7 +14,7 @@ $buscar=$_REQUEST["busqueda"];
 
 if ($_REQUEST["btnbuscar"]=="")
 {
-	$rst_query=mysql_query("SELECT * FROM ".$tabla_suf."_transp_sub WHERE transp=$Url_TranspID ORDER BY fecha_publicacion DESC;", $conexion);
+	$rst_query=mysql_query("SELECT * FROM ".$tabla_suf."_transp_sub WHERE transparencia=$Url_TranspID ORDER BY fecha_publicacion DESC;", $conexion);
 	$num_registros=mysql_num_rows($rst_query);
 		
 	$registros=20;	
@@ -24,7 +24,7 @@ if ($_REQUEST["btnbuscar"]=="")
 	else
 	$inicio=0;
 	
-	$rst_query=mysql_query("SELECT * FROM ".$tabla_suf."_transp_sub WHERE transp=$Url_TranspID ORDER BY fecha_publicacion DESC LIMIT $inicio, $registros;", $conexion);
+	$rst_query=mysql_query("SELECT * FROM ".$tabla_suf."_transp_sub WHERE transparencia=$Url_TranspID ORDER BY fecha_publicacion DESC LIMIT $inicio, $registros;", $conexion);
 	$paginas=ceil($num_registros/$registros);
 }
 //-------------------------------------------------
@@ -32,7 +32,7 @@ if ($_REQUEST["btnbuscar"]=="")
 
 if ($_REQUEST["btnbuscar"]!="" || $_REQUEST["busqueda"]!="")
 {
-	$rst_query=mysql_query("SELECT * FROM ".$tabla_suf."_transp_sub WHERE transp=$Url_TranspID AND titulo LIKE '%$buscar%' ORDER BY fecha_publicacion DESC;", $conexion);
+	$rst_query=mysql_query("SELECT * FROM ".$tabla_suf."_transp_sub WHERE transparencia=$Url_TranspID AND titulo LIKE '%$buscar%' ORDER BY fecha_publicacion DESC;", $conexion);
 	$num_registros=mysql_num_rows($rst_query);
 	
 	$registros=10;	
@@ -42,7 +42,7 @@ if ($_REQUEST["btnbuscar"]!="" || $_REQUEST["busqueda"]!="")
 	else
 		$inicio=0;
 	
-	$rst_query=mysql_query("SELECT * FROM ".$tabla_suf."_transp_sub WHERE transp=$Url_TranspID AND titulo LIKE '%$buscar%' ORDER BY fecha_publicacion DESC LIMIT $inicio, $registros;", $conexion);
+	$rst_query=mysql_query("SELECT * FROM ".$tabla_suf."_transp_sub WHERE transparencia=$Url_TranspID AND titulo LIKE '%$buscar%' ORDER BY fecha_publicacion DESC LIMIT $inicio, $registros;", $conexion);
 	$paginas=ceil($num_registros/$registros);
 	
 }
@@ -80,9 +80,9 @@ elseif($_REQUEST["mensaje"]==6)
 <link rel="stylesheet" type="text/css" href="../../../css/style-listas.css">
 <link rel="stylesheet" type="text/css" href="../../../css/font.css">
 <script type="text/javascript">
-function eliminarRegistro(registro, nombre) {
+function eliminarRegistro(registro, nombre, transparencia) {
 if(confirm("¿Está seguro de borrar este registro?\n"+nombre)) {
-	document.location.href="eliminar.php?id="+registro;
+	document.location.href="eliminar.php?id="+registro+"&transp="+transparencia;
 	}
 }
 </script>
@@ -141,7 +141,7 @@ if(confirm("¿Está seguro de borrar este registro?\n"+nombre)) {
                             </td>
                             <td width="15%" align="center">
                             
-                                <a onclick="eliminarRegistro(<?php echo $nota_id; ?>, '<?php echo $nota_titulo; ?>');" href="javascript:;">
+                                <a onclick="eliminarRegistro(<?php echo $nota_id; ?>, '<?php echo $nota_titulo; ?>', <?php echo $Url_TranspID; ?>);" href="javascript:;">
                                   <i class="icon-remove"></i>
                                 </a>
                             
@@ -150,13 +150,13 @@ if(confirm("¿Está seguro de borrar este registro?\n"+nombre)) {
                                 </a>
 
                                 <?php if($nota_categoria=="archivo"){ ?>
-                                <a href="../noticias-contenido-archivo/listar.php?transp=<?php echo $Url_TranspID; ?>&not=<?php $nota_id; ?>">
+                                <a href="../noticias-contenido-archivo/listar.php?transp=<?php echo $Url_TranspID; ?>&not=<?php echo $nota_id; ?>">
                                 <?php }elseif($nota_categoria=="contenido"){ ?>
-                                <a href="../noticias-contenido-cont/listar.php?transp=<?php echo $Url_TranspID; ?>&not=<?php $nota_id; ?>">
+                                <a href="../noticias-contenido-cont/listar.php?transp=<?php echo $Url_TranspID; ?>&not=<?php echo $nota_id; ?>">
                                 <?php }elseif($nota_categoria=="enlace"){ ?>
-                                <a href="../noticias-contenido-enlace/listar.php?transp=<?php echo $Url_TranspID; ?>&not=<?php $nota_id; ?>">
+                                <a href="../noticias-contenido-enlace/listar.php?transp=<?php echo $Url_TranspID; ?>&not=<?php echo $nota_id; ?>">
                                 <?php }elseif($nota_categoria=="lista"){ ?>
-                                <a href="../noticias-contenido-lista/listar.php?transp=<?php echo $Url_TranspID; ?>&not=<?php $nota_id; ?>">
+                                <a href="../noticias-contenido-lista/listar.php?transp=<?php echo $Url_TranspID; ?>&not=<?php echo $nota_id; ?>">
                                 <?php } ?>
                                   <i class="icon-file"></i>
                                 </a>
