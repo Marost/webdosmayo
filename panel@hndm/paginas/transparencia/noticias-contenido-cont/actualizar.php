@@ -5,6 +5,7 @@ include("../../../conexion/funciones.php");
 require_once('../../../../libs/thumbs/ThumbLib.inc.php');
 
 //VARIABLES URL
+$Url_TranspID=$_REQUEST["transp"];
 $Url_NotID=$_REQUEST["not"];
 
 //DECLARACION DE VARIABLES
@@ -30,7 +31,7 @@ if (mysql_errno()!=0){
 } else {
 	//echo "error al insertar los datos ". mysql_errno() . " - ". mysql_error();
 	mysql_close($conexion);
-	header("Location:listar.php?not=$Url_NotID&mensaje=2");
+	header("Location:listar.php?transp=$Url_TranspID&not=$Url_NotID&mensaje=2");
 }
 
 ?>

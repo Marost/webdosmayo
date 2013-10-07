@@ -5,6 +5,7 @@ include("../../../conexion/funciones.php");
 include("../../../conexion/verificar_sesion.php");
 
 //VARIABLES URL
+$Url_TranspID=$_REQUEST["transp"];
 $Url_NotID=$_REQUEST["not"];
 
 //NOTICIA
@@ -73,7 +74,7 @@ jfec(function() {
         <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
             <tr>
             	<td>
-                <form action="actualizar.php?id=<?php echo $_REQUEST["id"]; ?>&not=<?php echo $Url_NotID; ?>" method="post" enctype="multipart/form-data" name="form1" id="form1">
+                <form action="actualizar.php?id=<?php echo $_REQUEST["id"]; ?>&transp=<?php echo $Url_TranspID; ?>&not=<?php echo $Url_NotID; ?>" method="post" enctype="multipart/form-data" name="form1" id="form1">
             	  <table width="100%" border="0" align="center" cellpadding="5" cellspacing="0">
             	    <tr>
             	      <td colspan="2" align="center">&nbsp;</td>
@@ -108,7 +109,6 @@ jfec(function() {
             	      <td colspan="2" align="center">
             	        <input type="submit" name="guardar" id="guardar" value="Guardar" />
             	        <input type="reset" name="borrar" id="borrar" value="Limpiar Datos" />
-                      <input type="hidden" name="categoria" value="6">
            	          </td>
           	      </tr>
               </table>
