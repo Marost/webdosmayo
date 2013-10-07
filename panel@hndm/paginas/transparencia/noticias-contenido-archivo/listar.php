@@ -5,13 +5,17 @@ include("../../../conexion/verificar_sesion.php");
 include("../../../conexion/funciones.php");
 include("../../../conexion/funcion-paginacion.php");
 
+//VARIABLE URL
+$Url_TranspID=$_REQUEST["transp"];
+$Url_NotID=$_REQUEST["not"];
+
 $cebra=1;
 $url="listar.php";
 $buscar=$_REQUEST["busqueda"];
 
 if ($_REQUEST["btnbuscar"]=="")
 {
-	$rst_query=mysql_query("SELECT * FROM ".$tabla_suf."_transp_sub ORDER BY fecha_publicacion DESC;", $conexion);
+	$rst_query=mysql_query("SELECT * FROM ".$tabla_suf."_transp_s_archivo WHERE noticia_sub=$Url_NotID ORDER BY fecha_publicacion DESC;", $conexion);
 	$num_registros=mysql_num_rows($rst_query);
 		
 	$registros=20;	
@@ -21,7 +25,7 @@ if ($_REQUEST["btnbuscar"]=="")
 	else
 	$inicio=0;
 	
-	$rst_query=mysql_query("SELECT * FROM ".$tabla_suf."_transp_sub ORDER BY fecha_publicacion DESC LIMIT $inicio, $registros;", $conexion);
+	$rst_query=mysql_query("SELECT * FROM ".$tabla_suf."_transp_s_archivo WHERE noticia_sub=$Url_NotID ORDER BY fecha_publicacion DESC LIMIT $inicio, $registros;", $conexion);
 	$paginas=ceil($num_registros/$registros);
 }
 //-------------------------------------------------
@@ -29,7 +33,7 @@ if ($_REQUEST["btnbuscar"]=="")
 
 if ($_REQUEST["btnbuscar"]!="" || $_REQUEST["busqueda"]!="")
 {
-	$rst_query=mysql_query("SELECT * FROM ".$tabla_suf."_transp_sub WHERE titulo LIKE '%$buscar%' ORDER BY fecha_publicacion DESC;", $conexion);
+	$rst_query=mysql_query("SELECT * FROM ".$tabla_suf."_transp_s_archivo WHERE noticia_sub=$Url_NotID AND titulo LIKE '%$buscar%' ORDER BY fecha_publicacion DESC;", $conexion);
 	$num_registros=mysql_num_rows($rst_query);
 	
 	$registros=10;	
@@ -39,7 +43,7 @@ if ($_REQUEST["btnbuscar"]!="" || $_REQUEST["busqueda"]!="")
 	else
 		$inicio=0;
 	
-	$rst_query=mysql_query("SELECT * FROM ".$tabla_suf."_transp_sub WHERE titulo LIKE '%$buscar%' ORDER BY fecha_publicacion DESC LIMIT $inicio, $registros;", $conexion);
+	$rst_query=mysql_query("SELECT * FROM ".$tabla_suf."_transp_s_archivo WHERE noticia_sub=$Url_NotID AND titulo LIKE '%$buscar%' ORDER BY fecha_publicacion DESC LIMIT $inicio, $registros;", $conexion);
 	$paginas=ceil($num_registros/$registros);
 	
 }
@@ -77,9 +81,9 @@ elseif($_REQUEST["mensaje"]==6)
 <link rel="stylesheet" type="text/css" href="../../../css/style-listas.css">
 <link rel="stylesheet" type="text/css" href="../../../css/font.css">
 <script type="text/javascript">
-function eliminarRegistro(registro, nombre) {
+function eliminarRegistro(registro, nombre, noticia, transparencia) {
 if(confirm("¿Está seguro de borrar este registro?\n"+nombre)) {
-	document.location.href="eliminar.php?id="+registro;
+	document.location.href="eliminar.php?id="+registro+"&not="+noticia+"&transp="+transparencia;
 	}
 }
 </script>
@@ -94,7 +98,7 @@ if(confirm("¿Está seguro de borrar este registro?\n"+nombre)) {
 				<?php include("../../../menu-izq.php"); ?>
             </div><!--FIN PANEL IZQ-->
             <div id="panel-der">
-            	<h2>Lista - Transparencias</h2>
+            	<h2>Lista - Noticias</h2>
     <div id="contenido_total">
     	<div id="mensaje" >
         	<form id="form1" name="form1" method="get" action="listar.php">
@@ -110,14 +114,14 @@ if(confirm("¿Está seguro de borrar este registro?\n"+nombre)) {
         <div id="contenido">
               <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
                   <tr>
-                    <td colspan="2"><p><a href="form-agregar.php"><strong>AGREGAR</strong></a></p></td>
+                    <td colspan="2"><p><a href="form-agregar.php?transp=<?php echo $Url_TranspID; ?>&not=<?php echo $Url_NotID; ?>"><strong>AGREGAR</strong></a></p></td>
                   </tr>
                   <tr>
                     <td colspan="2">
                       <table width="100%" align="center" cellpadding="5" cellspacing="0" id="cebreado-php">
                         <thead>
                           <tr class="titulo-campo">
-                            <th width="85%" height="22" align="left">Registro</th>
+                            <th width="85%" height="22" align="left">Noticia</th>
                             <th width="15%" height="22" align="center">acciones</th>
                           </tr>
                         </thead>
@@ -132,19 +136,15 @@ if(confirm("¿Está seguro de borrar este registro?\n"+nombre)) {
                             </td>
                             <td width="15%" align="center">
                             
-                                <a onclick="eliminarRegistro(<?php echo $fila["id"] ?>, '<?php echo $fila["titulo"] ?>');" href="javascript:;">
+                                <a onclick="eliminarRegistro(<?php echo $fila["id"]; ?>, '<?php echo $fila["titulo"]; ?>', <?php echo $Url_NotID; ?>, <?php echo $Url_TranspID; ?>);" href="javascript:;">
                                   <i class="icon-remove"></i>
                                 </a>
                             
-                           		  <a href="form-modificar.php?id=<?php echo $fila["id"] ?>">
+                                <a href="form-modificar.php?id=<?php echo $fila["id"]; ?>&not=<?php echo $Url_NotID; ?>&transp=<?php echo $Url_TranspID; ?>">
                                 	<i class="icon-edit"></i>
                                 </a>
 
-                                <a href="#">
-                                  <i class="icon-file"></i>
-                                </a>
-
-                                </td>
+                            </td>
                           </tr>
                           <?php } ?>
                         </tbody>
