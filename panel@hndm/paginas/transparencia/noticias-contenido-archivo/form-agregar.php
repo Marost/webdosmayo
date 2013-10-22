@@ -87,7 +87,7 @@ jq(function() {
         <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
             <tr>
             	<td>
-                <form action="guardar.php?not=<?php echo $Url_NotID; ?>&transp=<?php echo $Url_TranspID; ?>" method="post" enctype="multipart/form-data" id="form1" >
+                <form action="guardar.php?not=<?php echo $Url_NotID; ?>&transp=<?php echo $Url_TranspID; ?>" method="post" id="form1" >
             	  <table width="100%" border="0" align="center" cellpadding="5" cellspacing="0">
             	    
                   <tr>

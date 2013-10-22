@@ -4,13 +4,17 @@ include("../../../conexion/conexion.php");
 include("../../../conexion/funciones.php");
 include("../../../conexion/verificar_sesion.php");
 
+//VARIABLES URL
+$Url_TranspID=$_REQUEST["transp"];
+$Url_NotID=$_REQUEST["not"];
+
 //NOTICIA
-$rst_query=mysql_query("SELECT * FROM ".$tabla_suf."_transp_sub WHERE id=". $_REQUEST["id"].";", $conexion);
+$rst_query=mysql_query("SELECT * FROM ".$tabla_suf."_transp_s_enlace WHERE id=". $_REQUEST["id"].";", $conexion);
 $fila_query=mysql_fetch_array($rst_query);
 
 //VARIABLES
-$dato_titulo=$fila_query["titulo"];
-$dato_categoria=$fila_query["categoria"];
+$nota_titulo=$fila_query["titulo"];
+$nota_enlace=$fila_query["enlace"];
 
 //VARIABLES PARA LA HORA
 $fechaTotal=$fila_query["fecha_publicacion"];
@@ -27,6 +31,15 @@ $hora_actual=$hora[0].":".$hora[1];
 <title>Administración</title>
 <link rel="stylesheet" type="text/css" href="../../../css/estilo-panel.css"/>
 <link rel="stylesheet" type="text/css" href="../../../css/style-listas.css" />
+
+<!-- CKEDITOR -->
+<script src="../../../js/ckeditor/ckeditor.js" type="text/javascript"></script>
+
+<!-- SPRY -->
+<script src="/SpryAssets/SpryTabbedPanels.js" type="text/javascript"></script>
+<link href="/SpryAssets/SpryTabbedPanels.css" rel="stylesheet" type="text/css" />
+<link href="/SpryAssets/SpryValidationTextField.css" rel="stylesheet" type="text/css" />
+<script src="/SpryAssets/SpryValidationTextField.js" type="text/javascript"></script>
 
 <!-- FECHA -->
 <link type="text/css" href="/js/themes/base/jquery.ui.all.css" rel="stylesheet" />
@@ -56,39 +69,24 @@ jfec(function() {
 				<?php include("../../../menu-izq.php"); ?>
             </div><!--FIN PANEL IZQ-->
             <div id="panel-der">
-            	<h2>Modificar - Transparencia</h2>
+            	<h2>Modificar - Noticia</h2>
     <div id="contenido_total">
         <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
             <tr>
             	<td>
-                <form action="actualizar.php?id=<?php echo $_REQUEST["id"]; ?>" method="post" enctype="multipart/form-data" name="form1" id="form1">
+                <form action="actualizar.php?id=<?php echo $_REQUEST["id"]; ?>&transp=<?php echo $Url_TranspID; ?>&not=<?php echo $Url_NotID; ?>" method="post" enctype="multipart/form-data" name="form1" id="form1">
             	  <table width="100%" border="0" align="center" cellpadding="5" cellspacing="0">
             	    <tr>
             	      <td colspan="2" align="center">&nbsp;</td>
           	      </tr>
-
             	    <tr>
             	      <td width="20%" height="30" align="right"><p><strong>Titulo:</strong></p></td>
-            	      <td width="80%" height="30" align="left"><input name="titulo" type="text" id="titulo" value='<?php echo $dato_titulo; ?>' size="50" /></td>
+            	      <td width="80%" height="30" align="left"><input name="titulo" type="text" id="titulo" value='<?php echo $nota_titulo; ?>' size="50" /></td>
           	      </tr>
-
-                  <tr>
-                    <td width="20%" height="30" align="right"><p><strong>Categoria:</strong></p></td>
-                    <td width="80%" height="30" align="left">
-                      <select name="categoria" id="categoria">
-                        <?php if($dato_categoria=="contenido"){ ?>
-                          <option value="contenido" selected>Contenido</option>
-                        <?php }elseif($dato_categoria=="archivo"){ ?>
-                          <option value="archivo">Subir archivo</option>
-                        <?php }elseif($dato_categoria=="enlace"){ ?>
-                          <option value="enlace">Enlace externo</option>
-                        <?php }elseif($dato_categoria=="lista"){ ?>
-                          <option value="lista">Lista de archivos</option>
-                        <?php } ?>
-                      </select>
-                    </td>
-                  </tr>
-            	    
+            	    <tr>
+            	      <td width="20%" height="30" align="right"><p><strong>Enlace:</strong></p></td>
+                    <td width="80%" height="30" align="left"><input name="enlace" type="text" id="enlace" value='<?php echo $nota_enlace; ?>' size="50" /></td>
+          	      </tr>
             	    <tr>
             	      <td align="right" ><p><strong>Fecha publicación:</strong></p></td>
             	      <td><input name="fecha" type="text" id="fecha" value="<?php echo $fecha_actual; ?>" size="20" /></td>
@@ -103,7 +101,6 @@ jfec(function() {
             	      <td colspan="2" align="center">
             	        <input type="submit" name="guardar" id="guardar" value="Guardar" />
             	        <input type="reset" name="borrar" id="borrar" value="Limpiar Datos" />
-                      <input type="hidden" name="categoria" value="6">
            	          </td>
           	      </tr>
               </table>

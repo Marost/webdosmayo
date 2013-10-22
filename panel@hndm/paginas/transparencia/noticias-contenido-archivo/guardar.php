@@ -2,7 +2,6 @@
 session_start();
 include("../../../conexion/conexion.php");
 include("../../../conexion/funciones.php");
-require_once('../../../../libs/thumbs/ThumbLib.inc.php');
 
 //VARIABLES URL
 $Url_TranspID=$_REQUEST["transp"];
@@ -11,23 +10,24 @@ $Url_NotID=$_REQUEST["not"];
 //DECLARACION DE VARIABLES
 $titulo=$_POST["titulo"];
 $url=getUrlAmigable(eliminarTextoURL($titulo));
-$archivo=$_POST["uploader_archivo_0_tmpname"];
 $archivo_carpeta=fechaCarpeta();
 
 //CAMBIAR NOMBRE DE ARCHIVO
-$archivo_tmp=$_POST['uploader_archivo_0_tmpname'];
-$archivo_tmp_extension=end(explode('.',$archivo_tmp));
-$archivo_tmp_nombre=substr($archivo_tmp,0,strlen($archivo_tmp)-(strlen($archivo_tmp_extension)+1));
+if($_POST['uploader_archivo_0_tmpname']<>""){
+	$archivo_tmp=$_POST['uploader_archivo_0_tmpname'];
+	$archivo_tmp_extension=end(explode('.',$archivo_tmp));
+	$archivo_tmp_nombre=substr($archivo_tmp,0,strlen($archivo_tmp)-(strlen($archivo_tmp_extension)+1));
 
-$archivo_name=$_POST['uploader_archivo_0_name'];
-$archivo_name_extension=end(explode('.',$archivo_name));
-$archivo_name_nombre=substr($archivo_name,0,strlen($archivo_name)-(strlen($archivo_name_extension)+1));
-$archivo_name_prmlnk=getUrlAmigable($archivo_name_nombre);
-$archivo_name_total=$archivo_name_prmlnk.".".$archivo_name_extension;
+	$archivo_name=$_POST['uploader_archivo_0_name'];
+	$archivo_name_extension=end(explode('.',$archivo_name));
+	$archivo_name_nombre=substr($archivo_name,0,strlen($archivo_name)-(strlen($archivo_name_extension)+1));
+	$archivo_name_prmlnk=getUrlAmigable($archivo_name_nombre);
+	$archivo_name_total=$archivo_name_prmlnk.".".$archivo_name_extension;
 
-$ruta_archivo="../../../../archivos/".$archivo_carpeta;
-if(file_exists($ruta_archivo.$archivo_tmp)){
-	rename($ruta_archivo.$archivo_tmp, $ruta_archivo.$archivo_name_total);
+	$ruta_archivo="../../../../archivos/".fechaCarpeta();
+	if(file_exists($ruta_archivo.$archivo_tmp)){
+		rename($ruta_archivo.$archivo_tmp, $ruta_archivo.$archivo_name_total);
+	}
 }
 
 //FECHA PUBLICACION
@@ -44,7 +44,7 @@ dato_usuario,
 fecha_publicacion,
 noticia_sub) VALUES('$url',
 '".htmlspecialchars($titulo)."',
-'$archivo_name_total',
+'$archivo_tmp',
 '$archivo_carpeta',
 '$usuario_user', 
 '$fecha_pub',
