@@ -49,8 +49,8 @@ $num_noticia_slide=mysql_num_rows($rst_noticia_slide);
 
             jSlid(document).on("ready", startSlider);
 
-            function startSlider(datoJQ){    
-                datoJQ('.historia_slide div').allinone_thumbnailsBanner({
+            function startSlider(){    
+                jSlid('.historia_slide div').allinone_thumbnailsBanner({
                     skin: 'cool',
                     numberOfThumbsPerScreen:4,
                     width: 620,
