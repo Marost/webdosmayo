@@ -4,12 +4,29 @@ include ("../../../../conexion/conexion.php");
 //VARIABLES
 $tipo=$_REQUEST["tipo"];
 $idnoticia=$_REQUEST["noticia"];
+$idselect=$_REQUEST["id"];
 
-if($tipo=="all"){
-	mysql_query("DELETE FROM ".$tabla_suf."_normatividad_documentos WHERE noticia=$idnoticia;",$conexion);
-}else{
-	mysql_query("DELETE FROM ".$tabla_suf."_normatividad_documentos WHERE id=".$_REQUEST["id"].";",$conexion);
-}
+//SELECCIONAR NOTA PRINCIPAL
+$rst_nota=mysql_query("SELECT * FROM ".$tabla_suf."_normatividad WHERE id=$idnoticia", $conexion);
+$fila_nota=mysql_fetch_array($rst_nota);
+
+//VARIABLES
+$nota_carpeta=$fila_nota["carpeta_documentos"];
+
+//SELECCIONAR ARCHIVO
+$rst_archivo=mysql_query("SELECT * FROM ".$tabla_suf."_normatividad_documentos WHERE id=$idselect", $conexion);
+$fila_archivo=mysql_fetch_array($rst_archivo);
+
+//VARIABLES
+$archivo_nombre=$fila_archivo["documento"];
+
+//URL ARCHIVO
+$UrlArchivo="../../../../../documentos/".$nota_carpeta."".$archivo_nombre;
+
+unlink($UrlArchivo);
+
+mysql_query("DELETE FROM ".$tabla_suf."_normatividad_documentos WHERE id=$idselect;",$conexion);
+
 
 if (mysql_errno()!=0)
 {
