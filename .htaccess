@@ -336,34 +336,48 @@ FileETag None
 # RewriteBase /
 </IfModule>
 
-RewriteRule ^cat/(.*)$                  /categoria.php?cat=$1
-RewriteRule ^(.*)/([0-9]*)-(.*)$        /nota.php?cat=$1&id=$2&url=$3
-RewriteRule ^video/([0-9]*)/(.*)$        /videos.php?id=$1&url=$2
-RewriteRule ^videos$                       /videos-cat.php
-RewriteRule ^construccion$              /construccion.php
-RewriteRule ^tarifario/medicamentos$    /tarifario-medicamentos.php
-RewriteRule ^tarifario/procedimientos$  /tarifario-procedimientos.php
-RewriteRule ^historia$                  /historia.php
-RewriteRule ^atencion-asegurado$        /atencion-asegurado.php
-RewriteRule ^atencion-ciudadano$        /atencion-ciudadano.php
-RewriteRule ^cas$                       /cas.php
-RewriteRule ^transparencia$                       /transparencia.php
-RewriteRule ^oportunidad-laboral$                       /oportunidad-laboral.php
-RewriteRule ^informacion-variada$                       /info-variada.php
-RewriteRule ^directorio$                       /directorio.php
-RewriteRule ^directorio-telefonico$                       /directorio-telefonico.php
-RewriteRule ^informacion-institucional$                       /informacion-institucional.php
-RewriteRule ^sala-situacional$                       /info-epidemiologica-ss.php
-RewriteRule ^boletin-epidemiologico$                       /info-epidemiologica-ep.php
-RewriteRule ^libro-reclamaciones$                       /libro-reclamaciones.php
-RewriteRule ^libro-reclamaciones-form$                       /libro-reclamaciones-form.php
-RewriteRule ^sala-prensa/(.*)$                  /sala-prensa.php?cat=$1
-RewriteRule ^mapa-sitio$                       /mapa-sitio.php
-RewriteRule ^normatividad$                       /normatividad.php
-RewriteRule ^cetide$                       /cetide.php
-RewriteRule ^campanias$                       /campanas-lista.php
+RewriteRule ^cat/(.*)$                              /categoria.php?cat=$1
+RewriteRule ^(.*)/([0-9]*)-(.*)$                    /nota.php?cat=$1&id=$2&url=$3
+RewriteRule ^construccion$                          /construccion.php
+RewriteRule ^historia$                              /historia.php
+RewriteRule ^atencion-asegurado$                    /atencion-asegurado.php
+RewriteRule ^atencion-ciudadano$                    /atencion-ciudadano.php
+RewriteRule ^cas$                                   /cas.php
+RewriteRule ^oportunidad-laboral$                   /oportunidad-laboral.php
+RewriteRule ^informacion-variada$                   /info-variada.php
+RewriteRule ^informacion-institucional$             /informacion-institucional.php
+RewriteRule ^sala-situacional$                      /info-epidemiologica-ss.php
+RewriteRule ^boletin-epidemiologico$                /info-epidemiologica-ep.php
+RewriteRule ^sala-prensa/(.*)$                      /sala-prensa.php?cat=$1
+RewriteRule ^mapa-sitio$                            /mapa-sitio.php
+RewriteRule ^normatividad$                          /normatividad.php
+RewriteRule ^cetide$                                /cetide.php
+
+#VIDEOS
+RewriteRule ^video/([0-9]*)/(.*)$                   /videos.php?id=$1&url=$2
+RewriteRule ^videos$                                /videos-cat.php
+
+#DIRECTORIO
+RewriteRule ^directorio$                            /directorio.php
+RewriteRule ^directorio-telefonico$                 /directorio-telefonico.php
+
+#LIBRO DE RECLAMACIONES
+RewriteRule ^libro-reclamaciones$                   /libro-reclamaciones.php
+RewriteRule ^libro-reclamaciones-form$              /libro-reclamaciones-form.php
+
+#CAMPAÑAS
+RewriteRule ^campanias$                             /campanas-lista.php
 RewriteRule ^campanias/([0-9]*)/(.*)$               /campanas.php?id=$1&url=$2
-RewriteRule ^campanias/nota/([0-9]*)/(.*)$               /campanas-nota.php?id=$1&url=$2
+RewriteRule ^campanias/nota/([0-9]*)/(.*)$          /campanas-nota.php?id=$1&url=$2
+
+#TARIFARIO
+RewriteRule ^tarifario/medicamentos$                /tarifario-medicamentos.php
+RewriteRule ^tarifario/procedimientos$              /tarifario-procedimientos.php
+
+#TRANSPARENCIA
+#RewriteRule ^transparencia$                        /transparencia.php
+RewriteRule ^transparencia$                         /transparencia-datos.php
+RewriteRule ^transparencia/(.*)/([0-9]*)-(.*)$      /transparencia-datos-sub.php?transp=$1&id=$2&url=$3
 
 # ----------------------------------------------------------------------
 # Suppress or force the "www." at the beginning of URLs

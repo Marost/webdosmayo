@@ -46,9 +46,29 @@ $rst_transp=mysql_query("SELECT * FROM DM_transp ORDER BY fecha_publicacion DESC
                             $transp_url=$fila_transp["url"];
                             $transp_titulo=$fila_transp["titulo"];
 
-                            //
+                            //TRANSPARENCIA ITEM
+                            $rst_transpItem=mysql_query("SELECT * FROM DM_transp_sub WHERE transparencia=$transp_id ORDER BY id DESC", $conexion);
                     ?>
                         <li><?php echo $transp_titulo; ?></li>
+
+                            <ul>
+                                <?php while($fila_transpItem=mysql_fetch_array($rst_transpItem)){
+                                    //VARIABLES
+                                    $transpItem_id=$fila_transpItem["id"];
+                                    $transpItem_url=$fila_transpItem["url"];
+                                    $transpItem_titulo=$fila_transpItem["titulo"];
+
+                                    //URLS
+                                    $transpItem_UrlWeb=$web."transparencia/".$transp_url."/".$transpItem_id."-".$transpItem_url;
+                                ?>
+                                <li>
+                                    <a href="<?php echo $transpItem_UrlWeb; ?>">
+                                        <?php echo $transpItem_titulo; ?>
+                                    </a>
+                                </li>
+                                <?php } ?>
+                            </ul>
+
                     <?php } ?>
                 </ul>
 
