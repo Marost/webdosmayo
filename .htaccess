@@ -337,7 +337,6 @@ FileETag None
 </IfModule>
 
 RewriteRule ^cat/(.*)$                              /categoria.php?cat=$1
-RewriteRule ^(.*)/([0-9]*)-(.*)$                    /nota.php?cat=$1&id=$2&url=$3
 RewriteRule ^construccion$                          /construccion.php
 RewriteRule ^historia$                              /historia.php
 RewriteRule ^atencion-asegurado$                    /atencion-asegurado.php
@@ -352,6 +351,9 @@ RewriteRule ^sala-prensa/(.*)$                      /sala-prensa.php?cat=$1
 RewriteRule ^mapa-sitio$                            /mapa-sitio.php
 RewriteRule ^normatividad$                          /normatividad.php
 RewriteRule ^cetide$                                /cetide.php
+
+#NOTICIA
+RewriteRule ^(.*)/([0-9]*)-(.*)$                    /nota.php?cat=$1&id=$2&url=$3
 
 #VIDEOS
 RewriteRule ^video/([0-9]*)/(.*)$                   /videos.php?id=$1&url=$2
@@ -377,7 +379,7 @@ RewriteRule ^tarifario/procedimientos$              /tarifario-procedimientos.ph
 #TRANSPARENCIA
 #RewriteRule ^transparencia$                        /transparencia.php
 RewriteRule ^transparencia$                         /transparencia-datos.php
-RewriteRule ^transparencia/(.*)/([0-9]*)-(.*)$      /transparencia-datos-sub.php?transp=$1&id=$2&url=$3
+RewriteRule ^transparencia/(.*)(.*)-([0-9]*)$      /transparencia-datos-sub.php?url=$1&tipo=$2&id=$3
 
 # ----------------------------------------------------------------------
 # Suppress or force the "www." at the beginning of URLs
