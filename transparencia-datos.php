@@ -57,14 +57,26 @@ $rst_transp=mysql_query("SELECT * FROM DM_transp ORDER BY fecha_publicacion DESC
                                     $transpItem_id=$fila_transpItem["id"];
                                     $transpItem_url=$fila_transpItem["url"];
                                     $transpItem_titulo=$fila_transpItem["titulo"];
+                                    $transpItem_categoria=$fila_transpItem["categoria"];
+
+                                    if($transpItem_categoria=="contenido"){ $transpItem_UrlCat="ct"; }
+                                    elseif($transpItem_categoria=="archivo"){ $transpItem_UrlCat="up"; }
+                                    elseif($transpItem_categoria=="enlace"){ $transpItem_UrlCat="ee"; }
+                                    elseif($transpItem_categoria=="lista"){ $transpItem_UrlCat="la"; }
 
                                     //URLS
-                                    $transpItem_UrlWeb=$web."transparencia/".$transp_url."/".$transpItem_id."-".$transpItem_url;
+                                    $transpItem_UrlWeb=$web."transparencia/".$transpItem_url."".$transpItem_UrlCat."-".$transpItem_id;
                                 ?>
                                 <li>
+                                    <?php if($transpItem_UrlCat=="ee" OR $transpItem_UrlCat=="up"){ ?>
+                                    <a href="<?php echo $transpItem_UrlWeb; ?>" target="_blank">
+                                        <?php echo $transpItem_titulo; ?>
+                                    </a>
+                                    <?php }elseif($transpItem_UrlCat=="ct" OR $transpItem_UrlCat=="la"){ ?>
                                     <a href="<?php echo $transpItem_UrlWeb; ?>">
                                         <?php echo $transpItem_titulo; ?>
                                     </a>
+                                    <?php } ?>
                                 </li>
                                 <?php } ?>
                             </ul>
