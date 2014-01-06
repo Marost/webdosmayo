@@ -137,7 +137,18 @@ if(confirm("¿Está seguro de borrar este registro?\n"+nombre)) {
                             	<p class="texto-azul12-Arial">
                                 <strong><?php echo $nota_titulo; ?></strong></p>
                               <p>Publicado el: <strong><?php echo $nota_fecha; ?></strong> 
-                                por: <strong><?php echo $nota_usuario; ?></strong></p>
+                                por: <strong><?php echo $nota_usuario; ?></strong> 
+                                Categoria: 
+                                <?php if($nota_categoria=="archivo"){ ?>
+                                  <strong>Subir archivo</strong>
+                                <?php }elseif($nota_categoria=="contenido"){ ?>
+                                  <strong>Contenido</strong>
+                                <?php }elseif($nota_categoria=="enlace"){ ?>
+                                  <strong>Enlace Externo</strong>
+                                <?php }elseif($nota_categoria=="lista"){ ?>
+                                  <strong>Lista de Documentos</strong>
+                                <?php } ?>
+                                </p>
                             </td>
                             <td width="15%" align="center">
                             
@@ -150,16 +161,16 @@ if(confirm("¿Está seguro de borrar este registro?\n"+nombre)) {
                                 </a>
 
                                 <?php if($nota_categoria=="archivo"){ ?>
-                                <a href="../noticias-contenido-archivo/listar.php?transp=<?php echo $Url_TranspID; ?>&not=<?php echo $nota_id; ?>">
+                                  <a href="../noticias-contenido-archivo/listar.php?transp=<?php echo $Url_TranspID; ?>&not=<?php echo $nota_id; ?>">
                                 <?php }elseif($nota_categoria=="contenido"){ ?>
-                                <a href="../noticias-contenido-cont/listar.php?transp=<?php echo $Url_TranspID; ?>&not=<?php echo $nota_id; ?>">
+                                  <a href="../noticias-contenido-cont/listar.php?transp=<?php echo $Url_TranspID; ?>&not=<?php echo $nota_id; ?>">
                                 <?php }elseif($nota_categoria=="enlace"){ ?>
-                                <a href="../noticias-contenido-enlace/listar.php?transp=<?php echo $Url_TranspID; ?>&not=<?php echo $nota_id; ?>">
+                                  <a href="../noticias-contenido-enlace/listar.php?transp=<?php echo $Url_TranspID; ?>&not=<?php echo $nota_id; ?>">
                                 <?php }elseif($nota_categoria=="lista"){ ?>
-                                <a href="../noticias-contenido-lista/listar.php?transp=<?php echo $Url_TranspID; ?>&not=<?php echo $nota_id; ?>">
+                                  <a href="../noticias-contenido-lista/listar.php?transp=<?php echo $Url_TranspID; ?>&not=<?php echo $nota_id; ?>">
                                 <?php } ?>
-                                  <i class="icon-file"></i>
-                                </a>
+                                    <i class="icon-file"></i>
+                                  </a>
 
                                 </td>
                           </tr>

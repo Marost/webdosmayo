@@ -72,7 +72,7 @@ jfec(function() {
 var jq = jQuery.noConflict();
 jq(function() {
   jq("#uploader_archivo").pluploadQueue({
-    runtimes: 'flash', url: 'upload.php', max_file_size: '10mb',
+    runtimes: 'flash', url: 'upload.php?id=<?php echo $Url_NotID; ?>', max_file_size: '10mb',
     chunk_size: '1mb', unique_names: true,
     filters: [ {title: "Image files", extensions: "pdf,doc,docx,xls,xlsx,ppt,pptx,jpg,gif,png,tiff"}],
     flash_swf_url: '../../../js/plupload/plupload.flash.swf'

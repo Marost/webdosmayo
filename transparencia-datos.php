@@ -65,11 +65,30 @@ $rst_transp=mysql_query("SELECT * FROM DM_transp ORDER BY fecha_publicacion DESC
                                     elseif($transpItem_categoria=="lista"){ $transpItem_UrlCat="la"; }
 
                                     //URLS
-                                    $transpItem_UrlWeb=$web."transparencia/".$transpItem_url."".$transpItem_UrlCat."-".$transpItem_id;
+                                    $transpItem_UrlWeb=$web."transparencia/".$transpItem_url."-".$transpItem_UrlCat."-".$transpItem_id;
                                 ?>
                                 <li>
-                                    <?php if($transpItem_UrlCat=="ee" OR $transpItem_UrlCat=="up"){ ?>
-                                    <a href="<?php echo $transpItem_UrlWeb; ?>" target="_blank">
+                                    <?php if($transpItem_UrlCat=="ee"){
+                                            $rst_ee=mysql_query("SELECT * FROM DM_transp_s_enlace WHERE noticia_sub=$transpItem_id LIMIT 1;", $conexion);
+                                            $fila_ee=mysql_fetch_array($rst_ee);
+
+                                            //VARIABLES
+                                            $ee_url=$fila_ee["enlace"];
+                                    ?>
+                                    <a href="<?php echo $ee_url; ?>" target="_blank">
+                                        <?php echo $transpItem_titulo; ?>
+                                    </a>
+                                    <?php }elseif($transpItem_UrlCat=="up"){
+                                            $rst_up=mysql_query("SELECT * FROM DM_transp_s_archivo WHERE noticia_sub=$transpItem_id LIMIT 1;", $conexion);
+                                            $fila_up=mysql_fetch_array($rst_up);
+
+                                            //VARIABLES
+                                            $up_archivo=$fila_up["archivo"];
+                                            $up_archivo_carpeta=$fila_up["archivo_carpeta"]."/";
+                                            $up_url=$web."transparencia/".$up_archivo_carpeta."".$up_archivo;
+
+                                    ?>
+                                    <a href="<?php echo $up_url; ?>" target="_blank">
                                         <?php echo $transpItem_titulo; ?>
                                     </a>
                                     <?php }elseif($transpItem_UrlCat=="ct" OR $transpItem_UrlCat=="la"){ ?>

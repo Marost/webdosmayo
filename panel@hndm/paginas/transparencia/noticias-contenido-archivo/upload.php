@@ -1,5 +1,15 @@
 <?php
+include("../../../conexion/conexion.php");
 include("../../../conexion/funciones.php");
+
+/*VARIABLES DE URL*/
+$id=$_REQUEST["id"];
+
+/*CARPETA DE DOCUMENTOS*/
+$rst_not=mysql_query("SELECT * FROM DM_transp_sub WHERE id=$id", $conexion);
+$fila_not=mysql_fetch_array($rst_not);
+$carpeta_not=$fila_not["url"]."/";
+
 /**
  * upload.php
  *
@@ -18,7 +28,7 @@ include("../../../conexion/funciones.php");
 	header("Pragma: no-cache");
 
 	// Settings
-	$targetDir = "../../../../archivos/".fechaCarpeta();
+	$targetDir = "../../../../doctransparencia/".$carpeta_not;
 	$cleanupTargetDir = false; // Remove old files
 	$maxFileAge = 60 * 60; // Temp file age in seconds
 
@@ -50,10 +60,8 @@ include("../../../conexion/funciones.php");
 	}
 
 	// Create target dir
-	if (!file_exists($targetDir) or !file_exists($targetDirThumb) or !file_exists($targetDirThumb200)){
+	if (!file_exists($targetDir)){
 		@mkdir($targetDir, 0777);
-		@mkdir($targetDirThumb, 0777);
-		@mkdir($targetDirThumb200, 0777);
 	}
 
 	// Remove old temp files

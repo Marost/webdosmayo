@@ -63,7 +63,7 @@ jfec(function() {
 var jq = jQuery.noConflict();
 jq(function() {
   jq("#uploader_archivo").pluploadQueue({
-    runtimes: 'flash', url: 'upload.php', max_file_size: '10mb',
+    runtimes: 'flash', url: 'upload.php?id=<?php echo $Url_NotID; ?>', max_file_size: '10mb',
     chunk_size: '1mb', unique_names: true,
     filters: [ {title: "Image files", extensions: "pdf,doc,docx,xls,xlsx,ppt,pptx,jpg,gif,png,tiff"}],
     flash_swf_url: '../../../js/plupload/plupload.flash.swf'
@@ -87,7 +87,7 @@ jq(function() {
         <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
             <tr>
             	<td>
-                <form action="guardar.php?not=<?php echo $Url_NotID; ?>&transp=<?php echo $Url_TranspID; ?>" method="post" id="form1" >
+                <form action="guardar.php?not=<?php echo $Url_NotID; ?>&transp=<?php echo $Url_TranspID; ?>" method="POST" id="form1" >
             	  <table width="100%" border="0" align="center" cellpadding="5" cellspacing="0">
             	    
                   <tr>
