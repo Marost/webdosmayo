@@ -165,7 +165,5 @@ pip-log.txt
 #MIS ARCHIVOS
 recursos/
 _notes/
-less/
 *.fla
-*.less
 *.sublime-workspace
