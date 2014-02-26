@@ -27,7 +27,7 @@ $carpeta_cas=$fila_cas["carpeta_documentos"];
 	header("Cache-Control: post-check=0, pre-check=0", false);
 	header("Pragma: no-cache");
 	// Settings
-	$targetDir = "../../../../../documentos/".$carpeta_cas;
+	$targetDir = "../../../../../doctransparencia/".$carpeta_cas;
 	$cleanupTargetDir = false; // Remove old files
 	$maxFileAge = 60 * 60; // Temp file age in seconds
 

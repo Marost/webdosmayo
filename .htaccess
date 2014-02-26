@@ -377,9 +377,9 @@ RewriteRule ^tarifario/medicamentos$                /tarifario-medicamentos.php
 RewriteRule ^tarifario/procedimientos$              /tarifario-procedimientos.php
 
 #TRANSPARENCIA
-#RewriteRule ^transparencia$                        /transparencia.php
-RewriteRule ^transparencia$                         /transparencia-datos.php
-RewriteRule ^transparencia/(.*)-(.*)-([0-9]*)$      /transparencia-datos-sub.php?url=$1&tipo=$2&id=$3
+RewriteRule ^transparencia$                        /transparencia.php
+#RewriteRule ^transparencia$                         /transparencia-datos.php
+#RewriteRule ^transparencia/(.*)-(.*)-([0-9]*)$      /transparencia-datos-sub.php?url=$1&tipo=$2&id=$3
 
 # ----------------------------------------------------------------------
 # Suppress or force the "www." at the beginning of URLs

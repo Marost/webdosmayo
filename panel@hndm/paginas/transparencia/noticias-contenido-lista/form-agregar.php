@@ -43,28 +43,6 @@ jfec(function() {
 });
 </script>
 
-<!-- PLUPLOAD -->
-<link rel="stylesheet" type="text/css" href="../../../js/plupload/plupload.queue.css"/>
-<script type="text/javascript" src="http://www.google.com/jsapi"></script>
-<script type="text/javascript">
-	google.load("jquery", "1.3");
-</script>
-<script type="text/javascript" src="../../../js/plupload/gears_init.js"></script>
-<script type="text/javascript" src="http://bp.yahooapis.com/2.4.21/browserplus-min.js"></script>
-<script type="text/javascript" src="../../../js/plupload/plupload.full.min.js"></script>
-<script type="text/javascript" src="../../../js/plupload/jquery.plupload.queue.min.js"></script>
-<script type="text/javascript">
-var jq = jQuery.noConflict();
-jq(function() {
-	jq("#flash_uploader").pluploadQueue({
-		runtimes: 'flash', url: 'upload.php', max_file_size: '100mb',
-		chunk_size: '1mb', unique_names: true,
-		filters: [ {title: "Documentos | Imagenes", extensions: "doc,docx,xls,xlsx,ppt,ppts,pps,ppsx,pdf,jpg,jpeg,gif,png"}],
-		flash_swf_url: '../../../js/plupload/plupload.flash.swf'
-	});	
-});
-</script>
-
 </head>
 
 <body>

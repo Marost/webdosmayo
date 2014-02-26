@@ -17,61 +17,24 @@ $url_web=$web."transparencia/".$ReqUrl."-".$ReqTipo."-".$ReqId;
 ################################################################
 
 if($ReqTipo=="ct"){
+    
     $rst_transp=mysql_query("SELECT * FROM DM_transp_s_cont WHERE noticia_sub=$ReqId", $conexion);
-}
 
+}elseif($ReqTipo=="la"){
+    
+    ################################################################
+    //PAGINACION DE NOTICIAS
+    require("libs/pagination/class_pagination.php");
 
-
-/*
-################################################################
-//PAGINACION DE NOTICIAS
-require("libs/pagination/class_pagination.php");
-
-//INICIO DE PAGINACION
-$page = (isset($_GET['page'])) ? intval($_GET['page']) : 1;
-$rst_cas        = mysql_query("SELECT COUNT(*) as count FROM DM_sala_situacional ORDER BY fecha_publicacion DESC", $conexion);
-$fila_cas       = mysql_fetch_assoc($rst_cas);
-$generated      = intval($fila_cas['count']);
-$pagination     = new Pagination("5", $generated, $page, $url_web."?page", 1, 0);
-$start          = $pagination->prePagination();
-$rst_cas        = mysql_query("SELECT * FROM DM_sala_situacional ORDER BY fecha_publicacion DESC LIMIT $start, 5", $conexion);
-*/
-
-################################################################
-/*SELECCION DE AÑO*/
-$rst_selectanio=mysql_query("SELECT DISTINCT fecha_anio FROM DM_sala_situacional", $conexion);
-
-################################################################
-/*VARIABLES DE URL AL BUSCAR*/
-$anio=$_REQUEST["anio"];
-$mes=$_REQUEST["mes"];
-$fecha_seleccion=$anio."-".$mes;
-
-if($anio>0 AND $mes>0){
-    $url_web=$web."sala-situacional?anio=$anio&mes=$mes";
-    $nombre_fecha=nombreMes($mes)." ".$anio;
+    //INICIO DE PAGINACION
     $page = (isset($_GET['page'])) ? intval($_GET['page']) : 1;
-    $rst_cas        = mysql_query("SELECT COUNT(*) as count FROM DM_sala_situacional WHERE fecha_mes='$fecha_seleccion' ORDER BY fecha_publicacion DESC", $conexion);
+    $rst_cas        = mysql_query("SELECT COUNT(*) as count FROM DM_sala_situacional ORDER BY fecha_publicacion DESC", $conexion);
     $fila_cas       = mysql_fetch_assoc($rst_cas);
     $generated      = intval($fila_cas['count']);
-    $pagination     = new Pagination("5", $generated, $page, $url_web."&page", 1, 0);
+    $pagination     = new Pagination("5", $generated, $page, $url_web."?page", 1, 0);
     $start          = $pagination->prePagination();
-    $rst_cas        = mysql_query("SELECT * FROM DM_sala_situacional WHERE fecha_mes='$fecha_seleccion' ORDER BY fecha_publicacion DESC LIMIT $start, 5", $conexion);
-}
+    $rst_cas        = mysql_query("SELECT * FROM DM_sala_situacional ORDER BY fecha_publicacion DESC LIMIT $start, 5", $conexion);
 
-################################################################
-/*VARIABLES DE URL AL BUSCAR POR TEXTO*/
-$buscar=$_REQUEST["buscar"];
-
-if($buscar<>""){
-    $url_web=$web."sala-situacional?buscar=$buscar";
-    $page = (isset($_GET['page'])) ? intval($_GET['page']) : 1;
-    $rst_cas        = mysql_query("SELECT COUNT(*) as count FROM DM_sala_situacional WHERE titulo LIKE '%$buscar%' ORDER BY fecha_publicacion DESC", $conexion);
-    $fila_cas       = mysql_fetch_assoc($rst_cas);
-    $generated      = intval($fila_cas['count']);
-    $pagination     = new Pagination("5", $generated, $page, $url_web."&page", 1, 0);
-    $start          = $pagination->prePagination();
-    $rst_cas        = mysql_query("SELECT * FROM DM_sala_situacional WHERE titulo LIKE '%$buscar%' ORDER BY fecha_publicacion DESC LIMIT $start, 5", $conexion);
 }
 
 ?>
@@ -83,7 +46,7 @@ if($buscar<>""){
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Sala Situacional</title>
+        <title>Transparencia</title>
 
         <?php require_once("w-header-scripts.php") ?>
 
@@ -122,58 +85,24 @@ if($buscar<>""){
 
                         <div class="nw-nota cas">
 
-                            <!--
-                            <div class="contenido">
-
-                                
-
-                                <div id="busqueda_cabecera">
-
-                                    <form name="busqueda" action="sala-situacional" class="search-form noframe nobtn rsmall">
-
-                                        <input type="text" name="buscar" class="search-input" placeholder="Buscar..." />
-
-                                        <p style="float: left; margin: 0 15px; padding: 10px 0 0 0; ">Ó</p>
-
-                                        <div class="select-wrapper">
-                                            <select name="anio">
-                                                <option value="">Seleccion año</option>
-                                                ?php while($fila_selectanio=mysql_fetch_array($rst_selectanio)){
-                                                    $fechaAnio=$fila_selectanio["fecha_anio"];
-                                                ?>
-                                                <option value="?php echo $fechaAnio; ?>">?php echo $fechaAnio; ?></option>
-                                                ?php } ?>
-                                            </select>
-                                        </div>
-
-                                        <div class="select-wrapper">
-                                            <select name="mes">
-                                                <option value="">Seleccion mes</option>
-                                                <option value="01">Enero</option>
-                                                <option value="02">Febrero</option>
-                                                <option value="03">Marzo</option>
-                                                <option value="04">Abril</option>
-                                                <option value="05">Mayo</option>
-                                                <option value="06">Junio</option>
-                                                <option value="07">Julio</option>
-                                                <option value="08">Agosto</option>
-                                                <option value="09">Septiembre</option>
-                                                <option value="10">Octubre</option>
-                                                <option value="11">Noviembre</option>
-                                                <option value="12">Diciembre</option>
-                                            </select>
-                                        </div>
-
-                                        <input class="form-btn" value="Buscar" type="submit">
-
-                                    </form>
-
+                            <?php if($ReqTipo=="ct"){ ?>
+                                <?php while($fila_transp=mysql_fetch_array($rst_transp)){
+                                        $transp_titulo=$fila_transp["titulo"];
+                                        $transp_contenido=$fila_transp["contenido"];
+                                ?>
+                                <div class="contenido">
+                                    <h2><?php echo $transp_titulo; ?></h2>
+                                    <?php echo $transp_contenido; ?>
                                 </div>
-                                
+                                <?php } ?>
+                            <?php }elseif($ReqTipo=="la"){ ?>
+                            
+                            <div class="contenido">                                
+                               
                                 <table class="tabla_cas" width="710" border="0">
                                     <tbody>
 
-                                        ?php while($fila_cas=mysql_fetch_array($rst_cas)){
+                                        <?php while($fila_cas=mysql_fetch_array($rst_cas)){
                                             $cas_id=$fila_cas["id"];
                                             $cas_titulo=$fila_cas["titulo"];
                                             $cas_tipo=$fila_cas["tipo"];
@@ -187,87 +116,75 @@ if($buscar<>""){
                                         ?>
                                         <tr>
                                             <td class="dato_cabecera tdcab-sup">Fecha</td>
-                                            <td class="dato_contenido tdcont-sup">?php echo nombreFecha($cas_fecha[0],$cas_fecha[1],$cas_fecha[2]); ?></td>
+                                            <td class="dato_contenido tdcont-sup"><?php echo nombreFecha($cas_fecha[0],$cas_fecha[1],$cas_fecha[2]); ?></td>
                                         </tr>
                                         <tr>
                                             <td class="dato_cabecera" width="104" height="25">Tipo</td>
-                                            <td class="dato_contenido">?php echo $cas_tipo; ?></td>
+                                            <td class="dato_contenido"><?php echo $cas_tipo; ?></td>
                                         </tr>
                                         <tr>
                                             <td class="dato_cabecera">Nombre</td>
-                                            <td class="dato_contenido"><strong>?php echo $cas_titulo; ?></strong></td>
+                                            <td class="dato_contenido"><strong><?php echo $cas_titulo; ?></strong></td>
                                         </tr>
                                         <tr>
                                             <td class="dato_cabecera">Documentos</td>
                                             <td class="dato_contenido">
                                                 <ul>
-                                                    ?php while($fila_cas_docs=mysql_fetch_array($rst_cas_docs)){
+                                                    <?php while($fila_cas_docs=mysql_fetch_array($rst_cas_docs)){
                                                         $docs_titulo=$fila_cas_docs["titulo"];
                                                         $docs_documento=$fila_cas_docs["documento"];
                                                         $docs_documento_tipo=$fila_cas_docs["documento_tipo"];
                                                     ?>
                                                         <li>
 
-                                                            <a title="?php echo $docs_titulo; ?>" target="_blank" 
-                                                            href="/documentos/?php echo $cas_carpetas."".$docs_documento; ?>">
+                                                            <a title="<?php echo $docs_titulo; ?>" target="_blank" 
+                                                            href="/documentos/<?php echo $cas_carpetas."".$docs_documento; ?>">
                                                             <span
-                                                                ?php if($docs_documento_tipo=="doc" or $docs_documento_tipo=="docx"){ ?>
+                                                                <?php if($docs_documento_tipo=="doc" or $docs_documento_tipo=="docx"){ ?>
                                                                     class="word"     
-                                                                ?php }elseif($docs_documento_tipo=="xls" or $docs_documento_tipo=="xlsx"){ ?>
+                                                                <?php }elseif($docs_documento_tipo=="xls" or $docs_documento_tipo=="xlsx"){ ?>
                                                                     class="excel" 
-                                                                ?php }elseif($docs_documento_tipo=="ppt" or $docs_documento_tipo=="pptx" or $docs_documento_tipo=="pps" or $docs_documento_tipo=="ppsx"){ ?>
+                                                                <?php }elseif($docs_documento_tipo=="ppt" or $docs_documento_tipo=="pptx" or $docs_documento_tipo=="pps" or $docs_documento_tipo=="ppsx"){ ?>
                                                                     class="pwpt" 
-                                                                ?php }elseif($docs_documento_tipo=="pdf"){ ?>
+                                                                <?php }elseif($docs_documento_tipo=="pdf"){ ?>
                                                                     class="pdf" 
-                                                                ?php }elseif($docs_documento_tipo=="gif"){ ?>
+                                                                <?php }elseif($docs_documento_tipo=="gif"){ ?>
                                                                     class="gif" 
-                                                                ?php }elseif($docs_documento_tipo=="png"){ ?>
+                                                                <?php }elseif($docs_documento_tipo=="png"){ ?>
                                                                     class="png" 
-                                                                ?php }elseif($docs_documento_tipo=="bmp"){ ?>
+                                                                <?php }elseif($docs_documento_tipo=="bmp"){ ?>
                                                                     class="bmp" 
-                                                                ?php }elseif($docs_documento_tipo=="jpg" or $docs_documento_tipo=="jpeg" or $docs_documento_tipo=="JPG" or $docs_documento_tipo=="JPEG"){ ?>
+                                                                <?php }elseif($docs_documento_tipo=="jpg" or $docs_documento_tipo=="jpeg" or $docs_documento_tipo=="JPG" or $docs_documento_tipo=="JPEG"){ ?>
                                                                     class="jpg" 
-                                                                ?php }elseif($docs_documento_tipo=="zip" or $docs_documento_tipo=="rar"){ ?>
+                                                                <?php }elseif($docs_documento_tipo=="zip" or $docs_documento_tipo=="rar"){ ?>
                                                                     class="zip" 
-                                                                ?php } ?>
+                                                                <?php } ?>
                                                             >
-                                                            </span><p>?php echo $docs_titulo; ?></p></a>
+                                                            </span><p><?php echo $docs_titulo; ?></p></a>
 
                                                         </li>
-                                                    ?php } ?>
+                                                    <?php } ?>
                                                 </ul>
                                             </td>
                                         </tr>                                  
                                         <tr>
                                             <td class="dato_cabecera tdcab-inf">Observaciones</td>
                                             <td class="dato_contenido">
-                                                ?php echo $cas_observaciones; ?>
+                                                <?php echo $cas_observaciones; ?>
                                             </td>
                                         </tr>
                                         <tr><td></td><td></td></tr>
-                                        ?php } ?>
+                                        <?php } ?>
                                     </tbody>
                                 </table>
 
                                 <div style="width=100%; float:left;">
-                                    ?php $pagination->pagination(); ?>
+                                    <?php $pagination->pagination(); ?>
                                 </div>
 
-                            </div>
-                            -->
+                            </div>                            
                             
-                            <?php if($ReqTipo=="ct"){ ?>
-                                <?php while($fila_transp=mysql_fetch_array($rst_transp)){
-                                        $transp_titulo=$fila_transp["titulo"];
-                                        $transp_contenido=$fila_transp["contenido"];
-                                ?>
-                                <div class="contenido">
-                                    <h2><?php echo $transp_titulo; ?></h2>
-                                    <?php echo $transp_contenido; ?>
-                                </div>
-                                <?php } ?>
                             <?php } ?>
-
 
                         </div>
 

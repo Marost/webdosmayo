@@ -69,7 +69,6 @@ if($num_notgaleria>0){
 
 		$cont++;
 	}
-
 }
 
 if (mysql_errno()!=0)
